@@ -3,7 +3,7 @@
 
 
 """
-Convert M language source code to AST.
+Convert M language source code to a JSON AST.
 """
 
 
