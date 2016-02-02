@@ -1,0 +1,22 @@
+comment = "#" r'.*'
+
+symbol = r'\w+'
+symbol_enumeration = symbol ("," symbol)*
+float = r'\d+\.\d+'
+integer = r'\d+'
+string = '"' r'[^"]*' '"'
+
+application_declaration = "application" symbol ";"
+enchaineur_declaration = "enchaineur" symbol "application:" symbol_enumeration  ";"
+
+alias = "alias" symbol
+attribute = symbol "=" integer
+tableau = "tableau[" integer "]"
+type = "type" ("BOOLEEN" / "DATE_AAAA" / "DATE_JJMMAAAA" / "DATE_MM" / "ENTIER" / "REEL")
+variable_calculee_qualifiers = ("base" / "restituee")*
+variable_calculee_declaration = symbol ":" tableau? "calculee" variable_calculee_qualifiers ":" string type? ";"
+variable_const_declaration = symbol ":" "const" "=" float ";"
+variable_saisie_declaration = symbol ":" "saisie" ("contexte" / "famille" / "penalite" / "revenu")+ attribute* "restituee"? alias ":" string type? ";"
+variable_declaration = (variable_calculee_declaration / variable_const_declaration / variable_saisie_declaration)
+
+root = (comment / application_declaration / enchaineur_declaration / variable_declaration)+ EOF
