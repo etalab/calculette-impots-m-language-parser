@@ -19,4 +19,8 @@ variable_const_declaration = symbol ":" "const" "=" float ";"
 variable_saisie_declaration = symbol ":" "saisie" ("contexte" / "famille" / "penalite" / "revenu")+ attribute* "restituee"? alias ":" string type? ";"
 variable_declaration = (variable_calculee_declaration / variable_const_declaration / variable_saisie_declaration)
 
-root = (comment / application_declaration / enchaineur_declaration / variable_declaration)+ EOF
+expression = r'[^;]+'
+variable_definition = symbol "=" expression ";"
+regle_declaration = "regle" integer ":" "application" ":" symbol_enumeration ";" variable_definition+
+
+root = (comment / application_declaration / enchaineur_declaration / variable_declaration / regle_declaration)+ EOF

@@ -46,6 +46,15 @@ def make_enchaineur_declaration(name, applications):
         }
 
 
+def make_regle_declaration(name, applications, variables):
+    return {
+        'applications': applications,
+        'name': name,
+        'type': u'regle_declaration',
+        'variables': variables,
+        }
+
+
 def make_variable_declaration(name, type, attributes = None, description = None):
     return {
         'attributes': attributes,
@@ -88,6 +97,14 @@ def make_variable_calculee_qualifiers(value):
         }
 
 
+def make_variable_definition(name, expression):
+    return {
+        'expression': expression,
+        'name': name,
+        'type': u'variable_definition',
+        }
+
+
 # AST Helpers
 
 
@@ -101,7 +118,7 @@ def find_many_or_none(nodes, type, attribute = None):
     return [
         node[attribute] if attribute is not None else node
         for node in nodes
-        if node['type'] == type
+        if isinstance(node, dict) and node['type'] == type
         ] or None
 
 
@@ -116,10 +133,19 @@ def find_one_or_none(nodes, type, attribute = None):
     return results[0] if results else None
 
 
+def without_keys(dict, keys):
+    return {
+        key: value
+        for key, value in dict.iteritems()
+        if key not in keys
+        }
+
+
 class MLanguageVisitor(PTNodeVisitor):
     def visit__default__(self, node, children):
         if node.rule_name and node.rule_name != 'EOF':
-            raise NotImplementedError(node.rule_name)
+            infos = {'rule': node.rule_name, 'node': node, 'children': children}
+            raise NotImplementedError(infos)
 
     def visit_alias(self, node, children):
         return make_attribute(name = u'alias', value = children[0]['name'])
@@ -136,11 +162,24 @@ class MLanguageVisitor(PTNodeVisitor):
     def visit_enchaineur_declaration(self, node, children):
         return make_enchaineur_declaration(name = children[0]['name'], applications = children[1])
 
+    def visit_expression(self, node, children):
+        return u' '.join(
+            line.strip()
+            for line in node.value.split('\n')
+            )
+
     def visit_float(self, node, children):
         return float(node.value)
 
     def visit_integer(self, node, children):
         return int(node.value)
+
+    def visit_regle_declaration(self, node, children):
+        variables = [
+            without_keys(variable_definition, ['type'])
+            for variable_definition in find_many(children, type = 'variable_definition')
+            ]
+        return make_regle_declaration(name = children[0], applications = children[1], variables = variables)
 
     def visit_root(self, node, children):
         return children
@@ -190,6 +229,9 @@ class MLanguageVisitor(PTNodeVisitor):
     def visit_variable_declaration(self, node, children):
         return children[0]
 
+    def visit_variable_definition(self, node, children):
+        return make_variable_definition(name = children[0]['name'], expression = children[1])
+
     def visit_variable_saisie_declaration(self, node, children):
         name = children[0]['name']
         description = find_one(children, type = 'string', attribute = 'value')
@@ -221,7 +263,7 @@ def main():
 
     with open(m_grammar_file_path) as m_grammar_file:
         m_grammar = m_grammar_file.read()
-    parser = ParserPEG(m_grammar, "root", debug = args.debug)
+    parser = ParserPEG(m_grammar, 'root', debug = args.debug)
     log.debug(u'M language clean-PEG grammar was parsed with success.')
 
     parse_tree = parser.parse(source_code)
