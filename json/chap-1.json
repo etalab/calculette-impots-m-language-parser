@@ -6,11 +6,19 @@
     "variables": [
       {
         "expression": "positif( NAPI + 1 - SEUIL_12 ) +0",
-        "name": "RC1"
+        "name": "RC1",
+        "linecol": [
+          43,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 101
+    "name": 101,
+    "linecol": [
+      41,
+      1
+    ]
   },
   {
     "applications": [
@@ -20,15 +28,27 @@
     "variables": [
       {
         "expression": "NAPTEMPCX-TOTIRPSANT",
-        "name": "NAPT"
+        "name": "NAPT",
+        "linecol": [
+          46,
+          1
+        ]
       },
       {
         "expression": "IRNET + TAXANET + TAXLOYNET + PCAPNET + HAUTREVNET - IRESTITIR",
-        "name": "NAPTIR"
+        "name": "NAPTIR",
+        "linecol": [
+          47,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 1010
+    "name": 1010,
+    "linecol": [
+      44,
+      1
+    ]
   },
   {
     "applications": [
@@ -38,15 +58,27 @@
     "variables": [
       {
         "expression": "(TOTIRCUM - NONMER -RECUMIR + NONREST) * positif(20 - V_NOTRAIT) + max(0, (TOTIRCUM - NONMER - RECUMIR+NONREST) - (V_TOTIRANT -V_NONMERANT - V_ANTREIR+V_NONRESTANT)) * positif_ou_nul(V_NOTRAIT-20)",
-        "name": "NAPCOROLIR"
+        "name": "NAPCOROLIR",
+        "linecol": [
+          52,
+          1
+        ]
       },
       {
         "expression": "max(0, NAPCR61 - V_ANTCR)",
-        "name": "NAPCOROLCS"
+        "name": "NAPCOROLCS",
+        "linecol": [
+          54,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 10101
+    "name": 10101,
+    "linecol": [
+      50,
+      1
+    ]
   },
   {
     "applications": [
@@ -56,11 +88,19 @@
     "variables": [
       {
         "expression": "si ( NAPINI - V_ANTIR - IRCUM_A + RECUMBIS >= SEUIL_12 ) alors (1) sinon (0) finsi",
-        "name": "RC1"
+        "name": "RC1",
+        "linecol": [
+          57,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 10111
+    "name": 10111,
+    "linecol": [
+      55,
+      1
+    ]
   },
   {
     "applications": [
@@ -70,15 +110,27 @@
     "variables": [
       {
         "expression": "IRB + PIR",
-        "name": "IAVIMBIS"
+        "name": "IAVIMBIS",
+        "linecol": [
+          63,
+          1
+        ]
       },
       {
         "expression": "(max(0,max(ID11-ADO1,IMI)-RED) + ITP + REI + PIR) * V_CR2",
-        "name": "IAVIMO"
+        "name": "IAVIMO",
+        "linecol": [
+          64,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 1013
+    "name": 1013,
+    "linecol": [
+      61,
+      1
+    ]
   },
   {
     "applications": [
@@ -89,11 +141,19 @@
     "variables": [
       {
         "expression": "( IRD + PIRD - IRANT ) + TAXASSUR + IPCAPTAXT + IHAUTREVT + TAXLOY + RASAR * V_CR2",
-        "name": "NAPI"
+        "name": "NAPI",
+        "linecol": [
+          68,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 1012
+    "name": 1012,
+    "linecol": [
+      66,
+      1
+    ]
   },
   {
     "applications": [
@@ -103,23 +163,43 @@
     "variables": [
       {
         "expression": "inf( MOISAN / 10000 )",
-        "name": "INTMS"
+        "name": "INTMS",
+        "linecol": [
+          76,
+          1
+        ]
       },
       {
         "expression": "(( MOISAN/10000 - INTMS )*10000)  * present(MOISAN)",
-        "name": "INTAN"
+        "name": "INTAN",
+        "linecol": [
+          77,
+          1
+        ]
       },
       {
         "expression": "(positif(2006-arr(INTAN))*max(0, (INTAN - (V_ANREV+1) )* 12 + INTMS - 6 ) * TXMOISRETARD + positif_ou_nul(V_ANREV-2006)*max(0, (INTAN - (V_ANREV+1) )* 12 + INTMS - 6 ) * TXMOISRETARD2 + (1-positif(2006-arr(INTAN)))*(1-positif_ou_nul(V_ANREV-2006)) * (((2006 - (V_ANREV+1))*12 - 6) * (TXMOISRETARD * positif(2006 - (V_ANREV+1)) + TXMOISRETARD2 * null(2006-(V_ANREV+1))) + ((INTAN - 2006)*12 + INTMS) * TXMOISRETARD2) ) * present(MOISAN)",
-        "name": "TXINT"
+        "name": "TXINT",
+        "linecol": [
+          78,
+          1
+        ]
       },
       {
         "expression": "si (CMAJ = 7 ou CMAJ = 10 ou CMAJ = 17 ou CMAJ = 18) alors (10) sinon ( si (CMAJ = 8 ou CMAJ = 11) alors (40) sinon (80) finsi ) finsi",
-        "name": "COPETO"
+        "name": "COPETO",
+        "linecol": [
+          85,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 104114
+    "name": 104114,
+    "linecol": [
+      74,
+      1
+    ]
   },
   {
     "applications": [
@@ -129,79 +209,155 @@
     "variables": [
       {
         "expression": "max(0,CSG + RDSN + PRS + BREGV + CVNSALC + CDIS + CGLOA + RSE1N  + RSE2N + RSE3N + RSE4N + RSE5N)",
-        "name": "CSTOTSSPENA"
+        "name": "CSTOTSSPENA",
+        "linecol": [
+          95,
+          1
+        ]
       },
       {
         "expression": "arr(BTO * COPETO / 100) + arr(BTO * COPETO /100) * positif(null(CMAJ-10)+null(CMAJ-17)) + arr((BTOINR) * TXINT / 100)",
-        "name": "PTOIR"
+        "name": "PTOIR",
+        "linecol": [
+          96,
+          1
+        ]
       },
       {
         "expression": "( arr(max(0,PRS-PRSPROV) * COPETO / 100) + arr(max(0,PRS-PRSPROV-PS9YP) * TXINT / 100) ) * positif_ou_nul(CSTOTSSPENA - SEUIL_61)",
-        "name": "PTOPRS"
+        "name": "PTOPRS",
+        "linecol": [
+          99,
+          1
+        ]
       },
       {
         "expression": "( arr(max(0,CSG-CSGIM) * COPETO / 100) + arr(max(0,CSG-CSGIM-CS9YP) * TXINT / 100) ) * positif_ou_nul(CSTOTSSPENA - SEUIL_61)",
-        "name": "PTOCSG"
+        "name": "PTOCSG",
+        "linecol": [
+          101,
+          1
+        ]
       },
       {
         "expression": "(arr(max(0,RSE1 -CIRSE1 -CSPROVYD) * COPETO / 100) + arr(max(0,RSE1 -CIRSE1 -CSPROVYD-RSE19YP) * TXINT / 100) ) * positif_ou_nul(CSTOTSSPENA - SEUIL_61)",
-        "name": "PTORSE1"
+        "name": "PTORSE1",
+        "linecol": [
+          104,
+          1
+        ]
       },
       {
         "expression": "(arr(max(0,RSE2 -CIRSE2 -CSPROVRSE2) * COPETO / 100) + arr(max(0,RSE2 -CIRSE2 -CSPROVRSE2-RSE29YP) * TXINT / 100) ) * positif_ou_nul(CSTOTSSPENA - SEUIL_61)",
-        "name": "PTORSE2"
+        "name": "PTORSE2",
+        "linecol": [
+          108,
+          1
+        ]
       },
       {
         "expression": "(arr(max(0,RSE3 -CIRSE3 -CSPROVYG) * COPETO / 100) + arr(max(0,RSE3 -CIRSE3 -CSPROVYG-RSE39YP) * TXINT / 100) ) * positif_ou_nul(CSTOTSSPENA - SEUIL_61)",
-        "name": "PTORSE3"
+        "name": "PTORSE3",
+        "linecol": [
+          112,
+          1
+        ]
       },
       {
         "expression": "(arr(max(0,RSE4 -CIRSE4 -CSPROVRSE4) * COPETO / 100) + arr(max(0,RSE4 -CIRSE4 -CSPROVRSE4-RSE49YP) * TXINT / 100) ) * positif_ou_nul(CSTOTSSPENA - SEUIL_61)",
-        "name": "PTORSE4"
+        "name": "PTORSE4",
+        "linecol": [
+          116,
+          1
+        ]
       },
       {
         "expression": "(arr(max(0,RSE5 -CIRSE5 -CSPROVYE) * COPETO / 100) + arr(max(0,RSE5 -CIRSE5 -CSPROVYE-RSE59YP) * TXINT / 100) ) * positif_ou_nul(CSTOTSSPENA - SEUIL_61)",
-        "name": "PTORSE5"
+        "name": "PTORSE5",
+        "linecol": [
+          120,
+          1
+        ]
       },
       {
         "expression": "(arr(BREGV  * COPETO / 100) + arr(max(0,BREGV-REGV9YP) * TXINT / 100)) * positif_ou_nul(CSTOTSSPENA - SEUIL_61)",
-        "name": "PTOREGV"
+        "name": "PTOREGV",
+        "linecol": [
+          124,
+          1
+        ]
       },
       {
         "expression": "( arr(max(0,RDSN-CRDSIM) * COPETO / 100) + arr(max(0,RDSN-CRDSIM-RD9YP) * TXINT / 100) ) * positif_ou_nul(CSTOTSSPENA - SEUIL_61)",
-        "name": "PTORDS"
+        "name": "PTORDS",
+        "linecol": [
+          125,
+          1
+        ]
       },
       {
         "expression": "arr(max(0,TAXASSUR- min(TAXASSUR+0,max(0,INE-IRB+AVFISCOPTER))+min(0,IRN - IRANT)) * COPETO / 100) + arr(max(0,TAXASSUR- min(TAXASSUR+0,max(0,INE-IRB+AVFISCOPTER))+min(0,IRN - IRANT)) * COPETO /100) * positif(null(CMAJ-10)+null(CMAJ-17)) + arr(max(0,TAXASSUR- min(TAXASSUR+0,max(0,INE-IRB+AVFISCOPTER))+min(0,IRN - IRANT)-TAXA9YI) * TXINT / 100)",
-        "name": "PTOTAXA"
+        "name": "PTOTAXA",
+        "linecol": [
+          127,
+          1
+        ]
       },
       {
         "expression": "arr(max(0,IPCAPTAXT- min(IPCAPTAXT+0,max(0,INE-IRB+AVFISCOPTER-TAXASSUR))+min(0,IRN - IRANT+TAXASSUR)) * COPETO / 100) + arr(max(0,IPCAPTAXT- min(IPCAPTAXT+0,max(0,INE-IRB+AVFISCOPTER-TAXASSUR))+min(0,IRN - IRANT+TAXASSUR)) * COPETO /100) * positif(null(CMAJ-10)+null(CMAJ-17)) + arr(max(0,IPCAPTAXT- min(IPCAPTAXT+0,max(0,INE-IRB+AVFISCOPTER-TAXASSUR))+min(0,IRN - IRANT+TAXASSUR)-CAP9YI) * TXINT / 100)",
-        "name": "PTOTPCAP"
+        "name": "PTOTPCAP",
+        "linecol": [
+          130,
+          1
+        ]
       },
       {
         "expression": "arr(max(0,TAXLOY- min(TAXLOY+0,max(0,INE-IRB+AVFISCOPTER-TAXASSUR-IPCAPTAXT))+min(0,IRN - IRANT+TAXASSUR+IPCAPTAXT)) * COPETO / 100) + arr(max(0,TAXLOY- min(TAXLOY+0,max(0,INE-IRB+AVFISCOPTER-TAXASSUR-IPCAPTAXT))+min(0,IRN - IRANT+TAXASSUR+IPCAPTAXT)) * COPETO /100) * positif(null(CMAJ-10)+null(CMAJ-17)) + arr(max(0,TAXLOY- min(TAXLOY+0,max(0,INE-IRB+AVFISCOPTER-TAXASSUR-IPCAPTAXT))+min(0,IRN - IRANT+TAXASSUR+IPCAPTAXT)-LOY9YI) * TXINT / 100)",
-        "name": "PTOTLOY"
+        "name": "PTOTLOY",
+        "linecol": [
+          133,
+          1
+        ]
       },
       {
         "expression": "arr(max(0,IHAUTREVT+min(0,IRN - IRANT+TAXASSUR+IPCAPTAXT+TAXLOY)) * COPETO / 100) + arr(max(0,IHAUTREVT+min(0,IRN - IRANT+TAXASSUR+IPCAPTAXT+TAXLOY)) * COPETO /100) * positif(null(CMAJ-10)+null(CMAJ-17)) + arr(max(0,IHAUTREVT+min(0,IRN - IRANT+TAXASSUR+IPCAPTAXT+TAXLOY)-CHR9YI) * TXINT / 100)",
-        "name": "PTOTCHR"
+        "name": "PTOTCHR",
+        "linecol": [
+          137,
+          1
+        ]
       },
       {
         "expression": "(arr(max(0,CVNSALC - COD8YT) * COPETO / 100) + arr(max(0,CVNSALC - COD8YT-CVN9YP) * TXINT / 100)) * positif_ou_nul(CSTOTSSPENA - SEUIL_61)",
-        "name": "PTOCVN"
+        "name": "PTOCVN",
+        "linecol": [
+          141,
+          1
+        ]
       },
       {
         "expression": "(arr(max(0,CDIS-CDISPROV) * COPETO / 100) + arr(max(0,CDISC-CDISPROV-CDIS9YP) * TXINT / 100)) * positif_ou_nul(CSTOTSSPENA - SEUIL_61)",
-        "name": "PTOCDIS"
+        "name": "PTOCDIS",
+        "linecol": [
+          144,
+          1
+        ]
       },
       {
         "expression": "(arr(max(0,CGLOA-COD8YL) * COPETO / 100) + arr(max(0,CGLOA-COD8YL-GLO9YP) * TXINT / 100)) * positif_ou_nul(CSTOTSSPENA - SEUIL_61)",
-        "name": "PTOGLOA"
+        "name": "PTOGLOA",
+        "linecol": [
+          147,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 1041140
+    "name": 1041140,
+    "linecol": [
+      93,
+      1
+    ]
   },
   {
     "applications": [
@@ -211,99 +367,195 @@
     "variables": [
       {
         "expression": "max( 0 ,IRN-IRANT) + max(0,TAXASSUR- min(TAXASSUR+0,max(0,INE-IRB+AVFISCOPTER))+min(0,IRN - IRANT)) + max(0,IPCAPTAXT- min(IPCAPTAXT+0,max(0,INE-IRB+AVFISCOPTER-TAXASSUR))+min(0,IRN - IRANT+TAXASSUR)) + max(0,TAXLOY- min(TAXLOY+0,max(0,INE-IRB+AVFISCOPTER-TAXASSUR-IPCAPTAXT)) +min(0,IRN - IRANT+TAXASSUR+IPCAPTAXT)) + max(0,IHAUTREVT+min(0,IRN - IRANT+TAXASSUR+IPCAPTAXT+TAXLOY))",
-        "name": "BINRIR"
+        "name": "BINRIR",
+        "linecol": [
+          153,
+          1
+        ]
       },
       {
         "expression": "max(0,CSG-CSGIM)+ max(0,RDSN-CRDSIM) + max(0,PRS-PRSPROV) + max(0,CVNSALC - COD8YT) + max(0,CDIS - CDISPROV) + max(0,CGLOA-COD8YL) + max(0,RSE1-CSPROVYD) + max(0,RSE2-CSPROVRSE2) + max(0,RSE3-CSPROVYG) + max(0,RSE4-CSPROVRSE4) + max(0,RSE5-CSPROVYE)+BREGV",
-        "name": "BINRPS"
+        "name": "BINRPS",
+        "linecol": [
+          158,
+          1
+        ]
       },
       {
         "expression": "arr(ACODELAISINR * BINRIR/(BINRIR+BINRPS))",
-        "name": "VAR9YIIR"
+        "name": "VAR9YIIR",
+        "linecol": [
+          161,
+          1
+        ]
       },
       {
         "expression": "max(0,ACODELAISINR - VAR9YIIR)",
-        "name": "VAR9YIPS"
+        "name": "VAR9YIPS",
+        "linecol": [
+          162,
+          1
+        ]
       },
       {
         "expression": "arr(VAR9YIIR * max( 0 , IRN - IRANT )/BINRIR)",
-        "name": "IR9YI"
+        "name": "IR9YI",
+        "linecol": [
+          163,
+          1
+        ]
       },
       {
         "expression": "positif(IPCAPTAXT + TAXLOY + IHAUTREVT) * arr(VAR9YIIR * max(0,TAXASSUR- min(TAXASSUR+0,max(0,INE-IRB+AVFISCOPTER))+min(0,IRN - IRANT))/BINRIR) + (1-positif(IPCAPTAXT + TAXLOY + IHAUTREVT)) * max(0,VAR9YIIR - IR9YI)",
-        "name": "TAXA9YI"
+        "name": "TAXA9YI",
+        "linecol": [
+          164,
+          1
+        ]
       },
       {
         "expression": "positif(TAXLOY + IHAUTREVT) * arr(VAR9YIIR * max(0,IPCAPTAXT- min(IPCAPTAXT+0,max(0,INE-IRB+AVFISCOPTER-TAXASSUR))+min(0,IRN - IRANT+TAXASSUR))/BINRIR) + (1-positif(TAXLOY + IHAUTREVT)) * max(0,VAR9YIIR - IR9YI - TAXA9YI)",
-        "name": "CAP9YI"
+        "name": "CAP9YI",
+        "linecol": [
+          166,
+          1
+        ]
       },
       {
         "expression": "positif(IHAUTREVT) * arr(VAR9YIIR * max(0,TAXLOY- min(TAXLOY+0,max(0,INE-IRB+AVFISCOPTER-TAXASSUR-IPCAPTAXT)) +min(0,IRN - IRANT+TAXASSUR+IPCAPTAXT))/BINRIR) +(1-positif(IHAUTREVT)) *  max(0,VAR9YIIR - IR9YI - TAXA9YI - CAP9YI)",
-        "name": "LOY9YI"
+        "name": "LOY9YI",
+        "linecol": [
+          168,
+          1
+        ]
       },
       {
         "expression": "max(0,VAR9YIIR -IR9YI-TAXA9YI-CAP9YI-LOY9YI)",
-        "name": "CHR9YI"
+        "name": "CHR9YI",
+        "linecol": [
+          171,
+          1
+        ]
       },
       {
         "expression": "positif(RDSN+PRS + CVNSALC+CDIS+CGLOA+RSE1+RSE2+RSE3+RSE4+RSE5+BREGV) * arr(VAR9YIPS * (CSG-CSGIM)/BINRPS) + (1-positif(RDSN+PRS + CVNSALC+CDIS+CGLOA+RSE1+RSE2+RSE3+RSE4+RSE5+BREGV)) * VAR9YIPS",
-        "name": "CS9YP"
+        "name": "CS9YP",
+        "linecol": [
+          172,
+          1
+        ]
       },
       {
         "expression": "positif(PRS + CVNSALC+CDIS+CGLOA+RSE1+RSE2+RSE3+RSE4+RSE5+BREGV) * arr(VAR9YIPS * (RDSN-CRDSIM)/BINRPS) + (1-positif(PRS + CVNSALC+CDIS+CGLOA+RSE1+RSE2+RSE3+RSE4+RSE5+BREGV)) * max(0,VAR9YIPS-CS9YP)",
-        "name": "RD9YP"
+        "name": "RD9YP",
+        "linecol": [
+          174,
+          1
+        ]
       },
       {
         "expression": "positif(CVNSALC+CDIS+CGLOA+RSE1+RSE2+RSE3+RSE4+RSE5+BREGV) * arr(VAR9YIPS * (PRS-PRSPROV)/BINRPS) + (1-positif(CVNSALC+CDIS+CGLOA+RSE1+RSE2+RSE3+RSE4+RSE5+BREGV)) * max(0,VAR9YIPS-CS9YP-RD9YP)",
-        "name": "PS9YP"
+        "name": "PS9YP",
+        "linecol": [
+          176,
+          1
+        ]
       },
       {
         "expression": "positif(CDIS+CGLOA+RSE1+RSE2+RSE3+RSE4+RSE5+BREGV) * arr(VAR9YIPS * (CVNSALC - COD8YT)/BINRPS) +(1-positif(CDIS+CGLOA+RSE1+RSE2+RSE3+RSE4+RSE5+BREGV)) * max(0,VAR9YIPS-CS9YP-RD9YP-PS9YP)",
-        "name": "CVN9YP"
+        "name": "CVN9YP",
+        "linecol": [
+          178,
+          1
+        ]
       },
       {
         "expression": "positif(CGLOA+RSE1+RSE2+RSE3+RSE4+RSE5+BREGV) * arr(VAR9YIPS * (CDIS - CDISPROV)/BINRPS) +(1-positif(CGLOA+RSE1+RSE2+RSE3+RSE4+RSE5+BREGV)) * max(0,VAR9YIPS-CS9YP-RD9YP-PS9YP-CVN9YP)",
-        "name": "CDIS9YP"
+        "name": "CDIS9YP",
+        "linecol": [
+          180,
+          1
+        ]
       },
       {
         "expression": "positif(RSE1+RSE2+RSE3+RSE4+RSE5+BREGV) * arr(VAR9YIPS * (CGLOA-COD8YL) /BINRPS) +(1-positif(RSE1+RSE2+RSE3+RSE4+RSE5+BREGV)) * max(0,VAR9YIPS-CS9YP-RD9YP-PS9YP-CVN9YP-CDIS9YP)",
-        "name": "GLO9YP"
+        "name": "GLO9YP",
+        "linecol": [
+          182,
+          1
+        ]
       },
       {
         "expression": "positif(RSE2+RSE3+RSE4+RSE5+BREGV) * arr(VAR9YIPS * (RSE1-CSPROVYD)/BINRPS) +(1-positif(RSE2+RSE3+RSE4+RSE5+BREGV)) * max(0,VAR9YIPS-CS9YP-RD9YP-PS9YP-CVN9YP-CDIS9YP-GLO9YP)",
-        "name": "RSE19YP"
+        "name": "RSE19YP",
+        "linecol": [
+          184,
+          1
+        ]
       },
       {
         "expression": "positif(RSE3+RSE4+RSE5+BREGV) * arr(VAR9YIPS * (RSE2-CSPROVRSE2)/BINRPS) +(1-positif(RSE3+RSE4+RSE5+BREGV)) * max(0,VAR9YIPS-CS9YP-RD9YP-PS9YP-CVN9YP-CDIS9YP-GLO9YP-RSE19YP)",
-        "name": "RSE29YP"
+        "name": "RSE29YP",
+        "linecol": [
+          186,
+          1
+        ]
       },
       {
         "expression": "positif(RSE4+RSE5+BREGV) * arr(VAR9YIPS * (RSE3-CSPROVYG)/BINRPS) +(1-positif(RSE4+RSE5+BREGV)) * max(0,VAR9YIPS-CS9YP-RD9YP-PS9YP-CVN9YP-CDIS9YP-GLO9YP-RSE19YP-RSE29YP)",
-        "name": "RSE39YP"
+        "name": "RSE39YP",
+        "linecol": [
+          188,
+          1
+        ]
       },
       {
         "expression": "positif(RSE5+BREGV) * arr(VAR9YIPS * (RSE4-CSPROVRSE4)/BINRPS) +(1-positif(RSE5+BREGV)) * max(0,VAR9YIPS-CS9YP-RD9YP-PS9YP-CVN9YP-CDIS9YP-GLO9YP-RSE19YP-RSE29YP-RSE39YP)",
-        "name": "RSE49YP"
+        "name": "RSE49YP",
+        "linecol": [
+          190,
+          1
+        ]
       },
       {
         "expression": "positif(BREGV) * arr(VAR9YIPS * (RSE5-CSPROVYE)/BINRPS) +(1-positif(BREGV)) * max(0,VAR9YIPS-CS9YP-RD9YP-PS9YP-CVN9YP-CDIS9YP-GLO9YP-RSE19YP-RSE29YP-RSE39YP-RSE49YP)",
-        "name": "RSE59YP"
+        "name": "RSE59YP",
+        "linecol": [
+          192,
+          1
+        ]
       },
       {
         "expression": "max(0,VAR9YIPS-CS9YP-RD9YP-PS9YP-CVN9YP-CDIS9YP-GLO9YP-RSE19YP-RSE29YP-RSE39YP-RSE49YP-RSE59YP )",
-        "name": "REGV9YP"
+        "name": "REGV9YP",
+        "linecol": [
+          194,
+          1
+        ]
       },
       {
         "expression": "max( 0 , IRN - IRANT ) * positif( IAMD1 + 1 - SEUIL_61 )",
-        "name": "BTO"
+        "name": "BTO",
+        "linecol": [
+          195,
+          1
+        ]
       },
       {
         "expression": "max( 0 , IRN - IR9YI - IRANT ) * positif( IAMD1 + 1 - SEUIL_61 )",
-        "name": "BTOINR"
+        "name": "BTOINR",
+        "linecol": [
+          197,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 1041141
+    "name": 1041141,
+    "linecol": [
+      151,
+      1
+    ]
   },
   {
     "applications": [
@@ -314,11 +566,19 @@
     "variables": [
       {
         "expression": "IRN * (positif(5 - V_IND_TRAIT) + (1-positif(5-V_IND_TRAIT)) * ( positif_ou_nul(IRN+PIR-SEUIL_12) + (1 - positif(IRN + PIR)) ))",
-        "name": "IRD"
+        "name": "IRD",
+        "linecol": [
+          200,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 10211
+    "name": 10211,
+    "linecol": [
+      198,
+      1
+    ]
   },
   {
     "applications": [
@@ -328,55 +588,107 @@
     "variables": [
       {
         "expression": "NAPPS - V_PSANT",
-        "name": "PRSD"
+        "name": "PRSD",
+        "linecol": [
+          209,
+          1
+        ]
       },
       {
         "expression": "NAPCS - V_CSANT",
-        "name": "CSGD"
+        "name": "CSGD",
+        "linecol": [
+          211,
+          1
+        ]
       },
       {
         "expression": "NAPRD - V_RDANT",
-        "name": "RDSD"
+        "name": "RDSD",
+        "linecol": [
+          213,
+          1
+        ]
       },
       {
         "expression": "NAPCVN - V_CVNANT",
-        "name": "CVND"
+        "name": "CVND",
+        "linecol": [
+          215,
+          1
+        ]
       },
       {
         "expression": "NAPREGV - V_REGVANT",
-        "name": "REGVD"
+        "name": "REGVD",
+        "linecol": [
+          217,
+          1
+        ]
       },
       {
         "expression": "NAPGLOA - V_GLOANT",
-        "name": "CGLOAD"
+        "name": "CGLOAD",
+        "linecol": [
+          219,
+          1
+        ]
       },
       {
         "expression": "NAPCDIS - V_CDISANT",
-        "name": "CDISD"
+        "name": "CDISD",
+        "linecol": [
+          221,
+          1
+        ]
       },
       {
         "expression": "NAPRSE1 - V_RSE1ANT",
-        "name": "CRSE1D"
+        "name": "CRSE1D",
+        "linecol": [
+          222,
+          1
+        ]
       },
       {
         "expression": "NAPRSE2 - V_RSE2ANT",
-        "name": "CRSE2D"
+        "name": "CRSE2D",
+        "linecol": [
+          223,
+          1
+        ]
       },
       {
         "expression": "NAPRSE3 - V_RSE3ANT",
-        "name": "CRSE3D"
+        "name": "CRSE3D",
+        "linecol": [
+          224,
+          1
+        ]
       },
       {
         "expression": "NAPRSE4 - V_RSE4ANT",
-        "name": "CRSE4D"
+        "name": "CRSE4D",
+        "linecol": [
+          225,
+          1
+        ]
       },
       {
         "expression": "NAPRSE5 - V_RSE5ANT",
-        "name": "CRSE5D"
+        "name": "CRSE5D",
+        "linecol": [
+          226,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 10213
+    "name": 10213,
+    "linecol": [
+      206,
+      1
+    ]
   },
   {
     "applications": [
@@ -386,55 +698,107 @@
     "variables": [
       {
         "expression": "max(0,CSGC - CICSG)",
-        "name": "CSGAC"
+        "name": "CSGAC",
+        "linecol": [
+          230,
+          1
+        ]
       },
       {
         "expression": "max(0,(CSGC + PCSG - CICSG - CSGIM))",
-        "name": "CSNET"
+        "name": "CSNET",
+        "linecol": [
+          231,
+          1
+        ]
       },
       {
         "expression": "max(0,RDSC - CIRDS)",
-        "name": "RDSAC"
+        "name": "RDSAC",
+        "linecol": [
+          233,
+          1
+        ]
       },
       {
         "expression": "max(0,(RDSC + PRDS - CIRDS - CRDSIM))",
-        "name": "RDNET"
+        "name": "RDNET",
+        "linecol": [
+          234,
+          1
+        ]
       },
       {
         "expression": "max(0,(PRSC + PPRS - CIPRS - PRSPROV))",
-        "name": "PRSNET"
+        "name": "PRSNET",
+        "linecol": [
+          236,
+          1
+        ]
       },
       {
         "expression": "CVNSALC",
-        "name": "CVNAC"
+        "name": "CVNAC",
+        "linecol": [
+          238,
+          1
+        ]
       },
       {
         "expression": "max(0,(CVNSALC + PCVN - COD8YT))",
-        "name": "CVNNET"
+        "name": "CVNNET",
+        "linecol": [
+          239,
+          1
+        ]
       },
       {
         "expression": "BREGV + PREGV",
-        "name": "REGVNET"
+        "name": "REGVNET",
+        "linecol": [
+          241,
+          1
+        ]
       },
       {
         "expression": "CDISC",
-        "name": "CDISAC"
+        "name": "CDISAC",
+        "linecol": [
+          243,
+          1
+        ]
       },
       {
         "expression": "max(0,(CDISC + PCDIS - CDISPROV))",
-        "name": "CDISNET"
+        "name": "CDISNET",
+        "linecol": [
+          244,
+          1
+        ]
       },
       {
         "expression": "CGLOA",
-        "name": "CGLOAAC"
+        "name": "CGLOAAC",
+        "linecol": [
+          245,
+          1
+        ]
       },
       {
         "expression": "max(0,(CGLOA + PGLOA-COD8YL ))",
-        "name": "CGLOANET"
+        "name": "CGLOANET",
+        "linecol": [
+          246,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 10214
+    "name": 10214,
+    "linecol": [
+      228,
+      1
+    ]
   },
   {
     "applications": [
@@ -444,51 +808,99 @@
     "variables": [
       {
         "expression": "max(0,RSE1 - CIRSE1)",
-        "name": "RSE1AC"
+        "name": "RSE1AC",
+        "linecol": [
+          250,
+          1
+        ]
       },
       {
         "expression": "max(0,(RSE1 + PRSE1 - CIRSE1 - CSPROVYD))",
-        "name": "RSE1NET"
+        "name": "RSE1NET",
+        "linecol": [
+          251,
+          1
+        ]
       },
       {
         "expression": "max(0,RSE2 - CIRSE2)",
-        "name": "RSE2AC"
+        "name": "RSE2AC",
+        "linecol": [
+          253,
+          1
+        ]
       },
       {
         "expression": "max(0, RSE8TV - CIRSE8TV - CSPROVYF) + max(0, RSE8SA - CIRSE8SA - CSPROVYN) + PRSE2",
-        "name": "RSE2NET"
+        "name": "RSE2NET",
+        "linecol": [
+          254,
+          1
+        ]
       },
       {
         "expression": "max(0,RSE3 - CIRSE3 )",
-        "name": "RSE3AC"
+        "name": "RSE3AC",
+        "linecol": [
+          256,
+          1
+        ]
       },
       {
         "expression": "max(0,(RSE3 + PRSE3 - CIRSE3 - CSPROVYG))",
-        "name": "RSE3NET"
+        "name": "RSE3NET",
+        "linecol": [
+          257,
+          1
+        ]
       },
       {
         "expression": "max(0,RSE4 - CIRSE4 )",
-        "name": "RSE4AC"
+        "name": "RSE4AC",
+        "linecol": [
+          259,
+          1
+        ]
       },
       {
         "expression": "max(0, RSE8TX - CIRSE8TX - CSPROVYH) + max(0, RSE8SB - CIRSE8SB - CSPROVYP) + PRSE4",
-        "name": "RSE4NET"
+        "name": "RSE4NET",
+        "linecol": [
+          260,
+          1
+        ]
       },
       {
         "expression": "max(0,RSE5 - CIRSE5)",
-        "name": "RSE5AC"
+        "name": "RSE5AC",
+        "linecol": [
+          262,
+          1
+        ]
       },
       {
         "expression": "max(0,(RSE5 + PRSE5 - CIRSE5 - CSPROVYE))",
-        "name": "RSE5NET"
+        "name": "RSE5NET",
+        "linecol": [
+          263,
+          1
+        ]
       },
       {
         "expression": "RSE1NET + RSE2NET + RSE3NET + RSE4NET + RSE5NET",
-        "name": "RSENETTOT"
+        "name": "RSENETTOT",
+        "linecol": [
+          265,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 102141
+    "name": 102141,
+    "linecol": [
+      247,
+      1
+    ]
   },
   {
     "applications": [
@@ -498,15 +910,27 @@
     "variables": [
       {
         "expression": "max(0,CSGC + PCSG - CICSG - CSGIM +RDSC + PRDS - CIRDS - CRDSIM+ PRSC + PPRS - CIPRS - PRSPROV + CVNSALC + PCVN - COD8YT + BREGV + PREGV +CDISC + PCDIS - CDISPROV + CGLOA + PGLOA - COD8YL +RSE1 + PRSE1+RSE2 + PRSE2+ RSE3 + PRSE3+RSE4 + PRSE4+ RSE5 + PRSE5 - CIRSE1 - CSPROVYD - CIRSE5 - CSPROVYE - CIRSE2 - CSPROVRSE2 - CIRSE3 - CSPROVYG - CIRSE4 - CSPROVRSE4)",
-        "name": "TOTCRBRUT"
+        "name": "TOTCRBRUT",
+        "linecol": [
+          268,
+          1
+        ]
       },
       {
         "expression": "CSNET+ RDNET+ PRSNET+ CVNNET+ REGVNET +CDISNET+CGLOANET+ RSE1NET+ RSE2NET+ RSE3NET+ RSE4NET+ RSE5NET",
-        "name": "TOTCRNET"
+        "name": "TOTCRNET",
+        "linecol": [
+          273,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 102142
+    "name": 102142,
+    "linecol": [
+      266,
+      1
+    ]
   },
   {
     "applications": [
@@ -516,11 +940,19 @@
     "variables": [
       {
         "expression": "IAR - IAR_A",
-        "name": "IARD"
+        "name": "IARD",
+        "linecol": [
+          277,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 10201
+    "name": 10201,
+    "linecol": [
+      274,
+      1
+    ]
   },
   {
     "applications": [
@@ -530,27 +962,51 @@
     "variables": [
       {
         "expression": "PIR * (positif(5 - V_IND_TRAIT) + (1-positif(5-V_IND_TRAIT)) * ( positif_ou_nul(IRN+PIR-SEUIL_12) + (1-positif(IRN+PIR)) )) - PIR_A * ( positif_ou_nul(PIR_A-SEUIL_12) + (1-positif(PIR_A)) )",
-        "name": "PIRD"
+        "name": "PIRD",
+        "linecol": [
+          281,
+          1
+        ]
       },
       {
         "expression": "PPRS * CSREC - PPRS_A * CSRECA",
-        "name": "PPRSD"
+        "name": "PPRSD",
+        "linecol": [
+          293,
+          1
+        ]
       },
       {
         "expression": "PCSG* CSREC - PCSG_A * CSRECA",
-        "name": "PCSGD"
+        "name": "PCSGD",
+        "linecol": [
+          294,
+          1
+        ]
       },
       {
         "expression": "PRDS * CSREC - PRDS_A * CSRECA",
-        "name": "PRDSD"
+        "name": "PRDSD",
+        "linecol": [
+          295,
+          1
+        ]
       },
       {
         "expression": "PIRD",
-        "name": "PTOTD"
+        "name": "PTOTD",
+        "linecol": [
+          296,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 1041
+    "name": 1041,
+    "linecol": [
+      279,
+      1
+    ]
   },
   {
     "applications": [
@@ -560,15 +1016,27 @@
     "variables": [
       {
         "expression": "arr(RDRFPS * (1-null(4-V_REGCO)) + (COD8XK + COD8YK + RDRV + RDRCM + RDNP + RDNCP + RDPTP + ESFP + R1649 + PREREV) * (1-V_CNR)) * (1 - positif( present(RE168) + present(TAX1649))) + (RE168 + TAX1649) * (1-V_CNR)",
-        "name": "BPRS"
+        "name": "BPRS",
+        "linecol": [
+          300,
+          1
+        ]
       },
       {
         "expression": "arr(RDRFAPS * (1-null(4-V_REGCO)) + (RDRVAPS + RDRCMAPS + RDNP + ESFP + R1649 + PREREV) * (1-V_CNR)) * (1 - positif( present(RE168) + present(TAX1649))) + (RE168 + TAX1649) * (1-V_CNR)",
-        "name": "BPRSAPS"
+        "name": "BPRSAPS",
+        "linecol": [
+          305,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 114
+    "name": 114,
+    "linecol": [
+      297,
+      1
+    ]
   },
   {
     "applications": [
@@ -578,15 +1046,27 @@
     "variables": [
       {
         "expression": "arr( BPRS * T_PREL_SOC /100 ) * (1 - positif(ANNUL2042))",
-        "name": "PRSC"
+        "name": "PRSC",
+        "linecol": [
+          313,
+          1
+        ]
       },
       {
         "expression": "arr( BPRSAPS * T_PREL_SOC /100 ) * (1 - positif(ANNUL2042))",
-        "name": "PRSCAPS"
+        "name": "PRSCAPS",
+        "linecol": [
+          314,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 113
+    "name": 113,
+    "linecol": [
+      311,
+      1
+    ]
   },
   {
     "applications": [
@@ -596,15 +1076,27 @@
     "variables": [
       {
         "expression": "max(0,PRSC - CIPRS)",
-        "name": "PRS"
+        "name": "PRS",
+        "linecol": [
+          317,
+          1
+        ]
       },
       {
         "expression": "PRSCAPS - CIPRSAPS",
-        "name": "PRSAPS"
+        "name": "PRSAPS",
+        "linecol": [
+          318,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 103103
+    "name": 103103,
+    "linecol": [
+      315,
+      1
+    ]
   },
   {
     "applications": [
@@ -614,15 +1106,27 @@
     "variables": [
       {
         "expression": "arr( BCSG * T_CSG / 100) * (1 - positif(ANNUL2042))",
-        "name": "CSGC"
+        "name": "CSGC",
+        "linecol": [
+          321,
+          1
+        ]
       },
       {
         "expression": "arr( BCSGAPS * T_CSG / 100) * (1 - positif(ANNUL2042))",
-        "name": "CSGCAPS"
+        "name": "CSGCAPS",
+        "linecol": [
+          322,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 1031
+    "name": 1031,
+    "linecol": [
+      319,
+      1
+    ]
   },
   {
     "applications": [
@@ -632,47 +1136,91 @@
     "variables": [
       {
         "expression": "arr(BRSE1 * TXTQ/100) * (1 - positif(ANNUL2042))",
-        "name": "RSE1"
+        "name": "RSE1",
+        "linecol": [
+          326,
+          1
+        ]
       },
       {
         "expression": "ALLECS * (1 - positif(present(RE168) + present(TAX1649))) * (1-V_CNR)",
-        "name": "BRSE8TV"
+        "name": "BRSE8TV",
+        "linecol": [
+          328,
+          1
+        ]
       },
       {
         "expression": "COD8SA * (1 - positif(present(RE168) + present(TAX1649))) * (1-V_CNR)",
-        "name": "BRSE8SA"
+        "name": "BRSE8SA",
+        "linecol": [
+          329,
+          1
+        ]
       },
       {
         "expression": "arr(BRSE8TV * TXTV/100) * (1 - positif(ANNUL2042)) + arr(BRSE8SA * TXTV/100) * (1 - positif(ANNUL2042))",
-        "name": "RSE2"
+        "name": "RSE2",
+        "linecol": [
+          330,
+          1
+        ]
       },
       {
         "expression": "arr(BRSE3 * TXTW/100) * (1 - positif(ANNUL2042))",
-        "name": "RSE3"
+        "name": "RSE3",
+        "linecol": [
+          333,
+          1
+        ]
       },
       {
         "expression": "PENECS * (1 - positif(present(RE168) + present(TAX1649))) * (1-V_CNR)",
-        "name": "BRSE8TX"
+        "name": "BRSE8TX",
+        "linecol": [
+          335,
+          1
+        ]
       },
       {
         "expression": "COD8SB * (1 - positif(present(RE168) + present(TAX1649))) * (1-V_CNR)",
-        "name": "BRSE8SB"
+        "name": "BRSE8SB",
+        "linecol": [
+          336,
+          1
+        ]
       },
       {
         "expression": "arr(BRSE8TX * TXTX/100) * (1 - positif(ANNUL2042)) + arr(BRSE8SB * TXTX/100) * (1 - positif(ANNUL2042))",
-        "name": "RSE4"
+        "name": "RSE4",
+        "linecol": [
+          337,
+          1
+        ]
       },
       {
         "expression": "arr(BRSE5 * TX075/100) * (1 - positif(ANNUL2042))",
-        "name": "RSE5"
+        "name": "RSE5",
+        "linecol": [
+          340,
+          1
+        ]
       },
       {
         "expression": "RSE1 + RSE2 + RSE3 + RSE4 + RSE5",
-        "name": "RSETOT"
+        "name": "RSETOT",
+        "linecol": [
+          342,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 103101
+    "name": 103101,
+    "linecol": [
+      323,
+      1
+    ]
   },
   {
     "applications": [
@@ -682,35 +1230,67 @@
     "variables": [
       {
         "expression": "max(0,CSGC - CICSG)",
-        "name": "CSG"
+        "name": "CSG",
+        "linecol": [
+          347,
+          1
+        ]
       },
       {
         "expression": "max(0,CSGCAPS - CICSGAPS)",
-        "name": "CSGAPS"
+        "name": "CSGAPS",
+        "linecol": [
+          348,
+          1
+        ]
       },
       {
         "expression": "max(0,RSE1 - CIRSE1)",
-        "name": "RSE1N"
+        "name": "RSE1N",
+        "linecol": [
+          349,
+          1
+        ]
       },
       {
         "expression": "max(0,RSE2  - CIRSE2)",
-        "name": "RSE2N"
+        "name": "RSE2N",
+        "linecol": [
+          350,
+          1
+        ]
       },
       {
         "expression": "max(0,RSE3 - CIRSE3)",
-        "name": "RSE3N"
+        "name": "RSE3N",
+        "linecol": [
+          351,
+          1
+        ]
       },
       {
         "expression": "max(0,RSE4  - CIRSE4)",
-        "name": "RSE4N"
+        "name": "RSE4N",
+        "linecol": [
+          352,
+          1
+        ]
       },
       {
         "expression": "max(0,RSE5 - CIRSE5)",
-        "name": "RSE5N"
+        "name": "RSE5N",
+        "linecol": [
+          353,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 1031011
+    "name": 1031011,
+    "linecol": [
+      345,
+      1
+    ]
   },
   {
     "applications": [
@@ -720,119 +1300,235 @@
     "variables": [
       {
         "expression": "max(0 , RFCF + RFMIC - MICFR - RFDANT) * (1 - positif(ART1731BIS)) + max(0 , RFCF + RFMIC - MICFR + DEFRF4BC)  * positif(ART1731BIS)",
-        "name": "RDRF"
+        "name": "RDRF",
+        "linecol": [
+          357,
+          1
+        ]
       },
       {
         "expression": "max(0 , RFCFPS + RFMIC - MICFR - RFDANT)* (1 - positif(ART1731BIS)) + max(0 , RRFI + REVRF + DEFRF4BC) * positif(ART1731BIS)",
-        "name": "RDRFPS"
+        "name": "RDRFPS",
+        "linecol": [
+          360,
+          1
+        ]
       },
       {
         "expression": "max(0 , RFCFAPS + RFMIC - MICFR - RFDANT ) * (1 - positif(ART1731BIS)) + max(0 , RFCFAPS + RFMIC - MICFR +  DEFRF4BD+DEFRF4BC ) * positif(ART1731BIS)",
-        "name": "RDRFAPS"
+        "name": "RDRFAPS",
+        "linecol": [
+          363,
+          1
+        ]
       },
       {
         "expression": "TRCMABD + DRTNC + RAVC + RCMNAB + RTCAR + RCMPRIVM + RCMIMPAT - RCMSOC -  positif(RCMRDS) * min(RCMRDS , RCMABD + REVACT + RCMAV + PROVIE + RCMHAD  + DISQUO + RCMHAB + INTERE + RCMTNC + REVPEA + COD2FA ) ",
-        "name": "RDRCM1"
+        "name": "RDRCM1",
+        "linecol": [
+          365,
+          1
+        ]
       },
       {
         "expression": "min(0,RDRCM1)",
-        "name": "RDRCM1NEG"
+        "name": "RDRCM1NEG",
+        "linecol": [
+          377,
+          1
+        ]
       },
       {
         "expression": "min(COD2FA,abs(RDRCM1))",
-        "name": "RDRCM1NEGPLAF"
+        "name": "RDRCM1NEGPLAF",
+        "linecol": [
+          378,
+          1
+        ]
       },
       {
         "expression": "(1-positif(RDRCM1)) * RDRCM1NEGPLAF * (-1) + positif_ou_nul(RDRCM1) * RDRCM1",
-        "name": "RDRCM1BIS"
+        "name": "RDRCM1BIS",
+        "linecol": [
+          379,
+          1
+        ]
       },
       {
         "expression": "RDRCM1BIS + COD2FA",
-        "name": "RDRCM"
+        "name": "RDRCM",
+        "linecol": [
+          381,
+          1
+        ]
       },
       {
         "expression": "RCMABD + RCMTNC + RCMAV + RCMHAD + RCMHAB + REGPRIVM + RCMIMPAT - RCMSOC -  positif(RCMRDS) * min(RCMRDS , RCMABD + RCMAV + RCMHAD + RCMHAB + RCMTNC + COD2FA ) ",
-        "name": "RDRCM1APS"
+        "name": "RDRCM1APS",
+        "linecol": [
+          382,
+          1
+        ]
       },
       {
         "expression": "min(0,RDRCM1APS)",
-        "name": "RDRCM1NEGAPS"
+        "name": "RDRCM1NEGAPS",
+        "linecol": [
+          394,
+          1
+        ]
       },
       {
         "expression": "min(COD2FA,abs(RDRCM1APS))",
-        "name": "RDRCM1NEGPLAFAPS"
+        "name": "RDRCM1NEGPLAFAPS",
+        "linecol": [
+          395,
+          1
+        ]
       },
       {
         "expression": "(1-positif(RDRCM1APS)) * RDRCM1NEGPLAFAPS * (-1) + positif_ou_nul(RDRCM1APS) * RDRCM1APS",
-        "name": "RDRCM1BISAPS"
+        "name": "RDRCM1BISAPS",
+        "linecol": [
+          396,
+          1
+        ]
       },
       {
         "expression": "RDRCM1BISAPS + COD2FA",
-        "name": "RDRCMAPS"
+        "name": "RDRCMAPS",
+        "linecol": [
+          398,
+          1
+        ]
       },
       {
         "expression": "RVBCSG",
-        "name": "RDRV"
+        "name": "RDRV",
+        "linecol": [
+          399,
+          1
+        ]
       },
       {
         "expression": "arr(RVB1 * TXRVT1 / 100) + arr(RVB2 * TXRVT2 / 100) + arr(RVB3 * TXRVT3 / 100) + arr(RVB4 * TXRVT4 / 100)",
-        "name": "RDRVAPS"
+        "name": "RDRVAPS",
+        "linecol": [
+          400,
+          1
+        ]
       },
       {
         "expression": "RCSV + RCSC + RCSP + max(0,NPLOCNETSF) * (1-null(V_REGCO - 2)) * (1-null(V_REGCO - 4))",
-        "name": "RDNP"
+        "name": "RDNP",
+        "linecol": [
+          405,
+          1
+        ]
       },
       {
         "expression": "BPVSJ + BPVSK + BPV18V + BPV18C + BPCOPTV + BPCOPTC + BPV40V + BPV40C + BPCOSAV + BPCOSAC + PEA + GAINPEA",
-        "name": "PVTAUXPS"
+        "name": "PVTAUXPS",
+        "linecol": [
+          411,
+          1
+        ]
       },
       {
         "expression": "(PVBARPS + PVTAUXPS) * (1 - positif(IPVLOC))",
-        "name": "RDNCP"
+        "name": "RDNCP",
+        "linecol": [
+          413,
+          1
+        ]
       },
       {
         "expression": "BAF1AV + BAF1AC + BAF1AP + BA1AV + BA1AC + BA1AP + max(0,MIB1AV - MIBDEV) + max(0,MIB1AC - MIBDEC) + max(0,MIB1AP - MIBDEP) + BI1AV + BI1AC + BI1AP + max(0,MIBNP1AV - MIBNPDEV) + max(0,MIBNP1AC - MIBNPDEC) + max(0,MIBNP1AP - MIBNPDEP) + BI2AV + BI2AC + BI2AP + max(0,BNCPRO1AV - BNCPRODEV) + max(0,BNCPRO1AC - BNCPRODEC) + max(0,BNCPRO1AP - BNCPRODEP) + BN1AV + BN1AC + BN1AP + max(0,BNCNP1AV - BNCNPDEV) + max(0,BNCNP1AC - BNCNPDEC) + max(0,BNCNP1AP - BNCNPDEP) + PVINVE + PVINCE + PVINPE + PVSOCV + PVSOCC ",
-        "name": "RDPTP"
+        "name": "RDPTP",
+        "linecol": [
+          414,
+          1
+        ]
       },
       {
         "expression": "GLDGRATV + GLDGRATC",
-        "name": "RGLOA"
+        "name": "RGLOA",
+        "linecol": [
+          426,
+          1
+        ]
       },
       {
         "expression": "arr(RDRFPS * (1-null(4-V_REGCO)) + (COD8XK + COD8YK + RDRV + RDRCM + RDNP + RDNCP + RDPTP + ESFP + R1649 + PREREV)*(1-V_CNR) ) * (1 - positif(present(RE168) + present(TAX1649))) + (RE168 + TAX1649) * (1-V_CNR)",
-        "name": "BCSG"
+        "name": "BCSG",
+        "linecol": [
+          429,
+          1
+        ]
       },
       {
         "expression": "arr(RDRFAPS * (1-null(4-V_REGCO)) + (RDRVAPS + RDRCMAPS + RDNP + ESFP + R1649 + PREREV)*(1-V_CNR)) * (1 - positif(present(RE168) + present(TAX1649))) + (RE168 + TAX1649) * (1-V_CNR)",
-        "name": "BCSGAPS"
+        "name": "BCSGAPS",
+        "linecol": [
+          434,
+          1
+        ]
       },
       {
         "expression": "SALECS * (1 - positif(present(RE168) + present(TAX1649))) * (1-V_CNR)",
-        "name": "BRSE1"
+        "name": "BRSE1",
+        "linecol": [
+          439,
+          1
+        ]
       },
       {
         "expression": "(ALLECS + COD8SA) * (1 - positif(present(RE168) + present(TAX1649))) * (1-V_CNR)",
-        "name": "BRSE2"
+        "name": "BRSE2",
+        "linecol": [
+          441,
+          1
+        ]
       },
       {
         "expression": "INDECS * (1 - positif(present(RE168) + present(TAX1649))) * (1-V_CNR)",
-        "name": "BRSE3"
+        "name": "BRSE3",
+        "linecol": [
+          443,
+          1
+        ]
       },
       {
         "expression": "(PENECS + COD8SB) * (1 - positif(present(RE168) + present(TAX1649))) * (1-V_CNR)",
-        "name": "BRSE4"
+        "name": "BRSE4",
+        "linecol": [
+          445,
+          1
+        ]
       },
       {
         "expression": "SALECSG * (1 - positif(present(RE168) + present(TAX1649))) * (1-V_CNR)",
-        "name": "BRSE5"
+        "name": "BRSE5",
+        "linecol": [
+          447,
+          1
+        ]
       },
       {
         "expression": "BRSE1 + BRSE2 + BRSE3 + BRSE4 + BRSE5",
-        "name": "BRSETOT"
+        "name": "BRSETOT",
+        "linecol": [
+          450,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 10311
+    "name": 10311,
+    "linecol": [
+      355,
+      1
+    ]
   },
   {
     "applications": [
@@ -842,27 +1538,51 @@
     "variables": [
       {
         "expression": "PRSE1 + PRSE2 + PRSE3 + PRSE4 + PRSE5",
-        "name": "PRSETOT"
+        "name": "PRSETOT",
+        "linecol": [
+          453,
+          1
+        ]
       },
       {
         "expression": "RETRSE1 + RETRSE2 + RETRSE3 + RETRSE4 + RETRSE5",
-        "name": "RETRSETOT"
+        "name": "RETRSETOT",
+        "linecol": [
+          454,
+          1
+        ]
       },
       {
         "expression": "CSPROVYD + CSPROVYE + CSPROVYF + CSPROVYN + CSPROVYG + CSPROVYH + CSPROVYP",
-        "name": "RSEPROVTOT"
+        "name": "RSEPROVTOT",
+        "linecol": [
+          455,
+          1
+        ]
       },
       {
         "expression": "NMAJRSE11 + NMAJRSE21 + NMAJRSE31 + NMAJRSE41 + NMAJRSE51",
-        "name": "NMAJRSE1TOT"
+        "name": "NMAJRSE1TOT",
+        "linecol": [
+          456,
+          1
+        ]
       },
       {
         "expression": "NMAJRSE14 + NMAJRSE24 + NMAJRSE34 + NMAJRSE44 + NMAJRSE54",
-        "name": "NMAJRSE4TOT"
+        "name": "NMAJRSE4TOT",
+        "linecol": [
+          457,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 10311111
+    "name": 10311111,
+    "linecol": [
+      451,
+      1
+    ]
   },
   {
     "applications": [
@@ -872,11 +1592,19 @@
     "variables": [
       {
         "expression": "min ((BCSG) * (1-V_CNR), max( 0, (RDRFPS+RDRV +RDNP+ max(0,RDRCM1) + PVBARPS - IPPNCS)  * (1-V_CNR) )) * (1 - positif(present(RE168)+present(TAX1649))) * (1- positif(ABDETPLUS)) + min ((BCSG) * (1-V_CNR), BDCSG3VA)",
-        "name": "BDCSG"
+        "name": "BDCSG",
+        "linecol": [
+          462,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 103111
+    "name": 103111,
+    "linecol": [
+      459,
+      1
+    ]
   },
   {
     "applications": [
@@ -886,35 +1614,67 @@
     "variables": [
       {
         "expression": "positif(CSREC+V_GLOANT) * arr((BGLOA-(COD8YL/0.075)) * TX051/100) * (1 - positif(present(RE168)+present(TAX1649))) * positif(NAPCR61)",
-        "name": "DGLOD"
+        "name": "DGLOD",
+        "linecol": [
+          469,
+          1
+        ]
       },
       {
         "expression": "si (V_IND_TRAIT = 4) alors ((arr((BGLOA -(COD8YL/0.075))* TX051 / 100)) * positif(CSREC))  sinon (abs(DGLOD - V_IDGLOANT)) finsi",
-        "name": "IDGLO"
+        "name": "IDGLO",
+        "linecol": [
+          471,
+          1
+        ]
       },
       {
         "expression": "positif(ABDETPLUS +0) * min( arr((ABDETPLUS + COD3UA + 0) * TX051/100) , COD3UA)",
-        "name": "CSGDED3UA"
+        "name": "CSGDED3UA",
+        "linecol": [
+          478,
+          1
+        ]
       },
       {
         "expression": "positif(ABDETPLUS +0) * arr(( PVBARPS - ABDETPLUS - COD3UA + 0) * TX051/100)",
-        "name": "CSGDEDAUTRE"
+        "name": "CSGDEDAUTRE",
+        "linecol": [
+          480,
+          1
+        ]
       },
       {
         "expression": "max(0 , CSGDED3UA + CSGDEDAUTRE)",
-        "name": "CSGDED"
+        "name": "CSGDED",
+        "linecol": [
+          482,
+          1
+        ]
       },
       {
         "expression": "positif(CSGDED)* arr( CSGDED * 100/TX051)",
-        "name": "PVBAR3VA"
+        "name": "PVBAR3VA",
+        "linecol": [
+          484,
+          1
+        ]
       },
       {
         "expression": "positif(ABDETPLUS) *  max(0, RDRV + max(0,RDRCM1) + RDRFPS + RDNP + PVBAR3VA - IPPNCS) * (1-V_CNR) * (1 - positif(present(RE168)+present(TAX1649)))",
-        "name": "BDCSG3VA"
+        "name": "BDCSG3VA",
+        "linecol": [
+          486,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 103112
+    "name": 103112,
+    "linecol": [
+      466,
+      1
+    ]
   },
   {
     "applications": [
@@ -924,35 +1684,67 @@
     "variables": [
       {
         "expression": "max(0,SALECS-REVCSXA-arr(CSPROVYD/(TX075/100)) ) * (1 - positif(present(RE168) + present(TAX1649))) * (1-V_CNR)",
-        "name": "BDRSE1"
+        "name": "BDRSE1",
+        "linecol": [
+          493,
+          1
+        ]
       },
       {
         "expression": "max(0,ALLECS-REVCSXC-arr(CSPROVYF/(TX066/100)) ) * (1 - positif(present(RE168) + present(TAX1649))) * (1-V_CNR)",
-        "name": "BDRSE2"
+        "name": "BDRSE2",
+        "linecol": [
+          496,
+          1
+        ]
       },
       {
         "expression": "max(0,INDECS-REVCSXD-arr(CSPROVYG/(TX062/100)) ) * (1 - positif(present(RE168) + present(TAX1649))) * (1-V_CNR)",
-        "name": "BDRSE3"
+        "name": "BDRSE3",
+        "linecol": [
+          499,
+          1
+        ]
       },
       {
         "expression": "max(0,PENECS-REVCSXE-arr(CSPROVYH/(TX038/100)) ) * (1 - positif(present(RE168) + present(TAX1649))) * (1-V_CNR)",
-        "name": "BDRSE4"
+        "name": "BDRSE4",
+        "linecol": [
+          502,
+          1
+        ]
       },
       {
         "expression": "max(0,SALECSG-REVCSXB-arr(CSPROVYE/(TX075/100)) ) * (1 - positif(present(RE168) + present(TAX1649))) * (1-V_CNR)",
-        "name": "BDRSE5"
+        "name": "BDRSE5",
+        "linecol": [
+          505,
+          1
+        ]
       },
       {
         "expression": "(arr(BDRSE1 * TXTQDED/100) + arr(BDRSE2 * TXTVDED/100) + arr(BDRSE3 * TXTWDED/100) + arr(BDRSE4 * TXTXDED/100) + arr(BDRSE5 * TX051/100) ) * positif(CSREC+V_IDRSEANT) * positif(NAPCR61)",
-        "name": "DRSED"
+        "name": "DRSED",
+        "linecol": [
+          508,
+          1
+        ]
       },
       {
         "expression": "si (V_IND_TRAIT = 4) alors (positif(CSREC)*(arr(BDRSE1 * TXTQDED/100) + arr(BDRSE2 * TXTVDED/100) + arr(BDRSE3 * TXTWDED/100) + arr(BDRSE4 * TXTXDED/100) + arr(BDRSE5 * TX051/100) ) ) sinon (abs(DRSED - V_IDRSEANT)) finsi",
-        "name": "IDRSE"
+        "name": "IDRSE",
+        "linecol": [
+          512,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 103114
+    "name": 103114,
+    "linecol": [
+      489,
+      1
+    ]
   },
   {
     "applications": [
@@ -962,15 +1754,27 @@
     "variables": [
       {
         "expression": "positif(CSREC+V_IDANT) * (arr(BDCSG * T_IDCSG / 100) - DCSGIM-DCSGIM_A)  * positif(NAPCR61)",
-        "name": "DCSGD"
+        "name": "DCSGD",
+        "linecol": [
+          524,
+          1
+        ]
       },
       {
         "expression": "si (V_IND_TRAIT = 4) alors ((arr(BDCSG * T_IDCSG / 100)-DCSGIM) * positif(CSREC)) sinon ( si (CRDEG = 0 et NAPCRP = 0) alors (0) sinon (abs(DCSGD - V_IDANT )) finsi ) finsi",
-        "name": "IDCSG"
+        "name": "IDCSG",
+        "linecol": [
+          525,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 1031121
+    "name": 1031121,
+    "linecol": [
+      522,
+      1
+    ]
   },
   {
     "applications": [
@@ -980,15 +1784,27 @@
     "variables": [
       {
         "expression": "arr(RDRFPS * (1-null(4-V_REGCO)) + (COD8XK + COD8YK + RDRV + RDRCM + RDNP + RDNCP + RDPTP + RGLOA + SALECS + SALECSG + ALLECS + INDECS + PENECS + COD8SA + COD8SB + ESFP + R1649 + PREREV) * (1-V_CNR) ) * (1 - positif(present(RE168) + present(TAX1649))) + (RE168 + TAX1649) * (1-V_CNR)",
-        "name": "BRDS"
+        "name": "BRDS",
+        "linecol": [
+          535,
+          1
+        ]
       },
       {
         "expression": "arr(RDRFAPS * (1-null(4-V_REGCO)) + (RDRVAPS + RDRCMAPS + RDNP + SALECS + SALECSG + ALLECS + INDECS + PENECS + ESFP + R1649 + PREREV) *(1-V_CNR) ) * (1 - positif(present(RE168) + present(TAX1649))) + (RE168 + TAX1649) * (1-V_CNR)",
-        "name": "BRDSAPS"
+        "name": "BRDSAPS",
+        "linecol": [
+          542,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 10312
+    "name": 10312,
+    "linecol": [
+      533,
+      1
+    ]
   },
   {
     "applications": [
@@ -998,15 +1814,27 @@
     "variables": [
       {
         "expression": "arr( BRDS * T_RDS / 100 ) * (1 - positif(ANNUL2042))",
-        "name": "RDSC"
+        "name": "RDSC",
+        "linecol": [
+          551,
+          1
+        ]
       },
       {
         "expression": "arr( BRDSAPS * T_RDS / 100 ) * (1 - positif(ANNUL2042))",
-        "name": "RDSCAPS"
+        "name": "RDSCAPS",
+        "linecol": [
+          552,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 10313
+    "name": 10313,
+    "linecol": [
+      549,
+      1
+    ]
   },
   {
     "applications": [
@@ -1016,19 +1844,35 @@
     "variables": [
       {
         "expression": "RDSC - CIRDS",
-        "name": "RDSN"
+        "name": "RDSN",
+        "linecol": [
+          555,
+          1
+        ]
       },
       {
         "expression": "RDSCAPS - CIRDSAPS",
-        "name": "RDSNAPS"
+        "name": "RDSNAPS",
+        "linecol": [
+          556,
+          1
+        ]
       },
       {
         "expression": "RDSCAC - CIRDSAC",
-        "name": "RDSNAC"
+        "name": "RDSNAC",
+        "linecol": [
+          557,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 103102
+    "name": 103102,
+    "linecol": [
+      553,
+      1
+    ]
   },
   {
     "applications": [
@@ -1038,19 +1882,35 @@
     "variables": [
       {
         "expression": "(RDPTP + PVINVE+PVINCE+PVINPE + somme(i=V,C,P:BN1Ai + BI1Ai + BI2Ai + BA1Ai )) * (1 - positif(IPVLOC))",
-        "name": "CSRTF"
+        "name": "CSRTF",
+        "linecol": [
+          561,
+          1
+        ]
       },
       {
         "expression": "CSRTF",
-        "name": "RDRTF"
+        "name": "RDRTF",
+        "linecol": [
+          564,
+          1
+        ]
       },
       {
         "expression": "CSRTF",
-        "name": "PSRTF"
+        "name": "PSRTF",
+        "linecol": [
+          565,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 117180
+    "name": 117180,
+    "linecol": [
+      558,
+      1
+    ]
   },
   {
     "applications": [
@@ -1060,51 +1920,99 @@
     "variables": [
       {
         "expression": "max(0,CESSASSV - LIM_ASSUR3)",
-        "name": "BASSURV3"
+        "name": "BASSURV3",
+        "linecol": [
+          568,
+          1
+        ]
       },
       {
         "expression": "max(0,CESSASSV - BASSURV3 - LIM_ASSUR2)",
-        "name": "BASSURV2"
+        "name": "BASSURV2",
+        "linecol": [
+          569,
+          1
+        ]
       },
       {
         "expression": "max(0,CESSASSV - BASSURV3 - BASSURV2 - LIM_ASSUR1)",
-        "name": "BASSURV1"
+        "name": "BASSURV1",
+        "linecol": [
+          570,
+          1
+        ]
       },
       {
         "expression": "max(0,CESSASSC - LIM_ASSUR3)",
-        "name": "BASSURC3"
+        "name": "BASSURC3",
+        "linecol": [
+          571,
+          1
+        ]
       },
       {
         "expression": "max(0,(CESSASSC -BASSURC3) - LIM_ASSUR2)",
-        "name": "BASSURC2"
+        "name": "BASSURC2",
+        "linecol": [
+          572,
+          1
+        ]
       },
       {
         "expression": "max(0,(CESSASSC - BASSURC3 -BASSURC2) - LIM_ASSUR1)",
-        "name": "BASSURC1"
+        "name": "BASSURC1",
+        "linecol": [
+          573,
+          1
+        ]
       },
       {
         "expression": "CESSASSV",
-        "name": "BASSURV"
+        "name": "BASSURV",
+        "linecol": [
+          574,
+          1
+        ]
       },
       {
         "expression": "CESSASSC",
-        "name": "BASSURC"
+        "name": "BASSURC",
+        "linecol": [
+          575,
+          1
+        ]
       },
       {
         "expression": "arr(BASSURV1 * TX_ASSUR1/100 + BASSURV2 * TX_ASSUR2/100 + BASSURV3 * TX_ASSUR3/100) * (1 - positif(RE168 + TAX1649))",
-        "name": "TAXASSURV"
+        "name": "TAXASSURV",
+        "linecol": [
+          576,
+          1
+        ]
       },
       {
         "expression": "arr(BASSURC1 * TX_ASSUR1/100 + BASSURC2 * TX_ASSUR2/100 + BASSURC3 * TX_ASSUR3/100) * (1 - positif(RE168 + TAX1649))",
-        "name": "TAXASSURC"
+        "name": "TAXASSURC",
+        "linecol": [
+          577,
+          1
+        ]
       },
       {
         "expression": "TAXASSURV + TAXASSURC",
-        "name": "TAXASSUR"
+        "name": "TAXASSUR",
+        "linecol": [
+          578,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 119
+    "name": 119,
+    "linecol": [
+      566,
+      1
+    ]
   },
   {
     "applications": [
@@ -1114,31 +2022,59 @@
     "variables": [
       {
         "expression": "(CVNSALAV + CVNSALAC+GLDGRATV+GLDGRATC) * (1-positif(present(TAX1649)+present(RE168)))",
-        "name": "BCVNSAL"
+        "name": "BCVNSAL",
+        "linecol": [
+          582,
+          1
+        ]
       },
       {
         "expression": "(CVNSALAV + CVNSALAC) * (1-positif(present(TAX1649)+present(RE168)))",
-        "name": "B3SVN"
+        "name": "B3SVN",
+        "linecol": [
+          583,
+          1
+        ]
       },
       {
         "expression": "arr( BCVNSAL * TX10 / 100 ) * (1 - positif(ANNUL2042))",
-        "name": "CVNSALC"
+        "name": "CVNSALC",
+        "linecol": [
+          584,
+          1
+        ]
       },
       {
         "expression": "(GLDGRATV+GLDGRATC) * (1-V_CNR) * (1-positif(present(TAX1649)+present(RE168)))",
-        "name": "BGLOA"
+        "name": "BGLOA",
+        "linecol": [
+          586,
+          1
+        ]
       },
       {
         "expression": "arr( BGLOA * TX075 / 100 ) * (1 - positif(ANNUL2042))",
-        "name": "CGLOA"
+        "name": "CGLOA",
+        "linecol": [
+          587,
+          1
+        ]
       },
       {
         "expression": "(GLDGRATV+GLDGRATC) * V_CNR * (1-positif(present(TAX1649)+present(RE168)))",
-        "name": "BGLOACNR"
+        "name": "BGLOACNR",
+        "linecol": [
+          589,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 1120
+    "name": 1120,
+    "linecol": [
+      579,
+      1
+    ]
   },
   {
     "applications": [
@@ -1148,19 +2084,35 @@
     "variables": [
       {
         "expression": "(GSALV + GSALC) * (1 - V_CNR)* (1-positif(present(TAX1649)+present(RE168)))",
-        "name": "BCDIS"
+        "name": "BCDIS",
+        "linecol": [
+          594,
+          1
+        ]
       },
       {
         "expression": "arr(BCDIS * TCDIS / 100) * (1 - positif(ANNUL2042))",
-        "name": "CDISC"
+        "name": "CDISC",
+        "linecol": [
+          596,
+          1
+        ]
       },
       {
         "expression": "CDISC",
-        "name": "CDIS"
+        "name": "CDIS",
+        "linecol": [
+          598,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 1125
+    "name": 1125,
+    "linecol": [
+      591,
+      1
+    ]
   },
   {
     "applications": [
@@ -1170,14 +2122,26 @@
     "variables": [
       {
         "expression": "COD2LA * (1 - V_CNR)* (1-positif(present(TAX1649)+present(RE168)))",
-        "name": "BREGV"
+        "name": "BREGV",
+        "linecol": [
+          602,
+          1
+        ]
       },
       {
         "expression": "BREGV",
-        "name": "MREGV"
+        "name": "MREGV",
+        "linecol": [
+          603,
+          1
+        ]
       }
     ],
     "type": "regle_declaration",
-    "name": 1130
+    "name": 1130,
+    "linecol": [
+      599,
+      1
+    ]
   }
 ]

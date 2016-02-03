@@ -21,6 +21,7 @@ from arpeggio.cleanpeg import ParserPEG
 
 
 args = None
+m_parser = None
 script_name = os.path.splitext(os.path.basename(__file__))[0]
 log = logging.getLogger(script_name)
 
@@ -31,33 +32,37 @@ m_grammar_file_path = os.path.join(script_dir_name, '..', 'data', 'm_language.cl
 # Primary AST make functions
 
 
-def make_application_declaration(name):
+def make_application_declaration(name, linecol = None):
     return {
+        'linecol': linecol,
         'name': name,
         'type': u'application_declaration',
         }
 
 
-def make_enchaineur_declaration(name, applications):
+def make_enchaineur_declaration(name, applications, linecol = None):
     return {
         'applications': applications,
+        'linecol': linecol,
         'name': name,
         'type': u'enchaineur_declaration',
         }
 
 
-def make_regle_declaration(name, applications, variables):
+def make_regle_declaration(name, applications, variables, linecol = None):
     return {
         'applications': applications,
+        'linecol': linecol,
         'name': name,
         'type': u'regle_declaration',
         'variables': variables,
         }
 
 
-def make_variable_declaration(name, type, attributes = None, description = None):
+def make_variable_declaration(name, type, attributes = None, description = None, linecol = None):
     return {
         'attributes': attributes,
+        'linecol': linecol,
         'name': name,
         'description': description,
         'type': u'variable_declaration',
@@ -68,38 +73,51 @@ def make_variable_declaration(name, type, attributes = None, description = None)
 # Secondary AST make functions
 
 
-def make_attribute(name, value):
+def make_attribute(name, value, linecol = None):
     return {
+        'linecol': linecol,
         'name': name,
-        'value': value,
         'type': u'attribute',
+        'value': value,
         }
 
 
-def make_string(value):
+def make_string(value, linecol = None):
     return {
+        'linecol': linecol,
         'type': u'string',
         'value': value,
         }
 
 
-def make_symbol(name):
+def make_symbol(name, linecol = None):
     return {
+        'linecol': linecol,
         'name': name,
         'type': u'symbol',
         }
 
 
-def make_variable_calculee_qualifiers(value):
+def make_symbol_enumeration(value, linecol = None):
     return {
+        'linecol': linecol,
+        'value': value,
+        'type': u'symbol_enumeration',
+        }
+
+
+def make_variable_calculee_qualifiers(value, linecol = None):
+    return {
+        'linecol': linecol,
         'type': u'variable_calculee_qualifiers',
         'value': value,
         }
 
 
-def make_variable_definition(name, expression):
+def make_variable_definition(name, expression, linecol = None):
     return {
         'expression': expression,
+        'linecol': linecol,
         'name': name,
         'type': u'variable_definition',
         }
@@ -148,19 +166,34 @@ class MLanguageVisitor(PTNodeVisitor):
             raise NotImplementedError(infos)
 
     def visit_alias(self, node, children):
-        return make_attribute(name = u'alias', value = children[0]['name'])
+        return make_attribute(
+            linecol = m_parser.pos_to_linecol(node.position),
+            name = u'alias',
+            value = children[0]['name'],
+            )
 
     def visit_application_declaration(self, node, children):
-        return make_application_declaration(name = children[0]['name'])
+        return make_application_declaration(
+            linecol = m_parser.pos_to_linecol(node.position),
+            name = children[0]['name'],
+            )
 
     def visit_attribute(self, node, children):
-        return make_attribute(name = children[0]['name'], value = children[1])
+        return make_attribute(
+            linecol = m_parser.pos_to_linecol(node.position),
+            name = children[0]['name'],
+            value = children[1],
+            )
 
     def visit_comment(self, node, children):
         return None
 
     def visit_enchaineur_declaration(self, node, children):
-        return make_enchaineur_declaration(name = children[0]['name'], applications = children[1])
+        return make_enchaineur_declaration(
+            applications = children[1]['value'],
+            linecol = m_parser.pos_to_linecol(node.position),
+            name = children[0]['name'],
+            )
 
     def visit_expression(self, node, children):
         return u' '.join(
@@ -179,28 +212,50 @@ class MLanguageVisitor(PTNodeVisitor):
             without_keys(variable_definition, ['type'])
             for variable_definition in find_many(children, type = 'variable_definition')
             ]
-        return make_regle_declaration(name = children[0], applications = children[1], variables = variables)
+        return make_regle_declaration(
+            applications = children[1]['value'],
+            linecol = m_parser.pos_to_linecol(node.position),
+            name = children[0],
+            variables = variables,
+            )
 
     def visit_root(self, node, children):
         return children
 
     def visit_string(self, node, children):
-        return make_string(value = node[1].value)
+        return make_string(
+            linecol = m_parser.pos_to_linecol(node.position),
+            value = node[1].value,
+            )
 
     def visit_symbol(self, node, children):
-        return make_symbol(name = node.value)
+        return make_symbol(
+            linecol = m_parser.pos_to_linecol(node.position),
+            name = node.value,
+            )
 
     def visit_symbol_enumeration(self, node, children):
-        return [
-            child['name']
-            for child in children
-            ]
+        return make_symbol_enumeration(
+            linecol = m_parser.pos_to_linecol(node.position),
+            value = [
+                child['name']
+                for child in children
+                ],
+            )
 
     def visit_tableau(self, node, children):
-        return make_attribute(name = u'tableau', value = children[0])
+        return make_attribute(
+            linecol = m_parser.pos_to_linecol(node.position),
+            name = u'tableau',
+            value = children[0],
+            )
 
     def visit_type(self, node, children):
-        return make_attribute(name = u'type', value = node[1].value)
+        return make_attribute(
+            linecol = m_parser.pos_to_linecol(node.position),
+            name = u'type',
+            value = node[1].value,
+            )
 
     def visit_variable_calculee_declaration(self, node, children):
         name = children[0]['name']
@@ -212,25 +267,42 @@ class MLanguageVisitor(PTNodeVisitor):
             )
         attributes = None if variable_calculee_qualifiers is None else \
             {'type_qualifiers': variable_calculee_qualifiers}
-        return make_variable_declaration(name = name, description = description, type = 'variable_calculee',
-            attributes = attributes)
+        return make_variable_declaration(
+            attributes = attributes,
+            description = description,
+            linecol = m_parser.pos_to_linecol(node.position),
+            name = name,
+            type = 'variable_calculee',
+            )
 
     def visit_variable_calculee_qualifiers(self, node, children):
-        attributes = [
-            attribute_node.value
-            for attribute_node in node
+        qualifiers = [
+            qualifier_node.value
+            for qualifier_node in node
             ]
-        return make_variable_calculee_qualifiers(value = attributes)
+        return make_variable_calculee_qualifiers(
+            linecol = m_parser.pos_to_linecol(node.position),
+            value = qualifiers,
+            )
 
     def visit_variable_const_declaration(self, node, children):
         name = children[0]['name']
-        return make_variable_declaration(name = name, type = 'variable_const', attributes = {'value': children[1]})
+        return make_variable_declaration(
+            attributes = {'value': children[1]},
+            linecol = m_parser.pos_to_linecol(node.position),
+            name = name,
+            type = 'variable_const',
+            )
 
     def visit_variable_declaration(self, node, children):
         return children[0]
 
     def visit_variable_definition(self, node, children):
-        return make_variable_definition(name = children[0]['name'], expression = children[1])
+        return make_variable_definition(
+            expression = children[1],
+            linecol = m_parser.pos_to_linecol(node.position),
+            name = children[0]['name'],
+            )
 
     def visit_variable_saisie_declaration(self, node, children):
         name = children[0]['name']
@@ -243,6 +315,7 @@ class MLanguageVisitor(PTNodeVisitor):
         return make_variable_declaration(
             attributes = attributes,
             description = description,
+            linecol = m_parser.pos_to_linecol(node.position),
             name = name,
             type = 'variable_saisie',
             )
@@ -263,10 +336,11 @@ def main():
 
     with open(m_grammar_file_path) as m_grammar_file:
         m_grammar = m_grammar_file.read()
-    parser = ParserPEG(m_grammar, 'root', debug = args.debug)
+    global m_parser
+    m_parser = ParserPEG(m_grammar, 'root', debug = args.debug)
     log.debug(u'M language clean-PEG grammar was parsed with success.')
 
-    parse_tree = parser.parse(source_code)
+    parse_tree = m_parser.parse(source_code)
     log.debug(u'Source file "{}" was parsed with success.'.format(args.source_file))
 
     result = visit_parse_tree(parse_tree, MLanguageVisitor(debug = args.debug))
