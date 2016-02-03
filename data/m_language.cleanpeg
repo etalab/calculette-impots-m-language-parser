@@ -1,10 +1,12 @@
-comment = "#" r'.*'
+comment = r'\#.*'
 
 symbol = r'\w+'
 symbol_enumeration = symbol ("," symbol)*
+symbols_enumeration = symbol ("," symbol)+
 float = r'\d+\.\d+'
 integer = r'\d+'
 string = '"' r'[^"]*' '"'
+integer_range = integer ".." integer
 
 application_declaration = "application" symbol ";"
 enchaineur_declaration = "enchaineur" symbol "application:" symbol_enumeration  ";"
@@ -21,6 +23,8 @@ variable_declaration = (variable_calculee_declaration / variable_const_declarati
 
 expression = r'[^;]+'
 variable_definition = symbol "=" expression ";"
-regle_declaration = "regle" integer ":" "application" ":" symbol_enumeration ";" variable_definition+
+pour_variable_definition = "pour" symbol "=" (symbols_enumeration / integer_range) ":" variable_definition
+regle_isf_qualifier = "isf"
+regle_declaration = "regle" regle_isf_qualifier? integer ":" "application" ":" symbol_enumeration ";" (variable_definition / pour_variable_definition)+
 
 root = (comment / application_declaration / enchaineur_declaration / variable_declaration / regle_declaration)+ EOF

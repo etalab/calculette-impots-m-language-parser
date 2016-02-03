@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 
@@ -29,197 +29,326 @@ script_dir_name = os.path.dirname(os.path.abspath(__file__))
 m_grammar_file_path = os.path.join(script_dir_name, '..', 'data', 'm_language.cleanpeg')
 
 
-# Primary AST make functions
+# Primary AST node makers
 
 
 def make_application_declaration(name, linecol = None):
-    return {
+    return clean({
         'linecol': linecol,
         'name': name,
         'type': u'application_declaration',
-        }
+        })
+
+
+def make_comment(value, linecol = None):
+    return clean({
+        'linecol': linecol,
+        'value': value,
+        'type': u'comment',
+        })
+
+
+def make_const_variable_declaration(name, value, linecol = None):
+    return clean({
+        'linecol': linecol,
+        'name': name,
+        'type': u'variable_declaration',
+        'value': value,
+        'variable_type': u'const',
+        })
 
 
 def make_enchaineur_declaration(name, applications, linecol = None):
-    return {
+    return clean({
         'applications': applications,
         'linecol': linecol,
         'name': name,
         'type': u'enchaineur_declaration',
-        }
+        })
 
 
-def make_regle_declaration(name, applications, variables, linecol = None):
-    return {
+def make_regle_declaration(name, applications, variables, isf, linecol = None):
+    return clean({
         'applications': applications,
+        'isf': isf,
         'linecol': linecol,
         'name': name,
         'type': u'regle_declaration',
         'variables': variables,
-        }
+        })
 
 
 def make_variable_declaration(name, type, attributes = None, description = None, linecol = None):
-    return {
+    return clean({
         'attributes': attributes,
+        'description': description,
         'linecol': linecol,
         'name': name,
-        'description': description,
         'type': u'variable_declaration',
         'variable_type': type,
-        }
+        })
 
 
-# Secondary AST make functions
+# Secondary AST node makers
 
 
 def make_attribute(name, value, linecol = None):
-    return {
+    return clean({
         'linecol': linecol,
         'name': name,
         'type': u'attribute',
         'value': value,
-        }
+        })
+
+
+def make_expression(value, linecol = None):
+    return clean({
+        'linecol': linecol,
+        'type': u'expression',
+        'value': value,
+        })
+
+
+def make_float(value, linecol = None):
+    return clean({
+        'linecol': linecol,
+        'value': value,
+        'type': u'float',
+        })
+
+
+def make_integer(value, linecol = None):
+    return clean({
+        'linecol': linecol,
+        'value': value,
+        'type': u'integer',
+        })
+
+
+def make_integer_range(start, stop, linecol = None):
+    return clean({
+        'linecol': linecol,
+        'start': start,
+        'stop': stop,
+        'type': u'integer_range',
+        })
+
+
+def make_pour_variable_definition(loop_domain, loop_variable, variable_definition, linecol = None):
+    return clean({
+        'linecol': linecol,
+        'loop_domain': loop_domain,
+        'loop_variable': loop_variable,
+        'type': u'pour_variable_definition',
+        'variable_definition': variable_definition,
+        })
+
+
+def make_regle_isf_qualifier(value, linecol = None):
+    return clean({
+        'linecol': linecol,
+        'type': u'regle_isf_qualifier',
+        'value': value,
+        })
 
 
 def make_string(value, linecol = None):
-    return {
+    return clean({
         'linecol': linecol,
         'type': u'string',
         'value': value,
-        }
+        })
 
 
 def make_symbol(name, linecol = None):
-    return {
+    return clean({
         'linecol': linecol,
         'name': name,
         'type': u'symbol',
-        }
+        })
 
 
 def make_symbol_enumeration(value, linecol = None):
-    return {
+    return clean({
         'linecol': linecol,
         'value': value,
         'type': u'symbol_enumeration',
-        }
+        })
 
 
 def make_variable_calculee_qualifiers(value, linecol = None):
-    return {
+    return clean({
         'linecol': linecol,
         'type': u'variable_calculee_qualifiers',
         'value': value,
-        }
+        })
 
 
 def make_variable_definition(name, expression, linecol = None):
-    return {
+    return clean({
         'expression': expression,
         'linecol': linecol,
         'name': name,
         'type': u'variable_definition',
-        }
+        })
 
 
-# AST Helpers
+# AST children helpers
 
 
-def find_many(nodes, type, attribute = None):
-    results = find_many_or_none(nodes, type, attribute)
-    assert len(results) > 0, (nodes, type, attribute, results)
+def find_one_or_many(nodes, type):
+    results = find_many_or_none(nodes, type)
+    assert results is not None and len(results) > 0, (nodes, type, results)
     return results
 
 
-def find_many_or_none(nodes, type, attribute = None):
+def find_many_or_none(nodes, type):
     return [
-        node[attribute] if attribute is not None else node
+        node
         for node in nodes
-        if isinstance(node, dict) and node['type'] == type
+        if node['type'] == type
         ] or None
 
 
-def find_one(nodes, type, attribute = None):
-    results = find_many_or_none(nodes, type, attribute)
-    assert len(results) == 1, (nodes, type, attribute, results)
+def find_one(nodes, type):
+    results = find_many_or_none(nodes, type)
+    assert results is not None and len(results) == 1, (nodes, type, results)
     return results[0]
 
 
-def find_one_or_none(nodes, type, attribute = None):
-    results = find_many_or_none(nodes, type, attribute)
+def find_one_or_none(nodes, type):
+    results = find_many_or_none(nodes, type)
     return results[0] if results else None
 
 
-def without_keys(dict, keys):
+# Dict helpers
+
+
+def clean(dict_):
+    """Allows 0 values but not None, [], {}."""
     return {
         key: value
-        for key, value in dict.iteritems()
-        if key not in keys
+        for key, value in dict_.iteritems()
+        if value is not None or isinstance(value, (list, dict)) and value
         }
+
+
+# PEG parser visitor
 
 
 class MLanguageVisitor(PTNodeVisitor):
     def visit__default__(self, node, children):
+        """Ensure all grammar rules are implemented in visitor class."""
         if node.rule_name and node.rule_name != 'EOF':
             infos = {'rule': node.rule_name, 'node': node, 'children': children}
             raise NotImplementedError(infos)
 
     def visit_alias(self, node, children):
+        value = find_one(children, type = 'symbol')
         return make_attribute(
             linecol = m_parser.pos_to_linecol(node.position),
             name = u'alias',
-            value = children[0]['name'],
+            value = value,
             )
 
     def visit_application_declaration(self, node, children):
+        name = find_one(children, type = 'symbol')
         return make_application_declaration(
             linecol = m_parser.pos_to_linecol(node.position),
-            name = children[0]['name'],
+            name = name,
             )
 
     def visit_attribute(self, node, children):
+        name = find_one(children, type = 'symbol')
+        value = find_one(children, type = 'integer')
         return make_attribute(
             linecol = m_parser.pos_to_linecol(node.position),
-            name = children[0]['name'],
-            value = children[1],
+            name = name,
+            value = value,
             )
 
     def visit_comment(self, node, children):
-        return None
+        return make_comment(
+            linecol = m_parser.pos_to_linecol(node.position),
+            value = node.value,
+            )
 
     def visit_enchaineur_declaration(self, node, children):
+        name = find_one(children, type = 'symbol')
+        applications = find_one_or_many(children, type = 'symbol_enumeration')
         return make_enchaineur_declaration(
-            applications = children[1]['value'],
+            applications = applications,
             linecol = m_parser.pos_to_linecol(node.position),
-            name = children[0]['name'],
+            name = name,
             )
 
     def visit_expression(self, node, children):
-        return u' '.join(
-            line.strip()
-            for line in node.value.split('\n')
+        return make_expression(
+            linecol = m_parser.pos_to_linecol(node.position),
+            value = u' '.join(
+                line.strip()
+                for line in node.value.split('\n')
+                ),
             )
 
     def visit_float(self, node, children):
-        return float(node.value)
+        return make_float(
+            linecol = m_parser.pos_to_linecol(node.position),
+            value = float(node.value),
+            )
 
     def visit_integer(self, node, children):
-        return int(node.value)
+        return make_integer(
+            linecol = m_parser.pos_to_linecol(node.position),
+            value = int(node.value),
+            )
+
+    def visit_integer_range(self, node, children):
+        bounds = find_one_or_many(children, type = 'integer')
+        assert len(bounds) == 2, bounds
+        return make_integer_range(
+            linecol = m_parser.pos_to_linecol(node.position),
+            start = bounds[0],
+            stop = bounds[1],
+            )
+
+    def visit_pour_variable_definition(self, node, children):
+        loop_variable = find_one(children, type = 'symbol')
+        symbols_enumeration = find_one_or_none(children, type = 'symbol_enumeration')
+        integer_range = find_one_or_none(children, type = 'integer_range')
+        loop_domain = symbols_enumeration or integer_range
+        assert loop_domain is not None, (loop_domain, symbols_enumeration, integer_range)
+        variable_definition = find_one(children, type = 'variable_definition')
+        return make_pour_variable_definition(
+            linecol = m_parser.pos_to_linecol(node.position),
+            loop_domain = loop_domain,
+            loop_variable = loop_variable,
+            variable_definition = variable_definition,
+            )
 
     def visit_regle_declaration(self, node, children):
-        variables = [
-            without_keys(variable_definition, ['type'])
-            for variable_definition in find_many(children, type = 'variable_definition')
-            ]
+        name = find_one(children, type = 'integer')
+        applications = find_one(children, type = 'symbol_enumeration')
+        isf_qualifier = find_one_or_none(children, type = 'regle_isf_qualifier')
+        variable_definition_list = find_many_or_none(children, type = 'variable_definition')
+        pour_variable_definition_list = find_many_or_none(children, type = 'pour_variable_definition')
+        variables = ([] + (variable_definition_list or []) + (pour_variable_definition_list or [])) or None
         return make_regle_declaration(
-            applications = children[1]['value'],
+            applications = applications,
+            isf = isf_qualifier,
             linecol = m_parser.pos_to_linecol(node.position),
-            name = children[0],
+            name = name,
             variables = variables,
             )
 
+    def visit_regle_isf_qualifier(self, node, children):
+        return make_regle_isf_qualifier(
+            linecol = m_parser.pos_to_linecol(node.position),
+            value = node.value,
+            )
+
     def visit_root(self, node, children):
+        # Do not wrap root rule in a sub-key.
         return children
 
     def visit_string(self, node, children):
@@ -237,17 +366,21 @@ class MLanguageVisitor(PTNodeVisitor):
     def visit_symbol_enumeration(self, node, children):
         return make_symbol_enumeration(
             linecol = m_parser.pos_to_linecol(node.position),
-            value = [
-                child['name']
-                for child in children
-                ],
+            value = children,
+            )
+
+    def visit_symbols_enumeration(self, node, children):
+        return make_symbol_enumeration(
+            linecol = m_parser.pos_to_linecol(node.position),
+            value = children,
             )
 
     def visit_tableau(self, node, children):
+        value = find_one(children, type = 'integer')
         return make_attribute(
             linecol = m_parser.pos_to_linecol(node.position),
             name = u'tableau',
-            value = children[0],
+            value = value,
             )
 
     def visit_type(self, node, children):
@@ -258,13 +391,9 @@ class MLanguageVisitor(PTNodeVisitor):
             )
 
     def visit_variable_calculee_declaration(self, node, children):
-        name = children[0]['name']
-        description = find_one(children, type = 'string', attribute = 'value')
-        variable_calculee_qualifiers = find_one_or_none(
-            children,
-            attribute = 'value',
-            type = 'variable_calculee_qualifiers',
-            )
+        name = find_one(children, type = 'symbol')
+        description = find_one(children, type = 'string')
+        variable_calculee_qualifiers = find_one_or_none(children, type = 'variable_calculee_qualifiers')
         attributes = None if variable_calculee_qualifiers is None else \
             {'type_qualifiers': variable_calculee_qualifiers}
         return make_variable_declaration(
@@ -272,7 +401,7 @@ class MLanguageVisitor(PTNodeVisitor):
             description = description,
             linecol = m_parser.pos_to_linecol(node.position),
             name = name,
-            type = 'variable_calculee',
+            type = 'calculee',
             )
 
     def visit_variable_calculee_qualifiers(self, node, children):
@@ -286,38 +415,37 @@ class MLanguageVisitor(PTNodeVisitor):
             )
 
     def visit_variable_const_declaration(self, node, children):
-        name = children[0]['name']
-        return make_variable_declaration(
-            attributes = {'value': children[1]},
+        name = find_one(children, type = 'symbol')
+        value = find_one(children, type = 'float')
+        return make_const_variable_declaration(
             linecol = m_parser.pos_to_linecol(node.position),
             name = name,
-            type = 'variable_const',
+            value = value,
             )
 
     def visit_variable_declaration(self, node, children):
+        # Just return sub-rules JSON objects without wrapping them.
         return children[0]
 
     def visit_variable_definition(self, node, children):
+        name = find_one(children, type = 'symbol')
+        expression = find_one(children, type = 'expression')
         return make_variable_definition(
-            expression = children[1],
+            expression = expression,
             linecol = m_parser.pos_to_linecol(node.position),
-            name = children[0]['name'],
+            name = name,
             )
 
     def visit_variable_saisie_declaration(self, node, children):
-        name = children[0]['name']
-        description = find_one(children, type = 'string', attribute = 'value')
-        attribute_ast_nodes = find_many_or_none(children, type = 'attribute')
-        attributes = {
-            attribute_ast_node['name']: attribute_ast_node['value']
-            for attribute_ast_node in attribute_ast_nodes
-            } if attribute_ast_nodes is not None else None
+        name = find_one(children, type = 'symbol')
+        description = find_one(children, type = 'string')
+        attributes = find_many_or_none(children, type = 'attribute')
         return make_variable_declaration(
             attributes = attributes,
             description = description,
             linecol = m_parser.pos_to_linecol(node.position),
             name = name,
-            type = 'variable_saisie',
+            type = 'saisie',
             )
 
 

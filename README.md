@@ -8,10 +8,8 @@ du [calculateur des impôts sur les revenus](https://git.framasoft.org/openfisca
 au format [cleanpeg](http://igordejanovic.net/Arpeggio/grammars/#grammars-written-in-peg-notations)
 - [`scripts/m_source_code_to_ast.py`](scripts/m_source_code_to_ast.py) est le script de transformation du code source
 vers un AST en JSON
-- [`json/tgvH-0-99.json`](json/tgvH-0-99.json) est un exemple (restreint aux 100 premières valeurs)
-de la transformation en JSON du fichier
-[`tgvH.m`](https://git.framasoft.org/openfisca/code-source-impots-revenus/tree/master/src)
-(lien vers son répertoire car le fichier est trop gros pour les navigateurs)
+- [`json/chap-1.json`](json/chap-1.json.json) est un exemple de la transformation en JSON du fichier
+[`chap-1.m`](https://git.framasoft.org/openfisca/code-source-impots-revenus/tree/master/src/chap-1.m)
 
 ## Installation des dépendances
 
