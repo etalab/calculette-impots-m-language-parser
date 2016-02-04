@@ -1,0 +1,1746 @@
+[
+  {
+    "type": "comment",
+    "value": "#*************************************************************************************************************************",
+    "linecol": [
+      1,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#",
+    "linecol": [
+      2,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#Copyright or © or Copr.[DGFIP][2015]",
+    "linecol": [
+      3,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#",
+    "linecol": [
+      4,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#Ce logiciel a été initialement développé par la Direction Générale des ",
+    "linecol": [
+      5,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#Finances Publiques pour permettre le calcul de l'impôt sur le revenu 2015 ",
+    "linecol": [
+      6,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#au titre des revenus perçus en 2014. La présente version a permis la ",
+    "linecol": [
+      7,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#génération du moteur de calcul des chaînes de taxation des rôles d'impôt ",
+    "linecol": [
+      8,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#sur le revenu de ce millésime.",
+    "linecol": [
+      9,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#",
+    "linecol": [
+      10,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#Ce logiciel est régi par la licence CeCILL 2.1 soumise au droit français ",
+    "linecol": [
+      11,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#et respectant les principes de diffusion des logiciels libres. Vous pouvez ",
+    "linecol": [
+      12,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#utiliser, modifier et/ou redistribuer ce programme sous les conditions de ",
+    "linecol": [
+      13,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#la licence CeCILL 2.1 telle que diffusée par le CEA, le CNRS et l'INRIA  sur ",
+    "linecol": [
+      14,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#le site \"http://www.cecill.info\".",
+    "linecol": [
+      15,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#",
+    "linecol": [
+      16,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#Le fait que vous puissiez accéder à cet en-tête signifie que vous avez pris ",
+    "linecol": [
+      17,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#connaissance de la licence CeCILL 2.1 et que vous en avez accepté les termes.",
+    "linecol": [
+      18,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#",
+    "linecol": [
+      19,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#**************************************************************************************************************************",
+    "linecol": [
+      20,
+      1
+    ]
+  },
+  {
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "bareme",
+          "linecol": [
+            22,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            22,
+            24
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            22,
+            32
+          ]
+        }
+      ],
+      "linecol": [
+        22,
+        15
+      ]
+    },
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "((TX_BAR1 * (1 - V_ANC_BAR) + TX_BAR1A * V_ANC_BAR) - TX_BAR0 )",
+          "linecol": [
+            24,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TAUX1",
+          "linecol": [
+            24,
+            1
+          ]
+        },
+        "linecol": [
+          24,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(TX_BAR2  - (TX_BAR1 * (1 - V_ANC_BAR) + TX_BAR1A * V_ANC_BAR))",
+          "linecol": [
+            25,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TAUX2",
+          "linecol": [
+            25,
+            1
+          ]
+        },
+        "linecol": [
+          25,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(TX_BAR3  - TX_BAR2 )",
+          "linecol": [
+            26,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TAUX3",
+          "linecol": [
+            26,
+            1
+          ]
+        },
+        "linecol": [
+          26,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(TX_BAR4  - TX_BAR3 )",
+          "linecol": [
+            27,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TAUX4",
+          "linecol": [
+            27,
+            1
+          ]
+        },
+        "linecol": [
+          27,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(TX_BAR5  - TX_BAR4 )",
+          "linecol": [
+            28,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TAUX5",
+          "linecol": [
+            28,
+            1
+          ]
+        },
+        "linecol": [
+          28,
+          1
+        ]
+      }
+    ],
+    "type": "regle_declaration",
+    "name": {
+      "type": "integer",
+      "value": 507,
+      "linecol": [
+        21,
+        7
+      ]
+    },
+    "linecol": [
+      21,
+      1
+    ]
+  },
+  {
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "bareme",
+          "linecol": [
+            31,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            31,
+            24
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            31,
+            32
+          ]
+        }
+      ],
+      "linecol": [
+        31,
+        15
+      ]
+    },
+    "variables": [
+      {
+        "loop_variables": {
+          "type": "loop_variables",
+          "value": [
+            {
+              "domain": {
+                "type": "loop_variable_domain",
+                "value": [
+                  {
+                    "type": "symbol",
+                    "name": "0",
+                    "linecol": [
+                      32,
+                      8
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "5",
+                    "linecol": [
+                      32,
+                      10
+                    ]
+                  }
+                ],
+                "linecol": [
+                  32,
+                  8
+                ]
+              },
+              "type": "loop_variable",
+              "name": {
+                "type": "symbol",
+                "name": "x",
+                "linecol": [
+                  32,
+                  6
+                ]
+              },
+              "linecol": [
+                32,
+                6
+              ]
+            },
+            {
+              "domain": {
+                "type": "loop_variable_domain",
+                "value": [
+                  {
+                    "type": "symbol",
+                    "name": "1",
+                    "linecol": [
+                      32,
+                      14
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "2",
+                    "linecol": [
+                      32,
+                      16
+                    ]
+                  }
+                ],
+                "linecol": [
+                  32,
+                  14
+                ]
+              },
+              "type": "loop_variable",
+              "name": {
+                "type": "symbol",
+                "name": "y",
+                "linecol": [
+                  32,
+                  12
+                ]
+              },
+              "linecol": [
+                32,
+                12
+              ]
+            },
+            {
+              "domain": {
+                "type": "loop_variable_domain",
+                "value": [
+                  {
+                    "type": "symbol",
+                    "name": "1",
+                    "linecol": [
+                      32,
+                      20
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "2",
+                    "linecol": [
+                      32,
+                      22
+                    ]
+                  }
+                ],
+                "linecol": [
+                  32,
+                  20
+                ]
+              },
+              "type": "loop_variable",
+              "name": {
+                "type": "symbol",
+                "name": "z",
+                "linecol": [
+                  32,
+                  18
+                ]
+              },
+              "linecol": [
+                32,
+                18
+              ]
+            }
+          ],
+          "linecol": [
+            32,
+            6
+          ]
+        },
+        "variable_definition": {
+          "expression": {
+            "type": "expression",
+            "value": "max( QFxyz - (LIM_BAR1 * (1 - V_ANC_BAR) + LIM_BAR1A * V_ANC_BAR) , 0 ) * (TAUX1   / 100) + max( QFxyz - (LIM_BAR2 * (1 - V_ANC_BAR) + LIM_BAR2A * V_ANC_BAR) , 0 ) * (TAUX2   / 100) + max( QFxyz - (LIM_BAR3 * (1 - V_ANC_BAR) + LIM_BAR3A * V_ANC_BAR) , 0 ) * (TAUX3   / 100) + max( QFxyz - (LIM_BAR4 * (1 - V_ANC_BAR) + LIM_BAR4A * V_ANC_BAR) , 0 ) * (TAUX4   / 100) + max( QFxyz - (LIM_BAR5 * (1 - V_ANC_BAR) + LIM_BAR5A * V_ANC_BAR) , 0 ) * (TAUX5   / 100)",
+            "linecol": [
+              33,
+              9
+            ]
+          },
+          "type": "variable_definition",
+          "name": {
+            "type": "symbol",
+            "name": "DSxyz",
+            "linecol": [
+              33,
+              1
+            ]
+          },
+          "linecol": [
+            33,
+            1
+          ]
+        },
+        "type": "pour_variable_definition",
+        "linecol": [
+          32,
+          1
+        ]
+      }
+    ],
+    "type": "regle_declaration",
+    "name": {
+      "type": "integer",
+      "value": 50700,
+      "linecol": [
+        30,
+        7
+      ]
+    },
+    "linecol": [
+      30,
+      1
+    ]
+  },
+  {
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            40,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            40,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        40,
+        15
+      ]
+    },
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(RB51) / ( NB1 * null(PLAFQF) + NB2 *null(1-PLAFQF))",
+          "linecol": [
+            41,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "WTXMARJ",
+          "linecol": [
+            41,
+            1
+          ]
+        },
+        "linecol": [
+          41,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "max ( positif (WTXMARJ - (LIM_BAR1 * (1 - V_ANC_BAR) + LIM_BAR1A * V_ANC_BAR)) * (TX_BAR1 * (1 - V_ANC_BAR) + TX_BAR1A * V_ANC_BAR) , max ( positif (WTXMARJ - (LIM_BAR2 * (1 - V_ANC_BAR) + LIM_BAR2A * V_ANC_BAR)) * TX_BAR2 , max ( positif (WTXMARJ - (LIM_BAR3 * (1 - V_ANC_BAR) + LIM_BAR3A * V_ANC_BAR)) * TX_BAR3 , max ( positif (WTXMARJ - (LIM_BAR4 * (1 - V_ANC_BAR) + LIM_BAR4A * V_ANC_BAR)) * TX_BAR4 , max ( positif (WTXMARJ - (LIM_BAR5 * (1 - V_ANC_BAR) + LIM_BAR5A * V_ANC_BAR)) * TX_BAR5 , 0 ) ) ) ) )  * ( 1 - positif ( present ( NRBASE ) + present ( NRINET ) + present ( IPTEFP ) + present ( IPTEFN ) + present ( PRODOM ) + present ( PROGUY ) ) ) * (1- null(2 - V_REGCO)) * positif(IDRS2+IPQ1)",
+          "linecol": [
+            42,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TXMARJ",
+          "linecol": [
+            42,
+            1
+          ]
+        },
+        "linecol": [
+          42,
+          1
+        ]
+      }
+    ],
+    "type": "regle_declaration",
+    "name": {
+      "type": "integer",
+      "value": 50702,
+      "linecol": [
+        39,
+        7
+      ]
+    },
+    "linecol": [
+      39,
+      1
+    ]
+  },
+  {
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "bareme",
+          "linecol": [
+            68,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            68,
+            24
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            68,
+            32
+          ]
+        }
+      ],
+      "linecol": [
+        68,
+        15
+      ]
+    },
+    "variables": [
+      {
+        "loop_variables": {
+          "type": "loop_variables",
+          "value": [
+            {
+              "domain": {
+                "type": "loop_variable_domain",
+                "value": [
+                  {
+                    "type": "symbol",
+                    "name": "1",
+                    "linecol": [
+                      69,
+                      8
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "2",
+                    "linecol": [
+                      69,
+                      10
+                    ]
+                  }
+                ],
+                "linecol": [
+                  69,
+                  8
+                ]
+              },
+              "type": "loop_variable",
+              "name": {
+                "type": "symbol",
+                "name": "y",
+                "linecol": [
+                  69,
+                  6
+                ]
+              },
+              "linecol": [
+                69,
+                6
+              ]
+            }
+          ],
+          "linecol": [
+            69,
+            6
+          ]
+        },
+        "variable_definition": {
+          "expression": {
+            "type": "expression",
+            "value": "max( QF0y4 - (LIM_BAR1 * (1 - V_ANC_BAR) + LIM_BAR1A * V_ANC_BAR) , 0 ) * (TAUX1 /100) + max( QF0y4 - (LIM_BAR2 * (1 - V_ANC_BAR) + LIM_BAR2A * V_ANC_BAR) , 0 ) * (TAUX2 /100) + max( QF0y4 - (LIM_BAR3 * (1 - V_ANC_BAR) + LIM_BAR3A * V_ANC_BAR) , 0 ) * (TAUX3 /100) + max( QF0y4 - (LIM_BAR4 * (1 - V_ANC_BAR) + LIM_BAR4A * V_ANC_BAR) , 0 ) * (TAUX4 /100) + max( QF0y4 - (LIM_BAR5 * (1 - V_ANC_BAR) + LIM_BAR5A * V_ANC_BAR) , 0 ) * (TAUX5 /100)",
+            "linecol": [
+              70,
+              9
+            ]
+          },
+          "type": "variable_definition",
+          "name": {
+            "type": "symbol",
+            "name": "DS0y4",
+            "linecol": [
+              70,
+              1
+            ]
+          },
+          "linecol": [
+            70,
+            1
+          ]
+        },
+        "type": "pour_variable_definition",
+        "linecol": [
+          69,
+          1
+        ]
+      },
+      {
+        "loop_variables": {
+          "type": "loop_variables",
+          "value": [
+            {
+              "domain": {
+                "type": "loop_variable_domain",
+                "value": [
+                  {
+                    "type": "symbol",
+                    "name": "0",
+                    "linecol": [
+                      75,
+                      8
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "5",
+                    "linecol": [
+                      75,
+                      10
+                    ]
+                  }
+                ],
+                "linecol": [
+                  75,
+                  8
+                ]
+              },
+              "type": "loop_variable",
+              "name": {
+                "type": "symbol",
+                "name": "x",
+                "linecol": [
+                  75,
+                  6
+                ]
+              },
+              "linecol": [
+                75,
+                6
+              ]
+            },
+            {
+              "domain": {
+                "type": "loop_variable_domain",
+                "value": [
+                  {
+                    "type": "symbol",
+                    "name": "1",
+                    "linecol": [
+                      75,
+                      14
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "2",
+                    "linecol": [
+                      75,
+                      16
+                    ]
+                  }
+                ],
+                "linecol": [
+                  75,
+                  14
+                ]
+              },
+              "type": "loop_variable",
+              "name": {
+                "type": "symbol",
+                "name": "y",
+                "linecol": [
+                  75,
+                  12
+                ]
+              },
+              "linecol": [
+                75,
+                12
+              ]
+            }
+          ],
+          "linecol": [
+            75,
+            6
+          ]
+        },
+        "variable_definition": {
+          "expression": {
+            "type": "expression",
+            "value": "max( QFxy5 - (LIM_BAR1 * (1 - V_ANC_BAR) + LIM_BAR1A * V_ANC_BAR) , 0 ) * (TAUX1 /100) + max( QFxy5 - (LIM_BAR2 * (1 - V_ANC_BAR) + LIM_BAR2A * V_ANC_BAR) , 0 ) * (TAUX2 /100) + max( QFxy5 - (LIM_BAR3 * (1 - V_ANC_BAR) + LIM_BAR3A * V_ANC_BAR) , 0 ) * (TAUX3 /100) + max( QFxy5 - (LIM_BAR4 * (1 - V_ANC_BAR) + LIM_BAR4A * V_ANC_BAR) , 0 ) * (TAUX4 /100) + max( QFxy5 - (LIM_BAR5 * (1 - V_ANC_BAR) + LIM_BAR5A * V_ANC_BAR) , 0 ) * (TAUX5 /100)",
+            "linecol": [
+              76,
+              9
+            ]
+          },
+          "type": "variable_definition",
+          "name": {
+            "type": "symbol",
+            "name": "DSxy5",
+            "linecol": [
+              76,
+              1
+            ]
+          },
+          "linecol": [
+            76,
+            1
+          ]
+        },
+        "type": "pour_variable_definition",
+        "linecol": [
+          75,
+          1
+        ]
+      },
+      {
+        "loop_variables": {
+          "type": "loop_variables",
+          "value": [
+            {
+              "domain": {
+                "type": "loop_variable_domain",
+                "value": [
+                  {
+                    "type": "symbol",
+                    "name": "1",
+                    "linecol": [
+                      81,
+                      8
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "2",
+                    "linecol": [
+                      81,
+                      10
+                    ]
+                  }
+                ],
+                "linecol": [
+                  81,
+                  8
+                ]
+              },
+              "type": "loop_variable",
+              "name": {
+                "type": "symbol",
+                "name": "y",
+                "linecol": [
+                  81,
+                  6
+                ]
+              },
+              "linecol": [
+                81,
+                6
+              ]
+            }
+          ],
+          "linecol": [
+            81,
+            6
+          ]
+        },
+        "variable_definition": {
+          "expression": {
+            "type": "expression",
+            "value": "max( QF0y6 - (LIM_BAR1 * (1 - V_ANC_BAR) + LIM_BAR1A * V_ANC_BAR) , 0 ) * (TAUX1 /100) + max( QF0y6 - (LIM_BAR2 * (1 - V_ANC_BAR) + LIM_BAR2A * V_ANC_BAR) , 0 ) * (TAUX2 /100) + max( QF0y6 - (LIM_BAR3 * (1 - V_ANC_BAR) + LIM_BAR3A * V_ANC_BAR) , 0 ) * (TAUX3 /100) + max( QF0y6 - (LIM_BAR4 * (1 - V_ANC_BAR) + LIM_BAR4A * V_ANC_BAR) , 0 ) * (TAUX4 /100) + max( QF0y6 - (LIM_BAR5 * (1 - V_ANC_BAR) + LIM_BAR5A * V_ANC_BAR) , 0 ) * (TAUX5 /100)",
+            "linecol": [
+              82,
+              9
+            ]
+          },
+          "type": "variable_definition",
+          "name": {
+            "type": "symbol",
+            "name": "DS0y6",
+            "linecol": [
+              82,
+              1
+            ]
+          },
+          "linecol": [
+            82,
+            1
+          ]
+        },
+        "type": "pour_variable_definition",
+        "linecol": [
+          81,
+          1
+        ]
+      }
+    ],
+    "type": "regle_declaration",
+    "name": {
+      "type": "integer",
+      "value": 5071,
+      "linecol": [
+        67,
+        7
+      ]
+    },
+    "linecol": [
+      67,
+      1
+    ]
+  },
+  {
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "bareme",
+          "linecol": [
+            88,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            88,
+            24
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            88,
+            32
+          ]
+        }
+      ],
+      "linecol": [
+        88,
+        15
+      ]
+    },
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "NBPT",
+          "linecol": [
+            89,
+            7
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "NB1",
+          "linecol": [
+            89,
+            1
+          ]
+        },
+        "linecol": [
+          89,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "1 + BOOL_0AM + BOOL_0AZ * V_0AV",
+          "linecol": [
+            90,
+            7
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "NB2",
+          "linecol": [
+            90,
+            1
+          ]
+        },
+        "linecol": [
+          90,
+          1
+        ]
+      }
+    ],
+    "type": "regle_declaration",
+    "name": {
+      "type": "integer",
+      "value": 508,
+      "linecol": [
+        87,
+        7
+      ]
+    },
+    "linecol": [
+      87,
+      1
+    ]
+  },
+  {
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "bareme",
+          "linecol": [
+            92,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            92,
+            24
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            92,
+            32
+          ]
+        }
+      ],
+      "linecol": [
+        92,
+        15
+      ]
+    },
+    "variables": [
+      {
+        "loop_variables": {
+          "type": "loop_variables",
+          "value": [
+            {
+              "domain": {
+                "type": "loop_variable_domain",
+                "value": [
+                  {
+                    "type": "symbol",
+                    "name": "1",
+                    "linecol": [
+                      93,
+                      8
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "2",
+                    "linecol": [
+                      93,
+                      10
+                    ]
+                  }
+                ],
+                "linecol": [
+                  93,
+                  8
+                ]
+              },
+              "type": "loop_variable",
+              "name": {
+                "type": "symbol",
+                "name": "y",
+                "linecol": [
+                  93,
+                  6
+                ]
+              },
+              "linecol": [
+                93,
+                6
+              ]
+            },
+            {
+              "domain": {
+                "type": "loop_variable_domain",
+                "value": [
+                  {
+                    "type": "symbol",
+                    "name": "1",
+                    "linecol": [
+                      93,
+                      14
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "2",
+                    "linecol": [
+                      93,
+                      16
+                    ]
+                  }
+                ],
+                "linecol": [
+                  93,
+                  14
+                ]
+              },
+              "type": "loop_variable",
+              "name": {
+                "type": "symbol",
+                "name": "z",
+                "linecol": [
+                  93,
+                  12
+                ]
+              },
+              "linecol": [
+                93,
+                12
+              ]
+            }
+          ],
+          "linecol": [
+            93,
+            6
+          ]
+        },
+        "variable_definition": {
+          "expression": {
+            "type": "expression",
+            "value": "arr(RB0z) / NBy",
+            "linecol": [
+              94,
+              9
+            ]
+          },
+          "type": "variable_definition",
+          "name": {
+            "type": "symbol",
+            "name": "QF0yz",
+            "linecol": [
+              94,
+              1
+            ]
+          },
+          "linecol": [
+            94,
+            1
+          ]
+        },
+        "type": "pour_variable_definition",
+        "linecol": [
+          93,
+          1
+        ]
+      },
+      {
+        "loop_variables": {
+          "type": "loop_variables",
+          "value": [
+            {
+              "domain": {
+                "type": "loop_variable_domain",
+                "value": [
+                  {
+                    "type": "symbol",
+                    "name": "1",
+                    "linecol": [
+                      95,
+                      8
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "2",
+                    "linecol": [
+                      95,
+                      10
+                    ]
+                  }
+                ],
+                "linecol": [
+                  95,
+                  8
+                ]
+              },
+              "type": "loop_variable",
+              "name": {
+                "type": "symbol",
+                "name": "y",
+                "linecol": [
+                  95,
+                  6
+                ]
+              },
+              "linecol": [
+                95,
+                6
+              ]
+            },
+            {
+              "domain": {
+                "type": "loop_variable_domain",
+                "value": [
+                  {
+                    "type": "symbol",
+                    "name": "1",
+                    "linecol": [
+                      95,
+                      14
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "2",
+                    "linecol": [
+                      95,
+                      16
+                    ]
+                  }
+                ],
+                "linecol": [
+                  95,
+                  14
+                ]
+              },
+              "type": "loop_variable",
+              "name": {
+                "type": "symbol",
+                "name": "z",
+                "linecol": [
+                  95,
+                  12
+                ]
+              },
+              "linecol": [
+                95,
+                12
+              ]
+            }
+          ],
+          "linecol": [
+            95,
+            6
+          ]
+        },
+        "variable_definition": {
+          "expression": {
+            "type": "expression",
+            "value": "arr(RB5z) / NBy",
+            "linecol": [
+              96,
+              9
+            ]
+          },
+          "type": "variable_definition",
+          "name": {
+            "type": "symbol",
+            "name": "QF5yz",
+            "linecol": [
+              96,
+              1
+            ]
+          },
+          "linecol": [
+            96,
+            1
+          ]
+        },
+        "type": "pour_variable_definition",
+        "linecol": [
+          95,
+          1
+        ]
+      },
+      {
+        "loop_variables": {
+          "type": "loop_variables",
+          "value": [
+            {
+              "domain": {
+                "type": "loop_variable_domain",
+                "value": [
+                  {
+                    "type": "symbol",
+                    "name": "1",
+                    "linecol": [
+                      97,
+                      8
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "2",
+                    "linecol": [
+                      97,
+                      10
+                    ]
+                  }
+                ],
+                "linecol": [
+                  97,
+                  8
+                ]
+              },
+              "type": "loop_variable",
+              "name": {
+                "type": "symbol",
+                "name": "y",
+                "linecol": [
+                  97,
+                  6
+                ]
+              },
+              "linecol": [
+                97,
+                6
+              ]
+            }
+          ],
+          "linecol": [
+            97,
+            6
+          ]
+        },
+        "variable_definition": {
+          "expression": {
+            "type": "expression",
+            "value": "arr(RB04) / NBy",
+            "linecol": [
+              98,
+              9
+            ]
+          },
+          "type": "variable_definition",
+          "name": {
+            "type": "symbol",
+            "name": "QF0y4",
+            "linecol": [
+              98,
+              1
+            ]
+          },
+          "linecol": [
+            98,
+            1
+          ]
+        },
+        "type": "pour_variable_definition",
+        "linecol": [
+          97,
+          1
+        ]
+      },
+      {
+        "loop_variables": {
+          "type": "loop_variables",
+          "value": [
+            {
+              "domain": {
+                "type": "loop_variable_domain",
+                "value": [
+                  {
+                    "type": "symbol",
+                    "name": "0",
+                    "linecol": [
+                      99,
+                      8
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "5",
+                    "linecol": [
+                      99,
+                      10
+                    ]
+                  }
+                ],
+                "linecol": [
+                  99,
+                  8
+                ]
+              },
+              "type": "loop_variable",
+              "name": {
+                "type": "symbol",
+                "name": "x",
+                "linecol": [
+                  99,
+                  6
+                ]
+              },
+              "linecol": [
+                99,
+                6
+              ]
+            },
+            {
+              "domain": {
+                "type": "loop_variable_domain",
+                "value": [
+                  {
+                    "type": "symbol",
+                    "name": "1",
+                    "linecol": [
+                      99,
+                      14
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "2",
+                    "linecol": [
+                      99,
+                      16
+                    ]
+                  }
+                ],
+                "linecol": [
+                  99,
+                  14
+                ]
+              },
+              "type": "loop_variable",
+              "name": {
+                "type": "symbol",
+                "name": "y",
+                "linecol": [
+                  99,
+                  12
+                ]
+              },
+              "linecol": [
+                99,
+                12
+              ]
+            }
+          ],
+          "linecol": [
+            99,
+            6
+          ]
+        },
+        "variable_definition": {
+          "expression": {
+            "type": "expression",
+            "value": "arr(RBx5) / NBy",
+            "linecol": [
+              100,
+              9
+            ]
+          },
+          "type": "variable_definition",
+          "name": {
+            "type": "symbol",
+            "name": "QFxy5",
+            "linecol": [
+              100,
+              1
+            ]
+          },
+          "linecol": [
+            100,
+            1
+          ]
+        },
+        "type": "pour_variable_definition",
+        "linecol": [
+          99,
+          1
+        ]
+      },
+      {
+        "loop_variables": {
+          "type": "loop_variables",
+          "value": [
+            {
+              "domain": {
+                "type": "loop_variable_domain",
+                "value": [
+                  {
+                    "type": "symbol",
+                    "name": "1",
+                    "linecol": [
+                      101,
+                      8
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "2",
+                    "linecol": [
+                      101,
+                      10
+                    ]
+                  }
+                ],
+                "linecol": [
+                  101,
+                  8
+                ]
+              },
+              "type": "loop_variable",
+              "name": {
+                "type": "symbol",
+                "name": "y",
+                "linecol": [
+                  101,
+                  6
+                ]
+              },
+              "linecol": [
+                101,
+                6
+              ]
+            }
+          ],
+          "linecol": [
+            101,
+            6
+          ]
+        },
+        "variable_definition": {
+          "expression": {
+            "type": "expression",
+            "value": "arr(RB06) / NBy",
+            "linecol": [
+              102,
+              9
+            ]
+          },
+          "type": "variable_definition",
+          "name": {
+            "type": "symbol",
+            "name": "QF0y6",
+            "linecol": [
+              102,
+              1
+            ]
+          },
+          "linecol": [
+            102,
+            1
+          ]
+        },
+        "type": "pour_variable_definition",
+        "linecol": [
+          101,
+          1
+        ]
+      }
+    ],
+    "type": "regle_declaration",
+    "name": {
+      "type": "integer",
+      "value": 5080,
+      "linecol": [
+        91,
+        7
+      ]
+    },
+    "linecol": [
+      91,
+      1
+    ]
+  },
+  {
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            105,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            105,
+            22
+          ]
+        }
+      ],
+      "linecol": [
+        105,
+        15
+      ]
+    },
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "( (13465 * positif(positif(V_ANREV - V_0DA - 65) + positif(V_0AP + 0)) + 12353 * (1 - positif(positif(V_ANREV - V_0DA - 65) + positif(V_0AP + 0)))) * null(NBPT - 1) + 14414 * null(NBPT - 1.25) + 15917 * null(NBPT - 1.5) + 17420 * null(NBPT - 1.75) + 18922 * null(NBPT - 2) + 20425 * null(NBPT - 2.25) + 21928 * null(NBPT - 2.5) + (23581 * positif(positif(V_ANREV - V_0DA - 65) + positif(V_0AP + 0)) * (1 - BOOL_0AM) + 23431 * (1 - positif(positif(V_ANREV - V_0DA - 65) + positif(V_0AP + 0)))) * null(NBPT - 2.75) + 24933 * null(NBPT - 3) + 26436 * null(NBPT - 3.25) + 27939 * null(NBPT - 3.5) + 29442 * null(NBPT - 3.75) + 30944 * null(NBPT - 4) + 32447 * null(NBPT - 4.25) + 33950 * null(NBPT - 4.5) + 35453 * null(NBPT - 4.75) + 36955 * null(NBPT - 5) + 38458 * null(NBPT - 5.25) + 39961 * null(NBPT - 5.5) + 41464 * null(NBPT - 5.75) + 42966 * null(NBPT - 6) + 44470 * null(NBPT - 6.25) + 45980 * null(NBPT - 6.5) + 47476 * null(NBPT - 6.75) + 48980 * null(NBPT - 7) + 50480 * null(NBPT - 7.25) + 51985 * null(NBPT - 7.5) + 53487 * null(NBPT - 7.75) + 54990 * null(NBPT - 8) + 56493 * null(NBPT - 8.25) + 57995 * null(NBPT - 8.5) + 59497 * null(NBPT - 8.75) + 61000 * null(NBPT - 9) + 62504 * null(NBPT - 9.25) + 64005 * null(NBPT - 9.5) + 65515 * null(NBPT - 9.75) + 67010 * null(NBPT - 10) )",
+          "linecol": [
+            107,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RNIBAR13",
+          "linecol": [
+            107,
+            1
+          ]
+        },
+        "linecol": [
+          107,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "positif(NBPT - 10) + positif(LIG74 + LIGTTPVQ) + null(2 - V_REGCO) + null(4 - V_REGCO) + positif(CESSASSV + CESSASSC + PCAPTAXV + PCAPTAXC + LOYELEV + 0) + positif(IPROP + AVFISCOPTER + IPREP + IPPRICORSE)",
+          "linecol": [
+            147,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "CODMESGOUV",
+          "linecol": [
+            147,
+            1
+          ]
+        },
+        "linecol": [
+          147,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(  1 * null(IDRS3 - IDEC) * positif_ou_nul(RNI - RNIBAR13) + 2 * positif(IDRS3 - IDEC + 0) * positif(IDEC + 0)) * (1 - positif(CODMESGOUV)) * (1 - positif(RNIBAR13 - RNI)) + 3 * positif(CODMESGOUV + positif(RNIBAR13 - RNI) + (1 - positif(null(IDRS3 - IDEC) * positif_ou_nul(RNI - RNIBAR13) + positif(IDRS3 - IDEC + 0) * positif(IDEC + 0))))",
+          "linecol": [
+            150,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "MESGOUV",
+          "linecol": [
+            150,
+            1
+          ]
+        },
+        "linecol": [
+          150,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(  4 * null(IDRS3 - IDEC) * positif_ou_nul(RNI - RNIBAR13) + 5 * positif(IDRS3 - IDEC + 0) * positif(IDEC + 0) + 6 * positif(RNIBAR13 - RNI)) * (1 - positif(CODMESGOUV)) + 7 * positif(CODMESGOUV + (1 - positif(null(IDRS3 - IDEC) * positif_ou_nul(RNI - RNIBAR13) + positif(IDRS3 - IDEC + 0) * positif(IDEC + 0) + positif(RNIBAR13 - RNI))))",
+          "linecol": [
+            154,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "MESGOUV2",
+          "linecol": [
+            154,
+            1
+          ]
+        },
+        "linecol": [
+          154,
+          1
+        ]
+      }
+    ],
+    "type": "regle_declaration",
+    "name": {
+      "type": "integer",
+      "value": 66991,
+      "linecol": [
+        104,
+        7
+      ]
+    },
+    "linecol": [
+      104,
+      1
+    ]
+  }
+]

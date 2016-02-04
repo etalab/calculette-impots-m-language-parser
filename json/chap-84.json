@@ -1,0 +1,3208 @@
+[
+  {
+    "type": "comment",
+    "value": "#*************************************************************************************************************************",
+    "linecol": [
+      1,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#",
+    "linecol": [
+      2,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#Copyright or © or Copr.[DGFIP][2015]",
+    "linecol": [
+      3,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#",
+    "linecol": [
+      4,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#Ce logiciel a été initialement développé par la Direction Générale des ",
+    "linecol": [
+      5,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#Finances Publiques pour permettre le calcul de l'impôt sur le revenu 2015 ",
+    "linecol": [
+      6,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#au titre des revenus perçus en 2014. La présente version a permis la ",
+    "linecol": [
+      7,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#génération du moteur de calcul des chaînes de taxation des rôles d'impôt ",
+    "linecol": [
+      8,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#sur le revenu de ce millésime.",
+    "linecol": [
+      9,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#",
+    "linecol": [
+      10,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#Ce logiciel est régi par la licence CeCILL 2.1 soumise au droit français ",
+    "linecol": [
+      11,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#et respectant les principes de diffusion des logiciels libres. Vous pouvez ",
+    "linecol": [
+      12,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#utiliser, modifier et/ou redistribuer ce programme sous les conditions de ",
+    "linecol": [
+      13,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#la licence CeCILL 2.1 telle que diffusée par le CEA, le CNRS et l'INRIA  sur ",
+    "linecol": [
+      14,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#le site \"http://www.cecill.info\".",
+    "linecol": [
+      15,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#",
+    "linecol": [
+      16,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#Le fait que vous puissiez accéder à cet en-tête signifie que vous avez pris ",
+    "linecol": [
+      17,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#connaissance de la licence CeCILL 2.1 et que vous en avez accepté les termes.",
+    "linecol": [
+      18,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#",
+    "linecol": [
+      19,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#**************************************************************************************************************************",
+    "linecol": [
+      20,
+      1
+    ]
+  },
+  {
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            22,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            22,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        22,
+        15
+      ]
+    },
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BAF1AP  + BAF1AC  + BAF1AV",
+          "linecol": [
+            23,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BA1AF",
+          "linecol": [
+            23,
+            1
+          ]
+        },
+        "linecol": [
+          23,
+          1
+        ]
+      }
+    ],
+    "type": "regle_declaration",
+    "name": {
+      "type": "integer",
+      "value": 801,
+      "linecol": [
+        21,
+        7
+      ]
+    },
+    "linecol": [
+      21,
+      1
+    ]
+  },
+  {
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            25,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            25,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        25,
+        15
+      ]
+    },
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BAHREV + 4BAHREV - BAHDEV * (1 - positif(ART1731BIS*PREM8_11))",
+          "linecol": [
+            26,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BARSV",
+          "linecol": [
+            26,
+            1
+          ]
+        },
+        "linecol": [
+          26,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BAHREV +4BAHREV",
+          "linecol": [
+            27,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BARSREVV",
+          "linecol": [
+            27,
+            1
+          ]
+        },
+        "linecol": [
+          27,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BAHREC + 4BAHREC - BAHDEC * (1 - positif(ART1731BIS*PREM8_11))",
+          "linecol": [
+            28,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BARSC",
+          "linecol": [
+            28,
+            1
+          ]
+        },
+        "linecol": [
+          28,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BAHREC +4BAHREC",
+          "linecol": [
+            29,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BARSREVC",
+          "linecol": [
+            29,
+            1
+          ]
+        },
+        "linecol": [
+          29,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BAHREP + 4BAHREP - BAHDEP * (1 - positif(ART1731BIS*PREM8_11))",
+          "linecol": [
+            30,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BARSP",
+          "linecol": [
+            30,
+            1
+          ]
+        },
+        "linecol": [
+          30,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BAHREP +4BAHREP",
+          "linecol": [
+            31,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BARSREVP",
+          "linecol": [
+            31,
+            1
+          ]
+        },
+        "linecol": [
+          31,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BACREV + 4BACREV - BACDEV * (1 - positif(ART1731BIS*PREM8_11))",
+          "linecol": [
+            32,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BARAV",
+          "linecol": [
+            32,
+            1
+          ]
+        },
+        "linecol": [
+          32,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BACREV + 4BACREV",
+          "linecol": [
+            33,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BARREVAV",
+          "linecol": [
+            33,
+            1
+          ]
+        },
+        "linecol": [
+          33,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BACREC  + 4BACREC - BACDEC * (1 - positif(ART1731BIS*PREM8_11))",
+          "linecol": [
+            34,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BARAC",
+          "linecol": [
+            34,
+            1
+          ]
+        },
+        "linecol": [
+          34,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BACREC + 4BACREC",
+          "linecol": [
+            35,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BARREVAC",
+          "linecol": [
+            35,
+            1
+          ]
+        },
+        "linecol": [
+          35,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BACREP + 4BACREP -BACDEP * (1 - positif(ART1731BIS*PREM8_11))",
+          "linecol": [
+            36,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BARAP",
+          "linecol": [
+            36,
+            1
+          ]
+        },
+        "linecol": [
+          36,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BACREP + 4BACREP",
+          "linecol": [
+            37,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BARREVAP",
+          "linecol": [
+            37,
+            1
+          ]
+        },
+        "linecol": [
+          37,
+          1
+        ]
+      }
+    ],
+    "type": "regle_declaration",
+    "name": {
+      "type": "integer",
+      "value": 840,
+      "linecol": [
+        24,
+        7
+      ]
+    },
+    "linecol": [
+      24,
+      1
+    ]
+  },
+  {
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            39,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            39,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        39,
+        15
+      ]
+    },
+    "variables": [
+      {
+        "loop_variables": {
+          "type": "loop_variables",
+          "value": [
+            {
+              "domain": {
+                "type": "loop_variable_domain",
+                "value": [
+                  {
+                    "type": "symbol",
+                    "name": "V",
+                    "linecol": [
+                      40,
+                      9
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "C",
+                    "linecol": [
+                      40,
+                      11
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "P",
+                    "linecol": [
+                      40,
+                      13
+                    ]
+                  }
+                ],
+                "linecol": [
+                  40,
+                  9
+                ]
+              },
+              "type": "loop_variable",
+              "name": {
+                "type": "symbol",
+                "name": "i",
+                "linecol": [
+                  40,
+                  6
+                ]
+              },
+              "linecol": [
+                40,
+                6
+              ]
+            }
+          ],
+          "linecol": [
+            40,
+            6
+          ]
+        },
+        "variable_definition": {
+          "expression": {
+            "type": "expression",
+            "value": "positif(4BACREi) * arr((((BACDEi * (1 - positif(ART1731BIS*PREM8_11)))) * BACREi) / BARREVAi) + (1 - positif(4BACREi)) * (BACDEi * (1 - positif(ART1731BIS*PREM8_11)))",
+            "linecol": [
+              41,
+              13
+            ]
+          },
+          "type": "variable_definition",
+          "name": {
+            "type": "symbol",
+            "name": "DEFBACREi",
+            "linecol": [
+              41,
+              1
+            ]
+          },
+          "linecol": [
+            41,
+            1
+          ]
+        },
+        "type": "pour_variable_definition",
+        "linecol": [
+          40,
+          1
+        ]
+      },
+      {
+        "loop_variables": {
+          "type": "loop_variables",
+          "value": [
+            {
+              "domain": {
+                "type": "loop_variable_domain",
+                "value": [
+                  {
+                    "type": "symbol",
+                    "name": "V",
+                    "linecol": [
+                      43,
+                      9
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "C",
+                    "linecol": [
+                      43,
+                      11
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "P",
+                    "linecol": [
+                      43,
+                      13
+                    ]
+                  }
+                ],
+                "linecol": [
+                  43,
+                  9
+                ]
+              },
+              "type": "loop_variable",
+              "name": {
+                "type": "symbol",
+                "name": "i",
+                "linecol": [
+                  43,
+                  6
+                ]
+              },
+              "linecol": [
+                43,
+                6
+              ]
+            }
+          ],
+          "linecol": [
+            43,
+            6
+          ]
+        },
+        "variable_definition": {
+          "expression": {
+            "type": "expression",
+            "value": "positif(4BACREi) * (((BACDEi * (1 - positif(ART1731BIS*PREM8_11)))) - DEFBACREi)",
+            "linecol": [
+              44,
+              14
+            ]
+          },
+          "type": "variable_definition",
+          "name": {
+            "type": "symbol",
+            "name": "4DEFBACREi",
+            "linecol": [
+              44,
+              1
+            ]
+          },
+          "linecol": [
+            44,
+            1
+          ]
+        },
+        "type": "pour_variable_definition",
+        "linecol": [
+          43,
+          1
+        ]
+      }
+    ],
+    "type": "regle_declaration",
+    "name": {
+      "type": "integer",
+      "value": 8421,
+      "linecol": [
+        38,
+        7
+      ]
+    },
+    "linecol": [
+      38,
+      1
+    ]
+  },
+  {
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            46,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        46,
+        15
+      ]
+    },
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "4BACREV + 4BACREC + 4BACREP + (4BAHREV + 4BAHREC +4BAHREP) * MAJREV",
+          "linecol": [
+            47,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "SOMBARET",
+          "linecol": [
+            47,
+            1
+          ]
+        },
+        "linecol": [
+          47,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "4BAQV + 4BAQC +4BAQP",
+          "linecol": [
+            48,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "SOMBARREVT",
+          "linecol": [
+            48,
+            1
+          ]
+        },
+        "linecol": [
+          48,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(max(0,SOMBARET-SOMBARREVT) / DEFBANIF ) * positif(DEFBANIF)",
+          "linecol": [
+            49,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PROQDEFBAT",
+          "linecol": [
+            49,
+            1
+          ]
+        },
+        "linecol": [
+          49,
+          1
+        ]
+      }
+    ],
+    "type": "regle_declaration",
+    "name": {
+      "type": "integer",
+      "value": 8422234,
+      "linecol": [
+        45,
+        7
+      ]
+    },
+    "linecol": [
+      45,
+      1
+    ]
+  },
+  {
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            51,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            51,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        51,
+        15
+      ]
+    },
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(BACREV - DEFBACREV) * positif_ou_nul(BARAV) + BARAV * (1-positif(BARAV))",
+          "linecol": [
+            52,
+            8
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BANV",
+          "linecol": [
+            52,
+            1
+          ]
+        },
+        "linecol": [
+          52,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(BACREC - DEFBACREC) * positif_ou_nul(BARAC) + BARAC * (1-positif(BARAC))",
+          "linecol": [
+            53,
+            8
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BANC",
+          "linecol": [
+            53,
+            1
+          ]
+        },
+        "linecol": [
+          53,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(BACREP - DEFBACREP) * positif_ou_nul(BARAP) + BARAP * (1-positif(BARAP))",
+          "linecol": [
+            54,
+            8
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BANP",
+          "linecol": [
+            54,
+            1
+          ]
+        },
+        "linecol": [
+          54,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(4BACREV - 4DEFBACREV) * positif_ou_nul(BARAV) + 0",
+          "linecol": [
+            55,
+            8
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAEV",
+          "linecol": [
+            55,
+            1
+          ]
+        },
+        "linecol": [
+          55,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(4BACREC - 4DEFBACREC) * positif_ou_nul(BARAC) + 0",
+          "linecol": [
+            56,
+            8
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAEC",
+          "linecol": [
+            56,
+            1
+          ]
+        },
+        "linecol": [
+          56,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(4BACREP - 4DEFBACREP) * positif_ou_nul(BARAP) + 0",
+          "linecol": [
+            57,
+            8
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAEP",
+          "linecol": [
+            57,
+            1
+          ]
+        },
+        "linecol": [
+          57,
+          1
+        ]
+      }
+    ],
+    "type": "regle_declaration",
+    "name": {
+      "type": "integer",
+      "value": 84211,
+      "linecol": [
+        50,
+        7
+      ]
+    },
+    "linecol": [
+      50,
+      1
+    ]
+  },
+  {
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            59,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            59,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        59,
+        15
+      ]
+    },
+    "variables": [
+      {
+        "loop_variables": {
+          "type": "loop_variables",
+          "value": [
+            {
+              "domain": {
+                "type": "loop_variable_domain",
+                "value": [
+                  {
+                    "type": "symbol",
+                    "name": "V",
+                    "linecol": [
+                      60,
+                      9
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "C",
+                    "linecol": [
+                      60,
+                      11
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "P",
+                    "linecol": [
+                      60,
+                      13
+                    ]
+                  }
+                ],
+                "linecol": [
+                  60,
+                  9
+                ]
+              },
+              "type": "loop_variable",
+              "name": {
+                "type": "symbol",
+                "name": "i",
+                "linecol": [
+                  60,
+                  6
+                ]
+              },
+              "linecol": [
+                60,
+                6
+              ]
+            }
+          ],
+          "linecol": [
+            60,
+            6
+          ]
+        },
+        "variable_definition": {
+          "expression": {
+            "type": "expression",
+            "value": "positif(4BAHREi) * arr(((BAHDEi * (1 - positif(ART1731BIS*PREM8_11))) * BAHREi) / BARSREVi) + (1 - positif(4BAHREi)) * (BAHDEi * (1 - positif(ART1731BIS*PREM8_11)))",
+            "linecol": [
+              61,
+              13
+            ]
+          },
+          "type": "variable_definition",
+          "name": {
+            "type": "symbol",
+            "name": "DEFBAHREi",
+            "linecol": [
+              61,
+              1
+            ]
+          },
+          "linecol": [
+            61,
+            1
+          ]
+        },
+        "type": "pour_variable_definition",
+        "linecol": [
+          60,
+          1
+        ]
+      },
+      {
+        "loop_variables": {
+          "type": "loop_variables",
+          "value": [
+            {
+              "domain": {
+                "type": "loop_variable_domain",
+                "value": [
+                  {
+                    "type": "symbol",
+                    "name": "V",
+                    "linecol": [
+                      63,
+                      9
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "C",
+                    "linecol": [
+                      63,
+                      11
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "P",
+                    "linecol": [
+                      63,
+                      13
+                    ]
+                  }
+                ],
+                "linecol": [
+                  63,
+                  9
+                ]
+              },
+              "type": "loop_variable",
+              "name": {
+                "type": "symbol",
+                "name": "i",
+                "linecol": [
+                  63,
+                  6
+                ]
+              },
+              "linecol": [
+                63,
+                6
+              ]
+            }
+          ],
+          "linecol": [
+            63,
+            6
+          ]
+        },
+        "variable_definition": {
+          "expression": {
+            "type": "expression",
+            "value": "positif(4BAHREi) * ((BAHDEi * (1 - positif(ART1731BIS*PREM8_11) )) - DEFBAHREi)",
+            "linecol": [
+              64,
+              14
+            ]
+          },
+          "type": "variable_definition",
+          "name": {
+            "type": "symbol",
+            "name": "4DEFBAHREi",
+            "linecol": [
+              64,
+              1
+            ]
+          },
+          "linecol": [
+            64,
+            1
+          ]
+        },
+        "type": "pour_variable_definition",
+        "linecol": [
+          63,
+          1
+        ]
+      }
+    ],
+    "type": "regle_declaration",
+    "name": {
+      "type": "integer",
+      "value": 842111,
+      "linecol": [
+        58,
+        7
+      ]
+    },
+    "linecol": [
+      58,
+      1
+    ]
+  },
+  {
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            66,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            66,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        66,
+        15
+      ]
+    },
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "arr((BAHREV - DEFBAHREV) * MAJREV) * positif_ou_nul(BARSV) + BARSV * (1-positif(BARSV))",
+          "linecol": [
+            67,
+            8
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAMV",
+          "linecol": [
+            67,
+            1
+          ]
+        },
+        "linecol": [
+          67,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "arr((BAHREC - DEFBAHREC) * MAJREV) * positif_ou_nul(BARSC) + BARSC * (1-positif(BARSC))",
+          "linecol": [
+            68,
+            8
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAMC",
+          "linecol": [
+            68,
+            1
+          ]
+        },
+        "linecol": [
+          68,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "arr((BAHREP - DEFBAHREP) * MAJREV) * positif_ou_nul(BARSP) + BARSP * (1-positif(BARSP))",
+          "linecol": [
+            69,
+            8
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAMP",
+          "linecol": [
+            69,
+            1
+          ]
+        },
+        "linecol": [
+          69,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(arr((4BAHREV - 4DEFBAHREV)* MAJREV)) * positif_ou_nul(BARSV) + 0",
+          "linecol": [
+            70,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAEMV",
+          "linecol": [
+            70,
+            1
+          ]
+        },
+        "linecol": [
+          70,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(arr((4BAHREC - 4DEFBAHREC)* MAJREV)) * positif_ou_nul(BARSC) + 0",
+          "linecol": [
+            71,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAEMC",
+          "linecol": [
+            71,
+            1
+          ]
+        },
+        "linecol": [
+          71,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(arr((4BAHREP - 4DEFBAHREP)* MAJREV)) * positif_ou_nul(BARSP) + 0",
+          "linecol": [
+            72,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAEMP",
+          "linecol": [
+            72,
+            1
+          ]
+        },
+        "linecol": [
+          72,
+          1
+        ]
+      }
+    ],
+    "type": "regle_declaration",
+    "name": {
+      "type": "integer",
+      "value": 843,
+      "linecol": [
+        65,
+        7
+      ]
+    },
+    "linecol": [
+      65,
+      1
+    ]
+  },
+  {
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            74,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            74,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        74,
+        15
+      ]
+    },
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "arr(BAFV*MAJREV)+BAFORESTV+BAFPVV",
+          "linecol": [
+            75,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAFORV",
+          "linecol": [
+            75,
+            1
+          ]
+        },
+        "linecol": [
+          75,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "arr(BAFC*MAJREV)+BAFORESTC+BAFPVC",
+          "linecol": [
+            76,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAFORC",
+          "linecol": [
+            76,
+            1
+          ]
+        },
+        "linecol": [
+          76,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "arr(BAFP*MAJREV)+BAFORESTP+BAFPVP",
+          "linecol": [
+            77,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAFORP",
+          "linecol": [
+            77,
+            1
+          ]
+        },
+        "linecol": [
+          77,
+          1
+        ]
+      }
+    ],
+    "type": "regle_declaration",
+    "name": {
+      "type": "integer",
+      "value": 844,
+      "linecol": [
+        73,
+        7
+      ]
+    },
+    "linecol": [
+      73,
+      1
+    ]
+  },
+  {
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            79,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            79,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        79,
+        15
+      ]
+    },
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BANV + BAMV + BAFORV",
+          "linecol": [
+            80,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAHQV",
+          "linecol": [
+            80,
+            1
+          ]
+        },
+        "linecol": [
+          80,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BANC + BAMC + BAFORC",
+          "linecol": [
+            81,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAHQC",
+          "linecol": [
+            81,
+            1
+          ]
+        },
+        "linecol": [
+          81,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BANP + BAMP + BAFORP",
+          "linecol": [
+            82,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAHQP",
+          "linecol": [
+            82,
+            1
+          ]
+        },
+        "linecol": [
+          82,
+          1
+        ]
+      }
+    ],
+    "type": "regle_declaration",
+    "name": {
+      "type": "integer",
+      "value": 8441,
+      "linecol": [
+        78,
+        7
+      ]
+    },
+    "linecol": [
+      78,
+      1
+    ]
+  },
+  {
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            84,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            84,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        84,
+        15
+      ]
+    },
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "max(0,(4BACREV - 4DEFBACREV))*positif_ou_nul(BARAV)+arr(max(0,(4BAHREV - 4DEFBAHREV))*MAJREV) * positif_ou_nul(BARSV)",
+          "linecol": [
+            85,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "4BAQV",
+          "linecol": [
+            85,
+            1
+          ]
+        },
+        "linecol": [
+          85,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "max(0,(4BACREC - 4DEFBACREC))*positif_ou_nul(BARAC)+arr(max(0,(4BAHREC - 4DEFBAHREC))*MAJREV) * positif_ou_nul(BARSC)",
+          "linecol": [
+            86,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "4BAQC",
+          "linecol": [
+            86,
+            1
+          ]
+        },
+        "linecol": [
+          86,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "max(0,(4BACREP - 4DEFBACREP))*positif_ou_nul(BARAP)+arr(max(0,(4BAHREP - 4DEFBAHREP))*MAJREV) * positif_ou_nul(BARSP)",
+          "linecol": [
+            87,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "4BAQP",
+          "linecol": [
+            87,
+            1
+          ]
+        },
+        "linecol": [
+          87,
+          1
+        ]
+      }
+    ],
+    "type": "regle_declaration",
+    "name": {
+      "type": "integer",
+      "value": 845,
+      "linecol": [
+        83,
+        7
+      ]
+    },
+    "linecol": [
+      83,
+      1
+    ]
+  },
+  {
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            89,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            89,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        89,
+        15
+      ]
+    },
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BAEV + BAEMV",
+          "linecol": [
+            90,
+            8
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAQV",
+          "linecol": [
+            90,
+            1
+          ]
+        },
+        "linecol": [
+          90,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BAEC + BAEMC",
+          "linecol": [
+            91,
+            8
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAQC",
+          "linecol": [
+            91,
+            1
+          ]
+        },
+        "linecol": [
+          91,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BAEP + BAEMP",
+          "linecol": [
+            92,
+            8
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAQP",
+          "linecol": [
+            92,
+            1
+          ]
+        },
+        "linecol": [
+          92,
+          1
+        ]
+      }
+    ],
+    "type": "regle_declaration",
+    "name": {
+      "type": "integer",
+      "value": 8451,
+      "linecol": [
+        88,
+        7
+      ]
+    },
+    "linecol": [
+      88,
+      1
+    ]
+  },
+  {
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            94,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            94,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        94,
+        15
+      ]
+    },
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BA1AV + BAF1AV",
+          "linecol": [
+            95,
+            8
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BA1V",
+          "linecol": [
+            95,
+            1
+          ]
+        },
+        "linecol": [
+          95,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BA1AC + BAF1AC",
+          "linecol": [
+            96,
+            8
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BA1C",
+          "linecol": [
+            96,
+            1
+          ]
+        },
+        "linecol": [
+          96,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BA1AP + BAF1AP",
+          "linecol": [
+            97,
+            8
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BA1P",
+          "linecol": [
+            97,
+            1
+          ]
+        },
+        "linecol": [
+          97,
+          1
+        ]
+      }
+    ],
+    "type": "regle_declaration",
+    "name": {
+      "type": "integer",
+      "value": 84551,
+      "linecol": [
+        93,
+        7
+      ]
+    },
+    "linecol": [
+      93,
+      1
+    ]
+  },
+  {
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            99,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            99,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        99,
+        15
+      ]
+    },
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BAHQV+BAHQC+BAHQP",
+          "linecol": [
+            100,
+            7
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAHQT",
+          "linecol": [
+            100,
+            1
+          ]
+        },
+        "linecol": [
+          100,
+          1
+        ]
+      }
+    ],
+    "type": "regle_declaration",
+    "name": {
+      "type": "integer",
+      "value": 84552,
+      "linecol": [
+        98,
+        7
+      ]
+    },
+    "linecol": [
+      98,
+      1
+    ]
+  },
+  {
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            102,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            102,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        102,
+        15
+      ]
+    },
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "max(0,min(BAHQV+BAHQC+BAHQP + BAQV + BAQC + BAQP,DAGRI6 +DAGRI5 +DAGRI4 + DAGRI3 + DAGRI2 + DAGRI1))",
+          "linecol": [
+            103,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DAGRIIMP",
+          "linecol": [
+            103,
+            1
+          ]
+        },
+        "linecol": [
+          103,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "min(DAGRI6 +DAGRI5 +DAGRI4 + DAGRI3 + DAGRI2 + DAGRI1 ,max(DAGRIIMP1731,max(DAGRIIMP_P,DAGRIIMPP2))) * positif(ART1731BIS*(1-PREM8_11)) + DAGRIIMP * (1-positif(ART1731BIS)) + 0 * positif(ART1731BIS*PREM8_11)",
+          "linecol": [
+            104,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TOTDAGRI",
+          "linecol": [
+            104,
+            1
+          ]
+        },
+        "linecol": [
+          104,
+          1
+        ]
+      }
+    ],
+    "type": "regle_declaration",
+    "name": {
+      "type": "integer",
+      "value": 8455299,
+      "linecol": [
+        101,
+        7
+      ]
+    },
+    "linecol": [
+      101,
+      1
+    ]
+  },
+  {
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            108,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            108,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        108,
+        15
+      ]
+    },
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BAHQV+BAHQC+BAHQP-TOTDAGRI*(1-ART1731BIS)",
+          "linecol": [
+            109,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAHQTOT",
+          "linecol": [
+            109,
+            1
+          ]
+        },
+        "linecol": [
+          109,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "positif_ou_nul(BAHQT) * (max(0,BAHQV+BAHQC+BAHQP-TOTDAGRI))",
+          "linecol": [
+            110,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAHQTOTMAXP",
+          "linecol": [
+            110,
+            1
+          ]
+        },
+        "linecol": [
+          110,
+          1
+        ]
+      }
+    ],
+    "type": "regle_declaration",
+    "name": {
+      "type": "integer",
+      "value": 845529,
+      "linecol": [
+        107,
+        7
+      ]
+    },
+    "linecol": [
+      107,
+      1
+    ]
+  },
+  {
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            112,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            112,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        112,
+        15
+      ]
+    },
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "positif_ou_nul(BAHQT) * min(0,BAHQV+BAHQC+BAHQP-TOTDAGRI*(1-ART1731BIS))",
+          "linecol": [
+            113,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAHQTOTMAXN",
+          "linecol": [
+            113,
+            1
+          ]
+        },
+        "linecol": [
+          113,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "positif(-BAHQT) * BAHQT",
+          "linecol": [
+            114,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAHQTOTMIN",
+          "linecol": [
+            114,
+            1
+          ]
+        },
+        "linecol": [
+          114,
+          1
+        ]
+      }
+    ],
+    "type": "regle_declaration",
+    "name": {
+      "type": "integer",
+      "value": 8455255,
+      "linecol": [
+        111,
+        7
+      ]
+    },
+    "linecol": [
+      111,
+      1
+    ]
+  },
+  {
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            116,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            116,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        116,
+        15
+      ]
+    },
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BAQV + BAQC + BAQP",
+          "linecol": [
+            117,
+            8
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAQT",
+          "linecol": [
+            117,
+            1
+          ]
+        },
+        "linecol": [
+          117,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "max(0,BAQV + BAQC + BAQP + BAHQTOTMAXN)",
+          "linecol": [
+            118,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAQTOT",
+          "linecol": [
+            118,
+            1
+          ]
+        },
+        "linecol": [
+          118,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "min(0,BAQV + BAQC + BAQP + BAHQTOTMAXN)",
+          "linecol": [
+            119,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAQTOTN",
+          "linecol": [
+            119,
+            1
+          ]
+        },
+        "linecol": [
+          119,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "min(0,BAQV + BAQC + BAQP + BAHQTOTMIN)",
+          "linecol": [
+            120,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAQTOTMIN",
+          "linecol": [
+            120,
+            1
+          ]
+        },
+        "linecol": [
+          120,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "positif_ou_nul(BAQT + BAHQT) * BAQTOT + (1 - positif(BAQT + BAHQT)) * 0",
+          "linecol": [
+            121,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAQTOTAV",
+          "linecol": [
+            121,
+            1
+          ]
+        },
+        "linecol": [
+          121,
+          1
+        ]
+      }
+    ],
+    "type": "regle_declaration",
+    "name": {
+      "type": "integer",
+      "value": 84513,
+      "linecol": [
+        115,
+        7
+      ]
+    },
+    "linecol": [
+      115,
+      1
+    ]
+  },
+  {
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            123,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            123,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        123,
+        15
+      ]
+    },
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "somme(x=V,C,P: 4BAQx)",
+          "linecol": [
+            124,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "4BAQTOT",
+          "linecol": [
+            124,
+            1
+          ]
+        },
+        "linecol": [
+          124,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "positif(4BAQTOT) * ( max(0, 4BAQTOT + (BAHQTOTMIN + BAHQTOTMAXN) ) * positif((1-ART1731BIS)+(1-positif(DEFRIBASUP+DEFRIGLOBSUP))*(1-PREM8_11)) + max(0,min(4BAQV+4BAQC+4BAQP+arr(DEFBANIF*PROQDEFBAT) ,4BACREV+4BACREC+4BACREP+(4BAHREV+4BAHREC+4BAHREP)*MAJREV ))* positif(DEFRIBASUP+DEFRIGLOBSUP)*(1-PREM8_11))",
+          "linecol": [
+            125,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "4BAQTOTNET",
+          "linecol": [
+            125,
+            1
+          ]
+        },
+        "linecol": [
+          125,
+          1
+        ]
+      }
+    ],
+    "type": "regle_declaration",
+    "name": {
+      "type": "integer",
+      "value": 845138,
+      "linecol": [
+        122,
+        7
+      ]
+    },
+    "linecol": [
+      122,
+      1
+    ]
+  },
+  {
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            130,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            130,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        130,
+        15
+      ]
+    },
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BA1V + BA1C + BA1P",
+          "linecol": [
+            131,
+            7
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BA1",
+          "linecol": [
+            131,
+            1
+          ]
+        },
+        "linecol": [
+          131,
+          1
+        ]
+      }
+    ],
+    "type": "regle_declaration",
+    "name": {
+      "type": "integer",
+      "value": 845111,
+      "linecol": [
+        129,
+        7
+      ]
+    },
+    "linecol": [
+      129,
+      1
+    ]
+  },
+  {
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            133,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            133,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        133,
+        15
+      ]
+    },
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(BAHQTOTMAXP + BAQTOTMIN) * (1-ART1731BIS) + (BAHQTOTMAXP + BAQTOTMIN + arr(DEFBANIF * (1-PROQDEFBAT))) * ART1731BIS * (1-PREM8_11) + (BAHQTOTMAXP + BAQTOTMIN) * ART1731BIS * PREM8_11",
+          "linecol": [
+            134,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BANOR",
+          "linecol": [
+            134,
+            1
+          ]
+        },
+        "linecol": [
+          134,
+          1
+        ]
+      }
+    ],
+    "type": "regle_declaration",
+    "name": {
+      "type": "integer",
+      "value": 846,
+      "linecol": [
+        132,
+        7
+      ]
+    },
+    "linecol": [
+      132,
+      1
+    ]
+  },
+  {
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            139,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            139,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        139,
+        15
+      ]
+    },
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "((1-positif(BAHQT+BAQT)) * (DAGRI1) + positif(BAHQT+BAQT) * abs(min(max(BAHQT+BAQT-DAGRI6-DAGRI5-DAGRI4-DAGRI3-DAGRI2,0)-DAGRI1,DAGRI1)) * positif_ou_nul(DAGRI1-max(BAHQT+BAQT-DAGRI6-DAGRI5-DAGRI4-DAGRI3-DAGRI2,0)) * (1 - positif(IPVLOC))) * (1-positif(ART1731BIS)) + min(DAGRI1,DAGRI-DBAIP) * positif(ART1731BIS*(1-positif(PREM8_11+null(8-CMAJ)+null(11-CMAJ)))) + DAGRI1 * positif(positif(ART1731BIS*PREM8_11)+null(8-CMAJ)+null(11-CMAJ))",
+          "linecol": [
+            141,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DEFBA2",
+          "linecol": [
+            141,
+            1
+          ]
+        },
+        "linecol": [
+          141,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "((1-positif(BAHQT+BAQT)) * (DAGRI2) + positif(BAHQT+BAQT) * abs(min(max(BAHQT+BAQT-DAGRI6-DAGRI5-DAGRI4-DAGRI3,0)-DAGRI2,DAGRI2)) * positif_ou_nul(DAGRI2-max(BAHQT+BAQT-DAGRI6-DAGRI5-DAGRI4-DAGRI3,0)) * (1 - positif(IPVLOC))) * (1-positif(ART1731BIS)) + min(DAGRI2,DAGRI-DBAIP-DEFBA2) * positif(ART1731BIS*(1-positif(PREM8_11+null(8-CMAJ)+null(11-CMAJ)))) + DAGRI2 * positif(positif(ART1731BIS*PREM8_11)+null(8-CMAJ)+null(11-CMAJ))",
+          "linecol": [
+            149,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DEFBA3",
+          "linecol": [
+            149,
+            1
+          ]
+        },
+        "linecol": [
+          149,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "((1-positif(BAHQT+BAQT)) * (DAGRI3) + positif(BAHQT+BAQT) * abs(min(max(BAHQT+BAQT-DAGRI6-DAGRI5-DAGRI4,0)-DAGRI3,DAGRI3)) * positif_ou_nul(DAGRI3-max(BAHQT+BAQT-DAGRI6-DAGRI5-DAGRI4,0)) * (1 - positif(IPVLOC))) * (1-positif(ART1731BIS)) + min(DAGRI3,DAGRI-DBAIP-DEFBA2-DEFBA3) * positif(ART1731BIS*(1-positif(PREM8_11+null(8-CMAJ)+null(11-CMAJ)))) + DAGRI3 * positif(positif(ART1731BIS*PREM8_11)+null(8-CMAJ)+null(11-CMAJ))",
+          "linecol": [
+            157,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DEFBA4",
+          "linecol": [
+            157,
+            1
+          ]
+        },
+        "linecol": [
+          157,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "((1-positif(BAHQT+BAQT)) * (DAGRI4) + positif(BAHQT+BAQT) * abs(min(max(BAHQT+BAQT-DAGRI6-DAGRI5,0)-DAGRI4,DAGRI4)) * positif_ou_nul(DAGRI4-max(BAHQT+BAQT-DAGRI6-DAGRI5,0)) * (1 - positif(IPVLOC))) * (1-positif(ART1731BIS)) + min(DAGRI4,DAGRI-DBAIP-DEFBA2-DEFBA3-DEFBA4) *positif(ART1731BIS*(1-positif(PREM8_11+null(8-CMAJ)+null(11-CMAJ)))) + DAGRI4 * positif(positif(ART1731BIS*PREM8_11)+null(8-CMAJ)+null(11-CMAJ))",
+          "linecol": [
+            165,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DEFBA5",
+          "linecol": [
+            165,
+            1
+          ]
+        },
+        "linecol": [
+          165,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "((1-positif(BAHQT+BAQT)) * (DAGRI5) + positif(BAHQT+BAQT) * abs(min(max(BAHQT+BAQT-DAGRI6,0)-DAGRI5,DAGRI5)) * positif_ou_nul(DAGRI5-max(BAHQT+BAQT-DAGRI6,0)) * (1 - positif(IPVLOC))) * (1-positif(ART1731BIS)) + min(DAGRI5,DAGRI-DBAIP-DEFBA2-DEFBA3-DEFBA4-DEFBA5)* positif(ART1731BIS*(1-positif(PREM8_11+null(8-CMAJ)+null(11-CMAJ)))) + DAGRI5 * positif(positif(ART1731BIS*PREM8_11)+null(8-CMAJ)+null(11-CMAJ))",
+          "linecol": [
+            174,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DEFBA6",
+          "linecol": [
+            174,
+            1
+          ]
+        },
+        "linecol": [
+          174,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "((1-positif(BAHQT+BAQT)) * (abs(BAHQT+BAQT)-abs(DEFIBA)) + positif(BAHQT+BAQT) * positif_ou_nul(DAGRI5+DAGRI4+DAGRI3+DAGRI2+DAGRI1-BAHQT-BAQT) * (DAGRI5+DAGRI4+DAGRI3+DAGRI2+DAGRI1-BAHQT-BAQT) * null(DEFBA2+DEFBA3+DEFBA4+DEFBA5+DEFBA6) * (1 - positif(IPVLOC))) * (1-positif(ART1731BIS)) +  DEFBANIF * positif(ART1731BIS*(1-positif(PREM8_11+null(8-CMAJ)+null(11-CMAJ)))) + (BACDEV +BACDEC +BACDEP +BAHDEV +BAHDEC +BAHDEP) * positif(positif(ART1731BIS*PREM8_11)+null(8-CMAJ)+null(11-CMAJ))*(1-positif(SEUIL_IMPDEFBA + 1 - SHBA - (REVTP-BA1) - REVQTOTQHT))",
+          "linecol": [
+            182,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DEFBA1",
+          "linecol": [
+            182,
+            1
+          ]
+        },
+        "linecol": [
+          182,
+          1
+        ]
+      }
+    ],
+    "type": "regle_declaration",
+    "name": {
+      "type": "integer",
+      "value": 847,
+      "linecol": [
+        138,
+        7
+      ]
+    },
+    "linecol": [
+      138,
+      1
+    ]
+  },
+  {
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            192,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            192,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        192,
+        15
+      ]
+    },
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "positif_ou_nul(BAQT+BAHQTOT-(min(DAGRI1,DAGRI11731+0) * positif(ART1731BIS) + DAGRI1 * (1 - ART1731BIS)) -(min(DAGRI2,DAGRI21731+0) * positif(ART1731BIS) + DAGRI2 * (1 - ART1731BIS)) -(min(DAGRI3,DAGRI31731+0) * positif(ART1731BIS) + DAGRI3 * (1 - ART1731BIS)) -(min(DAGRI4,DAGRI41731+0) * positif(ART1731BIS) + DAGRI4 * (1 - ART1731BIS)) -(min(DAGRI5,DAGRI51731+0) * positif(ART1731BIS) + DAGRI5 * (1 - ART1731BIS)) -(min(DAGRI6,DAGRI61731+0) * positif(ART1731BIS) + DAGRI6 * (1 - ART1731BIS))) * ((min(DAGRI1,DAGRI11731+0) * positif(ART1731BIS) + DAGRI1 * (1 - ART1731BIS)) -(min(DAGRI2,DAGRI21731+0) * positif(ART1731BIS) + DAGRI2 * (1 - ART1731BIS)) -(min(DAGRI3,DAGRI31731+0) * positif(ART1731BIS) + DAGRI3 * (1 - ART1731BIS)) -(min(DAGRI4,DAGRI41731+0) * positif(ART1731BIS) + DAGRI4 * (1 - ART1731BIS)) -(min(DAGRI5,DAGRI51731+0) * positif(ART1731BIS) + DAGRI5 * (1 - ART1731BIS)) -(min(DAGRI6,DAGRI61731+0) * positif(ART1731BIS) + DAGRI6 * (1 - ART1731BIS))) + positif_ou_nul((min(DAGRI1,DAGRI11731+0) * positif(ART1731BIS) + DAGRI1 * (1 - ART1731BIS)) +(min(DAGRI2,DAGRI21731+0) * positif(ART1731BIS) + DAGRI2 * (1 - ART1731BIS)) +(min(DAGRI3,DAGRI31731+0) * positif(ART1731BIS) + DAGRI3 * (1 - ART1731BIS)) +(min(DAGRI4,DAGRI41731+0) * positif(ART1731BIS) + DAGRI4 * (1 - ART1731BIS)) +(min(DAGRI5,DAGRI51731+0) * positif(ART1731BIS) + DAGRI5 * (1 - ART1731BIS)) +(min(DAGRI6,DAGRI61731+0) * positif(ART1731BIS) + DAGRI6 * (1 - ART1731BIS))-BAQT-BAHQTOT) * (BAQT+BAHQTOT)",
+          "linecol": [
+            193,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DEFIBAANT",
+          "linecol": [
+            193,
+            1
+          ]
+        },
+        "linecol": [
+          193,
+          1
+        ]
+      }
+    ],
+    "type": "regle_declaration",
+    "name": {
+      "type": "integer",
+      "value": 848,
+      "linecol": [
+        191,
+        7
+      ]
+    },
+    "linecol": [
+      191,
+      1
+    ]
+  },
+  {
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            213,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            213,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        213,
+        15
+      ]
+    },
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "DAGRI1+DAGRI2+DAGRI3+DAGRI4+DAGRI5+DAGRI6",
+          "linecol": [
+            214,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DAGRI",
+          "linecol": [
+            214,
+            1
+          ]
+        },
+        "linecol": [
+          214,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "min(DAGRI,BAHQV+BAHQC+BAHQP)",
+          "linecol": [
+            215,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "VAREDAGRI",
+          "linecol": [
+            215,
+            1
+          ]
+        },
+        "linecol": [
+          215,
+          1
+        ]
+      }
+    ],
+    "type": "regle_declaration",
+    "name": {
+      "type": "integer",
+      "value": 849,
+      "linecol": [
+        212,
+        7
+      ]
+    },
+    "linecol": [
+      212,
+      1
+    ]
+  },
+  {
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            217,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            217,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        217,
+        15
+      ]
+    },
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "4BAQTOTNET",
+          "linecol": [
+            218,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAQTOTAVIS",
+          "linecol": [
+            218,
+            1
+          ]
+        },
+        "linecol": [
+          218,
+          1
+        ]
+      }
+    ],
+    "type": "regle_declaration",
+    "name": {
+      "type": "integer",
+      "value": 850,
+      "linecol": [
+        216,
+        7
+      ]
+    },
+    "linecol": [
+      216,
+      1
+    ]
+  },
+  {
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            220,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            220,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        220,
+        15
+      ]
+    },
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BACDEV+BAHDEV+BACDEC+BAHDEC+BACDEP+BAHDEP",
+          "linecol": [
+            221,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "SOMDEFBANI",
+          "linecol": [
+            221,
+            1
+          ]
+        },
+        "linecol": [
+          221,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(BAHQV+BAHQC+BAHQP-TOTDAGRI+4BAQV+4BAQC+4BAQP +DBAIP+SOMDEFBANI)",
+          "linecol": [
+            222,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DEFBANI",
+          "linecol": [
+            222,
+            1
+          ]
+        },
+        "linecol": [
+          222,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "positif(DEFRIBASUP+DEFRIGLOBSUP) * (1-PREM8_11) * max(0,min(SOMDEFBANI, -(max(DEFBANI1731,max(DEFBANI_P,DEFBANIP2))-SOMDEFBANI)))",
+          "linecol": [
+            223,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DEFBANIF",
+          "linecol": [
+            223,
+            1
+          ]
+        },
+        "linecol": [
+          223,
+          1
+        ]
+      }
+    ],
+    "type": "regle_declaration",
+    "name": {
+      "type": "integer",
+      "value": 8509,
+      "linecol": [
+        219,
+        7
+      ]
+    },
+    "linecol": [
+      219,
+      1
+    ]
+  }
+]
