@@ -2,7 +2,6 @@ comment = r'\#.*'
 
 symbol = r'\w+'
 symbol_enumeration = symbol ("," symbol)*
-symbols_enumeration = symbol ("," symbol)+
 float = r'\d+\.\d+'
 integer = r'\d+'
 string = '"' r'[^"]*' '"'
@@ -23,7 +22,11 @@ variable_declaration = (variable_calculee_declaration / variable_const_declarati
 
 expression = r'[^;]+'
 variable_definition = symbol "=" expression ";"
-pour_variable_definition = "pour" symbol "=" (symbols_enumeration / integer_range) ":" variable_definition
+symbol_or_integer_range = (integer_range / symbol)
+loop_variable_domain = symbol_or_integer_range ("," symbol_or_integer_range)*
+loop_variable = symbol "=" loop_variable_domain
+loop_variables = loop_variable (";" loop_variable)*
+pour_variable_definition = "pour" loop_variables ":" variable_definition
 regle_isf_qualifier = "isf"
 regle_declaration = "regle" regle_isf_qualifier? integer ":" "application" ":" symbol_enumeration ";" (variable_definition / pour_variable_definition)+
 

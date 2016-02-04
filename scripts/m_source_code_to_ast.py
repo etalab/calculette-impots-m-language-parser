@@ -134,11 +134,35 @@ def make_integer_range(start, stop, linecol = None):
         })
 
 
-def make_pour_variable_definition(loop_domain, loop_variable, variable_definition, linecol = None):
+def make_loop_variable(name, domain, linecol = None):
+    return clean({
+        'domain': domain,
+        'linecol': linecol,
+        'name': name,
+        'type': u'loop_variable',
+        })
+
+
+def make_loop_variable_domain(value, linecol = None):
     return clean({
         'linecol': linecol,
-        'loop_domain': loop_domain,
-        'loop_variable': loop_variable,
+        'type': u'loop_variable_domain',
+        'value': value,
+        })
+
+
+def make_loop_variables(value, linecol = None):
+    return clean({
+        'linecol': linecol,
+        'type': u'loop_variables',
+        'value': value,
+        })
+
+
+def make_pour_variable_definition(loop_variables, variable_definition, linecol = None):
+    return clean({
+        'linecol': linecol,
+        'loop_variables': loop_variables,
         'type': u'pour_variable_definition',
         'variable_definition': variable_definition,
         })
@@ -312,17 +336,34 @@ class MLanguageVisitor(PTNodeVisitor):
             stop = bounds[1],
             )
 
+    def visit_loop_variable(self, node, children):
+        name = find_one(children, type = 'symbol')
+        domain = find_one(children, type = 'loop_variable_domain')
+        return make_loop_variable(
+            domain = domain,
+            linecol = m_parser.pos_to_linecol(node.position),
+            name = name,
+            )
+
+    def visit_loop_variables(self, node, children):
+        value = find_one_or_many(children, type = 'loop_variable')
+        return make_loop_variables(
+            linecol = m_parser.pos_to_linecol(node.position),
+            value = value,
+            )
+
+    def visit_loop_variable_domain(self, node, children):
+        return make_loop_variable_domain(
+            linecol = m_parser.pos_to_linecol(node.position),
+            value = children,
+            )
+
     def visit_pour_variable_definition(self, node, children):
-        loop_variable = find_one(children, type = 'symbol')
-        symbols_enumeration = find_one_or_none(children, type = 'symbol_enumeration')
-        integer_range = find_one_or_none(children, type = 'integer_range')
-        loop_domain = symbols_enumeration or integer_range
-        assert loop_domain is not None, (loop_domain, symbols_enumeration, integer_range)
+        loop_variables = find_one(children, type = 'loop_variables')
         variable_definition = find_one(children, type = 'variable_definition')
         return make_pour_variable_definition(
             linecol = m_parser.pos_to_linecol(node.position),
-            loop_domain = loop_domain,
-            loop_variable = loop_variable,
+            loop_variables = loop_variables,
             variable_definition = variable_definition,
             )
 
@@ -369,11 +410,15 @@ class MLanguageVisitor(PTNodeVisitor):
             value = children,
             )
 
-    def visit_symbols_enumeration(self, node, children):
-        return make_symbol_enumeration(
-            linecol = m_parser.pos_to_linecol(node.position),
-            value = children,
-            )
+    # def visit_symbols_enumeration(self, node, children):
+    #     return make_symbol_enumeration(
+    #         linecol = m_parser.pos_to_linecol(node.position),
+    #         value = children,
+    #         )
+
+    def visit_symbol_or_integer_range(self, node, children):
+        # Just return sub-rules JSON objects without wrapping them.
+        return children[0]
 
     def visit_tableau(self, node, children):
         value = find_one(children, type = 'integer')
