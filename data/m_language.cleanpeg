@@ -21,7 +21,8 @@ variable_saisie_declaration = symbol ":" "saisie" ("contexte" / "famille" / "pen
 variable_declaration = (variable_calculee_declaration / variable_const_declaration / variable_saisie_declaration)
 
 expression = r'[^;]+'
-variable_definition = symbol "=" expression ";"
+brackets = "[" symbol "]"
+variable_definition = symbol brackets? "=" expression ";"
 symbol_or_integer_range = (integer_range / symbol)
 loop_variable_domain = symbol_or_integer_range ("," symbol_or_integer_range)*
 loop_variable = symbol "=" loop_variable_domain

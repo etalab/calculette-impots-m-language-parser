@@ -101,6 +101,14 @@ def make_attribute(name, value, linecol=None):
         })
 
 
+def make_brackets(value, linecol=None):
+    return clean({
+        'linecol': linecol,
+        'type': u'brackets',
+        'value': value,
+        })
+
+
 def make_expression(value, linecol=None):
     return clean({
         'linecol': linecol,
@@ -208,8 +216,9 @@ def make_variable_calculee_qualifiers(value, linecol=None):
         })
 
 
-def make_variable_definition(name, expression, linecol=None):
+def make_variable_definition(name, expression, brackets=None, linecol=None):
     return clean({
+        'brackets': brackets,
         'expression': expression,
         'linecol': linecol,
         'name': name,
@@ -288,6 +297,13 @@ class MLanguageVisitor(PTNodeVisitor):
         return make_attribute(
             linecol=m_parser.pos_to_linecol(node.position),
             name=name,
+            value=value,
+            )
+
+    def visit_brackets(self, node, children):
+        value = find_one(children, type='symbol')
+        return make_brackets(
+            linecol=m_parser.pos_to_linecol(node.position),
             value=value,
             )
 
@@ -469,7 +485,9 @@ class MLanguageVisitor(PTNodeVisitor):
     def visit_variable_definition(self, node, children):
         name = find_one(children, type='symbol')
         expression = find_one(children, type='expression')
+        brackets = find_one_or_none(children, type='brackets')
         return make_variable_definition(
+            brackets=brackets,
             expression=expression,
             linecol=m_parser.pos_to_linecol(node.position),
             name=name,
