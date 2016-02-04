@@ -176,14 +176,6 @@ def make_pour_variable_definition(loop_variables, variable_definition, linecol=N
         })
 
 
-def make_regle_isf_qualifier(value, linecol=None):
-    return clean({
-        'linecol': linecol,
-        'type': u'regle_isf_qualifier',
-        'value': value,
-        })
-
-
 def make_string(value, linecol=None):
     return clean({
         'linecol': linecol,
@@ -397,12 +389,6 @@ class MLanguageVisitor(PTNodeVisitor):
             name=name,
             qualifiers=qualifiers,
             variables=variables,
-            )
-
-    def visit_regle_isf_qualifier(self, node, children):
-        return make_regle_isf_qualifier(
-            linecol=m_parser.pos_to_linecol(node.position),
-            value=node.value,
             )
 
     def visit_root(self, node, children):
