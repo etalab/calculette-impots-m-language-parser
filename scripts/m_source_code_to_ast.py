@@ -118,19 +118,38 @@ def make_brackets(value, linecol=None):
         })
 
 
+def make_erreur_declaration(name, codes, description, erreur_type, linecol=None):
+    return clean({
+        'codes': codes,
+        'description': description,
+        'erreur_type': erreur_type,
+        'linecol': linecol,
+        'name': name,
+        'type': u'erreur_declaration',
+        })
+
+
+def make_erreur_type(value, linecol=None):
+    return clean({
+        'linecol': linecol,
+        'type': u'erreur_type',
+        'value': value,
+        })
+
+
 def make_float(value, linecol=None):
     return clean({
         'linecol': linecol,
-        'value': value,
         'type': u'float',
+        'value': value,
         })
 
 
 def make_integer(value, linecol=None):
     return clean({
         'linecol': linecol,
-        'value': value,
         'type': u'integer',
+        'value': value,
         })
 
 
@@ -295,6 +314,12 @@ def find_many_or_none(nodes, type):
         ] or None
 
 
+def find_many(nodes, type):
+    results = find_many_or_none(nodes, type)
+    assert results is not None and len(results) > 1, (nodes, type, results)
+    return results
+
+
 def find_one(nodes, type):
     results = find_many_or_none(nodes, type)
     assert results is not None and len(results) == 1, (nodes, type, results)
@@ -380,6 +405,26 @@ class MLanguageVisitor(PTNodeVisitor):
             applications=applications,
             linecol=m_parser.pos_to_linecol(node.position),
             name=name,
+            )
+
+    def visit_erreur_declaration(self, node, children):
+        name = find_one(children, type='symbol')
+        erreur_type = find_one(children, type='erreur_type')
+        strings = find_many(children, type='string')
+        description = strings[3]
+        codes = strings[:3] + [strings[4]]
+        return make_erreur_declaration(
+            codes=codes,
+            description=description,
+            erreur_type=erreur_type,
+            linecol=m_parser.pos_to_linecol(node.position),
+            name=name,
+            )
+
+    def visit_erreur_type(self, node, children):
+        return make_erreur_type(
+            linecol=m_parser.pos_to_linecol(node.position),
+            value=node.value,
             )
 
     def visit_float(self, node, children):
