@@ -67,9 +67,10 @@ def make_enchaineur_declaration(name, applications, linecol=None):
         })
 
 
-def make_regle_declaration(name, applications, variables, qualifiers=None, linecol=None):
+def make_regle_declaration(name, application, variables, enchaineur=None, qualifiers=None, linecol=None):
     return clean({
-        'applications': applications,
+        'application': application,
+        'enchaineur': enchaineur,
         'linecol': linecol,
         'name': name,
         'qualifiers': qualifiers,
@@ -173,6 +174,22 @@ def make_pour_variable_definition(loop_variables, variable_definition, linecol=N
         'loop_variables': loop_variables,
         'type': u'pour_variable_definition',
         'variable_definition': variable_definition,
+        })
+
+
+def make_regle_application(names, linecol=None):
+    return clean({
+        'linecol': linecol,
+        'names': names,
+        'type': u'regle_application',
+        })
+
+
+def make_regle_enchaineur(name, linecol=None):
+    return clean({
+        'linecol': linecol,
+        'name': name,
+        'type': u'regle_enchaineur',
         })
 
 
@@ -376,19 +393,35 @@ class MLanguageVisitor(PTNodeVisitor):
             variable_definition=variable_definition,
             )
 
+    def visit_regle_application(self, node, children):
+        names = find_one_or_many(children, type='symbol_enumeration')
+        return make_regle_application(
+            linecol=m_parser.pos_to_linecol(node.position),
+            names=names,
+            )
+
     def visit_regle_declaration(self, node, children):
-        applications = find_one(children, type='symbol_enumeration')
+        application = find_one(children, type='regle_application')
+        enchaineur = find_one_or_none(children, type='regle_enchaineur')
         symbols = find_one_or_many(children, type='symbol')
-        name, qualifiers = symbols[-1], symbols[:-1]
+        name, qualifiers = symbols[-1], symbols[:-1] or None
         variable_definition_list = find_many_or_none(children, type='variable_definition')
         pour_variable_definition_list = find_many_or_none(children, type='pour_variable_definition')
         variables = ([] + (variable_definition_list or []) + (pour_variable_definition_list or [])) or None
         return make_regle_declaration(
-            applications=applications,
+            application=application,
+            enchaineur=enchaineur,
             linecol=m_parser.pos_to_linecol(node.position),
             name=name,
             qualifiers=qualifiers,
             variables=variables,
+            )
+
+    def visit_regle_enchaineur(self, node, children):
+        name = find_one_or_many(children, type='symbol')
+        return make_regle_enchaineur(
+            linecol=m_parser.pos_to_linecol(node.position),
+            name=name,
             )
 
     def visit_root(self, node, children):

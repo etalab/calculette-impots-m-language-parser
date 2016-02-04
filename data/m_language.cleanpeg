@@ -28,6 +28,8 @@ loop_variable_domain = symbol_or_integer_range ("," symbol_or_integer_range)*
 loop_variable = symbol "=" loop_variable_domain
 loop_variables = loop_variable (";" loop_variable)*
 pour_variable_definition = "pour" loop_variables ":" variable_definition
-regle_declaration = "regle" symbol+ ":" "application" ":" symbol_enumeration ";" (variable_definition / pour_variable_definition)+
+regle_application = "application" ":" symbol_enumeration ";"
+regle_enchaineur = "enchaineur" ":" symbol ";"
+regle_declaration = "regle" symbol+ ":" regle_application regle_enchaineur? (variable_definition / pour_variable_definition)+
 
 root = (comment / application_declaration / enchaineur_declaration / variable_declaration / regle_declaration)+ EOF
