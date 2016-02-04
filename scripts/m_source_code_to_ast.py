@@ -93,6 +93,14 @@ def make_variable_declaration(name, type, attributes=None, description=None, lin
 # Secondary AST node makers
 
 
+def make_applications_reference(names, linecol=None):
+    return clean({
+        'linecol': linecol,
+        'names': names,
+        'type': u'applications_reference',
+        })
+
+
 def make_attribute(name, value, linecol=None):
     return clean({
         'linecol': linecol,
@@ -110,11 +118,11 @@ def make_brackets(value, linecol=None):
         })
 
 
-def make_expression(value, linecol=None):
+def make_erreur(name, linecol=None):
     return clean({
         'linecol': linecol,
-        'type': u'expression',
-        'value': value,
+        'name': name,
+        'type': u'erreur',
         })
 
 
@@ -177,14 +185,6 @@ def make_pour_variable_definition(loop_variables, variable_definition, linecol=N
         })
 
 
-def make_regle_application(names, linecol=None):
-    return clean({
-        'linecol': linecol,
-        'names': names,
-        'type': u'regle_application',
-        })
-
-
 def make_regle_enchaineur(name, linecol=None):
     return clean({
         'linecol': linecol,
@@ -235,7 +235,42 @@ def make_variable_definition(name, expression, brackets=None, linecol=None):
         })
 
 
+def make_variable_definition_expression(value, linecol=None):
+    return clean({
+        'linecol': linecol,
+        'type': u'variable_definition_expression',
+        'value': value,
+        })
+
+
+def make_verif_declaration(name, application, condition, erreur, qualifiers=None, linecol=None):
+    return clean({
+        'application': application,
+        'condition': condition,
+        'erreur': erreur,
+        'linecol': linecol,
+        'name': name,
+        'qualifiers': qualifiers,
+        'type': u'verif_declaration',
+        })
+
+
+def make_verif_declaration_condition(value, linecol=None):
+    return clean({
+        'linecol': linecol,
+        'type': u'verif_declaration_condition',
+        'value': value,
+        })
+
+
 # AST children helpers
+
+
+def clean_lines(lines):
+    return u' '.join(
+        line.strip()
+        for line in lines.split('\n')
+        )
 
 
 def find_one_or_many(nodes, type):
@@ -301,6 +336,13 @@ class MLanguageVisitor(PTNodeVisitor):
             name=name,
             )
 
+    def visit_applications_reference(self, node, children):
+        names = find_one_or_many(children, type='symbol_enumeration')
+        return make_applications_reference(
+            linecol=m_parser.pos_to_linecol(node.position),
+            names=names,
+            )
+
     def visit_attribute(self, node, children):
         name = find_one(children, type='symbol')
         value = find_one(children, type='integer')
@@ -325,20 +367,18 @@ class MLanguageVisitor(PTNodeVisitor):
 
     def visit_enchaineur_declaration(self, node, children):
         name = find_one(children, type='symbol')
-        applications = find_one_or_many(children, type='symbol_enumeration')
+        applications = find_one(children, type='applications_reference')
         return make_enchaineur_declaration(
             applications=applications,
             linecol=m_parser.pos_to_linecol(node.position),
             name=name,
             )
 
-    def visit_expression(self, node, children):
-        return make_expression(
+    def visit_erreur(self, node, children):
+        name = find_one(children, type='symbol')
+        return make_erreur(
             linecol=m_parser.pos_to_linecol(node.position),
-            value=u' '.join(
-                line.strip()
-                for line in node.value.split('\n')
-                ),
+            name=name,
             )
 
     def visit_float(self, node, children):
@@ -393,15 +433,8 @@ class MLanguageVisitor(PTNodeVisitor):
             variable_definition=variable_definition,
             )
 
-    def visit_regle_application(self, node, children):
-        names = find_one_or_many(children, type='symbol_enumeration')
-        return make_regle_application(
-            linecol=m_parser.pos_to_linecol(node.position),
-            names=names,
-            )
-
     def visit_regle_declaration(self, node, children):
-        application = find_one(children, type='regle_application')
+        application = find_one(children, type='applications_reference')
         enchaineur = find_one_or_none(children, type='regle_enchaineur')
         symbols = find_one_or_many(children, type='symbol')
         name, qualifiers = symbols[-1], symbols[:-1] or None
@@ -504,13 +537,20 @@ class MLanguageVisitor(PTNodeVisitor):
 
     def visit_variable_definition(self, node, children):
         name = find_one(children, type='symbol')
-        expression = find_one(children, type='expression')
+        expression = find_one(children, type='variable_definition_expression')
         brackets = find_one_or_none(children, type='brackets')
         return make_variable_definition(
             brackets=brackets,
             expression=expression,
             linecol=m_parser.pos_to_linecol(node.position),
             name=name,
+            )
+
+    def visit_variable_definition_expression(self, node, children):
+        value = clean_lines(node.value)
+        return make_variable_definition_expression(
+            linecol=m_parser.pos_to_linecol(node.position),
+            value=value,
             )
 
     def visit_variable_saisie_declaration(self, node, children):
@@ -523,6 +563,28 @@ class MLanguageVisitor(PTNodeVisitor):
             linecol=m_parser.pos_to_linecol(node.position),
             name=name,
             type='saisie',
+            )
+
+    def visit_verif_declaration(self, node, children):
+        symbols = find_one_or_many(children, type='symbol')
+        name, qualifiers = symbols[-1], symbols[:-1] or None
+        application = find_one(children, type='applications_reference')
+        condition = find_one(children, type='verif_declaration_condition')
+        erreur = find_one(children, type='erreur')
+        return make_verif_declaration(
+            application=application,
+            condition=condition,
+            erreur=erreur,
+            linecol=m_parser.pos_to_linecol(node.position),
+            name=name,
+            qualifiers=qualifiers,
+            )
+
+    def visit_verif_declaration_condition(self, node, children):
+        value = clean_lines(node.value)
+        return make_verif_declaration_condition(
+            linecol=m_parser.pos_to_linecol(node.position),
+            value=value,
             )
 
 

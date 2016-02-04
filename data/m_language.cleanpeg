@@ -8,7 +8,8 @@ string = '"' r'[^"]*' '"'
 integer_range = integer ".." integer
 
 application_declaration = "application" symbol ";"
-enchaineur_declaration = "enchaineur" symbol "application:" symbol_enumeration  ";"
+applications_reference = "application" ":" symbol_enumeration
+enchaineur_declaration = "enchaineur" symbol applications_reference ";"
 
 alias = "alias" symbol
 attribute = symbol "=" integer
@@ -20,16 +21,19 @@ variable_const_declaration = symbol ":" "const" "=" float ";"
 variable_saisie_declaration = symbol ":" "saisie" ("contexte" / "famille" / "penalite" / "revenu")+ attribute* "restituee"? alias ":" string type? ";"
 variable_declaration = (variable_calculee_declaration / variable_const_declaration / variable_saisie_declaration)
 
-expression = r'[^;]+'
+variable_definition_expression = r'[^;]+'
 brackets = "[" symbol "]"
-variable_definition = symbol brackets? "=" expression ";"
+variable_definition = symbol brackets? "=" variable_definition_expression ";"
 symbol_or_integer_range = (integer_range / symbol)
 loop_variable_domain = symbol_or_integer_range ("," symbol_or_integer_range)*
 loop_variable = symbol "=" loop_variable_domain
 loop_variables = loop_variable (";" loop_variable)*
 pour_variable_definition = "pour" loop_variables ":" variable_definition
-regle_application = "application" ":" symbol_enumeration ";"
 regle_enchaineur = "enchaineur" ":" symbol ";"
-regle_declaration = "regle" symbol+ ":" regle_application regle_enchaineur? (variable_definition / pour_variable_definition)+
+regle_declaration = "regle" symbol+ ":" applications_reference ";" regle_enchaineur? (variable_definition / pour_variable_definition)+
 
-root = (comment / application_declaration / enchaineur_declaration / variable_declaration / regle_declaration)+ EOF
+erreur = "erreur" symbol
+verif_declaration_condition = r'((?!alors).|\n)+'
+verif_declaration = "verif" symbol+ ":" applications_reference ";" "si" verif_declaration_condition "alors" erreur ";"
+
+root = (comment / application_declaration / enchaineur_declaration / variable_declaration / regle_declaration / verif_declaration)+ EOF
