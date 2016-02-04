@@ -251,6 +251,7 @@ def find_one(nodes, type):
 
 def find_one_or_none(nodes, type):
     results = find_many_or_none(nodes, type)
+    assert results is None or len(results) == 1, (nodes, type, results)
     return results[0] if results else None
 
 
