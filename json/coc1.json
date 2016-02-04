@@ -1,0 +1,5949 @@
+[
+  {
+    "type": "comment",
+    "value": "#*************************************************************************************************************************",
+    "linecol": [
+      1,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#",
+    "linecol": [
+      2,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#Copyright or © or Copr.[DGFIP][2015]",
+    "linecol": [
+      3,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#",
+    "linecol": [
+      4,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#Ce logiciel a été initialement développé par la Direction Générale des ",
+    "linecol": [
+      5,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#Finances Publiques pour permettre le calcul de l'impôt sur le revenu 2015 ",
+    "linecol": [
+      6,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#au titre des revenus perçus en 2014. La présente version a permis la ",
+    "linecol": [
+      7,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#génération du moteur de calcul des chaînes de taxation des rôles d'impôt ",
+    "linecol": [
+      8,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#sur le revenu de ce millésime.",
+    "linecol": [
+      9,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#",
+    "linecol": [
+      10,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#Ce logiciel est régi par la licence CeCILL 2.1 soumise au droit français ",
+    "linecol": [
+      11,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#et respectant les principes de diffusion des logiciels libres. Vous pouvez ",
+    "linecol": [
+      12,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#utiliser, modifier et/ou redistribuer ce programme sous les conditions de ",
+    "linecol": [
+      13,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#la licence CeCILL 2.1 telle que diffusée par le CEA, le CNRS et l'INRIA  sur ",
+    "linecol": [
+      14,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#le site \"http://www.cecill.info\".",
+    "linecol": [
+      15,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#",
+    "linecol": [
+      16,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#Le fait que vous puissiez accéder à cet en-tête signifie que vous avez pris ",
+    "linecol": [
+      17,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#connaissance de la licence CeCILL 2.1 et que vous en avez accepté les termes.",
+    "linecol": [
+      18,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#",
+    "linecol": [
+      19,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#**************************************************************************************************************************",
+    "linecol": [
+      20,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                22,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                22,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            22,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        22,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "APPLI_COLBERT + APPLI_ILIAD = 1 et V_IND_TRAIT > 0 et CHNFAC > 9  ",
+          "linecol": [
+            25,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A00101",
+                "linecol": [
+                  31,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              31,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          24,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "2020",
+      "linecol": [
+        21,
+        7
+      ]
+    },
+    "linecol": [
+      21,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                33,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                33,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            33,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        33,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "APPLI_COLBERT + APPLI_ILIAD = 1 et V_IND_TRAIT > 0 et NBACT > 9  ",
+          "linecol": [
+            36,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A00102",
+                "linecol": [
+                  42,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              42,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          35,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "20201",
+      "linecol": [
+        32,
+        7
+      ]
+    },
+    "linecol": [
+      32,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                44,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                44,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            44,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        44,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "APPLI_COLBERT + APPLI_ILIAD = 1 et V_IND_TRAIT > 0 et ( RDENS > 9 ou RDENL > 9 ou RDENU > 9 ou RDENSQAR > 9 ou RDENLQAR > 9 ou RDENUQAR > 9 )  ",
+          "linecol": [
+            47,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A00103",
+                "linecol": [
+                  65,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              65,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          46,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "20202",
+      "linecol": [
+        43,
+        7
+      ]
+    },
+    "linecol": [
+      43,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                67,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                67,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            67,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        67,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "APPLI_COLBERT + APPLI_ILIAD = 1 et V_IND_TRAIT > 0 et ASCAPA > 9  ",
+          "linecol": [
+            70,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A00104",
+                "linecol": [
+                  76,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              76,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          69,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "20203",
+      "linecol": [
+        66,
+        7
+      ]
+    },
+    "linecol": [
+      66,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                78,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                78,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            78,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        78,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "APPLI_OCEANS = 0 et V_IND_TRAIT > 0 et ((RBG > 99999999) ou (BCSG > 99999999) ou (BRDS > 99999999) ou (BPRS > 99999999) ou (GSALV > 99999999) ou (GSALC > 99999999) ou (CVNSALAV > 99999999) ou (CVNSALAC > 99999999))  ",
+          "linecol": [
+            81,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A00105",
+                "linecol": [
+                  101,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              101,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          80,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "1005",
+      "linecol": [
+        77,
+        7
+      ]
+    },
+    "linecol": [
+      77,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                103,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                103,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            103,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        103,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "V_IND_TRAIT > 0 et LOYIMP > 99999  ",
+          "linecol": [
+            106,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A00106",
+                "linecol": [
+                  110,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              110,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          105,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "7332",
+      "linecol": [
+        102,
+        7
+      ]
+    },
+    "linecol": [
+      102,
+      1
+    ]
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "1007",
+      "linecol": [
+        111,
+        11
+      ]
+    },
+    "linecol": [
+      111,
+      1
+    ],
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "APPLI_OCEANS = 0 et V_IND_TRAIT > 0 et ((ISFDONEURO > 99999999) ou (ISFDONF > 99999999) ou (ISFETRANG > 99999999) ou (ISFFCPI > 99999999) ou (ISFFIP > 99999999) ou (ISFPMEDI > 99999999) ou (ISFPMEIN > 99999999) ou (ISFBASE > 99999999) ou (ISFVBPAT > 99999999))  ",
+          "linecol": [
+            115,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A00107",
+                "linecol": [
+                  137,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              137,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          114,
+          1
+        ]
+      }
+    ],
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                112,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                112,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            112,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        112,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "qualifiers": [
+      {
+        "type": "symbol",
+        "name": "isf",
+        "linecol": [
+          111,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                139,
+                15
+              ]
+            }
+          ],
+          "linecol": [
+            139,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        139,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "V_IND_TRAIT > 0 et positif(V_0AB + 0) = 1 et (positif(V_0AX + 0) = 0 ou positif(V_0AM + V_0AO + 0) = 1)  ",
+          "linecol": [
+            141,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A004",
+                "linecol": [
+                  149,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              149,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          140,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "3416",
+      "linecol": [
+        138,
+        7
+      ]
+    },
+    "linecol": [
+      138,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                151,
+                15
+              ]
+            }
+          ],
+          "linecol": [
+            151,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        151,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "V_IND_TRAIT > 0 et positif(V_0AX + 0) = 1 et positif(V_0AC + V_0AD + V_0AV + 0) = 1 et positif(V_0AB + 0) = 0  ",
+          "linecol": [
+            153,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A005",
+                "linecol": [
+                  161,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              161,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          152,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "3417",
+      "linecol": [
+        150,
+        7
+      ]
+    },
+    "linecol": [
+      150,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                163,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                163,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            163,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        163,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "V_0AM + 0 = 1 et V_0AG + V_0AN + V_0AW + V_0AL + 0 > 0  ",
+          "linecol": [
+            165,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A01001",
+                "linecol": [
+                  169,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              169,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          164,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "3003",
+      "linecol": [
+        162,
+        7
+      ]
+    },
+    "linecol": [
+      162,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                171,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                171,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            171,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        171,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "V_0AO + 0 = 1 et V_0AG + V_0AL + V_0AN + V_0AW + V_0AU + 0 > 0  ",
+          "linecol": [
+            173,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A01002",
+                "linecol": [
+                  177,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              177,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          172,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "3513",
+      "linecol": [
+        170,
+        7
+      ]
+    },
+    "linecol": [
+      170,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                179,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                179,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            179,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        179,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "V_0AV + 0 = 1 et BOOL_0AZ != 1 et V_0AF + V_0AS + V_0AU + 0 > 0  ",
+          "linecol": [
+            181,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A01003",
+                "linecol": [
+                  187,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              187,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          180,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "3004",
+      "linecol": [
+        178,
+        7
+      ]
+    },
+    "linecol": [
+      178,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                189,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                189,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            189,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        189,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "V_0AC + 0 = 1 et V_0AF + V_0AS + V_0AU + 0 > 0  ",
+          "linecol": [
+            191,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A01004",
+                "linecol": [
+                  195,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              195,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          190,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "3005",
+      "linecol": [
+        188,
+        7
+      ]
+    },
+    "linecol": [
+      188,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                197,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                197,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            197,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        197,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "V_0AD + 0 = 1 et V_0AF + V_0AS + V_0AU + 0 > 0  ",
+          "linecol": [
+            199,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A01005",
+                "linecol": [
+                  203,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              203,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          198,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "3006",
+      "linecol": [
+        196,
+        7
+      ]
+    },
+    "linecol": [
+      196,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                205,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                205,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            205,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        205,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "V_0AC = 1 et V_0AG = 1  ",
+          "linecol": [
+            207,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A01006",
+                "linecol": [
+                  211,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              211,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          206,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "3010",
+      "linecol": [
+        204,
+        7
+      ]
+    },
+    "linecol": [
+      204,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                213,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                213,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            213,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        213,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "V_0AD = 1 et V_0AG = 1  ",
+          "linecol": [
+            215,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A01007",
+                "linecol": [
+                  219,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              219,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          214,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "3011",
+      "linecol": [
+        212,
+        7
+      ]
+    },
+    "linecol": [
+      212,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                221,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                221,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            221,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        221,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "V_0AV = 1 et V_INDG = 1 et V_0AG = 1 ou (present(V_0AZ) = 1 et V_0AV = 1 et BOOL_0AZ != 1 et V_INDG = 1 et V_0AG = 1)  ",
+          "linecol": [
+            223,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A01008",
+                "linecol": [
+                  231,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              231,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          222,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "3012",
+      "linecol": [
+        220,
+        7
+      ]
+    },
+    "linecol": [
+      220,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                233,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                233,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            233,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        233,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "V_0AM + 0 = 1 et V_0BT + 0 = 1  ",
+          "linecol": [
+            235,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A01009",
+                "linecol": [
+                  239,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              239,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          234,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "3007",
+      "linecol": [
+        232,
+        7
+      ]
+    },
+    "linecol": [
+      232,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                241,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                241,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            241,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        241,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "V_0AO + 0 = 1 et V_0BT+0 = 1  ",
+          "linecol": [
+            243,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A01010",
+                "linecol": [
+                  247,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              247,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          242,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "3514",
+      "linecol": [
+        240,
+        7
+      ]
+    },
+    "linecol": [
+      240,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                249,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                249,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            249,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        249,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "V_0AP + V_0AF + V_0AS + V_0AW + V_0AL + V_0AN + V_0AG + V_0BT + 0 > 0 et positif(V_0AM + V_0AO + V_0AC + V_0AD + V_0AV + 0) != 1  ",
+          "linecol": [
+            251,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A01011",
+                "linecol": [
+                  255,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              255,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          250,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "3009",
+      "linecol": [
+        248,
+        7
+      ]
+    },
+    "linecol": [
+      248,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                257,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                257,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            257,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        257,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "V_IND_TRAIT > 0 et V_0DN + V_0DP + 0 = 1  ",
+          "linecol": [
+            260,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A011",
+                "linecol": [
+                  264,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              264,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          259,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "3600",
+      "linecol": [
+        256,
+        7
+      ]
+    },
+    "linecol": [
+      256,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                266,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                266,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            266,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        266,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "V_0CF + 0 < V_0CG  ",
+          "linecol": [
+            269,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A01201",
+                "linecol": [
+                  271,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              271,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          268,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "3100",
+      "linecol": [
+        265,
+        7
+      ]
+    },
+    "linecol": [
+      265,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                273,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                273,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            273,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        273,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "V_0CI + 0 > V_0CH +0  ",
+          "linecol": [
+            276,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A01202",
+                "linecol": [
+                  278,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              278,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          275,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "3101",
+      "linecol": [
+        272,
+        7
+      ]
+    },
+    "linecol": [
+      272,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                280,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                280,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            280,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        280,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "(V_IND_TRAIT = 4 et (V_0DA < (V_ANREV - 124) ou V_0DA > V_ANREV ou V_0DB < (V_ANREV - 124) ou V_0DB > V_ANREV)) ou (V_IND_TRAIT = 5 et ((positif(V_0DB) = 1 et ( V_0DB < (V_ANREV - 124) ou V_0DB > V_ANREV ) ) ou (V_0DA < (V_ANREV - 124) ou V_0DA > V_ANREV)))  ",
+          "linecol": [
+            282,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A013",
+                "linecol": [
+                  292,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              292,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          281,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "3013",
+      "linecol": [
+        279,
+        7
+      ]
+    },
+    "linecol": [
+      279,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                294,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                294,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            294,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        294,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "NBPT > 20  ",
+          "linecol": [
+            297,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A015",
+                "linecol": [
+                  299,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              299,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          296,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "5001",
+      "linecol": [
+        293,
+        7
+      ]
+    },
+    "linecol": [
+      293,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                301,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                301,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            301,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        301,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "APPLI_COLBERT + APPLI_OCEANS = 0 et V_ZDC = 1 et somme(i=X,Y,Z: positif(V_0Ai)) > 1  ",
+          "linecol": [
+            304,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A01701",
+                "linecol": [
+                  310,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              310,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          303,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "171",
+      "linecol": [
+        300,
+        7
+      ]
+    },
+    "linecol": [
+      300,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                312,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                312,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            312,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        312,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "APPLI_COLBERT + APPLI_OCEANS = 0 et V_ZDC = 4 et ( positif(V_0AZ + 0) = 0 ou V_0AM + V_0AO + (V_0AC + V_0AD + V_0AV) * V_0AB + 0 = 0 )  ",
+          "linecol": [
+            315,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A01702",
+                "linecol": [
+                  325,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              325,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          314,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "172",
+      "linecol": [
+        311,
+        7
+      ]
+    },
+    "linecol": [
+      311,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                327,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                327,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            327,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        327,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "APPLI_COLBERT + APPLI_OCEANS = 0 et V_ZDC = 1 et positif(V_0AX) = 1 et V_0AM + V_0AO + 0 = 0  ",
+          "linecol": [
+            329,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A01703",
+                "linecol": [
+                  337,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              337,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          328,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "173",
+      "linecol": [
+        326,
+        7
+      ]
+    },
+    "linecol": [
+      326,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                339,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                339,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            339,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        339,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "APPLI_COLBERT + APPLI_OCEANS = 0 et V_ZDC = 1 et positif(V_0AY) = 1 et V_0AD + 0 = 0  ",
+          "linecol": [
+            341,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A01704",
+                "linecol": [
+                  349,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              349,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          340,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "174",
+      "linecol": [
+        338,
+        7
+      ]
+    },
+    "linecol": [
+      338,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                351,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                351,
+                22
+              ]
+            }
+          ],
+          "linecol": [
+            351,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        351,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "APPLI_COLBERT + APPLI_OCEANS = 0 et V_ZDC = 1 et positif(V_0AZ) = 1 et V_0AV + V_0AM + 0 = 0  ",
+          "linecol": [
+            354,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A01705",
+                "linecol": [
+                  362,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              362,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          353,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "175",
+      "linecol": [
+        350,
+        7
+      ]
+    },
+    "linecol": [
+      350,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                364,
+                15
+              ]
+            }
+          ],
+          "linecol": [
+            364,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        364,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "APPLI_COLBERT = 0 et null(10 - V_NOTRAIT) = 1 et V_ZDC + 0 = 0 et positif(V_0AZ) = 1 et V_0AV + V_0AM + V_0AO + 0 = 0  ",
+          "linecol": [
+            367,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A018",
+                "linecol": [
+                  377,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              377,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          366,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "18",
+      "linecol": [
+        363,
+        7
+      ]
+    },
+    "linecol": [
+      363,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                379,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                379,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            379,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        379,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "APPLI_OCEANS = 0 et V_IND_TRAIT > 0 et (V_0CF > 19 ou V_0CG > 19 ou V_0CH > 19 ou V_0CI > 19 ou V_0CR > 19 ou V_0DJ > 19 ou V_0DN > 19 ou V_0DP > 19)  ",
+          "linecol": [
+            382,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A019",
+                "linecol": [
+                  388,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              388,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          381,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "3610",
+      "linecol": [
+        378,
+        7
+      ]
+    },
+    "linecol": [
+      378,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                390,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                390,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            390,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        390,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "APPLI_OCEANS = 0 et ((positif(V_0CF + 0) != 1 et (pour un i dans 0..7: positif(V_0Fi + 0) = 1)) ou (positif(V_0CH + 0) != 1 et (pour un i dans 0..5: positif(V_0Hi) = 1)))  ",
+          "linecol": [
+            393,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A021",
+                "linecol": [
+                  403,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              403,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          392,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "3630",
+      "linecol": [
+        389,
+        7
+      ]
+    },
+    "linecol": [
+      389,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                405,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                405,
+                22
+              ]
+            }
+          ],
+          "linecol": [
+            405,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        405,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "APPLI_OCEANS + APPLI_COLBERT = 0 et V_NOTRAIT = 10 et (pour un i dans 0..5: V_BT0Fi = V_ANREV - 18) et (pour un i dans 0..5: V_0Ji = V_ANREV - 18)  ",
+          "linecol": [
+            408,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A022",
+                "linecol": [
+                  416,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              416,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          407,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "22",
+      "linecol": [
+        404,
+        7
+      ]
+    },
+    "linecol": [
+      404,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                418,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                418,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            418,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        418,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "APPLI_OCEANS = 0 et V_NOTRAIT+0 < 20 et V_IND_TRAIT + 0 = 4 et ( (present(V_0AX) = 1 et (inf( ( V_0AX - V_ANREV ) / 1000000) > 31 ou inf( ( V_0AX - V_ANREV ) / 1000000) = 0)) ou (present(V_0AY) = 1 et (inf( ( V_0AY - V_ANREV ) / 1000000) > 31 ou inf( ( V_0AY - V_ANREV ) / 1000000) = 0)) ou (present(V_0AZ) = 1 et (inf( ( V_0AZ - V_ANREV ) / 1000000) > 31 ou inf( ( V_0AZ - V_ANREV ) / 1000000) = 0)) )  ",
+          "linecol": [
+            421,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A02301",
+                "linecol": [
+                  447,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              447,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          420,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "1340",
+      "linecol": [
+        417,
+        7
+      ]
+    },
+    "linecol": [
+      417,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                449,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                449,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            449,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        449,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "APPLI_OCEANS = 0 et V_IND_TRAIT > 0 et V_IND_TRAIT + 0 = 4 et ( (present(V_0AX) = 1 et ( (    inf ( V_0AX / 10000) * 10000 - inf ( V_0AX / 1000000)* 1000000 )/10000 > 12 ou (    inf ( V_0AX / 10000) * 10000 - inf ( V_0AX / 1000000)* 1000000 )/10000 =0 ) ) ou (  present(V_0AY) =1 et ( (    inf ( V_0AY / 10000) * 10000 - inf ( V_0AY / 1000000)* 1000000 )/10000 > 12 ou (    inf ( V_0AY / 10000) * 10000 - inf ( V_0AY / 1000000)* 1000000 )/10000 =0 ) ) ou (  present(V_0AZ) =1 et ( (    inf ( V_0AZ / 10000) * 10000 - inf ( V_0AZ / 1000000)* 1000000 )/10000 > 12 ou (    inf ( V_0AZ / 10000) * 10000 - inf ( V_0AZ / 1000000)* 1000000 )/10000 =0 ) ) )  ",
+          "linecol": [
+            452,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A02302",
+                "linecol": [
+                  499,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              499,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          451,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "1341",
+      "linecol": [
+        448,
+        7
+      ]
+    },
+    "linecol": [
+      448,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                501,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                501,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            501,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        501,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "APPLI_OCEANS = 0 et V_IND_TRAIT > 0 et V_IND_TRAIT + 0 = 4 et ( (present(V_0AX) = 1 et (V_0AX - inf(V_0AX/ 10000) * 10000) != V_ANREV et (V_0AX - inf(V_0AX/ 10000) * 10000) != V_ANREV - 1) ou (present(V_0AY) = 1 et (V_0AY - inf(V_0AY/ 10000) * 10000) != V_ANREV) ou (present(V_0AZ) = 1 et (V_0AZ - inf(V_0AZ/ 10000) * 10000) != V_ANREV) )  ",
+          "linecol": [
+            504,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A02303",
+                "linecol": [
+                  526,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              526,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          503,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "1342",
+      "linecol": [
+        500,
+        7
+      ]
+    },
+    "linecol": [
+      500,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                528,
+                15
+              ]
+            }
+          ],
+          "linecol": [
+            528,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        528,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "V_IND_TRAIT > 0 et ( (present(V_0AX) = 1 et V_0AX + 0 < 1010000 + (V_ANREV - 1)) ou (present(V_0AY) = 1 et V_0AY + 0 < 1010000 + V_ANREV) ou (present(V_0AZ) = 1 et V_0AZ + 0 < 1010000 + V_ANREV) )  ",
+          "linecol": [
+            531,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A02402",
+                "linecol": [
+                  547,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              547,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          530,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "1352",
+      "linecol": [
+        527,
+        7
+      ]
+    },
+    "linecol": [
+      527,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                549,
+                15
+              ]
+            }
+          ],
+          "linecol": [
+            549,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        549,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "APPLI_OCEANS = 0 et V_IND_TRAIT > 0 et ( ( V_IND_TRAIT+0 = 4 et ( (  present(V_0AX) =1 et ( V_0AX + 0 < (1010000 + (V_ANREV - 1))) ) ou (  present(V_0AY) =1 et ( V_0AY + 0 < (1010000 + V_ANREV)) ) ou (  present(V_0AZ) =1 et ( V_0AZ + 0 < (1010000 + V_ANREV)) )) ) ou ( V_IND_TRAIT = 5 et ( (  positif(V_0AX) =1 et ( V_0AX + 0 < (1010000 + (V_ANREV - 1))) ) ou (  positif(V_0AY) =1 et ( V_0AY + 0 < (1010000 + V_ANREV)) ) ou (  positif(V_0AZ) =1 et ( V_0AZ + 0 < (1010000 + V_ANREV)) ) )) )  ",
+          "linecol": [
+            552,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A02402",
+                "linecol": [
+                  592,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              592,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          551,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "1353",
+      "linecol": [
+        548,
+        7
+      ]
+    },
+    "linecol": [
+      548,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                594,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                594,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            594,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        594,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "V_0CF + V_0CG + V_0CH + V_0CI + V_0CR + V_0DJ + V_0DN + V_0DP + 0 = 0 et SOMMEA030 > 0  ",
+          "linecol": [
+            597,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A030",
+                "linecol": [
+                  601,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              601,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          596,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "30",
+      "linecol": [
+        593,
+        7
+      ]
+    },
+    "linecol": [
+      593,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                603,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                603,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            603,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        603,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "V_0AC + V_0AD + 0 > 0 et SOMMEA031 > 0  ",
+          "linecol": [
+            606,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A031",
+                "linecol": [
+                  610,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              610,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          605,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "1202",
+      "linecol": [
+        602,
+        7
+      ]
+    },
+    "linecol": [
+      602,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "bareme",
+              "linecol": [
+                612,
+                15
+              ]
+            }
+          ],
+          "linecol": [
+            612,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        612,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "V_9VV < 2 et V_0AM + V_0AO + 0 = 1  ",
+          "linecol": [
+            615,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A063",
+                "linecol": [
+                  619,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              619,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          614,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "3200",
+      "linecol": [
+        611,
+        7
+      ]
+    },
+    "linecol": [
+      611,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "bareme",
+              "linecol": [
+                621,
+                15
+              ]
+            }
+          ],
+          "linecol": [
+            621,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        621,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "(V_9VV < 1.25 et (V_0AC = 1 ou V_0AD = 1) et V_9XX = 1) ou (V_9VV < 2.25 et (BOOL_0AM = 1 ou V_0AV = 1) et V_9XX = 1) ou (V_9VV = 1.25 et V_0BT = 1 et V_9XX=1)  ",
+          "linecol": [
+            624,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A064",
+                "linecol": [
+                  642,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              642,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          623,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "3201",
+      "linecol": [
+        620,
+        7
+      ]
+    },
+    "linecol": [
+      620,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "bareme",
+              "linecol": [
+                644,
+                15
+              ]
+            }
+          ],
+          "linecol": [
+            644,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        644,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "((V_9VV / 0.25) - arr(V_9VV / 0.25)) != 0  ",
+          "linecol": [
+            647,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A06501",
+                "linecol": [
+                  649,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              649,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          646,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "3700",
+      "linecol": [
+        643,
+        7
+      ]
+    },
+    "linecol": [
+      643,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "bareme",
+              "linecol": [
+                651,
+                15
+              ]
+            }
+          ],
+          "linecol": [
+            651,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        651,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "V_9VV < 1 ou V_9VV > 99.75  ",
+          "linecol": [
+            654,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A06502",
+                "linecol": [
+                  658,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              658,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          653,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "3701",
+      "linecol": [
+        650,
+        7
+      ]
+    },
+    "linecol": [
+      650,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "bareme",
+              "linecol": [
+                660,
+                15
+              ]
+            }
+          ],
+          "linecol": [
+            660,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        660,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "V_9VV < 2 et V_0AV + V_0AZ = 2  ",
+          "linecol": [
+            663,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A066",
+                "linecol": [
+                  667,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              667,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          662,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "3203",
+      "linecol": [
+        659,
+        7
+      ]
+    },
+    "linecol": [
+      659,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                669,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                669,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            669,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        669,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "positif(COD8XK + 0) = 1 et V_REGCO + 0 != 3  ",
+          "linecol": [
+            672,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A077",
+                "linecol": [
+                  676,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              676,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          671,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "77",
+      "linecol": [
+        668,
+        7
+      ]
+    },
+    "linecol": [
+      668,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                678,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                678,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            678,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        678,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "positif(COD8YK + 0) = 1 et ((V_REGCO+0) dans (2,3,4))  ",
+          "linecol": [
+            681,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A078",
+                "linecol": [
+                  685,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              685,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          680,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "78",
+      "linecol": [
+        677,
+        7
+      ]
+    },
+    "linecol": [
+      677,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                687,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                687,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            687,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        687,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "positif_ou_nul(BRAS) = 1 et V_CNR2 + 0 != 1  ",
+          "linecol": [
+            690,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A079",
+                "linecol": [
+                  694,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              694,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          689,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "79",
+      "linecol": [
+        686,
+        7
+      ]
+    },
+    "linecol": [
+      686,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                696,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                696,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            696,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        696,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "(V_NOTRAIT + 0 < 20 et present(BRAS) = 1 et V_REGCO+0 != 2 et V_CNR2+0 = 1) ou (V_NOTRAIT >= 20 et positif(BRAS) = 1 et V_REGCO+0 != 2 et V_CNR2+0 = 1)  ",
+          "linecol": [
+            699,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A080",
+                "linecol": [
+                  707,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              707,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          698,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "4080",
+      "linecol": [
+        695,
+        7
+      ]
+    },
+    "linecol": [
+      695,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                709,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                709,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            709,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        709,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "APPLI_OCEANS = 0 et V_IND_TRAIT > 0 et VALREGCO non dans (1,2,4)  ",
+          "linecol": [
+            712,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A082",
+                "linecol": [
+                  718,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              718,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          711,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "4050",
+      "linecol": [
+        708,
+        7
+      ]
+    },
+    "linecol": [
+      708,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                720,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                720,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            720,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        720,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "APPLI_OCEANS = 0 et V_NOTRAIT+0 = 10 et (VALREGCO = 2 ou VALREGCO = 4) et V_CNR2 + 0 != 1  ",
+          "linecol": [
+            723,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A083",
+                "linecol": [
+                  731,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              731,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          722,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "4060",
+      "linecol": [
+        719,
+        7
+      ]
+    },
+    "linecol": [
+      719,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                733,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                733,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            733,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        733,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "(V_NOTRAIT + 0 < 20 et (NRBASE >= 0 ou NRINET >= 0) et V_REGCO != 3) ou (V_NOTRAIT + 0 > 20 et (NRBASE > 0 ou NRINET > 0) et V_REGCO != 3)  ",
+          "linecol": [
+            736,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A085",
+                "linecol": [
+                  748,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              748,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          735,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "5500",
+      "linecol": [
+        732,
+        7
+      ]
+    },
+    "linecol": [
+      732,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                750,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                750,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            750,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        750,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "positif(present(NRBASE) + present(NRINET)) = 1 et present(NRBASE) + present(NRINET) < 2  ",
+          "linecol": [
+            753,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A086",
+                "linecol": [
+                  757,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              757,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          752,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "4260",
+      "linecol": [
+        749,
+        7
+      ]
+    },
+    "linecol": [
+      749,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                759,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                759,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            759,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        759,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "(V_NOTRAIT + 0 < 20 et V_CNR + 0 = 1 et IND_TDR >= 0) ou (V_NOTRAIT + 0 > 20 et V_CNR + 0 = 1 et IND_TDR > 0)  ",
+          "linecol": [
+            762,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A087",
+                "linecol": [
+                  774,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              774,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          761,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "5502",
+      "linecol": [
+        758,
+        7
+      ]
+    },
+    "linecol": [
+      758,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                776,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                776,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            776,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        776,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "(IPTEFP + IPTEFN + SALEXTV + SALEXTC + SALEXT1 + SALEXT2 + SALEXT3 + SALEXT4 + COD1AH + COD1BH + COD1CH + COD1DH + COD1EH + COD1FH + PRODOM + PROGUY + CODDAJ + CODDBJ + CODEAJ + CODEBJ + 0) > 0 et (V_REGCO + 0 = 2 ou V_REGCO + 0 = 4)  ",
+          "linecol": [
+            779,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A088",
+                "linecol": [
+                  789,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              789,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          778,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "4100",
+      "linecol": [
+        775,
+        7
+      ]
+    },
+    "linecol": [
+      775,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                791,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                791,
+                24
+              ]
+            }
+          ],
+          "linecol": [
+            791,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        791,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "APPLI_OCEANS + APPLI_BATCH = 1 et V_8ZT >= 0 et V_REGCO+0 != 2  ",
+          "linecol": [
+            794,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A089",
+                "linecol": [
+                  800,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              800,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          793,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "4010",
+      "linecol": [
+        790,
+        7
+      ]
+    },
+    "linecol": [
+      790,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                802,
+                15
+              ]
+            }
+          ],
+          "linecol": [
+            802,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        802,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "APPLI_OCEANS = 0 et (( V_8ZT >= 0 et V_CR2+0 != 1 et V_NOTRAIT + 0 < 20) ou ( V_8ZT > 0 et V_CR2+0 != 1 et V_NOTRAIT >= 20))  ",
+          "linecol": [
+            805,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A089",
+                "linecol": [
+                  811,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              811,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          804,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "4015",
+      "linecol": [
+        801,
+        7
+      ]
+    },
+    "linecol": [
+      801,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                813,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                813,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            813,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        813,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "V_IND_TRAIT + 0 > 0 et V_8ZT > ( somme(i=V,C,1..4: TPRi) + somme (i=1..3: GLNiV) + somme (i=1..3: GLNiC) + RVTOT + T2RV + 2 )  ",
+          "linecol": [
+            816,
+            5
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A090",
+                "linecol": [
+                  824,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              824,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          815,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "90",
+      "linecol": [
+        812,
+        7
+      ]
+    },
+    "linecol": [
+      812,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                826,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                826,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            826,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        826,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "(V_NOTRAIT + 0 < 20 et (present(RMOND) = 1 ou present(DMOND) = 1) et V_REGCO+0 != 2) ou (V_NOTRAIT >= 20 et (positif(RMOND) = 1 ou positif(DMOND) = 1) et V_REGCO+0 != 2)  ",
+          "linecol": [
+            829,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A091",
+                "linecol": [
+                  839,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              839,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          828,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "4130",
+      "linecol": [
+        825,
+        7
+      ]
+    },
+    "linecol": [
+      825,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                841,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                841,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            841,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        841,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "(V_NOTRAIT + 0 < 20 et ((positif(IPTXMO) = 1 et present(DMOND) != 1 et present(RMOND) != 1) ou ((present(RMOND) = 1 ou present(DMOND) = 1) et positif(IPTXMO+0) != 1))) ou (V_NOTRAIT >= 20 et ((positif(IPTXMO) = 1 et positif(DMOND) != 1 et positif(RMOND) != 1) ou ((positif(RMOND) = 1 ou positif(DMOND) = 1) et positif(IPTXMO+0) != 1)))  ",
+          "linecol": [
+            844,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A092",
+                "linecol": [
+                  856,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              856,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          843,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "4140",
+      "linecol": [
+        840,
+        7
+      ]
+    },
+    "linecol": [
+      840,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                858,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                858,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            858,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        858,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "(V_NOTRAIT + 0 < 20 et present(RMOND) = 1 et present(DMOND) = 1) ou (V_NOTRAIT >= 20 et positif(RMOND) = 1 et positif(DMOND) = 1)  ",
+          "linecol": [
+            861,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A093",
+                "linecol": [
+                  873,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              873,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          860,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "4150",
+      "linecol": [
+        857,
+        7
+      ]
+    },
+    "linecol": [
+      857,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                875,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                875,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            875,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        875,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "V_IND_TRAIT + 0 > 0 et (V_REGCO+0) dans (1,2,3,5,6,7) et positif(IPVLOC + 0) = 1  ",
+          "linecol": [
+            878,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A094",
+                "linecol": [
+                  884,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              884,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          877,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "4020",
+      "linecol": [
+        874,
+        7
+      ]
+    },
+    "linecol": [
+      874,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                886,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                886,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            886,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        886,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "V_REGCO + 0 = 4 et IPVLOC + 0 = 0 et ( ( V_IND_TRAIT + 0 = 4 et V_0AM + V_0AO + V_0AC + V_0AD + V_0AV + 0 != 0) ou ( V_IND_TRAIT + 0 = 5 et positif(ANNUL2042 + 0) = 0) ) ",
+          "linecol": [
+            889,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A095",
+                "linecol": [
+                  899,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              899,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          888,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "95",
+      "linecol": [
+        885,
+        7
+      ]
+    },
+    "linecol": [
+      885,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                901,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                901,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            901,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        901,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "V_REGCO dans (2,3,4) et ((V_IND_TRAIT = 4 et BASRET >= 0 et IMPRET >= 0) ou (V_IND_TRAIT = 5 et BASRET > 0 et IMPRET > 0))  ",
+          "linecol": [
+            904,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A096",
+                "linecol": [
+                  910,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              910,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          903,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "96",
+      "linecol": [
+        900,
+        7
+      ]
+    },
+    "linecol": [
+      900,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                912,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                912,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            912,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        912,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "present(PERPIMPATRIE) = 1 et V_CNR = 1 et (V_REGCO = 2 ou V_REGCO = 4)  ",
+          "linecol": [
+            915,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A097",
+                "linecol": [
+                  923,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              923,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          914,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "97",
+      "linecol": [
+        911,
+        7
+      ]
+    },
+    "linecol": [
+      911,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                925,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                925,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            925,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        925,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "positif(PVMOBNR + 0) = 1 et V_REGCO != 2 et V_REGCO != 4  ",
+          "linecol": [
+            928,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A09801",
+                "linecol": [
+                  934,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              934,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          927,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "9810",
+      "linecol": [
+        924,
+        7
+      ]
+    },
+    "linecol": [
+      924,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                936,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                936,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            936,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        936,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "positif(COD3VE + 0) = 1 et V_REGCO != 2 et V_REGCO != 4  ",
+          "linecol": [
+            939,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A09802",
+                "linecol": [
+                  945,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              945,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          938,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "9820",
+      "linecol": [
+        935,
+        7
+      ]
+    },
+    "linecol": [
+      935,
+      1
+    ]
+  },
+  {
+    "application": {
+      "type": "applications_reference",
+      "names": [
+        {
+          "type": "symbol_enumeration",
+          "value": [
+            {
+              "type": "symbol",
+              "name": "batch",
+              "linecol": [
+                947,
+                15
+              ]
+            },
+            {
+              "type": "symbol",
+              "name": "iliad",
+              "linecol": [
+                947,
+                23
+              ]
+            }
+          ],
+          "linecol": [
+            947,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        947,
+        1
+      ]
+    },
+    "type": "verif_declaration",
+    "conditions": [
+      {
+        "expression": {
+          "type": "verif_declaration_condition_expression",
+          "value": "positif(COD3UV + 0) = 1 et V_REGCO != 2 et V_REGCO != 4  ",
+          "linecol": [
+            950,
+            4
+          ]
+        },
+        "type": "verif_declaration_condition",
+        "erreurs": [
+          {
+            "type": "verif_declaration_erreurs",
+            "names": [
+              {
+                "type": "symbol",
+                "name": "A09803",
+                "linecol": [
+                  956,
+                  14
+                ]
+              }
+            ],
+            "linecol": [
+              956,
+              7
+            ]
+          }
+        ],
+        "linecol": [
+          949,
+          1
+        ]
+      }
+    ],
+    "name": {
+      "type": "symbol",
+      "name": "9830",
+      "linecol": [
+        946,
+        7
+      ]
+    },
+    "linecol": [
+      946,
+      1
+    ]
+  }
+]

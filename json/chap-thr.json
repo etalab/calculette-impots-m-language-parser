@@ -161,7 +161,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -197,7 +197,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "V_BTRFRHR1 * (1-positif_ou_nul(RFRH1)) + RFRH1",
           "linecol": [
             23,
@@ -220,7 +220,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "V_BTRFRHR2 * (1-positif_ou_nul(RFRH2)) + RFRH2",
           "linecol": [
             24,
@@ -243,7 +243,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif_ou_nul(V_BTRFRHR1 * (1-positif(RFRH1)) + RFRH1) + positif_ou_nul(V_BTRFRHR2 * (1-positif(RFRH2)) + RFRH2)",
           "linecol": [
             25,
@@ -266,7 +266,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr((HRBTRFR1 + HRBTRFR2) /2)",
           "linecol": [
             26,
@@ -289,7 +289,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif_ou_nul(REVKIREHR - (1.5 * HRMOYBTRFR))",
           "linecol": [
             27,
@@ -312,7 +312,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif_ou_nul(LIMHR1 * (1+BOOL_0AM) - HRBTRFR2)",
           "linecol": [
             28,
@@ -335,7 +335,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif_ou_nul(LIMHR1 * (1+BOOL_0AM) - HRBTRFR1)",
           "linecol": [
             29,
@@ -358,7 +358,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(null(2-HRNBTRFR)*positif(HRLIM15)*positif(HRLIMBTRFR1*HRLIMBTRFR2)* (1-positif(CASECHR+0)))",
           "linecol": [
             30,
@@ -381,7 +381,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr((REVKIREHR - HRMOYBTRFR) / 2)",
           "linecol": [
             31,
@@ -404,7 +404,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "HRBASEFRAC + HRMOYBTRFR",
           "linecol": [
             32,
@@ -427,7 +427,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif_ou_nul(LIMHRTX1 * (1+BOOL_0AM)-REVKIREHR) * ((REVKIREHR - LIMHR1 * (1+BOOL_0AM))*TXHR1/100) + (LIMHR1 * (1+BOOL_0AM) * TXHR1/100) * positif(REVKIREHR - LIMHRTX1 * (1+BOOL_0AM))",
           "linecol": [
             33,
@@ -450,7 +450,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0,(REVKIREHR - LIMHR2*(1+BOOL_0AM))*TXHR2/100)",
           "linecol": [
             35,
@@ -473,7 +473,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr(max(0,CHRREEL1 + CHRREEL2))",
           "linecol": [
             36,
@@ -496,7 +496,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr(positif_ou_nul(LIMHRTX1 * (1+BOOL_0AM)-HRBASELISSE) * ((HRBASELISSE - LIMHR1 * (1+BOOL_0AM))*TXHR1/100) + (LIMHR1 * (1+BOOL_0AM) * TXHR1/100)* positif(HRBASELISSE - LIMHRTX1 * (1+BOOL_0AM)))",
           "linecol": [
             37,
@@ -519,7 +519,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr(max(0,(HRBASELISSE - LIMHR2*(1+BOOL_0AM))*TXHR2/100))",
           "linecol": [
             39,
@@ -542,7 +542,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr(max(0,CHRTHEO11 + CHRTHEO21)*2)",
           "linecol": [
             40,
@@ -565,7 +565,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0 , REVKIREHR - LIMHR1 * (1 + BOOL_0AM))",
           "linecol": [
             41,
@@ -588,7 +588,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(max(0,min(CHRREELTOT,CHRTHEOTOT)) * HRCONDTHEO + CHRREELTOT * (1-HRCONDTHEO) )",
           "linecol": [
             42,
@@ -611,7 +611,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr(CHRAVANT * (REVKIREHR - TEFFHRC+COD8YJ)/ REVKIREHR)",
           "linecol": [
             44,
@@ -634,7 +634,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "CHRAVANT * (1-positif(positif(IPMOND)+positif(INDTEFF))) + CHRTEFF * positif(positif(IPMOND)+positif(INDTEFF))",
           "linecol": [
             45,
@@ -672,7 +672,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -708,7 +708,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0,CHRAPRES - CICHR)",
           "linecol": [
             48,

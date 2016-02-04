@@ -161,7 +161,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -255,7 +255,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "MIBVENi + AUTOBICVi + MIBNPVENi + MIBGITEi+LOCGITi",
             "linecol": [
               25,
@@ -342,7 +342,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "MIBPRESi + AUTOBICPi + MIBNPPRESi + MIBMEUi",
             "linecol": [
               28,
@@ -429,7 +429,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "TMIB_TVENi + TMIB_TPRESi",
             "linecol": [
               31,
@@ -473,7 +473,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -567,7 +567,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "min ( TMIB_TVENi, (max(MIN_MBIC, arr( (TMIB_TVENi)*TX_MIBVEN/100)) ) )",
             "linecol": [
               37,
@@ -654,7 +654,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "min ( (MIBVENi + MIBNPVENi), (max(MIN_MBIC, arr( (MIBVENi + MIBNPVENi)*TX_MIBVEN/100)) ) )",
             "linecol": [
               43,
@@ -741,7 +741,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "TMIB_AVi - TMIB_VENTAi",
             "linecol": [
               49,
@@ -828,7 +828,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "min ( TMIB_TPRESi, (max(MIN_MBIC, arr( (TMIB_TPRESi)*TX_MIBPRES/100)) ) )",
             "linecol": [
               53,
@@ -915,7 +915,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "min ( (MIBPRESi + MIBNPPRESi), (max(MIN_MBIC, arr( (MIBPRESi + MIBNPPRESi)*TX_MIBPRES/100)) ) )",
             "linecol": [
               59,
@@ -1002,7 +1002,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "TMIB_APi - TMIB_PRESAi",
             "linecol": [
               65,
@@ -1089,7 +1089,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "min ( (MIBVENi + AUTOBICVi), (max(MIN_MBIC, arr( (MIBVENi+ AUTOBICVi)*TX_MIBVEN/100)) ) )",
             "linecol": [
               67,
@@ -1176,7 +1176,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "min ( (MIBPRESi+ AUTOBICPi), (max(MIN_MBIC, arr( (MIBPRESi+ AUTOBICPi)*TX_MIBPRES/100)) ) )",
             "linecol": [
               73,
@@ -1220,7 +1220,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -1314,7 +1314,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "max(0,arr(TMIB_AVi * (MIBVENi + AUTOBICVi)/ (TMIB_TVENi)))",
             "linecol": [
               84,
@@ -1401,7 +1401,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "max(0,arr(TMIB_AVi * MIBNPVENi / TMIB_TVENi))* positif(present(MIBGITEi)+present(LOCGITi)) + (TMIB_AVi - TMIB_ABVi) * (1 - positif(present(MIBGITEi)+present(LOCGITi)))",
             "linecol": [
               86,
@@ -1488,7 +1488,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "(TMIB_AVi - TMIB_ABVi - TMIB_ABNPVi) *  positif(present(MIBGITEi)+present(LOCGITi))",
             "linecol": [
               89,
@@ -1575,7 +1575,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "max(0,arr(TMIB_APi * (MIBPRESi + AUTOBICPi)/ (TMIB_TPRESi)))",
             "linecol": [
               92,
@@ -1662,7 +1662,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "max(0,arr(TMIB_APi * MIBNPPRESi / (TMIB_TPRESi))) * present(MIBMEUi) + (TMIB_APi - TMIB_ABPi) * (1 - present(MIBMEUi))",
             "linecol": [
               94,
@@ -1749,7 +1749,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "(TMIB_APi - TMIB_ABPi - TMIB_ABNPPi) *  present(MIBMEUi)",
             "linecol": [
               97,
@@ -1793,7 +1793,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -1829,7 +1829,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "somme(i=V,C,P:TMIB_NETVi)",
           "linecol": [
             109,
@@ -1852,7 +1852,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "somme(i=V,C,P:TMIB_NETNPVi)",
           "linecol": [
             112,
@@ -1875,7 +1875,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "somme(i=V,C,P:TMIB_NETPi)",
           "linecol": [
             116,
@@ -1898,7 +1898,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "somme(i=V,C,P:TMIB_NETNPPi)",
           "linecol": [
             119,
@@ -1921,7 +1921,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr((TMIB_ABVV * AUTOBICVV/(MIBVENV+AUTOBICVV)) + (TMIB_ABPV * AUTOBICPV/(MIBPRESV+AUTOBICPV)))",
           "linecol": [
             121,
@@ -1944,7 +1944,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0,arr((TMIB_ABVC * AUTOBICVC/(MIBVENC+AUTOBICVC)) + (TMIB_ABPC * AUTOBICPC/(MIBPRESC+AUTOBICPC))))",
           "linecol": [
             124,
@@ -1967,7 +1967,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "min(TBICPROVC,arr((TMIB_ABVC * AUTOBICVC/(MIBVENC+AUTOBICVC)) + (TMIB_ABPC * AUTOBICPC/(MIBPRESC+AUTOBICPC))))",
           "linecol": [
             126,
@@ -1990,7 +1990,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0,arr((TMIB_ABVP * AUTOBICVP/(MIBVENP+AUTOBICVP)) + (TMIB_ABPP * AUTOBICPP/(MIBPRESP+AUTOBICPP))))",
           "linecol": [
             129,
@@ -2013,7 +2013,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "min(TBICPROVP,arr((TMIB_ABVP * AUTOBICVP/(MIBVENP+AUTOBICVP)) + (TMIB_ABPP* AUTOBICPP/(MIBPRESP+AUTOBICPP))))",
           "linecol": [
             131,
@@ -2036,7 +2036,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr((TMIB_ABNPVV /(MIBNPVENV)) + (TMIB_ABNPPV /(MIBNPPRESV)))",
           "linecol": [
             134,
@@ -2059,7 +2059,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0,arr((TMIB_ABNPVC /(MIBNPVENC)) + (TMIB_ABNPPC /(MIBNPPRESC))))",
           "linecol": [
             136,
@@ -2082,7 +2082,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "min(TBICNPPROVC,arr((TMIB_ABNPVC /(MIBNPVENC)) + (TMIB_ABNPPC /(MIBNPPRESC))))",
           "linecol": [
             137,
@@ -2105,7 +2105,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0,arr((TMIB_ABNPVP /(MIBNPVENP)) + (TMIB_ABNPPP /(MIBNPPRESP))))",
           "linecol": [
             139,
@@ -2128,7 +2128,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "min(TBICNPPROVP,arr((TMIB_ABNPVP /(MIBNPVENP)) + (TMIB_ABNPPP /(MIBNPPRESP))))",
           "linecol": [
             140,
@@ -2151,7 +2151,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "AUTOBICVV + AUTOBICPV",
           "linecol": [
             142,
@@ -2174,7 +2174,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "AUTOBICVC + AUTOBICPC",
           "linecol": [
             143,
@@ -2197,7 +2197,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "AUTOBICVP + AUTOBICPP",
           "linecol": [
             144,
@@ -2220,7 +2220,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "AUTOBICVV + AUTOBICPV - max(0,TMIB_AUTOAVV-TMIB_ABNPVLV) -max(0,TMIB_AUTOAPV-TMIB_ABNPPLV)",
           "linecol": [
             145,
@@ -2243,7 +2243,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "AUTOBICVC + AUTOBICPC - max(0,TMIB_AUTOAVC-TMIB_ABNPVLC) -max(0,TMIB_AUTOAPC-TMIB_ABNPPLC)",
           "linecol": [
             146,
@@ -2266,7 +2266,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "AUTOBICVP + AUTOBICPP - max(0,TMIB_AUTOAVP-TMIB_ABNPVLP) -max(0,TMIB_AUTOAPP-TMIB_ABNPPLP)",
           "linecol": [
             147,
@@ -2289,7 +2289,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "ABICPNETV + ABICPNETC + ABICPNETP",
           "linecol": [
             149,
@@ -2370,7 +2370,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "MIBVENi + AUTOBICVi - TPMIB_AVi",
             "linecol": [
               103,
@@ -2457,7 +2457,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "MIBPRESi + AUTOBICPi - TPMIB_APi",
             "linecol": [
               105,
@@ -2544,7 +2544,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "MIBVENi + AUTOBICVi - TMIB_ABVi",
             "linecol": [
               108,
@@ -2631,7 +2631,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "MIBNPVENi - TMIB_ABNPVi",
             "linecol": [
               111,
@@ -2718,7 +2718,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "MIBPRESi + AUTOBICPi - TMIB_ABPi",
             "linecol": [
               115,
@@ -2805,7 +2805,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "MIBNPPRESi - TMIB_ABNPPi",
             "linecol": [
               118,
@@ -2849,7 +2849,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -2943,7 +2943,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "BNCPROi + AUTOBNCi + BNCNPi",
             "linecol": [
               153,
@@ -2987,7 +2987,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -3081,7 +3081,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "TSPETOTi",
             "linecol": [
               157,
@@ -3168,7 +3168,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "arr((max(MIN_SPEBNC,(TSPEBASABi * SPETXAB/100))) * positif_ou_nul(TSPETOTi - MIN_SPEBNC)) + arr((min(MIN_SPEBNC,TSPEBASABi )) * positif(MIN_SPEBNC - TSPETOTi))",
             "linecol": [
               159,
@@ -3212,7 +3212,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -3248,7 +3248,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "ABNCPNETV + ABNCPNETC + ABNCPNETP",
           "linecol": [
             185,
@@ -3271,7 +3271,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "HONONETV + HONONETC + HONONETP",
           "linecol": [
             186,
@@ -3352,7 +3352,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "arr((TSPEABi * (BNCPROi + AUTOBNCi))/TSPETOTi)",
             "linecol": [
               166,
@@ -3439,7 +3439,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "arr(TSPEABPi * AUTOBNCi/(BNCPROi+AUTOBNCi))",
             "linecol": [
               168,
@@ -3526,7 +3526,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "arr(TSPEABi * (AUTOBNCi)/(TSPETOTi))",
             "linecol": [
               170,
@@ -3613,7 +3613,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "TSPEABi - TSPEABPi",
             "linecol": [
               173,
@@ -3700,7 +3700,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "(TBNCTOTABi - TBNCPABi)",
             "linecol": [
               175,
@@ -3787,7 +3787,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "AUTOBNCi",
             "linecol": [
               178,
@@ -3874,7 +3874,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "AUTOBNCi - TBNCPABi",
             "linecol": [
               180,
@@ -3961,7 +3961,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "XHONOi + XHONOAAi",
             "linecol": [
               182,
@@ -4048,7 +4048,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "arr(XHONOi * MAJREV) + XHONOAAi",
             "linecol": [
               184,
@@ -4092,7 +4092,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -4128,7 +4128,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "somme(i=V,C,P:(TSPENETi))",
           "linecol": [
             195,
@@ -4209,7 +4209,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "max (0,(BNCPROi  + AUTOBNCi - TSPEABPi))",
             "linecol": [
               190,
@@ -4296,7 +4296,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "max (0,(BNCNPi - TSPEABNPi))",
             "linecol": [
               192,
@@ -4383,7 +4383,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "TSPENETPi + TSPENETNPi",
             "linecol": [
               194,
@@ -4427,7 +4427,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -4521,7 +4521,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "BNCREi + XHONOAAi - (BNCDEi * (1 - positif(ART1731BIS) ))",
             "linecol": [
               199,
@@ -4565,7 +4565,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -4659,7 +4659,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "max(0,arr((BNHREi + XHONOi - (BNHDEi * (1 - positif(ART1731BIS) )))*MAJREV)) + min(0,(BNHREi + XHONOi - (BNHDEi * (1 - positif(ART1731BIS) ))))",
             "linecol": [
               203,
@@ -4703,7 +4703,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -4797,7 +4797,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "TXSPEAAi + TXSPEHi",
             "linecol": [
               208,
@@ -4841,7 +4841,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -4877,7 +4877,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "somme(i=V,C,P:(TXSPENETi))",
           "linecol": [
             211,
@@ -4947,7 +4947,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -4983,7 +4983,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TSHALLOV + ALLOV+max(0,SALEXTV - COD1AD)",
           "linecol": [
             218,
@@ -5006,7 +5006,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TSHALLOC + ALLOC+max(0,SALEXTC - COD1BD)",
           "linecol": [
             219,
@@ -5029,7 +5029,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TSHALLO1 + ALLO1+max(0,SALEXT1 - COD1CD)",
           "linecol": [
             220,
@@ -5052,7 +5052,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TSHALLO2 + ALLO2+max(0,SALEXT2 - COD1DD)",
           "linecol": [
             221,
@@ -5075,7 +5075,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TSHALLO3 + ALLO3+max(0,SALEXT3 - COD1ED)",
           "linecol": [
             222,
@@ -5098,7 +5098,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TSHALLO4 + ALLO4+max(0,SALEXT4 - COD1FD)",
           "linecol": [
             223,
@@ -5121,7 +5121,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TSHALLO1+TSHALLO2+TSHALLO3+TSHALLO4",
           "linecol": [
             224,
@@ -5144,7 +5144,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "ALLO1+ALLO2+ALLO3+ALLO4",
           "linecol": [
             225,
@@ -5167,7 +5167,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TTSHALLOP+TALLOP",
           "linecol": [
             226,
@@ -5190,7 +5190,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TTSBNV + BPCOSAV + GLDGRATV + T2TSNV",
           "linecol": [
             232,
@@ -5213,7 +5213,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TTSBNC + BPCOSAC + GLDGRATC + T2TSNC",
           "linecol": [
             233,
@@ -5236,7 +5236,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "BPCOSAV + GLDGRATV",
           "linecol": [
             234,
@@ -5259,7 +5259,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "BPCOSAC + GLDGRATC",
           "linecol": [
             235,
@@ -5282,7 +5282,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TEXTSV + somme(x=1..3:GLDxV)+CODDAJ+CODEAJ",
           "linecol": [
             239,
@@ -5305,7 +5305,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TEXTSC + somme(x=1..3:GLDxC)+CODDBJ+CODEBJ",
           "linecol": [
             240,
@@ -5328,7 +5328,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "somme(i=1..4:TTSBi)",
           "linecol": [
             243,
@@ -5351,7 +5351,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "CARPEV + PENSALV + CODRAZ",
           "linecol": [
             247,
@@ -5374,7 +5374,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "CARPEC + PENSALC + CODRBZ",
           "linecol": [
             248,
@@ -5397,7 +5397,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "CARPEP1 + PENSALP1 + CODRCZ",
           "linecol": [
             249,
@@ -5420,7 +5420,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "CARPEP2 + PENSALP2 + CODRDZ",
           "linecol": [
             250,
@@ -5443,7 +5443,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "CARPEP3 + PENSALP3 + CODREZ",
           "linecol": [
             251,
@@ -5466,7 +5466,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "CARPEP4 + PENSALP4 + CODRFZ",
           "linecol": [
             252,
@@ -5489,7 +5489,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TPRBV + COD1AH + T2PRBV + PEBFV",
           "linecol": [
             253,
@@ -5512,7 +5512,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TPRBC + COD1BH + T2PRBC + PEBFC",
           "linecol": [
             254,
@@ -5535,7 +5535,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TPRB1 + COD1CH + T2PRB1 + PEBF1",
           "linecol": [
             255,
@@ -5558,7 +5558,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TPRB2 + COD1DH + T2PRB2 + PEBF2",
           "linecol": [
             256,
@@ -5581,7 +5581,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TPRB3 + COD1EH + T2PRB3 + PEBF3",
           "linecol": [
             257,
@@ -5604,7 +5604,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TPRB4 + COD1FH + T2PRB4 + PEBF4",
           "linecol": [
             258,
@@ -5677,7 +5677,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "CARTSi + REMPLAi",
             "linecol": [
               229,
@@ -5772,7 +5772,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "CARTSPi + REMPLAPi",
             "linecol": [
               231,
@@ -5858,7 +5858,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "TTSBNi + T2TSNi",
             "linecol": [
               238,
@@ -5953,7 +5953,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "TEXTSi",
             "linecol": [
               242,
@@ -6055,7 +6055,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "PRBRi + PALIi + PENINi",
             "linecol": [
               245,
@@ -6157,7 +6157,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "TEXTSi + TEXPRi",
             "linecol": [
               260,
@@ -6201,7 +6201,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -6310,7 +6310,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "arr (TTSBi * TX_DEDFORFTS /100)",
             "linecol": [
               264,
@@ -6412,7 +6412,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "min( PLAF_DEDFORFTS , TTPS10i )",
             "linecol": [
               266,
@@ -6456,7 +6456,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -6565,7 +6565,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "positif(DETSi)* MIN_DEMEMPLOI + (1- positif(DETSi))* MIN_DEDSFORFTS",
             "linecol": [
               270,
@@ -6667,7 +6667,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "max( min(TTSBi,TDEDMINi) , TDFNi )",
             "linecol": [
               272,
@@ -6769,7 +6769,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "positif(TDEDMINi - TDFNi ) * positif (TTSBi )",
             "linecol": [
               274,
@@ -6871,7 +6871,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "1 - positif( TIND_10MIN_0i )",
             "linecol": [
               276,
@@ -6915,7 +6915,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -6951,7 +6951,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "T10MINS1 + T10MINS2 + T10MINS3 + T10MINS4",
           "linecol": [
             279,
@@ -6974,7 +6974,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TTSBNV + TPRV + PALIV - TAPRV",
           "linecol": [
             280,
@@ -6997,7 +6997,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TTSBNC + TPRC + PALIC - TAPRC",
           "linecol": [
             281,
@@ -7020,7 +7020,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TTSBN1 + PRBR1 + PALI1 - TAPR1",
           "linecol": [
             282,
@@ -7043,7 +7043,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TTSBN2 + PRBR2 + PALI2 - TAPR2",
           "linecol": [
             283,
@@ -7066,7 +7066,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TTSBN3 + PRBR3 + PALI3 - TAPR3",
           "linecol": [
             284,
@@ -7089,7 +7089,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TTSBN4 + PRBR4 + PALI4 - TAPR4",
           "linecol": [
             285,
@@ -7112,7 +7112,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TFRDPROV1 +TFRDPROV2 +TFRDPROV3 +TFRDPROV4",
           "linecol": [
             286,
@@ -7135,7 +7135,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(1-positif(PREM8_11)) * (FRNP+COD1CE+COD1DE+COD1EE+COD1FE) * positif(FRNP+COD1CE+COD1DE+COD1EE+COD1FE - T10MINSP) + null(4-V_IND_TRAIT) * positif(PREM8_11) * min(FRNP+COD1CE+COD1DE+COD1EE+COD1FE,TFRDPROVP) + null(5-V_IND_TRAIT) * positif(PREM8_11) * min(FRNP+COD1CE+COD1DE+COD1EE+COD1FE,max(TFRDPROVPP2,TFRDPROVP1731))",
           "linecol": [
             287,
@@ -7158,7 +7158,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(1-positif(PREM8_11)) * (FRNV+COD1AE) * positif(FRNV+COD1AE - T10MINSV) + null(4-V_IND_TRAIT) * positif(PREM8_11) * min(FRNV+COD1AE,TFRDPROVV) + null(5-V_IND_TRAIT) * positif(PREM8_11) * min(FRNV+COD1AE,min(TFRDPROVV,max(TFRDPROVVP2,TFRDPROVV1731)))",
           "linecol": [
             291,
@@ -7181,7 +7181,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(1-positif(ART1731BIS)) * (FRNC+COD1BE) * positif(FRNC+COD1BE - T10MINSC) + null(4-V_IND_TRAIT) * positif(PREM8_11) * min(FRNC+COD1BE,TFRDPROVC) + null(5-V_IND_TRAIT) * positif(PREM8_11) * min(FRNC+COD1BE,min(TFRDPROVC,max(TFRDPROVCP2,TFRDPROVC1731)))",
           "linecol": [
             295,
@@ -7204,7 +7204,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(1-positif(PREM8_11)) * (FRN1+COD1CE) * positif(FRN1+COD1CE - T10MINS1) + null(4-V_IND_TRAIT) * (positif(PREM8_11) * min(FRN1+COD1CE,TFRDPROV1) * positif(FRN2+FRN3+FRN4+COD1DE+COD1EE+COD1FE) + positif(PREM8_11) * max(0,TFRDP) * (1-positif(FRN2+FRN3+FRN4+COD1DE+COD1EE+COD1FE))) + null(5-V_IND_TRAIT) * (positif(PREM8_11) * min(FRN1+COD1CE,min(TFRDPROV1,max(TFRDPROV1P2,TFRDPROV11731))) * positif(FRN2+FRN3+FRN4+COD1DE+COD1EE+COD1FE) + positif(PREM8_11) * max(0,TFRDP) * (1-positif(FRN2+FRN3+FRN4+COD1DE+COD1EE+COD1FE)))",
           "linecol": [
             301,
@@ -7227,7 +7227,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(1-positif(PREM8_11)) * (FRN2+COD1DE) * positif(FRN2+COD1DE - T10MINS2) + null(4-V_IND_TRAIT) * (positif(PREM8_11) * min(FRN2+COD1DE,TFRDPROV2) * positif(FRN3+FRN4+COD1EE+COD1FE) + positif(PREM8_11) * max(0,TFRDP-TFRD1) * (1-positif(FRN3+FRN4+COD1EE+COD1FE))) + null(5-V_IND_TRAIT) * (positif(PREM8_11) * min(FRN2+COD1DE,min(TFRDPROV2,max(TFRDPROV2P2,TFRDPROV21731))) * positif(FRN3+FRN4+COD1EE+COD1FE) + positif(PREM8_11) * max(0,TFRDP-TFRD1) * (1-positif(FRN3+FRN4+COD1EE+COD1FE)))",
           "linecol": [
             309,
@@ -7250,7 +7250,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(1-positif(PREM8_11)) * (FRN3+COD1EE) * positif(FRN3+COD1EE - T10MINS3) + null(4-V_IND_TRAIT) * (positif(PREM8_11) * min(FRN3+COD1EE,TFRDPROV3) * positif(FRN4+COD1FE) + positif(PREM8_11) * max(0,TFRDP-TFRD1-TFRD2) * (1-positif(FRN4+COD1FE))) + null(5-V_IND_TRAIT) * (positif(PREM8_11) * min(FRN3+COD1EE,min(TFRDPROV3,max(TFRDPROV3P2,TFRDPROV31731))) * positif(FRN4+COD1FE) + positif(PREM8_11) * max(0,TFRDP-TFRD1-TFRD2) * (1-positif(FRN4+COD1FE)))",
           "linecol": [
             317,
@@ -7273,7 +7273,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0,TFRDP - TFRD1 - TFRD2 - TFRD3)",
           "linecol": [
             325,
@@ -7296,7 +7296,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif_ou_nul( T10MINSV - (TFRDV+COD1AE) )",
           "linecol": [
             327,
@@ -7319,7 +7319,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif_ou_nul( T10MINSC - (TFRDC+COD1BE) )",
           "linecol": [
             328,
@@ -7342,7 +7342,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif_ou_nul( T10MINS1 - (TFRD1+COD1CE) )",
           "linecol": [
             329,
@@ -7365,7 +7365,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif_ou_nul( T10MINS2 - (TFRD2+COD1DE) )",
           "linecol": [
             330,
@@ -7388,7 +7388,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif_ou_nul( T10MINS3 - (TFRD3+COD1EE) )",
           "linecol": [
             331,
@@ -7411,7 +7411,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif_ou_nul( T10MINS4 - (TFRD4+COD1FE) )",
           "linecol": [
             332,
@@ -7434,7 +7434,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(SALEXTV+ALLOV+BPCOSAV+GLDGRATV+CARTSV+REMPLAV+CODDAJ+CODEAJ+GLD1V+GLD2V+GLD3V) * arr(TREP10V*(TSHALLOV)/TTSBV) + (1-positif(SALEXTV+ALLOV+BPCOSAV+GLDGRATV+CARTSV+REMPLAV+CODDAJ+CODEAJ+GLD1V+GLD2V+GLD3V)) * TREP10V",
           "linecol": [
             340,
@@ -7457,7 +7457,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(ALLOV+BPCOSAV+GLDGRATV+CARTSV+REMPLAV+CODDAJ+CODEAJ+GLD1V+GLD2V+GLD3V) * arr(TREP10V*(max(0,SALEXTV-COD1AD))/TTSBV) + (1-positif(ALLOV+BPCOSAV+GLDGRATV+CARTSV+REMPLAV+CODDAJ+CODEAJ+GLD1V+GLD2V+GLD3V)) * max(0,TREP10V-TABTS1AJ)",
           "linecol": [
             342,
@@ -7480,7 +7480,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(BPCOSAV+GLDGRATV+CARTSV+REMPLAV+CODDAJ+CODEAJ+GLD1V+GLD2V+GLD3V) * arr(TREP10V*(ALLOV)/TTSBV) + (1-positif(BPCOSAV+GLDGRATV+CARTSV+REMPLAV+CODDAJ+CODEAJ+GLD1V+GLD2V+GLD3V)) * max(0,TREP10V-TABTS1AJ-TABTS1AC)",
           "linecol": [
             344,
@@ -7503,7 +7503,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(GLDGRATV+CARTSV+REMPLAV+CODDAJ+CODEAJ+GLD1V+GLD2V+GLD3V) * arr(TREP10V*(BPCOSAV)/TTSBV) + (1-positif(GLDGRATV+CARTSV+REMPLAV+CODDAJ+CODEAJ+GLD1V+GLD2V+GLD3V)) * max(0,TREP10V-TABTS1AJ-TABTS1AC-TABTS1AP)",
           "linecol": [
             346,
@@ -7526,7 +7526,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(CARTSV+REMPLAV+CODDAJ+CODEAJ+GLD1V+GLD2V+GLD3V) * arr(TREP10V*(GLDGRATV)/TTSBV) + (1-positif(CARTSV+REMPLAV+CODDAJ+CODEAJ+GLD1V+GLD2V+GLD3V)) * max(0,TREP10V-TABTS1AJ-TABTS1AC-TABTS1AP-TABTS3VJ)",
           "linecol": [
             348,
@@ -7549,7 +7549,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(REMPLAV+CODDAJ+CODEAJ+GLD1V+GLD2V+GLD3V) * arr(TREP10V*(CARTSV)/TTSBV) + (1-positif(REMPLAV+CODDAJ+CODEAJ+GLD1V+GLD2V+GLD3V)) * max(0,TREP10V-TABTS1AJ-TABTS1AC-TABTS1AP-TABTS3VJ-TABTS1TT)",
           "linecol": [
             350,
@@ -7572,7 +7572,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(REMPLAV+CODDAJ+CODEAJ+GLD1V+GLD2V+GLD3V) * arr(TREP10V*(REMPLAV)/TTSBV) + (1-positif(REMPLAV+CODDAJ+CODEAJ+GLD1V+GLD2V+GLD3V)) * max(0,TREP10V-TABTS1AJ-TABTS1AC-TABTS1AP-TABTS3VJ-TABTS1TT-TABTSRAJ)",
           "linecol": [
             352,
@@ -7595,7 +7595,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TABTS1AJ + TABTS1AC +TABTS1AP +TABTS3VJ +TABTS1TT +TABTSRAJ+TABTSRAP",
           "linecol": [
             354,
@@ -7618,7 +7618,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(SALEXTC+ALLOC+BPCOSAC+GLDGRATC+CARTSC+REMPLAC+CODDBJ+CODEBJ+GLD1C+GLD2C+GLD3C) * arr(TREP10C*(TSHALLOC)/TTSBC) + (1-positif(SALEXTC+ALLOC+BPCOSAC+GLDGRATC+CARTSC+REMPLAC+CODDBJ+CODEBJ+GLD1C+GLD2C+GLD3C)) * TREP10C",
           "linecol": [
             355,
@@ -7641,7 +7641,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(ALLOC+BPCOSAC+GLDGRATC+CARTSC+REMPLAC+CODDBJ+CODEBJ+GLD1C+GLD2C+GLD3C) * arr(TREP10C*(max(0,SALEXTC-COD1BD))/TTSBC) + (1-positif(ALLOC+BPCOSAC+GLDGRATC+CARTSC+REMPLAC+CODDBJ+CODEBJ+GLD1C+GLD2C+GLD3C)) * max(0,TREP10C-TABTS1BJ)",
           "linecol": [
             357,
@@ -7664,7 +7664,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(BPCOSAC+GLDGRATC+CARTSC+REMPLAC+CODDBJ+CODEBJ+GLD1C+GLD2C+GLD3C) * arr(TREP10C*(ALLOC)/TTSBC) + (1-positif(BPCOSAC+GLDGRATC+CARTSC+REMPLAC+CODDBJ+CODEBJ+GLD1C+GLD2C+GLD3C)) * max(0,TREP10C-TABTS1BJ-TABTS1BC)",
           "linecol": [
             359,
@@ -7687,7 +7687,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(GLDGRATC+CARTSC+REMPLAC+CODDBJ+CODEBJ+GLD1C+GLD2C+GLD3C) * arr(TREP10C*(BPCOSAC)/TTSBC) + (1-positif(GLDGRATC+CARTSC+REMPLAC+CODDBJ+CODEBJ+GLD1C+GLD2C+GLD3C)) * max(0,TREP10C-TABTS1BJ-TABTS1BC-TABTS1BP)",
           "linecol": [
             361,
@@ -7710,7 +7710,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(CARTSC+REMPLAC+CODDBJ+CODEBJ+GLD1C+GLD2C+GLD3C) * arr(TREP10C*(GLDGRATC)/TTSBC) + (1-positif(CARTSC+REMPLAC+CODDBJ+CODEBJ+GLD1C+GLD2C+GLD3C)) * max(0,TREP10C-TABTS1BJ-TABTS1BC-TABTS1BP-TABTS3VK)",
           "linecol": [
             363,
@@ -7733,7 +7733,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(REMPLAC+CODDBJ+CODEBJ+GLD1C+GLD2C+GLD3C) * arr(TREP10C*(CARTSC)/TTSBC) + (1-positif(REMPLAC+CODDBJ+CODEBJ+GLD1C+GLD2C+GLD3C)) * max(0,TREP10C-TABTS1BJ-TABTS1BC-TABTS1BP-TABTS3VK-TABTS1UT)",
           "linecol": [
             365,
@@ -7756,7 +7756,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(CODDBJ+CODEBJ+GLD1C+GLD2C+GLD3C) * arr(TREP10C*(REMPLAC)/TTSBC) + (1-positif(CODDBJ+CODEBJ+GLD1C+GLD2C+GLD3C)) * max(0,TREP10C-TABTS1BJ-TABTS1BC-TABTS1BP-TABTS3VK-TABTS1UT-TABTSRBJ)",
           "linecol": [
             367,
@@ -7779,7 +7779,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TABTS1BJ + TABTS1BC +TABTS1BP +TABTS3VK +TABTS1UT +TABTSRBJ+TABTSRBP",
           "linecol": [
             369,
@@ -7875,7 +7875,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "max(TFRDi, T10MINSi)",
             "linecol": [
               334,
@@ -7977,7 +7977,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "TIND_MINi *TDFNi + (1 - TIND_MINi)* T10MINSi",
             "linecol": [
               336,
@@ -8079,7 +8079,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "TIND_10i * TD10Mi + (1-TIND_10i) * TFPTi",
             "linecol": [
               339,
@@ -8123,7 +8123,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -8159,7 +8159,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(CODDAJ) * (positif(CODEAJ+GLD1V+GLD2V+GLD3V) * arr(TREP10V*CODDAJ/TTSBV) + (1-positif(CODEAJ+GLD1V+GLD2V+GLD3V)) * max(0,TREP10V-TABTSV))+0",
           "linecol": [
             372,
@@ -8182,7 +8182,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(CODEAJ) * (positif(GLD1V+GLD2V+GLD3V) * arr(TREP10V*CODEAJ/TTSBV) + (1-positif(GLD1V+GLD2V+GLD3V)) * max(0,TREP10V-TABTSV-TABDOMDAJ))+0",
           "linecol": [
             375,
@@ -8205,7 +8205,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(CODDBJ) * (positif(CODEBJ+GLD1C+GLD2C+GLD3C) * arr(TREP10C*CODDBJ/TTSBC) + (1-positif(CODEBJ+GLD1C+GLD2C+GLD3C)) * max(0,TREP10C-TABTSC))+0",
           "linecol": [
             378,
@@ -8228,7 +8228,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(CODEBJ) * (positif(GLD1C+GLD2C+GLD3C) * arr(TREP10C*CODEBJ/TTSBC) + (1-positif(GLD1C+GLD2C+GLD3C)) * max(0,TREP10C-TABTSC-TABDOMDBJ))+0",
           "linecol": [
             381,
@@ -8251,7 +8251,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(GLD1V) * (positif(GLD2V+GLD3V) * arr(TREP10V*GLD1V/TTSBV) + (1-positif(GLD2V+GLD3V)) * max(0,TREP10V-TABTSV-TABDOMDAJ-TABDOMEAJ))+0",
           "linecol": [
             384,
@@ -8274,7 +8274,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(GLD1C) * (positif(GLD2C+GLD3C) * arr(TREP10C*GLD1C/TTSBC) + (1-positif(GLD2C+GLD3C)) * max(0,TREP10C-TABTSC-TABDOMDBJ-TABDOMEBJ))+0",
           "linecol": [
             387,
@@ -8297,7 +8297,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(GLD2V) * (positif(GLD3V) * arr(TREP10V*GLD2V/TTSBV) + (1-positif(GLD3V)) * max(0,TREP10V-TABTSV-TABDOMDAJ-TABDOMEAJ-TABGL1V))+0",
           "linecol": [
             390,
@@ -8320,7 +8320,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(GLD2C) * (positif(GLD3C) * arr(TREP10C*GLD2C/TTSBC) + (1-positif(GLD3C)) * max(0,TREP10C-TABTSC-TABDOMDBJ-TABDOMEBJ-TABGL1C))+0",
           "linecol": [
             393,
@@ -8343,7 +8343,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(GLD3V) * max(0,TREP10V-TABTSV-TABDOMDAJ-TABDOMEAJ-TABGL1V-TABGL2V)+0",
           "linecol": [
             396,
@@ -8366,7 +8366,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(GLD3C) * max(0,TREP10C-TABTSC-TABDOMDBJ-TABDOMEBJ-TABGL1C-TABGL2C)+0",
           "linecol": [
             397,
@@ -8389,7 +8389,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr(TREP101*(TSHALLO1)/TTSB1)",
           "linecol": [
             398,
@@ -8412,7 +8412,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(ALLO1+CARTSP1+REMPLAP1) * arr(TREP101*(max(0,SALEXT1-COD1CD))/TTSB1) + (1-positif(ALLO1+CARTSP1+REMPLAP1)) * max(0,TREP101-TABTS1CJ)",
           "linecol": [
             399,
@@ -8435,7 +8435,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(CARTSP1+REMPLAP1) * arr(TREP101*(ALLO1)/TTSB1) + (1-positif(CARTSP1+REMPLAP1)) * max(0,TREP101-TABTS1CJ-TABTS1CC)",
           "linecol": [
             401,
@@ -8458,7 +8458,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(REMPLAP1) * arr(TREP101*(CARTSP1)/TTSB1) + (1-positif(REMPLAP1)) * max(0,TREP101-TABTS1CJ-TABTS1CC-TABTS1CP)",
           "linecol": [
             403,
@@ -8481,7 +8481,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0,TREP101 -TABTS1CJ  -TABTS1CC-TABTS1CP -TABTSRCJ)",
           "linecol": [
             405,
@@ -8504,7 +8504,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr(TREP102*(TSHALLO2)/TTSB2)",
           "linecol": [
             406,
@@ -8527,7 +8527,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(ALLO2+CARTSP2+REMPLAP2) * arr(TREP102*(max(0,SALEXT2-COD1DD))/TTSB2) + (1-positif(ALLO2+CARTSP2+REMPLAP2)) * max(0,TREP102-TABTS1DJ)",
           "linecol": [
             407,
@@ -8550,7 +8550,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(CARTSP2+REMPLAP2) * arr(TREP102*(ALLO2)/TTSB2) + (1-positif(CARTSP2+REMPLAP2)) * max(0,TREP102-TABTS1DJ-TABTS1DC)",
           "linecol": [
             409,
@@ -8573,7 +8573,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(REMPLAP2) * arr(TREP102*(CARTSP2)/TTSB2) + (1-positif(REMPLAP2)) * max(0,TREP102-TABTS1DJ-TABTS1DC-TABTS1DP)",
           "linecol": [
             411,
@@ -8596,7 +8596,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0,TREP102- TABTS1DJ  -TABTS1DC-TABTS1DP -TABTSRDJ)",
           "linecol": [
             413,
@@ -8619,7 +8619,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr(TREP103*(TSHALLO3)/TTSB3)",
           "linecol": [
             414,
@@ -8642,7 +8642,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(ALLO3+CARTSP3+REMPLAP3) * arr(TREP103*(max(0,SALEXT3-COD1ED))/TTSB3) + (1-positif(ALLO3+CARTSP3+REMPLAP3)) * max(0,TREP103-TABTS1EJ)",
           "linecol": [
             415,
@@ -8665,7 +8665,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(CARTSP3+REMPLAP3) * arr(TREP103*(ALLO3)/TTSB3) + (1-positif(CARTSP3+REMPLAP3)) * max(0,TREP103-TABTS1EJ-TABTS1EC)",
           "linecol": [
             417,
@@ -8688,7 +8688,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(REMPLAP3) * arr(TREP103*(CARTSP3)/TTSB3) + (1-positif(REMPLAP3)) * max(0,TREP103-TABTS1EJ-TABTS1EC-TABTS1EP)",
           "linecol": [
             419,
@@ -8711,7 +8711,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0,TREP103- TABTS1EJ  -TABTS1EC-TABTS1EP -TABTSREJ)",
           "linecol": [
             421,
@@ -8734,7 +8734,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr(TREP104*(TSHALLO4)/TTSB4)",
           "linecol": [
             422,
@@ -8757,7 +8757,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(ALLO4+CARTSP4+REMPLAP4) * arr(TREP104*(max(0,SALEXT4-COD1FD))/TTSB4) + (1-positif(ALLO4+CARTSP4+REMPLAP4)) * max(0,TREP104-TABTS1FJ)",
           "linecol": [
             423,
@@ -8780,7 +8780,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(CARTSP4+REMPLAP4) * arr(TREP104*(ALLO4)/TTSB4) + (1-positif(CARTSP4+REMPLAP4)) * max(0,TREP104-TABTS1FJ-TABTS1FC)",
           "linecol": [
             425,
@@ -8803,7 +8803,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(REMPLAP4) * arr(TREP104*(CARTSP4)/TTSB4) + (1-positif(REMPLAP4)) * max(0,TREP104-TABTS1FJ-TABTS1FC-TABTS1FP)",
           "linecol": [
             427,
@@ -8826,7 +8826,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0,TREP104 - TABTS1FJ  -TABTS1FC-TABTS1FP -TABTSRFJ)",
           "linecol": [
             429,
@@ -8864,7 +8864,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -8900,7 +8900,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "somme (x=1..3: TABGLxV)+TABDOMDAJ + TABDOMEAJ",
           "linecol": [
             432,
@@ -8923,7 +8923,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "somme (x=1..3: TABGLxC)+TABDOMDBJ + TABDOMEBJ",
           "linecol": [
             433,
@@ -8961,7 +8961,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -8997,7 +8997,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TSHALLOV - TABTS1AJ",
           "linecol": [
             436,
@@ -9020,7 +9020,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0,SALEXTV-COD1AD)- TABTS1AC",
           "linecol": [
             437,
@@ -9043,7 +9043,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "ALLOV - TABTS1AP",
           "linecol": [
             438,
@@ -9066,7 +9066,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "BPCOSAV - TABTS3VJ",
           "linecol": [
             439,
@@ -9089,7 +9089,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "GLDGRATV - TABTS1TT",
           "linecol": [
             440,
@@ -9112,7 +9112,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(CARTSV - TABTSRAJ)",
           "linecol": [
             441,
@@ -9135,7 +9135,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(REMPLAV - TABTSRAP)",
           "linecol": [
             442,
@@ -9158,7 +9158,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(CODDAJ - TABDOMDAJ)",
           "linecol": [
             443,
@@ -9181,7 +9181,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(CODEAJ - TABDOMEAJ)",
           "linecol": [
             444,
@@ -9204,7 +9204,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(GLD1V - TABGL1V)",
           "linecol": [
             445,
@@ -9227,7 +9227,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(GLD2V - TABGL2V)",
           "linecol": [
             446,
@@ -9250,7 +9250,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(GLD3V - TABGL3V)",
           "linecol": [
             447,
@@ -9273,7 +9273,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TSHALLOC - TABTS1BJ",
           "linecol": [
             448,
@@ -9296,7 +9296,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0,SALEXTC-COD1BD)- TABTS1BC",
           "linecol": [
             449,
@@ -9319,7 +9319,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "ALLOC - TABTS1BP",
           "linecol": [
             450,
@@ -9342,7 +9342,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "BPCOSAC - TABTS3VK",
           "linecol": [
             451,
@@ -9365,7 +9365,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "GLDGRATC - TABTS1UT",
           "linecol": [
             452,
@@ -9388,7 +9388,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(CARTSC - TABTSRBJ)",
           "linecol": [
             453,
@@ -9411,7 +9411,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(REMPLAC - TABTSRBP)",
           "linecol": [
             454,
@@ -9434,7 +9434,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(CODDBJ - TABDOMDBJ)",
           "linecol": [
             455,
@@ -9457,7 +9457,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(CODEBJ - TABDOMEBJ)",
           "linecol": [
             456,
@@ -9480,7 +9480,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(GLD1C - TABGL1C)",
           "linecol": [
             457,
@@ -9503,7 +9503,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(GLD2C - TABGL2C)",
           "linecol": [
             458,
@@ -9526,7 +9526,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(GLD3C - TABGL3C)",
           "linecol": [
             459,
@@ -9549,7 +9549,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TSHALLO1 - TABTS1CJ",
           "linecol": [
             460,
@@ -9572,7 +9572,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0,SALEXT1-COD1CD)- TABTS1CC",
           "linecol": [
             461,
@@ -9595,7 +9595,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "ALLO1 - TABTS1CP",
           "linecol": [
             462,
@@ -9618,7 +9618,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(CARTSP1 - TABTSRCJ)",
           "linecol": [
             463,
@@ -9641,7 +9641,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(REMPLAP1 - TABTSRCP)",
           "linecol": [
             464,
@@ -9664,7 +9664,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TSHALLO2 - TABTS1DJ",
           "linecol": [
             465,
@@ -9687,7 +9687,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0,SALEXT2-COD1DD)- TABTS1DC",
           "linecol": [
             466,
@@ -9710,7 +9710,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "ALLO2 - TABTS1DP",
           "linecol": [
             467,
@@ -9733,7 +9733,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(CARTSP2 - TABTSRDJ)",
           "linecol": [
             468,
@@ -9756,7 +9756,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(REMPLAP2 - TABTSRDP)",
           "linecol": [
             469,
@@ -9779,7 +9779,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TSHALLO3 - TABTS1EJ",
           "linecol": [
             470,
@@ -9802,7 +9802,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0,SALEXT3-COD1ED)- TABTS1EC",
           "linecol": [
             471,
@@ -9825,7 +9825,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "ALLO3 - TABTS1EP",
           "linecol": [
             472,
@@ -9848,7 +9848,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(CARTSP3 - TABTSREJ)",
           "linecol": [
             473,
@@ -9871,7 +9871,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(REMPLAP3 - TABTSREP)",
           "linecol": [
             474,
@@ -9894,7 +9894,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TSHALLO4 - TABTS1FJ",
           "linecol": [
             475,
@@ -9917,7 +9917,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0,SALEXT4-COD1FD)- TABTS1FC",
           "linecol": [
             476,
@@ -9940,7 +9940,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "ALLO4 - TABTS1FP",
           "linecol": [
             477,
@@ -9963,7 +9963,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(CARTSP4 - TABTSRFJ)",
           "linecol": [
             478,
@@ -9986,7 +9986,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(REMPLAP4 - TABTSRFP)",
           "linecol": [
             479,
@@ -10009,7 +10009,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TTSN1AC + TTSN1BC + TTSN1CC + TTSN1DC + TTSN1EC + TTSN1FC",
           "linecol": [
             481,
@@ -10047,7 +10047,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -10083,7 +10083,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr(PLAF_DEDPRFOYER -somme (i=V,C,1..4: TAPBi * TIND_APBi))",
           "linecol": [
             490,
@@ -10188,7 +10188,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "min ( MIN_DEDPR , TEXPRi )",
             "linecol": [
               485,
@@ -10299,7 +10299,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "max( TPLRi , (TEXPRi*TX_DEDPER/100))",
             "linecol": [
               487,
@@ -10410,7 +10410,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "positif_ou_nul(TPLRi- (TEXPRi * TX_DEDPER/100))",
             "linecol": [
               489,
@@ -10454,7 +10454,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -10490,7 +10490,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr ( (1 - TIND_APBV) * min(TAPBV,(TPL_PB * TAPBV / somme(x=V,C,1..4:TAPBx * (1 - TIND_APBx)))) + TIND_APBV * TAPBV )",
           "linecol": [
             493,
@@ -10513,7 +10513,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr ( (1 - TIND_APBC) * min(TAPBC, positif(TEXPR1+TEXPR2+TEXPR3+TEXPR4)*(TPL_PB * TAPBC / somme(x=V,C,1..4:TAPBx * (1 - TIND_APBx))) + (1-positif(TEXPR1+TEXPR2+TEXPR3+TEXPR4))* (max(0,TPL_PB - TABPRV))) + TIND_APBC * TAPBC )",
           "linecol": [
             496,
@@ -10536,7 +10536,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr ( (1 - TIND_APB1) * min(TAPB1, positif(TEXPR2+TEXPR3+TEXPR4)*(TPL_PB * TAPB1 / somme(x=V,C,1..4:TAPBx * (1 - TIND_APBx))) + (1-positif(TEXPR2+TEXPR3+TEXPR4))* (max(0,TPL_PB - TABPRV-TABPRC))) + TIND_APB1 * TAPB1 )",
           "linecol": [
             501,
@@ -10559,7 +10559,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr ( (1 - TIND_APB2) * min(TAPB2, positif(TEXPR3+TEXPR4)*(TPL_PB * TAPB2 / somme(x=V,C,1..4:TAPBx * (1 - TIND_APBx))) + (1-positif(TEXPR3+TEXPR4))* (max(0,TPL_PB - TABPRV-TABPRC-TABPR1))) + TIND_APB2 * TAPB2 )",
           "linecol": [
             506,
@@ -10582,7 +10582,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr ( (1 - TIND_APB3) * min(TAPB3, positif(TEXPR4)*(TPL_PB * TAPB3 / somme(x=V,C,1..4:TAPBx * (1 - TIND_APBx))) + (1-positif(TEXPR4))* (max(0,TPL_PB - TABPRV-TABPRC-TABPR1-TABPR2))) + TIND_APB3 * TAPB3 )",
           "linecol": [
             511,
@@ -10605,7 +10605,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr ( (1 - TIND_APB4) * min(TAPB4,(max(0,TPL_PB -TABPRV-TABPRC-TABPR1-TABPR2-TABPR3))) + TIND_APB4 * TAPB4 )",
           "linecol": [
             516,
@@ -10643,7 +10643,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -10679,7 +10679,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TIND_APBV * TABPRV + (1-TIND_APBV)* min ( TABPRV , TPL_PB)",
           "linecol": [
             521,
@@ -10702,7 +10702,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TIND_APBC * TABPRC + (1-TIND_APBC)* min ( TABPRC , TPL_PB - (1-TIND_APBV)*TAPRV )",
           "linecol": [
             523,
@@ -10725,7 +10725,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TIND_APB1 * TABPR1 + (1-TIND_APB1)* min ( TABPR1 , TPL_PB - (1-TIND_APBV)*TAPRV - (1-TIND_APBC)*TAPRC)",
           "linecol": [
             525,
@@ -10748,7 +10748,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TIND_APB2 * TABPR2 + (1-TIND_APB2)* min ( TABPR2 , TPL_PB - (1-TIND_APBV)*TAPRV - (1-TIND_APBC)*TAPRC - (1-TIND_APB1)*TAPR1 )",
           "linecol": [
             528,
@@ -10771,7 +10771,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TIND_APB3 * TABPR3 + (1-TIND_APB3)* min ( TABPR3 , TPL_PB - (1-TIND_APBV)*TAPRV - (1-TIND_APBC)*TAPRC - (1-TIND_APB1)*TAPR1 - (1-TIND_APB2)*TAPR2 )",
           "linecol": [
             531,
@@ -10794,7 +10794,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TIND_APB4 * TABPR4 + (1-TIND_APB4)* min ( TABPR4 , TPL_PB - (1-TIND_APBV)*TAPRV - (1-TIND_APBC)*TAPRC - (1-TIND_APB1)*TAPR1 - (1-TIND_APB2)*TAPR2 - (1-TIND_APB3)*TAPR3 )",
           "linecol": [
             535,
@@ -10832,7 +10832,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -10950,7 +10950,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "TEXPRi - TAPRi",
             "linecol": [
               542,
@@ -10994,7 +10994,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -11030,7 +11030,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TTSN1AJ+TTSN1AC+TTSN1AP+TTSN3VJ+TTSN1TT+TTSNRAJ+TTSNRAP +TTSNDAJ+TTSNEAJ+TTSNGL1V+TTSNGL2V+TTSNGL3V",
           "linecol": [
             545,
@@ -11053,7 +11053,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TTSN1BJ+TTSN1BC+TTSN1BP+TTSN3VK+TTSN1UT+TTSNRBJ+TTSNRBP +TTSNDBJ+TTSNEBJ+TTSNGL1C+TTSNGL2C+TTSNGL3C",
           "linecol": [
             547,
@@ -11076,7 +11076,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TTSN1CJ +TTSN1CC+ TTSN1CP + TTSNRCJ + TTSNRCP",
           "linecol": [
             549,
@@ -11099,7 +11099,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TTSN1DJ +TTSN1DC+ TTSN1DP + TTSNRDJ + TTSNRDP",
           "linecol": [
             550,
@@ -11122,7 +11122,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TTSN1EJ+TTSN1EC+ TTSN1EP+ TTSNREJ+ TTSNREP",
           "linecol": [
             551,
@@ -11145,7 +11145,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TTSN1FJ+TTSN1FC+ TTSN1FP+ TTSNRFJ+ TTSNRFP",
           "linecol": [
             552,
@@ -11183,7 +11183,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -11301,7 +11301,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "positif (-TTSNTi) * min (0 , TTSNTi + TPRNNi) + positif_ou_nul (TTSNTi) * TTSNTi",
             "linecol": [
               556,
@@ -11412,7 +11412,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "positif (-TTSNTi) * positif (TTSNTi + TPRNNi) * (TTSNTi + TPRNNi) + positif_ou_nul (TTSNTi) * TPRNNi",
             "linecol": [
               559,
@@ -11456,7 +11456,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -11492,7 +11492,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max (CODDAJ - TABDOMDAJ,0)",
           "linecol": [
             566,
@@ -11515,7 +11515,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max (CODEAJ - TABDOMEAJ,0)",
           "linecol": [
             567,
@@ -11538,7 +11538,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max (CODDBJ - TABDOMDBJ,0)",
           "linecol": [
             568,
@@ -11561,7 +11561,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max (CODEBJ - TABDOMEBJ,0)",
           "linecol": [
             569,
@@ -11584,7 +11584,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max (GLD1V - TABGL1V,0)",
           "linecol": [
             570,
@@ -11607,7 +11607,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max (GLD2V - TABGL2V,0)",
           "linecol": [
             571,
@@ -11630,7 +11630,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max (GLD3V - TABGL3V,0)",
           "linecol": [
             572,
@@ -11653,7 +11653,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(CODDAJ - TABDOMDAJ,0)+max(CODEAJ - TABDOMEAJ,0)",
           "linecol": [
             573,
@@ -11676,7 +11676,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max (GLD1C - TABGL1C,0)",
           "linecol": [
             574,
@@ -11699,7 +11699,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max (GLD2C - TABGL2C,0)",
           "linecol": [
             575,
@@ -11722,7 +11722,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max (GLD3C - TABGL3C,0)",
           "linecol": [
             576,
@@ -11745,7 +11745,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(CODDBJ - TABDOMDBJ,0)+max(CODEBJ - TABDOMEBJ,0)",
           "linecol": [
             577,
@@ -11865,7 +11865,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "max (GLDxi - TABGLxi,0)",
             "linecol": [
               565,
@@ -11909,7 +11909,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -11945,7 +11945,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TTSNV - somme(x=1..3: max(0,GLDxV - TABGLxV))-max(CODDAJ - TABDOMDAJ,0)-max(CODEAJ - TABDOMEAJ,0)",
           "linecol": [
             580,
@@ -11968,7 +11968,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TTSNC - somme(x=1..3: max(0,GLDxC - TABGLxC))-max(CODDBJ - TABDOMDBJ,0)-max(CODEBJ - TABDOMEBJ,0)",
           "linecol": [
             581,
@@ -11991,7 +11991,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(ART1731BIS) *  max(0,FRNV - TFRDV) * null(TIND_10V)",
           "linecol": [
             623,
@@ -12014,7 +12014,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(ART1731BIS) *  max(0,FRNC - TFRDC) * null(TIND_10C)",
           "linecol": [
             624,
@@ -12037,7 +12037,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(ART1731BIS) *  max(0,(max(0,(FRN1-TFRD1)) - TPRN1 * (1-positif(FRN1-TFRD1)))* null(TIND_101) +(max(0,(FRN2-TFRD2)) - TPRN2 * (1-positif(FRN2-TFRD2)) )* null(TIND_102) +(max(0,(FRN3-TFRD3)) - TPRN3 * (1-positif(FRN3-TFRD3)))* null(TIND_103) +(max(0,(FRN4-TFRD4)) - TPRN4 * (1-positif(FRN4-TFRD4)))* null(TIND_104) ) ",
           "linecol": [
             625,
@@ -12060,7 +12060,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(ART1731BIS) *  (TFRDVREP + TFRDCREP + TFRD1REP)",
           "linecol": [
             630,
@@ -12140,7 +12140,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "TTSNi",
             "linecol": [
               583,
@@ -12219,7 +12219,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "TTSNi + TPRNi - somme(x=1..3: TGLNxi)",
             "linecol": [
               585,
@@ -12305,7 +12305,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "TTSNi + TPRNi",
             "linecol": [
               587,
@@ -12384,7 +12384,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "positif(TTSi) *arr(TTSi *(TTSBNi + BPCOSAi + GLDGRATi)/TEXTSi ) + (1 -positif(TTSi)) * TTSi",
             "linecol": [
               589,
@@ -12470,7 +12470,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "(positif(TTSi) * arr(TTSi * TTSBNi /TEXTSi ) + (1 -positif(TTSi)) * TTSi)",
             "linecol": [
               592,
@@ -12549,7 +12549,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "( positif(TTSi) * ( positif(CARTSi+REMPLAi) * arr(TTSi * T2TSNi / TEXTSi ) + (1 -positif(CARTSi+REMPLAi)) * (TTSi - TTSNNi)))",
             "linecol": [
               595,
@@ -12635,7 +12635,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "( positif(TTSi) * ( positif(CARTSPi+REMPLAPi) * arr(TTSi * T2TSNi /TEXTSi ) + (1 -positif(CARTSPi+REMPLAPi)) * (TTSi - TTSNNi)))",
             "linecol": [
               601,
@@ -12714,7 +12714,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "( positif(TTSi) * ( positif(REMPLAi) * arr(TTSi * CARTSi / TEXTSi ) + (1 -positif(REMPLAi)) * (TTSi - TTSNNi)))",
             "linecol": [
               607,
@@ -12800,7 +12800,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "( positif(TTSi) * ( positif(REMPLAPi) * arr(TTSi * CARTSPi /TEXTSi ) + (1 -positif(REMPLAPi)) * (TTSi - TTSNNi)))",
             "linecol": [
               613,
@@ -12879,7 +12879,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "(positif(TTSi) * (TTSi - TTSNNi-TTSNN2TSi))",
             "linecol": [
               619,
@@ -12965,7 +12965,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "(positif(TTSi) * (TTSi - TTSNNi-TTSNN2TSi))",
             "linecol": [
               621,
@@ -13009,7 +13009,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -13045,7 +13045,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr(TPRNV * PRBV / TEXPRV) +  arr(TPRNV * COD1AH / TEXPRV)",
           "linecol": [
             633,
@@ -13068,7 +13068,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr(TPRNC * PRBC / TEXPRC) +  arr(TPRNC * COD1BH / TEXPRC)",
           "linecol": [
             634,
@@ -13091,7 +13091,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr(TPRN1 * PRB1 / TEXPR1) +  arr(TPRN1 * COD1CH / TEXPR1)",
           "linecol": [
             635,
@@ -13114,7 +13114,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr(TPRN2 * PRB2 / TEXPR2) +  arr(TPRN2 * COD1DH / TEXPR2)",
           "linecol": [
             636,
@@ -13137,7 +13137,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr(TPRN3 * PRB3 / TEXPR3) +  arr(TPRN3 * COD1EH / TEXPR3)",
           "linecol": [
             637,
@@ -13160,7 +13160,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr(TPRN4 * PRB4 / TEXPR4) +  arr(TPRN4 * COD1FH / TEXPR4)",
           "linecol": [
             638,
@@ -13183,7 +13183,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(PEBFV+PENSALV+CODRAZ) * arr(TPRNV * CARPEV / TEXPRV) +  (1 -positif(PEBFV+PENSALV+CODRAZ)) * (TPRNV -TPRRV)",
           "linecol": [
             639,
@@ -13206,7 +13206,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(PEBFC+PENSALC+CODRBZ) * arr(TPRNC * CARPEC / TEXPRC) +  (1 -positif(PEBFC+PENSALC+CODRBZ)) * (TPRNC -TPRRC)",
           "linecol": [
             641,
@@ -13229,7 +13229,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(PEBF1+PENSALP1+CODRCZ) * arr(TPRN1 * CARPEP1 / TEXPR1 ) +  (1 -positif(PEBF1+PENSALP1+CODRCZ)) * (TPRN1 -TPRR1)",
           "linecol": [
             643,
@@ -13252,7 +13252,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(PEBF2+PENSALP2+CODRDZ) * arr(TPRN2 * CARPEP2 / TEXPR2 ) +  (1 -positif(PEBF2+PENSALP2+CODRDZ)) * (TPRN2 -TPRR2)",
           "linecol": [
             645,
@@ -13275,7 +13275,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(PEBF3+PENSALP3+CODREZ) * arr(TPRN3 * CARPEP3 / TEXPR3 ) +  (1 -positif(PEBF3+PENSALP3+CODREZ)) * (TPRN3 -TPRR3)",
           "linecol": [
             647,
@@ -13298,7 +13298,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(PEBF4+PENSALP4+CODRFZ) * arr(TPRN4 * CARPEP4 / TEXPR4 ) +  (1 -positif(PEBF4+PENSALP4+CODRFZ)) * (TPRN4 -TPRR4)",
           "linecol": [
             649,
@@ -13321,7 +13321,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(PEBFV+PENSALV) * arr(TPRNV * CODRAZ / TEXPRV) +  (1 -positif(PEBFV+PENSALV)) * (TPRNV -TPRRV-TPRR2V)",
           "linecol": [
             651,
@@ -13344,7 +13344,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(PEBFC+PENSALC) * arr(TPRNC * CODRBZ / TEXPRC) +  (1 -positif(PEBFC+PENSALC)) * (TPRNC -TPRRC-TPRR2C)",
           "linecol": [
             653,
@@ -13367,7 +13367,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(PEBF1+PENSALP1) * arr(TPRN1 * CODRCZ / TEXPR1) +  (1 -positif(PEBF1+PENSALP1)) * (TPRN1 -TPRR1-TPRR21)",
           "linecol": [
             655,
@@ -13390,7 +13390,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(PEBF2+PENSALP2) * arr(TPRN2 * CODRDZ / TEXPR2) +  (1 -positif(PEBF2+PENSALP2)) * (TPRN2 -TPRR2-TPRR22)",
           "linecol": [
             657,
@@ -13413,7 +13413,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(PEBF3+PENSALP3) * arr(TPRN3 * CODREZ / TEXPR3) +  (1 -positif(PEBF3+PENSALP3)) * (TPRN3 -TPRR3-TPRR23)",
           "linecol": [
             659,
@@ -13436,7 +13436,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(PEBF4+PENSALP4) * arr(TPRN4 * CODRFZ / TEXPR4 ) +  (1 -positif(PEBF4+PENSALP4)) * (TPRN4 -TPRR4-TPRR24)",
           "linecol": [
             661,
@@ -13459,7 +13459,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "somme (i = V,C,1..4 : TPRRi)",
           "linecol": [
             673,
@@ -13532,7 +13532,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "positif(PENSALi) * arr(TPRNi * PEBFi / TEXPRi) + (1 - positif(PENSALi)) * max(0,(TPRNi -TPRRi -TPRR2i-TPRR2Zi))",
             "linecol": [
               664,
@@ -13618,7 +13618,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "positif(PENSALPi) * arr(TPRNi * PEBFi / TEXPRi) + (1- positif(PENSALPi)) * (TPRNi -TPRRi -TPRR2i-TPRR2Zi)",
             "linecol": [
               667,
@@ -13697,7 +13697,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "positif(TEXPRi) * (TPRNi -TPRRi -TPRR2i -TPRR2Zi- TPENFi)",
             "linecol": [
               670,
@@ -13783,7 +13783,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "positif(TEXPRi) * (TPRNi -TPRRi -TPRR2i -TPRR2Zi- TPENFi)",
             "linecol": [
               672,
@@ -13827,7 +13827,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -13863,7 +13863,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(TTSNNV + TPRRV + TTSNNC + TPRRC + TTSNN1 + TPRR1 + TTSNN2 + TPRR2 + TTSNN3 + TPRR3 + TTSNN4 + TPRR4)",
           "linecol": [
             676,
@@ -13886,7 +13886,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0,TTSPRV) + max(0,TTSPRC) + max(0,TTSPR1) + max(0,TTSPR2)+ max(0,TTSPR3)+ max(0,TTSPR4)",
           "linecol": [
             682,
@@ -13909,7 +13909,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TTSPRT * (1-ART1731BIS) + TTSPRT1731 * ART1731BIS + RVTOT",
           "linecol": [
             683,
@@ -13947,7 +13947,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -13983,7 +13983,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "somme(i=1..4:TTSPRi)",
           "linecol": [
             690,
@@ -14006,7 +14006,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "somme(i=1..4:TTSPRDi)",
           "linecol": [
             691,
@@ -14102,7 +14102,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "(TTSNNi + TPRRi) * (1-PREM8_11) + max(0,TTSNNi + TPRRi) * PREM8_11",
             "linecol": [
               687,
@@ -14204,7 +14204,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "min(0,TTSNNi + TPRRi)* ART1731BIS",
             "linecol": [
               689,
@@ -14306,7 +14306,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "max(0,TFRNRETi + TSPRDi)",
             "linecol": [
               693,
@@ -14350,7 +14350,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -14386,7 +14386,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TSPENET + TXSPENET + TMIBNETVF + TMIBNETNPVF + TMIBNETPF + TMIBNETNPPF * (1 - positif((VARIPTEFP * positif(ART1731BIS) + IPTEFP * (1 - ART1731BIS)) + (VARIPTEFN * positif(ART1731BIS) + IPTEFN * (1 - ART1731BIS)) + IPMOND))",
           "linecol": [
             696,
@@ -14424,7 +14424,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -14460,7 +14460,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TMIBNETVF + TMIBNETPF + MIB_NETCT",
           "linecol": [
             701,
@@ -14483,7 +14483,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0,somme(i=V,C,P:BINTAi+BINHTAi)+TMIBNETNPVF + TMIBNETNPPF +MIB_NETNPCT - DEFNP)",
           "linecol": [
             702,
@@ -14506,7 +14506,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "somme(i=V,C,P:TSPENETPi) + TXSPENET + max(0,somme(i=V,C,P:TSPENETNPi) + NOCEPIMP-(min(DABNCNP6,DABNCNP61731+0) * positif(ART1731BIS) + DABNCNP6 * (1 - ART1731BIS)) -(min(DABNCNP5,DABNCNP51731+0) * positif(ART1731BIS) + DABNCNP5 * (1 - ART1731BIS)) -(min(DABNCNP4,DABNCNP41731+0) * positif(ART1731BIS) + DABNCNP4 * (1 - ART1731BIS)) -(min(DABNCNP3,DABNCNP31731+0) * positif(ART1731BIS) + DABNCNP3 * (1 - ART1731BIS)) -(min(DABNCNP2,DABNCNP21731+0) * positif(ART1731BIS) + DABNCNP2 * (1 - ART1731BIS)) -(min(DABNCNP1,DABNCNP11731+0) * positif(ART1731BIS) + DABNCNP1 * (1 - ART1731BIS))) + SPENETCT + SPENETNPCT",
           "linecol": [
             703,
@@ -14544,7 +14544,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -14580,7 +14580,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "INDTEFF * ( (TBICPF + TBICNPF + TBNN + BIHTAV + BIHTAC + BIHTAP + BIPTAV + BIPTAC + BIPTAP + ESFP + TTSPR + RCM + PLOCNETF + NPLOCNETF + RFNTEO * V_INDTEO + RRFI * (1-V_INDTEO) + BPVRCM + PVTAXSB + PVIMPOS * null(1-FLAG_EXIT) + COD3VE + (PVIMPOS+PVSURSI) * null(2 -FLAG_EXIT) + max(BANOR,0) + REB + min(BANOR,0) * positif(SEUIL_IMPDEFBA + 1 -SHBA- (REVTP-BA1) - REVQTOTQHT)) + R1649 )",
           "linecol": [
             712,
@@ -14603,7 +14603,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "INDTEFF * ( (TBICPF + TBICNPF + TBNN + BIHTAV + BIHTAC + BIHTAP + BIPTAV + BIPTAC + BIPTAP + ESFP + TTSPR + RCM + PLOCNETF + NPLOCNETF + RFNTEO * V_INDTEO + RRFI * (1-V_INDTEO) + PVBAR + max(BANOR,0) + REB + min(BANOR,0) * positif(SEUIL_IMPDEFBA + 1 -SHBA- (REVTP-BA1) - REVQTOTQHT)) + R1649 )",
           "linecol": [
             727,
@@ -14626,7 +14626,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(1 - positif(TEFFREV  +PREREV- DAR)) * min( 0 , TEFFREV  +PREREV- DAR + TOTALQUO ) + positif(TEFFREV+PREREV - DAR) * (TEFFREV +PREREV - DAR)",
           "linecol": [
             742,
@@ -14649,7 +14649,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(1 - positif(TEFFREVRFR  +PREREV- DAR)) * min( 0 , TEFFREVRFR  +PREREV- DAR + TOTALQUO ) + positif(TEFFREVRFR+PREREV - DAR) * (TEFFREVRFR +PREREV - DAR)",
           "linecol": [
             744,
@@ -14672,7 +14672,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0,min(somme(i=1..4:min(NCHENFi,LIM_PENSALENF)+min(arr(CHENFi*MAJREV),LIM_PENSALENF)), RBGTEF-DDCSG+TOTALQUO-SDD)) *(1-V_CNR)",
           "linecol": [
             746,
@@ -14695,7 +14695,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0,min(somme(i=1..4:min(NCHENFi,LIM_PENSALENF)+min(arr(CHENFi*MAJREV),LIM_PENSALENF)), RBGTEFRFR-DDCSG+TOTALQUO-SDD)) *(1-V_CNR)",
           "linecol": [
             748,
@@ -14718,7 +14718,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max( min(TOTPA,RBGTEF - RPALETEF - DDCSG + TOTALQUO - SDD) , 0 ) * (1 -V_CNR)",
           "linecol": [
             750,
@@ -14741,7 +14741,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max( min(TOTPA,RBGTEFRFR - RPALETEFRFR - DDCSG + TOTALQUO - SDD) , 0 ) * (1 -V_CNR)",
           "linecol": [
             751,
@@ -14764,7 +14764,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max( min(DFA,RBGTEF - RPALETEF - RPALPTEF  - DDCSG + TOTALQUO - SDD) , 0)",
           "linecol": [
             752,
@@ -14787,7 +14787,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max( min(DFA,RBGTEFRFR - RPALETEFRFR - RPALPTEFRFR  - DDCSG + TOTALQUO - SDD) , 0)",
           "linecol": [
             753,
@@ -14810,7 +14810,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max( min(DEDIV * (1 - V_CNR),RBGTEF - RPALETEF - RPALPTEF - RFACCTEF - DDCSG + TOTALQUO - SDD ) , 0 )",
           "linecol": [
             754,
@@ -14833,7 +14833,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max( min(DEDIV * (1 - V_CNR),RBGTEFRFR - RPALETEFRFR - RPALPTEFRFR - RFACCTEFRFR - DDCSG + TOTALQUO - SDD ) , 0 )",
           "linecol": [
             755,
@@ -14856,7 +14856,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(1 - V_CNR) * max(min(RPERPV,RBGTEF - RPALETEF - RPALPTEF - RFACCTEF - RDDIVTEF - DDCSG + TOTALQUO -SDD), 0)",
           "linecol": [
             756,
@@ -14879,7 +14879,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(1 - V_CNR) * max(min(RPERPV,RBGTEFRFR - RPALETEFRFR - RPALPTEFRFR - RFACCTEFRFR - RDDIVTEFRFR - DDCSG + TOTALQUO -SDD), 0)",
           "linecol": [
             758,
@@ -14902,7 +14902,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(1 - V_CNR) * max(min(RPERPC,RBGTEF - RPALETEF - RPALPTEF  - RFACCTEF - RDDIVTEF - DDCSG + TOTALQUO -SDD - APERPVTEF), 0)",
           "linecol": [
             760,
@@ -14925,7 +14925,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(1 - V_CNR) * max(min(RPERPC,RBGTEFRFR - RPALETEFRFR - RPALPTEFRFR  - RFACCTEFRFR - RDDIVTEFRFR - DDCSG + TOTALQUO -SDD - APERPVTEFRFR), 0)",
           "linecol": [
             762,
@@ -14948,7 +14948,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(1 - V_CNR) * max(min(RPERPP,RBGTEF - RPALETEF - RPALPTEF  - RFACCTEF - RDDIVTEF - DDCSG + TOTALQUO -SDD - APERPVTEF - APERPCTEF), 0)",
           "linecol": [
             764,
@@ -14971,7 +14971,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(1 - V_CNR) * max(min(RPERPP,RBGTEFRFR - RPALETEFRFR - RPALPTEFRFR  - RFACCTEFRFR - RDDIVTEFRFR - DDCSG + TOTALQUO -SDD - APERPVTEFRFR - APERPCTEFRFR), 0)",
           "linecol": [
             766,
@@ -14994,7 +14994,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(TEFFREV - DAR ) *(1-positif(RE168+TAX1649)) + positif(RE168+TAX1649) * (RE168+TAX1649)",
           "linecol": [
             768,
@@ -15017,7 +15017,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(TEFFREVRFR - DAR ) *(1-positif(RE168+TAX1649)) + positif(RE168+TAX1649) * (RE168+TAX1649)",
           "linecol": [
             769,
@@ -15040,7 +15040,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "min(NUPROPT , max(0,min(PLAF_NUREPAR, RRBGTEF - RPALETEF - RPALPTEF - RFACCTEF - RDDIVTEF - APERPVTEF - APERPCTEF - APERPPTEF - DDCSG + TOTALQUO - SDD))) * (1 - V_CNR)",
           "linecol": [
             770,
@@ -15063,7 +15063,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "min(NUPROPT , max(0,min(PLAF_NUREPAR, RRBGTEFRFR - RPALETEFRFR - RPALPTEFRFR - RFACCTEFRFR - RDDIVTEFRFR - APERPVTEFRFR - APERPCTEFRFR - APERPPTEFRFR - DDCSG + TOTALQUO - SDD))) * (1 - V_CNR)",
           "linecol": [
             773,
@@ -15086,7 +15086,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "RBGTEF - max(0,min(RBGTEF , DDCSG))",
           "linecol": [
             776,
@@ -15109,7 +15109,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "RBGTEFRFR - max(0,min(RBGTEFRFR , DDCSG))",
           "linecol": [
             777,
@@ -15132,7 +15132,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "( RBG2TEF - max(0,min( RBG2TEF , ( DPA + DFA + DEDIV + APERPVTEF + APERPCTEF + APERPPTEF + NUREPARTEF ))) * ( 1 - V_CNR ) - min( RBG2TEF , V_8ZT) * V_CR2 ) * (1 - positif(RE168+TAX1649))",
           "linecol": [
             778,
@@ -15155,7 +15155,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "( RBG2TEFRFR - max(0,min( RBG2TEFRFR , ( DPA + DFA + DEDIV + APERPVTEFRFR + APERPCTEFRFR + APERPPTEFRFR + NUREPARTEFRFR ))) * ( 1 - V_CNR ) - min( RBG2TEFRFR , V_8ZT) * V_CR2 ) * (1 - positif(RE168+TAX1649))",
           "linecol": [
             781,
@@ -15178,7 +15178,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(     null(V_REGCO - 4) * null(V_CNR   - 1) * null(V_CNR2  - 1) * null(V_CR2   - 1) * IPVLOC ) + (1 -   null(V_REGCO - 4) * null(V_CNR   - 1) * null(V_CNR2  - 1) * null(V_CR2   - 1) ) * RBLTEF",
           "linecol": [
             784,
@@ -15201,7 +15201,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(     null(V_REGCO - 4) * null(V_CNR   - 1) * null(V_CNR2  - 1) * null(V_CR2   - 1) * IPVLOC ) + (1 -   null(V_REGCO - 4) * null(V_CNR   - 1) * null(V_CNR2  - 1) * null(V_CR2   - 1) ) * RBLTEFRFR",
           "linecol": [
             797,
@@ -15224,7 +15224,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "min( max( LIM_ABTRNGDBL + 1  - (RNGTEF+ TOTALQUO- SDD- SDC), 0 ), 1 ) + min( max( LIM_ABTRNGSIMP + 1 - (RNGTEF+ TOTALQUO- SDD- SDC), 0 ), 1 )",
           "linecol": [
             810,
@@ -15247,7 +15247,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "min( max( LIM_ABTRNGDBL + 1  - (RNGTEFRFR+ TOTALQUO- SDD- SDC), 0 ), 1 ) + min( max( LIM_ABTRNGSIMP + 1 - (RNGTEFRFR+ TOTALQUO- SDD- SDC), 0 ), 1 )",
           "linecol": [
             812,
@@ -15270,7 +15270,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "NDA * NABTEF * ABAT_UNVIEUX * (1-V_CNR)",
           "linecol": [
             814,
@@ -15293,7 +15293,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "NDA * NABTEFRFR * ABAT_UNVIEUX * (1-V_CNR)",
           "linecol": [
             815,
@@ -15316,7 +15316,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "INDTEFF * ( (TBICPF + TBICNPF + TBNN + BIHTAV + BIHTAC + BIHTAP + BIPTAV + BIPTAC + BIPTAP + ESFP + TTSPR + RCM + PLOCNETF + NPLOCNETF + RFNTEO * V_INDTEO + RRFI * (1-V_INDTEO) + PVBAR + max(BANOR,0) + REB + min(BANOR,0) * positif(SEUIL_IMPDEFBA + 1 -SHBA- (REVTP-BA1) - REVQTOTQHT)) + R1649 - DAR )",
           "linecol": [
             816,
@@ -15339,7 +15339,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "INDTEFF * ( (TBICPF + TBICNPF + TBNN + BIHTAV + BIHTAC + BIHTAP + BIPTAV + BIPTAC + BIPTAP + ESFP + TTSPR + RCM + PLOCNETF + NPLOCNETF + RFNTEO * V_INDTEO + RRFI * (1-V_INDTEO) + BPVRCM + PVTAXSB + PVIMPOS * null(1-FLAG_EXIT) + COD3VE + (PVIMPOS+PVSURSI) * null(2 -FLAG_EXIT) + max(BANOR,0) + REB + min(BANOR,0) * positif(SEUIL_IMPDEFBA + 1 -SHBA- (REVTP-BA1) - REVQTOTQHT)) + R1649 - DAR - max(0,min(TEFFREVINTER,DPA + DFA + DEDIV + APERPVTEF + APERPCTEF + APERPPTEF + NUREPARTEF + ABTPATEF + ABTMA+DDCSG)) ) ",
           "linecol": [
             831,
@@ -15362,7 +15362,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "INDTEFF * ( (TBICPF + TBICNPF + TBNN + BIHTAV + BIHTAC + BIHTAP + BIPTAV + BIPTAC + BIPTAP + ESFP + TTSPR + RCM + PLOCNETF + NPLOCNETF + RFNTEO * V_INDTEO + RRFI * (1-V_INDTEO) + PVBAR + max(BANOR,0) + REB + min(BANOR,0) * positif(SEUIL_IMPDEFBA + 1 -SHBA- (REVTP-BA1) - REVQTOTQHT)) + R1649 - DAR - max(0,min(TEFFREVINTER,DPA + DFA + DEDIV + APERPVTEFRFR + APERPCTEFRFR + APERPPTEFRFR + NUREPARTEFRFR + ABTPATEFRFR + ABTMA+DDCSG)) ) ",
           "linecol": [
             847,
@@ -15385,7 +15385,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "INDTEFF * ( (TBICPF + TBICNPF + TBNN + BIHTAV + BIHTAC + BIHTAP + BIPTAV + BIPTAC + BIPTAP + ESFP + TTSPR + RCM + PLOCNETF + NPLOCNETF + RFNTEO * V_INDTEO + RRFI * (1-V_INDTEO) + PVBARHR + max(BANOR,0) + REB + min(BANOR,0) * positif(SEUIL_IMPDEFBA + 1 -SHBA- (REVTP-BA1) - REVQTOTQHT)) + R1649 - DAR - max(0,min(TEFFREVINTER,DPA + DFA + DEDIV + APERPVTEFRFR + APERPCTEFRFR + APERPPTEFRFR + NUREPARTEFRFR + ABTPATEFRFR + ABTMA+DDCSG)) ) ",
           "linecol": [
             863,

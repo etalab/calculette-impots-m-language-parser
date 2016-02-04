@@ -161,7 +161,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -197,7 +197,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(BNHREV - (BNHDEV * (1 - positif(ART1731BIS*PREM8_11)))) * arr((BNHREV-(BNHDEV * (1 - positif(ART1731BIS*PREM8_11))))*MAJREV) + (1-positif_ou_nul(BNHREV-(BNHDEV * (1 - positif(ART1731BIS*PREM8_11))))) *(BNHREV-(BNHDEV * (1 - positif(ART1731BIS*PREM8_11) )))",
           "linecol": [
             23,
@@ -220,7 +220,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(BNHREC - (BNHDEC * (1 - positif(ART1731BIS*PREM8_11)))) * arr((BNHREC-(BNHDEC * (1 - positif(ART1731BIS*PREM8_11))))*MAJREV) + (1-positif_ou_nul(BNHREC-(BNHDEC * (1 - positif(ART1731BIS*PREM8_11))))) *(BNHREC-(BNHDEC * (1 - positif(ART1731BIS*PREM8_11) )))",
           "linecol": [
             28,
@@ -243,7 +243,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(BNHREP - (BNHDEP * (1 - positif(ART1731BIS*PREM8_11) ))) * arr((BNHREP-(BNHDEP * (1 - positif(ART1731BIS*PREM8_11))))*MAJREV) + (1-positif_ou_nul(BNHREP-(BNHDEP * (1 - positif(ART1731BIS*PREM8_11))))) *(BNHREP-(BNHDEP * (1 - positif(ART1731BIS*PREM8_11) )))",
           "linecol": [
             33,
@@ -266,7 +266,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(BNCREV - BNCDEV * (1 - positif(ART1731BIS*PREM8_11)))",
           "linecol": [
             38,
@@ -289,7 +289,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(BNCREC - BNCDEC * (1 - positif(ART1731BIS*PREM8_11)))",
           "linecol": [
             39,
@@ -312,7 +312,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(BNCREP - BNCDEP * (1 - positif(ART1731BIS*PREM8_11)))",
           "linecol": [
             40,
@@ -335,7 +335,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(BNCAABV - BNCAADV * (1 - positif(ART1731BIS*PREM8_11)))",
           "linecol": [
             41,
@@ -358,7 +358,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(BNCAABC - BNCAADC * (1 - positif(ART1731BIS*PREM8_11)))",
           "linecol": [
             42,
@@ -381,7 +381,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(BNCAABP - BNCAADP * (1 - positif(ART1731BIS*PREM8_11)))",
           "linecol": [
             43,
@@ -419,7 +419,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -455,7 +455,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "min(max(DNOCEP,max(DNOCEP_P,DNOCEPP2)),ANOCEP)",
           "linecol": [
             46,
@@ -478,7 +478,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "min(max(DNOCEPC,max(DNOCEPC_P,DNOCEPCP2)),ANOVEP)",
           "linecol": [
             47,
@@ -501,7 +501,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "min(max(DNOCEPP,max(DNOCEPP_P,DNOCEPPP2)),ANOPEP)",
           "linecol": [
             48,
@@ -524,7 +524,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "ANOCEP - DNOCEP + (BNCAABV - BNCAADV)",
           "linecol": [
             49,
@@ -547,7 +547,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "ANOVEP - DNOCEPC + (BNCAABC - BNCAADC)",
           "linecol": [
             51,
@@ -570,7 +570,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "ANOPEP - DNOCEPP + (BNCAABP - BNCAADP)",
           "linecol": [
             53,
@@ -593,7 +593,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(ANOCEP - DNOCEP * (1 - positif(ART1731BIS*PREM8_11))) *arr((ANOCEP- DNOCEP * (1 - positif(ART1731BIS*PREM8_11)))*MAJREV) + positif_ou_nul(DNOCEP * (1 - positif(ART1731BIS*PREM8_11))-ANOCEP) *(ANOCEP- DNOCEP * (1 - positif(ART1731BIS*PREM8_11)))+BNNAAV",
           "linecol": [
             55,
@@ -616,7 +616,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(ANOVEP - DNOCEPC * (1 - positif(ART1731BIS*PREM8_11))) *arr((ANOVEP- DNOCEPC * (1 - positif(ART1731BIS*PREM8_11)))*MAJREV) + positif_ou_nul(DNOCEPC * (1 - positif(ART1731BIS*PREM8_11))-ANOVEP) *(ANOVEP- DNOCEPC * (1 - positif(ART1731BIS*PREM8_11)))+BNNAAC",
           "linecol": [
             60,
@@ -639,7 +639,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(ANOPEP - DNOCEPP * (1 - positif(ART1731BIS*PREM8_11))) *arr((ANOPEP- DNOCEPP * (1 - positif(ART1731BIS*PREM8_11)))*MAJREV) + positif_ou_nul(DNOCEPP * (1 - positif(ART1731BIS*PREM8_11))-ANOPEP) *(ANOPEP- DNOCEPP * (1 - positif(ART1731BIS*PREM8_11)))+BNNAAP",
           "linecol": [
             65,
@@ -662,7 +662,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "NOCEPIMPV+NOCEPIMPC+NOCEPIMPP",
           "linecol": [
             70,
@@ -685,7 +685,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "null(4-V_IND_TRAIT) * (DABNCNP6 + DABNCNP5 + DABNCNP4 + DABNCNP3 + DABNCNP2 + DABNCNP1) * (1-positif(ART1731BIS*PREM8_11)) + null(5-V_IND_TRAIT) * max(0,min(DABNCNP6 + DABNCNP5 + DABNCNP4 + DABNCNP3 + DABNCNP2 + DABNCNP1,TOTDABNCNP1731*ART1731BIS*(1-PREM8_11)+ (DABNCNP6 + DABNCNP5 + DABNCNP4 + DABNCNP3 + DABNCNP2 + DABNCNP1) * (1-positif(ART1731BIS*PREM8_11))))",
           "linecol": [
             72,
@@ -723,7 +723,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -759,7 +759,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(somme(i=V,C,P:BNRi) + SPENETPF + max(0,SPENETNPF + NOCEPIMP - TOTDABNCNP)) * (1-ART1731BIS) + (somme(i=V,C,P:BNRi) + SPENETPF + max(0,SPENETNPF + NOCEPIMP - DIDABNCNP+DEFBNCNPF)) * ART1731BIS*(1-PREM8_11) + (somme(i=V,C,P:BNRi) + SPENETPF + max(0,SPENETNPF + NOCEPIMP)) * ART1731BIS*PREM8_11 ",
           "linecol": [
             78,
@@ -797,7 +797,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -891,7 +891,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "BNRi + SPENETi",
             "linecol": [
               85,
@@ -935,7 +935,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -971,7 +971,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "BNRV + BNRC + BNRP",
           "linecol": [
             90,
@@ -1052,7 +1052,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "BNNSi + BNNAi",
             "linecol": [
               89,
@@ -1096,7 +1096,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -1132,7 +1132,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "somme(i=V,C,P:BN1i)",
           "linecol": [
             93,
@@ -1170,7 +1170,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -1264,7 +1264,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "BN1Ai + PVINiE + INVENTi",
             "linecol": [
               97,
@@ -1308,7 +1308,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -1402,7 +1402,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "BNCPROi + BNCNPi",
             "linecol": [
               101,
@@ -1446,7 +1446,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -1540,7 +1540,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "SPETOTi",
             "linecol": [
               105,
@@ -1627,7 +1627,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "arr((max(MIN_SPEBNC,(SPEBASABi * SPETXAB/100))) * positif_ou_nul(SPETOTi - MIN_SPEBNC)) + arr((min(MIN_SPEBNC,SPEBASABi )) * positif(MIN_SPEBNC - SPETOTi))",
             "linecol": [
               107,
@@ -1671,7 +1671,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -1765,7 +1765,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "arr((SPEABi * BNCPROi)/SPETOTi)",
             "linecol": [
               114,
@@ -1852,7 +1852,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "SPEABi - SPEABPi",
             "linecol": [
               116,
@@ -1896,7 +1896,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -1932,7 +1932,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "somme(i=V,C,P:(SPENETi))",
           "linecol": [
             125,
@@ -2013,7 +2013,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "max (0,(BNCPROi - SPEABPi))",
             "linecol": [
               120,
@@ -2100,7 +2100,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "max (0,(BNCNPi - SPEABNPi))",
             "linecol": [
               122,
@@ -2187,7 +2187,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "SPENETPi + SPENETNPi",
             "linecol": [
               124,
@@ -2231,7 +2231,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -2267,7 +2267,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "BNCPROPVV + BNCPROPVC + BNCPROPVP - BNCPMVCTV - BNCPMVCTC - BNCPMVCTP",
           "linecol": [
             128,
@@ -2290,7 +2290,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "BNCNPPVV + BNCNPPVC + BNCNPPVP - BNCNPDCT",
           "linecol": [
             129,
@@ -2328,7 +2328,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -2364,7 +2364,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "somme(i=V,C,P:SPENETPi) + SPENETCT",
           "linecol": [
             132,
@@ -2387,7 +2387,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "somme(i=V,C,P:SPENETNPi) + SPENETNPCT",
           "linecol": [
             133,
@@ -2410,7 +2410,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "SPENETPF + SPENETNPF",
           "linecol": [
             134,
@@ -2448,7 +2448,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -2484,7 +2484,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "somme(i=V,C,P:max(0,SPEPVPi + SPEPVNPi))",
           "linecol": [
             141,
@@ -2565,7 +2565,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "BNCPRO1Ai - BNCPRODEi",
             "linecol": [
               138,
@@ -2652,7 +2652,7 @@
         },
         "variable_definition": {
           "expression": {
-            "type": "expression",
+            "type": "variable_definition_expression",
             "value": "BNCNP1Ai - BNCNPDEi",
             "linecol": [
               140,
@@ -2696,7 +2696,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -2732,7 +2732,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif_ou_nul(BNRTOT+SPENETPF) * BNCPMVCTV + ( 1 - positif_ou_nul(BNRTOT+SPENETPF)) * (BNCPMVCTV-abs(BNRTOT+SPENETPF)) + ( 1 - positif_ou_nul(BNRTOT+SPENETPF)) * null(BNCPMVCTV-abs(BNRTOT+SPENETPF))* BNCPMVCTV ",
           "linecol": [
             146,
@@ -2755,7 +2755,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif_ou_nul(NOCEPIMP+SPENETNPF) * BNCNPDCT + ( 1 - positif_ou_nul(NOCEPIMP+SPENETNPF)) * (BNCNPDCT-abs(NOCEPIMP+SPENETNPF)) + ( 1 - positif_ou_nul(NOCEPIMP+SPENETNPF)) * null(BNCNPDCT-abs(NOCEPIMP+SPENETNPF)) * BNCNPDCT ",
           "linecol": [
             150,
@@ -2793,7 +2793,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -2829,7 +2829,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "((1-positif_ou_nul(NOCEPIMP+SPENETNPF)) * abs(NOCEPIMP+SPENETNPF) + positif_ou_nul(NOCEPIMP+SPENETNPF) * positif_ou_nul(DABNCNP5+DABNCNP4+DABNCNP3+DABNCNP2+DABNCNP1-NOCEPIMP-SPENETNPF) * (DABNCNP5+DABNCNP4+DABNCNP3+DABNCNP2+DABNCNP1-NOCEPIMP-SPENETNPF) * null(BNCDF6+BNCDF5+BNCDF4+BNCDF3+BNCDF2)) * (1-positif(ART1731BIS)) +  DEFBNCNPF * positif(ART1731BIS*(1-PREM8_11)) + (DNOCEP +DNOCEPC +DNOCEPP +BNCAADV +BNCAADC +BNCAADP) * positif(ART1731BIS*PREM8_11)",
           "linecol": [
             157,
@@ -2867,7 +2867,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -2903,7 +2903,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "((1-positif_ou_nul(NOCEPIMP+SPENETNPF)) * (DABNCNP1) + positif_ou_nul(NOCEPIMP+SPENETNPF) * min(max(NOCEPIMP+SPENETNPF-DABNCNP6-DABNCNP5-DABNCNP4-DABNCNP3-DABNCNP2,0)-DABNCNP1,DABNCNP1)*(-1) * positif_ou_nul(DABNCNP1-max(NOCEPIMP+SPENETNPF-DABNCNP6-DABNCNP5-DABNCNP4-DABNCNP3-DABNCNP2,0))) * (1-positif(ART1731BIS)) + min(DABNCNP1,DABNCNP - DIDABNCNP) * positif(ART1731BIS*(1-positif(PREM8_11+null(8-CMAJ)+null(11-CMAJ)))) + DABNCNP1 * positif(positif(ART1731BIS*PREM8_11)+null(8-CMAJ)+null(11-CMAJ))",
           "linecol": [
             167,
@@ -2941,7 +2941,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -2977,7 +2977,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "((1 - positif_ou_nul(NOCEPIMP+SPENETNPF)) * (DABNCNP2) + positif_ou_nul(NOCEPIMP+SPENETNPF) * min(max(NOCEPIMP+SPENETNPF-DABNCNP6-DABNCNP5-DABNCNP4-DABNCNP3,0)-DABNCNP2,DABNCNP2)*(-1) * positif_ou_nul(DABNCNP2-max(NOCEPIMP+SPENETNPF-DABNCNP6-DABNCNP5-DABNCNP4-DABNCNP3,0))) * (1-positif(ART1731BIS)) + min(DABNCNP2,DABNCNP - DIDABNCNP-BNCDF2) * positif(ART1731BIS*(1-positif(PREM8_11+null(8-CMAJ)+null(11-CMAJ)))) + DABNCNP2 * positif(positif(ART1731BIS*PREM8_11)+null(8-CMAJ)+null(11-CMAJ))",
           "linecol": [
             178,
@@ -3015,7 +3015,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -3051,7 +3051,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "((1 - positif_ou_nul(NOCEPIMP+SPENETNPF)) * (DABNCNP3) + positif_ou_nul(NOCEPIMP+SPENETNPF) * min(max(NOCEPIMP+SPENETNPF-DABNCNP6-DABNCNP5-DABNCNP4,0)-DABNCNP3,DABNCNP3)*(-1) * positif_ou_nul(DABNCNP3-max(NOCEPIMP+SPENETNPF-DABNCNP6-DABNCNP5-DABNCNP4,0))) * (1-positif(ART1731BIS)) + min(DABNCNP3,DABNCNP - DIDABNCNP-BNCDF2-BNCDF3) * positif(ART1731BIS*(1-positif(PREM8_11+null(8-CMAJ)+null(11-CMAJ)))) + DABNCNP3 * positif(positif(ART1731BIS*PREM8_11)+null(8-CMAJ)+null(11-CMAJ))",
           "linecol": [
             187,
@@ -3089,7 +3089,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -3125,7 +3125,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "((1 - positif_ou_nul(NOCEPIMP+SPENETNPF)) * (DABNCNP4) + positif_ou_nul(NOCEPIMP+SPENETNPF) * min(max(NOCEPIMP+SPENETNPF-DABNCNP6-DABNCNP5,0)-DABNCNP4,DABNCNP4)*(-1) * positif_ou_nul(DABNCNP4-max(NOCEPIMP+SPENETNPF-DABNCNP6-DABNCNP5,0))) * (1-positif(ART1731BIS)) + min(DABNCNP4,DABNCNP - DIDABNCNP-BNCDF2-BNCDF3-BNCDF4) * positif(ART1731BIS*(1-positif(PREM8_11+null(8-CMAJ)+null(11-CMAJ)))) + DABNCNP4 * positif(positif(ART1731BIS*PREM8_11)+null(8-CMAJ)+null(11-CMAJ))",
           "linecol": [
             197,
@@ -3163,7 +3163,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -3199,7 +3199,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "((1 - positif_ou_nul(NOCEPIMP+SPENETNPF)) * (DABNCNP5) + positif_ou_nul(NOCEPIMP+SPENETNPF) * min(max(NOCEPIMP+SPENETNPF-DABNCNP6,0)-DABNCNP5,DABNCNP5)*(-1) * positif_ou_nul(DABNCNP5-max(NOCEPIMP+SPENETNPF-DABNCNP6,0))) * (1-positif(ART1731BIS)) + min(DABNCNP5,DABNCNP - DIDABNCNP-BNCDF2-BNCDF3-BNCDF4-BNCDF5) * positif(ART1731BIS*(1-positif(PREM8_11+null(8-CMAJ)+null(11-CMAJ)))) + DABNCNP5 * positif(positif(ART1731BIS*PREM8_11)+null(8-CMAJ)+null(11-CMAJ))",
           "linecol": [
             206,
@@ -3237,7 +3237,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -3273,7 +3273,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "DABNCNP1 + DABNCNP2 + DABNCNP3 + DABNCNP4 + DABNCNP5 + DABNCNP6",
           "linecol": [
             216,
@@ -3296,7 +3296,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "min(DABNCNP,SPENETNPF + NOCEPIMP)",
           "linecol": [
             217,
@@ -3319,7 +3319,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(NOCEPIMP+SPENETNPF+DIDABNCNP+DNOCEP+DNOCEPC+DNOCEPP+BNCAADV+BNCAADC+BNCAADP )",
           "linecol": [
             218,
@@ -3342,7 +3342,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "DEFRIBNC * (1-PREM8_11) * max(0,min(DNOCEP+DNOCEPC+DNOCEPP+BNCAADV+BNCAADC+BNCAADP,-(max(DEFBNCNP1731,max(DEFBNCNP_P,DEFBNCNPP2))-DNOCEP-DNOCEPC-DNOCEPP-BNCAADV-BNCAADC-BNCAADP)))",
           "linecol": [
             219,

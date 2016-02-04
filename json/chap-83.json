@@ -161,7 +161,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -197,7 +197,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(RFON + DRCF + max(0,RFMIC - MICFR - RFDANT )) * (1-positif(ART1731BIS)) + (RFON + DRCF + max(0,RFMIC - MICFR - DEFRF4BD )) * positif(ART1731BIS)",
           "linecol": [
             23,
@@ -220,7 +220,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "RRFI",
           "linecol": [
             25,
@@ -258,7 +258,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -294,7 +294,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "present(RFMIC) * arr(RFMIC * TX_MICFON/100)",
           "linecol": [
             28,
@@ -332,7 +332,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -368,7 +368,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0,RFMIC - MICFR)",
           "linecol": [
             31,
@@ -391,7 +391,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0,RFMIC - MICFR - RFDANT  )* (1 - positif(ART1731BIS)) + max(0,RFMIC - MICFR - DEFRF4BD) * positif(ART1731BIS)",
           "linecol": [
             32,
@@ -429,7 +429,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -465,7 +465,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "RFORDI + FONCI + REAMOR",
           "linecol": [
             36,
@@ -503,7 +503,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -539,7 +539,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "min(RFCD,RFDORD)",
           "linecol": [
             39,
@@ -562,7 +562,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0,RFCD- RFDORD) * (1 - positif(ART1731BIS)) + max(0,RFCD- DEFRF4BB) * positif(ART1731BIS)",
           "linecol": [
             40,
@@ -585,7 +585,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0,RFORDI- RFDORD) * (1 - positif(ART1731BIS)) + max(0,RFORDI- DEFRF4BB) *  positif(ART1731BIS)",
           "linecol": [
             42,
@@ -608,7 +608,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0,RFCD-RFDORD)* (1 - positif(ART1731BIS)) +  max(0,RFCD-DEFRF4BB) * positif(ART1731BIS)",
           "linecol": [
             44,
@@ -631,7 +631,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "min(0,RFCD- RFDORD) * (1 - positif(ART1731BIS)) +  min(0,RFCD- DEFRF4BB)  * positif(ART1731BIS)",
           "linecol": [
             47,
@@ -654,7 +654,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0,RFCE-(RFDHIS * (1 - positif(PREM8_11))))",
           "linecol": [
             50,
@@ -677,7 +677,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(RFCEPS-RFDHIS* (1 - positif(PREM8_11)))",
           "linecol": [
             51,
@@ -700,7 +700,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0,RFCEAPS-(RFDHIS * (1 - positif(PREM8_11))))",
           "linecol": [
             52,
@@ -723,7 +723,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "min(0,RFCE-(RFDHIS * (1 - positif(PREM8_11))))",
           "linecol": [
             54,
@@ -746,7 +746,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "min(RFCF+RFMIC - MICFR,RFDANT)",
           "linecol": [
             55,
@@ -769,7 +769,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0,RFCF- RFDANT) * (1 - positif(ART1731BIS)) + max(0,RFCF- DEFRF4BD) * positif(ART1731BIS)",
           "linecol": [
             56,
@@ -792,7 +792,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "min(0,RFCF- RFDANT) * (1 - positif(ART1731BIS)) + min(0,RFCF- DEFRF4BD) * positif(ART1731BIS)",
           "linecol": [
             58,
@@ -830,7 +830,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -866,7 +866,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr(RFCG*RFORDI/RFCD)",
           "linecol": [
             62,
@@ -889,7 +889,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "min( arr ((RFCG)*(FONCI)/RFCD) , RFCG-RFON)",
           "linecol": [
             63,
@@ -912,7 +912,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "min( arr (RFCG*(REAMOR)/RFCD) , RFCG-RFON-2REVF)",
           "linecol": [
             64,
@@ -935,7 +935,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "FONCI + REAMOR",
           "linecol": [
             65,
@@ -973,7 +973,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -1001,7 +1001,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "RFORDI + RFMIC * 0.70 + FONCI + REAMOR - max(0,RFORDI+ RFMIC * 0.70 + FONCI + REAMOR - RFDORD)",
           "linecol": [
             68,
@@ -1024,7 +1024,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "min(RFDORD,max(DEF4BB1731,max(DEF4BB_P,DEF4BBP2))) * DEFRIRF * (1-PREM8_11)",
           "linecol": [
             69,
@@ -1062,7 +1062,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -1090,7 +1090,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "RFORDI + RFMIC * 0.70 + FONCI + REAMOR-RFDORD - RFDHIS- max(0,RFORDI+ RFMIC * 0.70 + FONCI + REAMOR-RFDORD - RFDHIS-RFDANT)",
           "linecol": [
             72,
@@ -1113,7 +1113,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "min(RFDANT,max(DEF4BD1731,max(DEF4BD_P,DEF4BDP2)))* DEFRIRF * (1-PREM8_11)",
           "linecol": [
             73,
@@ -1136,7 +1136,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0, RFORDI-RFDORD)",
           "linecol": [
             74,
@@ -1159,7 +1159,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0,min(RFDHIS,-max(DEF4BC1731,max(DEF4BC_P,DEF4BCP2))+RFDHIS)) * positif(DEFRIGLOBINF+DEFRIGLOBSUP) * (1-PREM8_11)",
           "linecol": [
             75,
@@ -1197,7 +1197,7 @@
   },
   {
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -1225,7 +1225,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0,RFDORD + RFDANT - DEFRF4BB - DEFRF4BD)",
           "linecol": [
             78,

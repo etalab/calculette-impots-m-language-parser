@@ -175,7 +175,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "ISFBASE",
           "linecol": [
             23,
@@ -198,7 +198,7 @@
       }
     ],
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -259,7 +259,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr( max(0, min( DISFBASE , LIM_TR2_ISF ) - (LIM_TR1_ISF)) * (TX_TR2_ISF/10000))",
           "linecol": [
             27,
@@ -282,7 +282,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr( max(0, min( DISFBASE , LIM_TR3_ISF ) - (LIM_TR2_ISF)) * (TX_TR3_ISF/10000))",
           "linecol": [
             28,
@@ -305,7 +305,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr( max(0, min( DISFBASE , LIM_TR4_ISF  ) - (LIM_TR3_ISF)) * (TX_TR4_ISF/100))",
           "linecol": [
             29,
@@ -328,7 +328,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr( max(0, min( DISFBASE , LIM_TR5_ISF  ) - (LIM_TR4_ISF)) * (TX_TR5_ISF/10000))",
           "linecol": [
             30,
@@ -351,7 +351,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr( max(0, DISFBASE - LIM_TR5_ISF) * (TX_TR6_ISF/1000))",
           "linecol": [
             31,
@@ -374,7 +374,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "TR2_ISF + TR3_ISF + TR4_ISF + TR5_ISF + TR6_ISF",
           "linecol": [
             33,
@@ -397,7 +397,7 @@
       }
     ],
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -458,7 +458,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr((17500 - ( (TX_TR5_ISF/10000) * ISFBASE)) * positif(ISFBASE-LIM_ISFINF)*positif(LIM_ISFDEC - ISFBASE)) * positif(ISF1)",
           "linecol": [
             37,
@@ -481,7 +481,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "ISFDEC",
           "linecol": [
             41,
@@ -504,7 +504,7 @@
       }
     ],
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -565,7 +565,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr((ISF1 - ISFDEC) * positif( LIM_ISFDEC - 1 - ISFBASE ) + ISF1 * (1-positif(LIM_ISFDEC - 1 - ISFBASE)))",
           "linecol": [
             45,
@@ -588,7 +588,7 @@
       }
     ],
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -649,7 +649,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "ISFPMEDI",
           "linecol": [
             50,
@@ -672,7 +672,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "ISFPMEIN",
           "linecol": [
             51,
@@ -695,7 +695,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr(ISFPMEDI * (TX50/100))",
           "linecol": [
             52,
@@ -718,7 +718,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr(ISFPMEIN * (TX50/100))",
           "linecol": [
             53,
@@ -741,7 +741,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "min(45000, AISFPMED)",
           "linecol": [
             54,
@@ -764,7 +764,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0, min(45000 - RISFPMED_1, AISFPMEI))",
           "linecol": [
             55,
@@ -787,7 +787,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "ISFFIP",
           "linecol": [
             58,
@@ -810,7 +810,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "ISFFCPI",
           "linecol": [
             59,
@@ -833,7 +833,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr(ISFFIP * (TX50/100))",
           "linecol": [
             60,
@@ -856,7 +856,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr(ISFFCPI * (TX50/100))",
           "linecol": [
             61,
@@ -879,7 +879,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "min(18000, AISFFIP)",
           "linecol": [
             62,
@@ -902,7 +902,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0, min(18000 -  RISFFIP_1, AISFFCPI))",
           "linecol": [
             63,
@@ -925,7 +925,7 @@
       }
     ],
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -986,7 +986,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "50000 * (1-positif(ISFPMEDI+ISFPMEIN+ISFFIP+ISFFCPI)) + 45000 * positif(ISFPMEDI+ISFPMEIN+ISFFIP+ISFFCPI)",
           "linecol": [
             67,
@@ -1009,7 +1009,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "ISFDONF",
           "linecol": [
             70,
@@ -1032,7 +1032,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "ISFDONEURO",
           "linecol": [
             71,
@@ -1055,7 +1055,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr(ISFDONF * (TX75/100))",
           "linecol": [
             73,
@@ -1078,7 +1078,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr(ISFDONEURO * (TX75/100))",
           "linecol": [
             74,
@@ -1101,7 +1101,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "min( PLAF_ISFRED , AISFDONF)",
           "linecol": [
             76,
@@ -1124,7 +1124,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0, min( PLAF_ISFRED - RISFDONF_1, AISFDONCEE))",
           "linecol": [
             77,
@@ -1147,7 +1147,7 @@
       }
     ],
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -1208,7 +1208,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "min(PLAF_ISFRED, RISFDONF_1)",
           "linecol": [
             81,
@@ -1231,7 +1231,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0, min(PLAF_ISFRED - RISFDONF_1, RISFDONCEE_1))",
           "linecol": [
             82,
@@ -1254,7 +1254,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0, min(PLAF_ISFRED - RISFDONF_1 - RISFDONCEE_1, RISFPMED_1))",
           "linecol": [
             83,
@@ -1277,7 +1277,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0, min(PLAF_ISFRED - RISFDONF_1 - RISFDONCEE_1 - RISFPMED_1, RISFPMEI_1))",
           "linecol": [
             84,
@@ -1300,7 +1300,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0, min(PLAF_ISFRED - RISFDONF_1 - RISFDONCEE_1 - RISFPMED_1 - RISFPMEI_1, RISFFIP_1))",
           "linecol": [
             85,
@@ -1323,7 +1323,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0, min(PLAF_ISFRED - RISFDONF_1 - RISFDONCEE_1 - RISFPMED_1 - RISFPMEI_1 - RISFFIP_1, RISFFCPI_1 ))",
           "linecol": [
             87,
@@ -1346,7 +1346,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max( min( RISFDONF_2, ISFBRUT) , 0) * positif(( 1 - null( CODE_2042 - 8 )) * ( 1 - null( CMAJ_ISF - 8)) * ( 1 - null( CMAJ_ISF -34))) + max( min( RISFDONF_2, ISFBRUT) , 0) * (1 - positif(( 1-null( CODE_2042 - 8 )) * ( 1-null( CMAJ_ISF - 8)) * ( 1-null( CMAJ_ISF -34)))) * COD9ZA",
           "linecol": [
             94,
@@ -1369,7 +1369,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max( min( RISFDONCEE_2, ISFBRUT - RISFDONF), 0) * positif(( 1 - null( CODE_2042 - 8 )) * ( 1 - null( CMAJ_ISF - 8)) * ( 1 - null( CMAJ_ISF -34))) + max( min( RISFDONCEE_2, ISFBRUT - RISFDONF), 0) * (1 - positif(( 1-null( CODE_2042 - 8 )) * ( 1-null( CMAJ_ISF - 8)) * ( 1-null( CMAJ_ISF -34)))) * COD9ZA",
           "linecol": [
             100,
@@ -1392,7 +1392,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max( min( RISFPMED_2, ISFBRUT - RISFDONF - RISFDONCEE), 0) * positif(( 1 - null( CODE_2042 - 8 )) * ( 1 - null( CMAJ_ISF - 8)) * ( 1 - null( CMAJ_ISF -34))) + max( min( RISFPMED_2, ISFBRUT - RISFDONF - RISFDONCEE), 0) * (1 - positif(( 1-null( CODE_2042 - 8 )) * ( 1-null( CMAJ_ISF - 8)) * ( 1-null( CMAJ_ISF -34)))) * COD9ZA",
           "linecol": [
             107,
@@ -1415,7 +1415,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max( min( RISFPMEI_2, ISFBRUT - RISFDONF - RISFDONCEE - RISFPMED), 0) * positif(( 1 - null( CODE_2042 - 8 )) * ( 1 - null( CMAJ_ISF - 8)) * ( 1 - null( CMAJ_ISF -34))) + max( min( RISFPMEI_2, ISFBRUT - RISFDONF - RISFDONCEE - RISFPMED), 0) * (1 - positif(( 1-null( CODE_2042 - 8 )) * ( 1-null( CMAJ_ISF - 8)) * ( 1-null( CMAJ_ISF -34)))) * COD9ZA",
           "linecol": [
             115,
@@ -1438,7 +1438,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max( min( RISFFIP_2, ISFBRUT - RISFDONF - RISFDONCEE - RISFPMED - RISFPMEI), 0) * positif(( 1 - null( CODE_2042 - 8 )) * ( 1 - null( CMAJ_ISF - 8)) * ( 1 - null( CMAJ_ISF -34))) + max( min( RISFFIP_2, ISFBRUT - RISFDONF - RISFDONCEE - RISFPMED - RISFPMEI), 0) * (1 - positif(( 1-null( CODE_2042 - 8 )) * ( 1-null( CMAJ_ISF - 8)) * ( 1-null( CMAJ_ISF -34)))) * COD9ZA",
           "linecol": [
             122,
@@ -1461,7 +1461,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max( min( RISFFCPI_2, ISFBRUT - RISFDONF - RISFDONCEE - RISFPMED - RISFPMEI - RISFFIP ), 0) * positif(( 1 - null( CODE_2042 - 8 )) * ( 1 - null( CMAJ_ISF - 8)) * ( 1 - null( CMAJ_ISF -34))) + max( min( RISFFCPI_2, ISFBRUT - RISFDONF - RISFDONCEE - RISFPMED - RISFPMEI - RISFFIP ), 0) * (1 - positif(( 1-null( CODE_2042 - 8 )) * ( 1-null( CMAJ_ISF - 8)) * ( 1-null( CMAJ_ISF -34)))) * COD9ZA",
           "linecol": [
             129,
@@ -1484,7 +1484,7 @@
       }
     ],
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -1545,7 +1545,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "RISFDONF + RISFDONCEE + RISFPMED + RISFPMEI + RISFFIP + RISFFCPI",
           "linecol": [
             140,
@@ -1568,7 +1568,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "RETXISF + COPETOISF",
           "linecol": [
             143,
@@ -1591,7 +1591,7 @@
       }
     ],
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -1652,7 +1652,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "RISFDONF + RISFDONCEE + RISFPMED + RISFPMEI + RISFFIP + RISFFCPI + RISFE",
           "linecol": [
             147,
@@ -1675,7 +1675,7 @@
       }
     ],
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -1736,7 +1736,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0, ISFBRUT - RISFDONF - RISFDONCEE - RISFPMED - RISFPMEI - RISFFIP - RISFFCPI)",
           "linecol": [
             152,
@@ -1759,7 +1759,7 @@
       }
     ],
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -1820,7 +1820,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "ISFPLAF",
           "linecol": [
             156,
@@ -1843,7 +1843,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0,  ISFNETRED * positif(ISFPLAF - ISFNETRED) + ISFPLAF * (1-positif(ISFPLAF - ISFNETRED)))",
           "linecol": [
             158,
@@ -1866,7 +1866,7 @@
       }
     ],
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -1927,7 +1927,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0, ISFNETRED - RISFPLAF)",
           "linecol": [
             163,
@@ -1950,7 +1950,7 @@
       }
     ],
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -2011,7 +2011,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "ISFETRANG",
           "linecol": [
             167,
@@ -2034,7 +2034,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(DISFBASE)*positif(ISFETRANG)*( min(ISFPOSTPLAF , ISFETRANG))",
           "linecol": [
             169,
@@ -2057,7 +2057,7 @@
       }
     ],
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -2118,7 +2118,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max(0, ISFPOSTPLAF - RISFE)",
           "linecol": [
             174,
@@ -2141,7 +2141,7 @@
       }
     ],
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -2202,7 +2202,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "si (CMAJ_ISF = 7 ou CMAJ_ISF = 17 ou CMAJ_ISF = 18) alors (10) sinon ( si (CMAJ_ISF = 8 ou CMAJ_ISF = 34) alors (40) finsi ) finsi",
           "linecol": [
             179,
@@ -2225,7 +2225,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max (0, MAJO1728ISF + arr(ISF5 * COPETOISF/100) * positif_ou_nul(ISF5 - SEUIL_12) + FLAG_TRTARDIF * MAJOISFTARDIF_D + FLAG_TRTARDIF_F * MAJOISFTARDIF_D - FLAG_TRTARDIF_F * ( positif(FLAG_RECTIF) * MAJOISFTARDIF_R + (1 - positif(FLAG_RECTIF)) * MAJOISFTARDIF_A) )",
           "linecol": [
             187,
@@ -2248,7 +2248,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "si (V_CODPF1728ISF=07 ou V_CODPF1728ISF=17 ou V_CODPF1728ISF=18) alors (10) sinon (si (V_CODPF1728ISF=08 ou V_CODPF1728ISF=34) alors (40) finsi) finsi",
           "linecol": [
             196,
@@ -2271,7 +2271,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(1 - positif(V_NBCOD1728ISF)) * ((1 - positif(CMAJ_ISF)) * positif(NMAJISF1) * TXPF1728ISF + positif(CMAJ_ISF) * COPETOISF) + positif(V_NBCOD1728ISF) * (-1)",
           "linecol": [
             205,
@@ -2294,7 +2294,7 @@
       }
     ],
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -2355,7 +2355,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "inf( MOISAN_ISF / 10000 )",
           "linecol": [
             210,
@@ -2378,7 +2378,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(( MOISAN_ISF/10000 - INTMSISF )*10000)  * present(MOISAN_ISF)",
           "linecol": [
             211,
@@ -2401,7 +2401,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(max(0, (INTANISF - (V_ANREV+1) )* 12 + INTMSISF - 6 ) * TXMOISRETARD2) * present(MOISAN_ISF)",
           "linecol": [
             212,
@@ -2424,7 +2424,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "arr(ISF5 * COPETOISF / 100) + arr(ISF5 * TXINTISF / 100)",
           "linecol": [
             214,
@@ -2447,7 +2447,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(RETISF2 + arr(ISF5 * TXINTISF/100))* positif_ou_nul(ISF4BIS - SEUIL_12)",
           "linecol": [
             215,
@@ -2470,7 +2470,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(CMAJ_ISF) * TXINTISF + (TXINRISF * (1-positif(TXINRISF_A)) + (-1) * positif(TXINRISF_A) * positif(TXINRISF) * positif(positif(TXINRISF - TXINRISF_A)+positif(TXINRISF_A-TXINRISF))) + (TXINRISF * positif(TXINRISF_A) * null(TXINRISF - TXINRISF_A)) ",
           "linecol": [
             216,
@@ -2493,7 +2493,7 @@
       },
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "positif(positif(RETISF) * positif(NMAJISF1)+positif(NMAJISF1)) + 2 * positif(RETISF) * (1-positif(NMAJISF1))",
           "linecol": [
             223,
@@ -2516,7 +2516,7 @@
       }
     ],
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -2577,7 +2577,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "( INCISF_NET + NMAJISF1 + arr(ISF5 * TXINTISF / 100) * (1-positif(FLAG_PRIM+FLAG_RETARD+FLAG_DEFAUT)))",
           "linecol": [
             231,
@@ -2600,7 +2600,7 @@
       }
     ],
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -2661,7 +2661,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "ISF5 + PISF",
           "linecol": [
             238,
@@ -2684,7 +2684,7 @@
       }
     ],
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -2745,7 +2745,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "NAPISFTOT",
           "linecol": [
             243,
@@ -2768,7 +2768,7 @@
       }
     ],
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -2829,7 +2829,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "ISFCUM - V_ANTISF",
           "linecol": [
             248,
@@ -2852,7 +2852,7 @@
       }
     ],
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -2913,7 +2913,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "(1 - positif_ou_nul(ISF4BIS - SEUIL_12)) * null(V_ANTISF+0) * ISF4BIS + positif_ou_nul(ISF4BIS - SEUIL_12) * ISF4BIS",
           "linecol": [
             253,
@@ -2936,7 +2936,7 @@
       }
     ],
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
@@ -2997,7 +2997,7 @@
     "variables": [
       {
         "expression": {
-          "type": "expression",
+          "type": "variable_definition_expression",
           "value": "max( 0, ISF5 )",
           "linecol": [
             261,
@@ -3020,7 +3020,7 @@
       }
     ],
     "application": {
-      "type": "regle_application",
+      "type": "applications_reference",
       "names": [
         {
           "type": "symbol_enumeration",
