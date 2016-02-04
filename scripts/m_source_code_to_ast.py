@@ -118,14 +118,6 @@ def make_brackets(value, linecol=None):
         })
 
 
-def make_erreur(name, linecol=None):
-    return clean({
-        'linecol': linecol,
-        'name': name,
-        'type': u'erreur',
-        })
-
-
 def make_float(value, linecol=None):
     return clean({
         'linecol': linecol,
@@ -243,11 +235,10 @@ def make_variable_definition_expression(value, linecol=None):
         })
 
 
-def make_verif_declaration(name, application, condition, erreur, qualifiers=None, linecol=None):
+def make_verif_declaration(name, application, conditions, qualifiers=None, linecol=None):
     return clean({
         'application': application,
-        'condition': condition,
-        'erreur': erreur,
+        'conditions': conditions,
         'linecol': linecol,
         'name': name,
         'qualifiers': qualifiers,
@@ -255,11 +246,28 @@ def make_verif_declaration(name, application, condition, erreur, qualifiers=None
         })
 
 
-def make_verif_declaration_condition(value, linecol=None):
+def make_verif_declaration_condition(expression, erreurs, linecol=None):
     return clean({
+        'erreurs': erreurs,
+        'expression': expression,
         'linecol': linecol,
         'type': u'verif_declaration_condition',
+        })
+
+
+def make_verif_declaration_condition_expression(value, linecol=None):
+    return clean({
+        'linecol': linecol,
+        'type': u'verif_declaration_condition_expression',
         'value': value,
+        })
+
+
+def make_verif_declaration_erreurs(names, linecol=None):
+    return clean({
+        'linecol': linecol,
+        'names': names,
+        'type': u'verif_declaration_erreurs',
         })
 
 
@@ -370,13 +378,6 @@ class MLanguageVisitor(PTNodeVisitor):
         applications = find_one(children, type='applications_reference')
         return make_enchaineur_declaration(
             applications=applications,
-            linecol=m_parser.pos_to_linecol(node.position),
-            name=name,
-            )
-
-    def visit_erreur(self, node, children):
-        name = find_one(children, type='symbol')
-        return make_erreur(
             linecol=m_parser.pos_to_linecol(node.position),
             name=name,
             )
@@ -569,22 +570,36 @@ class MLanguageVisitor(PTNodeVisitor):
         symbols = find_one_or_many(children, type='symbol')
         name, qualifiers = symbols[-1], symbols[:-1] or None
         application = find_one(children, type='applications_reference')
-        condition = find_one(children, type='verif_declaration_condition')
-        erreur = find_one(children, type='erreur')
+        conditions = find_one_or_many(children, type='verif_declaration_condition')
         return make_verif_declaration(
             application=application,
-            condition=condition,
-            erreur=erreur,
+            conditions=conditions,
             linecol=m_parser.pos_to_linecol(node.position),
             name=name,
             qualifiers=qualifiers,
             )
 
     def visit_verif_declaration_condition(self, node, children):
-        value = clean_lines(node.value)
+        erreurs = find_one_or_many(children, type='verif_declaration_erreurs')
+        expression = find_one(children, type='verif_declaration_condition_expression')
         return make_verif_declaration_condition(
+            erreurs=erreurs,
+            expression=expression,
+            linecol=m_parser.pos_to_linecol(node.position),
+            )
+
+    def visit_verif_declaration_condition_expression(self, node, children):
+        value = clean_lines(node.value)
+        return make_verif_declaration_condition_expression(
             linecol=m_parser.pos_to_linecol(node.position),
             value=value,
+            )
+
+    def visit_verif_declaration_erreurs(self, node, children):
+        names = find_one_or_many(children, type='symbol')
+        return make_verif_declaration_erreurs(
+            linecol=m_parser.pos_to_linecol(node.position),
+            names=names,
             )
 
 
