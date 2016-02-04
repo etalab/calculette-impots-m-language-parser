@@ -410,12 +410,6 @@ class MLanguageVisitor(PTNodeVisitor):
             value=children,
             )
 
-    # def visit_symbols_enumeration(self, node, children):
-    #     return make_symbol_enumeration(
-    #         linecol = m_parser.pos_to_linecol(node.position),
-    #         value = children,
-    #         )
-
     def visit_symbol_or_integer_range(self, node, children):
         # Just return sub-rules JSON objects without wrapping them.
         return children[0]
