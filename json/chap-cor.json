@@ -1,0 +1,10041 @@
+[
+  {
+    "type": "comment",
+    "value": "#*************************************************************************************************************************",
+    "linecol": [
+      1,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#",
+    "linecol": [
+      2,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#Copyright or © or Copr.[DGFIP][2015]",
+    "linecol": [
+      3,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#",
+    "linecol": [
+      4,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#Ce logiciel a été initialement développé par la Direction Générale des ",
+    "linecol": [
+      5,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#Finances Publiques pour permettre le calcul de l'impôt sur le revenu 2015 ",
+    "linecol": [
+      6,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#au titre des revenus perçus en 2014. La présente version a permis la ",
+    "linecol": [
+      7,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#génération du moteur de calcul des chaînes de taxation des rôles d'impôt ",
+    "linecol": [
+      8,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#sur le revenu de ce millésime.",
+    "linecol": [
+      9,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#",
+    "linecol": [
+      10,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#Ce logiciel est régi par la licence CeCILL 2.1 soumise au droit français ",
+    "linecol": [
+      11,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#et respectant les principes de diffusion des logiciels libres. Vous pouvez ",
+    "linecol": [
+      12,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#utiliser, modifier et/ou redistribuer ce programme sous les conditions de ",
+    "linecol": [
+      13,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#la licence CeCILL 2.1 telle que diffusée par le CEA, le CNRS et l'INRIA  sur ",
+    "linecol": [
+      14,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#le site \"http://www.cecill.info\".",
+    "linecol": [
+      15,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#",
+    "linecol": [
+      16,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#Le fait que vous puissiez accéder à cet en-tête signifie que vous avez pris ",
+    "linecol": [
+      17,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#connaissance de la licence CeCILL 2.1 et que vous en avez accepté les termes.",
+    "linecol": [
+      18,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#",
+    "linecol": [
+      19,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#**************************************************************************************************************************",
+    "linecol": [
+      20,
+      1
+    ]
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "1080",
+      "linecol": [
+        22,
+        32
+      ]
+    },
+    "linecol": [
+      22,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "PRS",
+          "linecol": [
+            24,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PRS_P",
+          "linecol": [
+            24,
+            1
+          ]
+        },
+        "linecol": [
+          24,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "CSG",
+          "linecol": [
+            25,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "CSG_P",
+          "linecol": [
+            25,
+            1
+          ]
+        },
+        "linecol": [
+          25,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RDSN",
+          "linecol": [
+            26,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RDS_P",
+          "linecol": [
+            26,
+            1
+          ]
+        },
+        "linecol": [
+          26,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "IRN",
+          "linecol": [
+            27,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "IRNIN_P",
+          "linecol": [
+            27,
+            1
+          ]
+        },
+        "linecol": [
+          27,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "IRNIN_INR",
+          "linecol": [
+            28,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "IRNIN_INR_P",
+          "linecol": [
+            28,
+            1
+          ]
+        },
+        "linecol": [
+          28,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "CSBASE_INR",
+          "linecol": [
+            29,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "CSBASE_INR_P",
+          "linecol": [
+            29,
+            1
+          ]
+        },
+        "linecol": [
+          29,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "PSBASE_INR",
+          "linecol": [
+            30,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PSBASE_INR_P",
+          "linecol": [
+            30,
+            1
+          ]
+        },
+        "linecol": [
+          30,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RDBASE_INR",
+          "linecol": [
+            31,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RDBASE_INR_P",
+          "linecol": [
+            31,
+            1
+          ]
+        },
+        "linecol": [
+          31,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "CDISBASE_INR",
+          "linecol": [
+            32,
+            18
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "CDISBASE_INR_P",
+          "linecol": [
+            32,
+            1
+          ]
+        },
+        "linecol": [
+          32,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "CVNBASE_INR",
+          "linecol": [
+            33,
+            17
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "CVNBASE_INR_P",
+          "linecol": [
+            33,
+            1
+          ]
+        },
+        "linecol": [
+          33,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "GLOBASE_INR",
+          "linecol": [
+            34,
+            17
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "GLOBASE_INR_P",
+          "linecol": [
+            34,
+            1
+          ]
+        },
+        "linecol": [
+          34,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RSE1BASE_INR",
+          "linecol": [
+            35,
+            18
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RSE1BASE_INR_P",
+          "linecol": [
+            35,
+            1
+          ]
+        },
+        "linecol": [
+          35,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RSE2BASE_INR",
+          "linecol": [
+            36,
+            18
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RSE2BASE_INR_P",
+          "linecol": [
+            36,
+            1
+          ]
+        },
+        "linecol": [
+          36,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RSE3BASE_INR",
+          "linecol": [
+            37,
+            18
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RSE3BASE_INR_P",
+          "linecol": [
+            37,
+            1
+          ]
+        },
+        "linecol": [
+          37,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RSE4BASE_INR",
+          "linecol": [
+            38,
+            18
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RSE4BASE_INR_P",
+          "linecol": [
+            38,
+            1
+          ]
+        },
+        "linecol": [
+          38,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RSE5BASE_INR",
+          "linecol": [
+            39,
+            18
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RSE5BASE_INR_P",
+          "linecol": [
+            39,
+            1
+          ]
+        },
+        "linecol": [
+          39,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TAXABASE_INR",
+          "linecol": [
+            40,
+            18
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TAXABASE_INR_P",
+          "linecol": [
+            40,
+            1
+          ]
+        },
+        "linecol": [
+          40,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "PCAPBASE_INR",
+          "linecol": [
+            41,
+            18
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PCAPBASE_INR_P",
+          "linecol": [
+            41,
+            1
+          ]
+        },
+        "linecol": [
+          41,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "LOYBASE_INR",
+          "linecol": [
+            42,
+            17
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "LOYBASE_INR_P",
+          "linecol": [
+            42,
+            1
+          ]
+        },
+        "linecol": [
+          42,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "CHRBASE_INR",
+          "linecol": [
+            43,
+            17
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "CHRBASE_INR_P",
+          "linecol": [
+            43,
+            1
+          ]
+        },
+        "linecol": [
+          43,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "REGVBASE_INR",
+          "linecol": [
+            44,
+            18
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "REGVBASE_INR_P",
+          "linecol": [
+            44,
+            1
+          ]
+        },
+        "linecol": [
+          44,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "CSREC",
+          "linecol": [
+            45,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "CSREC_P",
+          "linecol": [
+            45,
+            1
+          ]
+        },
+        "linecol": [
+          45,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "NAPCR",
+          "linecol": [
+            46,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "NAPCR_P",
+          "linecol": [
+            46,
+            1
+          ]
+        },
+        "linecol": [
+          46,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TAXABASE",
+          "linecol": [
+            47,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TAXA_P",
+          "linecol": [
+            47,
+            1
+          ]
+        },
+        "linecol": [
+          47,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "CHRBASE",
+          "linecol": [
+            48,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "CHR_P",
+          "linecol": [
+            48,
+            1
+          ]
+        },
+        "linecol": [
+          48,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TAXASSUR",
+          "linecol": [
+            49,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TAXABRUT_P",
+          "linecol": [
+            49,
+            1
+          ]
+        },
+        "linecol": [
+          49,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "IPCAPTAXT",
+          "linecol": [
+            50,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PCAPBRUT_P",
+          "linecol": [
+            50,
+            1
+          ]
+        },
+        "linecol": [
+          50,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "IHAUTREVT",
+          "linecol": [
+            51,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "CHRBRUT_P",
+          "linecol": [
+            51,
+            1
+          ]
+        },
+        "linecol": [
+          51,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "PCAPBASE",
+          "linecol": [
+            52,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PCAP_P",
+          "linecol": [
+            52,
+            1
+          ]
+        },
+        "linecol": [
+          52,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RSE1BASE",
+          "linecol": [
+            53,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RSE1_P",
+          "linecol": [
+            53,
+            1
+          ]
+        },
+        "linecol": [
+          53,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RSE2BASE",
+          "linecol": [
+            54,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RSE2_P",
+          "linecol": [
+            54,
+            1
+          ]
+        },
+        "linecol": [
+          54,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RSE3BASE",
+          "linecol": [
+            55,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RSE3_P",
+          "linecol": [
+            55,
+            1
+          ]
+        },
+        "linecol": [
+          55,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RSE4BASE",
+          "linecol": [
+            56,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RSE4_P",
+          "linecol": [
+            56,
+            1
+          ]
+        },
+        "linecol": [
+          56,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "CDISBASE",
+          "linecol": [
+            57,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "CDIS_P",
+          "linecol": [
+            57,
+            1
+          ]
+        },
+        "linecol": [
+          57,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "DEPCHOBAS",
+          "linecol": [
+            58,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "VAR7WY_P",
+          "linecol": [
+            58,
+            1
+          ]
+        },
+        "linecol": [
+          58,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "DEPMOBIL",
+          "linecol": [
+            59,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "VAR7WZ_P",
+          "linecol": [
+            59,
+            1
+          ]
+        },
+        "linecol": [
+          59,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "COD7WD",
+          "linecol": [
+            60,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "VAR7WD_P",
+          "linecol": [
+            60,
+            1
+          ]
+        },
+        "linecol": [
+          60,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ISF4BASE",
+          "linecol": [
+            61,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ISF_P",
+          "linecol": [
+            61,
+            1
+          ]
+        },
+        "linecol": [
+          61,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACOTFOR",
+          "linecol": [
+            63,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACOTFOR_P",
+          "linecol": [
+            63,
+            1
+          ]
+        },
+        "linecol": [
+          63,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCOTFOR",
+          "linecol": [
+            64,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCOTFOR_P",
+          "linecol": [
+            64,
+            1
+          ]
+        },
+        "linecol": [
+          64,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "AREPA",
+          "linecol": [
+            65,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "AREPA_P",
+          "linecol": [
+            65,
+            1
+          ]
+        },
+        "linecol": [
+          65,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RREPA",
+          "linecol": [
+            66,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RREPA_P",
+          "linecol": [
+            66,
+            1
+          ]
+        },
+        "linecol": [
+          66,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "AAIDE",
+          "linecol": [
+            67,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "AAIDE_P",
+          "linecol": [
+            67,
+            1
+          ]
+        },
+        "linecol": [
+          67,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RAIDE",
+          "linecol": [
+            68,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RAIDE_P",
+          "linecol": [
+            68,
+            1
+          ]
+        },
+        "linecol": [
+          68,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ADIFAGRI",
+          "linecol": [
+            69,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ADIFAGRI_P",
+          "linecol": [
+            69,
+            1
+          ]
+        },
+        "linecol": [
+          69,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RDIFAGRI",
+          "linecol": [
+            70,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RDIFAGRI_P",
+          "linecol": [
+            70,
+            1
+          ]
+        },
+        "linecol": [
+          70,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "AFORET",
+          "linecol": [
+            71,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "AFORET_P",
+          "linecol": [
+            71,
+            1
+          ]
+        },
+        "linecol": [
+          71,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RFORET",
+          "linecol": [
+            72,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RFORET_P",
+          "linecol": [
+            72,
+            1
+          ]
+        },
+        "linecol": [
+          72,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "AFIPDOM",
+          "linecol": [
+            73,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "AFIPDOM_P",
+          "linecol": [
+            73,
+            1
+          ]
+        },
+        "linecol": [
+          73,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RFIPDOM",
+          "linecol": [
+            74,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RFIPDOM_P",
+          "linecol": [
+            74,
+            1
+          ]
+        },
+        "linecol": [
+          74,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "AFIPC",
+          "linecol": [
+            75,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "AFIPC_P",
+          "linecol": [
+            75,
+            1
+          ]
+        },
+        "linecol": [
+          75,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RFIPC",
+          "linecol": [
+            76,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RFIPC_P",
+          "linecol": [
+            76,
+            1
+          ]
+        },
+        "linecol": [
+          76,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACINE",
+          "linecol": [
+            77,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACINE_P",
+          "linecol": [
+            77,
+            1
+          ]
+        },
+        "linecol": [
+          77,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCINE",
+          "linecol": [
+            78,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCINE_P",
+          "linecol": [
+            78,
+            1
+          ]
+        },
+        "linecol": [
+          78,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ARESTIMO",
+          "linecol": [
+            79,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ARESTIMO_P",
+          "linecol": [
+            79,
+            1
+          ]
+        },
+        "linecol": [
+          79,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RRESTIMO",
+          "linecol": [
+            80,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RRESTIMO_P",
+          "linecol": [
+            80,
+            1
+          ]
+        },
+        "linecol": [
+          80,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ASOCREPR",
+          "linecol": [
+            81,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ASOCREPR_P",
+          "linecol": [
+            81,
+            1
+          ]
+        },
+        "linecol": [
+          81,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RSOCREPR",
+          "linecol": [
+            82,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RSOCREPR_P",
+          "linecol": [
+            82,
+            1
+          ]
+        },
+        "linecol": [
+          82,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "APRESCOMP",
+          "linecol": [
+            83,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "APRESCOMP_P",
+          "linecol": [
+            83,
+            1
+          ]
+        },
+        "linecol": [
+          83,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RRPRESCOMP",
+          "linecol": [
+            84,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RRPRESCOMP_P",
+          "linecol": [
+            84,
+            1
+          ]
+        },
+        "linecol": [
+          84,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "AHEBE",
+          "linecol": [
+            85,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "AHEBE_P",
+          "linecol": [
+            85,
+            1
+          ]
+        },
+        "linecol": [
+          85,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RHEBE",
+          "linecol": [
+            86,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RHEBE_P",
+          "linecol": [
+            86,
+            1
+          ]
+        },
+        "linecol": [
+          86,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ASURV",
+          "linecol": [
+            87,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ASURV_P",
+          "linecol": [
+            87,
+            1
+          ]
+        },
+        "linecol": [
+          87,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RSURV",
+          "linecol": [
+            88,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RSURV_P",
+          "linecol": [
+            88,
+            1
+          ]
+        },
+        "linecol": [
+          88,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BFCPI",
+          "linecol": [
+            89,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BFCPI_P",
+          "linecol": [
+            89,
+            1
+          ]
+        },
+        "linecol": [
+          89,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RINNO",
+          "linecol": [
+            90,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RINNO_P",
+          "linecol": [
+            90,
+            1
+          ]
+        },
+        "linecol": [
+          90,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ASOUFIP",
+          "linecol": [
+            91,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ASOUFIP_P",
+          "linecol": [
+            91,
+            1
+          ]
+        },
+        "linecol": [
+          91,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RSOUFIP",
+          "linecol": [
+            92,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RSOUFIP_P",
+          "linecol": [
+            92,
+            1
+          ]
+        },
+        "linecol": [
+          92,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ARIRENOV",
+          "linecol": [
+            93,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ARIRENOV_P",
+          "linecol": [
+            93,
+            1
+          ]
+        },
+        "linecol": [
+          93,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RRIRENOV",
+          "linecol": [
+            94,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RRIRENOV_P",
+          "linecol": [
+            94,
+            1
+          ]
+        },
+        "linecol": [
+          94,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ALOGDOM",
+          "linecol": [
+            95,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ALOGDOM_P",
+          "linecol": [
+            95,
+            1
+          ]
+        },
+        "linecol": [
+          95,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RLOGDOM",
+          "linecol": [
+            96,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RLOGDOM_P",
+          "linecol": [
+            96,
+            1
+          ]
+        },
+        "linecol": [
+          96,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACREAT",
+          "linecol": [
+            97,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACREAT_P",
+          "linecol": [
+            97,
+            1
+          ]
+        },
+        "linecol": [
+          97,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCREAT",
+          "linecol": [
+            98,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCREAT_P",
+          "linecol": [
+            98,
+            1
+          ]
+        },
+        "linecol": [
+          98,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACOMP",
+          "linecol": [
+            99,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACOMP_P",
+          "linecol": [
+            99,
+            1
+          ]
+        },
+        "linecol": [
+          99,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCOMP",
+          "linecol": [
+            100,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCOMP_P",
+          "linecol": [
+            100,
+            1
+          ]
+        },
+        "linecol": [
+          100,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RRETU",
+          "linecol": [
+            101,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RRETU_P",
+          "linecol": [
+            101,
+            1
+          ]
+        },
+        "linecol": [
+          101,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ADONS",
+          "linecol": [
+            102,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ADONS_P",
+          "linecol": [
+            102,
+            1
+          ]
+        },
+        "linecol": [
+          102,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RDONS",
+          "linecol": [
+            103,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RDONS_P",
+          "linecol": [
+            103,
+            1
+          ]
+        },
+        "linecol": [
+          103,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ADUFLOGIH",
+          "linecol": [
+            104,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ADUFLOGIH_P",
+          "linecol": [
+            104,
+            1
+          ]
+        },
+        "linecol": [
+          104,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RDUFLOGIH",
+          "linecol": [
+            105,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RDUFLOGIH_P",
+          "linecol": [
+            105,
+            1
+          ]
+        },
+        "linecol": [
+          105,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ANOUV",
+          "linecol": [
+            106,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ANOUV_P",
+          "linecol": [
+            106,
+            1
+          ]
+        },
+        "linecol": [
+          106,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RNOUV",
+          "linecol": [
+            107,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RNOUV_P",
+          "linecol": [
+            107,
+            1
+          ]
+        },
+        "linecol": [
+          107,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "AFOREST",
+          "linecol": [
+            108,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "AFOREST_P",
+          "linecol": [
+            108,
+            1
+          ]
+        },
+        "linecol": [
+          108,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RFOR",
+          "linecol": [
+            109,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RFOR_P",
+          "linecol": [
+            109,
+            1
+          ]
+        },
+        "linecol": [
+          109,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ATOURREP",
+          "linecol": [
+            110,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ATOURREP_P",
+          "linecol": [
+            110,
+            1
+          ]
+        },
+        "linecol": [
+          110,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RTOURREP",
+          "linecol": [
+            111,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RTOURREP_P",
+          "linecol": [
+            111,
+            1
+          ]
+        },
+        "linecol": [
+          111,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ATOUHOTR",
+          "linecol": [
+            112,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ATOUHOTR_P",
+          "linecol": [
+            112,
+            1
+          ]
+        },
+        "linecol": [
+          112,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RTOUHOTR",
+          "linecol": [
+            113,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RTOUHOTR_P",
+          "linecol": [
+            113,
+            1
+          ]
+        },
+        "linecol": [
+          113,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ATOUREPA",
+          "linecol": [
+            114,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ATOUREPA_P",
+          "linecol": [
+            114,
+            1
+          ]
+        },
+        "linecol": [
+          114,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RTOUREPA",
+          "linecol": [
+            115,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RTOUREPA_P",
+          "linecol": [
+            115,
+            1
+          ]
+        },
+        "linecol": [
+          115,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELRREDLA",
+          "linecol": [
+            116,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELRREDLA_P",
+          "linecol": [
+            116,
+            1
+          ]
+        },
+        "linecol": [
+          116,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELRREDLA",
+          "linecol": [
+            117,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELRREDLA_P",
+          "linecol": [
+            117,
+            1
+          ]
+        },
+        "linecol": [
+          117,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELRREDLB",
+          "linecol": [
+            118,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELRREDLB_P",
+          "linecol": [
+            118,
+            1
+          ]
+        },
+        "linecol": [
+          118,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELRREDLB",
+          "linecol": [
+            119,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELRREDLB_P",
+          "linecol": [
+            119,
+            1
+          ]
+        },
+        "linecol": [
+          119,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELRREDLE",
+          "linecol": [
+            120,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELRREDLE_P",
+          "linecol": [
+            120,
+            1
+          ]
+        },
+        "linecol": [
+          120,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELRREDLE",
+          "linecol": [
+            121,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELRREDLE_P",
+          "linecol": [
+            121,
+            1
+          ]
+        },
+        "linecol": [
+          121,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELRREDLM",
+          "linecol": [
+            122,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELRREDLM_P",
+          "linecol": [
+            122,
+            1
+          ]
+        },
+        "linecol": [
+          122,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELRREDLM",
+          "linecol": [
+            123,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELRREDLM_P",
+          "linecol": [
+            123,
+            1
+          ]
+        },
+        "linecol": [
+          123,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELRREDLC",
+          "linecol": [
+            124,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELRREDLC_P",
+          "linecol": [
+            124,
+            1
+          ]
+        },
+        "linecol": [
+          124,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELRREDLC",
+          "linecol": [
+            125,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELRREDLC_P",
+          "linecol": [
+            125,
+            1
+          ]
+        },
+        "linecol": [
+          125,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELRREDLD",
+          "linecol": [
+            126,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELRREDLD_P",
+          "linecol": [
+            126,
+            1
+          ]
+        },
+        "linecol": [
+          126,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELRREDLD",
+          "linecol": [
+            127,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELRREDLD_P",
+          "linecol": [
+            127,
+            1
+          ]
+        },
+        "linecol": [
+          127,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELRREDLS",
+          "linecol": [
+            128,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELRREDLS_P",
+          "linecol": [
+            128,
+            1
+          ]
+        },
+        "linecol": [
+          128,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELRREDLS",
+          "linecol": [
+            129,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELRREDLS_P",
+          "linecol": [
+            129,
+            1
+          ]
+        },
+        "linecol": [
+          129,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELRREDLF",
+          "linecol": [
+            130,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELRREDLF_P",
+          "linecol": [
+            130,
+            1
+          ]
+        },
+        "linecol": [
+          130,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELRREDLF",
+          "linecol": [
+            131,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELRREDLF_P",
+          "linecol": [
+            131,
+            1
+          ]
+        },
+        "linecol": [
+          131,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELRREDLZ",
+          "linecol": [
+            132,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELRREDLZ_P",
+          "linecol": [
+            132,
+            1
+          ]
+        },
+        "linecol": [
+          132,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELRREDLZ",
+          "linecol": [
+            133,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELRREDLZ_P",
+          "linecol": [
+            133,
+            1
+          ]
+        },
+        "linecol": [
+          133,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELRREDMG",
+          "linecol": [
+            134,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELRREDMG_P",
+          "linecol": [
+            134,
+            1
+          ]
+        },
+        "linecol": [
+          134,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELRREDMG",
+          "linecol": [
+            135,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELRREDMG_P",
+          "linecol": [
+            135,
+            1
+          ]
+        },
+        "linecol": [
+          135,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELREPHS",
+          "linecol": [
+            136,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELREPHS_P",
+          "linecol": [
+            136,
+            1
+          ]
+        },
+        "linecol": [
+          136,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELREPHS",
+          "linecol": [
+            137,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELREPHS_P",
+          "linecol": [
+            137,
+            1
+          ]
+        },
+        "linecol": [
+          137,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELREPHR",
+          "linecol": [
+            138,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELREPHR_P",
+          "linecol": [
+            138,
+            1
+          ]
+        },
+        "linecol": [
+          138,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELREPHR",
+          "linecol": [
+            139,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELREPHR_P",
+          "linecol": [
+            139,
+            1
+          ]
+        },
+        "linecol": [
+          139,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELREPHU",
+          "linecol": [
+            140,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELREPHU_P",
+          "linecol": [
+            140,
+            1
+          ]
+        },
+        "linecol": [
+          140,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELREPHU",
+          "linecol": [
+            141,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELREPHU_P",
+          "linecol": [
+            141,
+            1
+          ]
+        },
+        "linecol": [
+          141,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELREPHT",
+          "linecol": [
+            142,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELREPHT_P",
+          "linecol": [
+            142,
+            1
+          ]
+        },
+        "linecol": [
+          142,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELREPHT",
+          "linecol": [
+            143,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELREPHT_P",
+          "linecol": [
+            143,
+            1
+          ]
+        },
+        "linecol": [
+          143,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELREPHZ",
+          "linecol": [
+            144,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELREPHZ_P",
+          "linecol": [
+            144,
+            1
+          ]
+        },
+        "linecol": [
+          144,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELREPHZ",
+          "linecol": [
+            145,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELREPHZ_P",
+          "linecol": [
+            145,
+            1
+          ]
+        },
+        "linecol": [
+          145,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELREPHX",
+          "linecol": [
+            146,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELREPHX_P",
+          "linecol": [
+            146,
+            1
+          ]
+        },
+        "linecol": [
+          146,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELREPHX",
+          "linecol": [
+            147,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELREPHX_P",
+          "linecol": [
+            147,
+            1
+          ]
+        },
+        "linecol": [
+          147,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELREPHW",
+          "linecol": [
+            148,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELREPHW_P",
+          "linecol": [
+            148,
+            1
+          ]
+        },
+        "linecol": [
+          148,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELREPHW",
+          "linecol": [
+            149,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELREPHW_P",
+          "linecol": [
+            149,
+            1
+          ]
+        },
+        "linecol": [
+          149,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELREPHV",
+          "linecol": [
+            150,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELREPHV_P",
+          "linecol": [
+            150,
+            1
+          ]
+        },
+        "linecol": [
+          150,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELREPHV",
+          "linecol": [
+            151,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELREPHV_P",
+          "linecol": [
+            151,
+            1
+          ]
+        },
+        "linecol": [
+          151,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELREPHF",
+          "linecol": [
+            152,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELREPHF_P",
+          "linecol": [
+            152,
+            1
+          ]
+        },
+        "linecol": [
+          152,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELREPHF",
+          "linecol": [
+            153,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELREPHF_P",
+          "linecol": [
+            153,
+            1
+          ]
+        },
+        "linecol": [
+          153,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELREPHE",
+          "linecol": [
+            154,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELREPHE_P",
+          "linecol": [
+            154,
+            1
+          ]
+        },
+        "linecol": [
+          154,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELREPHE",
+          "linecol": [
+            155,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELREPHE_P",
+          "linecol": [
+            155,
+            1
+          ]
+        },
+        "linecol": [
+          155,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELREPHD",
+          "linecol": [
+            156,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELREPHD_P",
+          "linecol": [
+            156,
+            1
+          ]
+        },
+        "linecol": [
+          156,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELREPHD",
+          "linecol": [
+            157,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELREPHD_P",
+          "linecol": [
+            157,
+            1
+          ]
+        },
+        "linecol": [
+          157,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELREPHH",
+          "linecol": [
+            158,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELREPHH_P",
+          "linecol": [
+            158,
+            1
+          ]
+        },
+        "linecol": [
+          158,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELREPHH",
+          "linecol": [
+            159,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELREPHH_P",
+          "linecol": [
+            159,
+            1
+          ]
+        },
+        "linecol": [
+          159,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELREPHG",
+          "linecol": [
+            160,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELREPHG_P",
+          "linecol": [
+            160,
+            1
+          ]
+        },
+        "linecol": [
+          160,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELREPHG",
+          "linecol": [
+            161,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELREPHG_P",
+          "linecol": [
+            161,
+            1
+          ]
+        },
+        "linecol": [
+          161,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELREPHB",
+          "linecol": [
+            162,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELREPHB_P",
+          "linecol": [
+            162,
+            1
+          ]
+        },
+        "linecol": [
+          162,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELREPHB",
+          "linecol": [
+            163,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELREPHB_P",
+          "linecol": [
+            163,
+            1
+          ]
+        },
+        "linecol": [
+          163,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELREPHA",
+          "linecol": [
+            164,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELREPHA_P",
+          "linecol": [
+            164,
+            1
+          ]
+        },
+        "linecol": [
+          164,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELREPHA",
+          "linecol": [
+            165,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELREPHA_P",
+          "linecol": [
+            165,
+            1
+          ]
+        },
+        "linecol": [
+          165,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELREPGU",
+          "linecol": [
+            166,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELREPGU_P",
+          "linecol": [
+            166,
+            1
+          ]
+        },
+        "linecol": [
+          166,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELREPGU",
+          "linecol": [
+            167,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELREPGU_P",
+          "linecol": [
+            167,
+            1
+          ]
+        },
+        "linecol": [
+          167,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELREPGX",
+          "linecol": [
+            168,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELREPGX_P",
+          "linecol": [
+            168,
+            1
+          ]
+        },
+        "linecol": [
+          168,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELREPGX",
+          "linecol": [
+            169,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELREPGX_P",
+          "linecol": [
+            169,
+            1
+          ]
+        },
+        "linecol": [
+          169,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELREPGT",
+          "linecol": [
+            170,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELREPGT_P",
+          "linecol": [
+            170,
+            1
+          ]
+        },
+        "linecol": [
+          170,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELREPGT",
+          "linecol": [
+            171,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELREPGT_P",
+          "linecol": [
+            171,
+            1
+          ]
+        },
+        "linecol": [
+          171,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELREPGS",
+          "linecol": [
+            172,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELREPGS_P",
+          "linecol": [
+            172,
+            1
+          ]
+        },
+        "linecol": [
+          172,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELREPGS",
+          "linecol": [
+            173,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELREPGS_P",
+          "linecol": [
+            173,
+            1
+          ]
+        },
+        "linecol": [
+          173,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELREPGW",
+          "linecol": [
+            174,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELREPGW_P",
+          "linecol": [
+            174,
+            1
+          ]
+        },
+        "linecol": [
+          174,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELREPGW",
+          "linecol": [
+            175,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELREPGW_P",
+          "linecol": [
+            175,
+            1
+          ]
+        },
+        "linecol": [
+          175,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELREPGP",
+          "linecol": [
+            176,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELREPGP_P",
+          "linecol": [
+            176,
+            1
+          ]
+        },
+        "linecol": [
+          176,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELREPGP",
+          "linecol": [
+            177,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELREPGP_P",
+          "linecol": [
+            177,
+            1
+          ]
+        },
+        "linecol": [
+          177,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELREPGL",
+          "linecol": [
+            178,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELREPGL_P",
+          "linecol": [
+            178,
+            1
+          ]
+        },
+        "linecol": [
+          178,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELREPGL",
+          "linecol": [
+            179,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELREPGL_P",
+          "linecol": [
+            179,
+            1
+          ]
+        },
+        "linecol": [
+          179,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELREPGV",
+          "linecol": [
+            180,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELREPGV_P",
+          "linecol": [
+            180,
+            1
+          ]
+        },
+        "linecol": [
+          180,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELREPGV",
+          "linecol": [
+            181,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELREPGV_P",
+          "linecol": [
+            181,
+            1
+          ]
+        },
+        "linecol": [
+          181,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELREPGK",
+          "linecol": [
+            182,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELREPGK_P",
+          "linecol": [
+            182,
+            1
+          ]
+        },
+        "linecol": [
+          182,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELREPGK",
+          "linecol": [
+            183,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELREPGK_P",
+          "linecol": [
+            183,
+            1
+          ]
+        },
+        "linecol": [
+          183,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELREPGJ",
+          "linecol": [
+            184,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELREPGJ_P",
+          "linecol": [
+            184,
+            1
+          ]
+        },
+        "linecol": [
+          184,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELREPGJ",
+          "linecol": [
+            185,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELREPGJ_P",
+          "linecol": [
+            185,
+            1
+          ]
+        },
+        "linecol": [
+          185,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELHM",
+          "linecol": [
+            186,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELHM_P",
+          "linecol": [
+            186,
+            1
+          ]
+        },
+        "linecol": [
+          186,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELHM",
+          "linecol": [
+            187,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELHM_P",
+          "linecol": [
+            187,
+            1
+          ]
+        },
+        "linecol": [
+          187,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELHL",
+          "linecol": [
+            190,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELHL_P",
+          "linecol": [
+            190,
+            1
+          ]
+        },
+        "linecol": [
+          190,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELHL",
+          "linecol": [
+            191,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELHL_P",
+          "linecol": [
+            191,
+            1
+          ]
+        },
+        "linecol": [
+          191,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELHNO",
+          "linecol": [
+            192,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELHNO_P",
+          "linecol": [
+            192,
+            1
+          ]
+        },
+        "linecol": [
+          192,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELHNO",
+          "linecol": [
+            193,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELHNO_P",
+          "linecol": [
+            193,
+            1
+          ]
+        },
+        "linecol": [
+          193,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELHJK",
+          "linecol": [
+            194,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELHJK_P",
+          "linecol": [
+            194,
+            1
+          ]
+        },
+        "linecol": [
+          194,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELHJK",
+          "linecol": [
+            195,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELHJK_P",
+          "linecol": [
+            195,
+            1
+          ]
+        },
+        "linecol": [
+          195,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELNQ",
+          "linecol": [
+            196,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELNQ_P",
+          "linecol": [
+            196,
+            1
+          ]
+        },
+        "linecol": [
+          196,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELNQ",
+          "linecol": [
+            197,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELNQ_P",
+          "linecol": [
+            197,
+            1
+          ]
+        },
+        "linecol": [
+          197,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELNBGL",
+          "linecol": [
+            198,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELNBGL_P",
+          "linecol": [
+            198,
+            1
+          ]
+        },
+        "linecol": [
+          198,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELNBGL",
+          "linecol": [
+            199,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELNBGL_P",
+          "linecol": [
+            199,
+            1
+          ]
+        },
+        "linecol": [
+          199,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELCOM",
+          "linecol": [
+            200,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELCOM_P",
+          "linecol": [
+            200,
+            1
+          ]
+        },
+        "linecol": [
+          200,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELCOM",
+          "linecol": [
+            201,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELCOM_P",
+          "linecol": [
+            201,
+            1
+          ]
+        },
+        "linecol": [
+          201,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACEL",
+          "linecol": [
+            202,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACEL_P",
+          "linecol": [
+            202,
+            1
+          ]
+        },
+        "linecol": [
+          202,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCEL",
+          "linecol": [
+            203,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCEL_P",
+          "linecol": [
+            203,
+            1
+          ]
+        },
+        "linecol": [
+          203,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELJP",
+          "linecol": [
+            204,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELJP_P",
+          "linecol": [
+            204,
+            1
+          ]
+        },
+        "linecol": [
+          204,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELJP",
+          "linecol": [
+            205,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELJP_P",
+          "linecol": [
+            205,
+            1
+          ]
+        },
+        "linecol": [
+          205,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELJBGL",
+          "linecol": [
+            206,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELJBGL_P",
+          "linecol": [
+            206,
+            1
+          ]
+        },
+        "linecol": [
+          206,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELJBGL",
+          "linecol": [
+            207,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELJBGL_P",
+          "linecol": [
+            207,
+            1
+          ]
+        },
+        "linecol": [
+          207,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELJOQR",
+          "linecol": [
+            208,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELJOQR_P",
+          "linecol": [
+            208,
+            1
+          ]
+        },
+        "linecol": [
+          208,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELJOQR",
+          "linecol": [
+            209,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELJOQR_P",
+          "linecol": [
+            209,
+            1
+          ]
+        },
+        "linecol": [
+          209,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACEL2012",
+          "linecol": [
+            210,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACEL2012_P",
+          "linecol": [
+            210,
+            1
+          ]
+        },
+        "linecol": [
+          210,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCEL2012",
+          "linecol": [
+            211,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCEL2012_P",
+          "linecol": [
+            211,
+            1
+          ]
+        },
+        "linecol": [
+          211,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELFD",
+          "linecol": [
+            212,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELFD_P",
+          "linecol": [
+            212,
+            1
+          ]
+        },
+        "linecol": [
+          212,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELFD",
+          "linecol": [
+            213,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELFD_P",
+          "linecol": [
+            213,
+            1
+          ]
+        },
+        "linecol": [
+          213,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACELFABC",
+          "linecol": [
+            214,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACELFABC_P",
+          "linecol": [
+            214,
+            1
+          ]
+        },
+        "linecol": [
+          214,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCELFABC",
+          "linecol": [
+            215,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCELFABC_P",
+          "linecol": [
+            215,
+            1
+          ]
+        },
+        "linecol": [
+          215,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "AREDMEUB",
+          "linecol": [
+            216,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "AREDMEUB_P",
+          "linecol": [
+            216,
+            1
+          ]
+        },
+        "linecol": [
+          216,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RREDMEUB",
+          "linecol": [
+            217,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RREDMEUB_P",
+          "linecol": [
+            217,
+            1
+          ]
+        },
+        "linecol": [
+          217,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "AREDREP",
+          "linecol": [
+            218,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "AREDREP_P",
+          "linecol": [
+            218,
+            1
+          ]
+        },
+        "linecol": [
+          218,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RREDREP",
+          "linecol": [
+            219,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RREDREP_P",
+          "linecol": [
+            219,
+            1
+          ]
+        },
+        "linecol": [
+          219,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "AILMIX",
+          "linecol": [
+            220,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "AILMIX_P",
+          "linecol": [
+            220,
+            1
+          ]
+        },
+        "linecol": [
+          220,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RILMIX",
+          "linecol": [
+            221,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RILMIX_P",
+          "linecol": [
+            221,
+            1
+          ]
+        },
+        "linecol": [
+          221,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "AILMIY",
+          "linecol": [
+            222,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "AILMIY_P",
+          "linecol": [
+            222,
+            1
+          ]
+        },
+        "linecol": [
+          222,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RILMIY",
+          "linecol": [
+            223,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RILMIY_P",
+          "linecol": [
+            223,
+            1
+          ]
+        },
+        "linecol": [
+          223,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "AINVRED",
+          "linecol": [
+            224,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "AINVRED_P",
+          "linecol": [
+            224,
+            1
+          ]
+        },
+        "linecol": [
+          224,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RINVRED",
+          "linecol": [
+            225,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RINVRED_P",
+          "linecol": [
+            225,
+            1
+          ]
+        },
+        "linecol": [
+          225,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "AILMIH",
+          "linecol": [
+            226,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "AILMIH_P",
+          "linecol": [
+            226,
+            1
+          ]
+        },
+        "linecol": [
+          226,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RILMIH",
+          "linecol": [
+            227,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RILMIH_P",
+          "linecol": [
+            227,
+            1
+          ]
+        },
+        "linecol": [
+          227,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "AILMJC",
+          "linecol": [
+            228,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "AILMJC_P",
+          "linecol": [
+            228,
+            1
+          ]
+        },
+        "linecol": [
+          228,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RILMJC",
+          "linecol": [
+            229,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RILMJC_P",
+          "linecol": [
+            229,
+            1
+          ]
+        },
+        "linecol": [
+          229,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "AILMIZ",
+          "linecol": [
+            230,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "AILMIZ_P",
+          "linecol": [
+            230,
+            1
+          ]
+        },
+        "linecol": [
+          230,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RILMIZ",
+          "linecol": [
+            231,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RILMIZ_P",
+          "linecol": [
+            231,
+            1
+          ]
+        },
+        "linecol": [
+          231,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "AILMJI",
+          "linecol": [
+            232,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "AILMJI_P",
+          "linecol": [
+            232,
+            1
+          ]
+        },
+        "linecol": [
+          232,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RILMJI",
+          "linecol": [
+            233,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RILMJI_P",
+          "linecol": [
+            233,
+            1
+          ]
+        },
+        "linecol": [
+          233,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "AILMJS",
+          "linecol": [
+            234,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "AILMJS_P",
+          "linecol": [
+            234,
+            1
+          ]
+        },
+        "linecol": [
+          234,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RILMJS",
+          "linecol": [
+            235,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RILMJS_P",
+          "linecol": [
+            235,
+            1
+          ]
+        },
+        "linecol": [
+          235,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "AMEUBLE",
+          "linecol": [
+            236,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "AMEUBLE_P",
+          "linecol": [
+            236,
+            1
+          ]
+        },
+        "linecol": [
+          236,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RMEUBLE",
+          "linecol": [
+            237,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RMEUBLE_P",
+          "linecol": [
+            237,
+            1
+          ]
+        },
+        "linecol": [
+          237,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "APROREP",
+          "linecol": [
+            238,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "APROREP_P",
+          "linecol": [
+            238,
+            1
+          ]
+        },
+        "linecol": [
+          238,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RPROREP",
+          "linecol": [
+            239,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RPROREP_P",
+          "linecol": [
+            239,
+            1
+          ]
+        },
+        "linecol": [
+          239,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "AREPNPRO",
+          "linecol": [
+            240,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "AREPNPRO_P",
+          "linecol": [
+            240,
+            1
+          ]
+        },
+        "linecol": [
+          240,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RREPNPRO",
+          "linecol": [
+            241,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RREPNPRO_P",
+          "linecol": [
+            241,
+            1
+          ]
+        },
+        "linecol": [
+          241,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "AREPMEU",
+          "linecol": [
+            242,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "AREPMEU_P",
+          "linecol": [
+            242,
+            1
+          ]
+        },
+        "linecol": [
+          242,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RREPMEU",
+          "linecol": [
+            243,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RREPMEU_P",
+          "linecol": [
+            243,
+            1
+          ]
+        },
+        "linecol": [
+          243,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "AILMIC",
+          "linecol": [
+            244,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "AILMIC_P",
+          "linecol": [
+            244,
+            1
+          ]
+        },
+        "linecol": [
+          244,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RILMIC",
+          "linecol": [
+            245,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RILMIC_P",
+          "linecol": [
+            245,
+            1
+          ]
+        },
+        "linecol": [
+          245,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "AILMIB",
+          "linecol": [
+            246,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "AILMIB_P",
+          "linecol": [
+            246,
+            1
+          ]
+        },
+        "linecol": [
+          246,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RILMIB",
+          "linecol": [
+            247,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RILMIB_P",
+          "linecol": [
+            247,
+            1
+          ]
+        },
+        "linecol": [
+          247,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "AILMIA",
+          "linecol": [
+            248,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "AILMIA_P",
+          "linecol": [
+            248,
+            1
+          ]
+        },
+        "linecol": [
+          248,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RILMIA",
+          "linecol": [
+            249,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RILMIA_P",
+          "linecol": [
+            249,
+            1
+          ]
+        },
+        "linecol": [
+          249,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "AILMJY",
+          "linecol": [
+            250,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "AILMJY_P",
+          "linecol": [
+            250,
+            1
+          ]
+        },
+        "linecol": [
+          250,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RILMJY",
+          "linecol": [
+            251,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RILMJY_P",
+          "linecol": [
+            251,
+            1
+          ]
+        },
+        "linecol": [
+          251,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "AILMJX",
+          "linecol": [
+            252,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "AILMJX_P",
+          "linecol": [
+            252,
+            1
+          ]
+        },
+        "linecol": [
+          252,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RILMJX",
+          "linecol": [
+            253,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RILMJX_P",
+          "linecol": [
+            253,
+            1
+          ]
+        },
+        "linecol": [
+          253,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "AILMJW",
+          "linecol": [
+            254,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "AILMJW_P",
+          "linecol": [
+            254,
+            1
+          ]
+        },
+        "linecol": [
+          254,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RILMJW",
+          "linecol": [
+            255,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RILMJW_P",
+          "linecol": [
+            255,
+            1
+          ]
+        },
+        "linecol": [
+          255,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "AILMJV",
+          "linecol": [
+            256,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "AILMJV_P",
+          "linecol": [
+            256,
+            1
+          ]
+        },
+        "linecol": [
+          256,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RILMJV",
+          "linecol": [
+            257,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RILMJV_P",
+          "linecol": [
+            257,
+            1
+          ]
+        },
+        "linecol": [
+          257,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ARESIMEUB",
+          "linecol": [
+            258,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ARESIMEUB_P",
+          "linecol": [
+            258,
+            1
+          ]
+        },
+        "linecol": [
+          258,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RRESIMEUB",
+          "linecol": [
+            259,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RRESIMEUB_P",
+          "linecol": [
+            259,
+            1
+          ]
+        },
+        "linecol": [
+          259,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCODIW",
+          "linecol": [
+            260,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCODIW_P",
+          "linecol": [
+            260,
+            1
+          ]
+        },
+        "linecol": [
+          260,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCODIM",
+          "linecol": [
+            261,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCODIM_P",
+          "linecol": [
+            261,
+            1
+          ]
+        },
+        "linecol": [
+          261,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCODIL",
+          "linecol": [
+            262,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCODIL_P",
+          "linecol": [
+            262,
+            1
+          ]
+        },
+        "linecol": [
+          262,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCODIN",
+          "linecol": [
+            263,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCODIN_P",
+          "linecol": [
+            263,
+            1
+          ]
+        },
+        "linecol": [
+          263,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCODIV",
+          "linecol": [
+            264,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCODIV_P",
+          "linecol": [
+            264,
+            1
+          ]
+        },
+        "linecol": [
+          264,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCODIJ",
+          "linecol": [
+            265,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCODIJ_P",
+          "linecol": [
+            265,
+            1
+          ]
+        },
+        "linecol": [
+          265,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCODIE",
+          "linecol": [
+            266,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCODIE_P",
+          "linecol": [
+            266,
+            1
+          ]
+        },
+        "linecol": [
+          266,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCODIF",
+          "linecol": [
+            267,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCODIF_P",
+          "linecol": [
+            267,
+            1
+          ]
+        },
+        "linecol": [
+          267,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCODIG",
+          "linecol": [
+            268,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCODIG_P",
+          "linecol": [
+            268,
+            1
+          ]
+        },
+        "linecol": [
+          268,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCODID",
+          "linecol": [
+            269,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCODID_P",
+          "linecol": [
+            269,
+            1
+          ]
+        },
+        "linecol": [
+          269,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCODJU",
+          "linecol": [
+            270,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCODJU_P",
+          "linecol": [
+            270,
+            1
+          ]
+        },
+        "linecol": [
+          270,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCODJT",
+          "linecol": [
+            271,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCODJT_P",
+          "linecol": [
+            271,
+            1
+          ]
+        },
+        "linecol": [
+          271,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "APATNAT1",
+          "linecol": [
+            272,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "APATNAT1_P",
+          "linecol": [
+            272,
+            1
+          ]
+        },
+        "linecol": [
+          272,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RPATNAT1",
+          "linecol": [
+            273,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RPATNAT1_P",
+          "linecol": [
+            273,
+            1
+          ]
+        },
+        "linecol": [
+          273,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "APATNAT2",
+          "linecol": [
+            274,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "APATNAT2_P",
+          "linecol": [
+            274,
+            1
+          ]
+        },
+        "linecol": [
+          274,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RPATNAT2",
+          "linecol": [
+            275,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RPATNAT2_P",
+          "linecol": [
+            275,
+            1
+          ]
+        },
+        "linecol": [
+          275,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "APATNAT3",
+          "linecol": [
+            276,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "APATNAT3_P",
+          "linecol": [
+            276,
+            1
+          ]
+        },
+        "linecol": [
+          276,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RPATNAT3",
+          "linecol": [
+            277,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RPATNAT3_P",
+          "linecol": [
+            277,
+            1
+          ]
+        },
+        "linecol": [
+          277,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "APATNAT",
+          "linecol": [
+            278,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "APATNAT_P",
+          "linecol": [
+            278,
+            1
+          ]
+        },
+        "linecol": [
+          278,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RPATNAT",
+          "linecol": [
+            279,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RPATNAT_P",
+          "linecol": [
+            279,
+            1
+          ]
+        },
+        "linecol": [
+          279,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ADOMSOC1",
+          "linecol": [
+            280,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ADOMSOC1_P",
+          "linecol": [
+            280,
+            1
+          ]
+        },
+        "linecol": [
+          280,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RDOMSOC1",
+          "linecol": [
+            281,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RDOMSOC1_P",
+          "linecol": [
+            281,
+            1
+          ]
+        },
+        "linecol": [
+          281,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ALOGSOC",
+          "linecol": [
+            282,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ALOGSOC_P",
+          "linecol": [
+            282,
+            1
+          ]
+        },
+        "linecol": [
+          282,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RLOGSOC",
+          "linecol": [
+            283,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RLOGSOC_P",
+          "linecol": [
+            283,
+            1
+          ]
+        },
+        "linecol": [
+          283,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "DIDOMPRO",
+          "linecol": [
+            284,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DIDOMPRO_P",
+          "linecol": [
+            284,
+            1
+          ]
+        },
+        "linecol": [
+          284,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RIDOMPROE3",
+          "linecol": [
+            285,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RIDOMPROE3_P",
+          "linecol": [
+            285,
+            1
+          ]
+        },
+        "linecol": [
+          285,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ACOLENT",
+          "linecol": [
+            286,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ACOLENT_P",
+          "linecol": [
+            286,
+            1
+          ]
+        },
+        "linecol": [
+          286,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCOLENT",
+          "linecol": [
+            287,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCOLENT_P",
+          "linecol": [
+            287,
+            1
+          ]
+        },
+        "linecol": [
+          287,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ALOCENT",
+          "linecol": [
+            288,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ALOCENT_P",
+          "linecol": [
+            288,
+            1
+          ]
+        },
+        "linecol": [
+          288,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RLOCENT",
+          "linecol": [
+            289,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RLOCENT_P",
+          "linecol": [
+            289,
+            1
+          ]
+        },
+        "linecol": [
+          289,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ITRED",
+          "linecol": [
+            291,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ITRED_P",
+          "linecol": [
+            291,
+            1
+          ]
+        },
+        "linecol": [
+          291,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BICREV",
+          "linecol": [
+            292,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BICREV_P",
+          "linecol": [
+            292,
+            1
+          ]
+        },
+        "linecol": [
+          292,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BICREC",
+          "linecol": [
+            293,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BICREC_P",
+          "linecol": [
+            293,
+            1
+          ]
+        },
+        "linecol": [
+          293,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BICREP",
+          "linecol": [
+            294,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BICREP_P",
+          "linecol": [
+            294,
+            1
+          ]
+        },
+        "linecol": [
+          294,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BICHREV",
+          "linecol": [
+            295,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BICHREV_P",
+          "linecol": [
+            295,
+            1
+          ]
+        },
+        "linecol": [
+          295,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BICHREC",
+          "linecol": [
+            296,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BICHREC_P",
+          "linecol": [
+            296,
+            1
+          ]
+        },
+        "linecol": [
+          296,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BICHREP",
+          "linecol": [
+            297,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BICHREP_P",
+          "linecol": [
+            297,
+            1
+          ]
+        },
+        "linecol": [
+          297,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "DNOCEP",
+          "linecol": [
+            298,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DNOCEP_P",
+          "linecol": [
+            298,
+            1
+          ]
+        },
+        "linecol": [
+          298,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "DNOCEPC",
+          "linecol": [
+            299,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DNOCEPC_P",
+          "linecol": [
+            299,
+            1
+          ]
+        },
+        "linecol": [
+          299,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "DNOCEPP",
+          "linecol": [
+            300,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DNOCEPP_P",
+          "linecol": [
+            300,
+            1
+          ]
+        },
+        "linecol": [
+          300,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BNCAADV",
+          "linecol": [
+            301,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BNCAADV_P",
+          "linecol": [
+            301,
+            1
+          ]
+        },
+        "linecol": [
+          301,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BNCDEC",
+          "linecol": [
+            302,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BNCDEC_P",
+          "linecol": [
+            302,
+            1
+          ]
+        },
+        "linecol": [
+          302,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BNCDEP",
+          "linecol": [
+            303,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BNCDEP_P",
+          "linecol": [
+            303,
+            1
+          ]
+        },
+        "linecol": [
+          303,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BNCDEV",
+          "linecol": [
+            304,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BNCDEV_P",
+          "linecol": [
+            304,
+            1
+          ]
+        },
+        "linecol": [
+          304,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BNCAADC",
+          "linecol": [
+            305,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BNCAADC_P",
+          "linecol": [
+            305,
+            1
+          ]
+        },
+        "linecol": [
+          305,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BNCAADP",
+          "linecol": [
+            306,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BNCAADP_P",
+          "linecol": [
+            306,
+            1
+          ]
+        },
+        "linecol": [
+          306,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "VARBAHDEV",
+          "linecol": [
+            307,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAHDEV_P",
+          "linecol": [
+            307,
+            1
+          ]
+        },
+        "linecol": [
+          307,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "VARBAHDEC",
+          "linecol": [
+            308,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAHDEC_P",
+          "linecol": [
+            308,
+            1
+          ]
+        },
+        "linecol": [
+          308,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "VARBAHDEP",
+          "linecol": [
+            309,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAHDEP_P",
+          "linecol": [
+            309,
+            1
+          ]
+        },
+        "linecol": [
+          309,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "VARBACDEV",
+          "linecol": [
+            310,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BACDEV_P",
+          "linecol": [
+            310,
+            1
+          ]
+        },
+        "linecol": [
+          310,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "VARBACDEC",
+          "linecol": [
+            311,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BACDEC_P",
+          "linecol": [
+            311,
+            1
+          ]
+        },
+        "linecol": [
+          311,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "VARBACDEP",
+          "linecol": [
+            312,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BACDEP_P",
+          "linecol": [
+            312,
+            1
+          ]
+        },
+        "linecol": [
+          312,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "min(RCMAB + RTNC + RAVC + RCMNAB + RTCAR + RCMPRIVM,RCMFR)",
+          "linecol": [
+            313,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCMFR_P",
+          "linecol": [
+            313,
+            1
+          ]
+        },
+        "linecol": [
+          313,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "max(0,RCMFR - RCMAB - RTNC - RAVC - RCMNAB - RTCAR - RCMPRIVM)",
+          "linecol": [
+            314,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCMFRNET_P",
+          "linecol": [
+            314,
+            1
+          ]
+        },
+        "linecol": [
+          314,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "abs(TSNNV) * min(0,TSNNV)",
+          "linecol": [
+            315,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TSNNV_P",
+          "linecol": [
+            315,
+            1
+          ]
+        },
+        "linecol": [
+          315,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "abs(TSNNC) * min(0,TSNNC)",
+          "linecol": [
+            316,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TSNNC_P",
+          "linecol": [
+            316,
+            1
+          ]
+        },
+        "linecol": [
+          316,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "abs(TSNN1) * min(0,TSNN1)",
+          "linecol": [
+            317,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TSNN1_P",
+          "linecol": [
+            317,
+            1
+          ]
+        },
+        "linecol": [
+          317,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "abs(TSNN2) * min(0,TSNN2)",
+          "linecol": [
+            318,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TSNN2_P",
+          "linecol": [
+            318,
+            1
+          ]
+        },
+        "linecol": [
+          318,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "abs(TSNN3) * min(0,TSNN3)",
+          "linecol": [
+            319,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TSNN3_P",
+          "linecol": [
+            319,
+            1
+          ]
+        },
+        "linecol": [
+          319,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "abs(TSNN4) * min(0,TSNN4)",
+          "linecol": [
+            320,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TSNN4_P",
+          "linecol": [
+            320,
+            1
+          ]
+        },
+        "linecol": [
+          320,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "abs(TSNNT) * min(0,TSNNT)",
+          "linecol": [
+            321,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TSNNT_P",
+          "linecol": [
+            321,
+            1
+          ]
+        },
+        "linecol": [
+          321,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "FRDV",
+          "linecol": [
+            322,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "FRDV_P",
+          "linecol": [
+            322,
+            1
+          ]
+        },
+        "linecol": [
+          322,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "FRDC",
+          "linecol": [
+            323,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "FRDC_P",
+          "linecol": [
+            323,
+            1
+          ]
+        },
+        "linecol": [
+          323,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "FRD1",
+          "linecol": [
+            324,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "FRD1_P",
+          "linecol": [
+            324,
+            1
+          ]
+        },
+        "linecol": [
+          324,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "FRD2",
+          "linecol": [
+            325,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "FRD2_P",
+          "linecol": [
+            325,
+            1
+          ]
+        },
+        "linecol": [
+          325,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "FRD3",
+          "linecol": [
+            326,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "FRD3_P",
+          "linecol": [
+            326,
+            1
+          ]
+        },
+        "linecol": [
+          326,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "FRD4",
+          "linecol": [
+            327,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "FRD4_P",
+          "linecol": [
+            327,
+            1
+          ]
+        },
+        "linecol": [
+          327,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TFRDV",
+          "linecol": [
+            328,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TFRDV_P",
+          "linecol": [
+            328,
+            1
+          ]
+        },
+        "linecol": [
+          328,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TFRDC",
+          "linecol": [
+            329,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TFRDC_P",
+          "linecol": [
+            329,
+            1
+          ]
+        },
+        "linecol": [
+          329,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TFRD1",
+          "linecol": [
+            330,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TFRD1_P",
+          "linecol": [
+            330,
+            1
+          ]
+        },
+        "linecol": [
+          330,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TFRD2",
+          "linecol": [
+            331,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TFRD2_P",
+          "linecol": [
+            331,
+            1
+          ]
+        },
+        "linecol": [
+          331,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TFRD3",
+          "linecol": [
+            332,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TFRD3_P",
+          "linecol": [
+            332,
+            1
+          ]
+        },
+        "linecol": [
+          332,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TFRD4",
+          "linecol": [
+            333,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TFRD4_P",
+          "linecol": [
+            333,
+            1
+          ]
+        },
+        "linecol": [
+          333,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "SOMMEBA",
+          "linecol": [
+            334,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "SOMMEBA_P",
+          "linecol": [
+            334,
+            1
+          ]
+        },
+        "linecol": [
+          334,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "SOMMEBIC",
+          "linecol": [
+            335,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "SOMMEBIC_P",
+          "linecol": [
+            335,
+            1
+          ]
+        },
+        "linecol": [
+          335,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "SOMMELOC",
+          "linecol": [
+            336,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "SOMMELOC_P",
+          "linecol": [
+            336,
+            1
+          ]
+        },
+        "linecol": [
+          336,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "SOMMEBNC",
+          "linecol": [
+            337,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "SOMMEBNC_P",
+          "linecol": [
+            337,
+            1
+          ]
+        },
+        "linecol": [
+          337,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "SOMMERF",
+          "linecol": [
+            338,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "SOMMERF_P",
+          "linecol": [
+            338,
+            1
+          ]
+        },
+        "linecol": [
+          338,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "SOMMERCM",
+          "linecol": [
+            339,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "SOMMERCM_P",
+          "linecol": [
+            339,
+            1
+          ]
+        },
+        "linecol": [
+          339,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TSBV",
+          "linecol": [
+            340,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TSBV_P",
+          "linecol": [
+            340,
+            1
+          ]
+        },
+        "linecol": [
+          340,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TSBC",
+          "linecol": [
+            341,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TSBC_P",
+          "linecol": [
+            341,
+            1
+          ]
+        },
+        "linecol": [
+          341,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TSB1",
+          "linecol": [
+            342,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TSB1_P",
+          "linecol": [
+            342,
+            1
+          ]
+        },
+        "linecol": [
+          342,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TSB2",
+          "linecol": [
+            343,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TSB2_P",
+          "linecol": [
+            343,
+            1
+          ]
+        },
+        "linecol": [
+          343,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TSB3",
+          "linecol": [
+            344,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TSB3_P",
+          "linecol": [
+            344,
+            1
+          ]
+        },
+        "linecol": [
+          344,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TSB4",
+          "linecol": [
+            345,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TSB4_P",
+          "linecol": [
+            345,
+            1
+          ]
+        },
+        "linecol": [
+          345,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TSB1 +TSB2 +TSB3 + TSB4",
+          "linecol": [
+            346,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TSBP_P",
+          "linecol": [
+            346,
+            1
+          ]
+        },
+        "linecol": [
+          346,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TTSBV",
+          "linecol": [
+            347,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TTSBV_P",
+          "linecol": [
+            347,
+            1
+          ]
+        },
+        "linecol": [
+          347,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TTSBC",
+          "linecol": [
+            348,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TTSBC_P",
+          "linecol": [
+            348,
+            1
+          ]
+        },
+        "linecol": [
+          348,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TTSB1",
+          "linecol": [
+            349,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TTSB1_P",
+          "linecol": [
+            349,
+            1
+          ]
+        },
+        "linecol": [
+          349,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TTSB2",
+          "linecol": [
+            350,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TTSB2_P",
+          "linecol": [
+            350,
+            1
+          ]
+        },
+        "linecol": [
+          350,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TTSB3",
+          "linecol": [
+            351,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TTSB3_P",
+          "linecol": [
+            351,
+            1
+          ]
+        },
+        "linecol": [
+          351,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TTSB4",
+          "linecol": [
+            352,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TTSB4_P",
+          "linecol": [
+            352,
+            1
+          ]
+        },
+        "linecol": [
+          352,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RRCM",
+          "linecol": [
+            353,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RRCM_P",
+          "linecol": [
+            353,
+            1
+          ]
+        },
+        "linecol": [
+          353,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "REVRCM",
+          "linecol": [
+            354,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "REVRCM_P",
+          "linecol": [
+            354,
+            1
+          ]
+        },
+        "linecol": [
+          354,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RRFI",
+          "linecol": [
+            355,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RRFI_P",
+          "linecol": [
+            355,
+            1
+          ]
+        },
+        "linecol": [
+          355,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "REVRF",
+          "linecol": [
+            356,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "REVRF_P",
+          "linecol": [
+            356,
+            1
+          ]
+        },
+        "linecol": [
+          356,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RBAT",
+          "linecol": [
+            357,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RBAT_P",
+          "linecol": [
+            357,
+            1
+          ]
+        },
+        "linecol": [
+          357,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BAQTOTAVIS",
+          "linecol": [
+            358,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAQTOTAVIS_P",
+          "linecol": [
+            358,
+            1
+          ]
+        },
+        "linecol": [
+          358,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BICNPF",
+          "linecol": [
+            359,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BICNPF_P",
+          "linecol": [
+            359,
+            1
+          ]
+        },
+        "linecol": [
+          359,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BNCIF",
+          "linecol": [
+            360,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BNCIF_P",
+          "linecol": [
+            360,
+            1
+          ]
+        },
+        "linecol": [
+          360,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BAHREV",
+          "linecol": [
+            361,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAHREV_P",
+          "linecol": [
+            361,
+            1
+          ]
+        },
+        "linecol": [
+          361,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "4BAHREV",
+          "linecol": [
+            362,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "4BAHREV_P",
+          "linecol": [
+            362,
+            1
+          ]
+        },
+        "linecol": [
+          362,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BAHREC",
+          "linecol": [
+            363,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAHREC_P",
+          "linecol": [
+            363,
+            1
+          ]
+        },
+        "linecol": [
+          363,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "4BAHREC",
+          "linecol": [
+            364,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "4BAHREC_P",
+          "linecol": [
+            364,
+            1
+          ]
+        },
+        "linecol": [
+          364,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BAHREP",
+          "linecol": [
+            365,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BAHREP_P",
+          "linecol": [
+            365,
+            1
+          ]
+        },
+        "linecol": [
+          365,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "4BAHREP",
+          "linecol": [
+            366,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "4BAHREP_P",
+          "linecol": [
+            366,
+            1
+          ]
+        },
+        "linecol": [
+          366,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BACREV",
+          "linecol": [
+            367,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BACREV_P",
+          "linecol": [
+            367,
+            1
+          ]
+        },
+        "linecol": [
+          367,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "4BACREV",
+          "linecol": [
+            368,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "4BACREV_P",
+          "linecol": [
+            368,
+            1
+          ]
+        },
+        "linecol": [
+          368,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BACREC",
+          "linecol": [
+            369,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BACREC_P",
+          "linecol": [
+            369,
+            1
+          ]
+        },
+        "linecol": [
+          369,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "4BACREC",
+          "linecol": [
+            370,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "4BACREC_P",
+          "linecol": [
+            370,
+            1
+          ]
+        },
+        "linecol": [
+          370,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BACREP",
+          "linecol": [
+            371,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BACREP_P",
+          "linecol": [
+            371,
+            1
+          ]
+        },
+        "linecol": [
+          371,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "4BACREP",
+          "linecol": [
+            372,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "4BACREP_P",
+          "linecol": [
+            372,
+            1
+          ]
+        },
+        "linecol": [
+          372,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "LOCPROCGAV",
+          "linecol": [
+            373,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "LOCPROCGAV_P",
+          "linecol": [
+            373,
+            1
+          ]
+        },
+        "linecol": [
+          373,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "LOCPROCGAC",
+          "linecol": [
+            374,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "LOCPROCGAC_P",
+          "linecol": [
+            374,
+            1
+          ]
+        },
+        "linecol": [
+          374,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "LOCPROCGAP",
+          "linecol": [
+            375,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "LOCPROCGAP_P",
+          "linecol": [
+            375,
+            1
+          ]
+        },
+        "linecol": [
+          375,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "LOCPROV",
+          "linecol": [
+            376,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "LOCPROV_P",
+          "linecol": [
+            376,
+            1
+          ]
+        },
+        "linecol": [
+          376,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "LOCPROC",
+          "linecol": [
+            377,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "LOCPROC_P",
+          "linecol": [
+            377,
+            1
+          ]
+        },
+        "linecol": [
+          377,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "LOCPROP",
+          "linecol": [
+            378,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "LOCPROP_P",
+          "linecol": [
+            378,
+            1
+          ]
+        },
+        "linecol": [
+          378,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "LOCNPCGAV",
+          "linecol": [
+            379,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "LOCNPCGAV_P",
+          "linecol": [
+            379,
+            1
+          ]
+        },
+        "linecol": [
+          379,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "LOCGITCV",
+          "linecol": [
+            380,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "LOCGITCV_P",
+          "linecol": [
+            380,
+            1
+          ]
+        },
+        "linecol": [
+          380,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "LOCNPCGAC",
+          "linecol": [
+            381,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "LOCNPCGAC_P",
+          "linecol": [
+            381,
+            1
+          ]
+        },
+        "linecol": [
+          381,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "LOCGITCC",
+          "linecol": [
+            382,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "LOCGITCC_P",
+          "linecol": [
+            382,
+            1
+          ]
+        },
+        "linecol": [
+          382,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "LOCNPCGAPAC",
+          "linecol": [
+            383,
+            17
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "LOCNPCGAPAC_P",
+          "linecol": [
+            383,
+            1
+          ]
+        },
+        "linecol": [
+          383,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "LOCGITCP",
+          "linecol": [
+            384,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "LOCGITCP_P",
+          "linecol": [
+            384,
+            1
+          ]
+        },
+        "linecol": [
+          384,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "LOCNPV",
+          "linecol": [
+            385,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "LOCNPV_P",
+          "linecol": [
+            385,
+            1
+          ]
+        },
+        "linecol": [
+          385,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "LOCNPC",
+          "linecol": [
+            386,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "LOCNPC_P",
+          "linecol": [
+            386,
+            1
+          ]
+        },
+        "linecol": [
+          386,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "LOCNPPAC",
+          "linecol": [
+            387,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "LOCNPPAC_P",
+          "linecol": [
+            387,
+            1
+          ]
+        },
+        "linecol": [
+          387,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BNHREV",
+          "linecol": [
+            388,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BNHREV_P",
+          "linecol": [
+            388,
+            1
+          ]
+        },
+        "linecol": [
+          388,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BNHREC",
+          "linecol": [
+            389,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BNHREC_P",
+          "linecol": [
+            389,
+            1
+          ]
+        },
+        "linecol": [
+          389,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BNHREP",
+          "linecol": [
+            390,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BNHREP_P",
+          "linecol": [
+            390,
+            1
+          ]
+        },
+        "linecol": [
+          390,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BNCREV",
+          "linecol": [
+            391,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BNCREV_P",
+          "linecol": [
+            391,
+            1
+          ]
+        },
+        "linecol": [
+          391,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BNCREC",
+          "linecol": [
+            392,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BNCREC_P",
+          "linecol": [
+            392,
+            1
+          ]
+        },
+        "linecol": [
+          392,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BNCREP",
+          "linecol": [
+            393,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BNCREP_P",
+          "linecol": [
+            393,
+            1
+          ]
+        },
+        "linecol": [
+          393,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BNCAABV",
+          "linecol": [
+            394,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BNCAABV_P",
+          "linecol": [
+            394,
+            1
+          ]
+        },
+        "linecol": [
+          394,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BNCAABC",
+          "linecol": [
+            395,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BNCAABC_P",
+          "linecol": [
+            395,
+            1
+          ]
+        },
+        "linecol": [
+          395,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BNCAABP",
+          "linecol": [
+            396,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BNCAABP_P",
+          "linecol": [
+            396,
+            1
+          ]
+        },
+        "linecol": [
+          396,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "LOCGITHCV",
+          "linecol": [
+            397,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "LOCGITHCV_P",
+          "linecol": [
+            397,
+            1
+          ]
+        },
+        "linecol": [
+          397,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "LOCGITHCC",
+          "linecol": [
+            398,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "LOCGITHCC_P",
+          "linecol": [
+            398,
+            1
+          ]
+        },
+        "linecol": [
+          398,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "LOCGITHCP",
+          "linecol": [
+            399,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "LOCGITHCP_P",
+          "linecol": [
+            399,
+            1
+          ]
+        },
+        "linecol": [
+          399,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RFDHIS",
+          "linecol": [
+            400,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RFDHIS_P",
+          "linecol": [
+            400,
+            1
+          ]
+        },
+        "linecol": [
+          400,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "DFRCMNBIS",
+          "linecol": [
+            401,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DFRCMNBIS_P",
+          "linecol": [
+            401,
+            1
+          ]
+        },
+        "linecol": [
+          401,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TSPRV",
+          "linecol": [
+            402,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TSPRV_P",
+          "linecol": [
+            402,
+            1
+          ]
+        },
+        "linecol": [
+          402,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TSPRC",
+          "linecol": [
+            403,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TSPRC_P",
+          "linecol": [
+            403,
+            1
+          ]
+        },
+        "linecol": [
+          403,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TSPRP",
+          "linecol": [
+            404,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TSPRP_P",
+          "linecol": [
+            404,
+            1
+          ]
+        },
+        "linecol": [
+          404,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ESFP",
+          "linecol": [
+            405,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ESFP_P",
+          "linecol": [
+            405,
+            1
+          ]
+        },
+        "linecol": [
+          405,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TSPR",
+          "linecol": [
+            406,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TSPR_P",
+          "linecol": [
+            406,
+            1
+          ]
+        },
+        "linecol": [
+          406,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RCM",
+          "linecol": [
+            407,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RCM_P",
+          "linecol": [
+            407,
+            1
+          ]
+        },
+        "linecol": [
+          407,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BIN",
+          "linecol": [
+            408,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BIN_P",
+          "linecol": [
+            408,
+            1
+          ]
+        },
+        "linecol": [
+          408,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BNN",
+          "linecol": [
+            409,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BNN_P",
+          "linecol": [
+            409,
+            1
+          ]
+        },
+        "linecol": [
+          409,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "PLOCNETF",
+          "linecol": [
+            410,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PLOCNETF_P",
+          "linecol": [
+            410,
+            1
+          ]
+        },
+        "linecol": [
+          410,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "NPLOCNETF",
+          "linecol": [
+            411,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "NPLOCNETF_P",
+          "linecol": [
+            411,
+            1
+          ]
+        },
+        "linecol": [
+          411,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BRCMTOT",
+          "linecol": [
+            412,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BRCMTOT_P",
+          "linecol": [
+            412,
+            1
+          ]
+        },
+        "linecol": [
+          412,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "DFBICNPF",
+          "linecol": [
+            413,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DFBICNPF_P",
+          "linecol": [
+            413,
+            1
+          ]
+        },
+        "linecol": [
+          413,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "DEFNPI",
+          "linecol": [
+            414,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DEFNPI_P",
+          "linecol": [
+            414,
+            1
+          ]
+        },
+        "linecol": [
+          414,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "DEFLOCNP",
+          "linecol": [
+            415,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DEFLOCNP_P",
+          "linecol": [
+            415,
+            1
+          ]
+        },
+        "linecol": [
+          415,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "DNPLOCIMPU",
+          "linecol": [
+            416,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DNPLOCIMPU_P",
+          "linecol": [
+            416,
+            1
+          ]
+        },
+        "linecol": [
+          416,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "DEFBNCNP",
+          "linecol": [
+            417,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DEFBNCNP_P",
+          "linecol": [
+            417,
+            1
+          ]
+        },
+        "linecol": [
+          417,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "DIDABNCNP1",
+          "linecol": [
+            418,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DIDABNCNP1_P",
+          "linecol": [
+            418,
+            1
+          ]
+        },
+        "linecol": [
+          418,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "DEFBANI",
+          "linecol": [
+            419,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DEFBANI_P",
+          "linecol": [
+            419,
+            1
+          ]
+        },
+        "linecol": [
+          419,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "REPRCMB",
+          "linecol": [
+            420,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "REPRCM_P",
+          "linecol": [
+            420,
+            1
+          ]
+        },
+        "linecol": [
+          420,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BRCMBIS",
+          "linecol": [
+            421,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BRCM_P",
+          "linecol": [
+            421,
+            1
+          ]
+        },
+        "linecol": [
+          421,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BRCMQ",
+          "linecol": [
+            422,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "BRCMQ_P",
+          "linecol": [
+            422,
+            1
+          ]
+        },
+        "linecol": [
+          422,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "DEF4BB",
+          "linecol": [
+            423,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DEF4BB_P",
+          "linecol": [
+            423,
+            1
+          ]
+        },
+        "linecol": [
+          423,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "DEF4BD",
+          "linecol": [
+            424,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DEF4BD_P",
+          "linecol": [
+            424,
+            1
+          ]
+        },
+        "linecol": [
+          424,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "DFANTPROV",
+          "linecol": [
+            425,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DFANTPROV_P",
+          "linecol": [
+            425,
+            1
+          ]
+        },
+        "linecol": [
+          425,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "DAGRIIMP",
+          "linecol": [
+            426,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DAGRIIMP_P",
+          "linecol": [
+            426,
+            1
+          ]
+        },
+        "linecol": [
+          426,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TOTALQUO",
+          "linecol": [
+            427,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TOTALQUO_P",
+          "linecol": [
+            427,
+            1
+          ]
+        },
+        "linecol": [
+          427,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            23,
+            19
+          ]
+        }
+      ],
+      "linecol": [
+        23,
+        19
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": [
+      {
+        "type": "symbol",
+        "name": "corrective",
+        "linecol": [
+          22,
+          8
+        ]
+      },
+      {
+        "type": "symbol",
+        "name": "base_INITIAL",
+        "linecol": [
+          22,
+          19
+        ]
+      }
+    ]
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "11",
+      "linecol": [
+        429,
+        38
+      ]
+    },
+    "linecol": [
+      429,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "INDIRPS",
+          "linecol": [
+            431,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ANTINDIRPS",
+          "linecol": [
+            431,
+            1
+          ]
+        },
+        "linecol": [
+          431,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "PPETOTX",
+          "linecol": [
+            432,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ANTPPETOT",
+          "linecol": [
+            432,
+            1
+          ]
+        },
+        "linecol": [
+          432,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "PPEREST2A",
+          "linecol": [
+            433,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ANTPPEREST2A",
+          "linecol": [
+            433,
+            1
+          ]
+        },
+        "linecol": [
+          433,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "PPEIMP2A",
+          "linecol": [
+            434,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ANTPPEIMP2A",
+          "linecol": [
+            434,
+            1
+          ]
+        },
+        "linecol": [
+          434,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "IND_PASSAGE",
+          "linecol": [
+            435,
+            17
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "IND_PASSAGE_A",
+          "linecol": [
+            435,
+            1
+          ]
+        },
+        "linecol": [
+          435,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "IND_PASSR9901",
+          "linecol": [
+            436,
+            19
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "IND_PASSR9901_A",
+          "linecol": [
+            436,
+            1
+          ]
+        },
+        "linecol": [
+          436,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "INR_GLO_TARDIF",
+          "linecol": [
+            437,
+            18
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "INR_GLO_TARDIF_A",
+          "linecol": [
+            437,
+            1
+          ]
+        },
+        "linecol": [
+          437,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TXINR",
+          "linecol": [
+            438,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TXINR_A",
+          "linecol": [
+            438,
+            1
+          ]
+        },
+        "linecol": [
+          438,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TXINRRED",
+          "linecol": [
+            439,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TXINRRED_A",
+          "linecol": [
+            439,
+            1
+          ]
+        },
+        "linecol": [
+          439,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TXINRREDISF",
+          "linecol": [
+            440,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TXINRREDISF_A",
+          "linecol": [
+            440,
+            1
+          ]
+        },
+        "linecol": [
+          440,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TXINR_PA",
+          "linecol": [
+            441,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TXINR_PA_A",
+          "linecol": [
+            441,
+            1
+          ]
+        },
+        "linecol": [
+          441,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TXINRISF_PA",
+          "linecol": [
+            442,
+            17
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TXINRISF_PA_A",
+          "linecol": [
+            442,
+            1
+          ]
+        },
+        "linecol": [
+          442,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TINR",
+          "linecol": [
+            443,
+            8
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TINR_A",
+          "linecol": [
+            443,
+            1
+          ]
+        },
+        "linecol": [
+          443,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TXINRISF",
+          "linecol": [
+            444,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TXINRISF_A",
+          "linecol": [
+            444,
+            1
+          ]
+        },
+        "linecol": [
+          444,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RETXISF",
+          "linecol": [
+            445,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RETXISF_A",
+          "linecol": [
+            445,
+            1
+          ]
+        },
+        "linecol": [
+          445,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TINR_1",
+          "linecol": [
+            446,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TINR_1_A",
+          "linecol": [
+            446,
+            1
+          ]
+        },
+        "linecol": [
+          446,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "NBREMOISCS2",
+          "linecol": [
+            447,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "NBREMOISCS2_A",
+          "linecol": [
+            447,
+            1
+          ]
+        },
+        "linecol": [
+          447,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "NBREMOISCS222",
+          "linecol": [
+            448,
+            17
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "NBREMOISCS222_A",
+          "linecol": [
+            448,
+            1
+          ]
+        },
+        "linecol": [
+          448,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "NBREMOIS2",
+          "linecol": [
+            449,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "NBREMOIS2_A",
+          "linecol": [
+            449,
+            1
+          ]
+        },
+        "linecol": [
+          449,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "NBREMOIS222",
+          "linecol": [
+            450,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "NBREMOIS222_A",
+          "linecol": [
+            450,
+            1
+          ]
+        },
+        "linecol": [
+          450,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "NBREMOIS2ISF",
+          "linecol": [
+            451,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "NBREMOIS2ISF_A",
+          "linecol": [
+            451,
+            1
+          ]
+        },
+        "linecol": [
+          451,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "NBREMOIS222ISF",
+          "linecol": [
+            452,
+            18
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "NBREMOIS222ISF_A",
+          "linecol": [
+            452,
+            1
+          ]
+        },
+        "linecol": [
+          452,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "present(ACODELAISINR)",
+          "linecol": [
+            453,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "INDACOINR_A",
+          "linecol": [
+            453,
+            1
+          ]
+        },
+        "linecol": [
+          453,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "IND_PASSAGEISF",
+          "linecol": [
+            454,
+            20
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "IND_PASSAGEISF_A",
+          "linecol": [
+            454,
+            1
+          ]
+        },
+        "linecol": [
+          454,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "IND_PASSR9901ISF",
+          "linecol": [
+            455,
+            22
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "IND_PASSR9901ISF_A",
+          "linecol": [
+            455,
+            1
+          ]
+        },
+        "linecol": [
+          455,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            430,
+            15
+          ]
+        }
+      ],
+      "linecol": [
+        430,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": [
+      {
+        "type": "symbol",
+        "name": "corrective",
+        "linecol": [
+          429,
+          7
+        ]
+      },
+      {
+        "type": "symbol",
+        "name": "base_anterieure_cor",
+        "linecol": [
+          429,
+          18
+        ]
+      }
+    ]
+  }
+]

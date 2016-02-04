@@ -1,0 +1,4140 @@
+[
+  {
+    "type": "comment",
+    "value": "#*************************************************************************************************************************",
+    "linecol": [
+      1,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#",
+    "linecol": [
+      2,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#Copyright or © or Copr.[DGFIP][2015]",
+    "linecol": [
+      3,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#",
+    "linecol": [
+      4,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#Ce logiciel a été initialement développé par la Direction Générale des ",
+    "linecol": [
+      5,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#Finances Publiques pour permettre le calcul de l'impôt sur le revenu 2015 ",
+    "linecol": [
+      6,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#au titre des revenus perçus en 2014. La présente version a permis la ",
+    "linecol": [
+      7,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#génération du moteur de calcul des chaînes de taxation des rôles d'impôt ",
+    "linecol": [
+      8,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#sur le revenu de ce millésime.",
+    "linecol": [
+      9,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#",
+    "linecol": [
+      10,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#Ce logiciel est régi par la licence CeCILL 2.1 soumise au droit français ",
+    "linecol": [
+      11,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#et respectant les principes de diffusion des logiciels libres. Vous pouvez ",
+    "linecol": [
+      12,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#utiliser, modifier et/ou redistribuer ce programme sous les conditions de ",
+    "linecol": [
+      13,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#la licence CeCILL 2.1 telle que diffusée par le CEA, le CNRS et l'INRIA  sur ",
+    "linecol": [
+      14,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#le site \"http://www.cecill.info\".",
+    "linecol": [
+      15,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#",
+    "linecol": [
+      16,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#Le fait que vous puissiez accéder à cet en-tête signifie que vous avez pris ",
+    "linecol": [
+      17,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#connaissance de la licence CeCILL 2.1 et que vous en avez accepté les termes.",
+    "linecol": [
+      18,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#",
+    "linecol": [
+      19,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#**************************************************************************************************************************",
+    "linecol": [
+      20,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "####   #    #    ##    #####      #     #####  #####   ######         ",
+    "linecol": [
+      22,
+      3
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#    #  #    #   #  #   #    #     #       #    #    #  #          ",
+    "linecol": [
+      23,
+      2
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#       ######  #    #  #    #     #       #    #    #  #####      ",
+    "linecol": [
+      24,
+      2
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#       #    #  ######  #####      #       #    #####   #             ",
+    "linecol": [
+      25,
+      2
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#    #  #    #  #    #  #          #       #    #   #   #              ",
+    "linecol": [
+      26,
+      2
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "####   #    #  #    #  #          #       #    #    #  ######  ",
+    "linecol": [
+      27,
+      3
+    ]
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "31000",
+      "linecol": [
+        28,
+        7
+      ]
+    },
+    "linecol": [
+      28,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "positif(null(1-(V_0CF+V_0CH+V_0CR+V_0DJ+V_0DN+V_0DP)) * null( present( TSHALLO2 ) + present( ALLO2 ) + present( TSHALLO3 ) + present( ALLO3 ) + present( TSHALLO4 ) + present( ALLO4 ) + present( FRN2 ) + present( FRN3 ) + present(FRN4) + present(CARTSP2) + present(CARTSP3) + present(CARTSP4) + present(REMPLAP2) + present(REMPLAP3) + present(REMPLAP4) ))",
+          "linecol": [
+            30,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERP_BOOL",
+          "linecol": [
+            30,
+            1
+          ]
+        },
+        "linecol": [
+          30,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            29,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            29,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        29,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "31002",
+      "linecol": [
+        48,
+        7
+      ]
+    },
+    "linecol": [
+      48,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TSHALLOV + ALLOV + GLD1V + GLD2V + GLD3V + GLDGRATV + BPCOSAV + TSASSUV + CARTSV + REMPLAV + CODDAJ + CODEAJ + max(0,SALEXTV - COD1AD) ",
+          "linecol": [
+            51,
+            3
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPSALV",
+          "linecol": [
+            50,
+            1
+          ]
+        },
+        "linecol": [
+          50,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TSHALLOC + ALLOC + GLD1C + GLD2C + GLD3C + GLDGRATC + BPCOSAC + TSASSUC + CARTSC + REMPLAC + CODDBJ + CODEBJ + max(0,SALEXTC - COD1BD) ",
+          "linecol": [
+            66,
+            4
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPSALC",
+          "linecol": [
+            65,
+            1
+          ]
+        },
+        "linecol": [
+          65,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "PERP_BOOL * ( TSHALLO1 + ALLO1 + CARTSP1 + REMPLAP1 + max(0,SALEXT1 - COD1CD) ) ",
+          "linecol": [
+            80,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPSALP",
+          "linecol": [
+            80,
+            1
+          ]
+        },
+        "linecol": [
+          80,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            49,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            49,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        49,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "31003",
+      "linecol": [
+        88,
+        7
+      ]
+    },
+    "linecol": [
+      88,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "PREP10V",
+          "linecol": [
+            90,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPSALDV",
+          "linecol": [
+            90,
+            1
+          ]
+        },
+        "linecol": [
+          90,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "PREP10C",
+          "linecol": [
+            91,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPSALDC",
+          "linecol": [
+            91,
+            1
+          ]
+        },
+        "linecol": [
+          91,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "PREP10P * PERP_BOOL",
+          "linecol": [
+            92,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPSALDP",
+          "linecol": [
+            92,
+            1
+          ]
+        },
+        "linecol": [
+          92,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            89,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            89,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        89,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "31004",
+      "linecol": [
+        93,
+        7
+      ]
+    },
+    "linecol": [
+      93,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "PERPSALV - PERPSALDV + ELURASV",
+          "linecol": [
+            95,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPSALNV",
+          "linecol": [
+            95,
+            1
+          ]
+        },
+        "linecol": [
+          95,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "PERPSALC - PERPSALDC + ELURASC",
+          "linecol": [
+            96,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPSALNC",
+          "linecol": [
+            96,
+            1
+          ]
+        },
+        "linecol": [
+          96,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "PERPSALP -PERPSALDP",
+          "linecol": [
+            97,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPSALNP",
+          "linecol": [
+            97,
+            1
+          ]
+        },
+        "linecol": [
+          97,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            94,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            94,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        94,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "31005",
+      "linecol": [
+        98,
+        7
+      ]
+    },
+    "linecol": [
+      98,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "FEXV + BAFV + BAFPVV + BAEXV + BACREV - (BACDEV * (1 - positif(ART1731BIS) )) + BAHEXV + BAHREV - (BAHDEV * (1 - positif(ART1731BIS) )) + BAPERPV + 4BACREV + 4BAHREV + BAFORESTV + BANOCGAV ",
+          "linecol": [
+            101,
+            4
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPBANV",
+          "linecol": [
+            100,
+            1
+          ]
+        },
+        "linecol": [
+          100,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "FEXC + BAFC + BAFPVC + BAEXC + BACREC - (BACDEC * (1 - positif(ART1731BIS) )) + BAHEXC + BAHREC - (BAHDEC * (1 - positif(ART1731BIS) )) + BAPERPC + 4BACREC + 4BAHREC + BAFORESTC + BANOCGAC ",
+          "linecol": [
+            117,
+            4
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPBANC",
+          "linecol": [
+            116,
+            1
+          ]
+        },
+        "linecol": [
+          116,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "PERP_BOOL * ( FEXP + BAFP + BAFPVP + BAEXP + BACREP - (BACDEP * (1 - positif(ART1731BIS) )) + BAHEXP + BAHREP - (BAHDEP * (1 - positif(ART1731BIS) )) + BAPERPP + 4BACREP + 4BAHREP ) + BAFORESTP + BANOCGAP ",
+          "linecol": [
+            132,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPBANP",
+          "linecol": [
+            132,
+            1
+          ]
+        },
+        "linecol": [
+          132,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            99,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            99,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        99,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "31006",
+      "linecol": [
+        148,
+        7
+      ]
+    },
+    "linecol": [
+      148,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TPMIB_NETPV+TPMIB_NETVV+MIBEXV+MIBPVV-BICPMVCTV",
+          "linecol": [
+            150,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPBICMNV",
+          "linecol": [
+            150,
+            1
+          ]
+        },
+        "linecol": [
+          150,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TPMIB_NETPC+TPMIB_NETVC+MIBEXC+MIBPVC-BICPMVCTC",
+          "linecol": [
+            151,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPBICMNC",
+          "linecol": [
+            151,
+            1
+          ]
+        },
+        "linecol": [
+          151,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(TPMIB_NETPP+TPMIB_NETVP+MIBEXP+MIBPVP-BICPMVCTP) * PERP_BOOL",
+          "linecol": [
+            152,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPBICMNP",
+          "linecol": [
+            152,
+            1
+          ]
+        },
+        "linecol": [
+          152,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            149,
+            16
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            149,
+            24
+          ]
+        }
+      ],
+      "linecol": [
+        149,
+        16
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "31007",
+      "linecol": [
+        153,
+        7
+      ]
+    },
+    "linecol": [
+      153,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BICEXV + BICNOV - (BICDNV * (1 - positif(ART1731BIS) )) + BIHEXV + BIHNOV - (BIHDNV * (1 - positif(ART1731BIS) )) + BIPERPV + LOCPROCGAV - (LOCDEFPROCGAV * (1 - positif(ART1731BIS) )) + LOCPROV - (LOCDEFPROV * (1 - positif(ART1731BIS) )) ",
+          "linecol": [
+            156,
+            4
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPBICPNV",
+          "linecol": [
+            155,
+            1
+          ]
+        },
+        "linecol": [
+          155,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BICEXC + BICNOC -  (BICDNC * (1 - positif(ART1731BIS) )) + BIHEXC + BIHNOC - (BIHDNC * (1 - positif(ART1731BIS) )) + BIPERPC + LOCPROCGAC - (LOCDEFPROCGAC * (1 - positif(ART1731BIS) )) + LOCPROC - (LOCDEFPROC * (1 - positif(ART1731BIS) )) ",
+          "linecol": [
+            169,
+            4
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPBICPNC",
+          "linecol": [
+            168,
+            1
+          ]
+        },
+        "linecol": [
+          168,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "PERP_BOOL * ( BICEXP + BICNOP -  (BICDNP * (1 - positif(ART1731BIS) )) + BIHEXP + BIHNOP - (BIHDNP * (1 - positif(ART1731BIS) )) + BIPERPP + LOCPROCGAP - (LOCDEFPROCGAP * (1 - positif(ART1731BIS) )) + LOCPROP - (LOCDEFPROP * (1 - positif(ART1731BIS) )))",
+          "linecol": [
+            181,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPBICPNP",
+          "linecol": [
+            181,
+            1
+          ]
+        },
+        "linecol": [
+          181,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            154,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            154,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        154,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "31008",
+      "linecol": [
+        193,
+        7
+      ]
+    },
+    "linecol": [
+      193,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BNCPROEXV + max(0,(BNCPROV+AUTOBNCV) - max(arr((BNCPROV+AUTOBNCV) * SPETXAB/100),MIN_SPEBNC)) + BNCPROPVV-BNCPMVCTV",
+          "linecol": [
+            195,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPBNCMNV",
+          "linecol": [
+            195,
+            1
+          ]
+        },
+        "linecol": [
+          195,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BNCPROEXC + max(0,(BNCPROC+AUTOBNCC) - max(arr((BNCPROC+AUTOBNCC) * SPETXAB/100),MIN_SPEBNC)) + BNCPROPVC-BNCPMVCTC",
+          "linecol": [
+            197,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPBNCMNC",
+          "linecol": [
+            197,
+            1
+          ]
+        },
+        "linecol": [
+          197,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "PERP_BOOL * ( BNCPROEXP + max(0,(BNCPROP+AUTOBNCP) - max(arr((BNCPROP+AUTOBNCP) * SPETXAB/100),MIN_SPEBNC)) + BNCPROPVP-BNCPMVCTP)",
+          "linecol": [
+            199,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPBNCMNP",
+          "linecol": [
+            199,
+            1
+          ]
+        },
+        "linecol": [
+          199,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            194,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            194,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        194,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "31009",
+      "linecol": [
+        202,
+        7
+      ]
+    },
+    "linecol": [
+      202,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BNCEXV + BNCREV - (BNCDEV * (1 - positif(ART1731BIS) )) + BNHEXV + BNHREV - (BNHDEV * (1 - positif(ART1731BIS) )) + BNCCRV ",
+          "linecol": [
+            205,
+            4
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPBNCPNV",
+          "linecol": [
+            204,
+            1
+          ]
+        },
+        "linecol": [
+          204,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BNCEXC + BNCREC - (BNCDEC * (1 - positif(ART1731BIS) )) + BNHEXC + BNHREC - (BNHDEC * (1 - positif(ART1731BIS) )) + BNCCRC ",
+          "linecol": [
+            214,
+            4
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPBNCPNC",
+          "linecol": [
+            213,
+            1
+          ]
+        },
+        "linecol": [
+          213,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "PERP_BOOL * ( BNCEXP + BNCREP - (BNCDEP * (1 - positif(ART1731BIS) )) + BNHEXP + BNHREP - (BNHDEP * (1 - positif(ART1731BIS) )) + BNCCRP )",
+          "linecol": [
+            222,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPBNCPNP",
+          "linecol": [
+            222,
+            1
+          ]
+        },
+        "linecol": [
+          222,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            203,
+            16
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            203,
+            24
+          ]
+        }
+      ],
+      "linecol": [
+        203,
+        16
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "31010",
+      "linecol": [
+        231,
+        7
+      ]
+    },
+    "linecol": [
+      231,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "PERPBANV + PERPBICMNV + PERPBICPNV + PERPBNCMNV + PERPBNCPNV",
+          "linecol": [
+            233,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPNONSALV",
+          "linecol": [
+            233,
+            1
+          ]
+        },
+        "linecol": [
+          233,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "PERPBANC + PERPBICMNC + PERPBICPNC + PERPBNCMNC + PERPBNCPNC",
+          "linecol": [
+            234,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPNONSALC",
+          "linecol": [
+            234,
+            1
+          ]
+        },
+        "linecol": [
+          234,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "PERPBANP + PERPBICMNP + PERPBICPNP + PERPBNCMNP + PERPBNCPNP",
+          "linecol": [
+            235,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPNONSALP",
+          "linecol": [
+            235,
+            1
+          ]
+        },
+        "linecol": [
+          235,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            232,
+            16
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            232,
+            24
+          ]
+        }
+      ],
+      "linecol": [
+        232,
+        16
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "31011",
+      "linecol": [
+        236,
+        7
+      ]
+    },
+    "linecol": [
+      236,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "max(0,PERPSALNV + PERPNONSALV)",
+          "linecol": [
+            238,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPREVTOTV",
+          "linecol": [
+            238,
+            1
+          ]
+        },
+        "linecol": [
+          238,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "max(0,PERPSALNC + PERPNONSALC)",
+          "linecol": [
+            239,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPREVTOTC",
+          "linecol": [
+            239,
+            1
+          ]
+        },
+        "linecol": [
+          239,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "max(0,PERPSALNP + PERPNONSALP)",
+          "linecol": [
+            240,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPREVTOTP",
+          "linecol": [
+            240,
+            1
+          ]
+        },
+        "linecol": [
+          240,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            237,
+            16
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            237,
+            24
+          ]
+        }
+      ],
+      "linecol": [
+        237,
+        16
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "31012",
+      "linecol": [
+        241,
+        7
+      ]
+    },
+    "linecol": [
+      241,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "positif( 0+ positif(TSHALLO1) + positif(ALLO1) + positif(FEXP)  + positif(BAFP)  + positif(BAFPVP)  + positif(BAEXP) + positif(BACREP) + positif(4BACREP) + positif(BACDEP * (1 - positif(ART1731BIS) ))  + positif(BAHEXP) + positif(BAHREP) + positif(4BAHREP) + positif(BAHDEP * (1 - positif(ART1731BIS) ))  + positif(BAPERPP) + positif(MIBEXP) + positif(MIBVENP) + positif(MIBPRESP) + positif(MIBPVP) + positif(AUTOBICVP) + positif(AUTOBICPP) + positif(BICEXP) + positif(BICNOP) + positif(BICDNP * (1 - positif(ART1731BIS) )) + positif(BIHEXP) + positif(BIHNOP) + positif(BIHDNP * (1 - positif(ART1731BIS) )) + positif(BIPERPP) + positif(LOCPROCGAP) - positif(LOCDEFPROCGAP * (1 - positif(ART1731BIS) )) + positif(LOCPROP) -  positif(LOCDEFPROP * (1 - positif(ART1731BIS) )) + positif(BNCPROEXP) + positif(BNCPROP) + positif(BNCPROPVP) + positif(AUTOBNCP) + positif(BNCEXP) + positif(BNCREP) + positif(BNCDEP * (1 - positif(ART1731BIS) )) + positif(BNHEXP) + positif(BNHREP) + positif(BNHDEP * (1 - positif(ART1731BIS) )) + positif(BNCCRP) )",
+          "linecol": [
+            270,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERP_INDP",
+          "linecol": [
+            270,
+            1
+          ]
+        },
+        "linecol": [
+          270,
+          1
+        ]
+      },
+      {
+        "loop_variables": {
+          "type": "loop_variables",
+          "value": [
+            {
+              "domain": {
+                "type": "loop_variable_domain",
+                "value": [
+                  {
+                    "type": "symbol",
+                    "name": "V",
+                    "linecol": [
+                      244,
+                      9
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "C",
+                    "linecol": [
+                      244,
+                      11
+                    ]
+                  }
+                ],
+                "linecol": [
+                  244,
+                  9
+                ]
+              },
+              "type": "loop_variable",
+              "name": {
+                "type": "symbol",
+                "name": "i",
+                "linecol": [
+                  244,
+                  6
+                ]
+              },
+              "linecol": [
+                244,
+                6
+              ]
+            }
+          ],
+          "linecol": [
+            244,
+            6
+          ]
+        },
+        "variable_definition": {
+          "expression": {
+            "type": "expression",
+            "value": "positif( 0 + positif(TSHALLOi) + positif(ALLOi) + positif(GLD1i)  + positif(GLD2i) + positif(GLD3i) + positif(GLDGRATi) + positif(BPCOSAi)  + positif(TSASSUi) + positif(CARTSi) + positif(FEXi)  + positif(BAFi)  + positif(BAFPVi) + positif(BAEXi) + positif(BACREi) + positif(4BACREi) + positif(BACDEi * (1 - positif(ART1731BIS) ))  + positif(BAHEXi) + positif(BAHREi) + positif(4BAHREi) + positif(BAHDEi * (1 - positif(ART1731BIS) ))  + positif(BAPERPi) + positif(MIBEXi) + positif(MIBVENi) + positif(MIBPRESi) + positif(MIBPVi) + positif(AUTOBICVi) + positif(AUTOBICPi) + positif(BICEXi) + positif(BICNOi) + positif(BICDNi * (1 - positif(ART1731BIS) )) + positif(BIHEXi) + positif(BIHNOi) + positif(BIHDNi * (1 - positif(ART1731BIS) )) + positif(BIPERPi) + positif(LOCPROCGAi) - positif(LOCDEFPROCGAi * (1 - positif(ART1731BIS) )) + positif(LOCPROi) -  positif(LOCDEFPROi * (1 - positif(ART1731BIS) )) + positif(BNCPROEXi) + positif(BNCPROi) + positif(BNCPROPVi) + positif(AUTOBNCi) + positif(BNCEXi) + positif(BNCREi) + positif(BNCDEi * (1 - positif(ART1731BIS) )) + positif(BNHEXi) + positif(BNHREi) + positif(BNHDEi * (1 - positif(ART1731BIS) )) + positif(BNCCRi) )",
+            "linecol": [
+              245,
+              13
+            ]
+          },
+          "type": "variable_definition",
+          "name": {
+            "type": "symbol",
+            "name": "PERP_INDi",
+            "linecol": [
+              245,
+              1
+            ]
+          },
+          "linecol": [
+            245,
+            1
+          ]
+        },
+        "type": "pour_variable_definition",
+        "linecol": [
+          244,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            242,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            242,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        242,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "31013",
+      "linecol": [
+        292,
+        7
+      ]
+    },
+    "linecol": [
+      292,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "positif( (positif(positif(PERP_INDV) + (1 - positif(PERP_INDV)) * (1 - positif(PRBRV+PALIV))) * positif(INDREV1A8)) + (1 - positif(PERP_INDV)) * positif(PRBRV+PALIV) * positif(PERP_COTV) +PERPMUTU * (1 - positif(PERP_INDV+PERP_COTV))) * (1 - PERP_NONV) * (1 -V_CNR)",
+          "linecol": [
+            295,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPINDV",
+          "linecol": [
+            295,
+            1
+          ]
+        },
+        "linecol": [
+          295,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "positif( (positif(positif(PERP_INDC) + (1 - positif(PERP_INDC)) * (1 - positif(PRBRC+PALIC))) * positif(INDREV1A8)) + (1 - positif(PERP_INDC)) * positif(PRBRC+PALIC) * positif(PERP_COTC) +PERPMUTU * (1 - positif(PERP_INDC+PERP_COTC))) * (1 - PERP_NONC) * BOOL_0AM * (1 -V_CNR)",
+          "linecol": [
+            305,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPINDC",
+          "linecol": [
+            305,
+            1
+          ]
+        },
+        "linecol": [
+          305,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "positif( (positif(positif(PERP_INDP) + (1 - positif(PERP_INDP)) * (1 - positif(PRBR1+PALIP))) * positif(INDREV1A8)) + (1 - positif(PERP_INDP)) * positif(PRBR1+PALIP) * positif(PERP_COTP) ) * PERP_BOOL * (1 -V_CNR)",
+          "linecol": [
+            316,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPINDP",
+          "linecol": [
+            316,
+            1
+          ]
+        },
+        "linecol": [
+          316,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            293,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            293,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        293,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "31014",
+      "linecol": [
+        327,
+        7
+      ]
+    },
+    "linecol": [
+      327,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "positif(V_BTPERPTOTV + PERPPLAFCV + PERPPLAFNUV1 + PERPPLAFNUV2 +PERPPLAFNUNV + PERP_COTV + RACCOTV) * PERPINDV * (1 -V_CNR)",
+          "linecol": [
+            329,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPINDCV",
+          "linecol": [
+            329,
+            1
+          ]
+        },
+        "linecol": [
+          329,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BOOL_0AM * positif(V_BTPERPTOTC + PERPPLAFCC + PERPPLAFNUC1 + PERPPLAFNUC2 +PERPPLAFNUNC + PERP_COTC + RACCOTC) * PERPINDC * (1 -V_CNR)",
+          "linecol": [
+            334,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPINDCC",
+          "linecol": [
+            334,
+            1
+          ]
+        },
+        "linecol": [
+          334,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "PERP_BOOL * positif(V_BTPERPTOTP + PERPPLAFCP + PERPPLAFNUP1 + PERPPLAFNUP2 +PERPPLAFNUNP + PERP_COTP + RACCOTP) +0 * (1 -V_CNR)",
+          "linecol": [
+            340,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPINDCP",
+          "linecol": [
+            340,
+            1
+          ]
+        },
+        "linecol": [
+          340,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            328,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            328,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        328,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "31015",
+      "linecol": [
+        346,
+        7
+      ]
+    },
+    "linecol": [
+      346,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "positif(PERPINDV) * max(0,positif(PERPREVTOTV) * (max(min(arr(PERPREVTOTV * TX_PERPPLAF/100),LIM_PERPMAX),LIM_PERPMIN)-PERPV) + (1 - positif(PERPREVTOTV)) * (LIM_PERPMIN - PERPV) ) * (1 -V_CNR)",
+          "linecol": [
+            348,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPPLAFV",
+          "linecol": [
+            348,
+            1
+          ]
+        },
+        "linecol": [
+          348,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "positif(PERPINDC) * BOOL_0AM * max(0,positif(PERPREVTOTC) * (max(min(arr(PERPREVTOTC * TX_PERPPLAF/100),LIM_PERPMAX),LIM_PERPMIN)-PERPC) + (1 - positif(PERPREVTOTC)) * (LIM_PERPMIN - PERPC) ) * (1 -V_CNR)",
+          "linecol": [
+            354,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPPLAFC",
+          "linecol": [
+            354,
+            1
+          ]
+        },
+        "linecol": [
+          354,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "positif(PERPINDP) * max(0,positif(PERPREVTOTP) * (max(min(arr(PERPREVTOTP * TX_PERPPLAF/100),LIM_PERPMAX),LIM_PERPMIN)-PERPP) + (1 - positif(PERPREVTOTP)) * (LIM_PERPMIN - PERPP) ) * (1 -V_CNR)",
+          "linecol": [
+            360,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPPLAFP",
+          "linecol": [
+            360,
+            1
+          ]
+        },
+        "linecol": [
+          360,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            347,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            347,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        347,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "31016",
+      "linecol": [
+        366,
+        7
+      ]
+    },
+    "linecol": [
+      366,
+      1
+    ],
+    "variables": [
+      {
+        "loop_variables": {
+          "type": "loop_variables",
+          "value": [
+            {
+              "domain": {
+                "type": "loop_variable_domain",
+                "value": [
+                  {
+                    "type": "symbol",
+                    "name": "V",
+                    "linecol": [
+                      368,
+                      9
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "C",
+                    "linecol": [
+                      368,
+                      11
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "P",
+                    "linecol": [
+                      368,
+                      13
+                    ]
+                  }
+                ],
+                "linecol": [
+                  368,
+                  9
+                ]
+              },
+              "type": "loop_variable",
+              "name": {
+                "type": "symbol",
+                "name": "i",
+                "linecol": [
+                  368,
+                  6
+                ]
+              },
+              "linecol": [
+                368,
+                6
+              ]
+            }
+          ],
+          "linecol": [
+            368,
+            6
+          ]
+        },
+        "variable_definition": {
+          "expression": {
+            "type": "expression",
+            "value": "PERPINDi * max(0,PERPPLAFi + PERPPLAFNUNi + PERPPLAFNU1i + PERPPLAFNU2i) * (1 - V_CNR)",
+            "linecol": [
+              369,
+              14
+            ]
+          },
+          "type": "variable_definition",
+          "name": {
+            "type": "symbol",
+            "name": "PERPPLAFTi",
+            "linecol": [
+              369,
+              1
+            ]
+          },
+          "linecol": [
+            369,
+            1
+          ]
+        },
+        "type": "pour_variable_definition",
+        "linecol": [
+          368,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            367,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            367,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        367,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "31017",
+      "linecol": [
+        372,
+        7
+      ]
+    },
+    "linecol": [
+      372,
+      1
+    ],
+    "variables": [
+      {
+        "loop_variables": {
+          "type": "loop_variables",
+          "value": [
+            {
+              "domain": {
+                "type": "loop_variable_domain",
+                "value": [
+                  {
+                    "type": "symbol",
+                    "name": "V",
+                    "linecol": [
+                      374,
+                      9
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "C",
+                    "linecol": [
+                      374,
+                      11
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "P",
+                    "linecol": [
+                      374,
+                      13
+                    ]
+                  }
+                ],
+                "linecol": [
+                  374,
+                  9
+                ]
+              },
+              "type": "loop_variable",
+              "name": {
+                "type": "symbol",
+                "name": "i",
+                "linecol": [
+                  374,
+                  6
+                ]
+              },
+              "linecol": [
+                374,
+                6
+              ]
+            }
+          ],
+          "linecol": [
+            374,
+            6
+          ]
+        },
+        "variable_definition": {
+          "expression": {
+            "type": "expression",
+            "value": "(1 - positif(present(PERPPLAFCi) + present(PERPPLAFNUi1) + present(PERPPLAFNUi2) + present(PERPPLAFNUi3))) * V_BTPERPTOTi + positif(present(PERPPLAFCi) + present(PERPPLAFNUi1) + present(PERPPLAFNUi2) + present(PERPPLAFNUi3)) *(PERPPLAFCi + PERPPLAFNUi1 + PERPPLAFNUi2 + PERPPLAFNUi3)",
+            "linecol": [
+              375,
+              16
+            ]
+          },
+          "type": "variable_definition",
+          "name": {
+            "type": "symbol",
+            "name": "PERPPLATiANT",
+            "linecol": [
+              375,
+              1
+            ]
+          },
+          "linecol": [
+            375,
+            1
+          ]
+        },
+        "type": "pour_variable_definition",
+        "linecol": [
+          374,
+          1
+        ]
+      },
+      {
+        "loop_variables": {
+          "type": "loop_variables",
+          "value": [
+            {
+              "domain": {
+                "type": "loop_variable_domain",
+                "value": [
+                  {
+                    "type": "symbol",
+                    "name": "V",
+                    "linecol": [
+                      381,
+                      9
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "C",
+                    "linecol": [
+                      381,
+                      11
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "P",
+                    "linecol": [
+                      381,
+                      13
+                    ]
+                  }
+                ],
+                "linecol": [
+                  381,
+                  9
+                ]
+              },
+              "type": "loop_variable",
+              "name": {
+                "type": "symbol",
+                "name": "i",
+                "linecol": [
+                  381,
+                  6
+                ]
+              },
+              "linecol": [
+                381,
+                6
+              ]
+            }
+          ],
+          "linecol": [
+            381,
+            6
+          ]
+        },
+        "variable_definition": {
+          "expression": {
+            "type": "expression",
+            "value": "present(PERPPLAFCi) * PERPPLAFCi + (1 - present(PERPPLAFCi)) * V_BTPERPi",
+            "linecol": [
+              382,
+              16
+            ]
+          },
+          "type": "variable_definition",
+          "name": {
+            "type": "symbol",
+            "name": "PERPPLAFiANT",
+            "linecol": [
+              382,
+              1
+            ]
+          },
+          "linecol": [
+            382,
+            1
+          ]
+        },
+        "type": "pour_variable_definition",
+        "linecol": [
+          381,
+          1
+        ]
+      },
+      {
+        "loop_variables": {
+          "type": "loop_variables",
+          "value": [
+            {
+              "domain": {
+                "type": "loop_variable_domain",
+                "value": [
+                  {
+                    "type": "symbol",
+                    "name": "V",
+                    "linecol": [
+                      384,
+                      9
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "C",
+                    "linecol": [
+                      384,
+                      11
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "P",
+                    "linecol": [
+                      384,
+                      13
+                    ]
+                  }
+                ],
+                "linecol": [
+                  384,
+                  9
+                ]
+              },
+              "type": "loop_variable",
+              "name": {
+                "type": "symbol",
+                "name": "i",
+                "linecol": [
+                  384,
+                  6
+                ]
+              },
+              "linecol": [
+                384,
+                6
+              ]
+            }
+          ],
+          "linecol": [
+            384,
+            6
+          ]
+        },
+        "variable_definition": {
+          "expression": {
+            "type": "expression",
+            "value": "present(PERPPLAFNUi2) * PERPPLAFNUi2 +(1 - present(PERPPLAFNUi2)) * V_BTPERPNUi2",
+            "linecol": [
+              385,
+              19
+            ]
+          },
+          "type": "variable_definition",
+          "name": {
+            "type": "symbol",
+            "name": "PERPPLAFNUi2ANT",
+            "linecol": [
+              385,
+              1
+            ]
+          },
+          "linecol": [
+            385,
+            1
+          ]
+        },
+        "type": "pour_variable_definition",
+        "linecol": [
+          384,
+          1
+        ]
+      },
+      {
+        "loop_variables": {
+          "type": "loop_variables",
+          "value": [
+            {
+              "domain": {
+                "type": "loop_variable_domain",
+                "value": [
+                  {
+                    "type": "symbol",
+                    "name": "V",
+                    "linecol": [
+                      387,
+                      9
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "C",
+                    "linecol": [
+                      387,
+                      11
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "P",
+                    "linecol": [
+                      387,
+                      13
+                    ]
+                  }
+                ],
+                "linecol": [
+                  387,
+                  9
+                ]
+              },
+              "type": "loop_variable",
+              "name": {
+                "type": "symbol",
+                "name": "i",
+                "linecol": [
+                  387,
+                  6
+                ]
+              },
+              "linecol": [
+                387,
+                6
+              ]
+            }
+          ],
+          "linecol": [
+            387,
+            6
+          ]
+        },
+        "variable_definition": {
+          "expression": {
+            "type": "expression",
+            "value": "present(PERPPLAFNUi3) * PERPPLAFNUi3 +(1 - present(PERPPLAFNUi3)) * V_BTPERPNUi3",
+            "linecol": [
+              388,
+              19
+            ]
+          },
+          "type": "variable_definition",
+          "name": {
+            "type": "symbol",
+            "name": "PERPPLAFNUi3ANT",
+            "linecol": [
+              388,
+              1
+            ]
+          },
+          "linecol": [
+            388,
+            1
+          ]
+        },
+        "type": "pour_variable_definition",
+        "linecol": [
+          387,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            373,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            373,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        373,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "31018",
+      "linecol": [
+        390,
+        7
+      ]
+    },
+    "linecol": [
+      390,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(1 - positif(PERP_COND1)) * (1 - positif(PERP_COND2)) * max(PERPPLATVANT - RPERPV,0) + positif(PERP_COND1) * 0 + positif(PERP_COND2) * max(0,PERPPLATVANT - RPERPV - RPERPMUTC - RACCOTC) ",
+          "linecol": [
+            392,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPPLAFNUTV",
+          "linecol": [
+            392,
+            1
+          ]
+        },
+        "linecol": [
+          392,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(1 - positif(PERP_COND1)) * (1 - positif(PERP_COND2)) * max(PERPPLATCANT - RPERPC,0) + positif(PERP_COND1) * max(0,PERPPLATCANT - RPERPC - RPERPMUTV - RACCOTV) + positif(PERP_COND2) * 0 ",
+          "linecol": [
+            397,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPPLAFNUTC",
+          "linecol": [
+            397,
+            1
+          ]
+        },
+        "linecol": [
+          397,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "max(PERPPLATPANT - RPERPP,0)",
+          "linecol": [
+            402,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPPLAFNUTP",
+          "linecol": [
+            402,
+            1
+          ]
+        },
+        "linecol": [
+          402,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(1 - positif(PERP_COND1)) * (1 - positif(PERP_COND2)) * ((1 - positif(PERPIMPATRIE+0)) * max(0,PERPPLAFVANT - RPERPV) + positif(PERPIMPATRIE+0) * max(0,PERPPLAFV - RPERPV)) + positif(PERP_COND1) * 0 + positif(PERP_COND2) * ((1 - positif(PERPIMPATRIE)) * max(0,PERPPLAFVANT - RPERPV - RPERPMUTC - RACCOTC) + positif(PERPIMPATRIE) * max(0,PERPPLAFV - RPERPV - RPERPMUTC - RACCOTC)) ",
+          "linecol": [
+            403,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPPLAFNUV",
+          "linecol": [
+            403,
+            1
+          ]
+        },
+        "linecol": [
+          403,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(1 - positif(PERP_COND1)) * (1 - positif(PERP_COND2)) * ((1 - positif(PERPIMPATRIE+0)) * max(0,PERPPLAFCANT - RPERPC) + positif(PERPIMPATRIE+0) * max(0,PERPPLAFC - RPERPC)) + positif(PERP_COND1) * ((1 - positif(PERPIMPATRIE)) * max(0,PERPPLAFCANT - RPERPC - RPERPMUTV - RACCOTV) + positif(PERPIMPATRIE) * max(0,PERPPLAFC - RPERPC - RPERPMUTV - RACCOTV)) + positif(PERP_COND2) * 0 ",
+          "linecol": [
+            413,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPPLAFNUC",
+          "linecol": [
+            413,
+            1
+          ]
+        },
+        "linecol": [
+          413,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(1 - positif(PERPIMPATRIE+0)) * max(0,PERPPLAFPANT - RPERPP) + positif(PERPIMPATRIE+0) * max(0,PERPPLAFP - RPERPP) ",
+          "linecol": [
+            423,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPPLAFNUP",
+          "linecol": [
+            423,
+            1
+          ]
+        },
+        "linecol": [
+          423,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(1 - positif(PERP_COND1)) * (1 - positif(PERP_COND2)) * ((1 - positif(PERPIMPATRIE+0)) * (positif(PERPPLAFNUV) * PERPPLAFNUV3ANT + (1 - positif(PERPPLAFNUV)) * max(0,PERPPLAFNUV3ANT - (RPERPV - PERPPLAFVANT))) + positif(PERPIMPATRIE+0) * 0 ) + positif(PERP_COND1) * 0 + positif(PERP_COND2) * (positif(PERPPLAFNUV) * PERPPLAFNUV3ANT + (1 - positif(PERPPLAFNUV)) *max(0,PERPPLAFNUV3ANT - (RPERPV + RPERPMUTC  + RACCOTC- PERPPLAFVANT))) ",
+          "linecol": [
+            428,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPPLAFNU3V",
+          "linecol": [
+            428,
+            1
+          ]
+        },
+        "linecol": [
+          428,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(1 - positif(PERP_COND1)) * (1 - positif(PERP_COND2)) * ((1 - positif(PERPIMPATRIE+0)) * (positif(PERPPLAFNUC) * PERPPLAFNUC3ANT + (1 - positif(PERPPLAFNUC)) * max(0,PERPPLAFNUC3ANT - (RPERPC - PERPPLAFCANT))) + positif(PERPIMPATRIE+0) * 0 ) + positif(PERP_COND1) * (positif(PERPPLAFNUC) * PERPPLAFNUC3ANT + (1 - positif(PERPPLAFNUC)) *max(0,PERPPLAFNUC3ANT - (RPERPC + RPERPMUTV  + RACCOTV- PERPPLAFCANT))) + positif(PERP_COND2) * 0 ",
+          "linecol": [
+            438,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPPLAFNU3C",
+          "linecol": [
+            438,
+            1
+          ]
+        },
+        "linecol": [
+          438,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(1 - positif(PERPIMPATRIE+0)) * ( max(0,positif(PERPPLAFNUP) * PERPPLAFNUP3ANT + (1 - positif(PERPPLAFNUP+0)) * (PERPPLAFNUP3ANT - (RPERPP - PERPPLAFPANT))) ) + positif(PERPIMPATRIE+0) * 0",
+          "linecol": [
+            448,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPPLAFNU3P",
+          "linecol": [
+            448,
+            1
+          ]
+        },
+        "linecol": [
+          448,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(1 - positif(PERP_COND1)) * (1 - positif(PERP_COND2)) * ((1 - positif(PERPIMPATRIE+0)) * (positif(PERPPLAFVANT + PERPPLAFNUV3ANT - RPERPV) * PERPPLAFNUV2ANT + (1 - positif(PERPPLAFVANT + PERPPLAFNUV3ANT - RPERPV)) * max(0,PERPPLAFNUV2ANT - (RPERPV - PERPPLAFVANT - PERPPLAFNUV3ANT))) + positif(PERPIMPATRIE+0) * 0 ) + positif(PERP_COND1) * 0 + positif(PERP_COND2) * ((1 - positif(PERPIMPATRIE+0)) * (positif(PERPPLAFVANT + PERPPLAFNUV3ANT - RPERPV - RPERPMUTC- RACCOTC) * PERPPLAFNUV2ANT + (1 - positif(PERPPLAFVANT + PERPPLAFNUV3ANT - RPERPV - RPERPMUTC - RACCOTC)) * max(0,PERPPLAFNUV2ANT - (RPERPV + RPERPMUTC + RACCOTC) - (PERPPLAFVANT + PERPPLAFNUV3ANT))) + positif(PERPIMPATRIE+0) * 0 ) ",
+          "linecol": [
+            455,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPPLAFNU2V",
+          "linecol": [
+            455,
+            1
+          ]
+        },
+        "linecol": [
+          455,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(1 - positif(PERP_COND1)) * (1 - positif(PERP_COND2)) * ((1 - positif(PERPIMPATRIE+0)) * (positif(PERPPLAFCANT + PERPPLAFNUC3ANT - RPERPC) * PERPPLAFNUC2ANT + (1 - positif(PERPPLAFCANT + PERPPLAFNUC3ANT - RPERPC)) * max(0,PERPPLAFNUC2ANT - (RPERPC - PERPPLAFCANT - PERPPLAFNUC3ANT))) + positif(PERPIMPATRIE+0) * 0 ) + positif(PERP_COND1) * ((1 - positif(PERPIMPATRIE+0)) * (positif(PERPPLAFCANT + PERPPLAFNUC3ANT - RPERPC - RPERPMUTV - RACCOTV) * PERPPLAFNUC2ANT + (1 - positif(PERPPLAFCANT + PERPPLAFNUC3ANT - RPERPC - RPERPMUTV - RACCOTV )) * max(0,PERPPLAFNUC2ANT - (RPERPC + RPERPMUTV  + RACCOTV) - (PERPPLAFCANT + PERPPLAFNUC3ANT))) + positif(PERPIMPATRIE+0) * 0 ) + positif(PERP_COND2) * 0 ",
+          "linecol": [
+            471,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPPLAFNU2C",
+          "linecol": [
+            471,
+            1
+          ]
+        },
+        "linecol": [
+          471,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(1 - positif(PERPIMPATRIE+0)) * ( max(0,positif(PERPPLAFPANT + PERPPLAFNUP3ANT - RPERPP) * PERPPLAFNUP2ANT + (1 - positif(PERPPLAFPANT + PERPPLAFNUP3ANT - RPERPP)) * max(0,PERPPLAFNUP2ANT - (RPERPP - PERPPLAFPANT - PERPPLAFNUP3ANT))) ) + positif(PERPIMPATRIE+0) * 0",
+          "linecol": [
+            487,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPPLAFNU2P",
+          "linecol": [
+            487,
+            1
+          ]
+        },
+        "linecol": [
+          487,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(1 - positif(PERP_COND1)) * (1 - positif(PERP_COND2)) * ((1 - positif(PERPIMPATRIE+0)) * max(PERPPLAFNUTV - PERPPLAFNUNV - PERPPLAFNU3V - PERPPLAFNU2V,0) + positif(PERPIMPATRIE+0) * 0 ) + positif(PERP_COND1) * 0 + positif(PERP_COND2) * ((1 - positif(PERPIMPATRIE+0)) * max(PERPPLAFNUTV - PERPPLAFNUNV - PERPPLAFNU3V - PERPPLAFNU2V,0) + positif(PERP_COND2) * 0) ",
+          "linecol": [
+            495,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPPLAFNU1V",
+          "linecol": [
+            495,
+            1
+          ]
+        },
+        "linecol": [
+          495,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(1 - positif(PERP_COND1)) * (1 - positif(PERP_COND2)) * ((1 - positif(PERPIMPATRIE+0)) * max(PERPPLAFNUTC - PERPPLAFNUNC - PERPPLAFNU3C - PERPPLAFNU2C,0) + positif(PERPIMPATRIE+0) * 0 ) + positif(PERP_COND1) * ((1 - positif(PERPIMPATRIE+0)) * max(PERPPLAFNUTC - PERPPLAFNUNC - PERPPLAFNU3C - PERPPLAFNU2C,0) + positif(PERPIMPATRIE+0) * 0) + positif(PERP_COND2) * 0 ",
+          "linecol": [
+            505,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPPLAFNU1C",
+          "linecol": [
+            505,
+            1
+          ]
+        },
+        "linecol": [
+          505,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(1 - positif(PERPIMPATRIE+0)) * max(PERPPLAFNUTP - PERPPLAFNUNP - PERPPLAFNU3P - PERPPLAFNU2P,0) + positif(PERPIMPATRIE+0) * 0",
+          "linecol": [
+            515,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPPLAFNU1P",
+          "linecol": [
+            515,
+            1
+          ]
+        },
+        "linecol": [
+          515,
+          1
+        ]
+      },
+      {
+        "loop_variables": {
+          "type": "loop_variables",
+          "value": [
+            {
+              "domain": {
+                "type": "loop_variable_domain",
+                "value": [
+                  {
+                    "type": "symbol",
+                    "name": "V",
+                    "linecol": [
+                      426,
+                      9
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "C",
+                    "linecol": [
+                      426,
+                      11
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "P",
+                    "linecol": [
+                      426,
+                      13
+                    ]
+                  }
+                ],
+                "linecol": [
+                  426,
+                  9
+                ]
+              },
+              "type": "loop_variable",
+              "name": {
+                "type": "symbol",
+                "name": "i",
+                "linecol": [
+                  426,
+                  6
+                ]
+              },
+              "linecol": [
+                426,
+                6
+              ]
+            }
+          ],
+          "linecol": [
+            426,
+            6
+          ]
+        },
+        "variable_definition": {
+          "expression": {
+            "type": "expression",
+            "value": "max(0,PERPPLAFNUi)",
+            "linecol": [
+              427,
+              16
+            ]
+          },
+          "type": "variable_definition",
+          "name": {
+            "type": "symbol",
+            "name": "PERPPLAFNUNi",
+            "linecol": [
+              427,
+              1
+            ]
+          },
+          "linecol": [
+            427,
+            1
+          ]
+        },
+        "type": "pour_variable_definition",
+        "linecol": [
+          426,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            391,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            391,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        391,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "31019",
+      "linecol": [
+        518,
+        7
+      ]
+    },
+    "linecol": [
+      518,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "positif( (1 - positif(PERP_INDV)) * (1 - positif(PRBRV+PALIV)) * (1 - positif(PERP_COTV)) * (1 - positif(PERP_INDC)) * positif(PRBRC+PALIC) )",
+          "linecol": [
+            520,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERP_NONV",
+          "linecol": [
+            520,
+            1
+          ]
+        },
+        "linecol": [
+          520,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "BOOL_0AM * positif( (1 - positif(PERP_INDC)) * (1 - positif(PRBRC+PALIC)) * (1 - positif(PERP_COTC)) * (1 - positif(PERP_INDV)) * positif(PRBRV+PALIV) )",
+          "linecol": [
+            525,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERP_NONC",
+          "linecol": [
+            525,
+            1
+          ]
+        },
+        "linecol": [
+          525,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "PERP_BOOL * positif(PERP_NONC + PERP_NONV)",
+          "linecol": [
+            530,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERP_NONP",
+          "linecol": [
+            530,
+            1
+          ]
+        },
+        "linecol": [
+          530,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            519,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            519,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        519,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "31020",
+      "linecol": [
+        531,
+        7
+      ]
+    },
+    "linecol": [
+      531,
+      1
+    ],
+    "variables": [
+      {
+        "loop_variables": {
+          "type": "loop_variables",
+          "value": [
+            {
+              "domain": {
+                "type": "loop_variable_domain",
+                "value": [
+                  {
+                    "type": "symbol",
+                    "name": "V",
+                    "linecol": [
+                      533,
+                      8
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "C",
+                    "linecol": [
+                      533,
+                      10
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "P",
+                    "linecol": [
+                      533,
+                      12
+                    ]
+                  }
+                ],
+                "linecol": [
+                  533,
+                  8
+                ]
+              },
+              "type": "loop_variable",
+              "name": {
+                "type": "symbol",
+                "name": "i",
+                "linecol": [
+                  533,
+                  6
+                ]
+              },
+              "linecol": [
+                533,
+                6
+              ]
+            }
+          ],
+          "linecol": [
+            533,
+            6
+          ]
+        },
+        "variable_definition": {
+          "expression": {
+            "type": "expression",
+            "value": "positif(PERPIMPATRIE) * PERPPLAFi *3 + (1 - positif(PERPIMPATRIE)) * 0",
+            "linecol": [
+              534,
+              16
+            ]
+          },
+          "type": "variable_definition",
+          "name": {
+            "type": "symbol",
+            "name": "PERPPLAFCOMi",
+            "linecol": [
+              534,
+              1
+            ]
+          },
+          "linecol": [
+            534,
+            1
+          ]
+        },
+        "type": "pour_variable_definition",
+        "linecol": [
+          533,
+          1
+        ]
+      },
+      {
+        "loop_variables": {
+          "type": "loop_variables",
+          "value": [
+            {
+              "domain": {
+                "type": "loop_variable_domain",
+                "value": [
+                  {
+                    "type": "symbol",
+                    "name": "V",
+                    "linecol": [
+                      536,
+                      8
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "C",
+                    "linecol": [
+                      536,
+                      10
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "P",
+                    "linecol": [
+                      536,
+                      12
+                    ]
+                  }
+                ],
+                "linecol": [
+                  536,
+                  8
+                ]
+              },
+              "type": "loop_variable",
+              "name": {
+                "type": "symbol",
+                "name": "i",
+                "linecol": [
+                  536,
+                  6
+                ]
+              },
+              "linecol": [
+                536,
+                6
+              ]
+            }
+          ],
+          "linecol": [
+            536,
+            6
+          ]
+        },
+        "variable_definition": {
+          "expression": {
+            "type": "expression",
+            "value": "positif(PERPIMPATRIE) * (PERPPLAFCOMi + PERPPLAFi) + (1 - positif(PERPIMPATRIE)) * 0",
+            "linecol": [
+              537,
+              16
+            ]
+          },
+          "type": "variable_definition",
+          "name": {
+            "type": "symbol",
+            "name": "PERPPLAFIMPi",
+            "linecol": [
+              537,
+              1
+            ]
+          },
+          "linecol": [
+            537,
+            1
+          ]
+        },
+        "type": "pour_variable_definition",
+        "linecol": [
+          536,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            532,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            532,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        532,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "31021",
+      "linecol": [
+        539,
+        7
+      ]
+    },
+    "linecol": [
+      539,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "positif(PERPMUTU) * positif(V_0AM+V_0AO) * (1 - positif(V_0AC+V_0AD+V_0AV)) ",
+          "linecol": [
+            541,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERP_MUT",
+          "linecol": [
+            541,
+            1
+          ]
+        },
+        "linecol": [
+          541,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "positif(PERP_MUT) *((1 - positif(PERPIMPATRIE)) * positif(PERP_COTV  - PERPPLATVANT) * positif(PERPPLATCANT - PERP_COTC) + positif(PERPIMPATRIE) * positif(PERP_COTV  - PERPPLAFIMPV) * positif(PERPPLAFIMPC - PERP_COTC) )",
+          "linecol": [
+            545,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERP_COND1",
+          "linecol": [
+            545,
+            1
+          ]
+        },
+        "linecol": [
+          545,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "positif(PERP_MUT) *((1 - positif(PERPIMPATRIE)) * positif(PERP_COTC  - PERPPLATCANT) * positif(PERPPLATVANT - PERP_COTV) + positif(PERPIMPATRIE) * positif(PERP_COTC  - PERPPLAFIMPC) * positif(PERPPLAFIMPV - PERP_COTV) )",
+          "linecol": [
+            553,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERP_COND2",
+          "linecol": [
+            553,
+            1
+          ]
+        },
+        "linecol": [
+          553,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "positif(PERP_COND1) *((1 - positif(PERPIMPATRIE)) * (PERPPLATVANT + max(0,PERPPLATCANT - PERP_COTC)) + positif(PERPIMPATRIE) * (PERPPLAFIMPV + max(0,PERPPLAFIMPC - PERP_COTC)) )",
+          "linecol": [
+            561,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPPLAFMUTV",
+          "linecol": [
+            561,
+            1
+          ]
+        },
+        "linecol": [
+          561,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "positif(PERP_COND2) *((1 - positif(PERPIMPATRIE)) * (PERPPLATCANT + max(0,PERPPLATVANT - PERP_COTV)) + positif(PERPIMPATRIE) * (PERPPLAFIMPC + max(0,PERPPLAFIMPV - PERP_COTV)) )",
+          "linecol": [
+            567,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPPLAFMUTC",
+          "linecol": [
+            567,
+            1
+          ]
+        },
+        "linecol": [
+          567,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            540,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            540,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        540,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "310211",
+      "linecol": [
+        573,
+        7
+      ]
+    },
+    "linecol": [
+      573,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "positif(PERP_COND1) *((1 - positif(PERPIMPATRIE)) * (PERPPLATVANT + RPERPMUTV) + positif(PERPIMPATRIE) * (PERPPLAFIMPV + RPERPMUTV)) + positif(PERP_COND2) *((1 - positif(PERPIMPATRIE)) * (PERPPLATVANT - RPERPMUTC) + positif(PERPIMPATRIE) * (PERPPLAFIMPV - RPERPMUTC))",
+          "linecol": [
+            575,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPPLAFMU1V",
+          "linecol": [
+            575,
+            1
+          ]
+        },
+        "linecol": [
+          575,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "positif(PERP_COND1) *((1 - positif(PERPIMPATRIE)) * (PERPPLATCANT - RPERPMUTV) + positif(PERPIMPATRIE) * (PERPPLAFIMPC - RPERPMUTV)) + positif(PERP_COND2) *((1 - positif(PERPIMPATRIE)) * (PERPPLATCANT + RPERPMUTC) +positif(PERPIMPATRIE) *(PERPPLAFIMPC + RPERPMUTC))",
+          "linecol": [
+            581,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPPLAFMU1C",
+          "linecol": [
+            581,
+            1
+          ]
+        },
+        "linecol": [
+          581,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            574,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            574,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        574,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "31022",
+      "linecol": [
+        587,
+        7
+      ]
+    },
+    "linecol": [
+      587,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(1 - positif(PERP_COND1)) * (1 - positif(PERP_COND2)) * ((1 - positif(PERPIMPATRIE)) * max(0,min(PERP_COTV,PERPPLATVANT) + RACCOTV) + positif(PERPIMPATRIE) * max(0,min(PERP_COTV,PERPPLAFIMPV) + RACCOTV)) + positif(PERP_COND1) * (min(PERP_COTV,PERPPLAFMUTV) + RACCOTV) + positif(PERP_COND2) * ((1 - positif(PERPIMPATRIE)) * max(0,min(PERP_COTV,PERPPLATVANT) + RACCOTV) + positif(PERPIMPATRIE) * max(0,min(PERP_COTV,PERPPLAFIMPV) + RACCOTV)) ",
+          "linecol": [
+            591,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RPERPV",
+          "linecol": [
+            591,
+            1
+          ]
+        },
+        "linecol": [
+          591,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(1 - positif(PERP_COND1)) * (1 - positif(PERP_COND2)) * ((1 - positif(PERPIMPATRIE)) * max(0,min(PERP_COTC,PERPPLATCANT) + RACCOTC) + positif(PERPIMPATRIE) * max(0,min(PERP_COTC,PERPPLAFIMPC) + RACCOTC)) + positif(PERP_COND1) * ((1 - positif(PERPIMPATRIE)) * max(0,min(PERP_COTC,PERPPLATCANT) + RACCOTC) + positif(PERPIMPATRIE) * max(0,min(PERP_COTC,PERPPLAFIMPC) + RACCOTC)) + positif(PERP_COND2) * (min(PERP_COTC,PERPPLAFMUTC) + RACCOTC) ",
+          "linecol": [
+            604,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RPERPC",
+          "linecol": [
+            604,
+            1
+          ]
+        },
+        "linecol": [
+          604,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "( (1 - positif(PERPIMPATRIE)) * max(0,min(PERP_COTP,PERPPLATPANT) + RACCOTP) + positif(PERPIMPATRIE) * max(0,min(PERP_COTP,PERPPLAFIMPP) + RACCOTP) )",
+          "linecol": [
+            616,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RPERPP",
+          "linecol": [
+            616,
+            1
+          ]
+        },
+        "linecol": [
+          616,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(1 - V_CNR) * max(min(RPERPV,RBG - RPALE - RPALP - RFACC - RDDIV - DDCSG + TOTALQUO -SDD), 0)",
+          "linecol": [
+            621,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "APERPV",
+          "linecol": [
+            621,
+            1
+          ]
+        },
+        "linecol": [
+          621,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(1 - V_CNR) * max(min(RPERPC,RBG - RPALE - RPALP  - RFACC - RDDIV - DDCSG + TOTALQUO -SDD - APERPV), 0)",
+          "linecol": [
+            623,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "APERPC",
+          "linecol": [
+            623,
+            1
+          ]
+        },
+        "linecol": [
+          623,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(1 - V_CNR) * max(min(RPERPP,RBG - RPALE - RPALP  - RFACC - RDDIV - DDCSG + TOTALQUO -SDD - APERPV - APERPC), 0)",
+          "linecol": [
+            625,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "APERPP",
+          "linecol": [
+            625,
+            1
+          ]
+        },
+        "linecol": [
+          625,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(1 - V_CNR) * max(min(RPERPV,RBG*(1-INDTEFF)+ TEFFREVTOT3 - RPALE - RPALP - RFACC - RDDIV - DDCSG + TOTALQUO -SDD), 0)",
+          "linecol": [
+            627,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TAPERPV",
+          "linecol": [
+            627,
+            1
+          ]
+        },
+        "linecol": [
+          627,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(1 - V_CNR) * max(min(RPERPC,RBG *(1-INDTEFF)+ TEFFREVTOT3- RPALE - RPALP  - RFACC - RDDIV - DDCSG + TOTALQUO -SDD - APERPV), 0)",
+          "linecol": [
+            629,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TAPERPC",
+          "linecol": [
+            629,
+            1
+          ]
+        },
+        "linecol": [
+          629,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(1 - V_CNR) * max(min(RPERPP,RBG *(1-INDTEFF)+ TEFFREVTOT3- RPALE - RPALP  - RFACC - RDDIV - DDCSG + TOTALQUO -SDD - APERPV - APERPC), 0)",
+          "linecol": [
+            631,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TAPERPP",
+          "linecol": [
+            631,
+            1
+          ]
+        },
+        "linecol": [
+          631,
+          1
+        ]
+      },
+      {
+        "loop_variables": {
+          "type": "loop_variables",
+          "value": [
+            {
+              "domain": {
+                "type": "loop_variable_domain",
+                "value": [
+                  {
+                    "type": "symbol",
+                    "name": "V",
+                    "linecol": [
+                      589,
+                      9
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "C",
+                    "linecol": [
+                      589,
+                      11
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "P",
+                    "linecol": [
+                      589,
+                      13
+                    ]
+                  }
+                ],
+                "linecol": [
+                  589,
+                  9
+                ]
+              },
+              "type": "loop_variable",
+              "name": {
+                "type": "symbol",
+                "name": "i",
+                "linecol": [
+                  589,
+                  6
+                ]
+              },
+              "linecol": [
+                589,
+                6
+              ]
+            }
+          ],
+          "linecol": [
+            589,
+            6
+          ]
+        },
+        "variable_definition": {
+          "expression": {
+            "type": "expression",
+            "value": "PERP_COTi + RACCOTi",
+            "linecol": [
+              590,
+              10
+            ]
+          },
+          "type": "variable_definition",
+          "name": {
+            "type": "symbol",
+            "name": "DPERPi",
+            "linecol": [
+              590,
+              1
+            ]
+          },
+          "linecol": [
+            590,
+            1
+          ]
+        },
+        "type": "pour_variable_definition",
+        "linecol": [
+          589,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            588,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            588,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        588,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "310225",
+      "linecol": [
+        633,
+        7
+      ]
+    },
+    "linecol": [
+      633,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(1 - positif(PERP_COND1)) * (1 - positif(PERP_COND2)) * ((1 - positif(PERPIMPATRIE)) * min(PERP_COTV,PERPPLATVANT) + positif(PERPIMPATRIE) * min(PERP_COTV,PERPPLAFIMPV)) + positif(PERP_COND1) * min(PERP_COTV,PERPPLAFMU1V) + positif(PERP_COND2) * ((1 - positif(PERPIMPATRIE)) * min(PERP_COTV,PERPPLATVANT) + positif(PERPIMPATRIE) * min(PERP_COTV,PERPPLAFIMPV)) ",
+          "linecol": [
+            635,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPDCOTV",
+          "linecol": [
+            635,
+            1
+          ]
+        },
+        "linecol": [
+          635,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(1 - positif(PERP_COND1)) * (1 - positif(PERP_COND2)) * ((1 - positif(PERPIMPATRIE)) * min(PERP_COTC,PERPPLATCANT) + positif(PERPIMPATRIE) * min(PERP_COTC,PERPPLAFIMPC)) + positif(PERP_COND1) * ((1 - positif(PERPIMPATRIE)) * min(PERP_COTC,PERPPLATCANT) + positif(PERPIMPATRIE) * min(PERP_COTC,PERPPLAFIMPC)) + positif(PERP_COND2) * min(PERP_COTC,PERPPLAFMU1C) ",
+          "linecol": [
+            648,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPDCOTC",
+          "linecol": [
+            648,
+            1
+          ]
+        },
+        "linecol": [
+          648,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "( (1 - positif(PERPIMPATRIE)) * min(PERP_COTP,PERPPLATPANT) + positif(PERPIMPATRIE) * min(PERP_COTP,PERPPLAFIMPP) )",
+          "linecol": [
+            660,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PERPDCOTP",
+          "linecol": [
+            660,
+            1
+          ]
+        },
+        "linecol": [
+          660,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            634,
+            16
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            634,
+            24
+          ]
+        }
+      ],
+      "linecol": [
+        634,
+        16
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "31023",
+      "linecol": [
+        665,
+        7
+      ]
+    },
+    "linecol": [
+      665,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "positif(PERP_COND1) *((1 - positif(PERPIMPATRIE)) * max(0,min(PERP_COTV - PERPPLATVANT,PERPPLATCANT - PERP_COTC)) + positif(PERPIMPATRIE) * max(0,min(PERP_COTV - PERPPLAFIMPV,PERPPLAFIMPC - PERP_COTC)) )",
+          "linecol": [
+            667,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RPERPMUTV",
+          "linecol": [
+            667,
+            1
+          ]
+        },
+        "linecol": [
+          667,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "positif(PERP_COND2) *((1 - positif(PERPIMPATRIE)) * max(0,min(PERP_COTC - PERPPLATCANT,PERPPLATVANT - PERP_COTV)) + positif(PERPIMPATRIE) * max(0,min(PERP_COTC - PERPPLAFIMPC,PERPPLAFIMPV - PERP_COTV)) )",
+          "linecol": [
+            673,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RPERPMUTC",
+          "linecol": [
+            673,
+            1
+          ]
+        },
+        "linecol": [
+          673,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            666,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            666,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        666,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "31024",
+      "linecol": [
+        679,
+        7
+      ]
+    },
+    "linecol": [
+      679,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "null(V_IND_TRAIT -4) * (positif(APPLI_OCEANS) * 1 + positif(APPLI_COLBERT) + positif(APPLI_BATCH) * V_BTANC + positif(APPLI_ILIAD) * ( positif(V_CALCULIR) * 1 + (1 - positif(V_CALCULIR)) * V_BTANC) ) + null(V_IND_TRAIT - 5) * 1",
+          "linecol": [
+            681,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "IND_BTANC",
+          "linecol": [
+            681,
+            1
+          ]
+        },
+        "linecol": [
+          681,
+          1
+        ]
+      },
+      {
+        "loop_variables": {
+          "type": "loop_variables",
+          "value": [
+            {
+              "domain": {
+                "type": "loop_variable_domain",
+                "value": [
+                  {
+                    "type": "symbol",
+                    "name": "V",
+                    "linecol": [
+                      689,
+                      10
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "C",
+                    "linecol": [
+                      689,
+                      12
+                    ]
+                  },
+                  {
+                    "type": "symbol",
+                    "name": "P",
+                    "linecol": [
+                      689,
+                      14
+                    ]
+                  }
+                ],
+                "linecol": [
+                  689,
+                  10
+                ]
+              },
+              "type": "loop_variable",
+              "name": {
+                "type": "symbol",
+                "name": "i",
+                "linecol": [
+                  689,
+                  6
+                ]
+              },
+              "linecol": [
+                689,
+                6
+              ]
+            }
+          ],
+          "linecol": [
+            689,
+            6
+          ]
+        },
+        "variable_definition": {
+          "expression": {
+            "type": "expression",
+            "value": "positif(PERPINDi * (1 - V_CNR) * (1 - positif(ANNUL2042)) * ((null(IND_BTANC - 1) * (positif(PERPIMPATRIE+0) * positif(PERPPLAFNUNi+PERPPLAFi+positif_ou_nul(PERPi)*positif(PERPREVTOTi)) + (1 - positif(PERPIMPATRIE+0)) * (present(PERPPLAFCi) + present(V_BTPERPi)) * (present(PERPPLAFNUi1) + present(V_BTPERPNUi1)) * (present(PERPPLAFNUi2) + present(V_BTPERPNUi2)) * (present(PERPPLAFNUi3) + present(V_BTPERPNUi3)) )) +((null(IND_BTANC - 2) * positif(V_BTPERPi + V_BTPERPNUi1 + V_BTPERPNUi2 + V_BTPERPNUi3 + PERPPLAFCi + PERPPLAFNUi1 + PERPPLAFNUi2 + PERPPLAFNUi3)))))",
+            "linecol": [
+              690,
+              15
+            ]
+          },
+          "type": "variable_definition",
+          "name": {
+            "type": "symbol",
+            "name": "PERPINDAFFi",
+            "linecol": [
+              690,
+              1
+            ]
+          },
+          "linecol": [
+            690,
+            1
+          ]
+        },
+        "type": "pour_variable_definition",
+        "linecol": [
+          689,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            680,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            680,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        680,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": []
+  }
+]

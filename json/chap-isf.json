@@ -1,0 +1,2870 @@
+[
+  {
+    "type": "comment",
+    "value": "#*************************************************************************************************************************",
+    "linecol": [
+      1,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#",
+    "linecol": [
+      2,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#Copyright or © or Copr.[DGFIP][2015]",
+    "linecol": [
+      3,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#",
+    "linecol": [
+      4,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#Ce logiciel a été initialement développé par la Direction Générale des ",
+    "linecol": [
+      5,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#Finances Publiques pour permettre le calcul de l'impôt sur le revenu 2015 ",
+    "linecol": [
+      6,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#au titre des revenus perçus en 2014. La présente version a permis la ",
+    "linecol": [
+      7,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#génération du moteur de calcul des chaînes de taxation des rôles d'impôt ",
+    "linecol": [
+      8,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#sur le revenu de ce millésime.",
+    "linecol": [
+      9,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#",
+    "linecol": [
+      10,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#Ce logiciel est régi par la licence CeCILL 2.1 soumise au droit français ",
+    "linecol": [
+      11,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#et respectant les principes de diffusion des logiciels libres. Vous pouvez ",
+    "linecol": [
+      12,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#utiliser, modifier et/ou redistribuer ce programme sous les conditions de ",
+    "linecol": [
+      13,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#la licence CeCILL 2.1 telle que diffusée par le CEA, le CNRS et l'INRIA  sur ",
+    "linecol": [
+      14,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#le site \"http://www.cecill.info\".",
+    "linecol": [
+      15,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#",
+    "linecol": [
+      16,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#Le fait que vous puissiez accéder à cet en-tête signifie que vous avez pris ",
+    "linecol": [
+      17,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#connaissance de la licence CeCILL 2.1 et que vous en avez accepté les termes.",
+    "linecol": [
+      18,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#",
+    "linecol": [
+      19,
+      1
+    ]
+  },
+  {
+    "type": "comment",
+    "value": "#**************************************************************************************************************************",
+    "linecol": [
+      20,
+      1
+    ]
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "77001",
+      "linecol": [
+        21,
+        11
+      ]
+    },
+    "linecol": [
+      21,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ISFBASE",
+          "linecol": [
+            23,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DISFBASE",
+          "linecol": [
+            23,
+            1
+          ]
+        },
+        "linecol": [
+          23,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            22,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            22,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        22,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": [
+      {
+        "type": "symbol",
+        "name": "isf",
+        "linecol": [
+          21,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "77010",
+      "linecol": [
+        25,
+        11
+      ]
+    },
+    "linecol": [
+      25,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "arr( max(0, min( DISFBASE , LIM_TR2_ISF ) - (LIM_TR1_ISF)) * (TX_TR2_ISF/10000))",
+          "linecol": [
+            27,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TR2_ISF",
+          "linecol": [
+            27,
+            1
+          ]
+        },
+        "linecol": [
+          27,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "arr( max(0, min( DISFBASE , LIM_TR3_ISF ) - (LIM_TR2_ISF)) * (TX_TR3_ISF/10000))",
+          "linecol": [
+            28,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TR3_ISF",
+          "linecol": [
+            28,
+            1
+          ]
+        },
+        "linecol": [
+          28,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "arr( max(0, min( DISFBASE , LIM_TR4_ISF  ) - (LIM_TR3_ISF)) * (TX_TR4_ISF/100))",
+          "linecol": [
+            29,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TR4_ISF",
+          "linecol": [
+            29,
+            1
+          ]
+        },
+        "linecol": [
+          29,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "arr( max(0, min( DISFBASE , LIM_TR5_ISF  ) - (LIM_TR4_ISF)) * (TX_TR5_ISF/10000))",
+          "linecol": [
+            30,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TR5_ISF",
+          "linecol": [
+            30,
+            1
+          ]
+        },
+        "linecol": [
+          30,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "arr( max(0, DISFBASE - LIM_TR5_ISF) * (TX_TR6_ISF/1000))",
+          "linecol": [
+            31,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TR6_ISF",
+          "linecol": [
+            31,
+            1
+          ]
+        },
+        "linecol": [
+          31,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "TR2_ISF + TR3_ISF + TR4_ISF + TR5_ISF + TR6_ISF",
+          "linecol": [
+            33,
+            8
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ISF1",
+          "linecol": [
+            33,
+            1
+          ]
+        },
+        "linecol": [
+          33,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            26,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            26,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        26,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": [
+      {
+        "type": "symbol",
+        "name": "isf",
+        "linecol": [
+          25,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "77015",
+      "linecol": [
+        35,
+        11
+      ]
+    },
+    "linecol": [
+      35,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "arr((17500 - ( (TX_TR5_ISF/10000) * ISFBASE)) * positif(ISFBASE-LIM_ISFINF)*positif(LIM_ISFDEC - ISFBASE)) * positif(ISF1)",
+          "linecol": [
+            37,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ISFDEC",
+          "linecol": [
+            37,
+            1
+          ]
+        },
+        "linecol": [
+          37,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ISFDEC",
+          "linecol": [
+            41,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DISFDEC",
+          "linecol": [
+            41,
+            1
+          ]
+        },
+        "linecol": [
+          41,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            36,
+            16
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            36,
+            24
+          ]
+        }
+      ],
+      "linecol": [
+        36,
+        16
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": [
+      {
+        "type": "symbol",
+        "name": "isf",
+        "linecol": [
+          35,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "77020",
+      "linecol": [
+        43,
+        11
+      ]
+    },
+    "linecol": [
+      43,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "arr((ISF1 - ISFDEC) * positif( LIM_ISFDEC - 1 - ISFBASE ) + ISF1 * (1-positif(LIM_ISFDEC - 1 - ISFBASE)))",
+          "linecol": [
+            45,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ISFBRUT",
+          "linecol": [
+            45,
+            1
+          ]
+        },
+        "linecol": [
+          45,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            44,
+            16
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            44,
+            24
+          ]
+        }
+      ],
+      "linecol": [
+        44,
+        16
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": [
+      {
+        "type": "symbol",
+        "name": "isf",
+        "linecol": [
+          43,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "77030",
+      "linecol": [
+        48,
+        11
+      ]
+    },
+    "linecol": [
+      48,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ISFPMEDI",
+          "linecol": [
+            50,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DISFPMED",
+          "linecol": [
+            50,
+            1
+          ]
+        },
+        "linecol": [
+          50,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ISFPMEIN",
+          "linecol": [
+            51,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DISFPMEI",
+          "linecol": [
+            51,
+            1
+          ]
+        },
+        "linecol": [
+          51,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "arr(ISFPMEDI * (TX50/100))",
+          "linecol": [
+            52,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "AISFPMED",
+          "linecol": [
+            52,
+            1
+          ]
+        },
+        "linecol": [
+          52,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "arr(ISFPMEIN * (TX50/100))",
+          "linecol": [
+            53,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "AISFPMEI",
+          "linecol": [
+            53,
+            1
+          ]
+        },
+        "linecol": [
+          53,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "min(45000, AISFPMED)",
+          "linecol": [
+            54,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RISFPMED_1",
+          "linecol": [
+            54,
+            1
+          ]
+        },
+        "linecol": [
+          54,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "max(0, min(45000 - RISFPMED_1, AISFPMEI))",
+          "linecol": [
+            55,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RISFPMEI_1",
+          "linecol": [
+            55,
+            1
+          ]
+        },
+        "linecol": [
+          55,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ISFFIP",
+          "linecol": [
+            58,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DISFFIP",
+          "linecol": [
+            58,
+            1
+          ]
+        },
+        "linecol": [
+          58,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ISFFCPI",
+          "linecol": [
+            59,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DISFFCPI",
+          "linecol": [
+            59,
+            1
+          ]
+        },
+        "linecol": [
+          59,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "arr(ISFFIP * (TX50/100))",
+          "linecol": [
+            60,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "AISFFIP",
+          "linecol": [
+            60,
+            1
+          ]
+        },
+        "linecol": [
+          60,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "arr(ISFFCPI * (TX50/100))",
+          "linecol": [
+            61,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "AISFFCPI",
+          "linecol": [
+            61,
+            1
+          ]
+        },
+        "linecol": [
+          61,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "min(18000, AISFFIP)",
+          "linecol": [
+            62,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RISFFIP_1",
+          "linecol": [
+            62,
+            1
+          ]
+        },
+        "linecol": [
+          62,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "max(0, min(18000 -  RISFFIP_1, AISFFCPI))",
+          "linecol": [
+            63,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RISFFCPI_1",
+          "linecol": [
+            63,
+            1
+          ]
+        },
+        "linecol": [
+          63,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            49,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            49,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        49,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": [
+      {
+        "type": "symbol",
+        "name": "isf",
+        "linecol": [
+          48,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "77040",
+      "linecol": [
+        65,
+        11
+      ]
+    },
+    "linecol": [
+      65,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "50000 * (1-positif(ISFPMEDI+ISFPMEIN+ISFFIP+ISFFCPI)) + 45000 * positif(ISFPMEDI+ISFPMEIN+ISFFIP+ISFFCPI)",
+          "linecol": [
+            67,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PLAF_ISFRED",
+          "linecol": [
+            67,
+            1
+          ]
+        },
+        "linecol": [
+          67,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ISFDONF",
+          "linecol": [
+            70,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DISFDONF",
+          "linecol": [
+            70,
+            1
+          ]
+        },
+        "linecol": [
+          70,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ISFDONEURO",
+          "linecol": [
+            71,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DISFDONCEE",
+          "linecol": [
+            71,
+            1
+          ]
+        },
+        "linecol": [
+          71,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "arr(ISFDONF * (TX75/100))",
+          "linecol": [
+            73,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "AISFDONF",
+          "linecol": [
+            73,
+            1
+          ]
+        },
+        "linecol": [
+          73,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "arr(ISFDONEURO * (TX75/100))",
+          "linecol": [
+            74,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "AISFDONCEE",
+          "linecol": [
+            74,
+            1
+          ]
+        },
+        "linecol": [
+          74,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "min( PLAF_ISFRED , AISFDONF)",
+          "linecol": [
+            76,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RISFDONF_1",
+          "linecol": [
+            76,
+            1
+          ]
+        },
+        "linecol": [
+          76,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "max(0, min( PLAF_ISFRED - RISFDONF_1, AISFDONCEE))",
+          "linecol": [
+            77,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RISFDONCEE_1",
+          "linecol": [
+            77,
+            1
+          ]
+        },
+        "linecol": [
+          77,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            66,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            66,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        66,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": [
+      {
+        "type": "symbol",
+        "name": "isf",
+        "linecol": [
+          65,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "77050",
+      "linecol": [
+        79,
+        11
+      ]
+    },
+    "linecol": [
+      79,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "min(PLAF_ISFRED, RISFDONF_1)",
+          "linecol": [
+            81,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RISFDONF_2",
+          "linecol": [
+            81,
+            1
+          ]
+        },
+        "linecol": [
+          81,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "max(0, min(PLAF_ISFRED - RISFDONF_1, RISFDONCEE_1))",
+          "linecol": [
+            82,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RISFDONCEE_2",
+          "linecol": [
+            82,
+            1
+          ]
+        },
+        "linecol": [
+          82,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "max(0, min(PLAF_ISFRED - RISFDONF_1 - RISFDONCEE_1, RISFPMED_1))",
+          "linecol": [
+            83,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RISFPMED_2",
+          "linecol": [
+            83,
+            1
+          ]
+        },
+        "linecol": [
+          83,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "max(0, min(PLAF_ISFRED - RISFDONF_1 - RISFDONCEE_1 - RISFPMED_1, RISFPMEI_1))",
+          "linecol": [
+            84,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RISFPMEI_2",
+          "linecol": [
+            84,
+            1
+          ]
+        },
+        "linecol": [
+          84,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "max(0, min(PLAF_ISFRED - RISFDONF_1 - RISFDONCEE_1 - RISFPMED_1 - RISFPMEI_1, RISFFIP_1))",
+          "linecol": [
+            85,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RISFFIP_2",
+          "linecol": [
+            85,
+            1
+          ]
+        },
+        "linecol": [
+          85,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "max(0, min(PLAF_ISFRED - RISFDONF_1 - RISFDONCEE_1 - RISFPMED_1 - RISFPMEI_1 - RISFFIP_1, RISFFCPI_1 ))",
+          "linecol": [
+            87,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RISFFCPI_2",
+          "linecol": [
+            87,
+            1
+          ]
+        },
+        "linecol": [
+          87,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "max( min( RISFDONF_2, ISFBRUT) , 0) * positif(( 1 - null( CODE_2042 - 8 )) * ( 1 - null( CMAJ_ISF - 8)) * ( 1 - null( CMAJ_ISF -34))) + max( min( RISFDONF_2, ISFBRUT) , 0) * (1 - positif(( 1-null( CODE_2042 - 8 )) * ( 1-null( CMAJ_ISF - 8)) * ( 1-null( CMAJ_ISF -34)))) * COD9ZA",
+          "linecol": [
+            94,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RISFDONF",
+          "linecol": [
+            94,
+            1
+          ]
+        },
+        "linecol": [
+          94,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "max( min( RISFDONCEE_2, ISFBRUT - RISFDONF), 0) * positif(( 1 - null( CODE_2042 - 8 )) * ( 1 - null( CMAJ_ISF - 8)) * ( 1 - null( CMAJ_ISF -34))) + max( min( RISFDONCEE_2, ISFBRUT - RISFDONF), 0) * (1 - positif(( 1-null( CODE_2042 - 8 )) * ( 1-null( CMAJ_ISF - 8)) * ( 1-null( CMAJ_ISF -34)))) * COD9ZA",
+          "linecol": [
+            100,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RISFDONCEE",
+          "linecol": [
+            100,
+            1
+          ]
+        },
+        "linecol": [
+          100,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "max( min( RISFPMED_2, ISFBRUT - RISFDONF - RISFDONCEE), 0) * positif(( 1 - null( CODE_2042 - 8 )) * ( 1 - null( CMAJ_ISF - 8)) * ( 1 - null( CMAJ_ISF -34))) + max( min( RISFPMED_2, ISFBRUT - RISFDONF - RISFDONCEE), 0) * (1 - positif(( 1-null( CODE_2042 - 8 )) * ( 1-null( CMAJ_ISF - 8)) * ( 1-null( CMAJ_ISF -34)))) * COD9ZA",
+          "linecol": [
+            107,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RISFPMED",
+          "linecol": [
+            107,
+            1
+          ]
+        },
+        "linecol": [
+          107,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "max( min( RISFPMEI_2, ISFBRUT - RISFDONF - RISFDONCEE - RISFPMED), 0) * positif(( 1 - null( CODE_2042 - 8 )) * ( 1 - null( CMAJ_ISF - 8)) * ( 1 - null( CMAJ_ISF -34))) + max( min( RISFPMEI_2, ISFBRUT - RISFDONF - RISFDONCEE - RISFPMED), 0) * (1 - positif(( 1-null( CODE_2042 - 8 )) * ( 1-null( CMAJ_ISF - 8)) * ( 1-null( CMAJ_ISF -34)))) * COD9ZA",
+          "linecol": [
+            115,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RISFPMEI",
+          "linecol": [
+            115,
+            1
+          ]
+        },
+        "linecol": [
+          115,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "max( min( RISFFIP_2, ISFBRUT - RISFDONF - RISFDONCEE - RISFPMED - RISFPMEI), 0) * positif(( 1 - null( CODE_2042 - 8 )) * ( 1 - null( CMAJ_ISF - 8)) * ( 1 - null( CMAJ_ISF -34))) + max( min( RISFFIP_2, ISFBRUT - RISFDONF - RISFDONCEE - RISFPMED - RISFPMEI), 0) * (1 - positif(( 1-null( CODE_2042 - 8 )) * ( 1-null( CMAJ_ISF - 8)) * ( 1-null( CMAJ_ISF -34)))) * COD9ZA",
+          "linecol": [
+            122,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RISFFIP",
+          "linecol": [
+            122,
+            1
+          ]
+        },
+        "linecol": [
+          122,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "max( min( RISFFCPI_2, ISFBRUT - RISFDONF - RISFDONCEE - RISFPMED - RISFPMEI - RISFFIP ), 0) * positif(( 1 - null( CODE_2042 - 8 )) * ( 1 - null( CMAJ_ISF - 8)) * ( 1 - null( CMAJ_ISF -34))) + max( min( RISFFCPI_2, ISFBRUT - RISFDONF - RISFDONCEE - RISFPMED - RISFPMEI - RISFFIP ), 0) * (1 - positif(( 1-null( CODE_2042 - 8 )) * ( 1-null( CMAJ_ISF - 8)) * ( 1-null( CMAJ_ISF -34)))) * COD9ZA",
+          "linecol": [
+            129,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RISFFCPI",
+          "linecol": [
+            129,
+            1
+          ]
+        },
+        "linecol": [
+          129,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            80,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            80,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        80,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": [
+      {
+        "type": "symbol",
+        "name": "isf",
+        "linecol": [
+          79,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "77066",
+      "linecol": [
+        138,
+        11
+      ]
+    },
+    "linecol": [
+      138,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RISFDONF + RISFDONCEE + RISFPMED + RISFPMEI + RISFFIP + RISFFCPI",
+          "linecol": [
+            140,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "REDISF",
+          "linecol": [
+            140,
+            1
+          ]
+        },
+        "linecol": [
+          140,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RETXISF + COPETOISF",
+          "linecol": [
+            143,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TXTOISF",
+          "linecol": [
+            143,
+            1
+          ]
+        },
+        "linecol": [
+          143,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            139,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            139,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        139,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": [
+      {
+        "type": "symbol",
+        "name": "isf",
+        "linecol": [
+          138,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "77065",
+      "linecol": [
+        145,
+        11
+      ]
+    },
+    "linecol": [
+      145,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "RISFDONF + RISFDONCEE + RISFPMED + RISFPMEI + RISFFIP + RISFFCPI + RISFE",
+          "linecol": [
+            147,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ISFTRED",
+          "linecol": [
+            147,
+            1
+          ]
+        },
+        "linecol": [
+          147,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            146,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            146,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        146,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": [
+      {
+        "type": "symbol",
+        "name": "isf",
+        "linecol": [
+          145,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "77070",
+      "linecol": [
+        150,
+        11
+      ]
+    },
+    "linecol": [
+      150,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "max(0, ISFBRUT - RISFDONF - RISFDONCEE - RISFPMED - RISFPMEI - RISFFIP - RISFFCPI)",
+          "linecol": [
+            152,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ISFNETRED",
+          "linecol": [
+            152,
+            1
+          ]
+        },
+        "linecol": [
+          152,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            151,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            151,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        151,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": [
+      {
+        "type": "symbol",
+        "name": "isf",
+        "linecol": [
+          150,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "77075",
+      "linecol": [
+        154,
+        11
+      ]
+    },
+    "linecol": [
+      154,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ISFPLAF",
+          "linecol": [
+            156,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DISFPLAF",
+          "linecol": [
+            156,
+            1
+          ]
+        },
+        "linecol": [
+          156,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "max(0,  ISFNETRED * positif(ISFPLAF - ISFNETRED) + ISFPLAF * (1-positif(ISFPLAF - ISFNETRED)))",
+          "linecol": [
+            158,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RISFPLAF",
+          "linecol": [
+            158,
+            1
+          ]
+        },
+        "linecol": [
+          158,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            155,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            155,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        155,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": [
+      {
+        "type": "symbol",
+        "name": "isf",
+        "linecol": [
+          154,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "77076",
+      "linecol": [
+        161,
+        11
+      ]
+    },
+    "linecol": [
+      161,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "max(0, ISFNETRED - RISFPLAF)",
+          "linecol": [
+            163,
+            15
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ISFPOSTPLAF",
+          "linecol": [
+            163,
+            1
+          ]
+        },
+        "linecol": [
+          163,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            162,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            162,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        162,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": [
+      {
+        "type": "symbol",
+        "name": "isf",
+        "linecol": [
+          161,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "77080",
+      "linecol": [
+        165,
+        11
+      ]
+    },
+    "linecol": [
+      165,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ISFETRANG",
+          "linecol": [
+            167,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "DISFE",
+          "linecol": [
+            167,
+            1
+          ]
+        },
+        "linecol": [
+          167,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "positif(DISFBASE)*positif(ISFETRANG)*( min(ISFPOSTPLAF , ISFETRANG))",
+          "linecol": [
+            169,
+            9
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RISFE",
+          "linecol": [
+            169,
+            1
+          ]
+        },
+        "linecol": [
+          169,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            166,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            166,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        166,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": [
+      {
+        "type": "symbol",
+        "name": "isf",
+        "linecol": [
+          165,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "77090",
+      "linecol": [
+        171,
+        11
+      ]
+    },
+    "linecol": [
+      171,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "max(0, ISFPOSTPLAF - RISFE)",
+          "linecol": [
+            174,
+            8
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ISF5",
+          "linecol": [
+            174,
+            1
+          ]
+        },
+        "linecol": [
+          174,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            172,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            172,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        172,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": [
+      {
+        "type": "symbol",
+        "name": "isf",
+        "linecol": [
+          171,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "77200",
+      "linecol": [
+        176,
+        11
+      ]
+    },
+    "linecol": [
+      176,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "si (CMAJ_ISF = 7 ou CMAJ_ISF = 17 ou CMAJ_ISF = 18) alors (10) sinon ( si (CMAJ_ISF = 8 ou CMAJ_ISF = 34) alors (40) finsi ) finsi",
+          "linecol": [
+            179,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "COPETOISF",
+          "linecol": [
+            179,
+            1
+          ]
+        },
+        "linecol": [
+          179,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "max (0, MAJO1728ISF + arr(ISF5 * COPETOISF/100) * positif_ou_nul(ISF5 - SEUIL_12) + FLAG_TRTARDIF * MAJOISFTARDIF_D + FLAG_TRTARDIF_F * MAJOISFTARDIF_D - FLAG_TRTARDIF_F * ( positif(FLAG_RECTIF) * MAJOISFTARDIF_R + (1 - positif(FLAG_RECTIF)) * MAJOISFTARDIF_A) )",
+          "linecol": [
+            187,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "NMAJISF1",
+          "linecol": [
+            187,
+            1
+          ]
+        },
+        "linecol": [
+          187,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "si (V_CODPF1728ISF=07 ou V_CODPF1728ISF=17 ou V_CODPF1728ISF=18) alors (10) sinon (si (V_CODPF1728ISF=08 ou V_CODPF1728ISF=34) alors (40) finsi) finsi",
+          "linecol": [
+            196,
+            14
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TXPF1728ISF",
+          "linecol": [
+            196,
+            1
+          ]
+        },
+        "linecol": [
+          196,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(1 - positif(V_NBCOD1728ISF)) * ((1 - positif(CMAJ_ISF)) * positif(NMAJISF1) * TXPF1728ISF + positif(CMAJ_ISF) * COPETOISF) + positif(V_NBCOD1728ISF) * (-1)",
+          "linecol": [
+            205,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "MAJTXISF1",
+          "linecol": [
+            205,
+            1
+          ]
+        },
+        "linecol": [
+          205,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            177,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            177,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        177,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": [
+      {
+        "type": "symbol",
+        "name": "isf",
+        "linecol": [
+          176,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "77210",
+      "linecol": [
+        208,
+        11
+      ]
+    },
+    "linecol": [
+      208,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "inf( MOISAN_ISF / 10000 )",
+          "linecol": [
+            210,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "INTMSISF",
+          "linecol": [
+            210,
+            1
+          ]
+        },
+        "linecol": [
+          210,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(( MOISAN_ISF/10000 - INTMSISF )*10000)  * present(MOISAN_ISF)",
+          "linecol": [
+            211,
+            12
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "INTANISF",
+          "linecol": [
+            211,
+            1
+          ]
+        },
+        "linecol": [
+          211,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(max(0, (INTANISF - (V_ANREV+1) )* 12 + INTMSISF - 6 ) * TXMOISRETARD2) * present(MOISAN_ISF)",
+          "linecol": [
+            212,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "TXINTISF",
+          "linecol": [
+            212,
+            1
+          ]
+        },
+        "linecol": [
+          212,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "arr(ISF5 * COPETOISF / 100) + arr(ISF5 * TXINTISF / 100)",
+          "linecol": [
+            214,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PTOISF",
+          "linecol": [
+            214,
+            1
+          ]
+        },
+        "linecol": [
+          214,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(RETISF2 + arr(ISF5 * TXINTISF/100))* positif_ou_nul(ISF4BIS - SEUIL_12)",
+          "linecol": [
+            215,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RETISF",
+          "linecol": [
+            215,
+            1
+          ]
+        },
+        "linecol": [
+          215,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "positif(CMAJ_ISF) * TXINTISF + (TXINRISF * (1-positif(TXINRISF_A)) + (-1) * positif(TXINRISF_A) * positif(TXINRISF) * positif(positif(TXINRISF - TXINRISF_A)+positif(TXINRISF_A-TXINRISF))) + (TXINRISF * positif(TXINRISF_A) * null(TXINRISF - TXINRISF_A)) ",
+          "linecol": [
+            216,
+            11
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "RETXISF",
+          "linecol": [
+            216,
+            1
+          ]
+        },
+        "linecol": [
+          216,
+          1
+        ]
+      },
+      {
+        "expression": {
+          "type": "expression",
+          "value": "positif(positif(RETISF) * positif(NMAJISF1)+positif(NMAJISF1)) + 2 * positif(RETISF) * (1-positif(NMAJISF1))",
+          "linecol": [
+            223,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "NATMAJISF",
+          "linecol": [
+            223,
+            1
+          ]
+        },
+        "linecol": [
+          223,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            209,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            209,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        209,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": [
+      {
+        "type": "symbol",
+        "name": "isf",
+        "linecol": [
+          208,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "77215",
+      "linecol": [
+        226,
+        11
+      ]
+    },
+    "linecol": [
+      226,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "( INCISF_NET + NMAJISF1 + arr(ISF5 * TXINTISF / 100) * (1-positif(FLAG_PRIM+FLAG_RETARD+FLAG_DEFAUT)))",
+          "linecol": [
+            231,
+            8
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "PISF",
+          "linecol": [
+            231,
+            1
+          ]
+        },
+        "linecol": [
+          231,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            227,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            227,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        227,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": [
+      {
+        "type": "symbol",
+        "name": "isf",
+        "linecol": [
+          226,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "77219",
+      "linecol": [
+        235,
+        11
+      ]
+    },
+    "linecol": [
+      235,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ISF5 + PISF",
+          "linecol": [
+            238,
+            13
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "NAPISFTOT",
+          "linecol": [
+            238,
+            1
+          ]
+        },
+        "linecol": [
+          238,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            236,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            236,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        236,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": [
+      {
+        "type": "symbol",
+        "name": "isf",
+        "linecol": [
+          235,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "77220",
+      "linecol": [
+        240,
+        11
+      ]
+    },
+    "linecol": [
+      240,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "NAPISFTOT",
+          "linecol": [
+            243,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ISFNET",
+          "linecol": [
+            243,
+            1
+          ]
+        },
+        "linecol": [
+          243,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            241,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            241,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        241,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": [
+      {
+        "type": "symbol",
+        "name": "isf",
+        "linecol": [
+          240,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "77221",
+      "linecol": [
+        245,
+        11
+      ]
+    },
+    "linecol": [
+      245,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "ISFCUM - V_ANTISF",
+          "linecol": [
+            248,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ISFNAP",
+          "linecol": [
+            248,
+            1
+          ]
+        },
+        "linecol": [
+          248,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            246,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            246,
+            23
+          ]
+        }
+      ],
+      "linecol": [
+        246,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": [
+      {
+        "type": "symbol",
+        "name": "isf",
+        "linecol": [
+          245,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "77230",
+      "linecol": [
+        250,
+        11
+      ]
+    },
+    "linecol": [
+      250,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "(1 - positif_ou_nul(ISF4BIS - SEUIL_12)) * null(V_ANTISF+0) * ISF4BIS + positif_ou_nul(ISF4BIS - SEUIL_12) * ISF4BIS",
+          "linecol": [
+            253,
+            16
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ILI_SYNT_ISF",
+          "linecol": [
+            253,
+            1
+          ]
+        },
+        "linecol": [
+          253,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            251,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            251,
+            22
+          ]
+        }
+      ],
+      "linecol": [
+        251,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": [
+      {
+        "type": "symbol",
+        "name": "isf",
+        "linecol": [
+          250,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "77270",
+      "linecol": [
+        257,
+        11
+      ]
+    },
+    "linecol": [
+      257,
+      1
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "max( 0, ISF5 )",
+          "linecol": [
+            261,
+            10
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "ISF4BIS",
+          "linecol": [
+            261,
+            1
+          ]
+        },
+        "linecol": [
+          261,
+          1
+        ]
+      }
+    ],
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            258,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            258,
+            22
+          ]
+        }
+      ],
+      "linecol": [
+        258,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": [
+      {
+        "type": "symbol",
+        "name": "isf",
+        "linecol": [
+          257,
+          7
+        ]
+      }
+    ]
+  }
+]
