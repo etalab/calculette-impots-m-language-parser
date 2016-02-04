@@ -67,12 +67,12 @@ def make_enchaineur_declaration(name, applications, linecol = None):
         })
 
 
-def make_regle_declaration(name, applications, variables, isf, linecol = None):
+def make_regle_declaration(name, applications, variables, qualifiers = None, linecol = None):
     return clean({
         'applications': applications,
-        'isf': isf,
         'linecol': linecol,
         'name': name,
+        'qualifiers': qualifiers,
         'type': u'regle_declaration',
         'variables': variables,
         })
@@ -368,17 +368,17 @@ class MLanguageVisitor(PTNodeVisitor):
             )
 
     def visit_regle_declaration(self, node, children):
-        name = find_one(children, type = 'integer')
         applications = find_one(children, type = 'symbol_enumeration')
-        isf_qualifier = find_one_or_none(children, type = 'regle_isf_qualifier')
+        symbols = find_one_or_many(children, type = 'symbol')
+        name, qualifiers = symbols[-1], symbols[:-1]
         variable_definition_list = find_many_or_none(children, type = 'variable_definition')
         pour_variable_definition_list = find_many_or_none(children, type = 'pour_variable_definition')
         variables = ([] + (variable_definition_list or []) + (pour_variable_definition_list or [])) or None
         return make_regle_declaration(
             applications = applications,
-            isf = isf_qualifier,
             linecol = m_parser.pos_to_linecol(node.position),
             name = name,
+            qualifiers = qualifiers,
             variables = variables,
             )
 

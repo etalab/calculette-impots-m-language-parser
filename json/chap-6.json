@@ -328,31 +328,18 @@
     ]
   },
   {
-    "applications": {
-      "type": "symbol_enumeration",
-      "value": [
-        {
-          "type": "symbol",
-          "name": "batch",
-          "linecol": [
-            44,
-            16
-          ]
-        },
-        {
-          "type": "symbol",
-          "name": "iliad",
-          "linecol": [
-            44,
-            24
-          ]
-        }
-      ],
+    "name": {
+      "type": "symbol",
+      "name": "601",
       "linecol": [
-        44,
-        16
+        43,
+        7
       ]
     },
+    "linecol": [
+      43,
+      1
+    ],
     "variables": [
       {
         "expression": {
@@ -424,38 +411,47 @@
         ]
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "integer",
-      "value": 601,
-      "linecol": [
-        43,
-        7
-      ]
-    },
-    "linecol": [
-      43,
-      1
-    ]
-  },
-  {
     "applications": {
       "type": "symbol_enumeration",
       "value": [
         {
           "type": "symbol",
-          "name": "bareme",
+          "name": "batch",
           "linecol": [
-            52,
-            15
+            44,
+            16
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            44,
+            24
           ]
         }
       ],
       "linecol": [
-        52,
-        15
+        44,
+        16
       ]
     },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "6010",
+      "linecol": [
+        51,
+        7
+      ]
+    },
+    "linecol": [
+      51,
+      1
+    ],
     "variables": [
       {
         "expression": {
@@ -481,21 +477,64 @@
         ]
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "integer",
-      "value": 6010,
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "bareme",
+          "linecol": [
+            52,
+            15
+          ]
+        }
+      ],
       "linecol": [
-        51,
+        52,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "6011",
+      "linecol": [
+        55,
         7
       ]
     },
     "linecol": [
-      51,
+      55,
       1
-    ]
-  },
-  {
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "1 + BOOL_0AM + V_0AV * min(BOOL_0AZ + EAC + V_0CH + V_0CR, 1 ) + ( V_0AV * BOOL_0AZ * V_0AW * (1 - V_0AP) * (1 - V_0AF) / 2 )",
+          "linecol": [
+            57,
+            7
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "NSM",
+          "linecol": [
+            57,
+            1
+          ]
+        },
+        "linecol": [
+          57,
+          1
+        ]
+      }
+    ],
     "applications": {
       "type": "symbol_enumeration",
       "value": [
@@ -529,46 +568,47 @@
         15
       ]
     },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "6012",
+      "linecol": [
+        59,
+        7
+      ]
+    },
+    "linecol": [
+      59,
+      1
+    ],
     "variables": [
       {
         "expression": {
           "type": "expression",
-          "value": "1 + BOOL_0AM + V_0AV * min(BOOL_0AZ + EAC + V_0CH + V_0CR, 1 ) + ( V_0AV * BOOL_0AZ * V_0AW * (1 - V_0AP) * (1 - V_0AF) / 2 )",
+          "value": "PAC - 0.5 * min( PAC, 2 )",
           "linecol": [
-            57,
+            61,
             7
           ]
         },
         "type": "variable_definition",
         "name": {
           "type": "symbol",
-          "name": "NSM",
+          "name": "NPA",
           "linecol": [
-            57,
+            61,
             1
           ]
         },
         "linecol": [
-          57,
+          61,
           1
         ]
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "integer",
-      "value": 6011,
-      "linecol": [
-        55,
-        7
-      ]
-    },
-    "linecol": [
-      55,
-      1
-    ]
-  },
-  {
     "applications": {
       "type": "symbol_enumeration",
       "value": [
@@ -602,46 +642,47 @@
         15
       ]
     },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "60121",
+      "linecol": [
+        62,
+        7
+      ]
+    },
+    "linecol": [
+      62,
+      1
+    ],
     "variables": [
       {
         "expression": {
           "type": "expression",
-          "value": "PAC - 0.5 * min( PAC, 2 )",
+          "value": "EAC + V_0CR",
           "linecol": [
-            61,
+            64,
             7
           ]
         },
         "type": "variable_definition",
         "name": {
           "type": "symbol",
-          "name": "NPA",
+          "name": "PAC",
           "linecol": [
-            61,
+            64,
             1
           ]
         },
         "linecol": [
-          61,
+          64,
           1
         ]
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "integer",
-      "value": 6012,
-      "linecol": [
-        59,
-        7
-      ]
-    },
-    "linecol": [
-      59,
-      1
-    ]
-  },
-  {
     "applications": {
       "type": "symbol_enumeration",
       "value": [
@@ -675,63 +716,22 @@
         15
       ]
     },
-    "variables": [
-      {
-        "expression": {
-          "type": "expression",
-          "value": "EAC + V_0CR",
-          "linecol": [
-            64,
-            7
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "PAC",
-          "linecol": [
-            64,
-            1
-          ]
-        },
-        "linecol": [
-          64,
-          1
-        ]
-      }
-    ],
     "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
     "name": {
-      "type": "integer",
-      "value": 60121,
+      "type": "symbol",
+      "name": "60122",
       "linecol": [
-        62,
+        65,
         7
       ]
     },
     "linecol": [
-      62,
+      65,
       1
-    ]
-  },
-  {
-    "applications": {
-      "type": "symbol_enumeration",
-      "value": [
-        {
-          "type": "symbol",
-          "name": "bareme",
-          "linecol": [
-            66,
-            15
-          ]
-        }
-      ],
-      "linecol": [
-        66,
-        15
-      ]
-    },
+    ],
     "variables": [
       {
         "expression": {
@@ -757,46 +757,39 @@
         ]
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "integer",
-      "value": 60122,
-      "linecol": [
-        65,
-        7
-      ]
-    },
-    "linecol": [
-      65,
-      1
-    ]
-  },
-  {
     "applications": {
       "type": "symbol_enumeration",
       "value": [
         {
           "type": "symbol",
-          "name": "batch",
+          "name": "bareme",
           "linecol": [
-            69,
+            66,
             15
-          ]
-        },
-        {
-          "type": "symbol",
-          "name": "iliad",
-          "linecol": [
-            69,
-            23
           ]
         }
       ],
       "linecol": [
-        69,
+        66,
         15
       ]
     },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "601220",
+      "linecol": [
+        68,
+        7
+      ]
+    },
+    "linecol": [
+      68,
+      1
+    ],
     "variables": [
       {
         "expression": {
@@ -822,21 +815,72 @@
         ]
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "integer",
-      "value": 601220,
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            69,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            69,
+            23
+          ]
+        }
+      ],
       "linecol": [
-        68,
+        69,
+        15
+      ]
+    },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "6013",
+      "linecol": [
+        71,
         7
       ]
     },
     "linecol": [
-      68,
+      71,
       1
-    ]
-  },
-  {
+    ],
+    "variables": [
+      {
+        "expression": {
+          "type": "expression",
+          "value": "( V_0AP + V_0AF + V_0CG + V_0CR ) * 0.5",
+          "linecol": [
+            73,
+            8
+          ]
+        },
+        "type": "variable_definition",
+        "name": {
+          "type": "symbol",
+          "name": "NIN",
+          "linecol": [
+            73,
+            1
+          ]
+        },
+        "linecol": [
+          73,
+          1
+        ]
+      }
+    ],
     "applications": {
       "type": "symbol_enumeration",
       "value": [
@@ -870,46 +914,47 @@
         15
       ]
     },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "6014",
+      "linecol": [
+        74,
+        7
+      ]
+    },
+    "linecol": [
+      74,
+      1
+    ],
     "variables": [
       {
         "expression": {
           "type": "expression",
-          "value": "( V_0AP + V_0AF + V_0CG + V_0CR ) * 0.5",
+          "value": "NPS + NSA + NCC",
           "linecol": [
-            73,
-            8
+            76,
+            7
           ]
         },
         "type": "variable_definition",
         "name": {
           "type": "symbol",
-          "name": "NIN",
+          "name": "NSP",
           "linecol": [
-            73,
+            76,
             1
           ]
         },
         "linecol": [
-          73,
+          76,
           1
         ]
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "integer",
-      "value": 6013,
-      "linecol": [
-        71,
-        7
-      ]
-    },
-    "linecol": [
-      71,
-      1
-    ]
-  },
-  {
     "applications": {
       "type": "symbol_enumeration",
       "value": [
@@ -943,46 +988,47 @@
         15
       ]
     },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "60141",
+      "linecol": [
+        77,
+        7
+      ]
+    },
+    "linecol": [
+      77,
+      1
+    ],
     "variables": [
       {
         "expression": {
           "type": "expression",
-          "value": "NPS + NSA + NCC",
+          "value": "V_0AS * BOOL_0AM * (1 - positif(V_0AP + V_0AF)) * 0.5 * positif(max( AGV + 1 - LIM_AGE_LET_S, AGC + 1 - LIM_AGE_LET_S ))",
           "linecol": [
-            76,
+            79,
             7
           ]
         },
         "type": "variable_definition",
         "name": {
           "type": "symbol",
-          "name": "NSP",
+          "name": "NCC",
           "linecol": [
-            76,
+            79,
             1
           ]
         },
         "linecol": [
-          76,
+          79,
           1
         ]
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "integer",
-      "value": 6014,
-      "linecol": [
-        74,
-        7
-      ]
-    },
-    "linecol": [
-      74,
-      1
-    ]
-  },
-  {
     "applications": {
       "type": "symbol_enumeration",
       "value": [
@@ -1016,46 +1062,47 @@
         15
       ]
     },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "60142",
+      "linecol": [
+        81,
+        7
+      ]
+    },
+    "linecol": [
+      81,
+      1
+    ],
     "variables": [
       {
         "expression": {
           "type": "expression",
-          "value": "V_0AS * BOOL_0AM * (1 - positif(V_0AP + V_0AF)) * 0.5 * positif(max( AGV + 1 - LIM_AGE_LET_S, AGC + 1 - LIM_AGE_LET_S ))",
+          "value": "positif(PAC) * V_0BT * positif( 2 - NSM ) * 0.5",
           "linecol": [
-            79,
+            83,
             7
           ]
         },
         "type": "variable_definition",
         "name": {
           "type": "symbol",
-          "name": "NCC",
+          "name": "NPS",
           "linecol": [
-            79,
+            83,
             1
           ]
         },
         "linecol": [
-          79,
+          83,
           1
         ]
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "integer",
-      "value": 60141,
-      "linecol": [
-        77,
-        7
-      ]
-    },
-    "linecol": [
-      77,
-      1
-    ]
-  },
-  {
     "applications": {
       "type": "symbol_enumeration",
       "value": [
@@ -1089,79 +1136,22 @@
         15
       ]
     },
-    "variables": [
-      {
-        "expression": {
-          "type": "expression",
-          "value": "positif(PAC) * V_0BT * positif( 2 - NSM ) * 0.5",
-          "linecol": [
-            83,
-            7
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NPS",
-          "linecol": [
-            83,
-            1
-          ]
-        },
-        "linecol": [
-          83,
-          1
-        ]
-      }
-    ],
     "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
     "name": {
-      "type": "integer",
-      "value": 60142,
+      "type": "symbol",
+      "name": "60143",
       "linecol": [
-        81,
+        84,
         7
       ]
     },
     "linecol": [
-      81,
+      84,
       1
-    ]
-  },
-  {
-    "applications": {
-      "type": "symbol_enumeration",
-      "value": [
-        {
-          "type": "symbol",
-          "name": "bareme",
-          "linecol": [
-            85,
-            15
-          ]
-        },
-        {
-          "type": "symbol",
-          "name": "iliad",
-          "linecol": [
-            85,
-            24
-          ]
-        },
-        {
-          "type": "symbol",
-          "name": "batch",
-          "linecol": [
-            85,
-            32
-          ]
-        }
-      ],
-      "linecol": [
-        85,
-        15
-      ]
-    },
+    ],
     "variables": [
       {
         "expression": {
@@ -1210,21 +1200,6 @@
         ]
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "integer",
-      "value": 60143,
-      "linecol": [
-        84,
-        7
-      ]
-    },
-    "linecol": [
-      84,
-      1
-    ]
-  },
-  {
     "applications": {
       "type": "symbol_enumeration",
       "value": [
@@ -1232,7 +1207,7 @@
           "type": "symbol",
           "name": "bareme",
           "linecol": [
-            104,
+            85,
             15
           ]
         },
@@ -1240,7 +1215,7 @@
           "type": "symbol",
           "name": "iliad",
           "linecol": [
-            104,
+            85,
             24
           ]
         },
@@ -1248,16 +1223,32 @@
           "type": "symbol",
           "name": "batch",
           "linecol": [
-            104,
+            85,
             32
           ]
         }
       ],
       "linecol": [
-        104,
+        85,
         15
       ]
     },
+    "type": "regle_declaration",
+    "qualifiers": []
+  },
+  {
+    "name": {
+      "type": "symbol",
+      "name": "60200",
+      "linecol": [
+        103,
+        7
+      ]
+    },
+    "linecol": [
+      103,
+      1
+    ],
     "variables": [
       {
         "expression": {
@@ -1421,18 +1412,40 @@
         ]
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "integer",
-      "value": 60200,
+    "applications": {
+      "type": "symbol_enumeration",
+      "value": [
+        {
+          "type": "symbol",
+          "name": "bareme",
+          "linecol": [
+            104,
+            15
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "iliad",
+          "linecol": [
+            104,
+            24
+          ]
+        },
+        {
+          "type": "symbol",
+          "name": "batch",
+          "linecol": [
+            104,
+            32
+          ]
+        }
+      ],
       "linecol": [
-        103,
-        7
+        104,
+        15
       ]
     },
-    "linecol": [
-      103,
-      1
-    ]
+    "type": "regle_declaration",
+    "qualifiers": []
   }
 ]
