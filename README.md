@@ -27,3 +27,8 @@ un [`virtualenv`](https://virtualenv.readthedocs.org/en/latest/) s'il le souhait
 ```
 $ python scripts/m_source_code_to_ast.py
 ```
+
+## Grammaire
+
+La partie de la grammaire touchant aux expressions est basée
+sur [ce tutoriel](http://igordejanovic.net/Arpeggio/tutorials/calc/).
