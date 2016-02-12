@@ -1,1941 +1,4395 @@
 [
   {
-    "type": "comment",
-    "value": "#*************************************************************************************************************************",
-    "linecol": [
-      1,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      2,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#Copyright or © or Copr.[DGFIP][2015]",
-    "linecol": [
-      3,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      4,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#Ce logiciel a été initialement développé par la Direction Générale des ",
-    "linecol": [
-      5,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#Finances Publiques pour permettre le calcul de l'impôt sur le revenu 2015 ",
-    "linecol": [
-      6,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#au titre des revenus perçus en 2014. La présente version a permis la ",
-    "linecol": [
-      7,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#génération du moteur de calcul des chaînes de taxation des rôles d'impôt ",
-    "linecol": [
-      8,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#sur le revenu de ce millésime.",
-    "linecol": [
-      9,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      10,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#Ce logiciel est régi par la licence CeCILL 2.1 soumise au droit français ",
-    "linecol": [
-      11,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#et respectant les principes de diffusion des logiciels libres. Vous pouvez ",
-    "linecol": [
-      12,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#utiliser, modifier et/ou redistribuer ce programme sous les conditions de ",
-    "linecol": [
-      13,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#la licence CeCILL 2.1 telle que diffusée par le CEA, le CNRS et l'INRIA  sur ",
-    "linecol": [
-      14,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#le site \"http://www.cecill.info\".",
-    "linecol": [
-      15,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      16,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#Le fait que vous puissiez accéder à cet en-tête signifie que vous avez pris ",
-    "linecol": [
-      17,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#connaissance de la licence CeCILL 2.1 et que vous en avez accepté les termes.",
-    "linecol": [
-      18,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      19,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#**************************************************************************************************************************",
-    "linecol": [
-      20,
-      1
-    ]
-  },
-  {
-    "application": {
-      "type": "applications_reference",
-      "names": [
-        {
-          "type": "symbol_enumeration",
-          "value": [
-            {
-              "type": "symbol",
-              "name": "iliad",
-              "linecol": [
-                22,
-                15
-              ]
-            }
-          ],
-          "linecol": [
-            22,
-            15
-          ]
-        }
-      ],
-      "linecol": [
-        22,
-        1
-      ]
-    },
+    "type": "regle",
+    "name": "21700",
+    "applications": [
+      "iliad"
+    ],
     "variables": [
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "RNI_TL - RNI_INIT",
-          "linecol": [
-            25,
-            14
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RAP_RNI",
-          "linecol": [
-            25,
-            1
+        "name": "RAP_RNI",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "RNI_TL"
+            },
+            {
+              "type": "symbol",
+              "value": "RNI_INIT"
+            }
+          ],
+          "operators": [
+            "-"
           ]
-        },
-        "linecol": [
-          25,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "EFF_TL - EFF_INIT",
-          "linecol": [
-            26,
-            14
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RAP_EFF",
-          "linecol": [
-            26,
-            1
+        "name": "RAP_EFF",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "EFF_TL"
+            },
+            {
+              "type": "symbol",
+              "value": "EFF_INIT"
+            }
+          ],
+          "operators": [
+            "-"
           ]
-        },
-        "linecol": [
-          26,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "PVQ_TL - PVQ_INIT",
-          "linecol": [
-            27,
-            14
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RAP_PVQ",
-          "linecol": [
-            27,
-            1
+        "name": "RAP_PVQ",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "PVQ_TL"
+            },
+            {
+              "type": "symbol",
+              "value": "PVQ_INIT"
+            }
+          ],
+          "operators": [
+            "-"
           ]
-        },
-        "linecol": [
-          27,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "PV_TL - PV_INIT",
-          "linecol": [
-            28,
-            14
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RAP_PV",
-          "linecol": [
-            28,
-            1
+        "name": "RAP_PV",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "PV_TL"
+            },
+            {
+              "type": "symbol",
+              "value": "PV_INIT"
+            }
+          ],
+          "operators": [
+            "-"
           ]
-        },
-        "linecol": [
-          28,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "- RI_TL + RI_INIT",
-          "linecol": [
-            29,
-            14
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RAP_RI",
-          "linecol": [
-            29,
-            1
+        "name": "RAP_RI",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "RI_TL",
+              "unary": "-"
+            },
+            {
+              "type": "symbol",
+              "value": "RI_INIT"
+            }
+          ],
+          "operators": [
+            "+"
           ]
-        },
-        "linecol": [
-          29,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "CI_TL",
-          "linecol": [
-            30,
-            14
-          ]
-        },
         "type": "variable_definition",
-        "name": {
+        "name": "RAP_CI",
+        "expression": {
           "type": "symbol",
-          "name": "RAP_CI",
-          "linecol": [
-            30,
-            1
-          ]
-        },
-        "linecol": [
-          30,
-          1
-        ]
+          "value": "CI_TL"
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "RDS_TL - CRDS_INIT",
-          "linecol": [
-            31,
-            14
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RAP_CRDS",
-          "linecol": [
-            31,
-            1
+        "name": "RAP_CRDS",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "RDS_TL"
+            },
+            {
+              "type": "symbol",
+              "value": "CRDS_INIT"
+            }
+          ],
+          "operators": [
+            "-"
           ]
-        },
-        "linecol": [
-          31,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BRDS_TL - BRDS_INIT",
-          "linecol": [
-            32,
-            14
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RAP_RDS",
-          "linecol": [
-            32,
-            1
+        "name": "RAP_RDS",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "BRDS_TL"
+            },
+            {
+              "type": "symbol",
+              "value": "BRDS_INIT"
+            }
+          ],
+          "operators": [
+            "-"
           ]
-        },
-        "linecol": [
-          32,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BPRS_TL - BPRS_INIT",
-          "linecol": [
-            33,
-            14
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RAP_PRS",
-          "linecol": [
-            33,
-            1
+        "name": "RAP_PRS",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "BPRS_TL"
+            },
+            {
+              "type": "symbol",
+              "value": "BPRS_INIT"
+            }
+          ],
+          "operators": [
+            "-"
           ]
-        },
-        "linecol": [
-          33,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "TAXAGA_TL - TAXAGA_INIT",
-          "linecol": [
-            34,
-            14
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RAP_TAXAGA",
-          "linecol": [
-            34,
-            1
+        "name": "RAP_TAXAGA",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "TAXAGA_TL"
+            },
+            {
+              "type": "symbol",
+              "value": "TAXAGA_INIT"
+            }
+          ],
+          "operators": [
+            "-"
           ]
-        },
-        "linecol": [
-          34,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "PCAP_TL - PCAP_INIT",
-          "linecol": [
-            35,
-            14
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RAP_CAP",
-          "linecol": [
-            35,
-            1
+        "name": "RAP_CAP",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "PCAP_TL"
+            },
+            {
+              "type": "symbol",
+              "value": "PCAP_INIT"
+            }
+          ],
+          "operators": [
+            "-"
           ]
-        },
-        "linecol": [
-          35,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "LOYA_TL - LOY_INIT",
-          "linecol": [
-            36,
-            14
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RAP_LOY",
-          "linecol": [
-            36,
-            1
+        "name": "RAP_LOY",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "LOYA_TL"
+            },
+            {
+              "type": "symbol",
+              "value": "LOY_INIT"
+            }
+          ],
+          "operators": [
+            "-"
           ]
-        },
-        "linecol": [
-          36,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "CHR_TL - CHR_INIT",
-          "linecol": [
-            37,
-            14
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RAP_CHR",
-          "linecol": [
-            37,
-            1
+        "name": "RAP_CHR",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "CHR_TL"
+            },
+            {
+              "type": "symbol",
+              "value": "CHR_INIT"
+            }
+          ],
+          "operators": [
+            "-"
           ]
-        },
-        "linecol": [
-          37,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "CVNA_TL - CVN_INIT",
-          "linecol": [
-            38,
-            14
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RAP_CVN",
-          "linecol": [
-            38,
-            1
+        "name": "RAP_CVN",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "CVNA_TL"
+            },
+            {
+              "type": "symbol",
+              "value": "CVN_INIT"
+            }
+          ],
+          "operators": [
+            "-"
           ]
-        },
-        "linecol": [
-          38,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "CDISA_TL - CDIS_INIT",
-          "linecol": [
-            39,
-            14
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RAP_CDIS",
-          "linecol": [
-            39,
-            1
+        "name": "RAP_CDIS",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "CDISA_TL"
+            },
+            {
+              "type": "symbol",
+              "value": "CDIS_INIT"
+            }
+          ],
+          "operators": [
+            "-"
           ]
-        },
-        "linecol": [
-          39,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "GLOA_TL - GLO_INIT",
-          "linecol": [
-            40,
-            14
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RAP_GLO",
-          "linecol": [
-            40,
-            1
+        "name": "RAP_GLO",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "GLOA_TL"
+            },
+            {
+              "type": "symbol",
+              "value": "GLO_INIT"
+            }
+          ],
+          "operators": [
+            "-"
           ]
-        },
-        "linecol": [
-          40,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "RSE1A_TL - RSE1_INIT",
-          "linecol": [
-            41,
-            14
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RAP_RSE1",
-          "linecol": [
-            41,
-            1
+        "name": "RAP_RSE1",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "RSE1A_TL"
+            },
+            {
+              "type": "symbol",
+              "value": "RSE1_INIT"
+            }
+          ],
+          "operators": [
+            "-"
           ]
-        },
-        "linecol": [
-          41,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "RSE2A_TL - RSE2_INIT",
-          "linecol": [
-            42,
-            14
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RAP_RSE2",
-          "linecol": [
-            42,
-            1
+        "name": "RAP_RSE2",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "RSE2A_TL"
+            },
+            {
+              "type": "symbol",
+              "value": "RSE2_INIT"
+            }
+          ],
+          "operators": [
+            "-"
           ]
-        },
-        "linecol": [
-          42,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "RSE3A_TL - RSE3_INIT",
-          "linecol": [
-            43,
-            14
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RAP_RSE3",
-          "linecol": [
-            43,
-            1
+        "name": "RAP_RSE3",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "RSE3A_TL"
+            },
+            {
+              "type": "symbol",
+              "value": "RSE3_INIT"
+            }
+          ],
+          "operators": [
+            "-"
           ]
-        },
-        "linecol": [
-          43,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "RSE4A_TL - RSE4_INIT",
-          "linecol": [
-            44,
-            14
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RAP_RSE4",
-          "linecol": [
-            44,
-            1
+        "name": "RAP_RSE4",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "RSE4A_TL"
+            },
+            {
+              "type": "symbol",
+              "value": "RSE4_INIT"
+            }
+          ],
+          "operators": [
+            "-"
           ]
-        },
-        "linecol": [
-          44,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "RSE5A_TL - RSE5_INIT",
-          "linecol": [
-            45,
-            14
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RAP_RSE5",
-          "linecol": [
-            45,
-            1
+        "name": "RAP_RSE5",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "RSE5A_TL"
+            },
+            {
+              "type": "symbol",
+              "value": "RSE5_INIT"
+            }
+          ],
+          "operators": [
+            "-"
           ]
-        },
-        "linecol": [
-          45,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0 , RAP_RNI + RAP_EFF + RAP_PVQ + RAP_PV + RAP_RI + RAP_CI)",
-          "linecol": [
-            48,
-            13
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NUM_IR_TL",
-          "linecol": [
-            48,
-            1
+        "name": "NUM_IR_TL",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "RAP_RNI"
+                },
+                {
+                  "type": "symbol",
+                  "value": "RAP_EFF"
+                },
+                {
+                  "type": "symbol",
+                  "value": "RAP_PVQ"
+                },
+                {
+                  "type": "symbol",
+                  "value": "RAP_PV"
+                },
+                {
+                  "type": "symbol",
+                  "value": "RAP_RI"
+                },
+                {
+                  "type": "symbol",
+                  "value": "RAP_CI"
+                }
+              ],
+              "operators": [
+                "+",
+                "+",
+                "+",
+                "+",
+                "+"
+              ]
+            }
           ]
-        },
-        "linecol": [
-          48,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0 , RAP_CRDS)",
-          "linecol": [
-            55,
-            17
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NUM_CS_TL",
-          "linecol": [
-            55,
-            1
+        "name": "NUM_CS_TL",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "symbol",
+              "value": "RAP_CRDS"
+            }
           ]
-        },
-        "linecol": [
-          55,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0 , RAP_RDS)",
-          "linecol": [
-            56,
-            17
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NUM_RD_TL",
-          "linecol": [
-            56,
-            1
+        "name": "NUM_RD_TL",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "symbol",
+              "value": "RAP_RDS"
+            }
           ]
-        },
-        "linecol": [
-          56,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0 , RAP_PRS)",
-          "linecol": [
-            57,
-            17
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NUM_PS_TL",
-          "linecol": [
-            57,
-            1
+        "name": "NUM_PS_TL",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "symbol",
+              "value": "RAP_PRS"
+            }
           ]
-        },
-        "linecol": [
-          57,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0 , RAP_TAXAGA)",
-          "linecol": [
-            59,
-            17
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NUM_TAXAGA_TL",
-          "linecol": [
-            59,
-            1
+        "name": "NUM_TAXAGA_TL",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "symbol",
+              "value": "RAP_TAXAGA"
+            }
           ]
-        },
-        "linecol": [
-          59,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0 , RAP_CAP)",
-          "linecol": [
-            60,
-            17
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NUM_CAP_TL",
-          "linecol": [
-            60,
-            1
+        "name": "NUM_CAP_TL",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "symbol",
+              "value": "RAP_CAP"
+            }
           ]
-        },
-        "linecol": [
-          60,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0 , RAP_LOY)",
-          "linecol": [
-            61,
-            17
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NUM_LOY_TL",
-          "linecol": [
-            61,
-            1
+        "name": "NUM_LOY_TL",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "symbol",
+              "value": "RAP_LOY"
+            }
           ]
-        },
-        "linecol": [
-          61,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0 , RAP_CHR)",
-          "linecol": [
-            62,
-            17
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NUM_CHR_TL",
-          "linecol": [
-            62,
-            1
+        "name": "NUM_CHR_TL",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "symbol",
+              "value": "RAP_CHR"
+            }
           ]
-        },
-        "linecol": [
-          62,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0 , RAP_CVN)",
-          "linecol": [
-            64,
-            17
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NUM_CVN_TL",
-          "linecol": [
-            64,
-            1
+        "name": "NUM_CVN_TL",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "symbol",
+              "value": "RAP_CVN"
+            }
           ]
-        },
-        "linecol": [
-          64,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0 , RAP_CDIS)",
-          "linecol": [
-            65,
-            17
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NUM_CDIS_TL",
-          "linecol": [
-            65,
-            1
+        "name": "NUM_CDIS_TL",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "symbol",
+              "value": "RAP_CDIS"
+            }
           ]
-        },
-        "linecol": [
-          65,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0 , RAP_GLO)",
-          "linecol": [
-            66,
-            17
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NUM_GLO_TL",
-          "linecol": [
-            66,
-            1
+        "name": "NUM_GLO_TL",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "symbol",
+              "value": "RAP_GLO"
+            }
           ]
-        },
-        "linecol": [
-          66,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0 , RAP_RSE1)",
-          "linecol": [
-            68,
-            17
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NUM_RSE1_TL",
-          "linecol": [
-            68,
-            1
+        "name": "NUM_RSE1_TL",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "symbol",
+              "value": "RAP_RSE1"
+            }
           ]
-        },
-        "linecol": [
-          68,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0 , RAP_RSE2)",
-          "linecol": [
-            69,
-            17
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NUM_RSE2_TL",
-          "linecol": [
-            69,
-            1
+        "name": "NUM_RSE2_TL",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "symbol",
+              "value": "RAP_RSE2"
+            }
           ]
-        },
-        "linecol": [
-          69,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0 , RAP_RSE3)",
-          "linecol": [
-            70,
-            17
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NUM_RSE3_TL",
-          "linecol": [
-            70,
-            1
+        "name": "NUM_RSE3_TL",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "symbol",
+              "value": "RAP_RSE3"
+            }
           ]
-        },
-        "linecol": [
-          70,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0 , RAP_RSE4)",
-          "linecol": [
-            71,
-            17
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NUM_RSE4_TL",
-          "linecol": [
-            71,
-            1
+        "name": "NUM_RSE4_TL",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "symbol",
+              "value": "RAP_RSE4"
+            }
           ]
-        },
-        "linecol": [
-          71,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0 , RAP_RSE5)",
-          "linecol": [
-            72,
-            17
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NUM_RSE5_TL",
-          "linecol": [
-            72,
-            1
+        "name": "NUM_RSE5_TL",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "symbol",
+              "value": "RAP_RSE5"
+            }
           ]
-        },
-        "linecol": [
-          72,
-          1
-        ]
+        }
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "symbol",
-      "name": "21700",
-      "linecol": [
-        21,
-        7
-      ]
-    },
     "linecol": [
       21,
       1
     ]
   },
   {
-    "application": {
-      "type": "applications_reference",
-      "names": [
-        {
-          "type": "symbol_enumeration",
-          "value": [
-            {
-              "type": "symbol",
-              "name": "iliad",
-              "linecol": [
-                75,
-                15
-              ]
-            }
-          ],
-          "linecol": [
-            75,
-            15
-          ]
-        }
-      ],
-      "linecol": [
-        75,
-        1
-      ]
-    },
+    "type": "regle",
+    "name": "21710",
+    "applications": [
+      "iliad"
+    ],
     "variables": [
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0 , RNI_RECT + EFF_RECT + PVQ_RECT + PV_RECT + RI_RECT + CI_RECT)",
-          "linecol": [
-            78,
-            13
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "DEN_IR_TL",
-          "linecol": [
-            78,
-            1
+        "name": "DEN_IR_TL",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "RNI_RECT"
+                },
+                {
+                  "type": "symbol",
+                  "value": "EFF_RECT"
+                },
+                {
+                  "type": "symbol",
+                  "value": "PVQ_RECT"
+                },
+                {
+                  "type": "symbol",
+                  "value": "PV_RECT"
+                },
+                {
+                  "type": "symbol",
+                  "value": "RI_RECT"
+                },
+                {
+                  "type": "symbol",
+                  "value": "CI_RECT"
+                }
+              ],
+              "operators": [
+                "+",
+                "+",
+                "+",
+                "+",
+                "+"
+              ]
+            }
           ]
-        },
-        "linecol": [
-          78,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0 , CRDS_RECT)",
-          "linecol": [
-            85,
-            17
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "DEN_CS_TL",
-          "linecol": [
-            85,
-            1
+        "name": "DEN_CS_TL",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "symbol",
+              "value": "CRDS_RECT"
+            }
           ]
-        },
-        "linecol": [
-          85,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0 , BRDS_RECT)",
-          "linecol": [
-            86,
-            17
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "DEN_RD_TL",
-          "linecol": [
-            86,
-            1
+        "name": "DEN_RD_TL",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "symbol",
+              "value": "BRDS_RECT"
+            }
           ]
-        },
-        "linecol": [
-          86,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0 , BPRS_RECT)",
-          "linecol": [
-            87,
-            17
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "DEN_PS_TL",
-          "linecol": [
-            87,
-            1
+        "name": "DEN_PS_TL",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "symbol",
+              "value": "BPRS_RECT"
+            }
           ]
-        },
-        "linecol": [
-          87,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0 , TAXAGA_RECT)",
-          "linecol": [
-            89,
-            17
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "DEN_TAXAGA_TL",
-          "linecol": [
-            89,
-            1
+        "name": "DEN_TAXAGA_TL",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "symbol",
+              "value": "TAXAGA_RECT"
+            }
           ]
-        },
-        "linecol": [
-          89,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0 , PCAP_RECT)",
-          "linecol": [
-            90,
-            17
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "DEN_CAP_TL",
-          "linecol": [
-            90,
-            1
+        "name": "DEN_CAP_TL",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "symbol",
+              "value": "PCAP_RECT"
+            }
           ]
-        },
-        "linecol": [
-          90,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0 , LOY_RECT)",
-          "linecol": [
-            91,
-            17
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "DEN_LOY_TL",
-          "linecol": [
-            91,
-            1
+        "name": "DEN_LOY_TL",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "symbol",
+              "value": "LOY_RECT"
+            }
           ]
-        },
-        "linecol": [
-          91,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0 , CHR_RECT)",
-          "linecol": [
-            92,
-            17
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "DEN_CHR_TL",
-          "linecol": [
-            92,
-            1
+        "name": "DEN_CHR_TL",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "symbol",
+              "value": "CHR_RECT"
+            }
           ]
-        },
-        "linecol": [
-          92,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0 , CVN_RECT)",
-          "linecol": [
-            94,
-            17
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "DEN_CVN_TL",
-          "linecol": [
-            94,
-            1
+        "name": "DEN_CVN_TL",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "symbol",
+              "value": "CVN_RECT"
+            }
           ]
-        },
-        "linecol": [
-          94,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0 , CDIS_RECT)",
-          "linecol": [
-            95,
-            17
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "DEN_CDIS_TL",
-          "linecol": [
-            95,
-            1
+        "name": "DEN_CDIS_TL",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "symbol",
+              "value": "CDIS_RECT"
+            }
           ]
-        },
-        "linecol": [
-          95,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0 , GLO_RECT)",
-          "linecol": [
-            96,
-            17
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "DEN_GLO_TL",
-          "linecol": [
-            96,
-            1
+        "name": "DEN_GLO_TL",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "symbol",
+              "value": "GLO_RECT"
+            }
           ]
-        },
-        "linecol": [
-          96,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0 , RSE1_RECT)",
-          "linecol": [
-            98,
-            15
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "DEN_RSE1_TL",
-          "linecol": [
-            98,
-            1
+        "name": "DEN_RSE1_TL",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "symbol",
+              "value": "RSE1_RECT"
+            }
           ]
-        },
-        "linecol": [
-          98,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0 , RSE2_RECT)",
-          "linecol": [
-            99,
-            15
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "DEN_RSE2_TL",
-          "linecol": [
-            99,
-            1
+        "name": "DEN_RSE2_TL",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "symbol",
+              "value": "RSE2_RECT"
+            }
           ]
-        },
-        "linecol": [
-          99,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0 , RSE3_RECT)",
-          "linecol": [
-            100,
-            15
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "DEN_RSE3_TL",
-          "linecol": [
-            100,
-            1
+        "name": "DEN_RSE3_TL",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "symbol",
+              "value": "RSE3_RECT"
+            }
           ]
-        },
-        "linecol": [
-          100,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0 , RSE4_RECT)",
-          "linecol": [
-            101,
-            15
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "DEN_RSE4_TL",
-          "linecol": [
-            101,
-            1
+        "name": "DEN_RSE4_TL",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "symbol",
+              "value": "RSE4_RECT"
+            }
           ]
-        },
-        "linecol": [
-          101,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0 , RSE5_RECT)",
-          "linecol": [
-            102,
-            15
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "DEN_RSE5_TL",
-          "linecol": [
-            102,
-            1
+        "name": "DEN_RSE5_TL",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "symbol",
+              "value": "RSE5_RECT"
+            }
           ]
-        },
-        "linecol": [
-          102,
-          1
-        ]
+        }
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "symbol",
-      "name": "21710",
-      "linecol": [
-        74,
-        7
-      ]
-    },
     "linecol": [
       74,
       1
     ]
   },
   {
-    "name": {
-      "type": "symbol",
-      "name": "21720",
-      "linecol": [
-        104,
-        7
-      ]
-    },
-    "linecol": [
-      104,
-      1
+    "type": "regle",
+    "name": "21720",
+    "applications": [
+      "iliad"
     ],
+    "enchaineur": "ENCH_TL",
     "variables": [
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "null(V_IND_TRAIT - 4) * null(CMAJ - 7)",
-          "linecol": [
-            108,
-            13
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RETARPRIM",
-          "linecol": [
-            108,
-            1
-          ]
-        },
-        "linecol": [
-          108,
-          1
-        ]
-      },
-      {
+        "name": "RETARPRIM",
         "expression": {
-          "type": "variable_definition_expression",
-          "value": "(1 - positif(TL_MF*positif(MFIR+0)+RETARPRIM+FLAG_RETARD+FLAG_DEFAUT+PASS_TLIR)) * positif(positif (NUM_IR_TL+0) * positif (DEN_IR_TL+0) * positif(NUM_IR_TL / DEN_IR_TL  - 0.05)) + positif(TL_MF*positif(MFIR+0) + RETARPRIM + FLAG_RETARD + FLAG_DEFAUT + PASS_TLIR)",
-          "linecol": [
-            110,
-            9
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "TL_IR",
-          "linecol": [
-            110,
-            1
-          ]
-        },
-        "linecol": [
-          110,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "(1 - positif(TL_MF*positif(MFCS) + RETARPRIM + FLAG_RETARD + FLAG_DEFAUT)) * positif(NUM_CS_TL / DEN_CS_TL  - 0.05) + positif(TL_MF*positif(MFCS) + RETARPRIM + FLAG_RETARD + FLAG_DEFAUT)",
-          "linecol": [
-            114,
-            9
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "TL_CS",
-          "linecol": [
-            114,
-            1
-          ]
-        },
-        "linecol": [
-          114,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "(1 - positif(TL_MF*positif(MFRD) + RETARPRIM + FLAG_RETARD + FLAG_DEFAUT)) * positif(NUM_RD_TL / DEN_RD_TL  - 0.05) + positif(TL_MF*positif(MFRD) + RETARPRIM + FLAG_RETARD + FLAG_DEFAUT)",
-          "linecol": [
-            117,
-            9
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "TL_RD",
-          "linecol": [
-            117,
-            1
-          ]
-        },
-        "linecol": [
-          117,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "(1 - positif(TL_MF*positif(MFPS) + RETARPRIM + FLAG_RETARD + FLAG_DEFAUT)) * positif(NUM_PS_TL / DEN_PS_TL  - 0.05) + positif(TL_MF*positif(MFPS) + RETARPRIM + FLAG_RETARD + FLAG_DEFAUT)",
-          "linecol": [
-            120,
-            9
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "TL_PS",
-          "linecol": [
-            120,
-            1
-          ]
-        },
-        "linecol": [
-          120,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "( 1 - positif(TL_MF * positif(MFTAXAGA) + RETARPRIM + FLAG_RETARD + FLAG_DEFAUT)) * (positif(TL_MF * positif(MFTAXAGA) + positif(NUM_TAXAGA_TL / DEN_TAXAGA_TL - 0.05))) + positif(TL_MF * positif(MFTAXAGA) + RETARPRIM + FLAG_RETARD + FLAG_DEFAUT)",
-          "linecol": [
-            124,
-            13
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "TL_TAXAGA",
-          "linecol": [
-            124,
-            1
-          ]
-        },
-        "linecol": [
-          124,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "( 1 - positif(TL_MF * positif(MFPCAP) + RETARPRIM + FLAG_RETARD + FLAG_DEFAUT)) * (positif(TL_MF * positif(MFPCAP) + positif(NUM_CAP_TL / DEN_CAP_TL - 0.05))) + positif(TL_MF * positif(MFPCAP) + RETARPRIM + FLAG_RETARD + FLAG_DEFAUT)",
-          "linecol": [
-            127,
-            10
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "TL_CAP",
-          "linecol": [
-            127,
-            1
-          ]
-        },
-        "linecol": [
-          127,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "( 1 - positif(TL_MF * positif(MFLOY) + RETARPRIM + FLAG_RETARD + FLAG_DEFAUT)) * (positif(TL_MF * positif(MFLOY) + positif(NUM_LOY_TL / DEN_LOY_TL - 0.05))) + positif(TL_MF * positif(MFLOY) + RETARPRIM + FLAG_RETARD + FLAG_DEFAUT)",
-          "linecol": [
-            130,
-            10
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "TL_LOY",
-          "linecol": [
-            130,
-            1
-          ]
-        },
-        "linecol": [
-          130,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "( 1 - positif(TL_MF * positif(MFIR + MFPCAP) + RETARPRIM + FLAG_RETARD + FLAG_DEFAUT)) * (positif(TL_MF * positif(MFIR + MFPCAP) + positif(NUM_CHR_TL / DEN_CHR_TL - 0.05))) + positif(TL_MF * positif(MFIR + MFPCAP) * (1 - null(MFCHR7)) + RETARPRIM + FLAG_RETARD + FLAG_DEFAUT)",
-          "linecol": [
-            133,
-            10
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "TL_CHR",
-          "linecol": [
-            133,
-            1
-          ]
-        },
-        "linecol": [
-          133,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "(1 - positif(TL_MF * positif(MFCVN)+RETARPRIM+FLAG_RETARD+FLAG_DEFAUT)) * (positif(TL_MF * positif(MFCVN) + positif (NUM_CVN_TL / DEN_CVN_TL  - 0.05 )) ) + positif(TL_MF * positif(MFCVN)+RETARPRIM+FLAG_RETARD+FLAG_DEFAUT)",
-          "linecol": [
-            136,
-            10
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "TL_CVN",
-          "linecol": [
-            136,
-            1
-          ]
-        },
-        "linecol": [
-          136,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "(1 - positif(TL_MF * positif(MFCDIS)+RETARPRIM+FLAG_RETARD+FLAG_DEFAUT)) * (positif(TL_MF * positif(MFCDIS) + positif (NUM_CDIS_TL / DEN_CDIS_TL  - 0.05 )) ) + positif(TL_MF * positif(MFCDIS)+RETARPRIM+FLAG_RETARD+FLAG_DEFAUT)",
-          "linecol": [
-            139,
-            11
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "TL_CDIS",
-          "linecol": [
-            139,
-            1
-          ]
-        },
-        "linecol": [
-          139,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "(1 - positif(TL_MF * positif(MFGLO)+RETARPRIM+FLAG_RETARD+FLAG_DEFAUT)) * (positif(TL_MF * positif(MFGLO) + positif (NUM_GLO_TL / DEN_GLO_TL  - 0.05 )) ) + positif(TL_MF * positif(MFGLO)+RETARPRIM+FLAG_RETARD+FLAG_DEFAUT)",
-          "linecol": [
-            142,
-            10
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "TL_GLO",
-          "linecol": [
-            142,
-            1
-          ]
-        },
-        "linecol": [
-          142,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "(1 - positif(TL_MF * positif(MFRSE1)+RETARPRIM+FLAG_RETARD+FLAG_DEFAUT)) * (positif(TL_MF * positif(MFRSE1) + positif (NUM_RSE1_TL / DEN_RSE1_TL  - 0.05 )) ) + positif(TL_MF * positif(MFRSE1)+RETARPRIM+FLAG_RETARD+FLAG_DEFAUT)",
-          "linecol": [
-            145,
-            11
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "TL_RSE1",
-          "linecol": [
-            145,
-            1
-          ]
-        },
-        "linecol": [
-          145,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "(1 - positif(TL_MF * positif(MFRSE2)+RETARPRIM+FLAG_RETARD+FLAG_DEFAUT)) * (positif(TL_MF * positif(MFRSE2) + positif (NUM_RSE2_TL / DEN_RSE2_TL  - 0.05 )) ) + positif(TL_MF * positif(MFRSE2)+RETARPRIM+FLAG_RETARD+FLAG_DEFAUT)",
-          "linecol": [
-            148,
-            11
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "TL_RSE2",
-          "linecol": [
-            148,
-            1
-          ]
-        },
-        "linecol": [
-          148,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "(1 - positif(TL_MF * positif(MFRSE3)+RETARPRIM+FLAG_RETARD+FLAG_DEFAUT)) * (positif(TL_MF * positif(MFRSE3) + positif (NUM_RSE3_TL / DEN_RSE3_TL  - 0.05 )) ) + positif(TL_MF * positif(MFRSE3)+RETARPRIM+FLAG_RETARD+FLAG_DEFAUT)",
-          "linecol": [
-            151,
-            11
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "TL_RSE3",
-          "linecol": [
-            151,
-            1
-          ]
-        },
-        "linecol": [
-          151,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "(1 - positif(TL_MF * positif(MFRSE4)+RETARPRIM+FLAG_RETARD+FLAG_DEFAUT)) * (positif(TL_MF * positif(MFRSE4) + positif (NUM_RSE4_TL / DEN_RSE4_TL  - 0.05 )) ) + positif(TL_MF * positif(MFRSE4)+RETARPRIM+FLAG_RETARD+FLAG_DEFAUT)",
-          "linecol": [
-            154,
-            11
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "TL_RSE4",
-          "linecol": [
-            154,
-            1
-          ]
-        },
-        "linecol": [
-          154,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "(1 - positif(TL_MF * positif(MFRSE5)+RETARPRIM+FLAG_RETARD+FLAG_DEFAUT)) * (positif(TL_MF * positif(MFRSE5) + positif (NUM_RSE5_TL / DEN_RSE5_TL  - 0.05 )) ) + positif(TL_MF * positif(MFRSE5)+RETARPRIM+FLAG_RETARD+FLAG_DEFAUT)",
-          "linecol": [
-            157,
-            11
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "TL_RSE5",
-          "linecol": [
-            157,
-            1
-          ]
-        },
-        "linecol": [
-          157,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "1",
-          "linecol": [
-            160,
-            11
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "TL_REGV",
-          "linecol": [
-            160,
-            1
-          ]
-        },
-        "linecol": [
-          160,
-          1
-        ]
-      }
-    ],
-    "application": {
-      "type": "applications_reference",
-      "names": [
-        {
-          "type": "symbol_enumeration",
-          "value": [
+          "type": "product_expression",
+          "operands": [
             {
-              "type": "symbol",
-              "name": "iliad",
-              "linecol": [
-                105,
-                15
+              "type": "function_call",
+              "name": "null",
+              "parameters": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "V_IND_TRAIT"
+                    },
+                    {
+                      "type": "integer",
+                      "value": 4
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "function_call",
+              "name": "null",
+              "parameters": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "CMAJ"
+                    },
+                    {
+                      "type": "integer",
+                      "value": 7
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                }
               ]
             }
           ],
-          "linecol": [
-            105,
-            15
+          "operators": [
+            "*"
           ]
         }
-      ],
-      "linecol": [
-        105,
-        1
-      ]
-    },
-    "type": "regle_declaration",
-    "enchaineur": {
-      "type": "regle_enchaineur",
-      "name": [
-        {
-          "type": "symbol",
-          "name": "ENCH_TL",
-          "linecol": [
-            106,
-            14
+      },
+      {
+        "type": "variable_definition",
+        "name": "TL_IR",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif",
+                      "parameters": [
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "product_expression",
+                              "operands": [
+                                {
+                                  "type": "symbol",
+                                  "value": "TL_MF"
+                                },
+                                {
+                                  "type": "function_call",
+                                  "name": "positif",
+                                  "parameters": [
+                                    {
+                                      "type": "sum_expression",
+                                      "operands": [
+                                        {
+                                          "type": "symbol",
+                                          "value": "MFIR"
+                                        },
+                                        {
+                                          "type": "integer",
+                                          "value": 0
+                                        }
+                                      ],
+                                      "operators": [
+                                        "+"
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ],
+                              "operators": [
+                                "*"
+                              ]
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "RETARPRIM"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "FLAG_RETARD"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "FLAG_DEFAUT"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "PASS_TLIR"
+                            }
+                          ],
+                          "operators": [
+                            "+",
+                            "+",
+                            "+",
+                            "+"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "product_expression",
+                      "operands": [
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "sum_expression",
+                              "operands": [
+                                {
+                                  "type": "symbol",
+                                  "value": "NUM_IR_TL"
+                                },
+                                {
+                                  "type": "integer",
+                                  "value": 0
+                                }
+                              ],
+                              "operators": [
+                                "+"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "sum_expression",
+                              "operands": [
+                                {
+                                  "type": "symbol",
+                                  "value": "DEN_IR_TL"
+                                },
+                                {
+                                  "type": "integer",
+                                  "value": 0
+                                }
+                              ],
+                              "operators": [
+                                "+"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "sum_expression",
+                              "operands": [
+                                {
+                                  "type": "product_expression",
+                                  "operands": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "NUM_IR_TL"
+                                    },
+                                    {
+                                      "type": "symbol",
+                                      "value": "DEN_IR_TL"
+                                    }
+                                  ],
+                                  "operators": [
+                                    "/"
+                                  ]
+                                },
+                                {
+                                  "type": "float",
+                                  "value": 0.05
+                                }
+                              ],
+                              "operators": [
+                                "-"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "*",
+                        "*"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            },
+            {
+              "type": "function_call",
+              "name": "positif",
+              "parameters": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "product_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "TL_MF"
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "sum_expression",
+                              "operands": [
+                                {
+                                  "type": "symbol",
+                                  "value": "MFIR"
+                                },
+                                {
+                                  "type": "integer",
+                                  "value": 0
+                                }
+                              ],
+                              "operators": [
+                                "+"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "*"
+                      ]
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "RETARPRIM"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_RETARD"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_DEFAUT"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "PASS_TLIR"
+                    }
+                  ],
+                  "operators": [
+                    "+",
+                    "+",
+                    "+",
+                    "+"
+                  ]
+                }
+              ]
+            }
+          ],
+          "operators": [
+            "+"
           ]
         }
-      ],
-      "linecol": [
-        106,
-        1
-      ]
-    }
+      },
+      {
+        "type": "variable_definition",
+        "name": "TL_CS",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif",
+                      "parameters": [
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "product_expression",
+                              "operands": [
+                                {
+                                  "type": "symbol",
+                                  "value": "TL_MF"
+                                },
+                                {
+                                  "type": "function_call",
+                                  "name": "positif",
+                                  "parameters": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "MFCS"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "operators": [
+                                "*"
+                              ]
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "RETARPRIM"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "FLAG_RETARD"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "FLAG_DEFAUT"
+                            }
+                          ],
+                          "operators": [
+                            "+",
+                            "+",
+                            "+"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "product_expression",
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "NUM_CS_TL"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "DEN_CS_TL"
+                            }
+                          ],
+                          "operators": [
+                            "/"
+                          ]
+                        },
+                        {
+                          "type": "float",
+                          "value": 0.05
+                        }
+                      ],
+                      "operators": [
+                        "-"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            },
+            {
+              "type": "function_call",
+              "name": "positif",
+              "parameters": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "product_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "TL_MF"
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "symbol",
+                              "value": "MFCS"
+                            }
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "*"
+                      ]
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "RETARPRIM"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_RETARD"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_DEFAUT"
+                    }
+                  ],
+                  "operators": [
+                    "+",
+                    "+",
+                    "+"
+                  ]
+                }
+              ]
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "TL_RD",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif",
+                      "parameters": [
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "product_expression",
+                              "operands": [
+                                {
+                                  "type": "symbol",
+                                  "value": "TL_MF"
+                                },
+                                {
+                                  "type": "function_call",
+                                  "name": "positif",
+                                  "parameters": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "MFRD"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "operators": [
+                                "*"
+                              ]
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "RETARPRIM"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "FLAG_RETARD"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "FLAG_DEFAUT"
+                            }
+                          ],
+                          "operators": [
+                            "+",
+                            "+",
+                            "+"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "product_expression",
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "NUM_RD_TL"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "DEN_RD_TL"
+                            }
+                          ],
+                          "operators": [
+                            "/"
+                          ]
+                        },
+                        {
+                          "type": "float",
+                          "value": 0.05
+                        }
+                      ],
+                      "operators": [
+                        "-"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            },
+            {
+              "type": "function_call",
+              "name": "positif",
+              "parameters": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "product_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "TL_MF"
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "symbol",
+                              "value": "MFRD"
+                            }
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "*"
+                      ]
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "RETARPRIM"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_RETARD"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_DEFAUT"
+                    }
+                  ],
+                  "operators": [
+                    "+",
+                    "+",
+                    "+"
+                  ]
+                }
+              ]
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "TL_PS",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif",
+                      "parameters": [
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "product_expression",
+                              "operands": [
+                                {
+                                  "type": "symbol",
+                                  "value": "TL_MF"
+                                },
+                                {
+                                  "type": "function_call",
+                                  "name": "positif",
+                                  "parameters": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "MFPS"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "operators": [
+                                "*"
+                              ]
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "RETARPRIM"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "FLAG_RETARD"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "FLAG_DEFAUT"
+                            }
+                          ],
+                          "operators": [
+                            "+",
+                            "+",
+                            "+"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "product_expression",
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "NUM_PS_TL"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "DEN_PS_TL"
+                            }
+                          ],
+                          "operators": [
+                            "/"
+                          ]
+                        },
+                        {
+                          "type": "float",
+                          "value": 0.05
+                        }
+                      ],
+                      "operators": [
+                        "-"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            },
+            {
+              "type": "function_call",
+              "name": "positif",
+              "parameters": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "product_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "TL_MF"
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "symbol",
+                              "value": "MFPS"
+                            }
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "*"
+                      ]
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "RETARPRIM"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_RETARD"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_DEFAUT"
+                    }
+                  ],
+                  "operators": [
+                    "+",
+                    "+",
+                    "+"
+                  ]
+                }
+              ]
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "TL_TAXAGA",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif",
+                      "parameters": [
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "product_expression",
+                              "operands": [
+                                {
+                                  "type": "symbol",
+                                  "value": "TL_MF"
+                                },
+                                {
+                                  "type": "function_call",
+                                  "name": "positif",
+                                  "parameters": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "MFTAXAGA"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "operators": [
+                                "*"
+                              ]
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "RETARPRIM"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "FLAG_RETARD"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "FLAG_DEFAUT"
+                            }
+                          ],
+                          "operators": [
+                            "+",
+                            "+",
+                            "+"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "product_expression",
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "TL_MF"
+                            },
+                            {
+                              "type": "function_call",
+                              "name": "positif",
+                              "parameters": [
+                                {
+                                  "type": "symbol",
+                                  "value": "MFTAXAGA"
+                                }
+                              ]
+                            }
+                          ],
+                          "operators": [
+                            "*"
+                          ]
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "sum_expression",
+                              "operands": [
+                                {
+                                  "type": "product_expression",
+                                  "operands": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "NUM_TAXAGA_TL"
+                                    },
+                                    {
+                                      "type": "symbol",
+                                      "value": "DEN_TAXAGA_TL"
+                                    }
+                                  ],
+                                  "operators": [
+                                    "/"
+                                  ]
+                                },
+                                {
+                                  "type": "float",
+                                  "value": 0.05
+                                }
+                              ],
+                              "operators": [
+                                "-"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "+"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            },
+            {
+              "type": "function_call",
+              "name": "positif",
+              "parameters": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "product_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "TL_MF"
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "symbol",
+                              "value": "MFTAXAGA"
+                            }
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "*"
+                      ]
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "RETARPRIM"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_RETARD"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_DEFAUT"
+                    }
+                  ],
+                  "operators": [
+                    "+",
+                    "+",
+                    "+"
+                  ]
+                }
+              ]
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "TL_CAP",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif",
+                      "parameters": [
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "product_expression",
+                              "operands": [
+                                {
+                                  "type": "symbol",
+                                  "value": "TL_MF"
+                                },
+                                {
+                                  "type": "function_call",
+                                  "name": "positif",
+                                  "parameters": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "MFPCAP"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "operators": [
+                                "*"
+                              ]
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "RETARPRIM"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "FLAG_RETARD"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "FLAG_DEFAUT"
+                            }
+                          ],
+                          "operators": [
+                            "+",
+                            "+",
+                            "+"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "product_expression",
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "TL_MF"
+                            },
+                            {
+                              "type": "function_call",
+                              "name": "positif",
+                              "parameters": [
+                                {
+                                  "type": "symbol",
+                                  "value": "MFPCAP"
+                                }
+                              ]
+                            }
+                          ],
+                          "operators": [
+                            "*"
+                          ]
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "sum_expression",
+                              "operands": [
+                                {
+                                  "type": "product_expression",
+                                  "operands": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "NUM_CAP_TL"
+                                    },
+                                    {
+                                      "type": "symbol",
+                                      "value": "DEN_CAP_TL"
+                                    }
+                                  ],
+                                  "operators": [
+                                    "/"
+                                  ]
+                                },
+                                {
+                                  "type": "float",
+                                  "value": 0.05
+                                }
+                              ],
+                              "operators": [
+                                "-"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "+"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            },
+            {
+              "type": "function_call",
+              "name": "positif",
+              "parameters": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "product_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "TL_MF"
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "symbol",
+                              "value": "MFPCAP"
+                            }
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "*"
+                      ]
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "RETARPRIM"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_RETARD"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_DEFAUT"
+                    }
+                  ],
+                  "operators": [
+                    "+",
+                    "+",
+                    "+"
+                  ]
+                }
+              ]
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "TL_LOY",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif",
+                      "parameters": [
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "product_expression",
+                              "operands": [
+                                {
+                                  "type": "symbol",
+                                  "value": "TL_MF"
+                                },
+                                {
+                                  "type": "function_call",
+                                  "name": "positif",
+                                  "parameters": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "MFLOY"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "operators": [
+                                "*"
+                              ]
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "RETARPRIM"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "FLAG_RETARD"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "FLAG_DEFAUT"
+                            }
+                          ],
+                          "operators": [
+                            "+",
+                            "+",
+                            "+"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "product_expression",
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "TL_MF"
+                            },
+                            {
+                              "type": "function_call",
+                              "name": "positif",
+                              "parameters": [
+                                {
+                                  "type": "symbol",
+                                  "value": "MFLOY"
+                                }
+                              ]
+                            }
+                          ],
+                          "operators": [
+                            "*"
+                          ]
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "sum_expression",
+                              "operands": [
+                                {
+                                  "type": "product_expression",
+                                  "operands": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "NUM_LOY_TL"
+                                    },
+                                    {
+                                      "type": "symbol",
+                                      "value": "DEN_LOY_TL"
+                                    }
+                                  ],
+                                  "operators": [
+                                    "/"
+                                  ]
+                                },
+                                {
+                                  "type": "float",
+                                  "value": 0.05
+                                }
+                              ],
+                              "operators": [
+                                "-"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "+"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            },
+            {
+              "type": "function_call",
+              "name": "positif",
+              "parameters": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "product_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "TL_MF"
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "symbol",
+                              "value": "MFLOY"
+                            }
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "*"
+                      ]
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "RETARPRIM"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_RETARD"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_DEFAUT"
+                    }
+                  ],
+                  "operators": [
+                    "+",
+                    "+",
+                    "+"
+                  ]
+                }
+              ]
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "TL_CHR",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif",
+                      "parameters": [
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "product_expression",
+                              "operands": [
+                                {
+                                  "type": "symbol",
+                                  "value": "TL_MF"
+                                },
+                                {
+                                  "type": "function_call",
+                                  "name": "positif",
+                                  "parameters": [
+                                    {
+                                      "type": "sum_expression",
+                                      "operands": [
+                                        {
+                                          "type": "symbol",
+                                          "value": "MFIR"
+                                        },
+                                        {
+                                          "type": "symbol",
+                                          "value": "MFPCAP"
+                                        }
+                                      ],
+                                      "operators": [
+                                        "+"
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ],
+                              "operators": [
+                                "*"
+                              ]
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "RETARPRIM"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "FLAG_RETARD"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "FLAG_DEFAUT"
+                            }
+                          ],
+                          "operators": [
+                            "+",
+                            "+",
+                            "+"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "product_expression",
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "TL_MF"
+                            },
+                            {
+                              "type": "function_call",
+                              "name": "positif",
+                              "parameters": [
+                                {
+                                  "type": "sum_expression",
+                                  "operands": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "MFIR"
+                                    },
+                                    {
+                                      "type": "symbol",
+                                      "value": "MFPCAP"
+                                    }
+                                  ],
+                                  "operators": [
+                                    "+"
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "operators": [
+                            "*"
+                          ]
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "sum_expression",
+                              "operands": [
+                                {
+                                  "type": "product_expression",
+                                  "operands": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "NUM_CHR_TL"
+                                    },
+                                    {
+                                      "type": "symbol",
+                                      "value": "DEN_CHR_TL"
+                                    }
+                                  ],
+                                  "operators": [
+                                    "/"
+                                  ]
+                                },
+                                {
+                                  "type": "float",
+                                  "value": 0.05
+                                }
+                              ],
+                              "operators": [
+                                "-"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "+"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            },
+            {
+              "type": "function_call",
+              "name": "positif",
+              "parameters": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "product_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "TL_MF"
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "sum_expression",
+                              "operands": [
+                                {
+                                  "type": "symbol",
+                                  "value": "MFIR"
+                                },
+                                {
+                                  "type": "symbol",
+                                  "value": "MFPCAP"
+                                }
+                              ],
+                              "operators": [
+                                "+"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "integer",
+                              "value": 1
+                            },
+                            {
+                              "type": "function_call",
+                              "name": "null",
+                              "parameters": [
+                                {
+                                  "type": "symbol",
+                                  "value": "MFCHR7"
+                                }
+                              ]
+                            }
+                          ],
+                          "operators": [
+                            "-"
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "*",
+                        "*"
+                      ]
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "RETARPRIM"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_RETARD"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_DEFAUT"
+                    }
+                  ],
+                  "operators": [
+                    "+",
+                    "+",
+                    "+"
+                  ]
+                }
+              ]
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "TL_CVN",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif",
+                      "parameters": [
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "product_expression",
+                              "operands": [
+                                {
+                                  "type": "symbol",
+                                  "value": "TL_MF"
+                                },
+                                {
+                                  "type": "function_call",
+                                  "name": "positif",
+                                  "parameters": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "MFCVN"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "operators": [
+                                "*"
+                              ]
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "RETARPRIM"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "FLAG_RETARD"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "FLAG_DEFAUT"
+                            }
+                          ],
+                          "operators": [
+                            "+",
+                            "+",
+                            "+"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "product_expression",
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "TL_MF"
+                            },
+                            {
+                              "type": "function_call",
+                              "name": "positif",
+                              "parameters": [
+                                {
+                                  "type": "symbol",
+                                  "value": "MFCVN"
+                                }
+                              ]
+                            }
+                          ],
+                          "operators": [
+                            "*"
+                          ]
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "sum_expression",
+                              "operands": [
+                                {
+                                  "type": "product_expression",
+                                  "operands": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "NUM_CVN_TL"
+                                    },
+                                    {
+                                      "type": "symbol",
+                                      "value": "DEN_CVN_TL"
+                                    }
+                                  ],
+                                  "operators": [
+                                    "/"
+                                  ]
+                                },
+                                {
+                                  "type": "float",
+                                  "value": 0.05
+                                }
+                              ],
+                              "operators": [
+                                "-"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "+"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            },
+            {
+              "type": "function_call",
+              "name": "positif",
+              "parameters": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "product_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "TL_MF"
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "symbol",
+                              "value": "MFCVN"
+                            }
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "*"
+                      ]
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "RETARPRIM"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_RETARD"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_DEFAUT"
+                    }
+                  ],
+                  "operators": [
+                    "+",
+                    "+",
+                    "+"
+                  ]
+                }
+              ]
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "TL_CDIS",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif",
+                      "parameters": [
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "product_expression",
+                              "operands": [
+                                {
+                                  "type": "symbol",
+                                  "value": "TL_MF"
+                                },
+                                {
+                                  "type": "function_call",
+                                  "name": "positif",
+                                  "parameters": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "MFCDIS"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "operators": [
+                                "*"
+                              ]
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "RETARPRIM"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "FLAG_RETARD"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "FLAG_DEFAUT"
+                            }
+                          ],
+                          "operators": [
+                            "+",
+                            "+",
+                            "+"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "product_expression",
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "TL_MF"
+                            },
+                            {
+                              "type": "function_call",
+                              "name": "positif",
+                              "parameters": [
+                                {
+                                  "type": "symbol",
+                                  "value": "MFCDIS"
+                                }
+                              ]
+                            }
+                          ],
+                          "operators": [
+                            "*"
+                          ]
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "sum_expression",
+                              "operands": [
+                                {
+                                  "type": "product_expression",
+                                  "operands": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "NUM_CDIS_TL"
+                                    },
+                                    {
+                                      "type": "symbol",
+                                      "value": "DEN_CDIS_TL"
+                                    }
+                                  ],
+                                  "operators": [
+                                    "/"
+                                  ]
+                                },
+                                {
+                                  "type": "float",
+                                  "value": 0.05
+                                }
+                              ],
+                              "operators": [
+                                "-"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "+"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            },
+            {
+              "type": "function_call",
+              "name": "positif",
+              "parameters": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "product_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "TL_MF"
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "symbol",
+                              "value": "MFCDIS"
+                            }
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "*"
+                      ]
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "RETARPRIM"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_RETARD"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_DEFAUT"
+                    }
+                  ],
+                  "operators": [
+                    "+",
+                    "+",
+                    "+"
+                  ]
+                }
+              ]
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "TL_GLO",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif",
+                      "parameters": [
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "product_expression",
+                              "operands": [
+                                {
+                                  "type": "symbol",
+                                  "value": "TL_MF"
+                                },
+                                {
+                                  "type": "function_call",
+                                  "name": "positif",
+                                  "parameters": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "MFGLO"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "operators": [
+                                "*"
+                              ]
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "RETARPRIM"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "FLAG_RETARD"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "FLAG_DEFAUT"
+                            }
+                          ],
+                          "operators": [
+                            "+",
+                            "+",
+                            "+"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "product_expression",
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "TL_MF"
+                            },
+                            {
+                              "type": "function_call",
+                              "name": "positif",
+                              "parameters": [
+                                {
+                                  "type": "symbol",
+                                  "value": "MFGLO"
+                                }
+                              ]
+                            }
+                          ],
+                          "operators": [
+                            "*"
+                          ]
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "sum_expression",
+                              "operands": [
+                                {
+                                  "type": "product_expression",
+                                  "operands": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "NUM_GLO_TL"
+                                    },
+                                    {
+                                      "type": "symbol",
+                                      "value": "DEN_GLO_TL"
+                                    }
+                                  ],
+                                  "operators": [
+                                    "/"
+                                  ]
+                                },
+                                {
+                                  "type": "float",
+                                  "value": 0.05
+                                }
+                              ],
+                              "operators": [
+                                "-"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "+"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            },
+            {
+              "type": "function_call",
+              "name": "positif",
+              "parameters": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "product_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "TL_MF"
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "symbol",
+                              "value": "MFGLO"
+                            }
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "*"
+                      ]
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "RETARPRIM"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_RETARD"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_DEFAUT"
+                    }
+                  ],
+                  "operators": [
+                    "+",
+                    "+",
+                    "+"
+                  ]
+                }
+              ]
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "TL_RSE1",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif",
+                      "parameters": [
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "product_expression",
+                              "operands": [
+                                {
+                                  "type": "symbol",
+                                  "value": "TL_MF"
+                                },
+                                {
+                                  "type": "function_call",
+                                  "name": "positif",
+                                  "parameters": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "MFRSE1"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "operators": [
+                                "*"
+                              ]
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "RETARPRIM"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "FLAG_RETARD"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "FLAG_DEFAUT"
+                            }
+                          ],
+                          "operators": [
+                            "+",
+                            "+",
+                            "+"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "product_expression",
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "TL_MF"
+                            },
+                            {
+                              "type": "function_call",
+                              "name": "positif",
+                              "parameters": [
+                                {
+                                  "type": "symbol",
+                                  "value": "MFRSE1"
+                                }
+                              ]
+                            }
+                          ],
+                          "operators": [
+                            "*"
+                          ]
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "sum_expression",
+                              "operands": [
+                                {
+                                  "type": "product_expression",
+                                  "operands": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "NUM_RSE1_TL"
+                                    },
+                                    {
+                                      "type": "symbol",
+                                      "value": "DEN_RSE1_TL"
+                                    }
+                                  ],
+                                  "operators": [
+                                    "/"
+                                  ]
+                                },
+                                {
+                                  "type": "float",
+                                  "value": 0.05
+                                }
+                              ],
+                              "operators": [
+                                "-"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "+"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            },
+            {
+              "type": "function_call",
+              "name": "positif",
+              "parameters": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "product_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "TL_MF"
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "symbol",
+                              "value": "MFRSE1"
+                            }
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "*"
+                      ]
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "RETARPRIM"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_RETARD"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_DEFAUT"
+                    }
+                  ],
+                  "operators": [
+                    "+",
+                    "+",
+                    "+"
+                  ]
+                }
+              ]
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "TL_RSE2",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif",
+                      "parameters": [
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "product_expression",
+                              "operands": [
+                                {
+                                  "type": "symbol",
+                                  "value": "TL_MF"
+                                },
+                                {
+                                  "type": "function_call",
+                                  "name": "positif",
+                                  "parameters": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "MFRSE2"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "operators": [
+                                "*"
+                              ]
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "RETARPRIM"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "FLAG_RETARD"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "FLAG_DEFAUT"
+                            }
+                          ],
+                          "operators": [
+                            "+",
+                            "+",
+                            "+"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "product_expression",
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "TL_MF"
+                            },
+                            {
+                              "type": "function_call",
+                              "name": "positif",
+                              "parameters": [
+                                {
+                                  "type": "symbol",
+                                  "value": "MFRSE2"
+                                }
+                              ]
+                            }
+                          ],
+                          "operators": [
+                            "*"
+                          ]
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "sum_expression",
+                              "operands": [
+                                {
+                                  "type": "product_expression",
+                                  "operands": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "NUM_RSE2_TL"
+                                    },
+                                    {
+                                      "type": "symbol",
+                                      "value": "DEN_RSE2_TL"
+                                    }
+                                  ],
+                                  "operators": [
+                                    "/"
+                                  ]
+                                },
+                                {
+                                  "type": "float",
+                                  "value": 0.05
+                                }
+                              ],
+                              "operators": [
+                                "-"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "+"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            },
+            {
+              "type": "function_call",
+              "name": "positif",
+              "parameters": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "product_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "TL_MF"
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "symbol",
+                              "value": "MFRSE2"
+                            }
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "*"
+                      ]
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "RETARPRIM"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_RETARD"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_DEFAUT"
+                    }
+                  ],
+                  "operators": [
+                    "+",
+                    "+",
+                    "+"
+                  ]
+                }
+              ]
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "TL_RSE3",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif",
+                      "parameters": [
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "product_expression",
+                              "operands": [
+                                {
+                                  "type": "symbol",
+                                  "value": "TL_MF"
+                                },
+                                {
+                                  "type": "function_call",
+                                  "name": "positif",
+                                  "parameters": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "MFRSE3"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "operators": [
+                                "*"
+                              ]
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "RETARPRIM"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "FLAG_RETARD"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "FLAG_DEFAUT"
+                            }
+                          ],
+                          "operators": [
+                            "+",
+                            "+",
+                            "+"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "product_expression",
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "TL_MF"
+                            },
+                            {
+                              "type": "function_call",
+                              "name": "positif",
+                              "parameters": [
+                                {
+                                  "type": "symbol",
+                                  "value": "MFRSE3"
+                                }
+                              ]
+                            }
+                          ],
+                          "operators": [
+                            "*"
+                          ]
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "sum_expression",
+                              "operands": [
+                                {
+                                  "type": "product_expression",
+                                  "operands": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "NUM_RSE3_TL"
+                                    },
+                                    {
+                                      "type": "symbol",
+                                      "value": "DEN_RSE3_TL"
+                                    }
+                                  ],
+                                  "operators": [
+                                    "/"
+                                  ]
+                                },
+                                {
+                                  "type": "float",
+                                  "value": 0.05
+                                }
+                              ],
+                              "operators": [
+                                "-"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "+"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            },
+            {
+              "type": "function_call",
+              "name": "positif",
+              "parameters": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "product_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "TL_MF"
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "symbol",
+                              "value": "MFRSE3"
+                            }
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "*"
+                      ]
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "RETARPRIM"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_RETARD"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_DEFAUT"
+                    }
+                  ],
+                  "operators": [
+                    "+",
+                    "+",
+                    "+"
+                  ]
+                }
+              ]
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "TL_RSE4",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif",
+                      "parameters": [
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "product_expression",
+                              "operands": [
+                                {
+                                  "type": "symbol",
+                                  "value": "TL_MF"
+                                },
+                                {
+                                  "type": "function_call",
+                                  "name": "positif",
+                                  "parameters": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "MFRSE4"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "operators": [
+                                "*"
+                              ]
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "RETARPRIM"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "FLAG_RETARD"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "FLAG_DEFAUT"
+                            }
+                          ],
+                          "operators": [
+                            "+",
+                            "+",
+                            "+"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "product_expression",
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "TL_MF"
+                            },
+                            {
+                              "type": "function_call",
+                              "name": "positif",
+                              "parameters": [
+                                {
+                                  "type": "symbol",
+                                  "value": "MFRSE4"
+                                }
+                              ]
+                            }
+                          ],
+                          "operators": [
+                            "*"
+                          ]
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "sum_expression",
+                              "operands": [
+                                {
+                                  "type": "product_expression",
+                                  "operands": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "NUM_RSE4_TL"
+                                    },
+                                    {
+                                      "type": "symbol",
+                                      "value": "DEN_RSE4_TL"
+                                    }
+                                  ],
+                                  "operators": [
+                                    "/"
+                                  ]
+                                },
+                                {
+                                  "type": "float",
+                                  "value": 0.05
+                                }
+                              ],
+                              "operators": [
+                                "-"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "+"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            },
+            {
+              "type": "function_call",
+              "name": "positif",
+              "parameters": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "product_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "TL_MF"
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "symbol",
+                              "value": "MFRSE4"
+                            }
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "*"
+                      ]
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "RETARPRIM"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_RETARD"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_DEFAUT"
+                    }
+                  ],
+                  "operators": [
+                    "+",
+                    "+",
+                    "+"
+                  ]
+                }
+              ]
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "TL_RSE5",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif",
+                      "parameters": [
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "product_expression",
+                              "operands": [
+                                {
+                                  "type": "symbol",
+                                  "value": "TL_MF"
+                                },
+                                {
+                                  "type": "function_call",
+                                  "name": "positif",
+                                  "parameters": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "MFRSE5"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "operators": [
+                                "*"
+                              ]
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "RETARPRIM"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "FLAG_RETARD"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "FLAG_DEFAUT"
+                            }
+                          ],
+                          "operators": [
+                            "+",
+                            "+",
+                            "+"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "product_expression",
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "TL_MF"
+                            },
+                            {
+                              "type": "function_call",
+                              "name": "positif",
+                              "parameters": [
+                                {
+                                  "type": "symbol",
+                                  "value": "MFRSE5"
+                                }
+                              ]
+                            }
+                          ],
+                          "operators": [
+                            "*"
+                          ]
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "sum_expression",
+                              "operands": [
+                                {
+                                  "type": "product_expression",
+                                  "operands": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "NUM_RSE5_TL"
+                                    },
+                                    {
+                                      "type": "symbol",
+                                      "value": "DEN_RSE5_TL"
+                                    }
+                                  ],
+                                  "operators": [
+                                    "/"
+                                  ]
+                                },
+                                {
+                                  "type": "float",
+                                  "value": 0.05
+                                }
+                              ],
+                              "operators": [
+                                "-"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "+"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            },
+            {
+              "type": "function_call",
+              "name": "positif",
+              "parameters": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "product_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "TL_MF"
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "symbol",
+                              "value": "MFRSE5"
+                            }
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "*"
+                      ]
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "RETARPRIM"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_RETARD"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_DEFAUT"
+                    }
+                  ],
+                  "operators": [
+                    "+",
+                    "+",
+                    "+"
+                  ]
+                }
+              ]
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "TL_REGV",
+        "expression": {
+          "type": "integer",
+          "value": 1
+        }
+      }
+    ],
+    "linecol": [
+      104,
+      1
+    ]
   }
 ]

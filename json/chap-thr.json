@@ -1,744 +1,1577 @@
 [
   {
-    "type": "comment",
-    "value": "#*************************************************************************************************************************",
-    "linecol": [
-      1,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      2,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#Copyright or © or Copr.[DGFIP][2015]",
-    "linecol": [
-      3,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      4,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#Ce logiciel a été initialement développé par la Direction Générale des ",
-    "linecol": [
-      5,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#Finances Publiques pour permettre le calcul de l'impôt sur le revenu 2015 ",
-    "linecol": [
-      6,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#au titre des revenus perçus en 2014. La présente version a permis la ",
-    "linecol": [
-      7,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#génération du moteur de calcul des chaînes de taxation des rôles d'impôt ",
-    "linecol": [
-      8,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#sur le revenu de ce millésime.",
-    "linecol": [
-      9,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      10,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#Ce logiciel est régi par la licence CeCILL 2.1 soumise au droit français ",
-    "linecol": [
-      11,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#et respectant les principes de diffusion des logiciels libres. Vous pouvez ",
-    "linecol": [
-      12,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#utiliser, modifier et/ou redistribuer ce programme sous les conditions de ",
-    "linecol": [
-      13,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#la licence CeCILL 2.1 telle que diffusée par le CEA, le CNRS et l'INRIA  sur ",
-    "linecol": [
-      14,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#le site \"http://www.cecill.info\".",
-    "linecol": [
-      15,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      16,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#Le fait que vous puissiez accéder à cet en-tête signifie que vous avez pris ",
-    "linecol": [
-      17,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#connaissance de la licence CeCILL 2.1 et que vous en avez accepté les termes.",
-    "linecol": [
-      18,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      19,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#**************************************************************************************************************************",
-    "linecol": [
-      20,
-      1
-    ]
-  },
-  {
-    "application": {
-      "type": "applications_reference",
-      "names": [
-        {
-          "type": "symbol_enumeration",
-          "value": [
+    "type": "regle",
+    "name": "80000",
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "variables": [
+      {
+        "type": "variable_definition",
+        "name": "HRBTRFR1",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
             {
-              "type": "symbol",
-              "name": "iliad",
-              "linecol": [
-                22,
-                15
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "V_BTRFRHR1"
+                },
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif_ou_nul",
+                      "parameters": [
+                        {
+                          "type": "symbol",
+                          "value": "RFRH1"
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
               ]
             },
             {
               "type": "symbol",
-              "name": "batch",
-              "linecol": [
-                22,
-                23
+              "value": "RFRH1"
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "HRBTRFR2",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "V_BTRFRHR2"
+                },
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif_ou_nul",
+                      "parameters": [
+                        {
+                          "type": "symbol",
+                          "value": "RFRH2"
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            },
+            {
+              "type": "symbol",
+              "value": "RFRH2"
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "HRNBTRFR",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "function_call",
+              "name": "positif_ou_nul",
+              "parameters": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "product_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "V_BTRFRHR1"
+                        },
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "integer",
+                              "value": 1
+                            },
+                            {
+                              "type": "function_call",
+                              "name": "positif",
+                              "parameters": [
+                                {
+                                  "type": "symbol",
+                                  "value": "RFRH1"
+                                }
+                              ]
+                            }
+                          ],
+                          "operators": [
+                            "-"
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "*"
+                      ]
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "RFRH1"
+                    }
+                  ],
+                  "operators": [
+                    "+"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "function_call",
+              "name": "positif_ou_nul",
+              "parameters": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "product_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "V_BTRFRHR2"
+                        },
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "integer",
+                              "value": 1
+                            },
+                            {
+                              "type": "function_call",
+                              "name": "positif",
+                              "parameters": [
+                                {
+                                  "type": "symbol",
+                                  "value": "RFRH2"
+                                }
+                              ]
+                            }
+                          ],
+                          "operators": [
+                            "-"
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "*"
+                      ]
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "RFRH2"
+                    }
+                  ],
+                  "operators": [
+                    "+"
+                  ]
+                }
               ]
             }
           ],
-          "linecol": [
-            22,
-            15
+          "operators": [
+            "+"
           ]
         }
-      ],
-      "linecol": [
-        22,
-        1
-      ]
-    },
-    "variables": [
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "V_BTRFRHR1 * (1-positif_ou_nul(RFRH1)) + RFRH1",
-          "linecol": [
-            23,
-            12
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "HRBTRFR1",
-          "linecol": [
-            23,
-            1
-          ]
-        },
-        "linecol": [
-          23,
-          1
-        ]
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "V_BTRFRHR2 * (1-positif_ou_nul(RFRH2)) + RFRH2",
-          "linecol": [
-            24,
-            12
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "HRBTRFR2",
-          "linecol": [
-            24,
-            1
+        "name": "HRMOYBTRFR",
+        "expression": {
+          "type": "function_call",
+          "name": "arr",
+          "parameters": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "HRBTRFR1"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "HRBTRFR2"
+                    }
+                  ],
+                  "operators": [
+                    "+"
+                  ]
+                },
+                {
+                  "type": "integer",
+                  "value": 2
+                }
+              ],
+              "operators": [
+                "/"
+              ]
+            }
           ]
-        },
-        "linecol": [
-          24,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "positif_ou_nul(V_BTRFRHR1 * (1-positif(RFRH1)) + RFRH1) + positif_ou_nul(V_BTRFRHR2 * (1-positif(RFRH2)) + RFRH2)",
-          "linecol": [
-            25,
-            12
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "HRNBTRFR",
-          "linecol": [
-            25,
-            1
+        "name": "HRLIM15",
+        "expression": {
+          "type": "function_call",
+          "name": "positif_ou_nul",
+          "parameters": [
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "REVKIREHR"
+                },
+                {
+                  "type": "product_expression",
+                  "operands": [
+                    {
+                      "type": "float",
+                      "value": 1.5
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "HRMOYBTRFR"
+                    }
+                  ],
+                  "operators": [
+                    "*"
+                  ]
+                }
+              ],
+              "operators": [
+                "-"
+              ]
+            }
           ]
-        },
-        "linecol": [
-          25,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "arr((HRBTRFR1 + HRBTRFR2) /2)",
-          "linecol": [
-            26,
-            14
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "HRMOYBTRFR",
-          "linecol": [
-            26,
-            1
+        "name": "HRLIMBTRFR2",
+        "expression": {
+          "type": "function_call",
+          "name": "positif_ou_nul",
+          "parameters": [
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "product_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "LIMHR1"
+                    },
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "integer",
+                          "value": 1
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "BOOL_0AM"
+                        }
+                      ],
+                      "operators": [
+                        "+"
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "*"
+                  ]
+                },
+                {
+                  "type": "symbol",
+                  "value": "HRBTRFR2"
+                }
+              ],
+              "operators": [
+                "-"
+              ]
+            }
           ]
-        },
-        "linecol": [
-          26,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "positif_ou_nul(REVKIREHR - (1.5 * HRMOYBTRFR))",
-          "linecol": [
-            27,
-            11
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "HRLIM15",
-          "linecol": [
-            27,
-            1
+        "name": "HRLIMBTRFR1",
+        "expression": {
+          "type": "function_call",
+          "name": "positif_ou_nul",
+          "parameters": [
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "product_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "LIMHR1"
+                    },
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "integer",
+                          "value": 1
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "BOOL_0AM"
+                        }
+                      ],
+                      "operators": [
+                        "+"
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "*"
+                  ]
+                },
+                {
+                  "type": "symbol",
+                  "value": "HRBTRFR1"
+                }
+              ],
+              "operators": [
+                "-"
+              ]
+            }
           ]
-        },
-        "linecol": [
-          27,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "positif_ou_nul(LIMHR1 * (1+BOOL_0AM) - HRBTRFR2)",
-          "linecol": [
-            28,
-            15
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "HRLIMBTRFR2",
-          "linecol": [
-            28,
-            1
+        "name": "HRCONDTHEO",
+        "expression": {
+          "type": "function_call",
+          "name": "positif",
+          "parameters": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "function_call",
+                  "name": "null",
+                  "parameters": [
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "integer",
+                          "value": 2
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "HRNBTRFR"
+                        }
+                      ],
+                      "operators": [
+                        "-"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "symbol",
+                      "value": "HRLIM15"
+                    }
+                  ]
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "product_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "HRLIMBTRFR1"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "HRLIMBTRFR2"
+                        }
+                      ],
+                      "operators": [
+                        "*"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif",
+                      "parameters": [
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "CASECHR"
+                            },
+                            {
+                              "type": "integer",
+                              "value": 0
+                            }
+                          ],
+                          "operators": [
+                            "+"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                }
+              ],
+              "operators": [
+                "*",
+                "*",
+                "*"
+              ]
+            }
           ]
-        },
-        "linecol": [
-          28,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "positif_ou_nul(LIMHR1 * (1+BOOL_0AM) - HRBTRFR1)",
-          "linecol": [
-            29,
-            15
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "HRLIMBTRFR1",
-          "linecol": [
-            29,
-            1
+        "name": "HRBASEFRAC",
+        "expression": {
+          "type": "function_call",
+          "name": "arr",
+          "parameters": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "REVKIREHR"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "HRMOYBTRFR"
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                },
+                {
+                  "type": "integer",
+                  "value": 2
+                }
+              ],
+              "operators": [
+                "/"
+              ]
+            }
           ]
-        },
-        "linecol": [
-          29,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "positif(null(2-HRNBTRFR)*positif(HRLIM15)*positif(HRLIMBTRFR1*HRLIMBTRFR2)* (1-positif(CASECHR+0)))",
-          "linecol": [
-            30,
-            14
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "HRCONDTHEO",
-          "linecol": [
-            30,
-            1
+        "name": "HRBASELISSE",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "HRBASEFRAC"
+            },
+            {
+              "type": "symbol",
+              "value": "HRMOYBTRFR"
+            }
+          ],
+          "operators": [
+            "+"
           ]
-        },
-        "linecol": [
-          30,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "arr((REVKIREHR - HRMOYBTRFR) / 2)",
-          "linecol": [
-            31,
-            14
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "HRBASEFRAC",
-          "linecol": [
-            31,
-            1
+        "name": "CHRREEL1",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "function_call",
+                  "name": "positif_ou_nul",
+                  "parameters": [
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "product_expression",
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "LIMHRTX1"
+                            },
+                            {
+                              "type": "sum_expression",
+                              "operands": [
+                                {
+                                  "type": "integer",
+                                  "value": 1
+                                },
+                                {
+                                  "type": "symbol",
+                                  "value": "BOOL_0AM"
+                                }
+                              ],
+                              "operators": [
+                                "+"
+                              ]
+                            }
+                          ],
+                          "operators": [
+                            "*"
+                          ]
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "REVKIREHR"
+                        }
+                      ],
+                      "operators": [
+                        "-"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "product_expression",
+                  "operands": [
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "REVKIREHR"
+                        },
+                        {
+                          "type": "product_expression",
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "LIMHR1"
+                            },
+                            {
+                              "type": "sum_expression",
+                              "operands": [
+                                {
+                                  "type": "integer",
+                                  "value": 1
+                                },
+                                {
+                                  "type": "symbol",
+                                  "value": "BOOL_0AM"
+                                }
+                              ],
+                              "operators": [
+                                "+"
+                              ]
+                            }
+                          ],
+                          "operators": [
+                            "*"
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "-"
+                      ]
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "TXHR1"
+                    },
+                    {
+                      "type": "integer",
+                      "value": 100
+                    }
+                  ],
+                  "operators": [
+                    "*",
+                    "/"
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            },
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "product_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "LIMHR1"
+                    },
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "integer",
+                          "value": 1
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "BOOL_0AM"
+                        }
+                      ],
+                      "operators": [
+                        "+"
+                      ]
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "TXHR1"
+                    },
+                    {
+                      "type": "integer",
+                      "value": 100
+                    }
+                  ],
+                  "operators": [
+                    "*",
+                    "*",
+                    "/"
+                  ]
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "REVKIREHR"
+                        },
+                        {
+                          "type": "product_expression",
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "LIMHRTX1"
+                            },
+                            {
+                              "type": "sum_expression",
+                              "operands": [
+                                {
+                                  "type": "integer",
+                                  "value": 1
+                                },
+                                {
+                                  "type": "symbol",
+                                  "value": "BOOL_0AM"
+                                }
+                              ],
+                              "operators": [
+                                "+"
+                              ]
+                            }
+                          ],
+                          "operators": [
+                            "*"
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "-"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            }
+          ],
+          "operators": [
+            "+"
           ]
-        },
-        "linecol": [
-          31,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "HRBASEFRAC + HRMOYBTRFR",
-          "linecol": [
-            32,
-            15
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "HRBASELISSE",
-          "linecol": [
-            32,
-            1
+        "name": "CHRREEL2",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "REVKIREHR"
+                    },
+                    {
+                      "type": "product_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "LIMHR2"
+                        },
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "integer",
+                              "value": 1
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "BOOL_0AM"
+                            }
+                          ],
+                          "operators": [
+                            "+"
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "*"
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                },
+                {
+                  "type": "symbol",
+                  "value": "TXHR2"
+                },
+                {
+                  "type": "integer",
+                  "value": 100
+                }
+              ],
+              "operators": [
+                "*",
+                "/"
+              ]
+            }
           ]
-        },
-        "linecol": [
-          32,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "positif_ou_nul(LIMHRTX1 * (1+BOOL_0AM)-REVKIREHR) * ((REVKIREHR - LIMHR1 * (1+BOOL_0AM))*TXHR1/100) + (LIMHR1 * (1+BOOL_0AM) * TXHR1/100) * positif(REVKIREHR - LIMHRTX1 * (1+BOOL_0AM))",
-          "linecol": [
-            33,
-            12
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "CHRREEL1",
-          "linecol": [
-            33,
-            1
+        "name": "CHRREELTOT",
+        "expression": {
+          "type": "function_call",
+          "name": "arr",
+          "parameters": [
+            {
+              "type": "function_call",
+              "name": "max",
+              "parameters": [
+                {
+                  "type": "integer",
+                  "value": 0
+                },
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "CHRREEL1"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "CHRREEL2"
+                    }
+                  ],
+                  "operators": [
+                    "+"
+                  ]
+                }
+              ]
+            }
           ]
-        },
-        "linecol": [
-          33,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0,(REVKIREHR - LIMHR2*(1+BOOL_0AM))*TXHR2/100)",
-          "linecol": [
-            35,
-            12
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "CHRREEL2",
-          "linecol": [
-            35,
-            1
+        "name": "CHRTHEO11",
+        "expression": {
+          "type": "function_call",
+          "name": "arr",
+          "parameters": [
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "product_expression",
+                  "operands": [
+                    {
+                      "type": "function_call",
+                      "name": "positif_ou_nul",
+                      "parameters": [
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "product_expression",
+                              "operands": [
+                                {
+                                  "type": "symbol",
+                                  "value": "LIMHRTX1"
+                                },
+                                {
+                                  "type": "sum_expression",
+                                  "operands": [
+                                    {
+                                      "type": "integer",
+                                      "value": 1
+                                    },
+                                    {
+                                      "type": "symbol",
+                                      "value": "BOOL_0AM"
+                                    }
+                                  ],
+                                  "operators": [
+                                    "+"
+                                  ]
+                                }
+                              ],
+                              "operators": [
+                                "*"
+                              ]
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "HRBASELISSE"
+                            }
+                          ],
+                          "operators": [
+                            "-"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "product_expression",
+                      "operands": [
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "HRBASELISSE"
+                            },
+                            {
+                              "type": "product_expression",
+                              "operands": [
+                                {
+                                  "type": "symbol",
+                                  "value": "LIMHR1"
+                                },
+                                {
+                                  "type": "sum_expression",
+                                  "operands": [
+                                    {
+                                      "type": "integer",
+                                      "value": 1
+                                    },
+                                    {
+                                      "type": "symbol",
+                                      "value": "BOOL_0AM"
+                                    }
+                                  ],
+                                  "operators": [
+                                    "+"
+                                  ]
+                                }
+                              ],
+                              "operators": [
+                                "*"
+                              ]
+                            }
+                          ],
+                          "operators": [
+                            "-"
+                          ]
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "TXHR1"
+                        },
+                        {
+                          "type": "integer",
+                          "value": 100
+                        }
+                      ],
+                      "operators": [
+                        "*",
+                        "/"
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "*"
+                  ]
+                },
+                {
+                  "type": "product_expression",
+                  "operands": [
+                    {
+                      "type": "product_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "LIMHR1"
+                        },
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "integer",
+                              "value": 1
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "BOOL_0AM"
+                            }
+                          ],
+                          "operators": [
+                            "+"
+                          ]
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "TXHR1"
+                        },
+                        {
+                          "type": "integer",
+                          "value": 100
+                        }
+                      ],
+                      "operators": [
+                        "*",
+                        "*",
+                        "/"
+                      ]
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif",
+                      "parameters": [
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "HRBASELISSE"
+                            },
+                            {
+                              "type": "product_expression",
+                              "operands": [
+                                {
+                                  "type": "symbol",
+                                  "value": "LIMHRTX1"
+                                },
+                                {
+                                  "type": "sum_expression",
+                                  "operands": [
+                                    {
+                                      "type": "integer",
+                                      "value": 1
+                                    },
+                                    {
+                                      "type": "symbol",
+                                      "value": "BOOL_0AM"
+                                    }
+                                  ],
+                                  "operators": [
+                                    "+"
+                                  ]
+                                }
+                              ],
+                              "operators": [
+                                "*"
+                              ]
+                            }
+                          ],
+                          "operators": [
+                            "-"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "*"
+                  ]
+                }
+              ],
+              "operators": [
+                "+"
+              ]
+            }
           ]
-        },
-        "linecol": [
-          35,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "arr(max(0,CHRREEL1 + CHRREEL2))",
-          "linecol": [
-            36,
-            14
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "CHRREELTOT",
-          "linecol": [
-            36,
-            1
+        "name": "CHRTHEO21",
+        "expression": {
+          "type": "function_call",
+          "name": "arr",
+          "parameters": [
+            {
+              "type": "function_call",
+              "name": "max",
+              "parameters": [
+                {
+                  "type": "integer",
+                  "value": 0
+                },
+                {
+                  "type": "product_expression",
+                  "operands": [
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "HRBASELISSE"
+                        },
+                        {
+                          "type": "product_expression",
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "LIMHR2"
+                            },
+                            {
+                              "type": "sum_expression",
+                              "operands": [
+                                {
+                                  "type": "integer",
+                                  "value": 1
+                                },
+                                {
+                                  "type": "symbol",
+                                  "value": "BOOL_0AM"
+                                }
+                              ],
+                              "operators": [
+                                "+"
+                              ]
+                            }
+                          ],
+                          "operators": [
+                            "*"
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "-"
+                      ]
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "TXHR2"
+                    },
+                    {
+                      "type": "integer",
+                      "value": 100
+                    }
+                  ],
+                  "operators": [
+                    "*",
+                    "/"
+                  ]
+                }
+              ]
+            }
           ]
-        },
-        "linecol": [
-          36,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "arr(positif_ou_nul(LIMHRTX1 * (1+BOOL_0AM)-HRBASELISSE) * ((HRBASELISSE - LIMHR1 * (1+BOOL_0AM))*TXHR1/100) + (LIMHR1 * (1+BOOL_0AM) * TXHR1/100)* positif(HRBASELISSE - LIMHRTX1 * (1+BOOL_0AM)))",
-          "linecol": [
-            37,
-            13
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "CHRTHEO11",
-          "linecol": [
-            37,
-            1
+        "name": "CHRTHEOTOT",
+        "expression": {
+          "type": "function_call",
+          "name": "arr",
+          "parameters": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "function_call",
+                  "name": "max",
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "value": 0
+                    },
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "CHRTHEO11"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "CHRTHEO21"
+                        }
+                      ],
+                      "operators": [
+                        "+"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "integer",
+                  "value": 2
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            }
           ]
-        },
-        "linecol": [
-          37,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "arr(max(0,(HRBASELISSE - LIMHR2*(1+BOOL_0AM))*TXHR2/100))",
-          "linecol": [
-            39,
-            13
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "CHRTHEO21",
-          "linecol": [
-            39,
-            1
+        "name": "BHAUTREV",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "REVKIREHR"
+                },
+                {
+                  "type": "product_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "LIMHR1"
+                    },
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "integer",
+                          "value": 1
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "BOOL_0AM"
+                        }
+                      ],
+                      "operators": [
+                        "+"
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "*"
+                  ]
+                }
+              ],
+              "operators": [
+                "-"
+              ]
+            }
           ]
-        },
-        "linecol": [
-          39,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "arr(max(0,CHRTHEO11 + CHRTHEO21)*2)",
-          "linecol": [
-            40,
-            14
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "CHRTHEOTOT",
-          "linecol": [
-            40,
-            1
+        "name": "CHRAVANT",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "function_call",
+                  "name": "max",
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "value": 0
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "min",
+                      "parameters": [
+                        {
+                          "type": "symbol",
+                          "value": "CHRREELTOT"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "CHRTHEOTOT"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "symbol",
+                  "value": "HRCONDTHEO"
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            },
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "CHRREELTOT"
+                },
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "HRCONDTHEO"
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            }
+          ],
+          "operators": [
+            "+"
           ]
-        },
-        "linecol": [
-          40,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0 , REVKIREHR - LIMHR1 * (1 + BOOL_0AM))",
-          "linecol": [
-            41,
-            12
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "BHAUTREV",
-          "linecol": [
-            41,
-            1
+        "name": "CHRTEFF",
+        "expression": {
+          "type": "function_call",
+          "name": "arr",
+          "parameters": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "CHRAVANT"
+                },
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "REVKIREHR"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "TEFFHRC"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "COD8YJ"
+                    }
+                  ],
+                  "operators": [
+                    "-",
+                    "+"
+                  ]
+                },
+                {
+                  "type": "symbol",
+                  "value": "REVKIREHR"
+                }
+              ],
+              "operators": [
+                "*",
+                "/"
+              ]
+            }
           ]
-        },
-        "linecol": [
-          41,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "(max(0,min(CHRREELTOT,CHRTHEOTOT)) * HRCONDTHEO + CHRREELTOT * (1-HRCONDTHEO) )",
-          "linecol": [
-            42,
-            12
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "CHRAVANT",
-          "linecol": [
-            42,
-            1
-          ]
-        },
-        "linecol": [
-          42,
-          1
-        ]
-      },
-      {
+        "name": "CHRAPRES",
         "expression": {
-          "type": "variable_definition_expression",
-          "value": "arr(CHRAVANT * (REVKIREHR - TEFFHRC+COD8YJ)/ REVKIREHR)",
-          "linecol": [
-            44,
-            11
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "CHRAVANT"
+                },
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif",
+                      "parameters": [
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "function_call",
+                              "name": "positif",
+                              "parameters": [
+                                {
+                                  "type": "symbol",
+                                  "value": "IPMOND"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "function_call",
+                              "name": "positif",
+                              "parameters": [
+                                {
+                                  "type": "symbol",
+                                  "value": "INDTEFF"
+                                }
+                              ]
+                            }
+                          ],
+                          "operators": [
+                            "+"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            },
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "CHRTEFF"
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "symbol",
+                              "value": "IPMOND"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "symbol",
+                              "value": "INDTEFF"
+                            }
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "+"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            }
+          ],
+          "operators": [
+            "+"
           ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "CHRTEFF",
-          "linecol": [
-            44,
-            1
-          ]
-        },
-        "linecol": [
-          44,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "CHRAVANT * (1-positif(positif(IPMOND)+positif(INDTEFF))) + CHRTEFF * positif(positif(IPMOND)+positif(INDTEFF))",
-          "linecol": [
-            45,
-            12
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "CHRAPRES",
-          "linecol": [
-            45,
-            1
-          ]
-        },
-        "linecol": [
-          45,
-          1
-        ]
+        }
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "symbol",
-      "name": "80000",
-      "linecol": [
-        21,
-        7
-      ]
-    },
     "linecol": [
       21,
       1
     ]
   },
   {
-    "application": {
-      "type": "applications_reference",
-      "names": [
-        {
-          "type": "symbol_enumeration",
-          "value": [
-            {
-              "type": "symbol",
-              "name": "iliad",
-              "linecol": [
-                47,
-                15
-              ]
-            },
-            {
-              "type": "symbol",
-              "name": "batch",
-              "linecol": [
-                47,
-                23
-              ]
-            }
-          ],
-          "linecol": [
-            47,
-            15
-          ]
-        }
-      ],
-      "linecol": [
-        47,
-        1
-      ]
-    },
+    "type": "regle",
+    "name": "80005",
+    "applications": [
+      "iliad",
+      "batch"
+    ],
     "variables": [
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0,CHRAPRES - CICHR)",
-          "linecol": [
-            48,
-            13
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "IHAUTREVT",
-          "linecol": [
-            48,
-            1
+        "name": "IHAUTREVT",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "CHRAPRES"
+                },
+                {
+                  "type": "symbol",
+                  "value": "CICHR"
+                }
+              ],
+              "operators": [
+                "-"
+              ]
+            }
           ]
-        },
-        "linecol": [
-          48,
-          1
-        ]
+        }
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "symbol",
-      "name": "80005",
-      "linecol": [
-        46,
-        7
-      ]
-    },
     "linecol": [
       46,
       1

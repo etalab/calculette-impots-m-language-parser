@@ -1,1794 +1,1367 @@
 [
   {
-    "type": "comment",
-    "value": "#*************************************************************************************************************************",
-    "linecol": [
-      1,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      2,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#Copyright or © or Copr.[DGFIP][2015]",
-    "linecol": [
-      3,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      4,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#Ce logiciel a été initialement développé par la Direction Générale des ",
-    "linecol": [
-      5,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#Finances Publiques pour permettre le calcul de l'impôt sur le revenu 2015 ",
-    "linecol": [
-      6,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#au titre des revenus perçus en 2014. La présente version a permis la ",
-    "linecol": [
-      7,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#génération du moteur de calcul des chaînes de taxation des rôles d'impôt ",
-    "linecol": [
-      8,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#sur le revenu de ce millésime.",
-    "linecol": [
-      9,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      10,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#Ce logiciel est régi par la licence CeCILL 2.1 soumise au droit français ",
-    "linecol": [
-      11,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#et respectant les principes de diffusion des logiciels libres. Vous pouvez ",
-    "linecol": [
-      12,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#utiliser, modifier et/ou redistribuer ce programme sous les conditions de ",
-    "linecol": [
-      13,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#la licence CeCILL 2.1 telle que diffusée par le CEA, le CNRS et l'INRIA  sur ",
-    "linecol": [
-      14,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#le site \"http://www.cecill.info\".",
-    "linecol": [
-      15,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      16,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#Le fait que vous puissiez accéder à cet en-tête signifie que vous avez pris ",
-    "linecol": [
-      17,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#connaissance de la licence CeCILL 2.1 et que vous en avez accepté les termes.",
-    "linecol": [
-      18,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      19,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#**************************************************************************************************************************",
-    "linecol": [
-      20,
-      1
-    ]
-  },
-  {
-    "name": {
-      "type": "symbol",
-      "name": "1202",
-      "linecol": [
-        21,
-        31
-      ]
-    },
+    "type": "regle",
+    "name": "1202",
+    "applications": [
+      "iliad"
+    ],
+    "tags": [
+      {
+        "type": "symbol",
+        "value": "corrective"
+      },
+      {
+        "type": "symbol",
+        "value": "base_tl_init"
+      }
+    ],
+    "variables": [
+      {
+        "type": "variable_definition",
+        "name": "TL_MF",
+        "expression": {
+          "type": "symbol",
+          "value": "IND_TL_MF"
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "RNI_INIT",
+        "expression": {
+          "type": "product_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "RNI"
+            },
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "integer",
+                  "value": 1
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "symbol",
+                      "value": "TEFFP"
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "-"
+              ]
+            },
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "integer",
+                  "value": 1
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "IPTEFN"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "RMOND"
+                        }
+                      ],
+                      "operators": [
+                        "+"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "-"
+              ]
+            }
+          ],
+          "operators": [
+            "*",
+            "*"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "EFF_INIT",
+        "expression": {
+          "type": "symbol",
+          "value": "TEFFP"
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "PVQ_INIT",
+        "expression": {
+          "type": "symbol",
+          "value": "TTPVQ"
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "PV_INIT",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "BPTP3"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP2"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP4"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP40"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP18"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTPD"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTPG"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP19"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP24"
+            }
+          ],
+          "operators": [
+            "+",
+            "+",
+            "+",
+            "+",
+            "+",
+            "+",
+            "+",
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "RI_INIT",
+        "expression": {
+          "type": "product_expression",
+          "operands": [
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "REDTL"
+                },
+                {
+                  "type": "symbol",
+                  "value": "CIMPTL"
+                }
+              ],
+              "operators": [
+                "+"
+              ]
+            },
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "integer",
+                  "value": 1
+                },
+                {
+                  "type": "symbol",
+                  "value": "V_CNR"
+                }
+              ],
+              "operators": [
+                "-"
+              ]
+            }
+          ],
+          "operators": [
+            "*"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "CRDS_INIT",
+        "expression": {
+          "type": "symbol",
+          "value": "BCSG"
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "BRDS_INIT",
+        "expression": {
+          "type": "symbol",
+          "value": "BRDS"
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "BPRS_INIT",
+        "expression": {
+          "type": "symbol",
+          "value": "BPRS"
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "TAXAGA_INIT",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "BASSURV"
+            },
+            {
+              "type": "symbol",
+              "value": "BASSURC"
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "PCAP_INIT",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "BPCAPTAXV"
+            },
+            {
+              "type": "symbol",
+              "value": "BPCAPTAXC"
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "LOY_INIT",
+        "expression": {
+          "type": "symbol",
+          "value": "LOYELEV"
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "CHR_INIT",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "REVKIREHR"
+            },
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "RFRH2"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "RFRH1"
+                    }
+                  ],
+                  "operators": [
+                    "+"
+                  ]
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "symbol",
+                      "value": "HRCONDTHEO"
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "CVN_INIT",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "CVNSALAV"
+            },
+            {
+              "type": "symbol",
+              "value": "CVNSALAC"
+            },
+            {
+              "type": "symbol",
+              "value": "GLDGRATV"
+            },
+            {
+              "type": "symbol",
+              "value": "GLDGRATC"
+            }
+          ],
+          "operators": [
+            "+",
+            "+",
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "CDIS_INIT",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "GSALV"
+            },
+            {
+              "type": "symbol",
+              "value": "GSALC"
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "GLO_INIT",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "GLDGRATV"
+            },
+            {
+              "type": "symbol",
+              "value": "GLDGRATC"
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "RSE1_INIT",
+        "expression": {
+          "type": "symbol",
+          "value": "BRSE1"
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "RSE2_INIT",
+        "expression": {
+          "type": "symbol",
+          "value": "BRSE2"
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "RSE3_INIT",
+        "expression": {
+          "type": "symbol",
+          "value": "BRSE3"
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "RSE4_INIT",
+        "expression": {
+          "type": "symbol",
+          "value": "BRSE4"
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "RSE5_INIT",
+        "expression": {
+          "type": "symbol",
+          "value": "BRSE5"
+        }
+      }
+    ],
     "linecol": [
       21,
       1
-    ],
-    "variables": [
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "IND_TL_MF",
-          "linecol": [
-            25,
-            9
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "TL_MF",
-          "linecol": [
-            25,
-            1
-          ]
-        },
-        "linecol": [
-          25,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "RNI * (1 - positif(TEFFP)) * (1 - positif(IPTEFN + RMOND))",
-          "linecol": [
-            26,
-            12
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RNI_INIT",
-          "linecol": [
-            26,
-            1
-          ]
-        },
-        "linecol": [
-          26,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "TEFFP",
-          "linecol": [
-            27,
-            12
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "EFF_INIT",
-          "linecol": [
-            27,
-            1
-          ]
-        },
-        "linecol": [
-          27,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "TTPVQ",
-          "linecol": [
-            28,
-            12
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "PVQ_INIT",
-          "linecol": [
-            28,
-            1
-          ]
-        },
-        "linecol": [
-          28,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BPTP3 + BPTP2 + BPTP4 + BPTP40 + BPTP18 + BPTPD + BPTPG + BPTP19 + BPTP24",
-          "linecol": [
-            29,
-            12
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "PV_INIT",
-          "linecol": [
-            29,
-            1
-          ]
-        },
-        "linecol": [
-          29,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "(REDTL + CIMPTL) * (1-V_CNR)",
-          "linecol": [
-            30,
-            12
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RI_INIT",
-          "linecol": [
-            30,
-            1
-          ]
-        },
-        "linecol": [
-          30,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BCSG",
-          "linecol": [
-            31,
-            13
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "CRDS_INIT",
-          "linecol": [
-            31,
-            1
-          ]
-        },
-        "linecol": [
-          31,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BRDS",
-          "linecol": [
-            32,
-            13
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "BRDS_INIT",
-          "linecol": [
-            32,
-            1
-          ]
-        },
-        "linecol": [
-          32,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BPRS",
-          "linecol": [
-            33,
-            13
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "BPRS_INIT",
-          "linecol": [
-            33,
-            1
-          ]
-        },
-        "linecol": [
-          33,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BASSURV + BASSURC",
-          "linecol": [
-            34,
-            15
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "TAXAGA_INIT",
-          "linecol": [
-            34,
-            1
-          ]
-        },
-        "linecol": [
-          34,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BPCAPTAXV + BPCAPTAXC",
-          "linecol": [
-            35,
-            13
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "PCAP_INIT",
-          "linecol": [
-            35,
-            1
-          ]
-        },
-        "linecol": [
-          35,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "LOYELEV",
-          "linecol": [
-            36,
-            12
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "LOY_INIT",
-          "linecol": [
-            36,
-            1
-          ]
-        },
-        "linecol": [
-          36,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "REVKIREHR + (RFRH2 + RFRH1) * positif(HRCONDTHEO)",
-          "linecol": [
-            37,
-            13
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "CHR_INIT",
-          "linecol": [
-            37,
-            1
-          ]
-        },
-        "linecol": [
-          37,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "CVNSALAV + CVNSALAC + GLDGRATV + GLDGRATC",
-          "linecol": [
-            38,
-            12
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "CVN_INIT",
-          "linecol": [
-            38,
-            1
-          ]
-        },
-        "linecol": [
-          38,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "GSALV + GSALC",
-          "linecol": [
-            39,
-            13
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "CDIS_INIT",
-          "linecol": [
-            39,
-            1
-          ]
-        },
-        "linecol": [
-          39,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "GLDGRATV + GLDGRATC",
-          "linecol": [
-            40,
-            12
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "GLO_INIT",
-          "linecol": [
-            40,
-            1
-          ]
-        },
-        "linecol": [
-          40,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BRSE1",
-          "linecol": [
-            41,
-            13
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RSE1_INIT",
-          "linecol": [
-            41,
-            1
-          ]
-        },
-        "linecol": [
-          41,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BRSE2",
-          "linecol": [
-            42,
-            13
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RSE2_INIT",
-          "linecol": [
-            42,
-            1
-          ]
-        },
-        "linecol": [
-          42,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BRSE3",
-          "linecol": [
-            43,
-            13
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RSE3_INIT",
-          "linecol": [
-            43,
-            1
-          ]
-        },
-        "linecol": [
-          43,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BRSE4",
-          "linecol": [
-            44,
-            13
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RSE4_INIT",
-          "linecol": [
-            44,
-            1
-          ]
-        },
-        "linecol": [
-          44,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BRSE5",
-          "linecol": [
-            45,
-            13
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RSE5_INIT",
-          "linecol": [
-            45,
-            1
-          ]
-        },
-        "linecol": [
-          45,
-          1
-        ]
-      }
-    ],
-    "application": {
-      "type": "applications_reference",
-      "names": [
-        {
-          "type": "symbol_enumeration",
-          "value": [
-            {
-              "type": "symbol",
-              "name": "iliad",
-              "linecol": [
-                22,
-                16
-              ]
-            }
-          ],
-          "linecol": [
-            22,
-            16
-          ]
-        }
-      ],
-      "linecol": [
-        22,
-        1
-      ]
-    },
-    "type": "regle_declaration",
-    "qualifiers": [
-      {
-        "type": "symbol",
-        "name": "corrective",
-        "linecol": [
-          21,
-          7
-        ]
-      },
-      {
-        "type": "symbol",
-        "name": "base_tl_init",
-        "linecol": [
-          21,
-          18
-        ]
-      }
     ]
   },
   {
-    "name": {
-      "type": "symbol",
-      "name": "1204",
-      "linecol": [
-        47,
-        27
-      ]
-    },
+    "type": "regle",
+    "name": "1204",
+    "applications": [
+      "iliad"
+    ],
+    "tags": [
+      {
+        "type": "symbol",
+        "value": "corrective"
+      },
+      {
+        "type": "symbol",
+        "value": "base_tl"
+      }
+    ],
+    "variables": [
+      {
+        "type": "variable_definition",
+        "name": "RNI_TL",
+        "expression": {
+          "type": "product_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "RNI"
+            },
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "integer",
+                  "value": 1
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "symbol",
+                      "value": "TEFFP"
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "-"
+              ]
+            },
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "integer",
+                  "value": 1
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "IPTEFN"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "RMOND"
+                        }
+                      ],
+                      "operators": [
+                        "+"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "-"
+              ]
+            }
+          ],
+          "operators": [
+            "*",
+            "*"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "EFF_TL",
+        "expression": {
+          "type": "symbol",
+          "value": "TEFFP"
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "PVQ_TL",
+        "expression": {
+          "type": "symbol",
+          "value": "TTPVQ"
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "PV_TL",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "BPTP3"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP2"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP4"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP40"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP18"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTPD"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTPG"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP19"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP24"
+            }
+          ],
+          "operators": [
+            "+",
+            "+",
+            "+",
+            "+",
+            "+",
+            "+",
+            "+",
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "RI_TL",
+        "expression": {
+          "type": "product_expression",
+          "operands": [
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "REDTL"
+                },
+                {
+                  "type": "symbol",
+                  "value": "CIMPTL"
+                }
+              ],
+              "operators": [
+                "+"
+              ]
+            },
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "integer",
+                  "value": 1
+                },
+                {
+                  "type": "symbol",
+                  "value": "V_CNR"
+                }
+              ],
+              "operators": [
+                "-"
+              ]
+            }
+          ],
+          "operators": [
+            "*"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "RDS_TL",
+        "expression": {
+          "type": "symbol",
+          "value": "BCSG"
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "BRDS_TL",
+        "expression": {
+          "type": "symbol",
+          "value": "BRDS"
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "BPRS_TL",
+        "expression": {
+          "type": "symbol",
+          "value": "BPRS"
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "TAXAGA_TL",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "BASSURV"
+            },
+            {
+              "type": "symbol",
+              "value": "BASSURC"
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "PCAP_TL",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "BPCAPTAXV"
+            },
+            {
+              "type": "symbol",
+              "value": "BPCAPTAXC"
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "LOYA_TL",
+        "expression": {
+          "type": "symbol",
+          "value": "LOYELEV"
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "CHR_TL",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "REVKIREHR"
+            },
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "RFRH2"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "RFRH1"
+                    }
+                  ],
+                  "operators": [
+                    "+"
+                  ]
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "symbol",
+                      "value": "HRCONDTHEO"
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "CVNA_TL",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "CVNSALAV"
+            },
+            {
+              "type": "symbol",
+              "value": "CVNSALAC"
+            },
+            {
+              "type": "symbol",
+              "value": "GLDGRATV"
+            },
+            {
+              "type": "symbol",
+              "value": "GLDGRATC"
+            }
+          ],
+          "operators": [
+            "+",
+            "+",
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "CDISA_TL",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "GSALV"
+            },
+            {
+              "type": "symbol",
+              "value": "GSALC"
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "GLOA_TL",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "GLDGRATV"
+            },
+            {
+              "type": "symbol",
+              "value": "GLDGRATC"
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "RSE1A_TL",
+        "expression": {
+          "type": "symbol",
+          "value": "BRSE1"
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "RSE2A_TL",
+        "expression": {
+          "type": "symbol",
+          "value": "BRSE2"
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "RSE3A_TL",
+        "expression": {
+          "type": "symbol",
+          "value": "BRSE3"
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "RSE4A_TL",
+        "expression": {
+          "type": "symbol",
+          "value": "BRSE4"
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "RSE5A_TL",
+        "expression": {
+          "type": "symbol",
+          "value": "BRSE5"
+        }
+      }
+    ],
     "linecol": [
       47,
       1
-    ],
-    "variables": [
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "RNI * (1 - positif(TEFFP)) * (1 - positif(IPTEFN + RMOND))",
-          "linecol": [
-            51,
-            10
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RNI_TL",
-          "linecol": [
-            51,
-            1
-          ]
-        },
-        "linecol": [
-          51,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "TEFFP",
-          "linecol": [
-            52,
-            10
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "EFF_TL",
-          "linecol": [
-            52,
-            1
-          ]
-        },
-        "linecol": [
-          52,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "TTPVQ",
-          "linecol": [
-            53,
-            10
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "PVQ_TL",
-          "linecol": [
-            53,
-            1
-          ]
-        },
-        "linecol": [
-          53,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BPTP3 + BPTP2 + BPTP4 + BPTP40 + BPTP18 + BPTPD + BPTPG + BPTP19 + BPTP24",
-          "linecol": [
-            54,
-            10
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "PV_TL",
-          "linecol": [
-            54,
-            1
-          ]
-        },
-        "linecol": [
-          54,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "(REDTL + CIMPTL) * (1 - V_CNR)",
-          "linecol": [
-            55,
-            10
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RI_TL",
-          "linecol": [
-            55,
-            1
-          ]
-        },
-        "linecol": [
-          55,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BCSG",
-          "linecol": [
-            56,
-            11
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RDS_TL",
-          "linecol": [
-            56,
-            1
-          ]
-        },
-        "linecol": [
-          56,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BRDS",
-          "linecol": [
-            57,
-            11
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "BRDS_TL",
-          "linecol": [
-            57,
-            1
-          ]
-        },
-        "linecol": [
-          57,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BPRS",
-          "linecol": [
-            58,
-            11
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "BPRS_TL",
-          "linecol": [
-            58,
-            1
-          ]
-        },
-        "linecol": [
-          58,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BASSURV + BASSURC",
-          "linecol": [
-            59,
-            13
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "TAXAGA_TL",
-          "linecol": [
-            59,
-            1
-          ]
-        },
-        "linecol": [
-          59,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BPCAPTAXV + BPCAPTAXC",
-          "linecol": [
-            60,
-            11
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "PCAP_TL",
-          "linecol": [
-            60,
-            1
-          ]
-        },
-        "linecol": [
-          60,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "LOYELEV",
-          "linecol": [
-            61,
-            11
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "LOYA_TL",
-          "linecol": [
-            61,
-            1
-          ]
-        },
-        "linecol": [
-          61,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "REVKIREHR + (RFRH2 + RFRH1) * positif(HRCONDTHEO)",
-          "linecol": [
-            62,
-            11
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "CHR_TL",
-          "linecol": [
-            62,
-            1
-          ]
-        },
-        "linecol": [
-          62,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "CVNSALAV + CVNSALAC + GLDGRATV + GLDGRATC",
-          "linecol": [
-            63,
-            11
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "CVNA_TL",
-          "linecol": [
-            63,
-            1
-          ]
-        },
-        "linecol": [
-          63,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "GSALV + GSALC",
-          "linecol": [
-            64,
-            12
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "CDISA_TL",
-          "linecol": [
-            64,
-            1
-          ]
-        },
-        "linecol": [
-          64,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "GLDGRATV + GLDGRATC",
-          "linecol": [
-            65,
-            11
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "GLOA_TL",
-          "linecol": [
-            65,
-            1
-          ]
-        },
-        "linecol": [
-          65,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BRSE1",
-          "linecol": [
-            66,
-            12
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RSE1A_TL",
-          "linecol": [
-            66,
-            1
-          ]
-        },
-        "linecol": [
-          66,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BRSE2",
-          "linecol": [
-            67,
-            12
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RSE2A_TL",
-          "linecol": [
-            67,
-            1
-          ]
-        },
-        "linecol": [
-          67,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BRSE3",
-          "linecol": [
-            68,
-            12
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RSE3A_TL",
-          "linecol": [
-            68,
-            1
-          ]
-        },
-        "linecol": [
-          68,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BRSE4",
-          "linecol": [
-            69,
-            12
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RSE4A_TL",
-          "linecol": [
-            69,
-            1
-          ]
-        },
-        "linecol": [
-          69,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BRSE5",
-          "linecol": [
-            70,
-            12
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RSE5A_TL",
-          "linecol": [
-            70,
-            1
-          ]
-        },
-        "linecol": [
-          70,
-          1
-        ]
-      }
-    ],
-    "application": {
-      "type": "applications_reference",
-      "names": [
-        {
-          "type": "symbol_enumeration",
-          "value": [
-            {
-              "type": "symbol",
-              "name": "iliad",
-              "linecol": [
-                48,
-                16
-              ]
-            }
-          ],
-          "linecol": [
-            48,
-            16
-          ]
-        }
-      ],
-      "linecol": [
-        48,
-        1
-      ]
-    },
-    "type": "regle_declaration",
-    "qualifiers": [
-      {
-        "type": "symbol",
-        "name": "corrective",
-        "linecol": [
-          47,
-          7
-        ]
-      },
-      {
-        "type": "symbol",
-        "name": "base_tl",
-        "linecol": [
-          47,
-          19
-        ]
-      }
     ]
   },
   {
-    "name": {
-      "type": "symbol",
-      "name": "1206",
-      "linecol": [
-        72,
-        31
-      ]
-    },
-    "linecol": [
-      72,
-      1
+    "type": "regle",
+    "name": "1206",
+    "applications": [
+      "iliad"
+    ],
+    "tags": [
+      {
+        "type": "symbol",
+        "value": "corrective"
+      },
+      {
+        "type": "symbol",
+        "value": "base_tl_rect"
+      }
     ],
     "variables": [
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "RNI * (1 - positif(TEFFP)) * (1 - positif(IPTEFN + RMOND))",
-          "linecol": [
-            76,
-            12
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RNI_RECT",
-          "linecol": [
-            76,
-            1
-          ]
-        },
-        "linecol": [
-          76,
-          1
-        ]
-      },
-      {
+        "name": "RNI_RECT",
         "expression": {
-          "type": "variable_definition_expression",
-          "value": "TEFFP",
-          "linecol": [
-            77,
-            12
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "EFF_RECT",
-          "linecol": [
-            77,
-            1
-          ]
-        },
-        "linecol": [
-          77,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "TTPVQ",
-          "linecol": [
-            78,
-            12
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "PVQ_RECT",
-          "linecol": [
-            78,
-            1
-          ]
-        },
-        "linecol": [
-          78,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BPTP3 + BPTP2 + BPTP4 + BPTP40 + BPTP18 + BPTPD + BPTPG + BPTP19 + BPTP24",
-          "linecol": [
-            79,
-            12
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "PV_RECT",
-          "linecol": [
-            79,
-            1
-          ]
-        },
-        "linecol": [
-          79,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "RI_INIT - (REDTL + CIMPTL) * (1-V_CNR)",
-          "linecol": [
-            80,
-            12
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RI_RECT",
-          "linecol": [
-            80,
-            1
-          ]
-        },
-        "linecol": [
-          80,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BCSG",
-          "linecol": [
-            81,
-            13
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "CRDS_RECT",
-          "linecol": [
-            81,
-            1
-          ]
-        },
-        "linecol": [
-          81,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BRDS",
-          "linecol": [
-            82,
-            13
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "BRDS_RECT",
-          "linecol": [
-            82,
-            1
-          ]
-        },
-        "linecol": [
-          82,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BPRS",
-          "linecol": [
-            83,
-            13
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "BPRS_RECT",
-          "linecol": [
-            83,
-            1
-          ]
-        },
-        "linecol": [
-          83,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BASSURV + BASSURC",
-          "linecol": [
-            84,
-            15
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "TAXAGA_RECT",
-          "linecol": [
-            84,
-            1
-          ]
-        },
-        "linecol": [
-          84,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BPCAPTAXV + BPCAPTAXC",
-          "linecol": [
-            85,
-            13
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "PCAP_RECT",
-          "linecol": [
-            85,
-            1
-          ]
-        },
-        "linecol": [
-          85,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "LOYELEV",
-          "linecol": [
-            86,
-            12
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "LOY_RECT",
-          "linecol": [
-            86,
-            1
-          ]
-        },
-        "linecol": [
-          86,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "REVKIREHR + (RFRH2 + RFRH1) * positif(HRCONDTHEO)",
-          "linecol": [
-            87,
-            13
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "CHR_RECT",
-          "linecol": [
-            87,
-            1
-          ]
-        },
-        "linecol": [
-          87,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "CVNSALAV + CVNSALAC + GLDGRATV + GLDGRATC",
-          "linecol": [
-            88,
-            12
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "CVN_RECT",
-          "linecol": [
-            88,
-            1
-          ]
-        },
-        "linecol": [
-          88,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "GSALV + GSALC",
-          "linecol": [
-            89,
-            13
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "CDIS_RECT",
-          "linecol": [
-            89,
-            1
-          ]
-        },
-        "linecol": [
-          89,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "GLDGRATV + GLDGRATC",
-          "linecol": [
-            90,
-            12
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "GLO_RECT",
-          "linecol": [
-            90,
-            1
-          ]
-        },
-        "linecol": [
-          90,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BRSE1",
-          "linecol": [
-            91,
-            13
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RSE1_RECT",
-          "linecol": [
-            91,
-            1
-          ]
-        },
-        "linecol": [
-          91,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BRSE2",
-          "linecol": [
-            92,
-            13
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RSE2_RECT",
-          "linecol": [
-            92,
-            1
-          ]
-        },
-        "linecol": [
-          92,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BRSE3",
-          "linecol": [
-            93,
-            13
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RSE3_RECT",
-          "linecol": [
-            93,
-            1
-          ]
-        },
-        "linecol": [
-          93,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BRSE4",
-          "linecol": [
-            94,
-            13
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RSE4_RECT",
-          "linecol": [
-            94,
-            1
-          ]
-        },
-        "linecol": [
-          94,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BRSE5",
-          "linecol": [
-            95,
-            13
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RSE5_RECT",
-          "linecol": [
-            95,
-            1
-          ]
-        },
-        "linecol": [
-          95,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "CSG",
-          "linecol": [
-            97,
-            12
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "CSG_RECT",
-          "linecol": [
-            97,
-            1
-          ]
-        },
-        "linecol": [
-          97,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "PRS",
-          "linecol": [
-            98,
-            12
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "PS_RECT",
-          "linecol": [
-            98,
-            1
-          ]
-        },
-        "linecol": [
-          98,
-          1
-        ]
-      }
-    ],
-    "application": {
-      "type": "applications_reference",
-      "names": [
-        {
-          "type": "symbol_enumeration",
-          "value": [
+          "type": "product_expression",
+          "operands": [
             {
               "type": "symbol",
-              "name": "iliad",
-              "linecol": [
-                73,
-                16
+              "value": "RNI"
+            },
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "integer",
+                  "value": 1
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "symbol",
+                      "value": "TEFFP"
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "-"
+              ]
+            },
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "integer",
+                  "value": 1
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "IPTEFN"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "RMOND"
+                        }
+                      ],
+                      "operators": [
+                        "+"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "-"
               ]
             }
           ],
-          "linecol": [
-            73,
-            16
+          "operators": [
+            "*",
+            "*"
           ]
         }
-      ],
-      "linecol": [
-        73,
-        1
-      ]
-    },
-    "type": "regle_declaration",
-    "qualifiers": [
-      {
-        "type": "symbol",
-        "name": "corrective",
-        "linecol": [
-          72,
-          7
-        ]
       },
       {
-        "type": "symbol",
-        "name": "base_tl_rect",
-        "linecol": [
-          72,
-          18
-        ]
+        "type": "variable_definition",
+        "name": "EFF_RECT",
+        "expression": {
+          "type": "symbol",
+          "value": "TEFFP"
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "PVQ_RECT",
+        "expression": {
+          "type": "symbol",
+          "value": "TTPVQ"
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "PV_RECT",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "BPTP3"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP2"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP4"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP40"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP18"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTPD"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTPG"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP19"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP24"
+            }
+          ],
+          "operators": [
+            "+",
+            "+",
+            "+",
+            "+",
+            "+",
+            "+",
+            "+",
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "RI_RECT",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "RI_INIT"
+            },
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "REDTL"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "CIMPTL"
+                    }
+                  ],
+                  "operators": [
+                    "+"
+                  ]
+                },
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "V_CNR"
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            }
+          ],
+          "operators": [
+            "-"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "CRDS_RECT",
+        "expression": {
+          "type": "symbol",
+          "value": "BCSG"
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "BRDS_RECT",
+        "expression": {
+          "type": "symbol",
+          "value": "BRDS"
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "BPRS_RECT",
+        "expression": {
+          "type": "symbol",
+          "value": "BPRS"
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "TAXAGA_RECT",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "BASSURV"
+            },
+            {
+              "type": "symbol",
+              "value": "BASSURC"
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "PCAP_RECT",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "BPCAPTAXV"
+            },
+            {
+              "type": "symbol",
+              "value": "BPCAPTAXC"
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "LOY_RECT",
+        "expression": {
+          "type": "symbol",
+          "value": "LOYELEV"
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "CHR_RECT",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "REVKIREHR"
+            },
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "RFRH2"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "RFRH1"
+                    }
+                  ],
+                  "operators": [
+                    "+"
+                  ]
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "symbol",
+                      "value": "HRCONDTHEO"
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "CVN_RECT",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "CVNSALAV"
+            },
+            {
+              "type": "symbol",
+              "value": "CVNSALAC"
+            },
+            {
+              "type": "symbol",
+              "value": "GLDGRATV"
+            },
+            {
+              "type": "symbol",
+              "value": "GLDGRATC"
+            }
+          ],
+          "operators": [
+            "+",
+            "+",
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "CDIS_RECT",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "GSALV"
+            },
+            {
+              "type": "symbol",
+              "value": "GSALC"
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "GLO_RECT",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "GLDGRATV"
+            },
+            {
+              "type": "symbol",
+              "value": "GLDGRATC"
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "RSE1_RECT",
+        "expression": {
+          "type": "symbol",
+          "value": "BRSE1"
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "RSE2_RECT",
+        "expression": {
+          "type": "symbol",
+          "value": "BRSE2"
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "RSE3_RECT",
+        "expression": {
+          "type": "symbol",
+          "value": "BRSE3"
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "RSE4_RECT",
+        "expression": {
+          "type": "symbol",
+          "value": "BRSE4"
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "RSE5_RECT",
+        "expression": {
+          "type": "symbol",
+          "value": "BRSE5"
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "CSG_RECT",
+        "expression": {
+          "type": "symbol",
+          "value": "CSG"
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "PS_RECT",
+        "expression": {
+          "type": "symbol",
+          "value": "PRS"
+        }
       }
+    ],
+    "linecol": [
+      72,
+      1
     ]
   }
 ]

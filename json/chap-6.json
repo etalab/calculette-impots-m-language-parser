@@ -1,1552 +1,2103 @@
 [
   {
-    "type": "comment",
-    "value": "#*************************************************************************************************************************",
-    "linecol": [
-      1,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      2,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#Copyright or © or Copr.[DGFIP][2015]",
-    "linecol": [
-      3,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      4,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#Ce logiciel a été initialement développé par la Direction Générale des ",
-    "linecol": [
-      5,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#Finances Publiques pour permettre le calcul de l'impôt sur le revenu 2015 ",
-    "linecol": [
-      6,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#au titre des revenus perçus en 2014. La présente version a permis la ",
-    "linecol": [
-      7,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#génération du moteur de calcul des chaînes de taxation des rôles d'impôt ",
-    "linecol": [
-      8,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#sur le revenu de ce millésime.",
-    "linecol": [
-      9,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      10,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#Ce logiciel est régi par la licence CeCILL 2.1 soumise au droit français ",
-    "linecol": [
-      11,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#et respectant les principes de diffusion des logiciels libres. Vous pouvez ",
-    "linecol": [
-      12,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#utiliser, modifier et/ou redistribuer ce programme sous les conditions de ",
-    "linecol": [
-      13,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#la licence CeCILL 2.1 telle que diffusée par le CEA, le CNRS et l'INRIA  sur ",
-    "linecol": [
-      14,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#le site \"http://www.cecill.info\".",
-    "linecol": [
-      15,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      16,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#Le fait que vous puissiez accéder à cet en-tête signifie que vous avez pris ",
-    "linecol": [
-      17,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#connaissance de la licence CeCILL 2.1 et que vous en avez accepté les termes.",
-    "linecol": [
-      18,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      19,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#**************************************************************************************************************************",
-    "linecol": [
-      20,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#\f  ",
-    "linecol": [
-      21,
-      2
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "####   #    #    ##    #####      #     #####  #####   ######          #####",
-    "linecol": [
-      23,
-      3
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#    #  #    #   #  #   #    #     #       #    #    #  #              #",
-    "linecol": [
-      24,
-      2
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#       ######  #    #  #    #     #       #    #    #  #####          # ####",
-    "linecol": [
-      25,
-      2
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#       #    #  ######  #####      #       #    #####   #              #     #",
-    "linecol": [
-      26,
-      2
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#    #  #    #  #    #  #          #       #    #   #   #              #     #",
-    "linecol": [
-      27,
-      2
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "####   #    #  #    #  #          #       #    #    #  ######   ####   #####",
-    "linecol": [
-      28,
-      3
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      29,
-      2
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      30,
-      2
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      31,
-      2
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      32,
-      2
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      33,
-      2
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      34,
-      2
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      35,
-      2
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      36,
-      2
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#                      CALCUL DU NOMBRE DE PARTS",
-    "linecol": [
-      37,
-      2
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      38,
-      2
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      39,
-      2
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      40,
-      2
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      41,
-      2
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#\f",
-    "linecol": [
-      42,
-      2
-    ]
-  },
-  {
-    "application": {
-      "type": "applications_reference",
-      "names": [
-        {
-          "type": "symbol_enumeration",
-          "value": [
+    "type": "regle",
+    "name": "601",
+    "applications": [
+      "batch",
+      "iliad"
+    ],
+    "variables": [
+      {
+        "type": "variable_definition",
+        "name": "NBPT",
+        "expression": {
+          "type": "product_expression",
+          "operands": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "NSM"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "NPA"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "NIN"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "NSP"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "NBQAR"
+                    }
+                  ],
+                  "operators": [
+                    "+",
+                    "+",
+                    "+",
+                    "+"
+                  ]
+                },
+                {
+                  "type": "integer",
+                  "value": 10
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            },
+            {
+              "type": "integer",
+              "value": 10
+            }
+          ],
+          "operators": [
+            "/"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "NBPOTE",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
             {
               "type": "symbol",
-              "name": "batch",
-              "linecol": [
-                44,
-                16
+              "value": "V_0CF"
+            },
+            {
+              "type": "symbol",
+              "value": "V_0CH"
+            },
+            {
+              "type": "symbol",
+              "value": "V_0CR"
+            },
+            {
+              "type": "symbol",
+              "value": "V_0DJ"
+            },
+            {
+              "type": "symbol",
+              "value": "V_0DN"
+            },
+            {
+              "type": "symbol",
+              "value": "V_0DP"
+            }
+          ],
+          "operators": [
+            "+",
+            "+",
+            "+",
+            "+",
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "NBFOTH",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "integer",
+                  "value": 1
+                },
+                {
+                  "type": "symbol",
+                  "value": "BOOL_0AM"
+                }
+              ],
+              "operators": [
+                "+"
               ]
             },
             {
               "type": "symbol",
-              "name": "iliad",
-              "linecol": [
-                44,
-                24
+              "value": "V_0CF"
+            },
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "V_0CH"
+                },
+                {
+                  "type": "integer",
+                  "value": 2
+                }
+              ],
+              "operators": [
+                "/"
               ]
+            },
+            {
+              "type": "symbol",
+              "value": "V_0CR"
+            },
+            {
+              "type": "symbol",
+              "value": "V_0DJ"
+            },
+            {
+              "type": "symbol",
+              "value": "V_0DN"
             }
           ],
-          "linecol": [
-            44,
-            16
+          "operators": [
+            "+",
+            "+",
+            "+",
+            "+",
+            "+"
           ]
         }
-      ],
-      "linecol": [
-        44,
-        1
-      ]
-    },
-    "variables": [
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "((NSM + NPA + NIN + NSP + NBQAR)* 10)/10",
-          "linecol": [
-            45,
-            9
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NBPT",
-          "linecol": [
-            45,
-            1
-          ]
-        },
-        "linecol": [
-          45,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "V_0CF + V_0CH + V_0CR + V_0DJ + V_0DN + V_0DP",
-          "linecol": [
-            47,
-            10
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NBPOTE",
-          "linecol": [
-            47,
-            1
-          ]
-        },
-        "linecol": [
-          47,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "(1 + BOOL_0AM) + V_0CF + (V_0CH/2) + V_0CR + V_0DJ + V_0DN",
-          "linecol": [
-            49,
-            10
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NBFOTH",
-          "linecol": [
-            49,
-            1
-          ]
-        },
-        "linecol": [
-          49,
-          1
-        ]
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "symbol",
-      "name": "601",
-      "linecol": [
-        43,
-        7
-      ]
-    },
     "linecol": [
       43,
       1
     ]
   },
   {
-    "application": {
-      "type": "applications_reference",
-      "names": [
-        {
-          "type": "symbol_enumeration",
-          "value": [
-            {
-              "type": "symbol",
-              "name": "bareme",
-              "linecol": [
-                52,
-                15
-              ]
-            }
-          ],
-          "linecol": [
-            52,
-            15
-          ]
-        }
-      ],
-      "linecol": [
-        52,
-        1
-      ]
-    },
+    "type": "regle",
+    "name": "6010",
+    "applications": [
+      "bareme"
+    ],
     "variables": [
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "(1 - present(V_9VV)) * ((NSM + NPA + NIN + NSP + NBQAR)* 10)/10 + V_9VV",
-          "linecol": [
-            53,
-            9
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NBPT",
-          "linecol": [
-            53,
-            1
+        "name": "NBPT",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "present",
+                      "parameters": [
+                        {
+                          "type": "symbol",
+                          "value": "V_9VV"
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                },
+                {
+                  "type": "product_expression",
+                  "operands": [
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "NSM"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "NPA"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "NIN"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "NSP"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "NBQAR"
+                        }
+                      ],
+                      "operators": [
+                        "+",
+                        "+",
+                        "+",
+                        "+"
+                      ]
+                    },
+                    {
+                      "type": "integer",
+                      "value": 10
+                    }
+                  ],
+                  "operators": [
+                    "*"
+                  ]
+                },
+                {
+                  "type": "integer",
+                  "value": 10
+                }
+              ],
+              "operators": [
+                "*",
+                "/"
+              ]
+            },
+            {
+              "type": "symbol",
+              "value": "V_9VV"
+            }
+          ],
+          "operators": [
+            "+"
           ]
-        },
-        "linecol": [
-          53,
-          1
-        ]
+        }
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "symbol",
-      "name": "6010",
-      "linecol": [
-        51,
-        7
-      ]
-    },
     "linecol": [
       51,
       1
     ]
   },
   {
-    "application": {
-      "type": "applications_reference",
-      "names": [
-        {
-          "type": "symbol_enumeration",
-          "value": [
+    "type": "regle",
+    "name": "6011",
+    "applications": [
+      "bareme",
+      "iliad",
+      "batch"
+    ],
+    "variables": [
+      {
+        "type": "variable_definition",
+        "name": "NSM",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
             {
-              "type": "symbol",
-              "name": "bareme",
-              "linecol": [
-                56,
-                15
-              ]
+              "type": "integer",
+              "value": 1
             },
             {
               "type": "symbol",
-              "name": "iliad",
-              "linecol": [
-                56,
-                24
+              "value": "BOOL_0AM"
+            },
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "V_0AV"
+                },
+                {
+                  "type": "function_call",
+                  "name": "min",
+                  "parameters": [
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "BOOL_0AZ"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "EAC"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "V_0CH"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "V_0CR"
+                        }
+                      ],
+                      "operators": [
+                        "+",
+                        "+",
+                        "+"
+                      ]
+                    },
+                    {
+                      "type": "integer",
+                      "value": 1
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
               ]
             },
             {
-              "type": "symbol",
-              "name": "batch",
-              "linecol": [
-                56,
-                32
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "V_0AV"
+                },
+                {
+                  "type": "symbol",
+                  "value": "BOOL_0AZ"
+                },
+                {
+                  "type": "symbol",
+                  "value": "V_0AW"
+                },
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "V_0AP"
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                },
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "V_0AF"
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                },
+                {
+                  "type": "integer",
+                  "value": 2
+                }
+              ],
+              "operators": [
+                "*",
+                "*",
+                "*",
+                "*",
+                "/"
               ]
             }
           ],
-          "linecol": [
-            56,
-            15
+          "operators": [
+            "+",
+            "+",
+            "+"
           ]
         }
-      ],
-      "linecol": [
-        56,
-        1
-      ]
-    },
-    "variables": [
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "1 + BOOL_0AM + V_0AV * min(BOOL_0AZ + EAC + V_0CH + V_0CR, 1 ) + ( V_0AV * BOOL_0AZ * V_0AW * (1 - V_0AP) * (1 - V_0AF) / 2 )",
-          "linecol": [
-            57,
-            7
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NSM",
-          "linecol": [
-            57,
-            1
-          ]
-        },
-        "linecol": [
-          57,
-          1
-        ]
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "symbol",
-      "name": "6011",
-      "linecol": [
-        55,
-        7
-      ]
-    },
     "linecol": [
       55,
       1
     ]
   },
   {
-    "application": {
-      "type": "applications_reference",
-      "names": [
-        {
-          "type": "symbol_enumeration",
-          "value": [
+    "type": "regle",
+    "name": "6012",
+    "applications": [
+      "bareme",
+      "iliad",
+      "batch"
+    ],
+    "variables": [
+      {
+        "type": "variable_definition",
+        "name": "NPA",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
             {
               "type": "symbol",
-              "name": "bareme",
-              "linecol": [
-                60,
-                15
-              ]
+              "value": "PAC"
             },
             {
-              "type": "symbol",
-              "name": "iliad",
-              "linecol": [
-                60,
-                24
-              ]
-            },
-            {
-              "type": "symbol",
-              "name": "batch",
-              "linecol": [
-                60,
-                32
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "float",
+                  "value": 0.5
+                },
+                {
+                  "type": "function_call",
+                  "name": "min",
+                  "parameters": [
+                    {
+                      "type": "symbol",
+                      "value": "PAC"
+                    },
+                    {
+                      "type": "integer",
+                      "value": 2
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
               ]
             }
           ],
-          "linecol": [
-            60,
-            15
+          "operators": [
+            "-"
           ]
         }
-      ],
-      "linecol": [
-        60,
-        1
-      ]
-    },
-    "variables": [
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "PAC - 0.5 * min( PAC, 2 )",
-          "linecol": [
-            61,
-            7
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NPA",
-          "linecol": [
-            61,
-            1
-          ]
-        },
-        "linecol": [
-          61,
-          1
-        ]
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "symbol",
-      "name": "6012",
-      "linecol": [
-        59,
-        7
-      ]
-    },
     "linecol": [
       59,
       1
     ]
   },
   {
-    "application": {
-      "type": "applications_reference",
-      "names": [
-        {
-          "type": "symbol_enumeration",
-          "value": [
-            {
-              "type": "symbol",
-              "name": "bareme",
-              "linecol": [
-                63,
-                15
-              ]
-            },
-            {
-              "type": "symbol",
-              "name": "iliad",
-              "linecol": [
-                63,
-                24
-              ]
-            },
-            {
-              "type": "symbol",
-              "name": "batch",
-              "linecol": [
-                63,
-                32
-              ]
-            }
-          ],
-          "linecol": [
-            63,
-            15
-          ]
-        }
-      ],
-      "linecol": [
-        63,
-        1
-      ]
-    },
+    "type": "regle",
+    "name": "60121",
+    "applications": [
+      "bareme",
+      "iliad",
+      "batch"
+    ],
     "variables": [
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "EAC + V_0CR",
-          "linecol": [
-            64,
-            7
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "PAC",
-          "linecol": [
-            64,
-            1
+        "name": "PAC",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "EAC"
+            },
+            {
+              "type": "symbol",
+              "value": "V_0CR"
+            }
+          ],
+          "operators": [
+            "+"
           ]
-        },
-        "linecol": [
-          64,
-          1
-        ]
+        }
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "symbol",
-      "name": "60121",
-      "linecol": [
-        62,
-        7
-      ]
-    },
     "linecol": [
       62,
       1
     ]
   },
   {
-    "application": {
-      "type": "applications_reference",
-      "names": [
-        {
-          "type": "symbol_enumeration",
-          "value": [
-            {
-              "type": "symbol",
-              "name": "bareme",
-              "linecol": [
-                66,
-                15
-              ]
-            }
-          ],
-          "linecol": [
-            66,
-            15
-          ]
-        }
-      ],
-      "linecol": [
-        66,
-        1
-      ]
-    },
+    "type": "regle",
+    "name": "60122",
+    "applications": [
+      "bareme"
+    ],
     "variables": [
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "((V_0CF + V_0DJ) * (1 - present(V_9XX)))  + V_9XX",
-          "linecol": [
-            67,
-            7
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "EAC",
-          "linecol": [
-            67,
-            1
+        "name": "EAC",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "V_0CF"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "V_0DJ"
+                    }
+                  ],
+                  "operators": [
+                    "+"
+                  ]
+                },
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "present",
+                      "parameters": [
+                        {
+                          "type": "symbol",
+                          "value": "V_9XX"
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            },
+            {
+              "type": "symbol",
+              "value": "V_9XX"
+            }
+          ],
+          "operators": [
+            "+"
           ]
-        },
-        "linecol": [
-          67,
-          1
-        ]
+        }
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "symbol",
-      "name": "60122",
-      "linecol": [
-        65,
-        7
-      ]
-    },
     "linecol": [
       65,
       1
     ]
   },
   {
-    "application": {
-      "type": "applications_reference",
-      "names": [
-        {
-          "type": "symbol_enumeration",
-          "value": [
+    "type": "regle",
+    "name": "601220",
+    "applications": [
+      "batch",
+      "iliad"
+    ],
+    "variables": [
+      {
+        "type": "variable_definition",
+        "name": "EAC",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
             {
               "type": "symbol",
-              "name": "batch",
-              "linecol": [
-                69,
-                15
-              ]
+              "value": "V_0CF"
             },
             {
               "type": "symbol",
-              "name": "iliad",
-              "linecol": [
-                69,
-                23
-              ]
+              "value": "V_0DJ"
             }
           ],
-          "linecol": [
-            69,
-            15
+          "operators": [
+            "+"
           ]
         }
-      ],
-      "linecol": [
-        69,
-        1
-      ]
-    },
-    "variables": [
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "(V_0CF + V_0DJ)",
-          "linecol": [
-            70,
-            7
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "EAC",
-          "linecol": [
-            70,
-            1
-          ]
-        },
-        "linecol": [
-          70,
-          1
-        ]
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "symbol",
-      "name": "601220",
-      "linecol": [
-        68,
-        7
-      ]
-    },
     "linecol": [
       68,
       1
     ]
   },
   {
-    "application": {
-      "type": "applications_reference",
-      "names": [
-        {
-          "type": "symbol_enumeration",
-          "value": [
-            {
-              "type": "symbol",
-              "name": "bareme",
-              "linecol": [
-                72,
-                15
-              ]
-            },
-            {
-              "type": "symbol",
-              "name": "iliad",
-              "linecol": [
-                72,
-                24
-              ]
-            },
-            {
-              "type": "symbol",
-              "name": "batch",
-              "linecol": [
-                72,
-                32
-              ]
-            }
-          ],
-          "linecol": [
-            72,
-            15
-          ]
-        }
-      ],
-      "linecol": [
-        72,
-        1
-      ]
-    },
+    "type": "regle",
+    "name": "6013",
+    "applications": [
+      "bareme",
+      "iliad",
+      "batch"
+    ],
     "variables": [
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "( V_0AP + V_0AF + V_0CG + V_0CR ) * 0.5",
-          "linecol": [
-            73,
-            8
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NIN",
-          "linecol": [
-            73,
-            1
+        "name": "NIN",
+        "expression": {
+          "type": "product_expression",
+          "operands": [
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "V_0AP"
+                },
+                {
+                  "type": "symbol",
+                  "value": "V_0AF"
+                },
+                {
+                  "type": "symbol",
+                  "value": "V_0CG"
+                },
+                {
+                  "type": "symbol",
+                  "value": "V_0CR"
+                }
+              ],
+              "operators": [
+                "+",
+                "+",
+                "+"
+              ]
+            },
+            {
+              "type": "float",
+              "value": 0.5
+            }
+          ],
+          "operators": [
+            "*"
           ]
-        },
-        "linecol": [
-          73,
-          1
-        ]
+        }
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "symbol",
-      "name": "6013",
-      "linecol": [
-        71,
-        7
-      ]
-    },
     "linecol": [
       71,
       1
     ]
   },
   {
-    "application": {
-      "type": "applications_reference",
-      "names": [
-        {
-          "type": "symbol_enumeration",
-          "value": [
-            {
-              "type": "symbol",
-              "name": "bareme",
-              "linecol": [
-                75,
-                15
-              ]
-            },
-            {
-              "type": "symbol",
-              "name": "iliad",
-              "linecol": [
-                75,
-                24
-              ]
-            },
-            {
-              "type": "symbol",
-              "name": "batch",
-              "linecol": [
-                75,
-                32
-              ]
-            }
-          ],
-          "linecol": [
-            75,
-            15
-          ]
-        }
-      ],
-      "linecol": [
-        75,
-        1
-      ]
-    },
+    "type": "regle",
+    "name": "6014",
+    "applications": [
+      "bareme",
+      "iliad",
+      "batch"
+    ],
     "variables": [
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "NPS + NSA + NCC",
-          "linecol": [
-            76,
-            7
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NSP",
-          "linecol": [
-            76,
-            1
+        "name": "NSP",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "NPS"
+            },
+            {
+              "type": "symbol",
+              "value": "NSA"
+            },
+            {
+              "type": "symbol",
+              "value": "NCC"
+            }
+          ],
+          "operators": [
+            "+",
+            "+"
           ]
-        },
-        "linecol": [
-          76,
-          1
-        ]
+        }
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "symbol",
-      "name": "6014",
-      "linecol": [
-        74,
-        7
-      ]
-    },
     "linecol": [
       74,
       1
     ]
   },
   {
-    "application": {
-      "type": "applications_reference",
-      "names": [
-        {
-          "type": "symbol_enumeration",
-          "value": [
+    "type": "regle",
+    "name": "60141",
+    "applications": [
+      "bareme",
+      "iliad",
+      "batch"
+    ],
+    "variables": [
+      {
+        "type": "variable_definition",
+        "name": "NCC",
+        "expression": {
+          "type": "product_expression",
+          "operands": [
             {
               "type": "symbol",
-              "name": "bareme",
-              "linecol": [
-                78,
-                15
-              ]
+              "value": "V_0AS"
             },
             {
               "type": "symbol",
-              "name": "iliad",
-              "linecol": [
-                78,
-                24
+              "value": "BOOL_0AM"
+            },
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "integer",
+                  "value": 1
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "V_0AP"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "V_0AF"
+                        }
+                      ],
+                      "operators": [
+                        "+"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "-"
               ]
             },
             {
-              "type": "symbol",
-              "name": "batch",
-              "linecol": [
-                78,
-                32
+              "type": "float",
+              "value": 0.5
+            },
+            {
+              "type": "function_call",
+              "name": "positif",
+              "parameters": [
+                {
+                  "type": "function_call",
+                  "name": "max",
+                  "parameters": [
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "AGV"
+                        },
+                        {
+                          "type": "integer",
+                          "value": 1
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "LIM_AGE_LET_S"
+                        }
+                      ],
+                      "operators": [
+                        "+",
+                        "-"
+                      ]
+                    },
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "AGC"
+                        },
+                        {
+                          "type": "integer",
+                          "value": 1
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "LIM_AGE_LET_S"
+                        }
+                      ],
+                      "operators": [
+                        "+",
+                        "-"
+                      ]
+                    }
+                  ]
+                }
               ]
             }
           ],
-          "linecol": [
-            78,
-            15
+          "operators": [
+            "*",
+            "*",
+            "*",
+            "*"
           ]
         }
-      ],
-      "linecol": [
-        78,
-        1
-      ]
-    },
-    "variables": [
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "V_0AS * BOOL_0AM * (1 - positif(V_0AP + V_0AF)) * 0.5 * positif(max( AGV + 1 - LIM_AGE_LET_S, AGC + 1 - LIM_AGE_LET_S ))",
-          "linecol": [
-            79,
-            7
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NCC",
-          "linecol": [
-            79,
-            1
-          ]
-        },
-        "linecol": [
-          79,
-          1
-        ]
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "symbol",
-      "name": "60141",
-      "linecol": [
-        77,
-        7
-      ]
-    },
     "linecol": [
       77,
       1
     ]
   },
   {
-    "application": {
-      "type": "applications_reference",
-      "names": [
-        {
-          "type": "symbol_enumeration",
-          "value": [
-            {
-              "type": "symbol",
-              "name": "bareme",
-              "linecol": [
-                82,
-                15
-              ]
-            },
-            {
-              "type": "symbol",
-              "name": "iliad",
-              "linecol": [
-                82,
-                24
-              ]
-            },
-            {
-              "type": "symbol",
-              "name": "batch",
-              "linecol": [
-                82,
-                32
-              ]
-            }
-          ],
-          "linecol": [
-            82,
-            15
-          ]
-        }
-      ],
-      "linecol": [
-        82,
-        1
-      ]
-    },
+    "type": "regle",
+    "name": "60142",
+    "applications": [
+      "bareme",
+      "iliad",
+      "batch"
+    ],
     "variables": [
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "positif(PAC) * V_0BT * positif( 2 - NSM ) * 0.5",
-          "linecol": [
-            83,
-            7
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NPS",
-          "linecol": [
-            83,
-            1
+        "name": "NPS",
+        "expression": {
+          "type": "product_expression",
+          "operands": [
+            {
+              "type": "function_call",
+              "name": "positif",
+              "parameters": [
+                {
+                  "type": "symbol",
+                  "value": "PAC"
+                }
+              ]
+            },
+            {
+              "type": "symbol",
+              "value": "V_0BT"
+            },
+            {
+              "type": "function_call",
+              "name": "positif",
+              "parameters": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 2
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "NSM"
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "float",
+              "value": 0.5
+            }
+          ],
+          "operators": [
+            "*",
+            "*",
+            "*"
           ]
-        },
-        "linecol": [
-          83,
-          1
-        ]
+        }
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "symbol",
-      "name": "60142",
-      "linecol": [
-        81,
-        7
-      ]
-    },
     "linecol": [
       81,
       1
     ]
   },
   {
-    "application": {
-      "type": "applications_reference",
-      "names": [
-        {
-          "type": "symbol_enumeration",
-          "value": [
-            {
-              "type": "symbol",
-              "name": "bareme",
-              "linecol": [
-                85,
-                15
-              ]
-            },
-            {
-              "type": "symbol",
-              "name": "iliad",
-              "linecol": [
-                85,
-                24
-              ]
-            },
-            {
-              "type": "symbol",
-              "name": "batch",
-              "linecol": [
-                85,
-                32
-              ]
-            }
-          ],
-          "linecol": [
-            85,
-            15
-          ]
-        }
-      ],
-      "linecol": [
-        85,
-        1
-      ]
-    },
+    "type": "regle",
+    "name": "60143",
+    "applications": [
+      "bareme",
+      "iliad",
+      "batch"
+    ],
     "variables": [
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "(1 - positif(PAC+V_0CH)) * min( V_0AG + (V_0AL * (1 - positif (V_0AN))) * ( 1 - positif(positif(V_0AW)*positif_ou_nul(AGV-LIM_AGE_LET_S))) + V_0AW * positif(max(AGV + 1 - LIM_AGE_LET_S, AGC + 1 - LIM_AGE_LET_S)) , 1 ) * ( 1 - V_0AP ) * positif(2 - NSM) * 0.5",
-          "linecol": [
-            86,
-            7
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NSA",
-          "linecol": [
-            86,
-            1
+        "name": "NSA",
+        "expression": {
+          "type": "product_expression",
+          "operands": [
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "integer",
+                  "value": 1
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "PAC"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "V_0CH"
+                        }
+                      ],
+                      "operators": [
+                        "+"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "-"
+              ]
+            },
+            {
+              "type": "function_call",
+              "name": "min",
+              "parameters": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "V_0AG"
+                    },
+                    {
+                      "type": "product_expression",
+                      "operands": [
+                        {
+                          "type": "product_expression",
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "V_0AL"
+                            },
+                            {
+                              "type": "sum_expression",
+                              "operands": [
+                                {
+                                  "type": "integer",
+                                  "value": 1
+                                },
+                                {
+                                  "type": "function_call",
+                                  "name": "positif",
+                                  "parameters": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "V_0AN"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "operators": [
+                                "-"
+                              ]
+                            }
+                          ],
+                          "operators": [
+                            "*"
+                          ]
+                        },
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "integer",
+                              "value": 1
+                            },
+                            {
+                              "type": "function_call",
+                              "name": "positif",
+                              "parameters": [
+                                {
+                                  "type": "product_expression",
+                                  "operands": [
+                                    {
+                                      "type": "function_call",
+                                      "name": "positif",
+                                      "parameters": [
+                                        {
+                                          "type": "symbol",
+                                          "value": "V_0AW"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "function_call",
+                                      "name": "positif_ou_nul",
+                                      "parameters": [
+                                        {
+                                          "type": "sum_expression",
+                                          "operands": [
+                                            {
+                                              "type": "symbol",
+                                              "value": "AGV"
+                                            },
+                                            {
+                                              "type": "symbol",
+                                              "value": "LIM_AGE_LET_S"
+                                            }
+                                          ],
+                                          "operators": [
+                                            "-"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "operators": [
+                                    "*"
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "operators": [
+                            "-"
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "*"
+                      ]
+                    },
+                    {
+                      "type": "product_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "V_0AW"
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "function_call",
+                              "name": "max",
+                              "parameters": [
+                                {
+                                  "type": "sum_expression",
+                                  "operands": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "AGV"
+                                    },
+                                    {
+                                      "type": "integer",
+                                      "value": 1
+                                    },
+                                    {
+                                      "type": "symbol",
+                                      "value": "LIM_AGE_LET_S"
+                                    }
+                                  ],
+                                  "operators": [
+                                    "+",
+                                    "-"
+                                  ]
+                                },
+                                {
+                                  "type": "sum_expression",
+                                  "operands": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "AGC"
+                                    },
+                                    {
+                                      "type": "integer",
+                                      "value": 1
+                                    },
+                                    {
+                                      "type": "symbol",
+                                      "value": "LIM_AGE_LET_S"
+                                    }
+                                  ],
+                                  "operators": [
+                                    "+",
+                                    "-"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "*"
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "+",
+                    "+"
+                  ]
+                },
+                {
+                  "type": "integer",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "integer",
+                  "value": 1
+                },
+                {
+                  "type": "symbol",
+                  "value": "V_0AP"
+                }
+              ],
+              "operators": [
+                "-"
+              ]
+            },
+            {
+              "type": "function_call",
+              "name": "positif",
+              "parameters": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 2
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "NSM"
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "float",
+              "value": 0.5
+            }
+          ],
+          "operators": [
+            "*",
+            "*",
+            "*",
+            "*"
           ]
-        },
-        "linecol": [
-          86,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "min( (1 - positif(PAC+V_0CH)) * (null(SFUTILE - 14) + null (SFUTILE - 7) + null (SFUTILE - 15) * (1-positif(NIN)) ) + null(SFUTILE -7) * BOOL_0AZ * V_0AV , 1) * 0.5",
-          "linecol": [
-            93,
-            8
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NSA2",
-          "linecol": [
-            93,
-            1
+        "name": "NSA2",
+        "expression": {
+          "type": "product_expression",
+          "operands": [
+            {
+              "type": "function_call",
+              "name": "min",
+              "parameters": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "product_expression",
+                      "operands": [
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "integer",
+                              "value": 1
+                            },
+                            {
+                              "type": "function_call",
+                              "name": "positif",
+                              "parameters": [
+                                {
+                                  "type": "sum_expression",
+                                  "operands": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "PAC"
+                                    },
+                                    {
+                                      "type": "symbol",
+                                      "value": "V_0CH"
+                                    }
+                                  ],
+                                  "operators": [
+                                    "+"
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "operators": [
+                            "-"
+                          ]
+                        },
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "function_call",
+                              "name": "null",
+                              "parameters": [
+                                {
+                                  "type": "sum_expression",
+                                  "operands": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "SFUTILE"
+                                    },
+                                    {
+                                      "type": "integer",
+                                      "value": 14
+                                    }
+                                  ],
+                                  "operators": [
+                                    "-"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "function_call",
+                              "name": "null",
+                              "parameters": [
+                                {
+                                  "type": "sum_expression",
+                                  "operands": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "SFUTILE"
+                                    },
+                                    {
+                                      "type": "integer",
+                                      "value": 7
+                                    }
+                                  ],
+                                  "operators": [
+                                    "-"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "product_expression",
+                              "operands": [
+                                {
+                                  "type": "function_call",
+                                  "name": "null",
+                                  "parameters": [
+                                    {
+                                      "type": "sum_expression",
+                                      "operands": [
+                                        {
+                                          "type": "symbol",
+                                          "value": "SFUTILE"
+                                        },
+                                        {
+                                          "type": "integer",
+                                          "value": 15
+                                        }
+                                      ],
+                                      "operators": [
+                                        "-"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "sum_expression",
+                                  "operands": [
+                                    {
+                                      "type": "integer",
+                                      "value": 1
+                                    },
+                                    {
+                                      "type": "function_call",
+                                      "name": "positif",
+                                      "parameters": [
+                                        {
+                                          "type": "symbol",
+                                          "value": "NIN"
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "operators": [
+                                    "-"
+                                  ]
+                                }
+                              ],
+                              "operators": [
+                                "*"
+                              ]
+                            }
+                          ],
+                          "operators": [
+                            "+",
+                            "+"
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "*"
+                      ]
+                    },
+                    {
+                      "type": "product_expression",
+                      "operands": [
+                        {
+                          "type": "function_call",
+                          "name": "null",
+                          "parameters": [
+                            {
+                              "type": "sum_expression",
+                              "operands": [
+                                {
+                                  "type": "symbol",
+                                  "value": "SFUTILE"
+                                },
+                                {
+                                  "type": "integer",
+                                  "value": 7
+                                }
+                              ],
+                              "operators": [
+                                "-"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "BOOL_0AZ"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "V_0AV"
+                        }
+                      ],
+                      "operators": [
+                        "*",
+                        "*"
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "+"
+                  ]
+                },
+                {
+                  "type": "integer",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "type": "float",
+              "value": 0.5
+            }
+          ],
+          "operators": [
+            "*"
           ]
-        },
-        "linecol": [
-          93,
-          1
-        ]
+        }
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "symbol",
-      "name": "60143",
-      "linecol": [
-        84,
-        7
-      ]
-    },
     "linecol": [
       84,
       1
     ]
   },
   {
-    "application": {
-      "type": "applications_reference",
-      "names": [
-        {
-          "type": "symbol_enumeration",
-          "value": [
+    "type": "regle",
+    "name": "60200",
+    "applications": [
+      "bareme",
+      "iliad",
+      "batch"
+    ],
+    "variables": [
+      {
+        "type": "variable_definition",
+        "name": "BOOL_0BT",
+        "expression": {
+          "type": "product_expression",
+          "operands": [
             {
-              "type": "symbol",
-              "name": "bareme",
-              "linecol": [
-                104,
-                15
+              "type": "function_call",
+              "name": "positif",
+              "parameters": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "V_0BT"
+                    },
+                    {
+                      "type": "integer",
+                      "value": 0
+                    }
+                  ],
+                  "operators": [
+                    "+"
+                  ]
+                }
               ]
             },
             {
-              "type": "symbol",
-              "name": "iliad",
-              "linecol": [
-                104,
-                24
-              ]
-            },
-            {
-              "type": "symbol",
-              "name": "batch",
-              "linecol": [
-                104,
-                32
+              "type": "function_call",
+              "name": "positif",
+              "parameters": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "V_0AC"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "V_0AD"
+                    },
+                    {
+                      "type": "integer",
+                      "value": 0
+                    }
+                  ],
+                  "operators": [
+                    "+",
+                    "+"
+                  ]
+                }
               ]
             }
           ],
-          "linecol": [
-            104,
-            15
+          "operators": [
+            "*"
           ]
         }
-      ],
-      "linecol": [
-        104,
-        1
-      ]
-    },
-    "variables": [
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "positif ( V_0BT+0 ) * positif ( V_0AC + V_0AD + 0)",
-          "linecol": [
-            107,
-            12
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "BOOL_0BT",
-          "linecol": [
-            107,
-            1
-          ]
-        },
-        "linecol": [
-          107,
-          1
-        ]
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "null (V_0CF+V_0CR+V_0DJ+0)    * (  1/2 * (V_0CH-2) * positif (V_0CH- 2) + 1/4 * positif (V_0CH+0) + 1/4 * positif(V_0CH-1) )",
-          "linecol": [
-            109,
-            12
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NBQAR1",
-          "linecol": [
-            109,
-            1
+        "name": "NBQAR1",
+        "expression": {
+          "type": "product_expression",
+          "operands": [
+            {
+              "type": "function_call",
+              "name": "null",
+              "parameters": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "V_0CF"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "V_0CR"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "V_0DJ"
+                    },
+                    {
+                      "type": "integer",
+                      "value": 0
+                    }
+                  ],
+                  "operators": [
+                    "+",
+                    "+",
+                    "+"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "product_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "integer",
+                      "value": 2
+                    },
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "V_0CH"
+                        },
+                        {
+                          "type": "integer",
+                          "value": 2
+                        }
+                      ],
+                      "operators": [
+                        "-"
+                      ]
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif",
+                      "parameters": [
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "V_0CH"
+                            },
+                            {
+                              "type": "integer",
+                              "value": 2
+                            }
+                          ],
+                          "operators": [
+                            "-"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "/",
+                    "*",
+                    "*"
+                  ]
+                },
+                {
+                  "type": "product_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "integer",
+                      "value": 4
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif",
+                      "parameters": [
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "V_0CH"
+                            },
+                            {
+                              "type": "integer",
+                              "value": 0
+                            }
+                          ],
+                          "operators": [
+                            "+"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "/",
+                    "*"
+                  ]
+                },
+                {
+                  "type": "product_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "integer",
+                      "value": 4
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif",
+                      "parameters": [
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "V_0CH"
+                            },
+                            {
+                              "type": "integer",
+                              "value": 1
+                            }
+                          ],
+                          "operators": [
+                            "-"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "/",
+                    "*"
+                  ]
+                }
+              ],
+              "operators": [
+                "+",
+                "+"
+              ]
+            }
+          ],
+          "operators": [
+            "*"
           ]
-        },
-        "linecol": [
-          109,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "null(V_0CF+V_0CR+V_0DJ-1) * (1/2 * (V_0CH -1 ) * positif(V_0CH -1) + 1/4 * positif (V_0CH+0) )",
-          "linecol": [
-            113,
-            12
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NBQAR2",
-          "linecol": [
-            113,
-            1
+        "name": "NBQAR2",
+        "expression": {
+          "type": "product_expression",
+          "operands": [
+            {
+              "type": "function_call",
+              "name": "null",
+              "parameters": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "V_0CF"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "V_0CR"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "V_0DJ"
+                    },
+                    {
+                      "type": "integer",
+                      "value": 1
+                    }
+                  ],
+                  "operators": [
+                    "+",
+                    "+",
+                    "-"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "product_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "integer",
+                      "value": 2
+                    },
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "V_0CH"
+                        },
+                        {
+                          "type": "integer",
+                          "value": 1
+                        }
+                      ],
+                      "operators": [
+                        "-"
+                      ]
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif",
+                      "parameters": [
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "V_0CH"
+                            },
+                            {
+                              "type": "integer",
+                              "value": 1
+                            }
+                          ],
+                          "operators": [
+                            "-"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "/",
+                    "*",
+                    "*"
+                  ]
+                },
+                {
+                  "type": "product_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "integer",
+                      "value": 4
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif",
+                      "parameters": [
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "V_0CH"
+                            },
+                            {
+                              "type": "integer",
+                              "value": 0
+                            }
+                          ],
+                          "operators": [
+                            "+"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "/",
+                    "*"
+                  ]
+                }
+              ],
+              "operators": [
+                "+"
+              ]
+            }
+          ],
+          "operators": [
+            "*"
           ]
-        },
-        "linecol": [
-          113,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "positif_ou_nul(V_0CF+V_0CR+V_0DJ-2) * 1/2 * V_0CH",
-          "linecol": [
-            116,
-            12
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NBQAR3",
-          "linecol": [
-            116,
-            1
+        "name": "NBQAR3",
+        "expression": {
+          "type": "product_expression",
+          "operands": [
+            {
+              "type": "function_call",
+              "name": "positif_ou_nul",
+              "parameters": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "V_0CF"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "V_0CR"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "V_0DJ"
+                    },
+                    {
+                      "type": "integer",
+                      "value": 2
+                    }
+                  ],
+                  "operators": [
+                    "+",
+                    "+",
+                    "-"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "integer",
+              "value": 1
+            },
+            {
+              "type": "integer",
+              "value": 2
+            },
+            {
+              "type": "symbol",
+              "value": "V_0CH"
+            }
+          ],
+          "operators": [
+            "*",
+            "/",
+            "*"
           ]
-        },
-        "linecol": [
-          116,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "1/4 * V_0CI",
-          "linecol": [
-            118,
-            11
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NBQAR4",
-          "linecol": [
-            118,
-            1
+        "name": "NBQAR4",
+        "expression": {
+          "type": "product_expression",
+          "operands": [
+            {
+              "type": "integer",
+              "value": 1
+            },
+            {
+              "type": "integer",
+              "value": 4
+            },
+            {
+              "type": "symbol",
+              "value": "V_0CI"
+            }
+          ],
+          "operators": [
+            "/",
+            "*"
           ]
-        },
-        "linecol": [
-          118,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "BOOL_0BT * null(V_0CF+V_0CR+V_0DJ+0) * (1/4 * null (V_0CH  -1) + 1/2 *  positif_ou_nul (V_0CH  - 2))",
-          "linecol": [
-            120,
-            11
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NBQART",
-          "linecol": [
-            120,
-            1
+        "name": "NBQART",
+        "expression": {
+          "type": "product_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "BOOL_0BT"
+            },
+            {
+              "type": "function_call",
+              "name": "null",
+              "parameters": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "V_0CF"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "V_0CR"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "V_0DJ"
+                    },
+                    {
+                      "type": "integer",
+                      "value": 0
+                    }
+                  ],
+                  "operators": [
+                    "+",
+                    "+",
+                    "+"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "product_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "integer",
+                      "value": 4
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "null",
+                      "parameters": [
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "V_0CH"
+                            },
+                            {
+                              "type": "integer",
+                              "value": 1
+                            }
+                          ],
+                          "operators": [
+                            "-"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "/",
+                    "*"
+                  ]
+                },
+                {
+                  "type": "product_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "integer",
+                      "value": 2
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif_ou_nul",
+                      "parameters": [
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "V_0CH"
+                            },
+                            {
+                              "type": "integer",
+                              "value": 2
+                            }
+                          ],
+                          "operators": [
+                            "-"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "/",
+                    "*"
+                  ]
+                }
+              ],
+              "operators": [
+                "+"
+              ]
+            }
+          ],
+          "operators": [
+            "*",
+            "*"
           ]
-        },
-        "linecol": [
-          120,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "NBQAR1 + NBQAR2 + NBQAR3 + NBQAR4 + NBQART",
-          "linecol": [
-            123,
-            9
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "NBQAR",
-          "linecol": [
-            123,
-            1
+        "name": "NBQAR",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "NBQAR1"
+            },
+            {
+              "type": "symbol",
+              "value": "NBQAR2"
+            },
+            {
+              "type": "symbol",
+              "value": "NBQAR3"
+            },
+            {
+              "type": "symbol",
+              "value": "NBQAR4"
+            },
+            {
+              "type": "symbol",
+              "value": "NBQART"
+            }
+          ],
+          "operators": [
+            "+",
+            "+",
+            "+",
+            "+"
           ]
-        },
-        "linecol": [
-          123,
-          1
-        ]
+        }
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "symbol",
-      "name": "60200",
-      "linecol": [
-        103,
-        7
-      ]
-    },
     "linecol": [
       103,
       1

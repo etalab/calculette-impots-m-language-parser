@@ -1,1261 +1,2153 @@
 [
   {
-    "type": "comment",
-    "value": "#*************************************************************************************************************************",
-    "linecol": [
-      1,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      2,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#Copyright or © or Copr.[DGFIP][2015]",
-    "linecol": [
-      3,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      4,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#Ce logiciel a été initialement développé par la Direction Générale des ",
-    "linecol": [
-      5,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#Finances Publiques pour permettre le calcul de l'impôt sur le revenu 2015 ",
-    "linecol": [
-      6,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#au titre des revenus perçus en 2014. La présente version a permis la ",
-    "linecol": [
-      7,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#génération du moteur de calcul des chaînes de taxation des rôles d'impôt ",
-    "linecol": [
-      8,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#sur le revenu de ce millésime.",
-    "linecol": [
-      9,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      10,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#Ce logiciel est régi par la licence CeCILL 2.1 soumise au droit français ",
-    "linecol": [
-      11,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#et respectant les principes de diffusion des logiciels libres. Vous pouvez ",
-    "linecol": [
-      12,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#utiliser, modifier et/ou redistribuer ce programme sous les conditions de ",
-    "linecol": [
-      13,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#la licence CeCILL 2.1 telle que diffusée par le CEA, le CNRS et l'INRIA  sur ",
-    "linecol": [
-      14,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#le site \"http://www.cecill.info\".",
-    "linecol": [
-      15,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      16,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#Le fait que vous puissiez accéder à cet en-tête signifie que vous avez pris ",
-    "linecol": [
-      17,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#connaissance de la licence CeCILL 2.1 et que vous en avez accepté les termes.",
-    "linecol": [
-      18,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#",
-    "linecol": [
-      19,
-      1
-    ]
-  },
-  {
-    "type": "comment",
-    "value": "#**************************************************************************************************************************",
-    "linecol": [
-      20,
-      1
-    ]
-  },
-  {
-    "application": {
-      "type": "applications_reference",
-      "names": [
-        {
-          "type": "symbol_enumeration",
-          "value": [
+    "type": "regle",
+    "name": "831",
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "variables": [
+      {
+        "type": "variable_definition",
+        "name": "RRFI",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
             {
-              "type": "symbol",
-              "name": "iliad",
-              "linecol": [
-                22,
-                15
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "RFON"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "DRCF"
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "max",
+                      "parameters": [
+                        {
+                          "type": "integer",
+                          "value": 0
+                        },
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "RFMIC"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "MICFR"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "RFDANT"
+                            }
+                          ],
+                          "operators": [
+                            "-",
+                            "-"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "+",
+                    "+"
+                  ]
+                },
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif",
+                      "parameters": [
+                        {
+                          "type": "symbol",
+                          "value": "ART1731BIS"
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
               ]
             },
             {
-              "type": "symbol",
-              "name": "batch",
-              "linecol": [
-                22,
-                23
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "RFON"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "DRCF"
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "max",
+                      "parameters": [
+                        {
+                          "type": "integer",
+                          "value": 0
+                        },
+                        {
+                          "type": "sum_expression",
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "RFMIC"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "MICFR"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "DEFRF4BD"
+                            }
+                          ],
+                          "operators": [
+                            "-",
+                            "-"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "+",
+                    "+"
+                  ]
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "symbol",
+                      "value": "ART1731BIS"
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
               ]
             }
           ],
-          "linecol": [
-            22,
-            15
+          "operators": [
+            "+"
           ]
         }
-      ],
-      "linecol": [
-        22,
-        1
-      ]
-    },
-    "variables": [
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "(RFON + DRCF + max(0,RFMIC - MICFR - RFDANT )) * (1-positif(ART1731BIS)) + (RFON + DRCF + max(0,RFMIC - MICFR - DEFRF4BD )) * positif(ART1731BIS)",
-          "linecol": [
-            23,
-            8
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RRFI",
-          "linecol": [
-            23,
-            1
-          ]
-        },
-        "linecol": [
-          23,
-          1
-        ]
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "RRFI",
-          "linecol": [
-            25,
-            10
-          ]
-        },
         "type": "variable_definition",
-        "name": {
+        "name": "RRFIPS",
+        "expression": {
           "type": "symbol",
-          "name": "RRFIPS",
-          "linecol": [
-            25,
-            1
-          ]
-        },
-        "linecol": [
-          25,
-          1
-        ]
+          "value": "RRFI"
+        }
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "symbol",
-      "name": "831",
-      "linecol": [
-        21,
-        7
-      ]
-    },
     "linecol": [
       21,
       1
     ]
   },
   {
-    "application": {
-      "type": "applications_reference",
-      "names": [
-        {
-          "type": "symbol_enumeration",
-          "value": [
+    "type": "regle",
+    "name": "8312",
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "variables": [
+      {
+        "type": "variable_definition",
+        "name": "MICFR",
+        "expression": {
+          "type": "product_expression",
+          "operands": [
             {
-              "type": "symbol",
-              "name": "iliad",
-              "linecol": [
-                27,
-                15
+              "type": "function_call",
+              "name": "present",
+              "parameters": [
+                {
+                  "type": "symbol",
+                  "value": "RFMIC"
+                }
               ]
             },
             {
-              "type": "symbol",
-              "name": "batch",
-              "linecol": [
-                27,
-                23
+              "type": "function_call",
+              "name": "arr",
+              "parameters": [
+                {
+                  "type": "product_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "RFMIC"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "TX_MICFON"
+                    },
+                    {
+                      "type": "integer",
+                      "value": 100
+                    }
+                  ],
+                  "operators": [
+                    "*",
+                    "/"
+                  ]
+                }
               ]
             }
           ],
-          "linecol": [
-            27,
-            15
+          "operators": [
+            "*"
           ]
         }
-      ],
-      "linecol": [
-        27,
-        1
-      ]
-    },
-    "variables": [
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "present(RFMIC) * arr(RFMIC * TX_MICFON/100)",
-          "linecol": [
-            28,
-            9
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "MICFR",
-          "linecol": [
-            28,
-            1
-          ]
-        },
-        "linecol": [
-          28,
-          1
-        ]
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "symbol",
-      "name": "8312",
-      "linecol": [
-        26,
-        7
-      ]
-    },
     "linecol": [
       26,
       1
     ]
   },
   {
-    "application": {
-      "type": "applications_reference",
-      "names": [
-        {
-          "type": "symbol_enumeration",
-          "value": [
+    "type": "regle",
+    "name": "8316",
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "variables": [
+      {
+        "type": "variable_definition",
+        "name": "RMF",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
             {
-              "type": "symbol",
-              "name": "iliad",
-              "linecol": [
-                30,
-                15
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "RFMIC"
+                },
+                {
+                  "type": "symbol",
+                  "value": "MICFR"
+                }
+              ],
+              "operators": [
+                "-"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "RMFN",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "function_call",
+                  "name": "max",
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "value": 0
+                    },
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "RFMIC"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "MICFR"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "RFDANT"
+                        }
+                      ],
+                      "operators": [
+                        "-",
+                        "-"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif",
+                      "parameters": [
+                        {
+                          "type": "symbol",
+                          "value": "ART1731BIS"
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
               ]
             },
             {
-              "type": "symbol",
-              "name": "batch",
-              "linecol": [
-                30,
-                23
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "function_call",
+                  "name": "max",
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "value": 0
+                    },
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "RFMIC"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "MICFR"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "DEFRF4BD"
+                        }
+                      ],
+                      "operators": [
+                        "-",
+                        "-"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "symbol",
+                      "value": "ART1731BIS"
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
               ]
             }
           ],
-          "linecol": [
-            30,
-            15
+          "operators": [
+            "+"
           ]
         }
-      ],
-      "linecol": [
-        30,
-        1
-      ]
-    },
-    "variables": [
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0,RFMIC - MICFR)",
-          "linecol": [
-            31,
-            7
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RMF",
-          "linecol": [
-            31,
-            1
-          ]
-        },
-        "linecol": [
-          31,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0,RFMIC - MICFR - RFDANT  )* (1 - positif(ART1731BIS)) + max(0,RFMIC - MICFR - DEFRF4BD) * positif(ART1731BIS)",
-          "linecol": [
-            32,
-            8
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RMFN",
-          "linecol": [
-            32,
-            1
-          ]
-        },
-        "linecol": [
-          32,
-          1
-        ]
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "symbol",
-      "name": "8316",
-      "linecol": [
-        29,
-        7
-      ]
-    },
     "linecol": [
       29,
       1
     ]
   },
   {
-    "application": {
-      "type": "applications_reference",
-      "names": [
-        {
-          "type": "symbol_enumeration",
-          "value": [
+    "type": "regle",
+    "name": "832",
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "variables": [
+      {
+        "type": "variable_definition",
+        "name": "RFCD",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
             {
               "type": "symbol",
-              "name": "iliad",
-              "linecol": [
-                35,
-                15
-              ]
+              "value": "RFORDI"
             },
             {
               "type": "symbol",
-              "name": "batch",
-              "linecol": [
-                35,
-                23
-              ]
+              "value": "FONCI"
+            },
+            {
+              "type": "symbol",
+              "value": "REAMOR"
             }
           ],
-          "linecol": [
-            35,
-            15
+          "operators": [
+            "+",
+            "+"
           ]
         }
-      ],
-      "linecol": [
-        35,
-        1
-      ]
-    },
-    "variables": [
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "RFORDI + FONCI + REAMOR",
-          "linecol": [
-            36,
-            8
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RFCD",
-          "linecol": [
-            36,
-            1
-          ]
-        },
-        "linecol": [
-          36,
-          1
-        ]
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "symbol",
-      "name": "832",
-      "linecol": [
-        34,
-        7
-      ]
-    },
     "linecol": [
       34,
       1
     ]
   },
   {
-    "application": {
-      "type": "applications_reference",
-      "names": [
-        {
-          "type": "symbol_enumeration",
-          "value": [
+    "type": "regle",
+    "name": "833",
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "variables": [
+      {
+        "type": "variable_definition",
+        "name": "VARRFDORD",
+        "expression": {
+          "type": "function_call",
+          "name": "min",
+          "parameters": [
             {
               "type": "symbol",
-              "name": "iliad",
-              "linecol": [
-                38,
-                15
+              "value": "RFCD"
+            },
+            {
+              "type": "symbol",
+              "value": "RFDORD"
+            }
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "RFCE",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "function_call",
+                  "name": "max",
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "value": 0
+                    },
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "RFCD"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "RFDORD"
+                        }
+                      ],
+                      "operators": [
+                        "-"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif",
+                      "parameters": [
+                        {
+                          "type": "symbol",
+                          "value": "ART1731BIS"
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            },
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "function_call",
+                  "name": "max",
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "value": 0
+                    },
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "RFCD"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "DEFRF4BB"
+                        }
+                      ],
+                      "operators": [
+                        "-"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "symbol",
+                      "value": "ART1731BIS"
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "RFCEAPS",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "function_call",
+                  "name": "max",
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "value": 0
+                    },
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "RFORDI"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "RFDORD"
+                        }
+                      ],
+                      "operators": [
+                        "-"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif",
+                      "parameters": [
+                        {
+                          "type": "symbol",
+                          "value": "ART1731BIS"
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            },
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "function_call",
+                  "name": "max",
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "value": 0
+                    },
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "RFORDI"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "DEFRF4BB"
+                        }
+                      ],
+                      "operators": [
+                        "-"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "symbol",
+                      "value": "ART1731BIS"
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "RFCEPS",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "function_call",
+                  "name": "max",
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "value": 0
+                    },
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "RFCD"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "RFDORD"
+                        }
+                      ],
+                      "operators": [
+                        "-"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif",
+                      "parameters": [
+                        {
+                          "type": "symbol",
+                          "value": "ART1731BIS"
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            },
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "function_call",
+                  "name": "max",
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "value": 0
+                    },
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "RFCD"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "DEFRF4BB"
+                        }
+                      ],
+                      "operators": [
+                        "-"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "symbol",
+                      "value": "ART1731BIS"
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "DFCE",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "function_call",
+                  "name": "min",
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "value": 0
+                    },
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "RFCD"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "RFDORD"
+                        }
+                      ],
+                      "operators": [
+                        "-"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif",
+                      "parameters": [
+                        {
+                          "type": "symbol",
+                          "value": "ART1731BIS"
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            },
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "function_call",
+                  "name": "min",
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "value": 0
+                    },
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "RFCD"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "DEFRF4BB"
+                        }
+                      ],
+                      "operators": [
+                        "-"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "symbol",
+                      "value": "ART1731BIS"
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            }
+          ],
+          "operators": [
+            "+"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "RFCF",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "RFCE"
+                },
+                {
+                  "type": "product_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "RFDHIS"
+                    },
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "integer",
+                          "value": 1
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "symbol",
+                              "value": "PREM8_11"
+                            }
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "-"
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "*"
+                  ]
+                }
+              ],
+              "operators": [
+                "-"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "RFCFPS",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "RFCEPS"
+            },
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "RFDHIS"
+                },
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif",
+                      "parameters": [
+                        {
+                          "type": "symbol",
+                          "value": "PREM8_11"
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            }
+          ],
+          "operators": [
+            "-"
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "RFCFAPS",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "RFCEAPS"
+                },
+                {
+                  "type": "product_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "RFDHIS"
+                    },
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "integer",
+                          "value": 1
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "symbol",
+                              "value": "PREM8_11"
+                            }
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "-"
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "*"
+                  ]
+                }
+              ],
+              "operators": [
+                "-"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "DRCF",
+        "expression": {
+          "type": "function_call",
+          "name": "min",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "RFCE"
+                },
+                {
+                  "type": "product_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "RFDHIS"
+                    },
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "integer",
+                          "value": 1
+                        },
+                        {
+                          "type": "function_call",
+                          "name": "positif",
+                          "parameters": [
+                            {
+                              "type": "symbol",
+                              "value": "PREM8_11"
+                            }
+                          ]
+                        }
+                      ],
+                      "operators": [
+                        "-"
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "*"
+                  ]
+                }
+              ],
+              "operators": [
+                "-"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "VARRFDANT",
+        "expression": {
+          "type": "function_call",
+          "name": "min",
+          "parameters": [
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "RFCF"
+                },
+                {
+                  "type": "symbol",
+                  "value": "RFMIC"
+                },
+                {
+                  "type": "symbol",
+                  "value": "MICFR"
+                }
+              ],
+              "operators": [
+                "+",
+                "-"
               ]
             },
             {
               "type": "symbol",
-              "name": "batch",
-              "linecol": [
-                38,
-                23
+              "value": "RFDANT"
+            }
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "RFCG",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "function_call",
+                  "name": "max",
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "value": 0
+                    },
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "RFCF"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "RFDANT"
+                        }
+                      ],
+                      "operators": [
+                        "-"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif",
+                      "parameters": [
+                        {
+                          "type": "symbol",
+                          "value": "ART1731BIS"
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            },
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "function_call",
+                  "name": "max",
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "value": 0
+                    },
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "RFCF"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "DEFRF4BD"
+                        }
+                      ],
+                      "operators": [
+                        "-"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "symbol",
+                      "value": "ART1731BIS"
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
               ]
             }
           ],
-          "linecol": [
-            38,
-            15
+          "operators": [
+            "+"
           ]
         }
-      ],
-      "linecol": [
-        38,
-        1
-      ]
-    },
-    "variables": [
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "min(RFCD,RFDORD)",
-          "linecol": [
-            39,
-            13
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "VARRFDORD",
-          "linecol": [
-            39,
-            1
-          ]
-        },
-        "linecol": [
-          39,
-          1
-        ]
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0,RFCD- RFDORD) * (1 - positif(ART1731BIS)) + max(0,RFCD- DEFRF4BB) * positif(ART1731BIS)",
-          "linecol": [
-            40,
-            8
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RFCE",
-          "linecol": [
-            40,
-            1
-          ]
-        },
-        "linecol": [
-          40,
-          1
-        ]
-      },
-      {
+        "name": "DFCG",
         "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0,RFORDI- RFDORD) * (1 - positif(ART1731BIS)) + max(0,RFORDI- DEFRF4BB) *  positif(ART1731BIS)",
-          "linecol": [
-            42,
-            11
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "function_call",
+                  "name": "min",
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "value": 0
+                    },
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "RFCF"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "RFDANT"
+                        }
+                      ],
+                      "operators": [
+                        "-"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "positif",
+                      "parameters": [
+                        {
+                          "type": "symbol",
+                          "value": "ART1731BIS"
+                        }
+                      ]
+                    }
+                  ],
+                  "operators": [
+                    "-"
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            },
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "function_call",
+                  "name": "min",
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "value": 0
+                    },
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "RFCF"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "DEFRF4BD"
+                        }
+                      ],
+                      "operators": [
+                        "-"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "function_call",
+                  "name": "positif",
+                  "parameters": [
+                    {
+                      "type": "symbol",
+                      "value": "ART1731BIS"
+                    }
+                  ]
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            }
+          ],
+          "operators": [
+            "+"
           ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RFCEAPS",
-          "linecol": [
-            42,
-            1
-          ]
-        },
-        "linecol": [
-          42,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0,RFCD-RFDORD)* (1 - positif(ART1731BIS)) +  max(0,RFCD-DEFRF4BB) * positif(ART1731BIS)",
-          "linecol": [
-            44,
-            10
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RFCEPS",
-          "linecol": [
-            44,
-            1
-          ]
-        },
-        "linecol": [
-          44,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "min(0,RFCD- RFDORD) * (1 - positif(ART1731BIS)) +  min(0,RFCD- DEFRF4BB)  * positif(ART1731BIS)",
-          "linecol": [
-            47,
-            8
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "DFCE",
-          "linecol": [
-            47,
-            1
-          ]
-        },
-        "linecol": [
-          47,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0,RFCE-(RFDHIS * (1 - positif(PREM8_11))))",
-          "linecol": [
-            50,
-            8
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RFCF",
-          "linecol": [
-            50,
-            1
-          ]
-        },
-        "linecol": [
-          50,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "(RFCEPS-RFDHIS* (1 - positif(PREM8_11)))",
-          "linecol": [
-            51,
-            10
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RFCFPS",
-          "linecol": [
-            51,
-            1
-          ]
-        },
-        "linecol": [
-          51,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0,RFCEAPS-(RFDHIS * (1 - positif(PREM8_11))))",
-          "linecol": [
-            52,
-            11
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RFCFAPS",
-          "linecol": [
-            52,
-            1
-          ]
-        },
-        "linecol": [
-          52,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "min(0,RFCE-(RFDHIS * (1 - positif(PREM8_11))))",
-          "linecol": [
-            54,
-            9
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "DRCF",
-          "linecol": [
-            54,
-            1
-          ]
-        },
-        "linecol": [
-          54,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "min(RFCF+RFMIC - MICFR,RFDANT)",
-          "linecol": [
-            55,
-            13
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "VARRFDANT",
-          "linecol": [
-            55,
-            1
-          ]
-        },
-        "linecol": [
-          55,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0,RFCF- RFDANT) * (1 - positif(ART1731BIS)) + max(0,RFCF- DEFRF4BD) * positif(ART1731BIS)",
-          "linecol": [
-            56,
-            8
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RFCG",
-          "linecol": [
-            56,
-            1
-          ]
-        },
-        "linecol": [
-          56,
-          1
-        ]
-      },
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "min(0,RFCF- RFDANT) * (1 - positif(ART1731BIS)) + min(0,RFCF- DEFRF4BD) * positif(ART1731BIS)",
-          "linecol": [
-            58,
-            8
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "DFCG",
-          "linecol": [
-            58,
-            1
-          ]
-        },
-        "linecol": [
-          58,
-          1
-        ]
+        }
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "symbol",
-      "name": "833",
-      "linecol": [
-        37,
-        7
-      ]
-    },
     "linecol": [
       37,
       1
     ]
   },
   {
-    "application": {
-      "type": "applications_reference",
-      "names": [
-        {
-          "type": "symbol_enumeration",
-          "value": [
+    "type": "regle",
+    "name": "834",
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "variables": [
+      {
+        "type": "variable_definition",
+        "name": "RFON",
+        "expression": {
+          "type": "function_call",
+          "name": "arr",
+          "parameters": [
             {
-              "type": "symbol",
-              "name": "iliad",
-              "linecol": [
-                61,
-                15
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "RFCG"
+                },
+                {
+                  "type": "symbol",
+                  "value": "RFORDI"
+                },
+                {
+                  "type": "symbol",
+                  "value": "RFCD"
+                }
+              ],
+              "operators": [
+                "*",
+                "/"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "type": "variable_definition",
+        "name": "2REVF",
+        "expression": {
+          "type": "function_call",
+          "name": "min",
+          "parameters": [
+            {
+              "type": "function_call",
+              "name": "arr",
+              "parameters": [
+                {
+                  "type": "product_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "RFCG"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FONCI"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "RFCD"
+                    }
+                  ],
+                  "operators": [
+                    "*",
+                    "/"
+                  ]
+                }
               ]
             },
             {
-              "type": "symbol",
-              "name": "batch",
-              "linecol": [
-                61,
-                23
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "RFCG"
+                },
+                {
+                  "type": "symbol",
+                  "value": "RFON"
+                }
+              ],
+              "operators": [
+                "-"
               ]
             }
-          ],
-          "linecol": [
-            61,
-            15
           ]
         }
-      ],
-      "linecol": [
-        61,
-        1
-      ]
-    },
-    "variables": [
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "arr(RFCG*RFORDI/RFCD)",
-          "linecol": [
-            62,
-            8
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RFON",
-          "linecol": [
-            62,
-            1
-          ]
-        },
-        "linecol": [
-          62,
-          1
-        ]
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "min( arr ((RFCG)*(FONCI)/RFCD) , RFCG-RFON)",
-          "linecol": [
-            63,
-            9
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "2REVF",
-          "linecol": [
-            63,
-            1
+        "name": "3REVF",
+        "expression": {
+          "type": "function_call",
+          "name": "min",
+          "parameters": [
+            {
+              "type": "function_call",
+              "name": "arr",
+              "parameters": [
+                {
+                  "type": "product_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "RFCG"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "REAMOR"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "RFCD"
+                    }
+                  ],
+                  "operators": [
+                    "*",
+                    "/"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "RFCG"
+                },
+                {
+                  "type": "symbol",
+                  "value": "RFON"
+                },
+                {
+                  "type": "symbol",
+                  "value": "2REVF"
+                }
+              ],
+              "operators": [
+                "-",
+                "-"
+              ]
+            }
           ]
-        },
-        "linecol": [
-          63,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "min( arr (RFCG*(REAMOR)/RFCD) , RFCG-RFON-2REVF)",
-          "linecol": [
-            64,
-            9
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "3REVF",
-          "linecol": [
-            64,
-            1
-          ]
-        },
-        "linecol": [
-          64,
-          1
-        ]
-      },
-      {
+        "name": "RFQ",
         "expression": {
-          "type": "variable_definition_expression",
-          "value": "FONCI + REAMOR",
-          "linecol": [
-            65,
-            7
+          "type": "sum_expression",
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "FONCI"
+            },
+            {
+              "type": "symbol",
+              "value": "REAMOR"
+            }
+          ],
+          "operators": [
+            "+"
           ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "RFQ",
-          "linecol": [
-            65,
-            1
-          ]
-        },
-        "linecol": [
-          65,
-          1
-        ]
+        }
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "symbol",
-      "name": "834",
-      "linecol": [
-        60,
-        7
-      ]
-    },
     "linecol": [
       60,
       1
     ]
   },
   {
-    "application": {
-      "type": "applications_reference",
-      "names": [
-        {
-          "type": "symbol_enumeration",
-          "value": [
+    "type": "regle",
+    "name": "834113",
+    "applications": [
+      "iliad"
+    ],
+    "variables": [
+      {
+        "type": "variable_definition",
+        "name": "DEF4BB",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
             {
               "type": "symbol",
-              "name": "iliad",
-              "linecol": [
-                67,
-                15
+              "value": "RFORDI"
+            },
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "RFMIC"
+                },
+                {
+                  "type": "float",
+                  "value": 0.7
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            },
+            {
+              "type": "symbol",
+              "value": "FONCI"
+            },
+            {
+              "type": "symbol",
+              "value": "REAMOR"
+            },
+            {
+              "type": "function_call",
+              "name": "max",
+              "parameters": [
+                {
+                  "type": "integer",
+                  "value": 0
+                },
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "RFORDI"
+                    },
+                    {
+                      "type": "product_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "RFMIC"
+                        },
+                        {
+                          "type": "float",
+                          "value": 0.7
+                        }
+                      ],
+                      "operators": [
+                        "*"
+                      ]
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FONCI"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "REAMOR"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "RFDORD"
+                    }
+                  ],
+                  "operators": [
+                    "+",
+                    "+",
+                    "+",
+                    "-"
+                  ]
+                }
               ]
             }
           ],
-          "linecol": [
-            67,
-            15
+          "operators": [
+            "+",
+            "+",
+            "+",
+            "-"
           ]
         }
-      ],
-      "linecol": [
-        67,
-        1
-      ]
-    },
-    "variables": [
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "RFORDI + RFMIC * 0.70 + FONCI + REAMOR - max(0,RFORDI+ RFMIC * 0.70 + FONCI + REAMOR - RFDORD)",
-          "linecol": [
-            68,
-            10
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "DEF4BB",
-          "linecol": [
-            68,
-            1
-          ]
-        },
-        "linecol": [
-          68,
-          1
-        ]
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "min(RFDORD,max(DEF4BB1731,max(DEF4BB_P,DEF4BBP2))) * DEFRIRF * (1-PREM8_11)",
-          "linecol": [
-            69,
-            12
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "DEFRF4BB",
-          "linecol": [
-            69,
-            1
+        "name": "DEFRF4BB",
+        "expression": {
+          "type": "product_expression",
+          "operands": [
+            {
+              "type": "function_call",
+              "name": "min",
+              "parameters": [
+                {
+                  "type": "symbol",
+                  "value": "RFDORD"
+                },
+                {
+                  "type": "function_call",
+                  "name": "max",
+                  "parameters": [
+                    {
+                      "type": "symbol",
+                      "value": "DEF4BB1731"
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "max",
+                      "parameters": [
+                        {
+                          "type": "symbol",
+                          "value": "DEF4BB_P"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "DEF4BBP2"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "symbol",
+              "value": "DEFRIRF"
+            },
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "integer",
+                  "value": 1
+                },
+                {
+                  "type": "symbol",
+                  "value": "PREM8_11"
+                }
+              ],
+              "operators": [
+                "-"
+              ]
+            }
+          ],
+          "operators": [
+            "*",
+            "*"
           ]
-        },
-        "linecol": [
-          69,
-          1
-        ]
+        }
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "symbol",
-      "name": "834113",
-      "linecol": [
-        66,
-        7
-      ]
-    },
     "linecol": [
       66,
       1
     ]
   },
   {
-    "application": {
-      "type": "applications_reference",
-      "names": [
-        {
-          "type": "symbol_enumeration",
-          "value": [
+    "type": "regle",
+    "name": "834115",
+    "applications": [
+      "iliad"
+    ],
+    "variables": [
+      {
+        "type": "variable_definition",
+        "name": "DEF4BD",
+        "expression": {
+          "type": "sum_expression",
+          "operands": [
             {
               "type": "symbol",
-              "name": "iliad",
-              "linecol": [
-                71,
-                15
+              "value": "RFORDI"
+            },
+            {
+              "type": "product_expression",
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "RFMIC"
+                },
+                {
+                  "type": "float",
+                  "value": 0.7
+                }
+              ],
+              "operators": [
+                "*"
+              ]
+            },
+            {
+              "type": "symbol",
+              "value": "FONCI"
+            },
+            {
+              "type": "symbol",
+              "value": "REAMOR"
+            },
+            {
+              "type": "symbol",
+              "value": "RFDORD"
+            },
+            {
+              "type": "symbol",
+              "value": "RFDHIS"
+            },
+            {
+              "type": "function_call",
+              "name": "max",
+              "parameters": [
+                {
+                  "type": "integer",
+                  "value": 0
+                },
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "RFORDI"
+                    },
+                    {
+                      "type": "product_expression",
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "RFMIC"
+                        },
+                        {
+                          "type": "float",
+                          "value": 0.7
+                        }
+                      ],
+                      "operators": [
+                        "*"
+                      ]
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "FONCI"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "REAMOR"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "RFDORD"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "RFDHIS"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "RFDANT"
+                    }
+                  ],
+                  "operators": [
+                    "+",
+                    "+",
+                    "+",
+                    "-",
+                    "-",
+                    "-"
+                  ]
+                }
               ]
             }
           ],
-          "linecol": [
-            71,
-            15
+          "operators": [
+            "+",
+            "+",
+            "+",
+            "-",
+            "-",
+            "-"
           ]
         }
-      ],
-      "linecol": [
-        71,
-        1
-      ]
-    },
-    "variables": [
-      {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "RFORDI + RFMIC * 0.70 + FONCI + REAMOR-RFDORD - RFDHIS- max(0,RFORDI+ RFMIC * 0.70 + FONCI + REAMOR-RFDORD - RFDHIS-RFDANT)",
-          "linecol": [
-            72,
-            10
-          ]
-        },
-        "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "DEF4BD",
-          "linecol": [
-            72,
-            1
-          ]
-        },
-        "linecol": [
-          72,
-          1
-        ]
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "min(RFDANT,max(DEF4BD1731,max(DEF4BD_P,DEF4BDP2)))* DEFRIRF * (1-PREM8_11)",
-          "linecol": [
-            73,
-            12
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "DEFRF4BD",
-          "linecol": [
-            73,
-            1
+        "name": "DEFRF4BD",
+        "expression": {
+          "type": "product_expression",
+          "operands": [
+            {
+              "type": "function_call",
+              "name": "min",
+              "parameters": [
+                {
+                  "type": "symbol",
+                  "value": "RFDANT"
+                },
+                {
+                  "type": "function_call",
+                  "name": "max",
+                  "parameters": [
+                    {
+                      "type": "symbol",
+                      "value": "DEF4BD1731"
+                    },
+                    {
+                      "type": "function_call",
+                      "name": "max",
+                      "parameters": [
+                        {
+                          "type": "symbol",
+                          "value": "DEF4BD_P"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "DEF4BDP2"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "symbol",
+              "value": "DEFRIRF"
+            },
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "integer",
+                  "value": 1
+                },
+                {
+                  "type": "symbol",
+                  "value": "PREM8_11"
+                }
+              ],
+              "operators": [
+                "-"
+              ]
+            }
+          ],
+          "operators": [
+            "*",
+            "*"
           ]
-        },
-        "linecol": [
-          73,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0, RFORDI-RFDORD)",
-          "linecol": [
-            74,
-            10
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "DEF4BC",
-          "linecol": [
-            74,
-            1
+        "name": "DEF4BC",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "RFORDI"
+                },
+                {
+                  "type": "symbol",
+                  "value": "RFDORD"
+                }
+              ],
+              "operators": [
+                "-"
+              ]
+            }
           ]
-        },
-        "linecol": [
-          74,
-          1
-        ]
+        }
       },
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0,min(RFDHIS,-max(DEF4BC1731,max(DEF4BC_P,DEF4BCP2))+RFDHIS)) * positif(DEFRIGLOBINF+DEFRIGLOBSUP) * (1-PREM8_11)",
-          "linecol": [
-            75,
-            12
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "DEFRF4BC",
-          "linecol": [
-            75,
-            1
+        "name": "DEFRF4BC",
+        "expression": {
+          "type": "product_expression",
+          "operands": [
+            {
+              "type": "function_call",
+              "name": "max",
+              "parameters": [
+                {
+                  "type": "integer",
+                  "value": 0
+                },
+                {
+                  "type": "function_call",
+                  "name": "min",
+                  "parameters": [
+                    {
+                      "type": "symbol",
+                      "value": "RFDHIS"
+                    },
+                    {
+                      "type": "sum_expression",
+                      "operands": [
+                        {
+                          "type": "function_call",
+                          "name": "max",
+                          "parameters": [
+                            {
+                              "type": "symbol",
+                              "value": "DEF4BC1731"
+                            },
+                            {
+                              "type": "function_call",
+                              "name": "max",
+                              "parameters": [
+                                {
+                                  "type": "symbol",
+                                  "value": "DEF4BC_P"
+                                },
+                                {
+                                  "type": "symbol",
+                                  "value": "DEF4BCP2"
+                                }
+                              ]
+                            }
+                          ],
+                          "unary": "-"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "RFDHIS"
+                        }
+                      ],
+                      "operators": [
+                        "+"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "function_call",
+              "name": "positif",
+              "parameters": [
+                {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "DEFRIGLOBINF"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "DEFRIGLOBSUP"
+                    }
+                  ],
+                  "operators": [
+                    "+"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "integer",
+                  "value": 1
+                },
+                {
+                  "type": "symbol",
+                  "value": "PREM8_11"
+                }
+              ],
+              "operators": [
+                "-"
+              ]
+            }
+          ],
+          "operators": [
+            "*",
+            "*"
           ]
-        },
-        "linecol": [
-          75,
-          1
-        ]
+        }
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "symbol",
-      "name": "834115",
-      "linecol": [
-        70,
-        7
-      ]
-    },
     "linecol": [
       70,
       1
     ]
   },
   {
-    "application": {
-      "type": "applications_reference",
-      "names": [
-        {
-          "type": "symbol_enumeration",
-          "value": [
-            {
-              "type": "symbol",
-              "name": "iliad",
-              "linecol": [
-                77,
-                15
-              ]
-            }
-          ],
-          "linecol": [
-            77,
-            15
-          ]
-        }
-      ],
-      "linecol": [
-        77,
-        1
-      ]
-    },
+    "type": "regle",
+    "name": "834117",
+    "applications": [
+      "iliad"
+    ],
     "variables": [
       {
-        "expression": {
-          "type": "variable_definition_expression",
-          "value": "max(0,RFDORD + RFDANT - DEFRF4BB - DEFRF4BD)",
-          "linecol": [
-            78,
-            13
-          ]
-        },
         "type": "variable_definition",
-        "name": {
-          "type": "symbol",
-          "name": "DEFRFNONI",
-          "linecol": [
-            78,
-            1
+        "name": "DEFRFNONI",
+        "expression": {
+          "type": "function_call",
+          "name": "max",
+          "parameters": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "RFDORD"
+                },
+                {
+                  "type": "symbol",
+                  "value": "RFDANT"
+                },
+                {
+                  "type": "symbol",
+                  "value": "DEFRF4BB"
+                },
+                {
+                  "type": "symbol",
+                  "value": "DEFRF4BD"
+                }
+              ],
+              "operators": [
+                "+",
+                "-",
+                "-"
+              ]
+            }
           ]
-        },
-        "linecol": [
-          78,
-          1
-        ]
+        }
       }
     ],
-    "type": "regle_declaration",
-    "name": {
-      "type": "symbol",
-      "name": "834117",
-      "linecol": [
-        76,
-        7
-      ]
-    },
     "linecol": [
       76,
       1
