@@ -22,16 +22,16 @@ alias = "alias" symbol
 attribute = symbol "=" integer
 tableau = "tableau[" integer "]"
 type = "type" ("BOOLEEN" / "DATE_AAAA" / "DATE_JJMMAAAA" / "DATE_MM" / "ENTIER" / "REEL")
-variable_calculee_qualifiers = ("base" / "restituee")*
-variable_calculee_declaration = symbol ":" tableau? "calculee" variable_calculee_qualifiers ":" string type? ";"
+variable_calculee_tags = ("base" / "restituee")*
+variable_calculee_declaration = symbol ":" tableau? "calculee" variable_calculee_tags ":" string type? ";"
 variable_const_declaration = symbol ":" "const" "=" float ";"
 variable_saisie_declaration = symbol ":" "saisie" ("contexte" / "famille" / "penalite" / "revenu")+ attribute* "restituee"? alias ":" string type? ";"
 variable_declaration = (variable_calculee_declaration / variable_const_declaration / variable_saisie_declaration)
 
-litteral = float / (r'\d+' !r'\w') / symbol
+litteral = float / (integer !r'\w') / symbol
 loop_expression = loop_variables ":" expression
-function_arguments = expression ("," expression)*
-function_call = symbol "(" (loop_expression / function_arguments) ")"
+function_parameters = expression ("," expression)*
+function_call = symbol "(" (loop_expression / function_parameters) ")"
 ternary_operator = "si" expression "alors" expression ("sinon" expression)? "finsi"
 pour_operator = "pour" loop_expression
 unary = ("+" / "-")
@@ -41,8 +41,7 @@ product = factor (("*" / "/") factor)*
 sum = product (("+" / "-") product)*
 comparaison = sum ((">=" / "<=" / "!=" / ">" / "<" / "=") sum)?
 dans = comparaison (("non"? "dans") "(" loop_variable_domain ")")?
-boolean = dans (("et" / "ou") dans)*
-expression = boolean
+expression = dans (("et" / "ou") dans)*
 
 variable_definition = symbol brackets? "=" expression ";"
 pour_variable_definition = "pour" loop_variables ":" variable_definition
