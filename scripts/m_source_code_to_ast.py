@@ -9,6 +9,7 @@ Convert M language source code to a JSON AST.
 
 from __future__ import unicode_literals
 
+from collections import OrderedDict
 import argparse
 import json
 import logging
@@ -39,6 +40,13 @@ def clean_lines(lines):
         line.strip()
         for line in lines.split('\n')
         )
+
+
+def extract_operators(node):
+    return [
+        node[index].value
+        for index in xrange(1, len(node), 2)
+        ]
 
 
 def find_one_or_many(nodes, type):
@@ -73,12 +81,34 @@ def find_one_or_none(nodes, type):
     return results[0] if results else None
 
 
-def make_json_ast_node(node, type=None, **kwargs):
-    linecol = m_parser.pos_to_linecol(node.position)
+def get_linecol(node):
+    global m_parser
+    return m_parser.pos_to_linecol(node.position)
+
+
+def make_json_ast_node(node=None, linecol=None, type=None, **kwargs):
+    if node is not None and linecol:
+        linecol = get_linecol(node)
     if type is None:
         type = node.rule_name
-    # log.debug(type)
     return without_empty_values(linecol=linecol, type=type, **kwargs)
+
+
+def only_child(children):
+    assert len(children) == 1, children
+    return children[0]
+
+
+def ordered_keys(dict_):
+    """Order keys for the JSON to be more readable by a human."""
+    def get_items(keys):
+        return [(key, dict_[key]) for key in keys if key in dict_]
+    assert isinstance(dict_, dict), dict_
+    first_keys = ['type', 'name']
+    last_keys = ['linecol']
+    other_keys = sorted(set(dict_.keys()).difference(first_keys, last_keys))
+    items = get_items(first_keys) + get_items(other_keys) + get_items(last_keys)
+    return OrderedDict(items)
 
 
 def to_list(value):
@@ -87,11 +117,11 @@ def to_list(value):
 
 def without_empty_values(**kwargs):
     """Allows 0 values but not None, [], {}."""
-    return {
+    return ordered_keys({
         key: value
         for key, value in kwargs.iteritems()
         if value is not None or isinstance(value, (list, dict)) and value
-        }
+        })
 
 
 # PEG parser visitor
@@ -112,40 +142,42 @@ class MLanguageVisitor(PTNodeVisitor):
             raise NotImplementedError(infos)
 
     def visit_alias(self, node, children):
-        value = find_one(children, type='symbol')
+        assert len(children) == 1, children
         return make_json_ast_node(
             name='alias',
             node=node,
-            value=value,
+            value=children[0]['value'],
             )
 
-    def visit_application_declaration(self, node, children):
-        name = find_one(children, type='symbol')
+    def visit_application(self, node, children):
+        assert len(children) == 1, children
         return make_json_ast_node(
-            name=name,
+            linecol=True,
+            name=children[0]['value'],
             node=node,
             )
 
     def visit_applications_reference(self, node, children):
+        assert len(children) == 1, children
+        names = [symbol['value'] for symbol in children[0]]
         return make_json_ast_node(
-            names=children[0],
+            names=names,
             node=node,
             )
 
     def visit_attribute(self, node, children):
-        name = find_one(children, type='symbol')
-        value = find_one(children, type='integer')
+        assert len(children) == 2, children
         return make_json_ast_node(
-            name=name,
+            name=children[0]['value'],
             node=node,
-            value=value,
+            value=children[1]['value'],
             )
 
     def visit_brackets(self, node, children):
-        value = find_one(children, type='symbol')
+        assert len(children) == 1, children
         return make_json_ast_node(
+            index=children[0]['value'],
             node=node,
-            value=value,
             )
 
     def visit_comment(self, node, children):
@@ -155,11 +187,7 @@ class MLanguageVisitor(PTNodeVisitor):
         if len(children) == 1:
             return children[0]
         else:
-            operators = [
-                node[index].value
-                for index in xrange(1, len(node), 2)
-                ]
-            # TODO Write and call a function infix_to_tree(operators=operators, operands=children)
+            operators = extract_operators(node)
             return make_json_ast_node(
                 node=node,
                 operands=children,
@@ -170,28 +198,41 @@ class MLanguageVisitor(PTNodeVisitor):
         if len(children) == 1:
             return children[0]
         else:
-            import ipdb; ipdb.set_trace()
+            assert len(children) == 2, children
+            options = to_list(children[1])
+            return make_json_ast_node(
+                expression=children[0],
+                node=node,
+                options=options,
+                )
 
-    def visit_enchaineur_declaration(self, node, children):
-        name = find_one(children, type='symbol')
-        applications = find_one(children, type='applications_reference')
+    def visit_enchaineur(self, node, children):
+        assert len(children) == 2, children
         return make_json_ast_node(
-            applications=applications,
-            name=name,
+            applications=children[1]['names'],
+            linecol=True,
+            name=children[0]['value'],
             node=node,
             )
 
-    def visit_erreur_declaration(self, node, children):
-        name = find_one(children, type='symbol')
-        erreur_type = find_one(children, type='erreur_type')
-        strings = find_many(children, type='string')
+    def visit_enchaineur_reference(self, node, children):
+        assert len(children) == 1, children
+        return make_json_ast_node(
+            node=node,
+            value=children[0]['value'],
+            )
+
+    def visit_erreur(self, node, children):
+        erreur_type = find_one(children, type='erreur_type')['value']
+        strings = [string['value'] for string in find_many(children, type='string')]
         description = strings[3]
         codes = strings[:3] + [strings[4]]
         return make_json_ast_node(
             codes=codes,
             description=description,
             erreur_type=erreur_type,
-            name=name,
+            linecol=True,
+            name=children[0]['value'],
             node=node,
             )
 
@@ -205,15 +246,12 @@ class MLanguageVisitor(PTNodeVisitor):
         if len(children) == 1:
             return children[0]
         else:
-            operators = [
-                node[index].value
-                for index in xrange(1, len(node), 2)
-                ]
-            # TODO Write and call a function infix_to_tree(operators=operators, operands=children)
+            operators = extract_operators(node)
             return make_json_ast_node(
                 node=node,
                 operands=children,
                 operators=operators,
+                type='boolean_expression',
                 )
 
     def visit_factor(self, node, children):
@@ -240,7 +278,7 @@ class MLanguageVisitor(PTNodeVisitor):
     def visit_function_call(self, node, children):
         return make_json_ast_node(
             parameters=to_list(children[1]),
-            name=children[0],
+            name=children[0]['value'],
             node=node,
             )
 
@@ -248,8 +286,7 @@ class MLanguageVisitor(PTNodeVisitor):
         return children
 
     def visit_group(self, node, children):
-        assert len(children) == 1, children
-        return children[0]
+        return only_child(children)
 
     def visit_integer(self, node, children):
         return make_json_ast_node(
@@ -258,105 +295,91 @@ class MLanguageVisitor(PTNodeVisitor):
             )
 
     def visit_integer_range(self, node, children):
-        bounds = find_one_or_many(children, type='integer')
-        assert len(bounds) == 2, bounds
+        assert len(children) == 2, children
         return make_json_ast_node(
             node=node,
-            start=bounds[0],
-            stop=bounds[1],
+            start=children[0],
+            stop=children[1],
             )
 
     def visit_litteral(self, node, children):
-        assert len(children) == 1, children
-        return children[0]
+        return only_child(children)
 
     def visit_loop_expression(self, node, children):
+        assert len(children) == 2, children
+        assert isinstance(children[0], list), children[0]
         return make_json_ast_node(
             expression=children[1],
             node=node,
-            variables=children[0]['value'],
+            variables=children[0],
             )
 
     def visit_loop_variable1(self, node, children):
-        name = find_one(children, type='symbol')
-        domain = find_one(children, type='loop_variable_domain')
+        assert len(children) == 2, children
         return make_json_ast_node(
-            domain=domain,
-            name=name,
+            domains=children[1],
+            name=children[0]['value'],
             node=node,
+            type='loop_variable',
             )
 
     def visit_loop_variable2(self, node, children):
+        assert len(children) == 2, children
         return make_json_ast_node(
-            domain=children[1]['value'],
+            domains=children[1],
             name=children[0]['value'],
             node=node,
             type='loop_variable',
             )
 
     def visit_loop_variables(self, node, children):
-        value = find_one_or_many(children, type='loop_variable')
-        return make_json_ast_node(
-            node=node,
-            value=value,
-            )
+        assert isinstance(children, list), children
+        return children
 
-    def visit_loop_variable_domain(self, node, children):
-        return make_json_ast_node(
-            node=node,
-            value=children,
-            )
+    def visit_loop_variable_domains(self, node, children):
+        return to_list(children)
 
     def visit_m_source_file(self, node, children):
-        # Do not wrap root rule in a sub-key.
         return children
 
     def visit_pour_variable_definition(self, node, children):
-        loop_variables = find_one(children, type='loop_variables')
-        variable_definition = find_one(children, type='variable_definition')
+        assert len(children) == 2, children
+        assert isinstance(children[0], list), children[0]
+        # TODO Unroll loop to define many variables and get them in "visit_regle".
         return make_json_ast_node(
-            loop_variables=loop_variables,
+            loop_variables=children[0],
             node=node,
-            variable_definition=variable_definition,
+            variable_definition=children[1],
             )
 
-    def visit_product(self, node, children):
+    def visit_product_expression(self, node, children):
         if len(children) == 1:
             return children[0]
         else:
-            operators = [
-                node[index].value
-                for index in xrange(1, len(node), 2)
-                ]
-            # TODO Write and call a function infix_to_tree(operators=operators, operands=children)
+            operators = extract_operators(node)
             return make_json_ast_node(
                 node=node,
                 operands=children,
                 operators=operators,
                 )
 
-    def visit_regle_declaration(self, node, children):
-        application = find_one(children, type='applications_reference')
-        enchaineur = find_one_or_none(children, type='regle_enchaineur')
+    def visit_regle(self, node, children):
+        applications = find_one(children, type='applications_reference')['names']
+        enchaineur_reference = find_one_or_none(children, type='enchaineur_reference')
+        enchaineur = enchaineur_reference['value'] if enchaineur_reference is not None else None
         symbols = find_one_or_many(children, type='symbol')
-        name, tags = symbols[-1], symbols[:-1] or None
+        name, tags = symbols[-1]['value'], symbols[:-1] or None
         variable_definition_list = find_many_or_none(children, type='variable_definition')
         pour_variable_definition_list = find_many_or_none(children, type='pour_variable_definition')
         variables = ([] + (variable_definition_list or []) + (pour_variable_definition_list or [])) or None
         return make_json_ast_node(
-            application=application,
+            applications=applications,
             enchaineur=enchaineur,
+            linecol=True,
             name=name,
             node=node,
             tags=tags,
             variables=variables,
-            )
-
-    def visit_regle_enchaineur(self, node, children):
-        name = find_one_or_many(children, type='symbol')
-        return make_json_ast_node(
-            name=name,
-            node=node,
             )
 
     def visit_string(self, node, children):
@@ -365,14 +388,11 @@ class MLanguageVisitor(PTNodeVisitor):
             value=node[1].value,
             )
 
-    def visit_sum(self, node, children):
+    def visit_sum_expression(self, node, children):
         if len(children) == 1:
             return children[0]
         else:
-            operators = [
-                node[index].value
-                for index in xrange(1, len(node), 2)
-                ]
+            operators = extract_operators(node)
             return make_json_ast_node(
                 node=node,
                 operands=children,
@@ -390,14 +410,13 @@ class MLanguageVisitor(PTNodeVisitor):
         return children
 
     def visit_symbol_or_integer_range(self, node, children):
-        assert len(children) == 1, children
-        return children[0]
+        return only_child(children)
 
     def visit_tableau(self, node, children):
-        value = find_one(children, type='integer')
+        assert len(children) == 1, children
         return make_json_ast_node(
+            dimension=children[0]['value'],
             node=node,
-            value=value,
             )
 
     def visit_ternary_operator(self, node, children):
@@ -407,7 +426,7 @@ class MLanguageVisitor(PTNodeVisitor):
             return make_json_ast_node(
                 condition=children[0],
                 node=node,
-                value_if_false=children[2],
+                value_if_false=children[2] if len(children) == 3 else None,
                 value_if_true=children[1],
                 )
 
@@ -424,16 +443,18 @@ class MLanguageVisitor(PTNodeVisitor):
             value=node.value,
             )
 
-    def visit_variable_calculee_declaration(self, node, children):
-        name = find_one(children, type='symbol')
+    def visit_variable(self, node, children):
+        return only_child(children)
+
+    def visit_variable_calculee(self, node, children):
         description = find_one(children, type='string')
         variable_calculee_tags = find_one_or_none(children, type='variable_calculee_tags')
-        attributes = None if variable_calculee_tags is None else \
-            {'type_tags': variable_calculee_tags}
+        attributes = None if variable_calculee_tags is None else {'tags': variable_calculee_tags}
         return make_json_ast_node(
             attributes=attributes,
             description=description,
-            name=name,
+            linecol=True,
+            name=children[0]['value'],
             node=node,
             variable_type='calculee',
             )
@@ -448,78 +469,59 @@ class MLanguageVisitor(PTNodeVisitor):
             value=tags,
             )
 
-    def visit_variable_const_declaration(self, node, children):
-        name = find_one(children, type='symbol')
-        value = find_one(children, type='float')
+    def visit_variable_const(self, node, children):
+        assert len(children) == 2, children
         return make_json_ast_node(
-            name=name,
+            name=children[0]['value'],
             node=node,
-            value=value,
+            value=children[1]['value'],
             variable_type='const',
             )
 
-    def visit_variable_declaration(self, node, children):
-        assert len(children) == 1, children
-        return children[0]
-
     def visit_variable_definition(self, node, children):
         brackets = find_one_or_none(children, type='brackets')
-        if brackets:
-            import ipdb; ipdb.set_trace()
         return make_json_ast_node(
-            definition=children[-1],
-            index=brackets,
-            name=children[0],
+            expression=children[-1],
+            index=brackets['index'] if brackets is not None else None,
+            name=children[0]['value'],
             node=node,
             )
 
-    def visit_variable_saisie_declaration(self, node, children):
-        name = find_one(children, type='symbol')
-        description = find_one(children, type='string')
+    def visit_variable_saisie(self, node, children):
+        description = find_one(children, type='string')['value']
         attributes = find_many_or_none(children, type='attribute')
+        if attributes is not None:
+            attributes = {
+                attribute['name']: attribute['value']
+                for attribute in attributes
+                }
         return make_json_ast_node(
             attributes=attributes,
             description=description,
-            name=name,
+            name=children[0]['value'],
             node=node,
             variable_type='saisie',
             )
 
-    def visit_verif_declaration(self, node, children):
+    def visit_verif(self, node, children):
         symbols = find_one_or_many(children, type='symbol')
-        name, tags = symbols[-1], symbols[:-1] or None
-        application = find_one(children, type='applications_reference')
-        conditions = find_one_or_many(children, type='verif_declaration_condition')
+        name, tags = symbols[-1]['value'], symbols[:-1] or None
+        applications = find_one(children, type='applications_reference')['names']
+        conditions = find_one_or_many(children, type='verif_condition')
         return make_json_ast_node(
-            application=application,
+            applications=applications,
             conditions=conditions,
+            linecol=True,
             name=name,
             node=node,
             tags=tags,
             )
 
-    def visit_verif_declaration_condition(self, node, children):
-        erreurs = find_one_or_many(children, type='verif_declaration_erreurs')
-        # TODO Rename
-        expression = find_one(children, type='verif_declaration_condition_expression')
+    def visit_verif_condition(self, node, children):
+        erreurs = [symbol['value'] for symbol in children[1:]]
         return make_json_ast_node(
             erreurs=erreurs,
-            expression=expression,
-            node=node,
-            )
-
-    def visit_verif_declaration_condition_expression(self, node, children):
-        # TODO Rename
-        value = clean_lines(node.value)
-        return make_json_ast_node(
-            node=node,
-            value=value,
-            )
-
-    def visit_verif_declaration_erreurs(self, node, children):
-        names = find_one_or_many(children, type='symbol')
-        return make_json_ast_node(
-            names=names,
+            expression=children[0],
             node=node,
             )
 
@@ -529,9 +531,6 @@ def main():
     parser.add_argument('-d', '--debug', action='store_true', default=False, help='Debug Arpeggio parser')
     parser.add_argument('-v', '--verbose', action='store_true', default=False, help='Increase output verbosity')
     parser.add_argument('--no-visit', action='store_true', default=False, help='Do not visit the parsed tree')
-    # parser.add_argument(
-    #     '--no-reduce', dest='reduce', action='store_false', default=True, help='Do not reduce the parsed tree',
-    #     )
     parser.add_argument('--rule', default='m_source_file', help='Do not reduce the parsed tree')
     parser.add_argument('source_file', help='Source file to parse')
     global args
@@ -545,8 +544,6 @@ def main():
     with open(m_grammar_file_path) as m_grammar_file:
         m_grammar = m_grammar_file.read()
     global m_parser
-    # log.debug('reduce_tree = {}'.format(args.reduce))
-    # m_parser = ParserPEG(m_grammar, args.rule, debug=args.debug, reduce_tree=args.reduce)
     m_parser = ParserPEG(m_grammar, args.rule, debug=args.debug, reduce_tree=False)
     log.debug('M language clean-PEG grammar was parsed with success.')
 
