@@ -35,13 +35,6 @@ m_grammar_file_path = os.path.join(script_dir_name, '..', 'data', 'm_language.cl
 # Helpers
 
 
-def clean_lines(lines):
-    return ' '.join(
-        line.strip()
-        for line in lines.split('\n')
-        )
-
-
 def extract_operators(node):
     return [
         node[index].value
@@ -91,7 +84,7 @@ def make_json_ast_node(node=None, linecol=None, type=None, **kwargs):
         linecol = get_linecol(node)
     if type is None:
         type = node.rule_name
-    return without_empty_values(linecol=linecol, type=type, **kwargs)
+    return pretty_ordered_keys(without_empty_values(linecol=linecol, type=type, **kwargs))
 
 
 def only_child(children):
@@ -99,7 +92,7 @@ def only_child(children):
     return children[0]
 
 
-def ordered_keys(dict_):
+def pretty_ordered_keys(dict_):
     """Order keys for the JSON to be more readable by a human."""
     def get_items(keys):
         return [(key, dict_[key]) for key in keys if key in dict_]
@@ -117,11 +110,11 @@ def to_list(value):
 
 def without_empty_values(**kwargs):
     """Allows 0 values but not None, [], {}."""
-    return ordered_keys({
+    return {
         key: value
         for key, value in kwargs.iteritems()
         if value is not None or isinstance(value, (list, dict)) and value
-        })
+        }
 
 
 # PEG parser visitor
