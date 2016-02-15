@@ -4,7 +4,7 @@
 
 
 SCRIPT_DIR=$(dirname $(readlink -f "$BASH_SOURCE"))
-SCRIPT="$SCRIPT_DIR/m_source_code_to_ast.py"
+SCRIPT="$SCRIPT_DIR/m_source_file_to_json_ast.py"
 OPTIONS=""
 # OPTIONS="--no-visit"
 SOURCES_DIR="${1%/}"
