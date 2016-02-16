@@ -24,13 +24,13 @@ for filepath in $SOURCES_DIR/*.m
 do
   filename=`basename $filepath`
   echo -n "Converting $filename... "
-  command="python $SCRIPT $filepath $OPTIONS"
+  command="python3 $SCRIPT $filepath $OPTIONS"
   output_file=`realpath $OUTPUT_DIR/${filename%.*}.json`
   if [ -e $output_file ] ; then
     echo
     echo "    File $output_file exists, skip"
   else
-    python $SCRIPT $filepath $OPTIONS | jq . > $output_file
+    python3 $SCRIPT $filepath $OPTIONS | jq . > $output_file
   fi
   if [ ${PIPESTATUS[0]} != 0 ]; then
     rm $output_file
