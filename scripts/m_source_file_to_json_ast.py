@@ -316,9 +316,11 @@ class MLanguageVisitor(PTNodeVisitor):
             )
 
     def visit_litteral(self, node, children):
-        return make_json_ast_node(type='integer', value=int(node.value)) \
-            if node.value.isdigit() \
-            else make_json_ast_node(type='symbol', value=node.value)
+        assert len(children) == 1, children
+        child = children[0]
+        return make_json_ast_node(type='integer', value=int(child['value'])) \
+            if child['type'] == 'symbol' and child['value'].isdigit() \
+            else child
 
     def visit_loop_expression(self, node, children):
         assert len(children) == 2, children
