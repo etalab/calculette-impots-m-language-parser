@@ -7,9 +7,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IMT11",
         "expression": {
           "type": "sum_expression",
@@ -87,7 +87,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IMT12",
         "expression": {
           "type": "sum_expression",
@@ -153,7 +153,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IMTANT11",
         "expression": {
           "type": "sum_expression",
@@ -231,7 +231,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IMTANT12",
         "expression": {
           "type": "sum_expression",
@@ -297,7 +297,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPHQ",
         "expression": {
           "type": "function_call",
@@ -335,7 +335,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPHQ2",
         "expression": {
           "type": "function_call",
@@ -373,7 +373,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPHQANT2",
         "expression": {
           "type": "function_call",
@@ -411,7 +411,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQT",
         "expression": {
           "type": "sum_expression",
@@ -431,7 +431,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQT2",
         "expression": {
           "type": "sum_expression",
@@ -464,9 +464,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IDANT11",
         "expression": {
           "type": "function_call",
@@ -533,7 +533,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ID14",
         "expression": {
           "type": "symbol",
@@ -541,7 +541,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ID16",
         "expression": {
           "type": "symbol",
@@ -549,7 +549,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IMPFHQ1",
         "expression": {
           "type": "product_expression",
@@ -669,7 +669,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IMPFHQANT1",
         "expression": {
           "type": "product_expression",
@@ -789,25 +789,9 @@
         }
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "z",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "1"
-              },
-              {
-                "type": "symbol",
-                "value": "2"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ID1z",
           "expression": {
             "type": "function_call",
@@ -872,7 +856,23 @@
               }
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "z",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "1"
+              },
+              {
+                "type": "symbol",
+                "value": "2"
+              }
+            ]
+          }
+        ]
       }
     ],
     "linecol": [
@@ -888,9 +888,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQANT1",
         "expression": {
           "type": "sum_expression",
@@ -922,7 +922,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQ5",
         "expression": {
           "type": "sum_expression",
@@ -942,25 +942,9 @@
         }
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "z",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "1"
-              },
-              {
-                "type": "symbol",
-                "value": "2"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQz",
           "expression": {
             "type": "sum_expression",
@@ -990,24 +974,7 @@
               "+"
             ]
           }
-        }
-      }
-    ],
-    "linecol": [
-      66,
-      1
-    ]
-  },
-  {
-    "type": "regle",
-    "name": "50201",
-    "applications": [
-      "iliad",
-      "batch"
-    ],
-    "variable_definitions": [
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -1023,9 +990,26 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      }
+    ],
+    "linecol": [
+      66,
+      1
+    ]
+  },
+  {
+    "type": "regle",
+    "name": "50201",
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IDOM3z",
           "expression": {
             "type": "sum_expression",
@@ -1211,7 +1195,23 @@
               "+"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "z",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "1"
+              },
+              {
+                "type": "symbol",
+                "value": "2"
+              }
+            ]
+          }
+        ]
       }
     ],
     "linecol": [
@@ -1226,9 +1226,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "SEUILEXO",
         "expression": {
           "type": "sum_expression",
@@ -1300,7 +1300,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "EXO1",
         "expression": {
           "type": "sum_expression",
@@ -2144,9 +2144,9 @@
     "applications": [
       "bareme"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "EXO1",
         "expression": {
           "type": "function_call",
@@ -2172,9 +2172,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IMI",
         "expression": {
           "type": "product_expression",
@@ -2264,7 +2264,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IMO",
         "expression": {
           "type": "product_expression",
@@ -2354,7 +2354,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "RASAR",
         "expression": {
           "type": "function_call",
@@ -2398,9 +2398,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BMI",
         "expression": {
           "type": "function_call",
@@ -2448,9 +2448,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TMOY",
         "expression": {
           "type": "product_expression",
@@ -2533,9 +2533,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IQUOTOTANT1",
         "expression": {
           "type": "sum_expression",
@@ -2555,7 +2555,27 @@
         }
       },
       {
-        "type": "pour_variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
+          "name": "IQUOTOTz",
+          "expression": {
+            "type": "sum_expression",
+            "operands": [
+              {
+                "type": "symbol",
+                "value": "IN5z"
+              },
+              {
+                "type": "symbol",
+                "value": "IN0z"
+              }
+            ],
+            "operators": [
+              "-"
+            ]
+          }
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -2579,27 +2599,7 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
-          "name": "IQUOTOTz",
-          "expression": {
-            "type": "sum_expression",
-            "operands": [
-              {
-                "type": "symbol",
-                "value": "IN5z"
-              },
-              {
-                "type": "symbol",
-                "value": "IN0z"
-              }
-            ],
-            "operators": [
-              "-"
-            ]
-          }
-        }
+        ]
       }
     ],
     "linecol": [
@@ -2615,9 +2615,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQANTRWB",
         "expression": {
           "type": "sum_expression",
@@ -2888,7 +2888,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRWB5",
         "expression": {
           "type": "sum_expression",
@@ -3159,7 +3159,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQANTRWA",
         "expression": {
           "type": "sum_expression",
@@ -3432,7 +3432,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRWA5",
         "expression": {
           "type": "sum_expression",
@@ -3705,7 +3705,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQANTRVG",
         "expression": {
           "type": "sum_expression",
@@ -3973,7 +3973,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRVG5",
         "expression": {
           "type": "sum_expression",
@@ -4241,7 +4241,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQANT11",
         "expression": {
           "type": "sum_expression",
@@ -4514,7 +4514,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQ15",
         "expression": {
           "type": "sum_expression",
@@ -4787,7 +4787,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQANT21",
         "expression": {
           "type": "sum_expression",
@@ -5059,7 +5059,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQ25",
         "expression": {
           "type": "sum_expression",
@@ -5331,7 +5331,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQANT31",
         "expression": {
           "type": "sum_expression",
@@ -5578,7 +5578,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQ35",
         "expression": {
           "type": "sum_expression",
@@ -5825,7 +5825,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQANT41",
         "expression": {
           "type": "sum_expression",
@@ -6065,7 +6065,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQ45",
         "expression": {
           "type": "sum_expression",
@@ -6305,25 +6305,9 @@
         }
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "z",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "1"
-              },
-              {
-                "type": "symbol",
-                "value": "2"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQRWBz",
           "expression": {
             "type": "sum_expression",
@@ -6592,10 +6576,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -6611,9 +6592,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQRWAz",
           "expression": {
             "type": "sum_expression",
@@ -6884,10 +6868,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -6903,9 +6884,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQRVGz",
           "expression": {
             "type": "sum_expression",
@@ -7171,10 +7155,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -7190,9 +7171,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQ1z",
           "expression": {
             "type": "sum_expression",
@@ -7463,10 +7447,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -7482,9 +7463,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQ2z",
           "expression": {
             "type": "sum_expression",
@@ -7754,10 +7738,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -7773,9 +7754,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQ3z",
           "expression": {
             "type": "sum_expression",
@@ -8020,10 +8004,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -8039,9 +8020,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQ4z",
           "expression": {
             "type": "sum_expression",
@@ -8279,7 +8263,23 @@
               "+"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "z",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "1"
+              },
+              {
+                "type": "symbol",
+                "value": "2"
+              }
+            ]
+          }
+        ]
       }
     ],
     "linecol": [
@@ -8295,9 +8295,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQ1TOT",
         "expression": {
           "type": "sum_expression",
@@ -8355,7 +8355,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQ2TOT",
         "expression": {
           "type": "sum_expression",
@@ -8413,7 +8413,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQ5TOT",
         "expression": {
           "type": "sum_expression",
@@ -8471,7 +8471,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQANT1TOT",
         "expression": {
           "type": "sum_expression",
@@ -8542,9 +8542,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQFANTV1",
         "expression": {
           "type": "sum_expression",
@@ -8805,7 +8805,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQFV5",
         "expression": {
           "type": "sum_expression",
@@ -9066,7 +9066,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQFANTC1",
         "expression": {
           "type": "sum_expression",
@@ -9324,7 +9324,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQFC5",
         "expression": {
           "type": "sum_expression",
@@ -9586,7 +9586,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQFANT11",
         "expression": {
           "type": "sum_expression",
@@ -9869,7 +9869,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQF15",
         "expression": {
           "type": "sum_expression",
@@ -10153,7 +10153,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQFANT21",
         "expression": {
           "type": "sum_expression",
@@ -10434,7 +10434,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQF25",
         "expression": {
           "type": "sum_expression",
@@ -10715,7 +10715,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQFANT31",
         "expression": {
           "type": "sum_expression",
@@ -10950,7 +10950,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQF35",
         "expression": {
           "type": "sum_expression",
@@ -11185,7 +11185,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQFANT41",
         "expression": {
           "type": "sum_expression",
@@ -11413,7 +11413,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQF45",
         "expression": {
           "type": "sum_expression",
@@ -11641,7 +11641,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQF1TOT",
         "expression": {
           "type": "function_call",
@@ -11685,7 +11685,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQF2TOT",
         "expression": {
           "type": "function_call",
@@ -11729,7 +11729,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQF5TOT",
         "expression": {
           "type": "function_call",
@@ -11773,7 +11773,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQFANT1TOT",
         "expression": {
           "type": "function_call",
@@ -11817,25 +11817,9 @@
         }
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "z",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "1"
-              },
-              {
-                "type": "symbol",
-                "value": "2"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQFVz",
           "expression": {
             "type": "sum_expression",
@@ -12094,10 +12078,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -12113,9 +12094,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQFCz",
           "expression": {
             "type": "sum_expression",
@@ -12371,10 +12355,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -12390,9 +12371,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQF1z",
           "expression": {
             "type": "sum_expression",
@@ -12674,10 +12658,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -12693,9 +12674,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQF2z",
           "expression": {
             "type": "sum_expression",
@@ -12974,10 +12958,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -12993,9 +12974,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQF3z",
           "expression": {
             "type": "sum_expression",
@@ -13228,10 +13212,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -13247,9 +13228,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQF4z",
           "expression": {
             "type": "sum_expression",
@@ -13475,7 +13459,23 @@
               "+"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "z",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "1"
+              },
+              {
+                "type": "symbol",
+                "value": "2"
+              }
+            ]
+          }
+        ]
       }
     ],
     "linecol": [
@@ -13491,9 +13491,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPALIMANTV1",
         "expression": {
           "type": "sum_expression",
@@ -13749,7 +13749,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPALIMV5",
         "expression": {
           "type": "sum_expression",
@@ -14005,7 +14005,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPALIMANTC1",
         "expression": {
           "type": "sum_expression",
@@ -14258,7 +14258,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPALIMC5",
         "expression": {
           "type": "sum_expression",
@@ -14511,7 +14511,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPALIMANT11",
         "expression": {
           "type": "sum_expression",
@@ -14789,7 +14789,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPALIM15",
         "expression": {
           "type": "sum_expression",
@@ -15067,7 +15067,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPALIMANT21",
         "expression": {
           "type": "sum_expression",
@@ -15343,7 +15343,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPALIM25",
         "expression": {
           "type": "sum_expression",
@@ -15619,7 +15619,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPALIMANT31",
         "expression": {
           "type": "sum_expression",
@@ -15852,7 +15852,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPALIM35",
         "expression": {
           "type": "sum_expression",
@@ -16085,7 +16085,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPALIMANT41",
         "expression": {
           "type": "sum_expression",
@@ -16308,7 +16308,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPALIM45",
         "expression": {
           "type": "sum_expression",
@@ -16531,7 +16531,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPALIM1TOT",
         "expression": {
           "type": "function_call",
@@ -16575,7 +16575,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPALIM2TOT",
         "expression": {
           "type": "function_call",
@@ -16619,7 +16619,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPALIM5TOT",
         "expression": {
           "type": "function_call",
@@ -16663,7 +16663,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPALIMANT1TOT",
         "expression": {
           "type": "function_call",
@@ -16707,25 +16707,9 @@
         }
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "z",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "1"
-              },
-              {
-                "type": "symbol",
-                "value": "2"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQPALIMVz",
           "expression": {
             "type": "sum_expression",
@@ -16979,10 +16963,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -16998,9 +16979,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQPALIMCz",
           "expression": {
             "type": "sum_expression",
@@ -17251,10 +17235,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -17270,9 +17251,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQPALIM1z",
           "expression": {
             "type": "sum_expression",
@@ -17548,10 +17532,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -17567,9 +17548,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQPALIM2z",
           "expression": {
             "type": "sum_expression",
@@ -17843,10 +17827,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -17862,9 +17843,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQPALIM3z",
           "expression": {
             "type": "sum_expression",
@@ -18095,10 +18079,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -18114,9 +18095,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQPALIM4z",
           "expression": {
             "type": "sum_expression",
@@ -18337,7 +18321,23 @@
               "+"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "z",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "1"
+              },
+              {
+                "type": "symbol",
+                "value": "2"
+              }
+            ]
+          }
+        ]
       }
     ],
     "linecol": [
@@ -18353,9 +18353,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRCMDCANT1",
         "expression": {
           "type": "sum_expression",
@@ -18582,7 +18582,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRCMDC5",
         "expression": {
           "type": "sum_expression",
@@ -18814,25 +18814,9 @@
         }
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "z",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "1"
-              },
-              {
-                "type": "symbol",
-                "value": "2"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQRCMDCz",
           "expression": {
             "type": "sum_expression",
@@ -19057,7 +19041,23 @@
               "+"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "z",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "1"
+              },
+              {
+                "type": "symbol",
+                "value": "2"
+              }
+            ]
+          }
+        ]
       }
     ],
     "linecol": [
@@ -19073,9 +19073,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRCMFUANT1",
         "expression": {
           "type": "sum_expression",
@@ -19297,7 +19297,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRCMFU5",
         "expression": {
           "type": "sum_expression",
@@ -19519,25 +19519,9 @@
         }
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "z",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "1"
-              },
-              {
-                "type": "symbol",
-                "value": "2"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQRCMFUz",
           "expression": {
             "type": "sum_expression",
@@ -19757,7 +19741,23 @@
               "+"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "z",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "1"
+              },
+              {
+                "type": "symbol",
+                "value": "2"
+              }
+            ]
+          }
+        ]
       }
     ],
     "linecol": [
@@ -19773,9 +19773,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRCMCHANT1",
         "expression": {
           "type": "sum_expression",
@@ -19992,7 +19992,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRCMCH5",
         "expression": {
           "type": "sum_expression",
@@ -20209,25 +20209,9 @@
         }
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "z",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "1"
-              },
-              {
-                "type": "symbol",
-                "value": "2"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQRCMCHz",
           "expression": {
             "type": "sum_expression",
@@ -20442,7 +20426,23 @@
               "+"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "z",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "1"
+              },
+              {
+                "type": "symbol",
+                "value": "2"
+              }
+            ]
+          }
+        ]
       }
     ],
     "linecol": [
@@ -20458,9 +20458,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRCMTRANT1",
         "expression": {
           "type": "sum_expression",
@@ -20672,7 +20672,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRCMTR5",
         "expression": {
           "type": "sum_expression",
@@ -20884,25 +20884,9 @@
         }
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "z",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "1"
-              },
-              {
-                "type": "symbol",
-                "value": "2"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQRCMTRz",
           "expression": {
             "type": "sum_expression",
@@ -21112,7 +21096,23 @@
               "+"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "z",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "1"
+              },
+              {
+                "type": "symbol",
+                "value": "2"
+              }
+            ]
+          }
+        ]
       }
     ],
     "linecol": [
@@ -21128,9 +21128,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRCMGOANT1",
         "expression": {
           "type": "sum_expression",
@@ -21337,7 +21337,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRCMGO5",
         "expression": {
           "type": "sum_expression",
@@ -21544,25 +21544,9 @@
         }
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "z",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "1"
-              },
-              {
-                "type": "symbol",
-                "value": "2"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQRCMGOz",
           "expression": {
             "type": "sum_expression",
@@ -21767,7 +21751,23 @@
               "+"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "z",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "1"
+              },
+              {
+                "type": "symbol",
+                "value": "2"
+              }
+            ]
+          }
+        ]
       }
     ],
     "linecol": [
@@ -21783,9 +21783,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRCMTSANT1",
         "expression": {
           "type": "sum_expression",
@@ -21987,7 +21987,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRCMTS5",
         "expression": {
           "type": "sum_expression",
@@ -22189,7 +22189,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRCM1TOT",
         "expression": {
           "type": "sum_expression",
@@ -22229,7 +22229,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRCM2TOT",
         "expression": {
           "type": "sum_expression",
@@ -22269,7 +22269,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRCM5TOT",
         "expression": {
           "type": "sum_expression",
@@ -22309,7 +22309,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRCMANT1TOT",
         "expression": {
           "type": "sum_expression",
@@ -22349,25 +22349,9 @@
         }
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "z",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "1"
-              },
-              {
-                "type": "symbol",
-                "value": "2"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQRCMTSz",
           "expression": {
             "type": "sum_expression",
@@ -22567,7 +22551,23 @@
               "+"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "z",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "1"
+              },
+              {
+                "type": "symbol",
+                "value": "2"
+              }
+            ]
+          }
+        ]
       }
     ],
     "linecol": [
@@ -22583,9 +22583,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPRRANTV1",
         "expression": {
           "type": "sum_expression",
@@ -22903,7 +22903,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPRRV5",
         "expression": {
           "type": "sum_expression",
@@ -23221,7 +23221,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPRRANTC1",
         "expression": {
           "type": "sum_expression",
@@ -23536,7 +23536,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPRRC5",
         "expression": {
           "type": "sum_expression",
@@ -23851,7 +23851,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPRRANT11",
         "expression": {
           "type": "sum_expression",
@@ -24171,7 +24171,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPRR15",
         "expression": {
           "type": "sum_expression",
@@ -24491,7 +24491,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPRRANT21",
         "expression": {
           "type": "sum_expression",
@@ -24810,7 +24810,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPRR25",
         "expression": {
           "type": "sum_expression",
@@ -25129,7 +25129,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPRRANT31",
         "expression": {
           "type": "sum_expression",
@@ -25403,7 +25403,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPRR35",
         "expression": {
           "type": "sum_expression",
@@ -25677,7 +25677,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPRRANT41",
         "expression": {
           "type": "sum_expression",
@@ -25946,7 +25946,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPRR45",
         "expression": {
           "type": "sum_expression",
@@ -26215,7 +26215,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPRR1TOT",
         "expression": {
           "type": "function_call",
@@ -26259,7 +26259,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPRR2TOT",
         "expression": {
           "type": "function_call",
@@ -26303,7 +26303,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPRR5TOT",
         "expression": {
           "type": "function_call",
@@ -26347,7 +26347,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPRRANT1TOT",
         "expression": {
           "type": "function_call",
@@ -26391,25 +26391,9 @@
         }
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "z",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "1"
-              },
-              {
-                "type": "symbol",
-                "value": "2"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQPRRVz",
           "expression": {
             "type": "sum_expression",
@@ -26725,10 +26709,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -26744,9 +26725,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQPRRCz",
           "expression": {
             "type": "sum_expression",
@@ -27059,10 +27043,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -27078,9 +27059,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQPRR1z",
           "expression": {
             "type": "sum_expression",
@@ -27398,10 +27382,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -27417,9 +27398,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQPRR2z",
           "expression": {
             "type": "sum_expression",
@@ -27736,10 +27720,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -27755,9 +27736,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQPRR3z",
           "expression": {
             "type": "sum_expression",
@@ -28029,10 +28013,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -28048,9 +28029,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQPRR4z",
           "expression": {
             "type": "sum_expression",
@@ -28317,7 +28301,23 @@
               "+"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "z",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "1"
+              },
+              {
+                "type": "symbol",
+                "value": "2"
+              }
+            ]
+          }
+        ]
       }
     ],
     "linecol": [
@@ -28333,9 +28333,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPRRANTZV1",
         "expression": {
           "type": "sum_expression",
@@ -28576,7 +28576,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPRRZV5",
         "expression": {
           "type": "sum_expression",
@@ -28817,7 +28817,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPRRANTZC1",
         "expression": {
           "type": "sum_expression",
@@ -29050,7 +29050,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPRRZC5",
         "expression": {
           "type": "sum_expression",
@@ -29288,7 +29288,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPRRANTZ11",
         "expression": {
           "type": "sum_expression",
@@ -29526,7 +29526,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPRRZ15",
         "expression": {
           "type": "sum_expression",
@@ -29769,7 +29769,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPRRANTZ21",
         "expression": {
           "type": "sum_expression",
@@ -30006,7 +30006,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPRRZ25",
         "expression": {
           "type": "sum_expression",
@@ -30248,7 +30248,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPRRANTZ31",
         "expression": {
           "type": "sum_expression",
@@ -30440,7 +30440,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPRRZ35",
         "expression": {
           "type": "sum_expression",
@@ -30637,7 +30637,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPRRANTZ41",
         "expression": {
           "type": "sum_expression",
@@ -30824,7 +30824,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPRRZ45",
         "expression": {
           "type": "sum_expression",
@@ -31016,7 +31016,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPRRZ1TOT",
         "expression": {
           "type": "function_call",
@@ -31060,7 +31060,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPRRZ2TOT",
         "expression": {
           "type": "function_call",
@@ -31104,7 +31104,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPRRZ5TOT",
         "expression": {
           "type": "function_call",
@@ -31148,7 +31148,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQPRRANTZ1TOT",
         "expression": {
           "type": "function_call",
@@ -31192,25 +31192,9 @@
         }
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "z",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "1"
-              },
-              {
-                "type": "symbol",
-                "value": "2"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQPRRZVz",
           "expression": {
             "type": "sum_expression",
@@ -31449,10 +31433,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -31468,9 +31449,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQPRRZCz",
           "expression": {
             "type": "sum_expression",
@@ -31701,10 +31685,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -31720,9 +31701,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQPRRZ1z",
           "expression": {
             "type": "sum_expression",
@@ -31958,10 +31942,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -31977,9 +31958,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQPRRZ2z",
           "expression": {
             "type": "sum_expression",
@@ -32214,10 +32198,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -32233,9 +32214,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQPRRZ3z",
           "expression": {
             "type": "sum_expression",
@@ -32425,10 +32409,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -32444,9 +32425,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQPRRZ4z",
           "expression": {
             "type": "sum_expression",
@@ -32631,7 +32615,23 @@
               "+"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "z",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "1"
+              },
+              {
+                "type": "symbol",
+                "value": "2"
+              }
+            ]
+          }
+        ]
       }
     ],
     "linecol": [
@@ -32647,9 +32647,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRFANT11",
         "expression": {
           "type": "sum_expression",
@@ -32821,7 +32821,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRF15",
         "expression": {
           "type": "sum_expression",
@@ -32993,7 +32993,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRFANT21",
         "expression": {
           "type": "sum_expression",
@@ -33160,7 +33160,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRF25",
         "expression": {
           "type": "sum_expression",
@@ -33327,7 +33327,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRF1TOT",
         "expression": {
           "type": "function_call",
@@ -33360,7 +33360,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRF2TOT",
         "expression": {
           "type": "function_call",
@@ -33393,7 +33393,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRF5TOT",
         "expression": {
           "type": "function_call",
@@ -33426,7 +33426,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRFANT1TOT",
         "expression": {
           "type": "function_call",
@@ -33459,25 +33459,9 @@
         }
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "z",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "1"
-              },
-              {
-                "type": "symbol",
-                "value": "2"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQRF1z",
           "expression": {
             "type": "sum_expression",
@@ -33647,10 +33631,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -33666,9 +33647,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQRF2z",
           "expression": {
             "type": "sum_expression",
@@ -33833,7 +33817,23 @@
               "+"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "z",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "1"
+              },
+              {
+                "type": "symbol",
+                "value": "2"
+              }
+            ]
+          }
+        ]
       }
     ],
     "linecol": [
@@ -33849,9 +33849,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRVOANT1",
         "expression": {
           "type": "sum_expression",
@@ -34038,7 +34038,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRVO5",
         "expression": {
           "type": "sum_expression",
@@ -34225,25 +34225,9 @@
         }
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "z",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "1"
-              },
-              {
-                "type": "symbol",
-                "value": "2"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQRVOz",
           "expression": {
             "type": "sum_expression",
@@ -34428,7 +34412,23 @@
               "+"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "z",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "1"
+              },
+              {
+                "type": "symbol",
+                "value": "2"
+              }
+            ]
+          }
+        ]
       }
     ],
     "linecol": [
@@ -34444,9 +34444,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRVO5ANT1",
         "expression": {
           "type": "sum_expression",
@@ -34628,7 +34628,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRVO55",
         "expression": {
           "type": "sum_expression",
@@ -34810,25 +34810,9 @@
         }
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "z",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "1"
-              },
-              {
-                "type": "symbol",
-                "value": "2"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQRVO5z",
           "expression": {
             "type": "sum_expression",
@@ -35008,7 +34992,23 @@
               "+"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "z",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "1"
+              },
+              {
+                "type": "symbol",
+                "value": "2"
+              }
+            ]
+          }
+        ]
       }
     ],
     "linecol": [
@@ -35024,9 +35024,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRVO6ANT1",
         "expression": {
           "type": "sum_expression",
@@ -35203,7 +35203,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRVO65",
         "expression": {
           "type": "sum_expression",
@@ -35380,25 +35380,9 @@
         }
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "z",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "1"
-              },
-              {
-                "type": "symbol",
-                "value": "2"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQRVO6z",
           "expression": {
             "type": "sum_expression",
@@ -35573,7 +35557,23 @@
               "+"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "z",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "1"
+              },
+              {
+                "type": "symbol",
+                "value": "2"
+              }
+            ]
+          }
+        ]
       }
     ],
     "linecol": [
@@ -35589,9 +35589,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRVO7ANT1",
         "expression": {
           "type": "sum_expression",
@@ -35763,7 +35763,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRVO75",
         "expression": {
           "type": "sum_expression",
@@ -35935,7 +35935,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRVO1TOT",
         "expression": {
           "type": "sum_expression",
@@ -35965,7 +35965,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRVO2TOT",
         "expression": {
           "type": "sum_expression",
@@ -35995,7 +35995,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRVO5TOT",
         "expression": {
           "type": "sum_expression",
@@ -36025,7 +36025,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQRVOANT1TOT",
         "expression": {
           "type": "sum_expression",
@@ -36055,25 +36055,9 @@
         }
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "z",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "1"
-              },
-              {
-                "type": "symbol",
-                "value": "2"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQRVO7z",
           "expression": {
             "type": "sum_expression",
@@ -36243,7 +36227,23 @@
               "+"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "z",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "1"
+              },
+              {
+                "type": "symbol",
+                "value": "2"
+              }
+            ]
+          }
+        ]
       }
     ],
     "linecol": [
@@ -36259,9 +36259,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQTSANTV1",
         "expression": {
           "type": "sum_expression",
@@ -36487,7 +36487,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQTSV5",
         "expression": {
           "type": "sum_expression",
@@ -36713,7 +36713,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQTSANTC1",
         "expression": {
           "type": "sum_expression",
@@ -36936,7 +36936,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQTSC5",
         "expression": {
           "type": "sum_expression",
@@ -37159,7 +37159,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQTSANT11",
         "expression": {
           "type": "sum_expression",
@@ -37387,7 +37387,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQTS15",
         "expression": {
           "type": "sum_expression",
@@ -37615,7 +37615,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQTSANT21",
         "expression": {
           "type": "sum_expression",
@@ -37842,7 +37842,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQTS25",
         "expression": {
           "type": "sum_expression",
@@ -38069,7 +38069,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQTSANT31",
         "expression": {
           "type": "sum_expression",
@@ -38251,7 +38251,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQTS35",
         "expression": {
           "type": "sum_expression",
@@ -38433,7 +38433,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQTSANT41",
         "expression": {
           "type": "sum_expression",
@@ -38596,7 +38596,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQTS45",
         "expression": {
           "type": "sum_expression",
@@ -38759,7 +38759,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQTS1TOT",
         "expression": {
           "type": "function_call",
@@ -38803,7 +38803,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQTS2TOT",
         "expression": {
           "type": "function_call",
@@ -38847,7 +38847,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQTS5TOT",
         "expression": {
           "type": "function_call",
@@ -38891,7 +38891,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQTSANT1TOT",
         "expression": {
           "type": "function_call",
@@ -38935,25 +38935,9 @@
         }
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "z",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "1"
-              },
-              {
-                "type": "symbol",
-                "value": "2"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQTSVz",
           "expression": {
             "type": "sum_expression",
@@ -39177,10 +39161,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -39196,9 +39177,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQTSCz",
           "expression": {
             "type": "sum_expression",
@@ -39419,10 +39403,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -39438,9 +39419,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQTS1z",
           "expression": {
             "type": "sum_expression",
@@ -39666,10 +39650,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -39685,9 +39666,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQTS2z",
           "expression": {
             "type": "sum_expression",
@@ -39912,10 +39896,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -39931,9 +39912,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQTS3z",
           "expression": {
             "type": "sum_expression",
@@ -40113,10 +40097,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -40132,9 +40113,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQTS4z",
           "expression": {
             "type": "sum_expression",
@@ -40295,7 +40279,23 @@
               "+"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "z",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "1"
+              },
+              {
+                "type": "symbol",
+                "value": "2"
+              }
+            ]
+          }
+        ]
       }
     ],
     "linecol": [
@@ -40311,9 +40311,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQTSREMPANTV1",
         "expression": {
           "type": "sum_expression",
@@ -40520,7 +40520,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQTSREMPV5",
         "expression": {
           "type": "sum_expression",
@@ -40727,7 +40727,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQTSREMPANTC1",
         "expression": {
           "type": "sum_expression",
@@ -40931,7 +40931,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQTSREMPC5",
         "expression": {
           "type": "sum_expression",
@@ -41135,7 +41135,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQTSREMPANT11",
         "expression": {
           "type": "sum_expression",
@@ -41344,7 +41344,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQTSREMP15",
         "expression": {
           "type": "sum_expression",
@@ -41553,7 +41553,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQTSREMPANT21",
         "expression": {
           "type": "sum_expression",
@@ -41761,7 +41761,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQTSREMP25",
         "expression": {
           "type": "sum_expression",
@@ -41969,7 +41969,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQTSREMPANT31",
         "expression": {
           "type": "sum_expression",
@@ -42132,7 +42132,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQTSREMP35",
         "expression": {
           "type": "sum_expression",
@@ -42295,7 +42295,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQTSREMPANT41",
         "expression": {
           "type": "sum_expression",
@@ -42380,7 +42380,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQTSREMP45",
         "expression": {
           "type": "sum_expression",
@@ -42465,7 +42465,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQTSREMP1TOT",
         "expression": {
           "type": "function_call",
@@ -42509,7 +42509,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQTSREMP2TOT",
         "expression": {
           "type": "function_call",
@@ -42553,7 +42553,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQTSREMP5TOT",
         "expression": {
           "type": "function_call",
@@ -42597,7 +42597,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ZIPQTSREMPANT1TOT",
         "expression": {
           "type": "function_call",
@@ -42641,25 +42641,9 @@
         }
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "z",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "1"
-              },
-              {
-                "type": "symbol",
-                "value": "2"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQTSREMPVz",
           "expression": {
             "type": "sum_expression",
@@ -42864,10 +42848,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -42883,9 +42864,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQTSREMPCz",
           "expression": {
             "type": "sum_expression",
@@ -43087,10 +43071,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -43106,9 +43087,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQTSREMP1z",
           "expression": {
             "type": "sum_expression",
@@ -43315,10 +43299,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -43334,9 +43315,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQTSREMP2z",
           "expression": {
             "type": "sum_expression",
@@ -43542,10 +43526,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -43561,9 +43542,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQTSREMP3z",
           "expression": {
             "type": "sum_expression",
@@ -43724,10 +43708,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -43743,9 +43724,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ZIPQTSREMP4z",
           "expression": {
             "type": "sum_expression",
@@ -43828,7 +43812,23 @@
               "-"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "z",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "1"
+              },
+              {
+                "type": "symbol",
+                "value": "2"
+              }
+            ]
+          }
+        ]
       }
     ],
     "linecol": [
@@ -43844,9 +43844,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQANT01",
         "expression": {
           "type": "symbol",
@@ -43854,7 +43854,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQANTRWB",
         "expression": {
           "type": "product_expression",
@@ -43874,7 +43874,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQANTRWA",
         "expression": {
           "type": "product_expression",
@@ -43894,7 +43894,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQANTRVG",
         "expression": {
           "type": "product_expression",
@@ -43914,7 +43914,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQANT11",
         "expression": {
           "type": "product_expression",
@@ -43934,7 +43934,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQANT21",
         "expression": {
           "type": "product_expression",
@@ -43954,7 +43954,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQANT31",
         "expression": {
           "type": "product_expression",
@@ -43974,7 +43974,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQANT41",
         "expression": {
           "type": "product_expression",
@@ -43994,7 +43994,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQRCMDCANT1",
         "expression": {
           "type": "product_expression",
@@ -44014,7 +44014,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQRCMCHANT1",
         "expression": {
           "type": "product_expression",
@@ -44034,7 +44034,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQRCMFUANT1",
         "expression": {
           "type": "product_expression",
@@ -44054,7 +44054,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQRCMGOANT1",
         "expression": {
           "type": "product_expression",
@@ -44074,7 +44074,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQRCMTRANT1",
         "expression": {
           "type": "product_expression",
@@ -44094,7 +44094,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQRCMTSANT1",
         "expression": {
           "type": "product_expression",
@@ -44114,7 +44114,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQPRRANTZV1",
         "expression": {
           "type": "product_expression",
@@ -44134,7 +44134,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQPRRANTZC1",
         "expression": {
           "type": "product_expression",
@@ -44154,7 +44154,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQPRRANTZ11",
         "expression": {
           "type": "product_expression",
@@ -44174,7 +44174,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQPRRANTZ21",
         "expression": {
           "type": "product_expression",
@@ -44194,7 +44194,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQPRRANTZ31",
         "expression": {
           "type": "product_expression",
@@ -44214,7 +44214,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQPRRANTZ41",
         "expression": {
           "type": "product_expression",
@@ -44234,7 +44234,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQRFANT11",
         "expression": {
           "type": "product_expression",
@@ -44254,7 +44254,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQRFANT21",
         "expression": {
           "type": "product_expression",
@@ -44274,7 +44274,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQRVOANT1",
         "expression": {
           "type": "product_expression",
@@ -44294,7 +44294,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQRVO5ANT1",
         "expression": {
           "type": "product_expression",
@@ -44314,7 +44314,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQRVO6ANT1",
         "expression": {
           "type": "product_expression",
@@ -44334,7 +44334,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQRVO7ANT1",
         "expression": {
           "type": "product_expression",
@@ -44354,7 +44354,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQANT1001",
         "expression": {
           "type": "sum_expression",
@@ -44689,34 +44689,15 @@
         }
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "z",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "1"
-              },
-              {
-                "type": "symbol",
-                "value": "2"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQ0z",
           "expression": {
             "type": "symbol",
             "value": "IN0z"
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -44732,9 +44713,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQRWBz",
           "expression": {
             "type": "product_expression",
@@ -44752,10 +44736,7 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -44771,9 +44752,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQRWAz",
           "expression": {
             "type": "product_expression",
@@ -44791,10 +44775,7 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -44810,9 +44791,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQRVGz",
           "expression": {
             "type": "product_expression",
@@ -44830,10 +44814,7 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -44849,9 +44830,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQ1z",
           "expression": {
             "type": "product_expression",
@@ -44869,10 +44853,7 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -44888,9 +44869,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQ2z",
           "expression": {
             "type": "product_expression",
@@ -44908,10 +44892,7 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -44927,9 +44908,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQ3z",
           "expression": {
             "type": "product_expression",
@@ -44947,10 +44931,7 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -44966,9 +44947,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQ4z",
           "expression": {
             "type": "product_expression",
@@ -44986,10 +44970,7 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -45004,35 +44985,13 @@
                 "value": "2"
               }
             ]
-          },
-          {
-            "type": "loop_variable",
-            "name": "i",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "V"
-              },
-              {
-                "type": "symbol",
-                "value": "C"
-              },
-              {
-                "type": "integer_range",
-                "start": {
-                  "type": "integer",
-                  "value": 1
-                },
-                "stop": {
-                  "type": "integer",
-                  "value": 4
-                }
-              }
-            ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQFiz",
           "expression": {
             "type": "product_expression",
@@ -45050,11 +45009,22 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "z",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "1"
+              },
+              {
+                "type": "symbol",
+                "value": "2"
+              }
+            ]
+          },
           {
             "type": "loop_variable",
             "name": "i",
@@ -45080,9 +45050,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQFANTi1",
           "expression": {
             "type": "product_expression",
@@ -45100,10 +45073,57 @@
               "*"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "i",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "V"
+              },
+              {
+                "type": "symbol",
+                "value": "C"
+              },
+              {
+                "type": "integer_range",
+                "start": {
+                  "type": "integer",
+                  "value": 1
+                },
+                "stop": {
+                  "type": "integer",
+                  "value": 4
+                }
+              }
+            ]
+          }
+        ]
       },
       {
-        "type": "pour_variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
+          "name": "IPQPALIMiz",
+          "expression": {
+            "type": "product_expression",
+            "operands": [
+              {
+                "type": "symbol",
+                "value": "ZIPQPALIMiz"
+              },
+              {
+                "type": "symbol",
+                "value": "PENSALNBi"
+              }
+            ],
+            "operators": [
+              "*"
+            ]
+          }
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -45133,9 +45153,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQPALIMiz",
           "expression": {
             "type": "product_expression",
@@ -45146,17 +45169,14 @@
               },
               {
                 "type": "symbol",
-                "value": "PENSALNBi"
+                "value": "PENSALNBPi"
               }
             ],
             "operators": [
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -45189,48 +45209,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
-          "name": "IPQPALIMiz",
-          "expression": {
-            "type": "product_expression",
-            "operands": [
-              {
-                "type": "symbol",
-                "value": "ZIPQPALIMiz"
-              },
-              {
-                "type": "symbol",
-                "value": "PENSALNBPi"
-              }
-            ],
-            "operators": [
-              "*"
-            ]
-          }
-        }
+        ]
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "i",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "V"
-              },
-              {
-                "type": "symbol",
-                "value": "C"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQPALIMANTi1",
           "expression": {
             "type": "product_expression",
@@ -45248,10 +45232,46 @@
               "*"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "i",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "V"
+              },
+              {
+                "type": "symbol",
+                "value": "C"
+              }
+            ]
+          }
+        ]
       },
       {
-        "type": "pour_variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
+          "name": "IPQPALIMANTi1",
+          "expression": {
+            "type": "product_expression",
+            "operands": [
+              {
+                "type": "symbol",
+                "value": "ZIPQPALIMANTi1"
+              },
+              {
+                "type": "symbol",
+                "value": "PENSALNBPi"
+              }
+            ],
+            "operators": [
+              "*"
+            ]
+          }
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -45270,48 +45290,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
-          "name": "IPQPALIMANTi1",
-          "expression": {
-            "type": "product_expression",
-            "operands": [
-              {
-                "type": "symbol",
-                "value": "ZIPQPALIMANTi1"
-              },
-              {
-                "type": "symbol",
-                "value": "PENSALNBPi"
-              }
-            ],
-            "operators": [
-              "*"
-            ]
-          }
-        }
+        ]
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "z",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "1"
-              },
-              {
-                "type": "symbol",
-                "value": "2"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQRCMDCz",
           "expression": {
             "type": "product_expression",
@@ -45329,10 +45313,7 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -45348,9 +45329,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQRCMCHz",
           "expression": {
             "type": "product_expression",
@@ -45368,10 +45352,7 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -45387,9 +45368,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQRCMFUz",
           "expression": {
             "type": "product_expression",
@@ -45407,10 +45391,7 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -45426,9 +45407,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQRCMGOz",
           "expression": {
             "type": "product_expression",
@@ -45446,10 +45430,7 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -45465,9 +45446,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQRCMTRz",
           "expression": {
             "type": "product_expression",
@@ -45485,10 +45469,7 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -45504,9 +45485,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQRCMTSz",
           "expression": {
             "type": "product_expression",
@@ -45524,10 +45508,46 @@
               "*"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "z",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "1"
+              },
+              {
+                "type": "symbol",
+                "value": "2"
+              }
+            ]
+          }
+        ]
       },
       {
-        "type": "pour_variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
+          "name": "IPQPRRiz",
+          "expression": {
+            "type": "product_expression",
+            "operands": [
+              {
+                "type": "symbol",
+                "value": "ZIPQPRRiz"
+              },
+              {
+                "type": "symbol",
+                "value": "CARPENBAi"
+              }
+            ],
+            "operators": [
+              "*"
+            ]
+          }
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -45557,9 +45577,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQPRRiz",
           "expression": {
             "type": "product_expression",
@@ -45570,17 +45593,14 @@
               },
               {
                 "type": "symbol",
-                "value": "CARPENBAi"
+                "value": "CARPENBAPi"
               }
             ],
             "operators": [
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -45613,48 +45633,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
-          "name": "IPQPRRiz",
-          "expression": {
-            "type": "product_expression",
-            "operands": [
-              {
-                "type": "symbol",
-                "value": "ZIPQPRRiz"
-              },
-              {
-                "type": "symbol",
-                "value": "CARPENBAPi"
-              }
-            ],
-            "operators": [
-              "*"
-            ]
-          }
-        }
+        ]
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "z",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "1"
-              },
-              {
-                "type": "symbol",
-                "value": "2"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQPRRZVz",
           "expression": {
             "type": "product_expression",
@@ -45672,10 +45656,7 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -45691,9 +45672,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQPRRZCz",
           "expression": {
             "type": "product_expression",
@@ -45711,10 +45695,7 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -45730,9 +45711,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQPRRZ1z",
           "expression": {
             "type": "product_expression",
@@ -45750,10 +45734,7 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -45769,9 +45750,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQPRRZ2z",
           "expression": {
             "type": "product_expression",
@@ -45789,10 +45773,7 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -45808,9 +45789,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQPRRZ3z",
           "expression": {
             "type": "product_expression",
@@ -45828,10 +45812,7 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -45847,9 +45828,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQPRRZ4z",
           "expression": {
             "type": "product_expression",
@@ -45867,28 +45851,28 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
-            "name": "i",
+            "name": "z",
             "domains": [
               {
                 "type": "symbol",
-                "value": "V"
+                "value": "1"
               },
               {
                 "type": "symbol",
-                "value": "C"
+                "value": "2"
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQPRRANTi1",
           "expression": {
             "type": "product_expression",
@@ -45906,31 +45890,28 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
             "name": "i",
             "domains": [
               {
-                "type": "integer_range",
-                "start": {
-                  "type": "integer",
-                  "value": 1
-                },
-                "stop": {
-                  "type": "integer",
-                  "value": 4
-                }
+                "type": "symbol",
+                "value": "V"
+              },
+              {
+                "type": "symbol",
+                "value": "C"
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQPRRANTi1",
           "expression": {
             "type": "product_expression",
@@ -45948,28 +45929,31 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
-            "name": "z",
+            "name": "i",
             "domains": [
               {
-                "type": "symbol",
-                "value": "1"
-              },
-              {
-                "type": "symbol",
-                "value": "2"
+                "type": "integer_range",
+                "start": {
+                  "type": "integer",
+                  "value": 1
+                },
+                "stop": {
+                  "type": "integer",
+                  "value": 4
+                }
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQRF1z",
           "expression": {
             "type": "product_expression",
@@ -45987,10 +45971,7 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -46006,9 +45987,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQRF2z",
           "expression": {
             "type": "product_expression",
@@ -46026,10 +46010,7 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -46045,9 +46026,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQRVOz",
           "expression": {
             "type": "product_expression",
@@ -46065,10 +46049,7 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -46084,9 +46065,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQRVO5z",
           "expression": {
             "type": "product_expression",
@@ -46104,10 +46088,7 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -46123,9 +46104,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQRVO6z",
           "expression": {
             "type": "product_expression",
@@ -46143,10 +46127,7 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -46162,9 +46143,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQRVO7z",
           "expression": {
             "type": "product_expression",
@@ -46182,10 +46166,7 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -46200,24 +46181,13 @@
                 "value": "2"
               }
             ]
-          },
-          {
-            "type": "loop_variable",
-            "name": "i",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "V"
-              },
-              {
-                "type": "symbol",
-                "value": "C"
-              }
-            ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQTSiz",
           "expression": {
             "type": "product_expression",
@@ -46235,10 +46205,7 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -46259,21 +46226,21 @@
             "name": "i",
             "domains": [
               {
-                "type": "integer_range",
-                "start": {
-                  "type": "integer",
-                  "value": 1
-                },
-                "stop": {
-                  "type": "integer",
-                  "value": 4
-                }
+                "type": "symbol",
+                "value": "V"
+              },
+              {
+                "type": "symbol",
+                "value": "C"
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQTSiz",
           "expression": {
             "type": "product_expression",
@@ -46291,28 +46258,45 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "z",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "1"
+              },
+              {
+                "type": "symbol",
+                "value": "2"
+              }
+            ]
+          },
           {
             "type": "loop_variable",
             "name": "i",
             "domains": [
               {
-                "type": "symbol",
-                "value": "V"
-              },
-              {
-                "type": "symbol",
-                "value": "C"
+                "type": "integer_range",
+                "start": {
+                  "type": "integer",
+                  "value": 1
+                },
+                "stop": {
+                  "type": "integer",
+                  "value": 4
+                }
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQTSANTi1",
           "expression": {
             "type": "product_expression",
@@ -46330,31 +46314,28 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
             "name": "i",
             "domains": [
               {
-                "type": "integer_range",
-                "start": {
-                  "type": "integer",
-                  "value": 1
-                },
-                "stop": {
-                  "type": "integer",
-                  "value": 4
-                }
+                "type": "symbol",
+                "value": "V"
+              },
+              {
+                "type": "symbol",
+                "value": "C"
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQTSANTi1",
           "expression": {
             "type": "product_expression",
@@ -46372,10 +46353,49 @@
               "*"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "i",
+            "domains": [
+              {
+                "type": "integer_range",
+                "start": {
+                  "type": "integer",
+                  "value": 1
+                },
+                "stop": {
+                  "type": "integer",
+                  "value": 4
+                }
+              }
+            ]
+          }
+        ]
       },
       {
-        "type": "pour_variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
+          "name": "IPQTSREMPiz",
+          "expression": {
+            "type": "product_expression",
+            "operands": [
+              {
+                "type": "symbol",
+                "value": "ZIPQTSREMPiz"
+              },
+              {
+                "type": "symbol",
+                "value": "REMPLANBi"
+              }
+            ],
+            "operators": [
+              "*"
+            ]
+          }
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -46405,9 +46425,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQTSREMPiz",
           "expression": {
             "type": "product_expression",
@@ -46418,17 +46441,14 @@
               },
               {
                 "type": "symbol",
-                "value": "REMPLANBi"
+                "value": "REMPLANBPi"
               }
             ],
             "operators": [
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -46461,48 +46481,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
-          "name": "IPQTSREMPiz",
-          "expression": {
-            "type": "product_expression",
-            "operands": [
-              {
-                "type": "symbol",
-                "value": "ZIPQTSREMPiz"
-              },
-              {
-                "type": "symbol",
-                "value": "REMPLANBPi"
-              }
-            ],
-            "operators": [
-              "*"
-            ]
-          }
-        }
+        ]
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "i",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "V"
-              },
-              {
-                "type": "symbol",
-                "value": "C"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQTSREMPANTi1",
           "expression": {
             "type": "product_expression",
@@ -46520,10 +46504,46 @@
               "*"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "i",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "V"
+              },
+              {
+                "type": "symbol",
+                "value": "C"
+              }
+            ]
+          }
+        ]
       },
       {
-        "type": "pour_variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
+          "name": "IPQTSREMPANTi1",
+          "expression": {
+            "type": "product_expression",
+            "operands": [
+              {
+                "type": "symbol",
+                "value": "ZIPQTSREMPANTi1"
+              },
+              {
+                "type": "symbol",
+                "value": "REMPLANBPi"
+              }
+            ],
+            "operators": [
+              "*"
+            ]
+          }
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -46542,48 +46562,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
-          "name": "IPQTSREMPANTi1",
-          "expression": {
-            "type": "product_expression",
-            "operands": [
-              {
-                "type": "symbol",
-                "value": "ZIPQTSREMPANTi1"
-              },
-              {
-                "type": "symbol",
-                "value": "REMPLANBPi"
-              }
-            ],
-            "operators": [
-              "*"
-            ]
-          }
-        }
+        ]
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "z",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "1"
-              },
-              {
-                "type": "symbol",
-                "value": "2"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQ100z",
           "expression": {
             "type": "sum_expression",
@@ -46916,7 +46900,23 @@
               "+"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "z",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "1"
+              },
+              {
+                "type": "symbol",
+                "value": "2"
+              }
+            ]
+          }
+        ]
       }
     ],
     "linecol": [
@@ -46932,9 +46932,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQ05",
         "expression": {
           "type": "symbol",
@@ -46942,7 +46942,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQRWB5",
         "expression": {
           "type": "product_expression",
@@ -46962,7 +46962,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQRWA5",
         "expression": {
           "type": "product_expression",
@@ -46982,7 +46982,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQRVG5",
         "expression": {
           "type": "product_expression",
@@ -47002,7 +47002,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQ15",
         "expression": {
           "type": "product_expression",
@@ -47022,7 +47022,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQ25",
         "expression": {
           "type": "product_expression",
@@ -47042,7 +47042,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQ35",
         "expression": {
           "type": "product_expression",
@@ -47062,7 +47062,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQ45",
         "expression": {
           "type": "product_expression",
@@ -47082,7 +47082,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQRCMDC5",
         "expression": {
           "type": "product_expression",
@@ -47102,7 +47102,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQRCMCH5",
         "expression": {
           "type": "product_expression",
@@ -47122,7 +47122,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQRCMFU5",
         "expression": {
           "type": "product_expression",
@@ -47142,7 +47142,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQRCMGO5",
         "expression": {
           "type": "product_expression",
@@ -47162,7 +47162,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQRCMTR5",
         "expression": {
           "type": "product_expression",
@@ -47182,7 +47182,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQRCMTS5",
         "expression": {
           "type": "product_expression",
@@ -47202,7 +47202,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQPRRZV5",
         "expression": {
           "type": "product_expression",
@@ -47222,7 +47222,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQPRRZC5",
         "expression": {
           "type": "product_expression",
@@ -47242,7 +47242,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQPRRZ15",
         "expression": {
           "type": "product_expression",
@@ -47262,7 +47262,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQPRRZ25",
         "expression": {
           "type": "product_expression",
@@ -47282,7 +47282,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQPRRZ35",
         "expression": {
           "type": "product_expression",
@@ -47302,7 +47302,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQPRRZ45",
         "expression": {
           "type": "product_expression",
@@ -47322,7 +47322,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQRF15",
         "expression": {
           "type": "product_expression",
@@ -47342,7 +47342,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQRF25",
         "expression": {
           "type": "product_expression",
@@ -47362,7 +47362,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQRVO5",
         "expression": {
           "type": "product_expression",
@@ -47382,7 +47382,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQRVO55",
         "expression": {
           "type": "product_expression",
@@ -47402,7 +47402,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQRVO65",
         "expression": {
           "type": "product_expression",
@@ -47422,7 +47422,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQRVO75",
         "expression": {
           "type": "product_expression",
@@ -47442,7 +47442,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPQ1005",
         "expression": {
           "type": "sum_expression",
@@ -47777,36 +47777,9 @@
         }
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "i",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "V"
-              },
-              {
-                "type": "symbol",
-                "value": "C"
-              },
-              {
-                "type": "integer_range",
-                "start": {
-                  "type": "integer",
-                  "value": 1
-                },
-                "stop": {
-                  "type": "integer",
-                  "value": 4
-                }
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQFi5",
           "expression": {
             "type": "product_expression",
@@ -47824,10 +47797,7 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -47840,12 +47810,26 @@
               {
                 "type": "symbol",
                 "value": "C"
+              },
+              {
+                "type": "integer_range",
+                "start": {
+                  "type": "integer",
+                  "value": 1
+                },
+                "stop": {
+                  "type": "integer",
+                  "value": 4
+                }
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQPALIMi5",
           "expression": {
             "type": "product_expression",
@@ -47863,31 +47847,28 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
             "name": "i",
             "domains": [
               {
-                "type": "integer_range",
-                "start": {
-                  "type": "integer",
-                  "value": 1
-                },
-                "stop": {
-                  "type": "integer",
-                  "value": 4
-                }
+                "type": "symbol",
+                "value": "V"
+              },
+              {
+                "type": "symbol",
+                "value": "C"
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQPALIMi5",
           "expression": {
             "type": "product_expression",
@@ -47905,28 +47886,31 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
             "name": "i",
             "domains": [
               {
-                "type": "symbol",
-                "value": "V"
-              },
-              {
-                "type": "symbol",
-                "value": "C"
+                "type": "integer_range",
+                "start": {
+                  "type": "integer",
+                  "value": 1
+                },
+                "stop": {
+                  "type": "integer",
+                  "value": 4
+                }
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQPRRi5",
           "expression": {
             "type": "product_expression",
@@ -47944,31 +47928,28 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
             "name": "i",
             "domains": [
               {
-                "type": "integer_range",
-                "start": {
-                  "type": "integer",
-                  "value": 1
-                },
-                "stop": {
-                  "type": "integer",
-                  "value": 4
-                }
+                "type": "symbol",
+                "value": "V"
+              },
+              {
+                "type": "symbol",
+                "value": "C"
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQPRRi5",
           "expression": {
             "type": "product_expression",
@@ -47986,28 +47967,31 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
             "name": "i",
             "domains": [
               {
-                "type": "symbol",
-                "value": "V"
-              },
-              {
-                "type": "symbol",
-                "value": "C"
+                "type": "integer_range",
+                "start": {
+                  "type": "integer",
+                  "value": 1
+                },
+                "stop": {
+                  "type": "integer",
+                  "value": 4
+                }
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQTSi5",
           "expression": {
             "type": "product_expression",
@@ -48025,31 +48009,28 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
             "name": "i",
             "domains": [
               {
-                "type": "integer_range",
-                "start": {
-                  "type": "integer",
-                  "value": 1
-                },
-                "stop": {
-                  "type": "integer",
-                  "value": 4
-                }
+                "type": "symbol",
+                "value": "V"
+              },
+              {
+                "type": "symbol",
+                "value": "C"
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQTSi5",
           "expression": {
             "type": "product_expression",
@@ -48067,49 +48048,7 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "i",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "V"
-              },
-              {
-                "type": "symbol",
-                "value": "C"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
-          "name": "IPQTSREMPi5",
-          "expression": {
-            "type": "product_expression",
-            "operands": [
-              {
-                "type": "symbol",
-                "value": "ZIPQTSREMPi5"
-              },
-              {
-                "type": "symbol",
-                "value": "REMPLANBi"
-              }
-            ],
-            "operators": [
-              "*"
-            ]
-          }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -48128,9 +48067,51 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
+          "name": "IPQTSREMPi5",
+          "expression": {
+            "type": "product_expression",
+            "operands": [
+              {
+                "type": "symbol",
+                "value": "ZIPQTSREMPi5"
+              },
+              {
+                "type": "symbol",
+                "value": "REMPLANBi"
+              }
+            ],
+            "operators": [
+              "*"
+            ]
+          }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "i",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "V"
+              },
+              {
+                "type": "symbol",
+                "value": "C"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPQTSREMPi5",
           "expression": {
             "type": "product_expression",
@@ -48148,7 +48129,26 @@
               "*"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "i",
+            "domains": [
+              {
+                "type": "integer_range",
+                "start": {
+                  "type": "integer",
+                  "value": 1
+                },
+                "stop": {
+                  "type": "integer",
+                  "value": 4
+                }
+              }
+            ]
+          }
+        ]
       }
     ],
     "linecol": [
@@ -48164,9 +48164,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IN04",
         "expression": {
           "type": "function_call",
@@ -48196,7 +48196,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IN06",
         "expression": {
           "type": "function_call",
@@ -48226,35 +48226,9 @@
         }
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "x",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "0"
-              }
-            ]
-          },
-          {
-            "type": "loop_variable",
-            "name": "z",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "1"
-              },
-              {
-                "type": "symbol",
-                "value": "2"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "INxz",
           "expression": {
             "type": "function_call",
@@ -48282,10 +48256,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -48311,9 +48282,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "INANTxz",
           "expression": {
             "type": "function_call",
@@ -48341,10 +48315,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -48352,7 +48323,7 @@
             "domains": [
               {
                 "type": "symbol",
-                "value": "5"
+                "value": "0"
               }
             ]
           },
@@ -48370,9 +48341,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "INxz",
           "expression": {
             "type": "function_call",
@@ -48400,10 +48374,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -48429,9 +48400,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "INANTxz",
           "expression": {
             "type": "function_call",
@@ -48459,10 +48433,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -48470,17 +48441,30 @@
             "domains": [
               {
                 "type": "symbol",
-                "value": "0"
-              },
-              {
-                "type": "symbol",
                 "value": "5"
               }
             ]
+          },
+          {
+            "type": "loop_variable",
+            "name": "z",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "1"
+              },
+              {
+                "type": "symbol",
+                "value": "2"
+              }
+            ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "INx5",
           "expression": {
             "type": "function_call",
@@ -48508,7 +48492,23 @@
               }
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "x",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "0"
+              },
+              {
+                "type": "symbol",
+                "value": "5"
+              }
+            ]
+          }
+        ]
       }
     ],
     "linecol": [
@@ -48524,9 +48524,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IDOM14",
         "expression": {
           "type": "sum_expression",
@@ -48664,7 +48664,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IDOM16",
         "expression": {
           "type": "sum_expression",
@@ -48802,25 +48802,9 @@
         }
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "z",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "1"
-              },
-              {
-                "type": "symbol",
-                "value": "2"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IDOM1z",
           "expression": {
             "type": "product_expression",
@@ -48998,7 +48982,23 @@
               "*"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "z",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "1"
+              },
+              {
+                "type": "symbol",
+                "value": "2"
+              }
+            ]
+          }
+        ]
       }
     ],
     "linecol": [
@@ -49014,9 +49014,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BOOL_0AZ",
         "expression": {
           "type": "function_call",
@@ -49097,9 +49097,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "PLAFCDPART",
         "expression": {
           "type": "product_expression",
@@ -49125,7 +49125,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "PLANT",
         "expression": {
           "type": "sum_expression",
@@ -49442,7 +49442,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "PLACOMP",
         "expression": {
           "type": "sum_expression",
@@ -49627,9 +49627,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "VAR0AV",
         "expression": {
           "type": "function_call",
@@ -49655,7 +49655,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "VAR0BT",
         "expression": {
           "type": "sum_expression",
@@ -49729,7 +49729,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "NBMIQAR",
         "expression": {
           "type": "product_expression",
@@ -50110,7 +50110,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "NB0BTMIQAR",
         "expression": {
           "type": "product_expression",
@@ -50228,7 +50228,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "NB0BT2MIQAR",
         "expression": {
           "type": "product_expression",
@@ -50354,7 +50354,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "NB0BTQAR",
         "expression": {
           "type": "product_expression",
@@ -50578,7 +50578,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "PLAQAR",
         "expression": {
           "type": "function_call",
@@ -50673,9 +50673,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "PLA",
         "expression": {
           "type": "sum_expression",
@@ -50695,7 +50695,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "PLAFQFT",
         "expression": {
           "type": "symbol",
@@ -50716,9 +50716,35 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "pour_variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
+          "name": "ISxyz",
+          "expression": {
+            "type": "function_call",
+            "name": "arr",
+            "parameters": [
+              {
+                "type": "product_expression",
+                "operands": [
+                  {
+                    "type": "symbol",
+                    "value": "DSxyz"
+                  },
+                  {
+                    "type": "symbol",
+                    "value": "NBy"
+                  }
+                ],
+                "operators": [
+                  "*"
+                ]
+              }
+            ]
+          }
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -50758,9 +50784,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ISxyz",
           "expression": {
             "type": "function_call",
@@ -50784,10 +50813,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -50827,54 +50853,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
-          "name": "ISxyz",
-          "expression": {
-            "type": "function_call",
-            "name": "arr",
-            "parameters": [
-              {
-                "type": "product_expression",
-                "operands": [
-                  {
-                    "type": "symbol",
-                    "value": "DSxyz"
-                  },
-                  {
-                    "type": "symbol",
-                    "value": "NBy"
-                  }
-                ],
-                "operators": [
-                  "*"
-                ]
-              }
-            ]
-          }
-        }
+        ]
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "y",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "1"
-              },
-              {
-                "type": "symbol",
-                "value": "2"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IS0y4",
           "expression": {
             "type": "function_call",
@@ -50898,10 +50882,52 @@
               }
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "y",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "1"
+              },
+              {
+                "type": "symbol",
+                "value": "2"
+              }
+            ]
+          }
+        ]
       },
       {
-        "type": "pour_variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
+          "name": "ISxy5",
+          "expression": {
+            "type": "function_call",
+            "name": "arr",
+            "parameters": [
+              {
+                "type": "product_expression",
+                "operands": [
+                  {
+                    "type": "symbol",
+                    "value": "DSxy5"
+                  },
+                  {
+                    "type": "symbol",
+                    "value": "NBy"
+                  }
+                ],
+                "operators": [
+                  "*"
+                ]
+              }
+            ]
+          }
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -50931,54 +50957,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
-          "name": "ISxy5",
-          "expression": {
-            "type": "function_call",
-            "name": "arr",
-            "parameters": [
-              {
-                "type": "product_expression",
-                "operands": [
-                  {
-                    "type": "symbol",
-                    "value": "DSxy5"
-                  },
-                  {
-                    "type": "symbol",
-                    "value": "NBy"
-                  }
-                ],
-                "operators": [
-                  "*"
-                ]
-              }
-            ]
-          }
-        }
+        ]
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "y",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "1"
-              },
-              {
-                "type": "symbol",
-                "value": "2"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IS0y6",
           "expression": {
             "type": "function_call",
@@ -51002,7 +50986,23 @@
               }
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "y",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "1"
+              },
+              {
+                "type": "symbol",
+                "value": "2"
+              }
+            ]
+          }
+        ]
       }
     ],
     "linecol": [
@@ -51018,9 +51018,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABADON4",
         "expression": {
           "type": "sum_expression",
@@ -51242,7 +51242,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABADON6",
         "expression": {
           "type": "sum_expression",
@@ -51464,7 +51464,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IMETRO4",
         "expression": {
           "type": "function_call",
@@ -51500,7 +51500,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPRODOM4",
         "expression": {
           "type": "function_call",
@@ -51531,7 +51531,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPROGUY4",
         "expression": {
           "type": "function_call",
@@ -51562,7 +51562,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABADO4",
         "expression": {
           "type": "function_call",
@@ -51615,7 +51615,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABAGU4",
         "expression": {
           "type": "function_call",
@@ -51668,7 +51668,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABATOT4",
         "expression": {
           "type": "sum_expression",
@@ -51688,7 +51688,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "INETABADAJ4",
         "expression": {
           "type": "function_call",
@@ -51718,7 +51718,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "INETABAEAJ4",
         "expression": {
           "type": "function_call",
@@ -51748,7 +51748,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ISNETDAJ4",
         "expression": {
           "type": "function_call",
@@ -51779,7 +51779,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ISNETEAJ4",
         "expression": {
           "type": "function_call",
@@ -51809,7 +51809,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ITOTDOM4",
         "expression": {
           "type": "sum_expression",
@@ -51834,7 +51834,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IMETRO6",
         "expression": {
           "type": "function_call",
@@ -51865,7 +51865,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPRODOM6",
         "expression": {
           "type": "function_call",
@@ -51896,7 +51896,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "IPROGUY6",
         "expression": {
           "type": "function_call",
@@ -51927,7 +51927,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABADO6",
         "expression": {
           "type": "function_call",
@@ -51980,7 +51980,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABAGU6",
         "expression": {
           "type": "function_call",
@@ -52033,7 +52033,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABATOT6",
         "expression": {
           "type": "sum_expression",
@@ -52053,7 +52053,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "INETABADAJ6",
         "expression": {
           "type": "function_call",
@@ -52083,7 +52083,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "INETABAEAJ6",
         "expression": {
           "type": "function_call",
@@ -52113,7 +52113,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ITOTDOM6",
         "expression": {
           "type": "sum_expression",
@@ -52138,7 +52138,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ADO4",
         "expression": {
           "type": "sum_expression",
@@ -52298,7 +52298,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ADO6",
         "expression": {
           "type": "sum_expression",
@@ -52458,7 +52458,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABADO",
         "expression": {
           "type": "sum_expression",
@@ -52719,7 +52719,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABAGU",
         "expression": {
           "type": "sum_expression",
@@ -52980,25 +52980,9 @@
         }
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "z",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "1"
-              },
-              {
-                "type": "symbol",
-                "value": "2"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ABADONz",
           "expression": {
             "type": "sum_expression",
@@ -53218,10 +53202,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -53237,9 +53218,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ABADON3z",
           "expression": {
             "type": "sum_expression",
@@ -53459,10 +53443,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -53478,9 +53459,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IMETROz",
           "expression": {
             "type": "function_call",
@@ -53514,10 +53498,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -53533,9 +53514,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPRODOMz",
           "expression": {
             "type": "function_call",
@@ -53569,10 +53553,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -53588,9 +53569,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPROGUYz",
           "expression": {
             "type": "function_call",
@@ -53624,10 +53608,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -53643,9 +53624,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IQUORAJz",
           "expression": {
             "type": "function_call",
@@ -53703,10 +53687,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -53722,9 +53703,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IQUODAJz",
           "expression": {
             "type": "function_call",
@@ -53782,10 +53766,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -53801,9 +53782,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IQUOEAJz",
           "expression": {
             "type": "function_call",
@@ -53836,10 +53820,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -53855,9 +53836,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ABADOz",
           "expression": {
             "type": "function_call",
@@ -53908,10 +53892,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -53927,9 +53908,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ABAGUz",
           "expression": {
             "type": "function_call",
@@ -53980,10 +53964,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -53999,9 +53980,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ABATOTz",
           "expression": {
             "type": "sum_expression",
@@ -54019,10 +54003,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -54038,9 +54019,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "INETABADAJz",
           "expression": {
             "type": "function_call",
@@ -54073,10 +54057,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -54092,9 +54073,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "INETABAEAJz",
           "expression": {
             "type": "function_call",
@@ -54127,10 +54111,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -54146,9 +54127,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ITOTDOMz",
           "expression": {
             "type": "sum_expression",
@@ -54176,10 +54160,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -54195,9 +54176,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IMETRO3z",
           "expression": {
             "type": "function_call",
@@ -54226,10 +54210,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -54245,9 +54226,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPRODOM3z",
           "expression": {
             "type": "function_call",
@@ -54276,10 +54260,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -54295,9 +54276,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IPROGUY3z",
           "expression": {
             "type": "function_call",
@@ -54326,10 +54310,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -54345,9 +54326,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IQUORAJ3z",
           "expression": {
             "type": "function_call",
@@ -54405,10 +54389,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -54424,9 +54405,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IQUODAJ3z",
           "expression": {
             "type": "function_call",
@@ -54484,10 +54468,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -54503,9 +54484,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IQUOEAJ3z",
           "expression": {
             "type": "function_call",
@@ -54538,10 +54522,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -54557,9 +54538,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ABADO3z",
           "expression": {
             "type": "function_call",
@@ -54610,10 +54594,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -54629,9 +54610,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ABAGU3z",
           "expression": {
             "type": "function_call",
@@ -54682,10 +54666,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -54701,9 +54682,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ABATOT3z",
           "expression": {
             "type": "sum_expression",
@@ -54721,10 +54705,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -54740,9 +54721,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "INETABADAJ3z",
           "expression": {
             "type": "function_call",
@@ -54775,10 +54759,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -54794,9 +54775,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "INETABAEAJ3z",
           "expression": {
             "type": "function_call",
@@ -54829,10 +54813,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -54848,9 +54829,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ISNETDAJ3z",
           "expression": {
             "type": "function_call",
@@ -54891,10 +54875,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -54910,9 +54891,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ISNETEAJ3z",
           "expression": {
             "type": "function_call",
@@ -54940,10 +54924,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -54959,9 +54940,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IQNETDAJ3z",
           "expression": {
             "type": "function_call",
@@ -55002,10 +54986,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -55021,9 +55002,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IQNETEAJ3z",
           "expression": {
             "type": "function_call",
@@ -55051,10 +55035,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -55070,9 +55051,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ITOTDOM3z",
           "expression": {
             "type": "sum_expression",
@@ -55100,10 +55084,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -55119,9 +55100,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ADOz",
           "expression": {
             "type": "sum_expression",
@@ -55279,10 +55263,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -55298,9 +55279,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ADO3z",
           "expression": {
             "type": "sum_expression",
@@ -55458,7 +55442,23 @@
               "+"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "z",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "1"
+              },
+              {
+                "type": "symbol",
+                "value": "2"
+              }
+            ]
+          }
+        ]
       }
     ],
     "linecol": [

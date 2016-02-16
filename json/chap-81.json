@@ -6,9 +6,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSHALLOP",
         "expression": {
           "type": "sum_expression",
@@ -38,7 +38,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ALLOP",
         "expression": {
           "type": "sum_expression",
@@ -68,7 +68,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSBNP",
         "expression": {
           "type": "sum_expression",
@@ -88,7 +88,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "EXTSV",
         "expression": {
           "type": "sum_expression",
@@ -118,7 +118,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "EXTSC",
         "expression": {
           "type": "sum_expression",
@@ -148,7 +148,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "GATASAV",
         "expression": {
           "type": "sum_expression",
@@ -168,7 +168,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "GATASAC",
         "expression": {
           "type": "sum_expression",
@@ -188,7 +188,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSBV",
         "expression": {
           "type": "sum_expression",
@@ -246,7 +246,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSBC",
         "expression": {
           "type": "sum_expression",
@@ -304,7 +304,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSBP",
         "expression": {
           "type": "function_call",
@@ -340,7 +340,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "2PRBV",
         "expression": {
           "type": "sum_expression",
@@ -365,7 +365,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "2PRBC",
         "expression": {
           "type": "sum_expression",
@@ -390,7 +390,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "2PRB1",
         "expression": {
           "type": "sum_expression",
@@ -415,7 +415,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "2PRB2",
         "expression": {
           "type": "sum_expression",
@@ -440,7 +440,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "2PRB3",
         "expression": {
           "type": "sum_expression",
@@ -465,7 +465,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "2PRB4",
         "expression": {
           "type": "sum_expression",
@@ -490,41 +490,9 @@
         }
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "i",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "V"
-              },
-              {
-                "type": "symbol",
-                "value": "C"
-              },
-              {
-                "type": "symbol",
-                "value": "1"
-              },
-              {
-                "type": "symbol",
-                "value": "2"
-              },
-              {
-                "type": "symbol",
-                "value": "3"
-              },
-              {
-                "type": "symbol",
-                "value": "4"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "TSBNi",
           "expression": {
             "type": "sum_expression",
@@ -542,10 +510,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -558,12 +523,31 @@
               {
                 "type": "symbol",
                 "value": "C"
+              },
+              {
+                "type": "symbol",
+                "value": "1"
+              },
+              {
+                "type": "symbol",
+                "value": "2"
+              },
+              {
+                "type": "symbol",
+                "value": "3"
+              },
+              {
+                "type": "symbol",
+                "value": "4"
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "2TSNi",
           "expression": {
             "type": "sum_expression",
@@ -581,10 +565,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -592,25 +573,20 @@
             "domains": [
               {
                 "type": "symbol",
-                "value": "1"
+                "value": "V"
               },
               {
                 "type": "symbol",
-                "value": "2"
-              },
-              {
-                "type": "symbol",
-                "value": "3"
-              },
-              {
-                "type": "symbol",
-                "value": "4"
+                "value": "C"
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "2TSNi",
           "expression": {
             "type": "sum_expression",
@@ -628,52 +604,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "i",
-            "domains": [
-              {
-                "type": "integer_range",
-                "start": {
-                  "type": "integer",
-                  "value": 1
-                },
-                "stop": {
-                  "type": "integer",
-                  "value": 4
-                }
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
-          "name": "EXTSi",
-          "expression": {
-            "type": "sum_expression",
-            "operands": [
-              {
-                "type": "symbol",
-                "value": "TSBNi"
-              },
-              {
-                "type": "symbol",
-                "value": "2TSNi"
-              }
-            ],
-            "operators": [
-              "+"
-            ]
-          }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -697,31 +628,35 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
-          "name": "TSBi",
-          "expression": {
-            "type": "symbol",
-            "value": "EXTSi"
-          }
-        }
+        ]
       },
       {
-        "type": "pour_variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
+          "name": "EXTSi",
+          "expression": {
+            "type": "sum_expression",
+            "operands": [
+              {
+                "type": "symbol",
+                "value": "TSBNi"
+              },
+              {
+                "type": "symbol",
+                "value": "2TSNi"
+              }
+            ],
+            "operators": [
+              "+"
+            ]
+          }
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
             "name": "i",
             "domains": [
-              {
-                "type": "symbol",
-                "value": "V"
-              },
-              {
-                "type": "symbol",
-                "value": "C"
-              },
               {
                 "type": "integer_range",
                 "start": {
@@ -735,9 +670,47 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
+          "name": "TSBi",
+          "expression": {
+            "type": "symbol",
+            "value": "EXTSi"
+          }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "i",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "1"
+              },
+              {
+                "type": "symbol",
+                "value": "2"
+              },
+              {
+                "type": "symbol",
+                "value": "3"
+              },
+              {
+                "type": "symbol",
+                "value": "4"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "PRBi",
           "expression": {
             "type": "sum_expression",
@@ -760,101 +733,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "i",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "V"
-              },
-              {
-                "type": "symbol",
-                "value": "C"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
-          "name": "EXPRi",
-          "expression": {
-            "type": "sum_expression",
-            "operands": [
-              {
-                "type": "symbol",
-                "value": "PRBi"
-              },
-              {
-                "type": "symbol",
-                "value": "2PRBi"
-              },
-              {
-                "type": "symbol",
-                "value": "PEBFi"
-              }
-            ],
-            "operators": [
-              "+",
-              "+"
-            ]
-          }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "i",
-            "domains": [
-              {
-                "type": "integer_range",
-                "start": {
-                  "type": "integer",
-                  "value": 1
-                },
-                "stop": {
-                  "type": "integer",
-                  "value": 4
-                }
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
-          "name": "EXPRi",
-          "expression": {
-            "type": "sum_expression",
-            "operands": [
-              {
-                "type": "symbol",
-                "value": "PRBi"
-              },
-              {
-                "type": "symbol",
-                "value": "2PRBi"
-              },
-              {
-                "type": "symbol",
-                "value": "PEBFi"
-              }
-            ],
-            "operators": [
-              "+",
-              "+"
-            ]
-          }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -881,9 +760,103 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
+          "name": "EXPRi",
+          "expression": {
+            "type": "sum_expression",
+            "operands": [
+              {
+                "type": "symbol",
+                "value": "PRBi"
+              },
+              {
+                "type": "symbol",
+                "value": "2PRBi"
+              },
+              {
+                "type": "symbol",
+                "value": "PEBFi"
+              }
+            ],
+            "operators": [
+              "+",
+              "+"
+            ]
+          }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "i",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "V"
+              },
+              {
+                "type": "symbol",
+                "value": "C"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
+          "name": "EXPRi",
+          "expression": {
+            "type": "sum_expression",
+            "operands": [
+              {
+                "type": "symbol",
+                "value": "PRBi"
+              },
+              {
+                "type": "symbol",
+                "value": "2PRBi"
+              },
+              {
+                "type": "symbol",
+                "value": "PEBFi"
+              }
+            ],
+            "operators": [
+              "+",
+              "+"
+            ]
+          }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "i",
+            "domains": [
+              {
+                "type": "integer_range",
+                "start": {
+                  "type": "integer",
+                  "value": 1
+                },
+                "stop": {
+                  "type": "integer",
+                  "value": 4
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "EXSPBi",
           "expression": {
             "type": "sum_expression",
@@ -901,24 +874,7 @@
               "+"
             ]
           }
-        }
-      }
-    ],
-    "linecol": [
-      25,
-      1
-    ]
-  },
-  {
-    "type": "regle",
-    "name": "812",
-    "applications": [
-      "iliad",
-      "batch"
-    ],
-    "variable_definitions": [
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -945,9 +901,26 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      }
+    ],
+    "linecol": [
+      25,
+      1
+    ]
+  },
+  {
+    "type": "regle",
+    "name": "812",
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "TPS10i",
           "expression": {
             "type": "function_call",
@@ -976,10 +949,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -994,14 +964,24 @@
                 "value": "C"
               },
               {
-                "type": "symbol",
-                "value": "P"
+                "type": "integer_range",
+                "start": {
+                  "type": "integer",
+                  "value": 1
+                },
+                "stop": {
+                  "type": "integer",
+                  "value": 4
+                }
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "PTPS10i",
           "expression": {
             "type": "function_call",
@@ -1030,10 +1010,48 @@
               }
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "i",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "V"
+              },
+              {
+                "type": "symbol",
+                "value": "C"
+              },
+              {
+                "type": "symbol",
+                "value": "P"
+              }
+            ]
+          }
+        ]
       },
       {
-        "type": "pour_variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
+          "name": "DFNi",
+          "expression": {
+            "type": "function_call",
+            "name": "min",
+            "parameters": [
+              {
+                "type": "symbol",
+                "value": "PLAF_DEDFORFTS"
+              },
+              {
+                "type": "symbol",
+                "value": "TPS10i"
+              }
+            ]
+          }
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -1060,10 +1078,13 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
-          "name": "DFNi",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
+          "name": "PDFNi",
           "expression": {
             "type": "function_call",
             "name": "min",
@@ -1074,14 +1095,11 @@
               },
               {
                 "type": "symbol",
-                "value": "TPS10i"
+                "value": "PTPS10i"
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -1101,25 +1119,7 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
-          "name": "PDFNi",
-          "expression": {
-            "type": "function_call",
-            "name": "min",
-            "parameters": [
-              {
-                "type": "symbol",
-                "value": "PLAF_DEDFORFTS"
-              },
-              {
-                "type": "symbol",
-                "value": "PTPS10i"
-              }
-            ]
-          }
-        }
+        ]
       }
     ],
     "linecol": [
@@ -1134,9 +1134,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "PDEDMINP",
         "expression": {
           "type": "sum_expression",
@@ -1204,36 +1204,9 @@
         }
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "i",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "V"
-              },
-              {
-                "type": "symbol",
-                "value": "C"
-              },
-              {
-                "type": "integer_range",
-                "start": {
-                  "type": "integer",
-                  "value": 1
-                },
-                "stop": {
-                  "type": "integer",
-                  "value": 4
-                }
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "DEDMINi",
           "expression": {
             "type": "sum_expression",
@@ -1299,37 +1272,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "i",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "V"
-              },
-              {
-                "type": "symbol",
-                "value": "C"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
-          "name": "PDEDMINi",
-          "expression": {
-            "type": "symbol",
-            "value": "DEDMINi"
-          }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -1356,9 +1299,39 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
+          "name": "PDEDMINi",
+          "expression": {
+            "type": "symbol",
+            "value": "DEDMINi"
+          }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "i",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "V"
+              },
+              {
+                "type": "symbol",
+                "value": "C"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "10MINSi",
           "expression": {
             "type": "function_call",
@@ -1384,61 +1357,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "i",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "V"
-              },
-              {
-                "type": "symbol",
-                "value": "C"
-              },
-              {
-                "type": "symbol",
-                "value": "P"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
-          "name": "P10MINSi",
-          "expression": {
-            "type": "function_call",
-            "name": "max",
-            "parameters": [
-              {
-                "type": "function_call",
-                "name": "min",
-                "parameters": [
-                  {
-                    "type": "symbol",
-                    "value": "PERPSALi"
-                  },
-                  {
-                    "type": "symbol",
-                    "value": "PDEDMINi"
-                  }
-                ]
-              },
-              {
-                "type": "symbol",
-                "value": "PDFNi"
-              }
-            ]
-          }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -1465,9 +1384,63 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
+          "name": "P10MINSi",
+          "expression": {
+            "type": "function_call",
+            "name": "max",
+            "parameters": [
+              {
+                "type": "function_call",
+                "name": "min",
+                "parameters": [
+                  {
+                    "type": "symbol",
+                    "value": "PERPSALi"
+                  },
+                  {
+                    "type": "symbol",
+                    "value": "PDEDMINi"
+                  }
+                ]
+              },
+              {
+                "type": "symbol",
+                "value": "PDFNi"
+              }
+            ]
+          }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "i",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "V"
+              },
+              {
+                "type": "symbol",
+                "value": "C"
+              },
+              {
+                "type": "symbol",
+                "value": "P"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IND_10MIN_0i",
           "expression": {
             "type": "product_expression",
@@ -1509,10 +1482,7 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -1527,14 +1497,24 @@
                 "value": "C"
               },
               {
-                "type": "symbol",
-                "value": "P"
+                "type": "integer_range",
+                "start": {
+                  "type": "integer",
+                  "value": 1
+                },
+                "stop": {
+                  "type": "integer",
+                  "value": 4
+                }
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "PIND_10MIN_0i",
           "expression": {
             "type": "product_expression",
@@ -1576,10 +1556,56 @@
               "*"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "i",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "V"
+              },
+              {
+                "type": "symbol",
+                "value": "C"
+              },
+              {
+                "type": "symbol",
+                "value": "P"
+              }
+            ]
+          }
+        ]
       },
       {
-        "type": "pour_variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
+          "name": "IND_MINi",
+          "expression": {
+            "type": "sum_expression",
+            "operands": [
+              {
+                "type": "integer",
+                "value": 1
+              },
+              {
+                "type": "function_call",
+                "name": "positif",
+                "parameters": [
+                  {
+                    "type": "symbol",
+                    "value": "IND_10MIN_0i"
+                  }
+                ]
+              }
+            ],
+            "operators": [
+              "-"
+            ]
+          }
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -1606,58 +1632,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
-          "name": "IND_MINi",
-          "expression": {
-            "type": "sum_expression",
-            "operands": [
-              {
-                "type": "integer",
-                "value": 1
-              },
-              {
-                "type": "function_call",
-                "name": "positif",
-                "parameters": [
-                  {
-                    "type": "symbol",
-                    "value": "IND_10MIN_0i"
-                  }
-                ]
-              }
-            ],
-            "operators": [
-              "-"
-            ]
-          }
-        }
+        ]
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "i",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "V"
-              },
-              {
-                "type": "symbol",
-                "value": "C"
-              },
-              {
-                "type": "symbol",
-                "value": "P"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "PIND_MINi",
           "expression": {
             "type": "sum_expression",
@@ -1681,7 +1661,27 @@
               "-"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "i",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "V"
+              },
+              {
+                "type": "symbol",
+                "value": "C"
+              },
+              {
+                "type": "symbol",
+                "value": "P"
+              }
+            ]
+          }
+        ]
       }
     ],
     "linecol": [
@@ -1696,9 +1696,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "FRNP",
         "expression": {
           "type": "sum_expression",
@@ -1728,7 +1728,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "10MINSP",
         "expression": {
           "type": "sum_expression",
@@ -1758,7 +1758,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "FRDPROVV",
         "expression": {
           "type": "sum_expression",
@@ -1788,7 +1788,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "FRDPROVC",
         "expression": {
           "type": "sum_expression",
@@ -1818,7 +1818,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "FRDPROV1",
         "expression": {
           "type": "sum_expression",
@@ -1848,7 +1848,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "FRDPROV2",
         "expression": {
           "type": "sum_expression",
@@ -1878,7 +1878,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "FRDPROV3",
         "expression": {
           "type": "sum_expression",
@@ -1908,7 +1908,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "FRDPROV4",
         "expression": {
           "type": "sum_expression",
@@ -1938,7 +1938,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "FRDPROVP",
         "expression": {
           "type": "sum_expression",
@@ -1968,7 +1968,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "FRDP",
         "expression": {
           "type": "sum_expression",
@@ -2158,7 +2158,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "FRD1",
         "expression": {
           "type": "sum_expression",
@@ -2588,7 +2588,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "FRD2",
         "expression": {
           "type": "sum_expression",
@@ -3022,7 +3022,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "FRD3",
         "expression": {
           "type": "sum_expression",
@@ -3418,7 +3418,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "FRD4",
         "expression": {
           "type": "function_call",
@@ -3458,7 +3458,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "PFRDV",
         "expression": {
           "type": "product_expression",
@@ -3520,7 +3520,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "PFRDC",
         "expression": {
           "type": "product_expression",
@@ -3582,7 +3582,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "PFRDP",
         "expression": {
           "type": "product_expression",
@@ -3644,7 +3644,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "PIND_10V",
         "expression": {
           "type": "function_call",
@@ -3682,7 +3682,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "PIND_10C",
         "expression": {
           "type": "function_call",
@@ -3720,7 +3720,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "PIND_10P",
         "expression": {
           "type": "function_call",
@@ -3758,7 +3758,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABTS1AJ",
         "expression": {
           "type": "product_expression",
@@ -3807,7 +3807,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABTS1AP",
         "expression": {
           "type": "product_expression",
@@ -4032,7 +4032,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABTS3VJ",
         "expression": {
           "type": "product_expression",
@@ -4252,7 +4252,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABTS1TT",
         "expression": {
           "type": "product_expression",
@@ -4467,7 +4467,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABTSRAJ",
         "expression": {
           "type": "product_expression",
@@ -4677,7 +4677,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABTSRAP",
         "expression": {
           "type": "product_expression",
@@ -4882,7 +4882,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABTSV",
         "expression": {
           "type": "sum_expression",
@@ -4922,7 +4922,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABDOMDAJ",
         "expression": {
           "type": "sum_expression",
@@ -5109,7 +5109,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABDOMEAJ",
         "expression": {
           "type": "sum_expression",
@@ -5291,7 +5291,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABGL1V",
         "expression": {
           "type": "sum_expression",
@@ -5468,7 +5468,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABGL2V",
         "expression": {
           "type": "sum_expression",
@@ -5626,7 +5626,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABGL3V",
         "expression": {
           "type": "sum_expression",
@@ -5688,7 +5688,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABTS1BJ",
         "expression": {
           "type": "function_call",
@@ -5719,7 +5719,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABTS1BP",
         "expression": {
           "type": "product_expression",
@@ -5944,7 +5944,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABTS3VK",
         "expression": {
           "type": "product_expression",
@@ -6164,7 +6164,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABTS1UT",
         "expression": {
           "type": "product_expression",
@@ -6379,7 +6379,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABTSRBJ",
         "expression": {
           "type": "product_expression",
@@ -6589,7 +6589,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABTSRBP",
         "expression": {
           "type": "product_expression",
@@ -6794,7 +6794,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABTSC",
         "expression": {
           "type": "sum_expression",
@@ -6834,7 +6834,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABDOMDBJ",
         "expression": {
           "type": "sum_expression",
@@ -7021,7 +7021,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABDOMEBJ",
         "expression": {
           "type": "sum_expression",
@@ -7203,7 +7203,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABGL1C",
         "expression": {
           "type": "sum_expression",
@@ -7380,7 +7380,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABGL2C",
         "expression": {
           "type": "sum_expression",
@@ -7538,7 +7538,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABGL3C",
         "expression": {
           "type": "sum_expression",
@@ -7600,7 +7600,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABTS1CJ",
         "expression": {
           "type": "function_call",
@@ -7631,7 +7631,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABTS1CP",
         "expression": {
           "type": "product_expression",
@@ -7786,7 +7786,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABTSRCJ",
         "expression": {
           "type": "product_expression",
@@ -7922,7 +7922,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABTSRCP",
         "expression": {
           "type": "sum_expression",
@@ -7981,7 +7981,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABTS1DJ",
         "expression": {
           "type": "function_call",
@@ -8012,7 +8012,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABTS1DP",
         "expression": {
           "type": "product_expression",
@@ -8167,7 +8167,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABTSRDJ",
         "expression": {
           "type": "product_expression",
@@ -8303,7 +8303,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABTSRDP",
         "expression": {
           "type": "sum_expression",
@@ -8362,7 +8362,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABTS1EJ",
         "expression": {
           "type": "function_call",
@@ -8393,7 +8393,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABTS1EP",
         "expression": {
           "type": "product_expression",
@@ -8548,7 +8548,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABTSREJ",
         "expression": {
           "type": "product_expression",
@@ -8684,7 +8684,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABTSREP",
         "expression": {
           "type": "sum_expression",
@@ -8743,7 +8743,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABTS1FJ",
         "expression": {
           "type": "function_call",
@@ -8774,7 +8774,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABTS1FP",
         "expression": {
           "type": "product_expression",
@@ -8929,7 +8929,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABTSRFJ",
         "expression": {
           "type": "product_expression",
@@ -9065,7 +9065,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABTSRFP",
         "expression": {
           "type": "sum_expression",
@@ -9124,25 +9124,9 @@
         }
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "i",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "V"
-              },
-              {
-                "type": "symbol",
-                "value": "C"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "FRDi",
           "expression": {
             "type": "sum_expression",
@@ -9340,10 +9324,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -9356,23 +9337,15 @@
               {
                 "type": "symbol",
                 "value": "C"
-              },
-              {
-                "type": "integer_range",
-                "start": {
-                  "type": "integer",
-                  "value": 1
-                },
-                "stop": {
-                  "type": "integer",
-                  "value": 4
-                }
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "FRDAi",
           "expression": {
             "type": "product_expression",
@@ -9408,10 +9381,7 @@
               "*"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -9438,9 +9408,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IND_10i",
           "expression": {
             "type": "function_call",
@@ -9464,10 +9437,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -9494,9 +9464,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "FPTi",
           "expression": {
             "type": "function_call",
@@ -9512,10 +9485,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -9542,9 +9512,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "INDEFTSi",
           "expression": {
             "type": "function_call",
@@ -9568,51 +9541,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "i",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "V"
-              },
-              {
-                "type": "symbol",
-                "value": "C"
-              },
-              {
-                "type": "symbol",
-                "value": "P"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
-          "name": "PFPTi",
-          "expression": {
-            "type": "function_call",
-            "name": "max",
-            "parameters": [
-              {
-                "type": "symbol",
-                "value": "PFRDi"
-              },
-              {
-                "type": "symbol",
-                "value": "P10MINSi"
-              }
-            ]
-          }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -9639,9 +9568,53 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
+          "name": "PFPTi",
+          "expression": {
+            "type": "function_call",
+            "name": "max",
+            "parameters": [
+              {
+                "type": "symbol",
+                "value": "PFRDi"
+              },
+              {
+                "type": "symbol",
+                "value": "P10MINSi"
+              }
+            ]
+          }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "i",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "V"
+              },
+              {
+                "type": "symbol",
+                "value": "C"
+              },
+              {
+                "type": "symbol",
+                "value": "P"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "D10Mi",
           "expression": {
             "type": "sum_expression",
@@ -9695,10 +9668,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -9713,14 +9683,24 @@
                 "value": "C"
               },
               {
-                "type": "symbol",
-                "value": "P"
+                "type": "integer_range",
+                "start": {
+                  "type": "integer",
+                  "value": 1
+                },
+                "stop": {
+                  "type": "integer",
+                  "value": 4
+                }
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "PD10Mi",
           "expression": {
             "type": "sum_expression",
@@ -9774,10 +9754,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -9792,21 +9769,17 @@
                 "value": "C"
               },
               {
-                "type": "integer_range",
-                "start": {
-                  "type": "integer",
-                  "value": 1
-                },
-                "stop": {
-                  "type": "integer",
-                  "value": 4
-                }
+                "type": "symbol",
+                "value": "P"
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "REP10i",
           "expression": {
             "type": "sum_expression",
@@ -9860,10 +9833,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -9878,14 +9848,24 @@
                 "value": "C"
               },
               {
-                "type": "symbol",
-                "value": "P"
+                "type": "integer_range",
+                "start": {
+                  "type": "integer",
+                  "value": 1
+                },
+                "stop": {
+                  "type": "integer",
+                  "value": 4
+                }
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "PREP10i",
           "expression": {
             "type": "sum_expression",
@@ -9939,7 +9919,27 @@
               "+"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "i",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "V"
+              },
+              {
+                "type": "symbol",
+                "value": "C"
+              },
+              {
+                "type": "symbol",
+                "value": "P"
+              }
+            ]
+          }
+        ]
       }
     ],
     "linecol": [
@@ -9954,9 +9954,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABGLTV",
         "expression": {
           "type": "sum_expression",
@@ -10009,7 +10009,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "ABGLTC",
         "expression": {
           "type": "sum_expression",
@@ -10074,9 +10074,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSN1AJ",
         "expression": {
           "type": "sum_expression",
@@ -10096,7 +10096,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSN1AP",
         "expression": {
           "type": "sum_expression",
@@ -10116,7 +10116,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSN3VJ",
         "expression": {
           "type": "sum_expression",
@@ -10136,7 +10136,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSN1TT",
         "expression": {
           "type": "sum_expression",
@@ -10156,7 +10156,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSNRAJ",
         "expression": {
           "type": "sum_expression",
@@ -10176,7 +10176,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSNRAP",
         "expression": {
           "type": "sum_expression",
@@ -10196,7 +10196,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSNDAJ",
         "expression": {
           "type": "sum_expression",
@@ -10216,7 +10216,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSNEAJ",
         "expression": {
           "type": "sum_expression",
@@ -10236,7 +10236,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSNGL1V",
         "expression": {
           "type": "sum_expression",
@@ -10256,7 +10256,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSNGL2V",
         "expression": {
           "type": "sum_expression",
@@ -10276,7 +10276,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSNGL3V",
         "expression": {
           "type": "sum_expression",
@@ -10296,7 +10296,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSN1BJ",
         "expression": {
           "type": "sum_expression",
@@ -10316,7 +10316,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSN1BP",
         "expression": {
           "type": "sum_expression",
@@ -10336,7 +10336,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSN3VK",
         "expression": {
           "type": "sum_expression",
@@ -10356,7 +10356,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSN1UT",
         "expression": {
           "type": "sum_expression",
@@ -10376,7 +10376,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSNRBJ",
         "expression": {
           "type": "sum_expression",
@@ -10396,7 +10396,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSNRBP",
         "expression": {
           "type": "sum_expression",
@@ -10416,7 +10416,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSNDBJ",
         "expression": {
           "type": "sum_expression",
@@ -10436,7 +10436,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSNEBJ",
         "expression": {
           "type": "sum_expression",
@@ -10456,7 +10456,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSNGL1C",
         "expression": {
           "type": "sum_expression",
@@ -10476,7 +10476,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSNGL2C",
         "expression": {
           "type": "sum_expression",
@@ -10496,7 +10496,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSNGL3C",
         "expression": {
           "type": "sum_expression",
@@ -10516,7 +10516,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSN1CJ",
         "expression": {
           "type": "sum_expression",
@@ -10536,7 +10536,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSN1CP",
         "expression": {
           "type": "sum_expression",
@@ -10556,7 +10556,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSNRCJ",
         "expression": {
           "type": "sum_expression",
@@ -10576,7 +10576,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSNRCP",
         "expression": {
           "type": "sum_expression",
@@ -10596,7 +10596,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSN1DJ",
         "expression": {
           "type": "sum_expression",
@@ -10616,7 +10616,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSN1DP",
         "expression": {
           "type": "sum_expression",
@@ -10636,7 +10636,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSNRDJ",
         "expression": {
           "type": "sum_expression",
@@ -10656,7 +10656,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSNRDP",
         "expression": {
           "type": "sum_expression",
@@ -10676,7 +10676,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSN1EJ",
         "expression": {
           "type": "sum_expression",
@@ -10696,7 +10696,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSN1EP",
         "expression": {
           "type": "sum_expression",
@@ -10716,7 +10716,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSNREJ",
         "expression": {
           "type": "sum_expression",
@@ -10736,7 +10736,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSNREP",
         "expression": {
           "type": "sum_expression",
@@ -10756,7 +10756,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSN1FJ",
         "expression": {
           "type": "sum_expression",
@@ -10776,7 +10776,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSN1FP",
         "expression": {
           "type": "sum_expression",
@@ -10796,7 +10796,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSNRFJ",
         "expression": {
           "type": "sum_expression",
@@ -10816,7 +10816,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSNRFP",
         "expression": {
           "type": "sum_expression",
@@ -10848,9 +10848,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "PL_PB",
         "expression": {
           "type": "function_call",
@@ -10924,41 +10924,9 @@
         }
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "i",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "V"
-              },
-              {
-                "type": "symbol",
-                "value": "C"
-              },
-              {
-                "type": "symbol",
-                "value": "1"
-              },
-              {
-                "type": "symbol",
-                "value": "2"
-              },
-              {
-                "type": "symbol",
-                "value": "3"
-              },
-              {
-                "type": "symbol",
-                "value": "4"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "PLRi",
           "expression": {
             "type": "function_call",
@@ -10974,10 +10942,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -11009,9 +10974,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "APBi",
           "expression": {
             "type": "function_call",
@@ -11044,10 +11012,7 @@
               }
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -11079,9 +11044,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "IND_APBi",
           "expression": {
             "type": "function_call",
@@ -11122,24 +11090,7 @@
               }
             ]
           }
-        }
-      }
-    ],
-    "linecol": [
-      303,
-      1
-    ]
-  },
-  {
-    "type": "regle",
-    "name": "819",
-    "applications": [
-      "iliad",
-      "batch"
-    ],
-    "variable_definitions": [
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -11171,9 +11122,26 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      }
+    ],
+    "linecol": [
+      303,
+      1
+    ]
+  },
+  {
+    "type": "regle",
+    "name": "819",
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "ABPRi",
           "expression": {
             "type": "function_call",
@@ -11320,7 +11288,39 @@
               }
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "i",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "V"
+              },
+              {
+                "type": "symbol",
+                "value": "C"
+              },
+              {
+                "type": "symbol",
+                "value": "1"
+              },
+              {
+                "type": "symbol",
+                "value": "2"
+              },
+              {
+                "type": "symbol",
+                "value": "3"
+              },
+              {
+                "type": "symbol",
+                "value": "4"
+              }
+            ]
+          }
+        ]
       }
     ],
     "linecol": [
@@ -11335,9 +11335,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "APRV",
         "expression": {
           "type": "sum_expression",
@@ -11403,7 +11403,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "APRC",
         "expression": {
           "type": "sum_expression",
@@ -11505,7 +11505,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "APR1",
         "expression": {
           "type": "sum_expression",
@@ -11636,7 +11636,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "APR2",
         "expression": {
           "type": "sum_expression",
@@ -11796,7 +11796,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "APR3",
         "expression": {
           "type": "sum_expression",
@@ -11985,7 +11985,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "APR4",
         "expression": {
           "type": "sum_expression",
@@ -12215,9 +12215,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "PRNNP",
         "expression": {
           "type": "sum_expression",
@@ -12247,7 +12247,27 @@
         }
       },
       {
-        "type": "pour_variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
+          "name": "PRNNi",
+          "expression": {
+            "type": "sum_expression",
+            "operands": [
+              {
+                "type": "symbol",
+                "value": "EXPRi"
+              },
+              {
+                "type": "symbol",
+                "value": "APRi"
+              }
+            ],
+            "operators": [
+              "-"
+            ]
+          }
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -12279,27 +12299,7 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
-          "name": "PRNNi",
-          "expression": {
-            "type": "sum_expression",
-            "operands": [
-              {
-                "type": "symbol",
-                "value": "EXPRi"
-              },
-              {
-                "type": "symbol",
-                "value": "APRi"
-              }
-            ],
-            "operators": [
-              "-"
-            ]
-          }
-        }
+        ]
       }
     ],
     "linecol": [
@@ -12314,9 +12314,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSNTV",
         "expression": {
           "type": "sum_expression",
@@ -12381,7 +12381,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSNTC",
         "expression": {
           "type": "sum_expression",
@@ -12446,7 +12446,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSNT1",
         "expression": {
           "type": "sum_expression",
@@ -12476,7 +12476,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSNT2",
         "expression": {
           "type": "sum_expression",
@@ -12506,7 +12506,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSNT3",
         "expression": {
           "type": "sum_expression",
@@ -12536,7 +12536,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TSNT4",
         "expression": {
           "type": "sum_expression",
@@ -12578,9 +12578,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "FRDVREP",
         "expression": {
           "type": "sum_expression",
@@ -12696,7 +12696,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "FRDCREP",
         "expression": {
           "type": "sum_expression",
@@ -12812,7 +12812,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "FRD1REP",
         "expression": {
           "type": "product_expression",
@@ -13446,7 +13446,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "FRDREPTOT",
         "expression": {
           "type": "product_expression",
@@ -13534,41 +13534,9 @@
         }
       },
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "i",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "V"
-              },
-              {
-                "type": "symbol",
-                "value": "C"
-              },
-              {
-                "type": "symbol",
-                "value": "1"
-              },
-              {
-                "type": "symbol",
-                "value": "2"
-              },
-              {
-                "type": "symbol",
-                "value": "3"
-              },
-              {
-                "type": "symbol",
-                "value": "4"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "TSNi",
           "expression": {
             "type": "sum_expression",
@@ -13645,10 +13613,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -13680,9 +13645,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "PRNi",
           "expression": {
             "type": "sum_expression",
@@ -13772,7 +13740,39 @@
               "+"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "i",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "V"
+              },
+              {
+                "type": "symbol",
+                "value": "C"
+              },
+              {
+                "type": "symbol",
+                "value": "1"
+              },
+              {
+                "type": "symbol",
+                "value": "2"
+              },
+              {
+                "type": "symbol",
+                "value": "3"
+              },
+              {
+                "type": "symbol",
+                "value": "4"
+              }
+            ]
+          }
+        ]
       }
     ],
     "linecol": [

@@ -6,9 +6,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BA1AF",
         "expression": {
           "type": "sum_expression",
@@ -45,9 +45,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BARSV",
         "expression": {
           "type": "sum_expression",
@@ -114,7 +114,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BARSREVV",
         "expression": {
           "type": "sum_expression",
@@ -134,7 +134,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BARSC",
         "expression": {
           "type": "sum_expression",
@@ -201,7 +201,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BARSREVC",
         "expression": {
           "type": "sum_expression",
@@ -221,7 +221,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BARSP",
         "expression": {
           "type": "sum_expression",
@@ -288,7 +288,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BARSREVP",
         "expression": {
           "type": "sum_expression",
@@ -308,7 +308,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BARAV",
         "expression": {
           "type": "sum_expression",
@@ -375,7 +375,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BARREVAV",
         "expression": {
           "type": "sum_expression",
@@ -395,7 +395,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BARAC",
         "expression": {
           "type": "sum_expression",
@@ -462,7 +462,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BARREVAC",
         "expression": {
           "type": "sum_expression",
@@ -482,7 +482,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BARAP",
         "expression": {
           "type": "sum_expression",
@@ -549,7 +549,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BARREVAP",
         "expression": {
           "type": "sum_expression",
@@ -581,31 +581,11 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "i",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "V"
-              },
-              {
-                "type": "symbol",
-                "value": "C"
-              },
-              {
-                "type": "symbol",
-                "value": "P"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "DEFBACREi",
           "expression": {
             "type": "sum_expression",
@@ -785,10 +765,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -808,9 +785,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "4DEFBACREi",
           "expression": {
             "type": "product_expression",
@@ -888,7 +868,27 @@
               "*"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "i",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "V"
+              },
+              {
+                "type": "symbol",
+                "value": "C"
+              },
+              {
+                "type": "symbol",
+                "value": "P"
+              }
+            ]
+          }
+        ]
       }
     ],
     "linecol": [
@@ -902,9 +902,9 @@
     "applications": [
       "iliad"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "SOMBARET",
         "expression": {
           "type": "sum_expression",
@@ -963,7 +963,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "SOMBARREVT",
         "expression": {
           "type": "sum_expression",
@@ -988,7 +988,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "PROQDEFBAT",
         "expression": {
           "type": "product_expression",
@@ -1060,9 +1060,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BANV",
         "expression": {
           "type": "sum_expression",
@@ -1142,7 +1142,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BANC",
         "expression": {
           "type": "sum_expression",
@@ -1222,7 +1222,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BANP",
         "expression": {
           "type": "sum_expression",
@@ -1302,7 +1302,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BAEV",
         "expression": {
           "type": "sum_expression",
@@ -1352,7 +1352,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BAEC",
         "expression": {
           "type": "sum_expression",
@@ -1402,7 +1402,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BAEP",
         "expression": {
           "type": "sum_expression",
@@ -1464,31 +1464,11 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "pour_variable_definition",
-        "loop_variables": [
-          {
-            "type": "loop_variable",
-            "name": "i",
-            "domains": [
-              {
-                "type": "symbol",
-                "value": "V"
-              },
-              {
-                "type": "symbol",
-                "value": "C"
-              },
-              {
-                "type": "symbol",
-                "value": "P"
-              }
-            ]
-          }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "DEFBAHREi",
           "expression": {
             "type": "sum_expression",
@@ -1668,10 +1648,7 @@
               "+"
             ]
           }
-        }
-      },
-      {
-        "type": "pour_variable_definition",
+        },
         "loop_variables": [
           {
             "type": "loop_variable",
@@ -1691,9 +1668,12 @@
               }
             ]
           }
-        ],
-        "variable_definition": {
-          "type": "variable_definition",
+        ]
+      },
+      {
+        "type": "pour_formula",
+        "formula": {
+          "type": "formula",
           "name": "4DEFBAHREi",
           "expression": {
             "type": "product_expression",
@@ -1771,7 +1751,27 @@
               "*"
             ]
           }
-        }
+        },
+        "loop_variables": [
+          {
+            "type": "loop_variable",
+            "name": "i",
+            "domains": [
+              {
+                "type": "symbol",
+                "value": "V"
+              },
+              {
+                "type": "symbol",
+                "value": "C"
+              },
+              {
+                "type": "symbol",
+                "value": "P"
+              }
+            ]
+          }
+        ]
       }
     ],
     "linecol": [
@@ -1786,9 +1786,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BAMV",
         "expression": {
           "type": "sum_expression",
@@ -1886,7 +1886,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BAMC",
         "expression": {
           "type": "sum_expression",
@@ -1984,7 +1984,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BAMP",
         "expression": {
           "type": "sum_expression",
@@ -2082,7 +2082,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BAEMV",
         "expression": {
           "type": "sum_expression",
@@ -2150,7 +2150,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BAEMC",
         "expression": {
           "type": "sum_expression",
@@ -2218,7 +2218,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BAEMP",
         "expression": {
           "type": "sum_expression",
@@ -2298,9 +2298,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BAFORV",
         "expression": {
           "type": "sum_expression",
@@ -2343,7 +2343,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BAFORC",
         "expression": {
           "type": "sum_expression",
@@ -2386,7 +2386,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BAFORP",
         "expression": {
           "type": "sum_expression",
@@ -2441,9 +2441,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BAHQV",
         "expression": {
           "type": "sum_expression",
@@ -2468,7 +2468,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BAHQC",
         "expression": {
           "type": "sum_expression",
@@ -2493,7 +2493,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BAHQP",
         "expression": {
           "type": "sum_expression",
@@ -2530,9 +2530,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "4BAQV",
         "expression": {
           "type": "sum_expression",
@@ -2650,7 +2650,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "4BAQC",
         "expression": {
           "type": "sum_expression",
@@ -2768,7 +2768,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "4BAQP",
         "expression": {
           "type": "sum_expression",
@@ -2898,9 +2898,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BAQV",
         "expression": {
           "type": "sum_expression",
@@ -2920,7 +2920,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BAQC",
         "expression": {
           "type": "sum_expression",
@@ -2940,7 +2940,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BAQP",
         "expression": {
           "type": "sum_expression",
@@ -2972,9 +2972,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BA1V",
         "expression": {
           "type": "sum_expression",
@@ -2994,7 +2994,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BA1C",
         "expression": {
           "type": "sum_expression",
@@ -3014,7 +3014,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BA1P",
         "expression": {
           "type": "sum_expression",
@@ -3046,9 +3046,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BAHQT",
         "expression": {
           "type": "sum_expression",
@@ -3085,9 +3085,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "DAGRIIMP",
         "expression": {
           "type": "function_call",
@@ -3179,7 +3179,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "TOTDAGRI",
         "expression": {
           "type": "sum_expression",
@@ -3380,9 +3380,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BAHQTOT",
         "expression": {
           "type": "sum_expression",
@@ -3436,7 +3436,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BAHQTOTMAXP",
         "expression": {
           "type": "product_expression",
@@ -3506,9 +3506,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BAHQTOTMAXN",
         "expression": {
           "type": "product_expression",
@@ -3590,7 +3590,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BAHQTOTMIN",
         "expression": {
           "type": "product_expression",
@@ -3629,9 +3629,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BAQT",
         "expression": {
           "type": "sum_expression",
@@ -3656,7 +3656,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BAQTOT",
         "expression": {
           "type": "function_call",
@@ -3696,7 +3696,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BAQTOTN",
         "expression": {
           "type": "function_call",
@@ -3736,7 +3736,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BAQTOTMIN",
         "expression": {
           "type": "function_call",
@@ -3776,7 +3776,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BAQTOTAV",
         "expression": {
           "type": "sum_expression",
@@ -3880,9 +3880,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "4BAQTOT",
         "expression": {
           "type": "function_call",
@@ -3919,7 +3919,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "4BAQTOTNET",
         "expression": {
           "type": "product_expression",
@@ -4257,9 +4257,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BA1",
         "expression": {
           "type": "sum_expression",
@@ -4296,9 +4296,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BANOR",
         "expression": {
           "type": "sum_expression",
@@ -4476,9 +4476,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "DEFBA2",
         "expression": {
           "type": "sum_expression",
@@ -4997,7 +4997,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "DEFBA3",
         "expression": {
           "type": "sum_expression",
@@ -5511,7 +5511,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "DEFBA4",
         "expression": {
           "type": "sum_expression",
@@ -6020,7 +6020,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "DEFBA5",
         "expression": {
           "type": "sum_expression",
@@ -6524,7 +6524,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "DEFBA6",
         "expression": {
           "type": "sum_expression",
@@ -7023,7 +7023,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "DEFBA1",
         "expression": {
           "type": "sum_expression",
@@ -7640,9 +7640,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "DEFIBAANT",
         "expression": {
           "type": "sum_expression",
@@ -9206,9 +9206,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "DAGRI",
         "expression": {
           "type": "sum_expression",
@@ -9248,7 +9248,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "VAREDAGRI",
         "expression": {
           "type": "function_call",
@@ -9295,9 +9295,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "BAQTOTAVIS",
         "expression": {
           "type": "symbol",
@@ -9317,9 +9317,9 @@
       "iliad",
       "batch"
     ],
-    "variable_definitions": [
+    "formulas": [
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "SOMDEFBANI",
         "expression": {
           "type": "sum_expression",
@@ -9359,7 +9359,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "DEFBANI",
         "expression": {
           "type": "sum_expression",
@@ -9414,7 +9414,7 @@
         }
       },
       {
-        "type": "variable_definition",
+        "type": "formula",
         "name": "DEFBANIF",
         "expression": {
           "type": "product_expression",
