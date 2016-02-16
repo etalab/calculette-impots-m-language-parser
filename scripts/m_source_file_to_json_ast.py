@@ -279,6 +279,15 @@ class MLanguageVisitor(PTNodeVisitor):
             value=float(node.value),
             )
 
+    def visit_formula(self, node, children):
+        brackets = find_one_or_none(children, type='brackets')
+        return make_json_ast_node(
+            expression=children[-1],
+            index=brackets['index'] if brackets is not None else None,
+            name=children[0]['value'],
+            node=node,
+            )
+
     def visit_function_call(self, node, children):
         return make_json_ast_node(
             parameters=to_list(children[1]),
@@ -346,14 +355,13 @@ class MLanguageVisitor(PTNodeVisitor):
     def visit_m_source_file(self, node, children):
         return children
 
-    def visit_pour_variable_definition(self, node, children):
+    def visit_pour_formula(self, node, children):
         assert len(children) == 2, children
         assert isinstance(children[0], list), children[0]
-        # TODO Unroll loop to define many variables and get them in "visit_regle".
         return make_json_ast_node(
+            formula=children[1],
             loop_variables=children[0],
             node=node,
-            variable_definition=children[1],
             )
 
     def visit_product_expression(self, node, children):
@@ -373,17 +381,17 @@ class MLanguageVisitor(PTNodeVisitor):
         enchaineur = enchaineur_reference['value'] if enchaineur_reference is not None else None
         symbols = find_one_or_many(children, type='symbol')
         name, tags = symbols[-1]['value'], symbols[:-1] or None
-        variable_definition_list = find_many_or_none(children, type='variable_definition')
-        pour_variable_definition_list = find_many_or_none(children, type='pour_variable_definition')
-        variable_definitions = ([] + (variable_definition_list or []) + (pour_variable_definition_list or [])) or None
+        formulas = find_many_or_none(children, type='formula')
+        pour_formulas = find_many_or_none(children, type='pour_formula')
+        all_formulas = ([] + (formulas or []) + (pour_formulas or [])) or None
         return make_json_ast_node(
             applications=applications,
             enchaineur=enchaineur,
+            formulas=all_formulas,
             linecol=True,
             name=name,
             node=node,
             tags=tags,
-            variable_definitions=variable_definitions,
             )
 
     def visit_string(self, node, children):
@@ -479,15 +487,6 @@ class MLanguageVisitor(PTNodeVisitor):
             name=children[0]['value'],
             node=node,
             value=children[1]['value'],
-            )
-
-    def visit_variable_definition(self, node, children):
-        brackets = find_one_or_none(children, type='brackets')
-        return make_json_ast_node(
-            expression=children[-1],
-            index=brackets['index'] if brackets is not None else None,
-            name=children[0]['value'],
-            node=node,
             )
 
     def visit_variable_saisie(self, node, children):

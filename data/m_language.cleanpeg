@@ -42,10 +42,10 @@ comparaison = sum_expression ((">=" / "<=" / "!=" / ">" / "<" / "=") sum_express
 dans = comparaison (("non"? "dans") "(" loop_variable_domains ")")?
 expression = dans (("et" / "ou") dans)*
 
-variable_definition = symbol brackets? "=" expression ";"
-pour_variable_definition = "pour" loop_variables ":" variable_definition
+formula = symbol brackets? "=" expression ";"
+pour_formula = "pour" loop_variables ":" formula
 enchaineur_reference = "enchaineur" ":" symbol ";"
-regle = "regle" symbol+ ":" applications_reference ";" enchaineur_reference? (pour_variable_definition / variable_definition)+
+regle = "regle" symbol+ ":" applications_reference ";" enchaineur_reference? (pour_formula / formula)+
 
 verif_condition = "si" expression "alors" "erreur" symbol* ";"
 verif = "verif" symbol+ ":" applications_reference ";" verif_condition+
