@@ -3,7 +3,7 @@
 # Verify that all the rules declared in the grammar file are handled by conversion script.
 
 SCRIPT_DIR=$(dirname $(readlink -f "$BASH_SOURCE"))
-SCRIPT="$SCRIPT_DIR/m_source_code_to_ast.py"
+SCRIPT="$SCRIPT_DIR/m_source_file_to_json_ast.py"
 GRAMMAR_FILE=`realpath $SCRIPT_DIR/../data/m_language.cleanpeg`
 
 EXTRACT_GRAMMAR_RULES="grep -o -E '^\w+' $GRAMMAR_FILE | grep -v EOF | sort"
