@@ -15,6 +15,10 @@ if [ -z "$SOURCES_DIR" -o ! -d "$SOURCES_DIR" ]; then
   exit -1
 fi
 
+if [ ! -d "$OUTPUT_DIR" ]; then
+  mkdir $OUTPUT_DIR
+fi
+
 echo "==========================================="
 echo "JSON files are kept. Remove them if wanted."
 echo "==========================================="
