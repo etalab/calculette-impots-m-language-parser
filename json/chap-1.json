@@ -5,7 +5,7 @@
     "applications": [
       "bareme"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "RC1",
@@ -62,7 +62,7 @@
       "batch",
       "iliad"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "NAPT",
@@ -136,7 +136,7 @@
       "batch",
       "iliad"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "NAPCOROLIR",
@@ -348,7 +348,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "RC1",
@@ -356,41 +356,37 @@
           "type": "ternary_operator",
           "condition": {
             "type": "comparaison",
-            "operands": [
-              {
-                "type": "sum_expression",
-                "operands": [
-                  {
-                    "type": "symbol",
-                    "value": "NAPINI"
-                  },
-                  {
-                    "type": "symbol",
-                    "value": "V_ANTIR"
-                  },
-                  {
-                    "type": "symbol",
-                    "value": "IRCUM_A"
-                  },
-                  {
-                    "type": "symbol",
-                    "value": "RECUMBIS"
-                  }
-                ],
-                "operators": [
-                  "-",
-                  "-",
-                  "+"
-                ]
-              },
-              {
-                "type": "symbol",
-                "value": "SEUIL_12"
-              }
-            ],
-            "operators": [
-              ">="
-            ]
+            "left_operand": {
+              "type": "sum_expression",
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "NAPINI"
+                },
+                {
+                  "type": "symbol",
+                  "value": "V_ANTIR"
+                },
+                {
+                  "type": "symbol",
+                  "value": "IRCUM_A"
+                },
+                {
+                  "type": "symbol",
+                  "value": "RECUMBIS"
+                }
+              ],
+              "operators": [
+                "-",
+                "-",
+                "+"
+              ]
+            },
+            "operator": ">=",
+            "right_operand": {
+              "type": "symbol",
+              "value": "SEUIL_12"
+            }
           },
           "value_if_false": {
             "type": "integer",
@@ -415,7 +411,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "IAVIMBIS",
@@ -536,7 +532,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "NAPI",
@@ -619,7 +615,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "INTMS",
@@ -1262,67 +1258,51 @@
             "operands": [
               {
                 "type": "comparaison",
-                "operands": [
-                  {
-                    "type": "symbol",
-                    "value": "CMAJ"
-                  },
-                  {
-                    "type": "symbol",
-                    "value": "7"
-                  }
-                ],
-                "operators": [
-                  "="
-                ]
+                "left_operand": {
+                  "type": "symbol",
+                  "value": "CMAJ"
+                },
+                "operator": "=",
+                "right_operand": {
+                  "type": "symbol",
+                  "value": "7"
+                }
               },
               {
                 "type": "comparaison",
-                "operands": [
-                  {
-                    "type": "symbol",
-                    "value": "CMAJ"
-                  },
-                  {
-                    "type": "symbol",
-                    "value": "10"
-                  }
-                ],
-                "operators": [
-                  "="
-                ]
+                "left_operand": {
+                  "type": "symbol",
+                  "value": "CMAJ"
+                },
+                "operator": "=",
+                "right_operand": {
+                  "type": "symbol",
+                  "value": "10"
+                }
               },
               {
                 "type": "comparaison",
-                "operands": [
-                  {
-                    "type": "symbol",
-                    "value": "CMAJ"
-                  },
-                  {
-                    "type": "symbol",
-                    "value": "17"
-                  }
-                ],
-                "operators": [
-                  "="
-                ]
+                "left_operand": {
+                  "type": "symbol",
+                  "value": "CMAJ"
+                },
+                "operator": "=",
+                "right_operand": {
+                  "type": "symbol",
+                  "value": "17"
+                }
               },
               {
                 "type": "comparaison",
-                "operands": [
-                  {
-                    "type": "symbol",
-                    "value": "CMAJ"
-                  },
-                  {
-                    "type": "integer",
-                    "value": 18
-                  }
-                ],
-                "operators": [
-                  "="
-                ]
+                "left_operand": {
+                  "type": "symbol",
+                  "value": "CMAJ"
+                },
+                "operator": "=",
+                "right_operand": {
+                  "type": "integer",
+                  "value": 18
+                }
               }
             ],
             "operators": [
@@ -1338,35 +1318,27 @@
               "operands": [
                 {
                   "type": "comparaison",
-                  "operands": [
-                    {
-                      "type": "symbol",
-                      "value": "CMAJ"
-                    },
-                    {
-                      "type": "symbol",
-                      "value": "8"
-                    }
-                  ],
-                  "operators": [
-                    "="
-                  ]
+                  "left_operand": {
+                    "type": "symbol",
+                    "value": "CMAJ"
+                  },
+                  "operator": "=",
+                  "right_operand": {
+                    "type": "symbol",
+                    "value": "8"
+                  }
                 },
                 {
                   "type": "comparaison",
-                  "operands": [
-                    {
-                      "type": "symbol",
-                      "value": "CMAJ"
-                    },
-                    {
-                      "type": "integer",
-                      "value": 11
-                    }
-                  ],
-                  "operators": [
-                    "="
-                  ]
+                  "left_operand": {
+                    "type": "symbol",
+                    "value": "CMAJ"
+                  },
+                  "operator": "=",
+                  "right_operand": {
+                    "type": "integer",
+                    "value": 11
+                  }
                 }
               ],
               "operators": [
@@ -1401,7 +1373,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "CSTOTSSPENA",
@@ -5227,7 +5199,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "BINRIR",
@@ -9384,7 +9356,7 @@
       "batch",
       "iliad"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "IRD",
@@ -9555,7 +9527,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "PRSD",
@@ -9809,7 +9781,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "CSGAC",
@@ -10152,7 +10124,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "RSE1AC",
@@ -10629,7 +10601,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "TOTCRBRUT",
@@ -10948,7 +10920,7 @@
       "batch",
       "iliad"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "IARD",
@@ -10982,7 +10954,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "PIRD",
@@ -11365,7 +11337,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "BPRS",
@@ -11851,7 +11823,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "PRSC",
@@ -11987,7 +11959,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "PRS",
@@ -12051,7 +12023,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "CSGC",
@@ -12187,7 +12159,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "RSE1",
@@ -12987,7 +12959,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "CSG",
@@ -13211,7 +13183,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "RDRF",
@@ -15893,7 +15865,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "PRSETOT",
@@ -16092,7 +16064,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "BDCSG",
@@ -16347,7 +16319,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "DGLOD",
@@ -16498,19 +16470,15 @@
           "type": "ternary_operator",
           "condition": {
             "type": "comparaison",
-            "operands": [
-              {
-                "type": "symbol",
-                "value": "V_IND_TRAIT"
-              },
-              {
-                "type": "integer",
-                "value": 4
-              }
-            ],
-            "operators": [
-              "="
-            ]
+            "left_operand": {
+              "type": "symbol",
+              "value": "V_IND_TRAIT"
+            },
+            "operator": "=",
+            "right_operand": {
+              "type": "integer",
+              "value": 4
+            }
           },
           "value_if_false": {
             "type": "function_call",
@@ -17010,7 +16978,7 @@
       "batch",
       "iliad"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "BDRSE1",
@@ -17889,19 +17857,15 @@
           "type": "ternary_operator",
           "condition": {
             "type": "comparaison",
-            "operands": [
-              {
-                "type": "symbol",
-                "value": "V_IND_TRAIT"
-              },
-              {
-                "type": "integer",
-                "value": 4
-              }
-            ],
-            "operators": [
-              "="
-            ]
+            "left_operand": {
+              "type": "symbol",
+              "value": "V_IND_TRAIT"
+            },
+            "operator": "=",
+            "right_operand": {
+              "type": "integer",
+              "value": 4
+            }
           },
           "value_if_false": {
             "type": "function_call",
@@ -18104,7 +18068,7 @@
       "batch",
       "iliad"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "DCSGD",
@@ -18201,19 +18165,15 @@
           "type": "ternary_operator",
           "condition": {
             "type": "comparaison",
-            "operands": [
-              {
-                "type": "symbol",
-                "value": "V_IND_TRAIT"
-              },
-              {
-                "type": "integer",
-                "value": 4
-              }
-            ],
-            "operators": [
-              "="
-            ]
+            "left_operand": {
+              "type": "symbol",
+              "value": "V_IND_TRAIT"
+            },
+            "operator": "=",
+            "right_operand": {
+              "type": "integer",
+              "value": 4
+            }
           },
           "value_if_false": {
             "type": "ternary_operator",
@@ -18222,35 +18182,27 @@
               "operands": [
                 {
                   "type": "comparaison",
-                  "operands": [
-                    {
-                      "type": "symbol",
-                      "value": "CRDEG"
-                    },
-                    {
-                      "type": "symbol",
-                      "value": "0"
-                    }
-                  ],
-                  "operators": [
-                    "="
-                  ]
+                  "left_operand": {
+                    "type": "symbol",
+                    "value": "CRDEG"
+                  },
+                  "operator": "=",
+                  "right_operand": {
+                    "type": "symbol",
+                    "value": "0"
+                  }
                 },
                 {
                   "type": "comparaison",
-                  "operands": [
-                    {
-                      "type": "symbol",
-                      "value": "NAPCRP"
-                    },
-                    {
-                      "type": "integer",
-                      "value": 0
-                    }
-                  ],
-                  "operators": [
-                    "="
-                  ]
+                  "left_operand": {
+                    "type": "symbol",
+                    "value": "NAPCRP"
+                  },
+                  "operator": "=",
+                  "right_operand": {
+                    "type": "integer",
+                    "value": 0
+                  }
                 }
               ],
               "operators": [
@@ -18356,7 +18308,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "BRDS",
@@ -18907,7 +18859,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "RDSC",
@@ -19043,7 +18995,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "RDSN",
@@ -19117,7 +19069,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "CSRTF",
@@ -19263,7 +19215,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "BASSURV3",
@@ -19785,7 +19737,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "BCVNSAL",
@@ -20249,7 +20201,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "BCDIS",
@@ -20423,7 +20375,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "BREGV",

@@ -7,7 +7,7 @@
       "bareme",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "MCDV",
@@ -200,31 +200,52 @@
           "type": "ternary_operator",
           "condition": {
             "type": "comparaison",
-            "operands": [
-              {
-                "type": "symbol",
-                "value": "BOOL_0AM"
-              },
-              {
-                "type": "integer",
-                "value": 1
-              }
-            ],
-            "operators": [
-              "="
-            ]
+            "left_operand": {
+              "type": "symbol",
+              "value": "BOOL_0AM"
+            },
+            "operator": "=",
+            "right_operand": {
+              "type": "integer",
+              "value": 1
+            }
           },
           "value_if_true": {
             "type": "ternary_operator",
             "condition": {
               "type": "comparaison",
-              "operands": [
-                {
+              "left_operand": {
+                "type": "sum_expression",
+                "operands": [
+                  {
+                    "type": "symbol",
+                    "value": "V_0AP"
+                  },
+                  {
+                    "type": "integer",
+                    "value": 0
+                  }
+                ],
+                "operators": [
+                  "+"
+                ]
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 1
+              }
+            },
+            "value_if_false": {
+              "type": "ternary_operator",
+              "condition": {
+                "type": "comparaison",
+                "left_operand": {
                   "type": "sum_expression",
                   "operands": [
                     {
                       "type": "symbol",
-                      "value": "V_0AP"
+                      "value": "V_0AF"
                     },
                     {
                       "type": "integer",
@@ -235,44 +256,11 @@
                     "+"
                   ]
                 },
-                {
+                "operator": "=",
+                "right_operand": {
                   "type": "integer",
                   "value": 1
                 }
-              ],
-              "operators": [
-                "="
-              ]
-            },
-            "value_if_false": {
-              "type": "ternary_operator",
-              "condition": {
-                "type": "comparaison",
-                "operands": [
-                  {
-                    "type": "sum_expression",
-                    "operands": [
-                      {
-                        "type": "symbol",
-                        "value": "V_0AF"
-                      },
-                      {
-                        "type": "integer",
-                        "value": 0
-                      }
-                    ],
-                    "operators": [
-                      "+"
-                    ]
-                  },
-                  {
-                    "type": "integer",
-                    "value": 1
-                  }
-                ],
-                "operators": [
-                  "="
-                ]
               },
               "value_if_false": {
                 "type": "ternary_operator",
@@ -281,66 +269,54 @@
                   "operands": [
                     {
                       "type": "comparaison",
-                      "operands": [
-                        {
-                          "type": "sum_expression",
-                          "operands": [
-                            {
-                              "type": "symbol",
-                              "value": "V_0AS"
-                            },
-                            {
-                              "type": "integer",
-                              "value": 0
-                            }
-                          ],
-                          "operators": [
-                            "+"
-                          ]
-                        },
-                        {
-                          "type": "symbol",
-                          "value": "1"
-                        }
-                      ],
-                      "operators": [
-                        "="
-                      ]
+                      "left_operand": {
+                        "type": "sum_expression",
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "V_0AS"
+                          },
+                          {
+                            "type": "integer",
+                            "value": 0
+                          }
+                        ],
+                        "operators": [
+                          "+"
+                        ]
+                      },
+                      "operator": "=",
+                      "right_operand": {
+                        "type": "symbol",
+                        "value": "1"
+                      }
                     },
                     {
                       "type": "boolean_expression",
                       "operands": [
                         {
                           "type": "comparaison",
-                          "operands": [
-                            {
-                              "type": "symbol",
-                              "value": "AGV"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "LIM_AGE_LET_S"
-                            }
-                          ],
-                          "operators": [
-                            ">="
-                          ]
+                          "left_operand": {
+                            "type": "symbol",
+                            "value": "AGV"
+                          },
+                          "operator": ">=",
+                          "right_operand": {
+                            "type": "symbol",
+                            "value": "LIM_AGE_LET_S"
+                          }
                         },
                         {
                           "type": "comparaison",
-                          "operands": [
-                            {
-                              "type": "symbol",
-                              "value": "AGC"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "LIM_AGE_LET_S"
-                            }
-                          ],
-                          "operators": [
-                            ">="
-                          ]
+                          "left_operand": {
+                            "type": "symbol",
+                            "value": "AGC"
+                          },
+                          "operator": ">=",
+                          "right_operand": {
+                            "type": "symbol",
+                            "value": "LIM_AGE_LET_S"
+                          }
                         }
                       ],
                       "operators": [
@@ -366,31 +342,27 @@
               "type": "ternary_operator",
               "condition": {
                 "type": "comparaison",
-                "operands": [
-                  {
-                    "type": "sum_expression",
-                    "operands": [
-                      {
-                        "type": "symbol",
-                        "value": "V_0AF"
-                      },
-                      {
-                        "type": "integer",
-                        "value": 0
-                      }
-                    ],
-                    "operators": [
-                      "+"
-                    ]
-                  },
-                  {
-                    "type": "integer",
-                    "value": 1
-                  }
-                ],
-                "operators": [
-                  "="
-                ]
+                "left_operand": {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "V_0AF"
+                    },
+                    {
+                      "type": "integer",
+                      "value": 0
+                    }
+                  ],
+                  "operators": [
+                    "+"
+                  ]
+                },
+                "operator": "=",
+                "right_operand": {
+                  "type": "integer",
+                  "value": 1
+                }
               },
               "value_if_false": {
                 "type": "integer",
@@ -418,7 +390,7 @@
       "iliad",
       "bareme"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "BOOL_V",
@@ -1139,7 +1111,7 @@
       "iliad",
       "bareme"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "SFL",
@@ -1627,7 +1599,7 @@
       "iliad",
       "bareme"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "SFCD2",
@@ -2028,7 +2000,7 @@
       "iliad",
       "bareme"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "SFV1",
@@ -2104,7 +2076,7 @@
       "iliad",
       "bareme"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "SFV2",
@@ -2115,64 +2087,12 @@
             "operands": [
               {
                 "type": "comparaison",
-                "operands": [
-                  {
-                    "type": "sum_expression",
-                    "operands": [
-                      {
-                        "type": "symbol",
-                        "value": "V_0AV"
-                      },
-                      {
-                        "type": "integer",
-                        "value": 0
-                      }
-                    ],
-                    "operators": [
-                      "+"
-                    ]
-                  },
-                  {
-                    "type": "symbol",
-                    "value": "1"
-                  }
-                ],
-                "operators": [
-                  "="
-                ]
-              },
-              {
-                "type": "comparaison",
-                "operands": [
-                  {
-                    "type": "symbol",
-                    "value": "BOOL_0AZ"
-                  },
-                  {
-                    "type": "integer",
-                    "value": 1
-                  }
-                ],
-                "operators": [
-                  "="
-                ]
-              }
-            ],
-            "operators": [
-              "et"
-            ]
-          },
-          "value_if_true": {
-            "type": "ternary_operator",
-            "condition": {
-              "type": "comparaison",
-              "operands": [
-                {
+                "left_operand": {
                   "type": "sum_expression",
                   "operands": [
                     {
                       "type": "symbol",
-                      "value": "V_0AP"
+                      "value": "V_0AV"
                     },
                     {
                       "type": "integer",
@@ -2183,26 +2103,91 @@
                     "+"
                   ]
                 },
-                {
+                "operator": "=",
+                "right_operand": {
+                  "type": "symbol",
+                  "value": "1"
+                }
+              },
+              {
+                "type": "comparaison",
+                "left_operand": {
+                  "type": "symbol",
+                  "value": "BOOL_0AZ"
+                },
+                "operator": "=",
+                "right_operand": {
                   "type": "integer",
                   "value": 1
                 }
-              ],
-              "operators": [
-                "="
-              ]
+              }
+            ],
+            "operators": [
+              "et"
+            ]
+          },
+          "value_if_true": {
+            "type": "ternary_operator",
+            "condition": {
+              "type": "comparaison",
+              "left_operand": {
+                "type": "sum_expression",
+                "operands": [
+                  {
+                    "type": "symbol",
+                    "value": "V_0AP"
+                  },
+                  {
+                    "type": "integer",
+                    "value": 0
+                  }
+                ],
+                "operators": [
+                  "+"
+                ]
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 1
+              }
             },
             "value_if_false": {
               "type": "ternary_operator",
               "condition": {
                 "type": "comparaison",
-                "operands": [
-                  {
+                "left_operand": {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "V_0AF"
+                    },
+                    {
+                      "type": "integer",
+                      "value": 0
+                    }
+                  ],
+                  "operators": [
+                    "+"
+                  ]
+                },
+                "operator": "=",
+                "right_operand": {
+                  "type": "integer",
+                  "value": 1
+                }
+              },
+              "value_if_false": {
+                "type": "ternary_operator",
+                "condition": {
+                  "type": "comparaison",
+                  "left_operand": {
                     "type": "sum_expression",
                     "operands": [
                       {
                         "type": "symbol",
-                        "value": "V_0AF"
+                        "value": "V_0AW"
                       },
                       {
                         "type": "integer",
@@ -2213,44 +2198,11 @@
                       "+"
                     ]
                   },
-                  {
+                  "operator": "=",
+                  "right_operand": {
                     "type": "integer",
                     "value": 1
                   }
-                ],
-                "operators": [
-                  "="
-                ]
-              },
-              "value_if_false": {
-                "type": "ternary_operator",
-                "condition": {
-                  "type": "comparaison",
-                  "operands": [
-                    {
-                      "type": "sum_expression",
-                      "operands": [
-                        {
-                          "type": "symbol",
-                          "value": "V_0AW"
-                        },
-                        {
-                          "type": "integer",
-                          "value": 0
-                        }
-                      ],
-                      "operators": [
-                        "+"
-                      ]
-                    },
-                    {
-                      "type": "integer",
-                      "value": 1
-                    }
-                  ],
-                  "operators": [
-                    "="
-                  ]
                 },
                 "value_if_true": {
                   "type": "integer",
@@ -2266,31 +2218,27 @@
               "type": "ternary_operator",
               "condition": {
                 "type": "comparaison",
-                "operands": [
-                  {
-                    "type": "sum_expression",
-                    "operands": [
-                      {
-                        "type": "symbol",
-                        "value": "V_0AF"
-                      },
-                      {
-                        "type": "integer",
-                        "value": 0
-                      }
-                    ],
-                    "operators": [
-                      "+"
-                    ]
-                  },
-                  {
-                    "type": "integer",
-                    "value": 1
-                  }
-                ],
-                "operators": [
-                  "="
-                ]
+                "left_operand": {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "V_0AF"
+                    },
+                    {
+                      "type": "integer",
+                      "value": 0
+                    }
+                  ],
+                  "operators": [
+                    "+"
+                  ]
+                },
+                "operator": "=",
+                "right_operand": {
+                  "type": "integer",
+                  "value": 1
+                }
               },
               "value_if_false": {
                 "type": "integer",
@@ -2318,7 +2266,7 @@
       "iliad",
       "bareme"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "BOOL_0AM",
@@ -2395,7 +2343,7 @@
       "iliad",
       "bareme"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "SFUTILE",
@@ -2449,7 +2397,7 @@
       "batch",
       "iliad"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "NATPENA",
@@ -2460,167 +2408,131 @@
             "operands": [
               {
                 "type": "comparaison",
-                "operands": [
-                  {
-                    "type": "sum_expression",
-                    "operands": [
-                      {
-                        "type": "symbol",
-                        "value": "APPLI_COLBERT"
-                      },
-                      {
-                        "type": "symbol",
-                        "value": "APPLI_ILIAD"
-                      },
-                      {
-                        "type": "symbol",
-                        "value": "APPLI_COLBERT"
-                      }
-                    ],
-                    "operators": [
-                      "+",
-                      "+"
-                    ]
-                  },
-                  {
-                    "type": "integer",
-                    "value": 1
-                  }
-                ],
-                "operators": [
-                  "="
-                ]
+                "left_operand": {
+                  "type": "sum_expression",
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "APPLI_COLBERT"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "APPLI_ILIAD"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "APPLI_COLBERT"
+                    }
+                  ],
+                  "operators": [
+                    "+",
+                    "+"
+                  ]
+                },
+                "operator": "=",
+                "right_operand": {
+                  "type": "integer",
+                  "value": 1
+                }
               },
               {
                 "type": "boolean_expression",
                 "operands": [
                   {
                     "type": "comparaison",
-                    "operands": [
-                      {
-                        "type": "symbol",
-                        "value": "CMAJ"
-                      },
-                      {
-                        "type": "symbol",
-                        "value": "7"
-                      }
-                    ],
-                    "operators": [
-                      "="
-                    ]
+                    "left_operand": {
+                      "type": "symbol",
+                      "value": "CMAJ"
+                    },
+                    "operator": "=",
+                    "right_operand": {
+                      "type": "symbol",
+                      "value": "7"
+                    }
                   },
                   {
                     "type": "comparaison",
-                    "operands": [
-                      {
-                        "type": "symbol",
-                        "value": "CMAJ"
-                      },
-                      {
-                        "type": "symbol",
-                        "value": "8"
-                      }
-                    ],
-                    "operators": [
-                      "="
-                    ]
+                    "left_operand": {
+                      "type": "symbol",
+                      "value": "CMAJ"
+                    },
+                    "operator": "=",
+                    "right_operand": {
+                      "type": "symbol",
+                      "value": "8"
+                    }
                   },
                   {
                     "type": "comparaison",
-                    "operands": [
-                      {
-                        "type": "symbol",
-                        "value": "CMAJ"
-                      },
-                      {
-                        "type": "symbol",
-                        "value": "9"
-                      }
-                    ],
-                    "operators": [
-                      "="
-                    ]
+                    "left_operand": {
+                      "type": "symbol",
+                      "value": "CMAJ"
+                    },
+                    "operator": "=",
+                    "right_operand": {
+                      "type": "symbol",
+                      "value": "9"
+                    }
                   },
                   {
                     "type": "comparaison",
-                    "operands": [
-                      {
-                        "type": "symbol",
-                        "value": "CMAJ"
-                      },
-                      {
-                        "type": "symbol",
-                        "value": "10"
-                      }
-                    ],
-                    "operators": [
-                      "="
-                    ]
+                    "left_operand": {
+                      "type": "symbol",
+                      "value": "CMAJ"
+                    },
+                    "operator": "=",
+                    "right_operand": {
+                      "type": "symbol",
+                      "value": "10"
+                    }
                   },
                   {
                     "type": "comparaison",
-                    "operands": [
-                      {
-                        "type": "symbol",
-                        "value": "CMAJ"
-                      },
-                      {
-                        "type": "symbol",
-                        "value": "11"
-                      }
-                    ],
-                    "operators": [
-                      "="
-                    ]
+                    "left_operand": {
+                      "type": "symbol",
+                      "value": "CMAJ"
+                    },
+                    "operator": "=",
+                    "right_operand": {
+                      "type": "symbol",
+                      "value": "11"
+                    }
                   },
                   {
                     "type": "comparaison",
-                    "operands": [
-                      {
-                        "type": "symbol",
-                        "value": "CMAJ"
-                      },
-                      {
-                        "type": "symbol",
-                        "value": "12"
-                      }
-                    ],
-                    "operators": [
-                      "="
-                    ]
+                    "left_operand": {
+                      "type": "symbol",
+                      "value": "CMAJ"
+                    },
+                    "operator": "=",
+                    "right_operand": {
+                      "type": "symbol",
+                      "value": "12"
+                    }
                   },
                   {
                     "type": "comparaison",
-                    "operands": [
-                      {
-                        "type": "symbol",
-                        "value": "CMAJ"
-                      },
-                      {
-                        "type": "symbol",
-                        "value": "17"
-                      }
-                    ],
-                    "operators": [
-                      "="
-                    ]
+                    "left_operand": {
+                      "type": "symbol",
+                      "value": "CMAJ"
+                    },
+                    "operator": "=",
+                    "right_operand": {
+                      "type": "symbol",
+                      "value": "17"
+                    }
                   },
                   {
                     "type": "comparaison",
-                    "operands": [
-                      {
-                        "type": "symbol",
-                        "value": "CMAJ"
-                      },
-                      {
-                        "type": "integer",
-                        "value": 18
-                      }
-                    ],
-                    "operators": [
-                      "="
-                    ]
+                    "left_operand": {
+                      "type": "symbol",
+                      "value": "CMAJ"
+                    },
+                    "operator": "=",
+                    "right_operand": {
+                      "type": "integer",
+                      "value": 18
+                    }
                   }
                 ],
                 "operators": [
@@ -2642,19 +2554,15 @@
             "type": "ternary_operator",
             "condition": {
               "type": "comparaison",
-              "operands": [
-                {
-                  "type": "symbol",
-                  "value": "CMAJ"
-                },
-                {
-                  "type": "integer",
-                  "value": 2
-                }
-              ],
-              "operators": [
-                "="
-              ]
+              "left_operand": {
+                "type": "symbol",
+                "value": "CMAJ"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 2
+              }
             },
             "value_if_false": {
               "type": "ternary_operator",
@@ -2663,67 +2571,51 @@
                 "operands": [
                   {
                     "type": "comparaison",
-                    "operands": [
-                      {
-                        "type": "symbol",
-                        "value": "CMAJ"
-                      },
-                      {
-                        "type": "symbol",
-                        "value": "3"
-                      }
-                    ],
-                    "operators": [
-                      "="
-                    ]
+                    "left_operand": {
+                      "type": "symbol",
+                      "value": "CMAJ"
+                    },
+                    "operator": "=",
+                    "right_operand": {
+                      "type": "symbol",
+                      "value": "3"
+                    }
                   },
                   {
                     "type": "comparaison",
-                    "operands": [
-                      {
-                        "type": "symbol",
-                        "value": "CMAJ"
-                      },
-                      {
-                        "type": "symbol",
-                        "value": "4"
-                      }
-                    ],
-                    "operators": [
-                      "="
-                    ]
+                    "left_operand": {
+                      "type": "symbol",
+                      "value": "CMAJ"
+                    },
+                    "operator": "=",
+                    "right_operand": {
+                      "type": "symbol",
+                      "value": "4"
+                    }
                   },
                   {
                     "type": "comparaison",
-                    "operands": [
-                      {
-                        "type": "symbol",
-                        "value": "CMAJ"
-                      },
-                      {
-                        "type": "symbol",
-                        "value": "5"
-                      }
-                    ],
-                    "operators": [
-                      "="
-                    ]
+                    "left_operand": {
+                      "type": "symbol",
+                      "value": "CMAJ"
+                    },
+                    "operator": "=",
+                    "right_operand": {
+                      "type": "symbol",
+                      "value": "5"
+                    }
                   },
                   {
                     "type": "comparaison",
-                    "operands": [
-                      {
-                        "type": "symbol",
-                        "value": "CMAJ"
-                      },
-                      {
-                        "type": "integer",
-                        "value": 6
-                      }
-                    ],
-                    "operators": [
-                      "="
-                    ]
+                    "left_operand": {
+                      "type": "symbol",
+                      "value": "CMAJ"
+                    },
+                    "operator": "=",
+                    "right_operand": {
+                      "type": "integer",
+                      "value": 6
+                    }
                   }
                 ],
                 "operators": [
@@ -2760,7 +2652,7 @@
     "applications": [
       "iliad"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "TSALV",
@@ -2790,7 +2682,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "TSALP",
@@ -2834,7 +2726,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "pour_variable_definition",
         "loop_variables": [
@@ -2874,54 +2766,42 @@
               "operands": [
                 {
                   "type": "comparaison",
-                  "operands": [
-                    {
-                      "type": "symbol",
-                      "value": "IND_10i"
-                    },
-                    {
-                      "type": "symbol",
-                      "value": "0"
-                    }
-                  ],
-                  "operators": [
-                    "="
-                  ]
+                  "left_operand": {
+                    "type": "symbol",
+                    "value": "IND_10i"
+                  },
+                  "operator": "=",
+                  "right_operand": {
+                    "type": "symbol",
+                    "value": "0"
+                  }
                 },
                 {
                   "type": "boolean_expression",
                   "operands": [
                     {
                       "type": "comparaison",
-                      "operands": [
-                        {
-                          "type": "symbol",
-                          "value": "IND_10i"
-                        },
-                        {
-                          "type": "symbol",
-                          "value": "1"
-                        }
-                      ],
-                      "operators": [
-                        "="
-                      ]
+                      "left_operand": {
+                        "type": "symbol",
+                        "value": "IND_10i"
+                      },
+                      "operator": "=",
+                      "right_operand": {
+                        "type": "symbol",
+                        "value": "1"
+                      }
                     },
                     {
                       "type": "comparaison",
-                      "operands": [
-                        {
-                          "type": "symbol",
-                          "value": "IND_10MIN_0i"
-                        },
-                        {
-                          "type": "integer",
-                          "value": 0
-                        }
-                      ],
-                      "operators": [
-                        "="
-                      ]
+                      "left_operand": {
+                        "type": "symbol",
+                        "value": "IND_10MIN_0i"
+                      },
+                      "operator": "=",
+                      "right_operand": {
+                        "type": "integer",
+                        "value": 0
+                      }
                     }
                   ],
                   "operators": [
@@ -2963,7 +2843,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "F10AP",
@@ -3013,7 +2893,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "pour_variable_definition",
         "loop_variables": [
@@ -3053,35 +2933,27 @@
               "operands": [
                 {
                   "type": "comparaison",
-                  "operands": [
-                    {
-                      "type": "symbol",
-                      "value": "IND_10i"
-                    },
-                    {
-                      "type": "symbol",
-                      "value": "1"
-                    }
-                  ],
-                  "operators": [
-                    "="
-                  ]
+                  "left_operand": {
+                    "type": "symbol",
+                    "value": "IND_10i"
+                  },
+                  "operator": "=",
+                  "right_operand": {
+                    "type": "symbol",
+                    "value": "1"
+                  }
                 },
                 {
                   "type": "comparaison",
-                  "operands": [
-                    {
-                      "type": "symbol",
-                      "value": "IND_10MIN_0i"
-                    },
-                    {
-                      "type": "integer",
-                      "value": 1
-                    }
-                  ],
-                  "operators": [
-                    "="
-                  ]
+                  "left_operand": {
+                    "type": "symbol",
+                    "value": "IND_10MIN_0i"
+                  },
+                  "operator": "=",
+                  "right_operand": {
+                    "type": "integer",
+                    "value": 1
+                  }
                 }
               ],
               "operators": [
@@ -3108,7 +2980,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "F10BP",
@@ -3158,7 +3030,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "pour_variable_definition",
         "loop_variables": [
@@ -3262,7 +3134,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "DEDSP",
@@ -3312,7 +3184,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "PRV",
@@ -3448,7 +3320,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "AB10P",
@@ -3519,7 +3391,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "TSPRT",
@@ -3603,7 +3475,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "pour_variable_definition",
         "loop_variables": [
@@ -3695,7 +3567,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "BIPN",
@@ -4363,7 +4235,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "pour_variable_definition",
         "loop_variables": [
@@ -4430,7 +4302,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "pour_variable_definition",
         "loop_variables": [
@@ -4487,7 +4359,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "BNCV",
@@ -4771,7 +4643,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "DIDABNCNP1",
@@ -5075,7 +4947,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "BNCIF",
@@ -5369,7 +5241,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "BRCM",
@@ -5423,7 +5295,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "BRCMQ",
@@ -5517,7 +5389,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "RRCM",
@@ -5549,7 +5421,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "B1FIS",
@@ -5618,7 +5490,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "DRFRP",
@@ -5835,7 +5707,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "DLMRN1TXM",
@@ -6483,7 +6355,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "DLMRN2",
@@ -7008,7 +6880,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "DLMRN3",
@@ -7528,7 +7400,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "DLMRN4",
@@ -8043,7 +7915,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "DLMRN5",
@@ -8553,7 +8425,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "DLMRN6",
@@ -9058,7 +8930,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "DLMRN",
@@ -9489,7 +9361,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "DRCVM",
@@ -9511,7 +9383,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "BALNP",
@@ -10258,7 +10130,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "DALNP",
@@ -10342,7 +10214,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "DESV",
@@ -10364,7 +10236,7 @@
       "batch",
       "iliad"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "VLHAB",
@@ -10396,7 +10268,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "DFANT",
@@ -10931,7 +10803,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "RRBG",
@@ -11265,7 +11137,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "DDCSG",
@@ -11651,7 +11523,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "DPALE",
@@ -11865,7 +11737,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "DNETU",
@@ -12027,7 +11899,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "DPREC",
@@ -12049,7 +11921,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "DFACC",
@@ -12130,7 +12002,7 @@
     "applications": [
       "iliad"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "TRANSFERT",
@@ -12174,7 +12046,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "RPALP",
@@ -12287,7 +12159,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "DEDIV",
@@ -12440,7 +12312,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "NUPROPT",
@@ -13648,7 +13520,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "CHTOT",
@@ -13815,7 +13687,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "ABMAR",
@@ -13884,7 +13756,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "ABVIE",
@@ -13948,7 +13820,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "RNI",
@@ -14283,7 +14155,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "TOTALQUORET",
@@ -17411,7 +17283,7 @@
       "batch",
       "iliad"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "RNICOL",
@@ -17445,7 +17317,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "TTPVQ",
@@ -17467,7 +17339,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "TEFF",
@@ -18614,7 +18486,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "FRF",
@@ -18743,7 +18615,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "QUOHPV",
@@ -18899,7 +18771,7 @@
     "applications": [
       "iliad"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "TX_CSG",
@@ -19178,7 +19050,7 @@
       "batch",
       "iliad"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "SURIMP",
@@ -19249,7 +19121,7 @@
     "applications": [
       "iliad"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "INDM14",
@@ -19318,7 +19190,7 @@
     "applications": [
       "iliad"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "INDDEFICIT",
@@ -19498,7 +19370,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "RP",
@@ -20460,7 +20332,7 @@
       "iliad",
       "batch"
     ],
-    "variables": [
+    "variable_definitions": [
       {
         "type": "variable_definition",
         "name": "AGREPAPER",
