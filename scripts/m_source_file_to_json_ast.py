@@ -78,11 +78,21 @@ def get_linecol(node):
 
 
 def make_json_ast_node(node=None, linecol=None, type=None, **kwargs):
-    if node is not None and linecol:
-        linecol = get_linecol(node)
-    if type is None:
-        type = node.rule_name
-    return pretty_ordered_keys(without_empty_values(linecol=linecol, type=type, **kwargs))
+    return pretty_ordered_keys(
+        without_empty_values(
+            linecol=(
+                get_linecol(node)
+                if node is not None and linecol
+                else None
+                ),
+            type=(
+                node.rule_name
+                if type is None
+                else type
+                ),
+            **kwargs
+            ),
+        )
 
 
 def only_child(children):
