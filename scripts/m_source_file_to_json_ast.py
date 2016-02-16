@@ -288,15 +288,15 @@ class MLanguageVisitor(PTNodeVisitor):
             node=node,
             )
 
+    def visit_function_arguments(self, node, children):
+        return children
+
     def visit_function_call(self, node, children):
         return make_json_ast_node(
-            parameters=to_list(children[1]),
+            arguments=to_list(children[1]),
             name=children[0]['value'],
             node=node,
             )
-
-    def visit_function_parameters(self, node, children):
-        return children
 
     def visit_group(self, node, children):
         return only_child(children)

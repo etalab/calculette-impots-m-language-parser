@@ -30,8 +30,8 @@ variable = (variable_calculee / variable_const / variable_saisie)
 
 litteral = (float / symbol) # Some symbols start with a digit and make it hard to parse with (float / integer / symbol)
 loop_expression = loop_variables ":" expression
-function_parameters = expression ("," expression)*
-function_call = symbol "(" (loop_expression / function_parameters) ")"
+function_arguments = expression ("," expression)*
+function_call = symbol "(" (loop_expression / function_arguments) ")"
 ternary_operator = "si" expression "alors" expression ("sinon" expression)? "finsi"
 unary = ("+" / "-")
 group = "(" expression ")"
