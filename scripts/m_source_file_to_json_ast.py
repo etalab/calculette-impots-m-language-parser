@@ -28,8 +28,8 @@ m_parser = None
 script_name = os.path.splitext(os.path.basename(__file__))[0]
 log = logging.getLogger(script_name)
 
-script_dir_name = os.path.dirname(os.path.abspath(__file__))
-m_grammar_file_path = os.path.join(script_dir_name, '..', 'data', 'm_language.cleanpeg')
+script_dir_path = os.path.dirname(os.path.abspath(__file__))
+m_grammar_file_path = os.path.join(script_dir_path, '..', 'data', 'm_language.cleanpeg')
 
 
 # Helpers
@@ -181,10 +181,13 @@ class MLanguageVisitor(PTNodeVisitor):
             return children[0]
         else:
             operators = extract_operators(node)
+            assert len(operators) == 1, operators
+            assert len(children) == 2, operators
             return make_json_ast_node(
+                left_operand=children[0],
                 node=node,
-                operands=children,
-                operators=operators,
+                operator=operators[0],
+                right_operand=children[1],
                 )
 
     def visit_dans(self, node, children):
@@ -364,7 +367,7 @@ class MLanguageVisitor(PTNodeVisitor):
         name, tags = symbols[-1]['value'], symbols[:-1] or None
         variable_definition_list = find_many_or_none(children, type='variable_definition')
         pour_variable_definition_list = find_many_or_none(children, type='pour_variable_definition')
-        variables = ([] + (variable_definition_list or []) + (pour_variable_definition_list or [])) or None
+        variable_definitions = ([] + (variable_definition_list or []) + (pour_variable_definition_list or [])) or None
         return make_json_ast_node(
             applications=applications,
             enchaineur=enchaineur,
@@ -372,7 +375,7 @@ class MLanguageVisitor(PTNodeVisitor):
             name=name,
             node=node,
             tags=tags,
-            variables=variables,
+            variable_definitions=variable_definitions,
             )
 
     def visit_string(self, node, children):
