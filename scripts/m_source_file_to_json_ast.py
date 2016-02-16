@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 
@@ -6,8 +6,6 @@
 Convert M language source code to a JSON AST.
 """
 
-
-from __future__ import unicode_literals
 
 from collections import OrderedDict
 import argparse
@@ -38,7 +36,7 @@ m_grammar_file_path = os.path.join(script_dir_path, '..', 'data', 'm_language.cl
 def extract_operators(node):
     return [
         node[index].value
-        for index in xrange(1, len(node), 2)
+        for index in range(1, len(node), 2)
         ]
 
 
@@ -112,7 +110,7 @@ def without_empty_values(**kwargs):
     """Allows 0 values but not None, [], {}."""
     return {
         key: value
-        for key, value in kwargs.iteritems()
+        for key, value in kwargs.items()
         if value is not None or isinstance(value, (list, dict)) and value
         }
 
@@ -534,7 +532,7 @@ def main():
     logging.basicConfig(level=logging.DEBUG if args.verbose or args.debug else logging.WARNING, stream=sys.stdout)
 
     with open(args.source_file) as source_file:
-        source_code = source_file.read().decode('utf-8')
+        source_code = source_file.read()
     log.debug('Source file "{}" was read with success.'.format(args.source_file))
 
     with open(m_grammar_file_path) as m_grammar_file:
@@ -548,7 +546,7 @@ def main():
 
     if not args.no_visit:
         result = visit_parse_tree(parse_tree, MLanguageVisitor(debug=args.debug))
-        print json.dumps(result)
+        print(json.dumps(result))
 
     return 0
 

@@ -13,8 +13,10 @@ vers un AST en JSON
 
 ## Installation des dépendances
 
+Le langage Python 3 est utilisé.
+
 ```
-pip install -r requirements.txt --user
+pip3 install -r requirements.txt --user
 ```
 
 > L'option `--user` sert sur les systèmes GNU/Linux.
@@ -29,7 +31,7 @@ un [`virtualenv`](https://virtualenv.readthedocs.org/en/latest/) s'il le souhait
 $ ./scripts/convert_dir.sh /path/to/code-source-impots-revenus/src
 
 # Convertir un fichier M particulier :
-$ python scripts/m_source_file_to_json_ast.py file.m
+$ python3 scripts/m_source_file_to_json_ast.py file.m
 ```
 
 > Ceci n'est utile que si les fichiers source M changent car les fichiers JSON ont été commités dans le répertoire
