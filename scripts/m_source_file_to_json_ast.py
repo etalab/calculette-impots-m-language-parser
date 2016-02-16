@@ -441,16 +441,15 @@ class MLanguageVisitor(PTNodeVisitor):
         return only_child(children)
 
     def visit_variable_calculee(self, node, children):
-        description = find_one(children, type='string')
+        description = find_one(children, type='string')['value']
         variable_calculee_tags = find_one_or_none(children, type='variable_calculee_tags')
-        attributes = None if variable_calculee_tags is None else {'tags': variable_calculee_tags}
+        attributes = None if variable_calculee_tags is None else {'tags': variable_calculee_tags['value']}
         return make_json_ast_node(
             attributes=attributes,
             description=description,
             linecol=True,
             name=children[0]['value'],
             node=node,
-            variable_type='calculee',
             )
 
     def visit_variable_calculee_tags(self, node, children):
@@ -466,10 +465,10 @@ class MLanguageVisitor(PTNodeVisitor):
     def visit_variable_const(self, node, children):
         assert len(children) == 2, children
         return make_json_ast_node(
+            linecol=True,
             name=children[0]['value'],
             node=node,
             value=children[1]['value'],
-            variable_type='const',
             )
 
     def visit_variable_definition(self, node, children):
@@ -492,9 +491,9 @@ class MLanguageVisitor(PTNodeVisitor):
         return make_json_ast_node(
             attributes=attributes,
             description=description,
+            linecol=True,
             name=children[0]['value'],
             node=node,
-            variable_type='saisie',
             )
 
     def visit_verif(self, node, children):
