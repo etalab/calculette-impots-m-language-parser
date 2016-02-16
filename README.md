@@ -32,9 +32,6 @@ $ ./scripts/convert_dir.sh /path/to/code-source-impots-revenus/src
 
 # Convertir un fichier M particulier :
 $ python3 scripts/m_source_file_to_json_ast.py file.m
-
-# Transformer (transpiler) les fichiers JSON en Python :
-$ python3 scripts/json_ast_to_python.py /path/to/calculateur-impots-python/calculateur_impots/generated
 ```
 
 > Ceci n'est utile que si les fichiers source M changent car les fichiers JSON ont été commités dans le répertoire
