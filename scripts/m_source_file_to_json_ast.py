@@ -327,8 +327,8 @@ class MLanguageVisitor(PTNodeVisitor):
         assert isinstance(children[0], list), children[0]
         return make_json_ast_node(
             expression=children[1],
+            loop_variables=children[0],
             node=node,
-            variables=children[0],
             )
 
     def visit_loop_variable1(self, node, children):
