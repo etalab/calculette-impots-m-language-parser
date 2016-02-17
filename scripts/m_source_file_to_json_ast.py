@@ -310,9 +310,9 @@ class MLanguageVisitor(PTNodeVisitor):
     def visit_integer_range(self, node, children):
         assert len(children) == 2, children
         return make_json_ast_node(
+            first=children[0]['value'],
+            last=children[1]['value'],
             node=node,
-            start=children[0],
-            stop=children[1],
             )
 
     def visit_litteral(self, node, children):
