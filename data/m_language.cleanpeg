@@ -28,14 +28,14 @@ variable_const = symbol ":" "const" "=" float ";"
 variable_saisie = symbol ":" "saisie" ("contexte" / "famille" / "penalite" / "revenu")+ attribute* "restituee"? alias ":" string type? ";"
 variable = (variable_calculee / variable_const / variable_saisie)
 
-litteral = (float / symbol) # Some symbols start with a digit and make it hard to parse with (float / integer / symbol)
+literal = (float / symbol) # Some symbols start with a digit and make it hard to parse with (float / integer / symbol)
 loop_expression = loop_variables ":" expression
 function_arguments = expression ("," expression)*
 function_call = symbol "(" (loop_expression / function_arguments) ")"
 ternary_operator = "si" expression "alors" expression ("sinon" expression)? "finsi"
 unary = ("+" / "-")
 group = "(" expression ")"
-factor = unary? (("pour" loop_expression) / ternary_operator / function_call / (symbol brackets) / litteral / group)
+factor = unary? (("pour" loop_expression) / ternary_operator / function_call / (symbol brackets) / literal / group)
 product_expression = factor (("*" / "/") factor)*
 sum_expression = product_expression (("+" / "-") product_expression)*
 comparaison = sum_expression ((">=" / "<=" / "!=" / ">" / "<" / "=") sum_expression)?

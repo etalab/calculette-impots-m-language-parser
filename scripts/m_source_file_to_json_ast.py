@@ -315,7 +315,7 @@ class MLanguageVisitor(PTNodeVisitor):
             node=node,
             )
 
-    def visit_litteral(self, node, children):
+    def visit_literal(self, node, children):
         assert len(children) == 1, children
         child = children[0]
         return make_json_ast_node(type='integer', value=int(child['value'])) \
