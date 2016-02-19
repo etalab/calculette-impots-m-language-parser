@@ -354,18 +354,20 @@ class MLanguageVisitor(PTNodeVisitor):
         return children
 
     def visit_loop_variable_domains(self, node, children):
-        children = to_list(children)
-        symbols = find_many_or_none(children, type='symbol')
-        integer_ranges = find_many_or_none(children, type='integer_range')
-        domains = []
-        if symbols is not None:
-            values = [
-                int(value) if value.isdigit() else value
-                for value in (symbol['value'] for symbol in symbols)
-                ]
-            domains.append(make_json_ast_node(type='loop_variable_enumeration', values=values))
-        if integer_ranges is not None:
-            domains.extend(integer_ranges)
+        def iter_domain_nodes(integer_ranges, symbols):
+            if symbols is not None:
+                values = [
+                    int(value) if value.isdigit() else value
+                    for value in (symbol['value'] for symbol in symbols)
+                    ]
+                yield make_json_ast_node(type='loop_variable_enumeration', values=values)
+            if integer_ranges is not None:
+                yield from integer_ranges
+
+        domain_items = to_list(children)
+        symbols = find_many_or_none(domain_items, type='symbol')
+        integer_ranges = find_many_or_none(domain_items, type='integer_range')
+        domains = list(iter_domain_nodes(integer_ranges, symbols))
         return domains
 
     def visit_m_source_file(self, node, children):
