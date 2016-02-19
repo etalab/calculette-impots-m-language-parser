@@ -4663,9 +4663,9 @@
                     {
                       "type": "loop_variable",
                       "name": "i",
-                      "domains": [
+                      "enumerations": [
                         {
-                          "type": "integer_range",
+                          "type": "interval",
                           "first": 1,
                           "last": 4
                         }
@@ -5949,9 +5949,9 @@
                     {
                       "type": "loop_variable",
                       "name": "i",
-                      "domains": [
+                      "enumerations": [
                         {
-                          "type": "integer_range",
+                          "type": "interval",
                           "first": 1,
                           "last": 4
                         }
@@ -13374,16 +13374,16 @@
                     {
                       "type": "loop_variable",
                       "name": "i",
-                      "domains": [
+                      "enumerations": [
                         {
-                          "type": "loop_variable_enumeration",
+                          "type": "enumeration_values",
                           "values": [
-                            "V",
-                            "C",
                             1,
                             2,
                             3,
-                            4
+                            4,
+                            "V",
+                            "C"
                           ]
                         }
                       ]
@@ -13920,9 +13920,9 @@
                                         {
                                           "type": "loop_variable",
                                           "name": "j",
-                                          "domains": [
+                                          "enumerations": [
                                             {
-                                              "type": "loop_variable_enumeration",
+                                              "type": "enumeration_values",
                                               "values": [
                                                 "N"
                                               ]
@@ -13942,9 +13942,9 @@
                               {
                                 "type": "loop_variable",
                                 "name": "i",
-                                "domains": [
+                                "enumerations": [
                                   {
-                                    "type": "loop_variable_enumeration",
+                                    "type": "enumeration_values",
                                     "values": [
                                       "C",
                                       "H"
@@ -13976,9 +13976,9 @@
                               {
                                 "type": "loop_variable",
                                 "name": "i",
-                                "domains": [
+                                "enumerations": [
                                   {
-                                    "type": "loop_variable_enumeration",
+                                    "type": "enumeration_values",
                                     "values": [
                                       "I"
                                     ]
@@ -13998,9 +13998,9 @@
                     {
                       "type": "loop_variable",
                       "name": "k",
-                      "domains": [
+                      "enumerations": [
                         {
-                          "type": "loop_variable_enumeration",
+                          "type": "enumeration_values",
                           "values": [
                             "V",
                             "C",
@@ -21597,16 +21597,16 @@
                     {
                       "type": "loop_variable",
                       "name": "i",
-                      "domains": [
+                      "enumerations": [
                         {
-                          "type": "loop_variable_enumeration",
+                          "type": "enumeration_values",
                           "values": [
                             "V",
                             "C"
                           ]
                         },
                         {
-                          "type": "integer_range",
+                          "type": "interval",
                           "first": 1,
                           "last": 4
                         }
@@ -21657,9 +21657,9 @@
                     {
                       "type": "loop_variable",
                       "name": "i",
-                      "domains": [
+                      "enumerations": [
                         {
-                          "type": "loop_variable_enumeration",
+                          "type": "enumeration_values",
                           "values": [
                             "V",
                             "C"
@@ -21717,9 +21717,9 @@
                     {
                       "type": "loop_variable",
                       "name": "i",
-                      "domains": [
+                      "enumerations": [
                         {
-                          "type": "integer_range",
+                          "type": "interval",
                           "first": 1,
                           "last": 4
                         }
@@ -21755,9 +21755,9 @@
                     {
                       "type": "loop_variable",
                       "name": "i",
-                      "domains": [
+                      "enumerations": [
                         {
-                          "type": "integer_range",
+                          "type": "interval",
                           "first": 1,
                           "last": 3
                         }
@@ -24113,16 +24113,16 @@
                     {
                       "type": "loop_variable",
                       "name": "i",
-                      "domains": [
+                      "enumerations": [
                         {
-                          "type": "loop_variable_enumeration",
+                          "type": "enumeration_values",
                           "values": [
-                            "V",
-                            "C",
                             1,
                             2,
                             3,
-                            4
+                            4,
+                            "V",
+                            "C"
                           ]
                         }
                       ]
@@ -31162,6 +31162,15 @@
         "name": "V_CNR",
         "expression": {
           "type": "dans",
+          "enumeration": [
+            {
+              "type": "enumeration_values",
+              "values": [
+                2,
+                4
+              ]
+            }
+          ],
           "expression": {
             "type": "sum_expression",
             "operands": [
@@ -31177,16 +31186,7 @@
             "operators": [
               "+"
             ]
-          },
-          "options": [
-            {
-              "type": "loop_variable_enumeration",
-              "values": [
-                2,
-                4
-              ]
-            }
-          ]
+          }
         }
       },
       {
@@ -31194,6 +31194,16 @@
         "name": "V_CNR2",
         "expression": {
           "type": "dans",
+          "enumeration": [
+            {
+              "type": "enumeration_values",
+              "values": [
+                2,
+                3,
+                4
+              ]
+            }
+          ],
           "expression": {
             "type": "sum_expression",
             "operands": [
@@ -31209,17 +31219,7 @@
             "operators": [
               "+"
             ]
-          },
-          "options": [
-            {
-              "type": "loop_variable_enumeration",
-              "values": [
-                2,
-                3,
-                4
-              ]
-            }
-          ]
+          }
         }
       },
       {
@@ -31227,6 +31227,14 @@
         "name": "V_CR2",
         "expression": {
           "type": "dans",
+          "enumeration": [
+            {
+              "type": "enumeration_values",
+              "values": [
+                2
+              ]
+            }
+          ],
           "expression": {
             "type": "sum_expression",
             "operands": [
@@ -31242,15 +31250,7 @@
             "operators": [
               "+"
             ]
-          },
-          "options": [
-            {
-              "type": "loop_variable_enumeration",
-              "values": [
-                2
-              ]
-            }
-          ]
+          }
         }
       },
       {
@@ -31258,6 +31258,14 @@
         "name": "V_EAD",
         "expression": {
           "type": "dans",
+          "enumeration": [
+            {
+              "type": "enumeration_values",
+              "values": [
+                5
+              ]
+            }
+          ],
           "expression": {
             "type": "sum_expression",
             "operands": [
@@ -31273,15 +31281,7 @@
             "operators": [
               "+"
             ]
-          },
-          "options": [
-            {
-              "type": "loop_variable_enumeration",
-              "values": [
-                5
-              ]
-            }
-          ]
+          }
         }
       },
       {
@@ -31289,6 +31289,15 @@
         "name": "V_EAG",
         "expression": {
           "type": "dans",
+          "enumeration": [
+            {
+              "type": "enumeration_values",
+              "values": [
+                6,
+                7
+              ]
+            }
+          ],
           "expression": {
             "type": "sum_expression",
             "operands": [
@@ -31304,16 +31313,7 @@
             "operators": [
               "+"
             ]
-          },
-          "options": [
-            {
-              "type": "loop_variable_enumeration",
-              "values": [
-                6,
-                7
-              ]
-            }
-          ]
+          }
         }
       }
     ],
@@ -32782,9 +32782,9 @@
                                     {
                                       "type": "loop_variable",
                                       "name": "i",
-                                      "domains": [
+                                      "enumerations": [
                                         {
-                                          "type": "integer_range",
+                                          "type": "interval",
                                           "first": 1,
                                           "last": 3
                                         }
@@ -32857,16 +32857,16 @@
                                     {
                                       "type": "loop_variable",
                                       "name": "i",
-                                      "domains": [
+                                      "enumerations": [
                                         {
-                                          "type": "loop_variable_enumeration",
+                                          "type": "enumeration_values",
                                           "values": [
                                             "V",
                                             "C"
                                           ]
                                         },
                                         {
-                                          "type": "integer_range",
+                                          "type": "interval",
                                           "first": 1,
                                           "last": 4
                                         }
@@ -32890,16 +32890,16 @@
                                     {
                                       "type": "loop_variable",
                                       "name": "i",
-                                      "domains": [
+                                      "enumerations": [
                                         {
-                                          "type": "loop_variable_enumeration",
+                                          "type": "enumeration_values",
                                           "values": [
                                             "V",
                                             "C"
                                           ]
                                         },
                                         {
-                                          "type": "integer_range",
+                                          "type": "interval",
                                           "first": 1,
                                           "last": 4
                                         }
@@ -32923,16 +32923,16 @@
                                     {
                                       "type": "loop_variable",
                                       "name": "i",
-                                      "domains": [
+                                      "enumerations": [
                                         {
-                                          "type": "loop_variable_enumeration",
+                                          "type": "enumeration_values",
                                           "values": [
                                             "V",
                                             "C"
                                           ]
                                         },
                                         {
-                                          "type": "integer_range",
+                                          "type": "interval",
                                           "first": 1,
                                           "last": 4
                                         }
@@ -32956,16 +32956,16 @@
                                     {
                                       "type": "loop_variable",
                                       "name": "i",
-                                      "domains": [
+                                      "enumerations": [
                                         {
-                                          "type": "loop_variable_enumeration",
+                                          "type": "enumeration_values",
                                           "values": [
                                             "V",
                                             "C"
                                           ]
                                         },
                                         {
-                                          "type": "integer_range",
+                                          "type": "interval",
                                           "first": 1,
                                           "last": 4
                                         }
@@ -32989,16 +32989,16 @@
                                     {
                                       "type": "loop_variable",
                                       "name": "i",
-                                      "domains": [
+                                      "enumerations": [
                                         {
-                                          "type": "loop_variable_enumeration",
+                                          "type": "enumeration_values",
                                           "values": [
                                             "V",
                                             "C"
                                           ]
                                         },
                                         {
-                                          "type": "integer_range",
+                                          "type": "interval",
                                           "first": 1,
                                           "last": 4
                                         }
@@ -33187,9 +33187,9 @@
                                         {
                                           "type": "loop_variable",
                                           "name": "i",
-                                          "domains": [
+                                          "enumerations": [
                                             {
-                                              "type": "integer_range",
+                                              "type": "interval",
                                               "first": 1,
                                               "last": 3
                                             }
@@ -33262,16 +33262,16 @@
                                         {
                                           "type": "loop_variable",
                                           "name": "i",
-                                          "domains": [
+                                          "enumerations": [
                                             {
-                                              "type": "loop_variable_enumeration",
+                                              "type": "enumeration_values",
                                               "values": [
                                                 "V",
                                                 "C"
                                               ]
                                             },
                                             {
-                                              "type": "integer_range",
+                                              "type": "interval",
                                               "first": 1,
                                               "last": 4
                                             }
@@ -33295,16 +33295,16 @@
                                         {
                                           "type": "loop_variable",
                                           "name": "i",
-                                          "domains": [
+                                          "enumerations": [
                                             {
-                                              "type": "loop_variable_enumeration",
+                                              "type": "enumeration_values",
                                               "values": [
                                                 "V",
                                                 "C"
                                               ]
                                             },
                                             {
-                                              "type": "integer_range",
+                                              "type": "interval",
                                               "first": 1,
                                               "last": 4
                                             }
@@ -33328,16 +33328,16 @@
                                         {
                                           "type": "loop_variable",
                                           "name": "i",
-                                          "domains": [
+                                          "enumerations": [
                                             {
-                                              "type": "loop_variable_enumeration",
+                                              "type": "enumeration_values",
                                               "values": [
                                                 "V",
                                                 "C"
                                               ]
                                             },
                                             {
-                                              "type": "integer_range",
+                                              "type": "interval",
                                               "first": 1,
                                               "last": 4
                                             }
@@ -33361,16 +33361,16 @@
                                         {
                                           "type": "loop_variable",
                                           "name": "i",
-                                          "domains": [
+                                          "enumerations": [
                                             {
-                                              "type": "loop_variable_enumeration",
+                                              "type": "enumeration_values",
                                               "values": [
                                                 "V",
                                                 "C"
                                               ]
                                             },
                                             {
-                                              "type": "integer_range",
+                                              "type": "interval",
                                               "first": 1,
                                               "last": 4
                                             }
@@ -33394,16 +33394,16 @@
                                         {
                                           "type": "loop_variable",
                                           "name": "i",
-                                          "domains": [
+                                          "enumerations": [
                                             {
-                                              "type": "loop_variable_enumeration",
+                                              "type": "enumeration_values",
                                               "values": [
                                                 "V",
                                                 "C"
                                               ]
                                             },
                                             {
-                                              "type": "integer_range",
+                                              "type": "interval",
                                               "first": 1,
                                               "last": 4
                                             }

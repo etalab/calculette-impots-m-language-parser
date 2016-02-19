@@ -2601,9 +2601,9 @@
                       {
                         "type": "loop_variable",
                         "name": "i",
-                        "domains": [
+                        "enumerations": [
                           {
-                            "type": "loop_variable_enumeration",
+                            "type": "enumeration_values",
                             "values": [
                               "X",
                               "Y",
@@ -3546,9 +3546,9 @@
                         {
                           "type": "loop_variable",
                           "name": "i",
-                          "domains": [
+                          "enumerations": [
                             {
-                              "type": "integer_range",
+                              "type": "interval",
                               "first": 0,
                               "last": 7
                             }
@@ -3618,9 +3618,9 @@
                         {
                           "type": "loop_variable",
                           "name": "i",
-                          "domains": [
+                          "enumerations": [
                             {
-                              "type": "integer_range",
+                              "type": "interval",
                               "first": 0,
                               "last": 5
                             }
@@ -3732,9 +3732,9 @@
                 {
                   "type": "loop_variable",
                   "name": "i",
-                  "domains": [
+                  "enumerations": [
                     {
-                      "type": "integer_range",
+                      "type": "interval",
                       "first": 0,
                       "last": 5
                     }
@@ -3772,9 +3772,9 @@
                 {
                   "type": "loop_variable",
                   "name": "i",
-                  "domains": [
+                  "enumerations": [
                     {
-                      "type": "integer_range",
+                      "type": "interval",
                       "first": 0,
                       "last": 5
                     }
@@ -6936,6 +6936,16 @@
             },
             {
               "type": "dans",
+              "enumeration": [
+                {
+                  "type": "enumeration_values",
+                  "values": [
+                    2,
+                    3,
+                    4
+                  ]
+                }
+              ],
               "expression": {
                 "type": "sum_expression",
                 "operands": [
@@ -6951,17 +6961,7 @@
                 "operators": [
                   "+"
                 ]
-              },
-              "options": [
-                {
-                  "type": "loop_variable_enumeration",
-                  "values": [
-                    2,
-                    3,
-                    4
-                  ]
-                }
-              ]
+              }
             }
           ],
           "operators": [
@@ -7303,20 +7303,21 @@
             },
             {
               "type": "dans",
-              "expression": {
-                "type": "symbol",
-                "value": "VALREGCO"
-              },
-              "options": [
+              "enumeration": [
                 {
-                  "type": "loop_variable_enumeration",
+                  "type": "enumeration_values",
                   "values": [
                     1,
                     2,
                     4
                   ]
                 }
-              ]
+              ],
+              "expression": {
+                "type": "symbol",
+                "value": "VALREGCO"
+              },
+              "negative_form": true
             }
           ],
           "operators": [
@@ -8436,16 +8437,16 @@
                           {
                             "type": "loop_variable",
                             "name": "i",
-                            "domains": [
+                            "enumerations": [
                               {
-                                "type": "loop_variable_enumeration",
+                                "type": "enumeration_values",
                                 "values": [
                                   "V",
                                   "C"
                                 ]
                               },
                               {
-                                "type": "integer_range",
+                                "type": "interval",
                                 "first": 1,
                                 "last": 4
                               }
@@ -8469,9 +8470,9 @@
                           {
                             "type": "loop_variable",
                             "name": "i",
-                            "domains": [
+                            "enumerations": [
                               {
-                                "type": "integer_range",
+                                "type": "interval",
                                 "first": 1,
                                 "last": 3
                               }
@@ -8495,9 +8496,9 @@
                           {
                             "type": "loop_variable",
                             "name": "i",
-                            "domains": [
+                            "enumerations": [
                               {
-                                "type": "integer_range",
+                                "type": "interval",
                                 "first": 1,
                                 "last": 3
                               }
@@ -9341,6 +9342,19 @@
             },
             {
               "type": "dans",
+              "enumeration": [
+                {
+                  "type": "enumeration_values",
+                  "values": [
+                    1,
+                    2,
+                    3,
+                    5,
+                    6,
+                    7
+                  ]
+                }
+              ],
               "expression": {
                 "type": "sum_expression",
                 "operands": [
@@ -9356,20 +9370,7 @@
                 "operators": [
                   "+"
                 ]
-              },
-              "options": [
-                {
-                  "type": "loop_variable_enumeration",
-                  "values": [
-                    1,
-                    2,
-                    3,
-                    5,
-                    6,
-                    7
-                  ]
-                }
-              ]
+              }
             },
             {
               "type": "comparaison",
@@ -9655,20 +9656,20 @@
           "operands": [
             {
               "type": "dans",
-              "expression": {
-                "type": "symbol",
-                "value": "V_REGCO"
-              },
-              "options": [
+              "enumeration": [
                 {
-                  "type": "loop_variable_enumeration",
+                  "type": "enumeration_values",
                   "values": [
                     2,
                     3,
                     4
                   ]
                 }
-              ]
+              ],
+              "expression": {
+                "type": "symbol",
+                "value": "V_REGCO"
+              }
             },
             {
               "type": "boolean_expression",

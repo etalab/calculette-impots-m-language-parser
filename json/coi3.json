@@ -457,9 +457,9 @@
                       {
                         "type": "loop_variable",
                         "name": "i",
-                        "domains": [
+                        "enumerations": [
                           {
-                            "type": "integer_range",
+                            "type": "interval",
                             "first": 0,
                             "last": 7
                           }
@@ -567,9 +567,9 @@
                       {
                         "type": "loop_variable",
                         "name": "i",
-                        "domains": [
+                        "enumerations": [
                           {
-                            "type": "loop_variable_enumeration",
+                            "type": "enumeration_values",
                             "values": [
                               0,
                               1,
@@ -681,9 +681,9 @@
                       {
                         "type": "loop_variable",
                         "name": "i",
-                        "domains": [
+                        "enumerations": [
                           {
-                            "type": "loop_variable_enumeration",
+                            "type": "enumeration_values",
                             "values": [
                               0,
                               1,
@@ -797,9 +797,9 @@
                       {
                         "type": "loop_variable",
                         "name": "i",
-                        "domains": [
+                        "enumerations": [
                           {
-                            "type": "loop_variable_enumeration",
+                            "type": "enumeration_values",
                             "values": [
                               0,
                               1,
@@ -911,9 +911,9 @@
                       {
                         "type": "loop_variable",
                         "name": "i",
-                        "domains": [
+                        "enumerations": [
                           {
-                            "type": "loop_variable_enumeration",
+                            "type": "enumeration_values",
                             "values": [
                               0,
                               1,
@@ -1025,9 +1025,9 @@
                       {
                         "type": "loop_variable",
                         "name": "i",
-                        "domains": [
+                        "enumerations": [
                           {
-                            "type": "loop_variable_enumeration",
+                            "type": "enumeration_values",
                             "values": [
                               0,
                               1,
@@ -1139,9 +1139,9 @@
                       {
                         "type": "loop_variable",
                         "name": "i",
-                        "domains": [
+                        "enumerations": [
                           {
-                            "type": "loop_variable_enumeration",
+                            "type": "enumeration_values",
                             "values": [
                               0,
                               1,
@@ -3092,9 +3092,9 @@
                           {
                             "type": "loop_variable",
                             "name": "i",
-                            "domains": [
+                            "enumerations": [
                               {
-                                "type": "integer_range",
+                                "type": "interval",
                                 "first": 0,
                                 "last": 5
                               }
@@ -3156,9 +3156,9 @@
                           {
                             "type": "loop_variable",
                             "name": "i",
-                            "domains": [
+                            "enumerations": [
                               {
-                                "type": "integer_range",
+                                "type": "interval",
                                 "first": 0,
                                 "last": 5
                               }
@@ -3220,9 +3220,9 @@
                           {
                             "type": "loop_variable",
                             "name": "i",
-                            "domains": [
+                            "enumerations": [
                               {
-                                "type": "integer_range",
+                                "type": "interval",
                                 "first": 0,
                                 "last": 5
                               }
@@ -3284,9 +3284,9 @@
                           {
                             "type": "loop_variable",
                             "name": "i",
-                            "domains": [
+                            "enumerations": [
                               {
-                                "type": "integer_range",
+                                "type": "interval",
                                 "first": 0,
                                 "last": 5
                               }
@@ -3410,9 +3410,9 @@
                             {
                               "type": "loop_variable",
                               "name": "i",
-                              "domains": [
+                              "enumerations": [
                                 {
-                                  "type": "loop_variable_enumeration",
+                                  "type": "enumeration_values",
                                   "values": [
                                     0,
                                     1
@@ -3498,9 +3498,9 @@
                             {
                               "type": "loop_variable",
                               "name": "i",
-                              "domains": [
+                              "enumerations": [
                                 {
-                                  "type": "loop_variable_enumeration",
+                                  "type": "enumeration_values",
                                   "values": [
                                     0,
                                     1
@@ -3586,9 +3586,9 @@
                             {
                               "type": "loop_variable",
                               "name": "i",
-                              "domains": [
+                              "enumerations": [
                                 {
-                                  "type": "loop_variable_enumeration",
+                                  "type": "enumeration_values",
                                   "values": [
                                     0,
                                     1
@@ -3674,9 +3674,9 @@
                             {
                               "type": "loop_variable",
                               "name": "i",
-                              "domains": [
+                              "enumerations": [
                                 {
-                                  "type": "loop_variable_enumeration",
+                                  "type": "enumeration_values",
                                   "values": [
                                     0,
                                     1
@@ -3799,6 +3799,15 @@
             },
             {
               "type": "dans",
+              "enumeration": [
+                {
+                  "type": "enumeration_values",
+                  "values": [
+                    50,
+                    92
+                  ]
+                }
+              ],
               "expression": {
                 "type": "sum_expression",
                 "operands": [
@@ -3815,15 +3824,7 @@
                   "+"
                 ]
               },
-              "options": [
-                {
-                  "type": "loop_variable_enumeration",
-                  "values": [
-                    50,
-                    92
-                  ]
-                }
-              ]
+              "negative_form": true
             },
             {
               "type": "comparaison",
