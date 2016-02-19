@@ -78,21 +78,20 @@ def get_linecol(node):
 
 
 def make_json_ast_node(node=None, linecol=None, type=None, **kwargs):
-    return pretty_ordered_keys(
-        without_empty_values(
-            linecol=(
-                get_linecol(node)
-                if node is not None and linecol
-                else None
-                ),
-            type=(
-                node.rule_name
-                if type is None
-                else type
-                ),
-            **kwargs
+    clean_node = without_empty_values(
+        linecol=(
+            get_linecol(node)
+            if node is not None and linecol
+            else None
             ),
+        type=(
+            node.rule_name
+            if type is None
+            else type
+            ),
+        **kwargs
         )
+    return clean_node if args.debug or args.no_order else pretty_ordered_keys(clean_node)
 
 
 def only_child(children):
@@ -550,6 +549,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('-d', '--debug', action='store_true', default=False, help='Debug Arpeggio parser')
     parser.add_argument('-v', '--verbose', action='store_true', default=False, help='Increase output verbosity')
+    parser.add_argument('--no-order', action='store_true', default=False, help='Do not use OrderedDict')
     parser.add_argument('--no-visit', action='store_true', default=False, help='Do not visit the parsed tree')
     parser.add_argument('--rule', default='m_source_file', help='Do not reduce the parsed tree')
     parser.add_argument('source_file', help='Source file to parse')
