@@ -8,7 +8,9 @@ Convert M language source code to a JSON AST.
 
 
 from collections import OrderedDict
+from operator import itemgetter
 import argparse
+import itertools
 import json
 import logging
 import os
@@ -20,6 +22,8 @@ from arpeggio.cleanpeg import ParserPEG
 
 # Globals
 
+
+list_ = list  # To use in ipdb since "list" is reserved to display the current source code.
 
 args = None
 m_parser = None
@@ -40,6 +44,14 @@ def extract_operators(node):
         ]
 
 
+def find(nodes, type):
+    return [
+        node
+        for node in nodes
+        if node['type'] == type
+        ]
+
+
 def find_one_or_many(nodes, type):
     results = find_many_or_none(nodes, type)
     assert results is not None and len(results) > 0, (nodes, type, results)
@@ -47,11 +59,7 @@ def find_one_or_many(nodes, type):
 
 
 def find_many_or_none(nodes, type):
-    return [
-        node
-        for node in nodes
-        if node['type'] == type
-        ] or None
+    return find(nodes, type) or None
 
 
 def find_many(nodes, type):
@@ -202,11 +210,12 @@ class MLanguageVisitor(PTNodeVisitor):
             return children[0]
         else:
             assert len(children) == 2, children
-            options = to_list(children[1])
+            assert len(children[1]) == 1, children
             return make_json_ast_node(
+                enumeration=children[1],
                 expression=children[0],
+                negative_form='non' in node or None,
                 node=node,
-                options=options,
                 )
 
     def visit_enchaineur(self, node, children):
@@ -224,6 +233,28 @@ class MLanguageVisitor(PTNodeVisitor):
             node=node,
             value=children[0]['value'],
             )
+
+    def visit_enumeration(self, node, children):
+        def iter_enumerations():
+            integers_or_symbols = itertools.chain(
+                find(children, type='integer'),
+                find(children, type='symbol'),
+                )
+            values = list(map(itemgetter('value'), integers_or_symbols))
+            if values:
+                yield make_json_ast_node(
+                    type='enumeration_values',
+                    values=values,
+                    )
+            intervals = find_many_or_none(children, type='interval')
+            if intervals is not None:
+                yield from intervals
+
+        assert isinstance(children, list), children
+        return list(iter_enumerations())
+
+    def visit_enumeration_item(self, node, children):
+        return only_child(children)
 
     def visit_erreur(self, node, children):
         erreur_type = find_one(children, type='erreur_type')['value']
@@ -272,6 +303,13 @@ class MLanguageVisitor(PTNodeVisitor):
                 result = children[0]
             return result
 
+    def visit_factor_literal(self, node, children):
+        assert len(children) == 1, children
+        child = children[0]
+        return make_json_ast_node(type='integer', value=int(child['value'])) \
+            if child['type'] == 'symbol' and child['value'].isdigit() \
+            else child
+
     def visit_float(self, node, children):
         return make_json_ast_node(
             node=node,
@@ -306,20 +344,13 @@ class MLanguageVisitor(PTNodeVisitor):
             value=int(node.value),
             )
 
-    def visit_integer_range(self, node, children):
+    def visit_interval(self, node, children):
         assert len(children) == 2, children
         return make_json_ast_node(
             first=children[0]['value'],
             last=children[1]['value'],
             node=node,
             )
-
-    def visit_literal(self, node, children):
-        assert len(children) == 1, children
-        child = children[0]
-        return make_json_ast_node(type='integer', value=int(child['value'])) \
-            if child['type'] == 'symbol' and child['value'].isdigit() \
-            else child
 
     def visit_loop_expression(self, node, children):
         assert len(children) == 2, children
@@ -333,7 +364,7 @@ class MLanguageVisitor(PTNodeVisitor):
     def visit_loop_variable1(self, node, children):
         assert len(children) == 2, children
         return make_json_ast_node(
-            domains=children[1],
+            enumerations=children[1],
             name=children[0]['value'],
             node=node,
             type='loop_variable',
@@ -342,7 +373,7 @@ class MLanguageVisitor(PTNodeVisitor):
     def visit_loop_variable2(self, node, children):
         assert len(children) == 2, children
         return make_json_ast_node(
-            domains=children[1],
+            enumerations=children[1],
             name=children[0]['value'],
             node=node,
             type='loop_variable',
@@ -351,23 +382,6 @@ class MLanguageVisitor(PTNodeVisitor):
     def visit_loop_variables(self, node, children):
         assert isinstance(children, list), children
         return children
-
-    def visit_loop_variable_domains(self, node, children):
-        def iter_domain_nodes(integer_ranges, symbols):
-            if symbols is not None:
-                values = [
-                    int(value) if value.isdigit() else value
-                    for value in (symbol['value'] for symbol in symbols)
-                    ]
-                yield make_json_ast_node(type='loop_variable_enumeration', values=values)
-            if integer_ranges is not None:
-                yield from integer_ranges
-
-        domain_items = to_list(children)
-        symbols = find_many_or_none(domain_items, type='symbol')
-        integer_ranges = find_many_or_none(domain_items, type='integer_range')
-        domains = list(iter_domain_nodes(integer_ranges, symbols))
-        return domains
 
     def visit_m_source_file(self, node, children):
         return children
@@ -437,9 +451,6 @@ class MLanguageVisitor(PTNodeVisitor):
     def visit_symbol_enumeration(self, node, children):
         assert isinstance(children, list), children
         return children
-
-    def visit_symbol_or_integer_range(self, node, children):
-        return only_child(children)
 
     def visit_tableau(self, node, children):
         assert len(children) == 1, children
