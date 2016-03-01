@@ -6,17 +6,30 @@ Dependencies helpers are functions dealing with enumerating formulas in the righ
 """
 
 
+import json
 import logging
+import os
 
 from toolz import mapcat
-
-from ..core import get_variable_type
 
 
 log = logging.getLogger(__name__)
 
+script_dir_path = os.path.dirname(os.path.abspath(__file__))
+semantic_data_dir_path = os.path.abspath(os.path.join(script_dir_path, '..', 'json', 'semantic_data'))
+
+variable_definition_by_name = None
+
 
 # Helpers
+
+
+def get_variable_type(variable_name):
+    global variable_definition_by_name
+    if variable_definition_by_name is None:
+        with open(os.path.join(semantic_data_dir_path, 'variables_definitions.json')) as variables_definitions_file:
+            variable_definition_by_name = json.loads(variables_definitions_file.read())
+    return variable_definition_by_name.get(variable_name, {}).get('type')
 
 
 def is_writable(formula_name):

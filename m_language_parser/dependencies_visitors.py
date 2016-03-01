@@ -2,6 +2,7 @@
 
 
 import logging
+import pprint
 
 from toolz.curried import concat, filter, mapcat, pipe
 
@@ -20,7 +21,14 @@ deep_level = 0
 def visit_node(node):
     """Main visitor which calls the specific visitors below."""
     global deep_level
-    visitor = globals()['visit_' + node['type']]
+    visitor_name = 'visit_' + node['type']
+    visitor = globals().get(visitor_name)
+    if visitor is None:
+        error_message = '"def {}(node):" is not defined, node = {}'.format(
+            visitor_name,
+            pprint.pformat(node, width=120),
+            )
+        raise NotImplementedError(error_message)
     log.debug('{}:{}:{}'.format(deep_level, visitor.__name__, node))
     deep_level += 1
     result = list(visitor(node))
