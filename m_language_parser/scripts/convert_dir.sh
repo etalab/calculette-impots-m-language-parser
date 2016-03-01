@@ -8,7 +8,7 @@ SCRIPT="$SCRIPT_DIR/m_source_file_to_json_ast.py"
 OPTIONS=""
 # OPTIONS="--no-visit"
 SOURCES_DIR="${1%/}"
-OUTPUT_DIR="$SCRIPT_DIR/../json"
+OUTPUT_DIR="$SCRIPT_DIR/../../json/ast"
 
 if [ -z "$SOURCES_DIR" -o ! -d "$SOURCES_DIR" ]; then
   echo "usage: $0 <sources_dir>"

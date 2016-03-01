@@ -29,7 +29,7 @@ script_name = os.path.splitext(os.path.basename(__file__))[0]
 log = logging.getLogger(script_name)
 
 script_dir_path = os.path.dirname(os.path.abspath(__file__))
-m_grammar_file_path = os.path.join(script_dir_path, '..', 'data', 'm_language.cleanpeg')
+m_grammar_file_path = os.path.join(script_dir_path, '..', '..', 'data', 'm_language.cleanpeg')
 
 
 # Helpers
