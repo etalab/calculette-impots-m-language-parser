@@ -48,7 +48,7 @@ def read_ast_json_file(json_file_name):
 def write_json_file(file_name, data):
     file_path = os.path.join(output_dir_path, file_name)
     with open(file_path, 'w') as output_file:
-        output_file.write(json.dumps(data, indent=2, sort_keys=True))
+        json.dump(data, fp=output_file, indent=2, sort_keys=True)
     log.info('Output file "{}" written with success'.format(file_path))
 
 
