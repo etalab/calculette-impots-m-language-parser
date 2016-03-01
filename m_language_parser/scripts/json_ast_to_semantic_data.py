@@ -18,6 +18,7 @@ from toolz import dissoc
 from toolz.curried import filter, map, mapcat, pipe, sorted, valmap
 
 from m_language_parser import dependencies_visitors
+from m_language_parser.dependencies_helpers import get_ordered_formulas_names
 
 
 # Globals
@@ -131,6 +132,11 @@ def main():
         )))
     formula_dependencies_by_name = valmap(lambda val: list(sorted(val)), formula_dependencies_by_name)
     write_json_file(data=formula_dependencies_by_name, file_name='variables_dependencies.json')
+
+    # Ordered formula names
+
+    ordered_formulas_names = get_ordered_formulas_names(formula_dependencies_by_name)
+    write_json_file(data=ordered_formulas_names, file_name='ordered_formulas.json')
 
     return 0
 
