@@ -23,8 +23,6 @@ from arpeggio.cleanpeg import ParserPEG
 # Globals
 
 
-list_ = list  # To use in ipdb since "list" is reserved to display the current source code.
-
 args = None
 m_parser = None
 script_name = os.path.splitext(os.path.basename(__file__))[0]

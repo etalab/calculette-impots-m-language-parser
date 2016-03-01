@@ -11,12 +11,12 @@ vers un AST en JSON
 - [`json/chap-1.json`](json/chap-1.json.json) est un exemple de la transformation en JSON du fichier
 [`chap-1.m`](https://git.framasoft.org/openfisca/code-source-impots-revenus/tree/master/src/chap-1.m)
 
-## Installation des dépendances
+## Installation
 
 Le langage Python 3 est utilisé.
 
 ```
-pip3 install -r requirements.txt --user
+pip3 install --editable . --user
 ```
 
 > L'option `--user` sert sur les systèmes GNU/Linux.
@@ -27,11 +27,14 @@ un [`virtualenv`](https://virtualenv.readthedocs.org/en/latest/) s'il le souhait
 ## Utilisation
 
 ```
-# Convertir un répertoire de sources M entier :
-$ ./scripts/convert_dir.sh /path/to/code-source-impots-revenus/src
+# Convertir un répertoire de sources M entier en AST :
+$ ./m_language_parser/scripts/convert_dir.sh /path/to/code-source-impots-revenus/src
 
 # Convertir un fichier M particulier :
-$ python3 scripts/m_source_file_to_json_ast.py file.m
+$ python3 m_language_parser/scripts/m_source_file_to_json_ast.py file.m
+
+# Extraire les données JSON sémantiques :
+$ python3 m_language_parser/scripts/json_ast_to_semantic_data.py -v
 ```
 
 > Ceci n'est utile que si les fichiers source M changent car les fichiers JSON ont été commités dans le répertoire
