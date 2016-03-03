@@ -17,7 +17,13 @@ def enumeration_node_to_sequence(enumeration_node):
     if enumeration_node['type'] == 'enumeration_values':
         return enumeration_node['values']
     elif enumeration_node['type'] == 'interval':
-        return range(enumeration_node['first'], enumeration_node['last'] + 1)
+        first = enumeration_node['first']
+        last = enumeration_node['last']
+        pattern = '{{:0{}d}}'.format(len(max(first, last)))
+        return map(
+            lambda item: pattern.format(item),
+            range(int(first), int(last) + 1),
+            )
     else:
         raise NotImplementedError('Unknown type for enumeration_node = {}'.format(enumeration_node))
 

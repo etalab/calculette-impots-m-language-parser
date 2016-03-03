@@ -5,7 +5,7 @@ symbol_enumeration = symbol ("," symbol)*
 float = r'\d+\.\d+'
 integer = r'\d+'
 string = '"' r'[^"]*' '"'
-interval = integer ".." integer
+interval = symbol ".." symbol # Some intervals are "03..06" so we must keep the prefix "0"
 brackets = "[" symbol "]"
 
 enumeration_item = (interval / integer / symbol)
