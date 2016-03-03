@@ -74,10 +74,6 @@ def visit_integer(node):
     return []
 
 
-def visit_interval(node):
-    return []
-
-
 def visit_loop_expression(node):
     return mapcat(visit_node, iter_unlooped_nodes(
         loop_variables_nodes=node['loop_variables'],
