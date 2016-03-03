@@ -547,10 +547,12 @@ class MLanguageVisitor(PTNodeVisitor):
 
     def visit_verif_condition(self, node, children):
         erreurs = [symbol['value'] for symbol in children[1:]]
+        variable_name = erreurs[1] if len(erreurs) > 1 else None
         return make_json_ast_node(
-            erreurs=erreurs,
+            error_name=erreurs[0],
             expression=children[0],
             node=node,
+            variable_name=variable_name,
             )
 
 
