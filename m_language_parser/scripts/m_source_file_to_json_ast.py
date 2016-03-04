@@ -210,7 +210,7 @@ class MLanguageVisitor(PTNodeVisitor):
             assert len(children) == 2, children
             assert len(children[1]) == 1, children
             return make_json_ast_node(
-                enumeration=children[1],
+                enumeration=children[1][0],
                 expression=children[0],
                 negative_form='non' in node or None,
                 node=node,
