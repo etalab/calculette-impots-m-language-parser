@@ -4,7 +4,7 @@
 import logging
 import pprint
 
-from toolz.curried import concat, filter, mapcat, pipe
+from toolz.curried import concat, filter, mapcat, pipe, unique
 
 from .unloop_helpers import iter_unlooped_nodes
 
@@ -62,7 +62,11 @@ def visit_float(node):
 
 def visit_formula(node):
     formula_name = node['name']
-    dependencies = set(visit_node(node['expression']))
+    dependencies = pipe(
+        visit_node(node['expression']),
+        unique,
+        list,
+        )
     return (formula_name, dependencies)
 
 
@@ -94,8 +98,11 @@ def visit_product_expression(node):
 
 
 def visit_regle(node):
-    return mapcat(
-        lambda node: visit_node(node) if node['type'] == 'pour_formula' else [visit_node(node)],
+    return map(
+        lambda node1: {
+            'applications': node['applications'],
+            'dependencies': visit_node(node1) if node1['type'] == 'pour_formula' else [visit_node(node1)],
+            },
         node['formulas'],
         )
 

@@ -34,11 +34,19 @@ $ ./m_language_parser/scripts/convert_dir.sh /path/to/code-source-impots-revenus
 $ python3 m_language_parser/scripts/m_source_file_to_json_ast.py file.m
 
 # Extraire les données JSON sémantiques :
-$ python3 m_language_parser/scripts/json_ast_to_semantic_data.py -v
+$ python3 m_language_parser/scripts/json_ast_to_data.py -v
 ```
 
 > Ceci n'est utile que si les fichiers source M changent car les fichiers JSON ont été commités dans le répertoire
 > [json](json).
+
+```
+# Trouver les dépendances d'une variable (par exemple "IINET") :
+$ jq .IINET json/data/variables_dependencies.json
+
+# Trouver les variables qui dépendent d'une variable (par exemple "TSHALLOV") :
+$ jq -r '[to_entries | .[] | select(.value | bsearch("TSHALLOV") >= 0) | .key] | sort | unique | .[]' json/data/variables_dependencies.json
+```
 
 ## Grammaire
 
