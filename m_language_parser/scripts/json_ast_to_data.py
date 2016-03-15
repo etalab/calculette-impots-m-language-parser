@@ -70,7 +70,9 @@ def build_ordered_formulas_names(formula_name, formulas_dependencies_by_name, or
     if formula_name in ordered_formulas_names:
         return
     dependencies = formulas_dependencies_by_name.get(formula_name)
-    if dependencies is not None:
+    if dependencies is None:
+        log.warning('Formula "{}" is used in a formula but is not defined'.format(formula_name))
+    else:
         for dependency_name in dependencies:
             build_ordered_formulas_names(
                 formula_name=dependency_name,
@@ -178,6 +180,7 @@ def main():
     variables_dependencies_by_name = {}
     for dependencies_dict in dependencies_dicts:
         for variable_name, dependencies in dependencies_dict['dependencies']:
+            # Prefer formulas from the "batch" application.
             if variable_name not in variables_dependencies_by_name or 'batch' in dependencies_dict['applications']:
                 variables_dependencies_by_name[variable_name] = dependencies
     write_json_file(data=variables_dependencies_by_name, file_name='variables_dependencies.json')
@@ -206,9 +209,10 @@ def main():
         )
 
     ordered_formulas_names = []
-    log.info('{} different formulas'.format(
-        len(set(formulas_dependencies_by_name.keys()) | set(concat(formulas_dependencies_by_name.values())))
-        ))
+    # log.info('{} different formulas'.format(
+    #     len(set(formulas_dependencies_by_name.keys()) | set(concat(formulas_dependencies_by_name.values())))
+    #     ))
+    log.info('Building ordered formulas...')
     build_ordered_formulas_names(
         formula_name='IINET',
         formulas_dependencies_by_name=formulas_dependencies_by_name,
