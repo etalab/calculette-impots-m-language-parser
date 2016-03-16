@@ -8,9 +8,7 @@ Convert M language source code to a JSON AST.
 
 
 from collections import OrderedDict
-from operator import itemgetter
 import argparse
-import itertools
 import json
 import logging
 import os
@@ -18,6 +16,7 @@ import sys
 
 from arpeggio import PTNodeVisitor, visit_parse_tree
 from arpeggio.cleanpeg import ParserPEG
+from toolz import concatv, pluck
 
 
 # Globals
@@ -234,11 +233,11 @@ class MLanguageVisitor(PTNodeVisitor):
 
     def visit_enumeration(self, node, children):
         def iter_enumerations():
-            integers_or_symbols = itertools.chain(
+            integers_or_symbols = concatv(
                 find(children, type='integer'),
                 find(children, type='symbol'),
                 )
-            values = list(map(itemgetter('value'), integers_or_symbols))
+            values = list(pluck('value', integers_or_symbols))
             if values:
                 yield make_json_ast_node(
                     type='enumeration_values',
@@ -319,6 +318,7 @@ class MLanguageVisitor(PTNodeVisitor):
         return make_json_ast_node(
             expression=children[-1],
             index=brackets['index'] if brackets is not None else None,
+            linecol=True,
             name=children[0]['value'],
             node=node,
             )
