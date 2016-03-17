@@ -14,7 +14,7 @@ import logging
 import os
 import sys
 
-from toolz.curried import assoc, filter, get_in, map, mapcat, pipe, sorted, valmap
+from toolz.curried import assoc, filter, map, mapcat, pipe, sorted
 
 from m_language_parser import dependencies_helpers, dependencies_visitors
 
@@ -118,22 +118,22 @@ def main():
         iter_json_file_names('chap-*.json', 'res-ser*.json'),
         ))
     applications_by_variable_name = {}
-    dependencies_by_variable_name = {}
+    dependencies_by_formula_name = {}
     for dependencies_dict in dependencies_dicts:
         applications = dependencies_dict['applications']
         for variable_name, dependencies in dependencies_dict['dependencies']:
             applications_by_variable_name[variable_name] = applications
-            if variable_name not in dependencies_by_variable_name or 'batch' in applications:
-                if variable_name in dependencies_by_variable_name and 'batch' in applications:
+            if variable_name not in dependencies_by_formula_name or 'batch' in applications:
+                if variable_name in dependencies_by_formula_name and 'batch' in applications:
                     log.warning('Variable "{}" already met from another application, '
                                 'but this one of "batch" is prefered => keep the dependencies of this one ({}).'.format(
                                     variable_name, dependencies))
-                dependencies_by_variable_name[variable_name] = dependencies
-    write_json_file(data=dependencies_by_variable_name, file_name='variables_dependencies.json')
+                dependencies_by_formula_name[variable_name] = dependencies
+    write_json_file(data=dependencies_by_formula_name, file_name='formulas_dependencies.json')
 
     # Write variables definitions
 
-    variable_definition_by_name = pipe(
+    definition_by_variable_name = pipe(
          variables_definitions,
          filter(lambda val: val['type'] in ('variable_calculee', 'variable_saisie')),
          map(lambda d: assoc(d, 'applications', applications_by_variable_name[d['name']])
@@ -141,42 +141,24 @@ def main():
          map(lambda d: (d['name'], d)),  # Index by name
          dict,
          )
-    write_json_file(data=variable_definition_by_name, file_name='variables_definitions.json')
+    write_json_file(data=definition_by_variable_name, file_name='variables_definitions.json')
 
     # Write ordered formula names
 
-    def get_variable_type(variable_name):
-        return variable_definition_by_name.get(variable_name, {}).get('type')
+    # formulas_dependencies_by_formula_name = dependencies_helpers.filter_formulas_dependencies(
+    #     definition_by_variable_name=definition_by_variable_name,
+    #     dependencies_by_formula_name=dependencies_by_formula_name,
+    #     )
 
-    def has_tag(variable_name, tag):
-        return tag in get_in(
-            ['attributes', 'tags'],
-            variable_definition_by_name.get(variable_name, {}),
-            default=[],
-            )
-
-    def is_calculee_variable(variable_name, tag=None):
-        return get_variable_type(variable_name) == 'variable_calculee'
-
-    formulas_dependencies_by_name = valmap(
-        lambda variables_names: list(filter(
-            lambda variable_name: is_calculee_variable(variable_name) and not has_tag(variable_name, 'base'),
-            variables_names,
-            )),
-        dependencies_by_variable_name,
-        )
-
-    formula_dependencies = []
     # log.info('{} different formulas'.format(
-    #     len(set(formulas_dependencies_by_name.keys()) | set(concat(formulas_dependencies_by_name.values())))
+    #     len(set(dependencies_by_formula_name.keys()) | set(concat(dependencies_by_formula_name.values())))
     #     ))
-    log.info('Building ordered formulas...')
-    dependencies_helpers.build_formula_dependencies(
-        formula_dependencies=formula_dependencies,
-        formula_name='IINETIR',
-        variables_dependencies_by_name=formulas_dependencies_by_name,
-        )
-    write_json_file(data=formula_dependencies, file_name='ordered_formulas.json')
+    # log.info('Building ordered formulas...')
+    # ordered_formulas = dependencies_helpers.find_dependencies(
+    #     dependencies_by_formula_name=formulas_dependencies_by_formula_name,
+    #     formula_name='IINETIR',
+    #     )
+    # write_json_file(data=ordered_formulas, file_name='ordered_formulas.json')
 
     return 0
 

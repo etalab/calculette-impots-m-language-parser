@@ -6,34 +6,69 @@ import logging
 import os
 import pkg_resources
 
+from toolz import get_in, valmap
+
 
 log = logging.getLogger(__name__)
 
 
-def build_formula_dependencies(formula_name, formula_dependencies, variables_dependencies_by_name=None):
-    """Write a list of formula names in a dependencies resolution order, starting with `formula_name`."""
-    # log.debug('build_formula_dependencies: {}: {} ordered formulas written, latest = {}'.format(
-    #     formula_name,
-    #     len(formula_dependencies),
-    #     formula_dependencies[-1] if formula_dependencies else 'None',
-    #     ))
-    if variables_dependencies_by_name is None:
-        m_language_parser_dir_path = pkg_resources.get_distribution('m_language_parser').location
-        variables_dependencies_file_path = os.path.join(m_language_parser_dir_path, 'json', 'data',
-                                                        'variables_dependencies.json')
-        with open(variables_dependencies_file_path) as variables_dependencies_file:
-            variables_dependencies_str = variables_dependencies_file.read()
-        variables_dependencies_by_name = json.loads(variables_dependencies_str)
-    if formula_name in formula_dependencies:
-        return
-    dependencies = variables_dependencies_by_name.get(formula_name)
-    if dependencies is None:
-        log.warning('Formula "{}" is used in a formula but is not defined'.format(formula_name))
-    else:
-        for dependency_name in dependencies:
-            build_formula_dependencies(
-                formula_dependencies=formula_dependencies,
-                formula_name=dependency_name,
-                variables_dependencies_by_name=variables_dependencies_by_name,
-                )
-    formula_dependencies.append(formula_name)
+def filter_formulas_dependencies(definition_by_variable_name, dependencies_by_formula_name):
+    def get_variable_type(variable_name):
+        return definition_by_variable_name.get(variable_name, {}).get('type')
+
+    def has_tag(variable_name, tag):
+        return tag in get_in(
+            ['attributes', 'tags'],
+            definition_by_variable_name.get(variable_name, {}),
+            default=[],
+            )
+
+    def is_calculee_variable(variable_name, tag=None):
+        return get_variable_type(variable_name) == 'variable_calculee'
+
+    formulas_dependencies_by_formula_name = valmap(
+        lambda variables_names: list(filter(
+            lambda variable_name: is_calculee_variable(variable_name) and not has_tag(variable_name, 'base'),
+            variables_names,
+            )),
+        dependencies_by_formula_name,
+        )
+    return formulas_dependencies_by_formula_name
+
+
+def load_dependencies_by_formula_name():
+    m_language_parser_dir_path = pkg_resources.get_distribution('m_language_parser').location
+    variables_dependencies_file_path = os.path.join(m_language_parser_dir_path, 'json', 'data',
+                                                    'formulas_dependencies.json')
+    with open(variables_dependencies_file_path) as variables_dependencies_file:
+        variables_dependencies_str = variables_dependencies_file.read()
+    dependencies_by_formula_name = json.loads(variables_dependencies_str)
+    return dependencies_by_formula_name
+
+
+def find_dependencies(formula_name, dependencies_by_formula_name):
+    """Return a list of dependencies of `formula_name`."""
+    def walk_dependencies(formula_name, dependencies, depth=0):
+        if formula_name in dependencies:
+            return
+        formula_dependencies = dependencies_by_formula_name.get(formula_name)
+        if formula_dependencies is None:
+            # log.warning('Formula "{}" is referenced in a formula but is not defined'.format(formula_name))
+            pass
+        else:
+            # log.debug('find_dependencies:{}{}({})'.format(' ' * depth, formula_name, formula_dependencies))
+            for dependency_name in formula_dependencies:
+                walk_dependencies(
+                    dependencies=dependencies,
+                    depth=depth+1,
+                    formula_name=dependency_name,
+                    )
+        dependencies.append(formula_name)
+
+    dependencies = []
+    walk_dependencies(
+        dependencies_by_formula_name=dependencies_by_formula_name,
+        dependencies=dependencies,
+        formula_name=formula_name,
+        )
+    return dependencies

@@ -42,10 +42,10 @@ $ python3 m_language_parser/scripts/json_ast_to_data.py -v
 
 ```
 # Trouver les dépendances d'une variable (par exemple "IINET") :
-$ jq .IINET json/data/variables_dependencies.json
+$ jq .IINET json/data/formulas_dependencies.json
 
 # Trouver les variables qui dépendent d'une variable (par exemple "TSHALLOV") :
-$ jq -r '[to_entries | .[] | select(.value | bsearch("TSHALLOV") >= 0) | .key] | sort | unique | .[]' json/data/variables_dependencies.json
+$ jq -r '[to_entries | .[] | select(.value | bsearch("TSHALLOV") >= 0) | .key] | sort | unique | .[]' json/data/formulas_dependencies.json
 ```
 
 ## Grammaire
