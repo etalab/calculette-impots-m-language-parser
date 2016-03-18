@@ -14,7 +14,7 @@ import logging
 import os
 import sys
 
-from toolz.curried import assoc, do, filter, get_in, map, mapcat, pipe, sorted
+from toolz.curried import filter, map, mapcat, pipe, sorted
 
 from m_language_parser import dependencies_visitors
 
