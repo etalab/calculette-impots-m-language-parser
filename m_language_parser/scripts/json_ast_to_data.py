@@ -127,7 +127,7 @@ def main():
                     assert not is_double_defined_in_preferred_application, (variable_name, visited_applications)
                     log.debug(
                         'Variable "{}" already visited and had another application, '
-                        'but this one of "{}" is prefered => keep the dependencies ({}) '
+                        'but this one of "{}" is preferred => keep the dependencies ({}) '
                         'and the applications({}) of this one.'.format(
                             variable_name, preferred_application, dependencies, applications))
                 if preferred_application in applications or visited_applications is None:
