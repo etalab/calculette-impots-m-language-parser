@@ -4,7 +4,7 @@ Ce dépôt contient un "[parser](https://fr.wiktionary.org/wiki/parser)" de code
 du [calculateur des impôts sur les revenus](https://git.framasoft.org/openfisca/code-source-impots-revenus)
 écrit dans un langage dédié nommé "M".
 
-- [`data/m_language.cleanpeg`](data/m_language.cleanpeg) contient la description de la grammaire du langage M
+- [`m_language.cleanpeg`](m_language.cleanpeg) contient la description de la grammaire du langage M
 au format [cleanpeg](http://igordejanovic.net/Arpeggio/grammars/#grammars-written-in-peg-notations)
 - [`scripts/m_source_file_to_json_ast.py`](scripts/m_source_file_to_json_ast.py) est le script de transformation du code source
 vers un AST en JSON
@@ -50,7 +50,7 @@ $ jq -r '[to_entries | .[] | select(.value | bsearch("TSHALLOV") >= 0) | .key] |
 
 ## Grammaire
 
-Le fichier de grammaire [`m_language.cleanpeg`](data/m_language.cleanpeg) est au format [Clean PEG](http://igordejanovic.net/Arpeggio/grammars/).
+Le fichier de grammaire [`m_language.cleanpeg`](m_language.cleanpeg) est au format [Clean PEG](http://igordejanovic.net/Arpeggio/grammars/).
 
 La bibliothèque utilisée pour le "parsing" est [Arpeggio](http://igordejanovic.net/Arpeggio/).
 
