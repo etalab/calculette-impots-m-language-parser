@@ -14,9 +14,9 @@ import logging
 import os
 import sys
 
-from toolz.curried import filter, map, mapcat, pipe, sorted
+from toolz.curried import assoc, dissoc, filter, map, mapcat, merge, merge_with, pipe, pluck, sorted
 
-from m_language_parser import dependencies_visitors
+from m_language_parser import dependencies_visitors, unloop_helpers
 
 
 # Globals
@@ -95,12 +95,12 @@ def main():
 
     # Load variables definitions
 
-    variables_definitions = list(load_tgvH_file())
+    tgvh_infos = list(load_tgvH_file())
 
     # Write constants
 
     constant_by_name = pipe(
-         variables_definitions,
+         tgvh_infos,
          filter(lambda val: val['type'] == 'variable_const'),
          map(lambda d: (d['name'], d['value'])),
          dict,
@@ -139,12 +139,50 @@ def main():
 
     # Write variables definitions
 
-    definition_by_variable_name = pipe(
-        variables_definitions,
+    ast_infos_by_variable_name = {}
+    for json_file_name in iter_json_file_names('chap-*.json', 'res-ser*.json'):
+        regle_nodes = read_ast_json_file(json_file_name)
+        for regle_node in regle_nodes:
+            regle_infos = {
+                'regle_applications': regle_node['applications'],
+                'regle_linecol': regle_node['linecol'],
+                'regle_name': regle_node['name'],
+                'source_file_name': '{}.m'.format(os.path.splitext(json_file_name)[0]),
+                }
+            regle_tags = list(pluck('value', regle_node.get('tags', [])))
+            if regle_tags:
+                regle_infos['regle_tags'] = regle_tags
+            for formula_node in regle_node['formulas']:
+                if formula_node['type'] == 'formula':
+                    ast_infos_by_variable_name[formula_node['name']] = assoc(
+                        regle_infos, 'formula_linecol', formula_node['linecol'])
+                elif formula_node['type'] == 'pour_formula':
+                    for unlooped_formula_node in unloop_helpers.iter_unlooped_nodes(
+                            loop_variables_nodes=formula_node['loop_variables'],
+                            node=formula_node['formula'],
+                            unloop_keys=['name'],
+                            ):
+                        pour_formula_infos = merge(regle_infos, {
+                            'pour_formula_linecol': formula_node['formula']['linecol'],
+                            'pour_formula_name': formula_node['formula']['name'],
+                            })
+                        ast_infos_by_variable_name[unlooped_formula_node['name']] = pour_formula_infos
+                else:
+                    assert False, 'Unhandled formula_node type: {}'.format(formula_node)
+
+    def rename_key(d, key_name, key_new_name):
+        return assoc(dissoc(d, key_name), key_new_name, d[key_name])
+
+    tgvh_infos_by_variable_name = pipe(
+        tgvh_infos,
         filter(lambda d: d['type'] in ('variable_calculee', 'variable_saisie')),
+        map(lambda d: rename_key(d, 'linecol', 'tgvh_linecol')),
         map(lambda d: (d['name'], d)),  # Index by name
         dict,
         )
+
+    definition_by_variable_name = merge_with(merge, ast_infos_by_variable_name, tgvh_infos_by_variable_name)
+
     write_json_file(data=definition_by_variable_name, file_name='variables_definitions.json')
 
     return 0
