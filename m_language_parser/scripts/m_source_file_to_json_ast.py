@@ -519,10 +519,10 @@ class MLanguageVisitor(PTNodeVisitor):
         description = find_one(children, type='string')['value']
         attributes = find_many_or_none(children, type='attribute')
         if attributes is not None:
-            attributes = {
-                attribute['name']: attribute['value']
+            attributes = OrderedDict(sorted(
+                (attribute['name'], attribute['value'])
                 for attribute in attributes
-                }
+                ))
         return make_json_ast_node(
             attributes=attributes,
             description=description,
