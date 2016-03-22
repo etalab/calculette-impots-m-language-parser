@@ -53,9 +53,6 @@ def visit_dans(node):
     return visit_node(node['expression'])
 
 
-# def visit_enumeration_values(node):
-
-
 def visit_float(node):
     return []
 

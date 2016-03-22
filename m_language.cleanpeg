@@ -18,14 +18,16 @@ application = "application" symbol ";"
 applications_reference = "application" ":" symbol_enumeration
 enchaineur = "enchaineur" symbol applications_reference ";"
 
-alias = "alias" symbol
-attribute = symbol "=" integer
-tableau = "tableau[" integer "]"
-type = "type" ("BOOLEEN" / "DATE_AAAA" / "DATE_JJMMAAAA" / "DATE_MM" / "ENTIER" / "REEL")
-variable_calculee_tags = ("base" / "restituee")*
-variable_calculee = symbol ":" tableau? "calculee" variable_calculee_tags ":" string type? ";"
+value_type = "type" ("BOOLEEN" / "DATE_AAAA" / "DATE_JJMMAAAA" / "DATE_MM" / "ENTIER" / "REEL")
+variable_calculee_subtype = ("base" / "restituee")
+variable_calculee_tableau = "tableau[" integer "]"
+variable_calculee = symbol ":" variable_calculee_tableau? "calculee" variable_calculee_subtype* ":" string value_type? ";"
 variable_const = symbol ":" "const" "=" float ";"
-variable_saisie = symbol ":" "saisie" ("contexte" / "famille" / "penalite" / "revenu")+ attribute* "restituee"? alias ":" string type? ";"
+variable_saisie_alias = "alias" symbol
+variable_saisie_attribute = symbol "=" integer
+variable_saisie_restituee = "restituee"
+variable_saisie_subtype = ("contexte" / "famille" / "penalite" / "revenu")
+variable_saisie = symbol ":" "saisie" variable_saisie_subtype variable_saisie_attribute* variable_saisie_restituee? variable_saisie_alias ":" string value_type? ";"
 variable = (variable_calculee / variable_const / variable_saisie)
 
 loop_expression = loop_variables ":" expression
