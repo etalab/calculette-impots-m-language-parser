@@ -44,9 +44,12 @@ def iter_json_file_names(*pathnames):
         yield json_file_name
 
 
-def load_regles_file(json_file_name):
-    regles_nodes = read_ast_json_file(json_file_name)
-    return mapcat(dependencies_visitors.visit_node, regles_nodes)
+def load_regles_nodes(json_file_name):
+    return pipe(
+        read_ast_json_file(json_file_name),
+        filter(lambda node: 'batch' in node['applications']),
+        map(lambda d: assoc(d, 'source_file_name', '{}.m'.format(os.path.splitext(json_file_name)[0]))),
+        )
 
 
 def load_tgvH_file():
@@ -109,67 +112,40 @@ def main():
 
     # Write variables dependencies
 
-    regles_dependencies_dicts = list(mapcat(
-        load_regles_file,
-        iter_json_file_names('chap-*.json', 'res-ser*.json'),
-        ))
-
-    def iter_formula_name_and_dependencies_pairs(preferred_application='batch'):
-        visited_applications_by_variable_name = {}
-        for regle_dependencies_dict in regles_dependencies_dicts:
-            applications = regle_dependencies_dict['applications']
-            assert applications is not None
-            for variable_name, dependencies in regle_dependencies_dict['dependencies']:
-                visited_applications = visited_applications_by_variable_name.get(variable_name)
-                if visited_applications is not None:
-                    is_double_defined_in_preferred_application = preferred_application in applications and \
-                        preferred_application in visited_applications
-                    assert not is_double_defined_in_preferred_application, (variable_name, visited_applications)
-                    log.debug(
-                        'Variable "{}" already visited and had another application, '
-                        'but this one of "{}" is preferred => keep the dependencies ({}) '
-                        'and the applications({}) of this one.'.format(
-                            variable_name, preferred_application, dependencies, applications))
-                if preferred_application in applications or visited_applications is None:
-                    yield variable_name, dependencies
-                visited_applications_by_variable_name[variable_name] = applications
-
-    dependencies_by_formula_name = dict(iter_formula_name_and_dependencies_pairs())
+    regles_nodes = list(mapcat(load_regles_nodes, iter_json_file_names('chap-*.json', 'res-ser*.json')))
+    dependencies_by_formula_name = dict(list(mapcat(dependencies_visitors.visit_node, regles_nodes)))
     write_json_file(data=dependencies_by_formula_name, file_name='formulas_dependencies.json')
 
     # Write variables definitions
 
     ast_infos_by_variable_name = {}
-    for json_file_name in iter_json_file_names('chap-*.json', 'res-ser*.json'):
-        regle_nodes = read_ast_json_file(json_file_name)
-        for regle_node in regle_nodes:
-            regle_infos = {
-                'regle_applications': regle_node['applications'],
-                'regle_linecol': regle_node['linecol'],
-                'regle_name': regle_node['name'],
-                'source_file_name': '{}.m'.format(os.path.splitext(json_file_name)[0]),
-                }
-            regle_tags = list(pluck('value', regle_node.get('tags', [])))
-            if regle_tags:
-                regle_infos['regle_tags'] = regle_tags
-            # TODO Handle double defined formulas (in different applications).
-            for formula_node in regle_node['formulas']:
-                if formula_node['type'] == 'formula':
-                    ast_infos_by_variable_name[formula_node['name']] = assoc(
-                        regle_infos, 'formula_linecol', formula_node['linecol'])
-                elif formula_node['type'] == 'pour_formula':
-                    for unlooped_formula_node in unloop_helpers.iter_unlooped_nodes(
-                            loop_variables_nodes=formula_node['loop_variables'],
-                            node=formula_node['formula'],
-                            unloop_keys=['name'],
-                            ):
-                        pour_formula_infos = merge(regle_infos, {
-                            'pour_formula_linecol': formula_node['formula']['linecol'],
-                            'pour_formula_name': formula_node['formula']['name'],
-                            })
-                        ast_infos_by_variable_name[unlooped_formula_node['name']] = pour_formula_infos
-                else:
-                    assert False, 'Unhandled formula_node type: {}'.format(formula_node)
+    for regle_node in regles_nodes:
+        regle_infos = {
+            'regle_applications': regle_node['applications'],
+            'regle_linecol': regle_node['linecol'],
+            'regle_name': regle_node['name'],
+            'source_file_name': regle_node['source_file_name'],
+            }
+        regle_tags = list(pluck('value', regle_node.get('tags', [])))
+        if regle_tags:
+            regle_infos['regle_tags'] = regle_tags
+        for formula_node in regle_node['formulas']:
+            if formula_node['type'] == 'formula':
+                ast_infos_by_variable_name[formula_node['name']] = assoc(
+                    regle_infos, 'formula_linecol', formula_node['linecol'])
+            elif formula_node['type'] == 'pour_formula':
+                for unlooped_formula_node in unloop_helpers.iter_unlooped_nodes(
+                        loop_variables_nodes=formula_node['loop_variables'],
+                        node=formula_node['formula'],
+                        unloop_keys=['name'],
+                        ):
+                    pour_formula_infos = merge(regle_infos, {
+                        'pour_formula_linecol': formula_node['formula']['linecol'],
+                        'pour_formula_name': formula_node['formula']['name'],
+                        })
+                    ast_infos_by_variable_name[unlooped_formula_node['name']] = pour_formula_infos
+            else:
+                assert False, 'Unhandled formula_node type: {}'.format(formula_node)
 
     def rename_key(d, key_name, key_new_name):
         return assoc(dissoc(d, key_name), key_new_name, d[key_name])

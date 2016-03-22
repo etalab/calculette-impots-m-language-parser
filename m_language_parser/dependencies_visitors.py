@@ -98,11 +98,8 @@ def visit_product_expression(node):
 
 
 def visit_regle(node):
-    return map(
-        lambda node1: {
-            'applications': node['applications'],
-            'dependencies': visit_node(node1) if node1['type'] == 'pour_formula' else [visit_node(node1)],
-            },
+    return mapcat(
+        lambda node1: visit_node(node1) if node1['type'] == 'pour_formula' else [visit_node(node1)],
         node['formulas'],
         )
 
