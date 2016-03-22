@@ -152,6 +152,7 @@ def main():
             regle_tags = list(pluck('value', regle_node.get('tags', [])))
             if regle_tags:
                 regle_infos['regle_tags'] = regle_tags
+            # TODO Handle double defined formulas (in different applications).
             for formula_node in regle_node['formulas']:
                 if formula_node['type'] == 'formula':
                     ast_infos_by_variable_name[formula_node['name']] = assoc(
