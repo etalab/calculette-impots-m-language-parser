@@ -1,7 +1,7 @@
 # Parser du langage M
 
 Ce dépôt contient un "[parser](https://fr.wiktionary.org/wiki/parser)" de code source
-du [calculateur des impôts sur les revenus](https://git.framasoft.org/openfisca/code-source-impots-revenus)
+du [calculette des impôts sur les revenus](https://git.framasoft.org/openfisca/code-source-impots-revenus)
 écrit dans un langage dédié nommé "M".
 
 - [`m_language.cleanpeg`](m_language.cleanpeg) contient la description de la grammaire du langage M
@@ -28,13 +28,13 @@ un [`virtualenv`](https://virtualenv.readthedocs.org/en/latest/) s'il le souhait
 
 ```
 # Convertir un répertoire de sources M entier en AST :
-$ ./m_language_parser/scripts/convert_dir.sh /path/to/code-source-impots-revenus/src
+$ ./calculette_impots_m_language_parser/scripts/convert_dir.sh /path/to/code-source-impots-revenus/src
 
 # Convertir un fichier M particulier :
-$ python3 m_language_parser/scripts/m_source_file_to_json_ast.py file.m
+$ python3 calculette_impots_m_language_parser/scripts/m_source_file_to_json_ast.py file.m
 
 # Extraire les données JSON sémantiques :
-$ python3 m_language_parser/scripts/json_ast_to_data.py -v
+$ python3 calculette_impots_m_language_parser/scripts/json_ast_to_data.py -v
 ```
 
 > Ceci n'est utile que si les fichiers source M changent car les fichiers JSON ont été commités dans le répertoire

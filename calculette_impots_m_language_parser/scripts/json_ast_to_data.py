@@ -16,7 +16,7 @@ import sys
 
 from toolz.curried import assoc, dissoc, filter, map, mapcat, merge, merge_with, pipe, pluck, sorted
 
-from m_language_parser import dependencies_visitors, unloop_helpers
+from calculette_impots_m_language_parser import dependencies_visitors, unloop_helpers
 
 
 # Globals
