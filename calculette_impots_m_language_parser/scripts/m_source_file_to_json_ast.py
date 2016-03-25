@@ -474,7 +474,7 @@ class MLanguageVisitor(PTNodeVisitor):
             name=children[0]['value'],
             node=node,
             subtypes=subtypes,
-            tableau=None if tableau is None else tableau['value'],
+            tableau=None if tableau is None else tableau['dimension'],
             value_type=value_type,
             )
 

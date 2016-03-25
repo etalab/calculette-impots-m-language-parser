@@ -16,7 +16,7 @@ if [ -z "$SOURCES_DIR" -o ! -d "$SOURCES_DIR" ]; then
 fi
 
 if [ ! -d "$OUTPUT_DIR" ]; then
-  mkdir $OUTPUT_DIR
+  mkdir -p $OUTPUT_DIR
 fi
 
 echo "==========================================="

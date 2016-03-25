@@ -29,7 +29,6 @@ log = logging.getLogger(script_name)
 script_dir_path = os.path.dirname(os.path.abspath(__file__))
 json_dir_path = os.path.abspath(os.path.join(script_dir_path, '..', '..', 'json'))
 ast_dir_path = os.path.join(json_dir_path, 'ast')
-output_dir_path = os.path.join(json_dir_path, 'data')
 
 
 # Read and write files functions
@@ -73,7 +72,7 @@ def read_ast_json_file(json_file_name):
 
 
 def write_json_file(file_name, data):
-    file_path = os.path.join(output_dir_path, file_name)
+    file_path = os.path.join(json_dir_path, file_name)
     with open(file_path, 'w') as output_file:
         json.dump(data, fp=output_file, indent=2, sort_keys=True)
     log.info('Output file "{}" written with success'.format(file_path))
@@ -93,8 +92,10 @@ def main():
         stream=sys.stdout,
         )
 
-    if not os.path.isdir(output_dir_path):
-        os.mkdir(output_dir_path)
+    if not os.path.isdir(json_dir_path):
+        os.mkdir(json_dir_path)
+    if not os.path.isdir(ast_dir_path):
+        os.mkdir(ast_dir_path)
 
     # Load variables definitions
 

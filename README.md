@@ -31,20 +31,6 @@ un [`virtualenv`](https://virtualenv.readthedocs.org/en/latest/) s'il le souhait
 ## Utilisation
 
 ```
-# Convertir un répertoire de sources M entier en AST :
-$ ./calculette_impots_m_language_parser/scripts/convert_dir.sh /path/to/calculette-impots-m-source-code/src
-
-# Convertir un fichier M particulier :
-$ python3 calculette_impots_m_language_parser/scripts/m_source_file_to_json_ast.py file.m
-
-# Extraire les données JSON sémantiques :
-$ python3 calculette_impots_m_language_parser/scripts/json_ast_to_data.py -v
-```
-
-> Ceci n'est utile que si les fichiers source M changent car les fichiers JSON ont été commités dans le répertoire
-> [json](json).
-
-```
 # Trouver les dépendances d'une variable (par exemple "IINET") :
 $ jq .IINET json/data/formulas_dependencies.json
 
@@ -60,3 +46,22 @@ La bibliothèque utilisée pour le "parsing" est [Arpeggio](http://igordejanovic
 
 La partie de la grammaire touchant aux expressions est basée
 sur [ce tutoriel](http://igordejanovic.net/Arpeggio/tutorials/calc/).
+
+## Regénérer les fichiers JSON
+
+Les commandes suivantes sont a priori inutiles, à moins que les fichiers source M, la grammaire
+ou bien le code du parser ait changé. Les fichiers JSON sont de toute façon commités dans le répertoire [json](json).
+
+```
+# Convertir un répertoire de sources M entier en AST
+$ ./calculette_impots_m_language_parser/scripts/convert_dir.sh /path/to/calculette-impots-m-source-code/src
+
+# Extraire les données JSON sémantiques
+$ python3 calculette_impots_m_language_parser/scripts/json_ast_to_data.py -v
+```
+
+Pour convertir un fichier M particulier :
+
+```
+$ python3 calculette_impots_m_language_parser/scripts/m_source_file_to_json_ast.py file.m
+```
