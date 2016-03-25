@@ -13,9 +13,13 @@ vers un AST en JSON
 
 ## Installation
 
+Ce paquet n'est pas publié sur le dépôt [PyPI](https://pypi.python.org/pypi) donc pour l'installer il faut passer par `git clone`.
+
 Le langage Python 3 est utilisé.
 
 ```
+git clone https://git.framasoft.org/openfisca/calculette-impots-m-language-parser.git
+cd calculette-impots-m-language-parser
 pip3 install --editable . --user
 ```
 
