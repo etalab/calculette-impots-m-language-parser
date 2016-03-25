@@ -391,7 +391,6 @@ class MLanguageVisitor(PTNodeVisitor):
     def visit_regle(self, node, children):
         applications = find_one(children, type='applications_reference')['names']
         enchaineur_reference = find_one_or_none(children, type='enchaineur_reference')
-        enchaineur = enchaineur_reference['value'] if enchaineur_reference is not None else None
         symbols = find_one_or_many(children, type='symbol')
         name, tags = symbols[-1]['value'], symbols[:-1] or None
         formulas = find_many_or_none(children, type='formula')
@@ -399,7 +398,7 @@ class MLanguageVisitor(PTNodeVisitor):
         all_formulas = ([] + (formulas or []) + (pour_formulas or [])) or None
         return make_json_ast_node(
             applications=applications,
-            enchaineur=enchaineur,
+            enchaineur=enchaineur_reference['value'] if enchaineur_reference is not None else None,
             formulas=all_formulas,
             linecol=True,
             name=name,
@@ -475,7 +474,7 @@ class MLanguageVisitor(PTNodeVisitor):
             node=node,
             subtypes=subtypes,
             tableau=None if tableau is None else tableau['dimension'],
-            value_type=value_type,
+            value_type=None if value_type is None else value_type['value'],
             )
 
     def visit_variable_calculee_subtype(self, node, children):
@@ -519,7 +518,7 @@ class MLanguageVisitor(PTNodeVisitor):
             linecol=True,
             name=children[0]['value'],
             node=node,
-            restituee=restituee,
+            restituee=None if restituee is None else restituee['value'],
             subtype=subtype,
             value_type=None if value_type is None else value_type['value'],
             )
