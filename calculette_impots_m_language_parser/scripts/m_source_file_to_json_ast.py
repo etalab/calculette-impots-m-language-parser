@@ -462,17 +462,17 @@ class MLanguageVisitor(PTNodeVisitor):
 
     def visit_variable_calculee(self, node, children):
         description = find_one(children, type='string')['value']
-        subtypes = find_many_or_none(children, type='variable_calculee_subtype')
-        if subtypes is not None:
-            subtypes = sorted(pluck('value', subtypes))
+        subtypes = find_many_or_none(children, type='variable_calculee_subtype') or []
+        subtypes = sorted(pluck('value', subtypes))
         value_type = find_one_or_none(children, type='value_type')
         tableau = find_one_or_none(children, type='variable_calculee_tableau')
         return make_json_ast_node(
+            base=('base' in subtypes) or None,
             description=description,
             linecol=True,
             name=children[0]['value'],
             node=node,
-            subtypes=subtypes,
+            restituee=('restituee' in subtypes) or None,
             tableau=None if tableau is None else tableau['dimension'],
             value_type=None if value_type is None else value_type['value'],
             )
@@ -518,7 +518,7 @@ class MLanguageVisitor(PTNodeVisitor):
             linecol=True,
             name=children[0]['value'],
             node=node,
-            restituee=None if restituee is None else restituee['value'],
+            restituee=(restituee is None) or None,
             subtype=subtype,
             value_type=None if value_type is None else value_type['value'],
             )
