@@ -581,7 +581,7 @@ def main():
     parser.add_argument('-v', '--verbose', action='store_true', default=False, help='Increase output verbosity')
     parser.add_argument('--no-order', action='store_true', default=False, help='Do not use OrderedDict')
     parser.add_argument('--no-visit', action='store_true', default=False, help='Do not visit the parsed tree')
-    parser.add_argument('--rule', default='m_source_file', help='Do not reduce the parsed tree')
+    parser.add_argument('--rule', default='m_source_file', help='Root rule name')
     parser.add_argument('source_file', help='Source file to parse')
     global args
     args = parser.parse_args()
