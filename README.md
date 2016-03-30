@@ -1,8 +1,7 @@
 # Parser du langage M
 
-Ce dépôt contient un "[parser](https://fr.wiktionary.org/wiki/parser)" de code source
-du [calculette des impôts sur les revenus](https://git.framasoft.org/openfisca/calculette-impots-m-source-code)
-écrit dans un langage dédié nommé "M".
+Ce dépôt contient un "[parser](https://fr.wiktionary.org/wiki/parser)" du langage dédié nommé "M" utilisé par
+le code source de la [calculette des impôts sur les revenus](https://git.framasoft.org/openfisca/calculette-impots-m-source-code).
 
 - [`m_language.cleanpeg`](m_language.cleanpeg) contient la description de la grammaire du langage M
 au format [cleanpeg](http://igordejanovic.net/Arpeggio/grammars/#grammars-written-in-peg-notations)
@@ -13,9 +12,9 @@ vers un AST en JSON
 
 ## Installation
 
-Ce paquet n'est pas publié sur le dépôt [PyPI](https://pypi.python.org/pypi) donc pour l'installer il faut passer par `git clone`.
-
 Le langage Python 3 est utilisé.
+
+Ce paquet n'est pas publié sur le dépôt [PyPI](https://pypi.python.org/pypi) donc pour l'installer il faut passer par `git clone`.
 
 ```
 git clone https://git.framasoft.org/openfisca/calculette-impots-m-language-parser.git
@@ -30,13 +29,8 @@ un [`virtualenv`](https://virtualenv.readthedocs.org/en/latest/) s'il le souhait
 
 ## Utilisation
 
-```
-# Trouver les dépendances d'une variable (par exemple "IINET") :
-$ jq .IINET json/data/formulas_dependencies.json
-
-# Trouver les variables qui dépendent d'une variable (par exemple "TSHALLOV") :
-$ jq -r '[to_entries | .[] | select(.value | bsearch("TSHALLOV") >= 0) | .key] | sort | unique | .[]' json/data/formulas_dependencies.json
-```
+Ce projet est à considérer comme un dépôt de données JSON nécessaires au projet
+[calculette-impots-python](https://git.framasoft.org/openfisca/calculette-impots-python).
 
 ## Grammaire
 
