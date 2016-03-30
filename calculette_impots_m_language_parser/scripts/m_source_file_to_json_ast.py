@@ -79,7 +79,7 @@ def find_one_or_none(nodes, type):
 
 def get_linecol(node):
     global m_parser
-    return m_parser.pos_to_linecol(node.position)
+    return (m_parser.pos_to_linecol(node.position), m_parser.pos_to_linecol(node[-1].position))
 
 
 def make_json_ast_node(node=None, linecol=None, type=None, **kwargs):
