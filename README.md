@@ -7,8 +7,20 @@ le code source de la [calculette des impôts sur les revenus](https://git.framas
 au format [cleanpeg](http://igordejanovic.net/Arpeggio/grammars/#grammars-written-in-peg-notations)
 - [`scripts/m_source_file_to_json_ast.py`](scripts/m_source_file_to_json_ast.py) est le script de transformation du code source
 vers un AST en JSON
-- [`json/chap-1.json`](json/chap-1.json.json) est un exemple de la transformation en JSON du fichier
+
+Les fichiers JSON du répertoire `json/ast` sont la traduction sous forme d'AST (abstract syntax tree) des fichiers du langage M.
+Il y a un fichier JSON par fichier M :
+- [`json/ast/chap-1.json`](json/ast/chap-1.json) est un exemple de la transformation 
 [`chap-1.m`](https://git.framasoft.org/openfisca/calculette-impots-m-source-code/tree/master/src/chap-1.m)
+- [`json/ast/tgvH.json`](json/ast/tgvH.json) est la transformation en JSON du fichier
+[`tgvH.m`](https://git.framasoft.org/openfisca/calculette-impots-m-source-code/tree/master/src/tgvH.m)
+
+
+En revanche les fichiers JSON du répertoire `json` sont des versions retravaillées pour une réutilisation plus aisée, des fichiers JSON de l'AST :
+- `formulas_dependencies.json` est un graphe de dépendance entre les formules
+- `constants.json` contient simplement les valeurs des constantes utilisées dans le code M
+- `variables_dependencies.json` est une version retravaillée de `json/ast/tgvH.json` enrichi des variables présentes dans les formules mais absentes du fichier `tgvH.m`.
+
 
 ## Installation
 
