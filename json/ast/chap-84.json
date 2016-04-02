@@ -4204,9 +4204,12 @@
               "name": "positif",
               "arguments": [
                 {
-                  "type": "symbol",
-                  "value": "BAHQT",
-                  "unary": "-"
+                  "type": "unary",
+                  "expression": {
+                    "type": "symbol",
+                    "value": "BAHQT"
+                  },
+                  "operator": "-"
                 }
               ]
             },
@@ -10348,41 +10351,44 @@
                       "value": "SOMDEFBANI"
                     },
                     {
-                      "type": "sum_expression",
-                      "operands": [
-                        {
-                          "type": "function_call",
-                          "name": "max",
-                          "arguments": [
-                            {
-                              "type": "symbol",
-                              "value": "DEFBANI1731"
-                            },
-                            {
-                              "type": "function_call",
-                              "name": "max",
-                              "arguments": [
-                                {
-                                  "type": "symbol",
-                                  "value": "DEFBANI_P"
-                                },
-                                {
-                                  "type": "symbol",
-                                  "value": "DEFBANIP2"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "symbol",
-                          "value": "SOMDEFBANI"
-                        }
-                      ],
-                      "operators": [
-                        "-"
-                      ],
-                      "unary": "-"
+                      "type": "unary",
+                      "expression": {
+                        "type": "sum_expression",
+                        "operands": [
+                          {
+                            "type": "function_call",
+                            "name": "max",
+                            "arguments": [
+                              {
+                                "type": "symbol",
+                                "value": "DEFBANI1731"
+                              },
+                              {
+                                "type": "function_call",
+                                "name": "max",
+                                "arguments": [
+                                  {
+                                    "type": "symbol",
+                                    "value": "DEFBANI_P"
+                                  },
+                                  {
+                                    "type": "symbol",
+                                    "value": "DEFBANIP2"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "symbol",
+                            "value": "SOMDEFBANI"
+                          }
+                        ],
+                        "operators": [
+                          "-"
+                        ]
+                      },
+                      "operator": "-"
                     }
                   ]
                 }

@@ -6450,91 +6450,94 @@
         "type": "formula",
         "name": "DLMRN1TXM",
         "expression": {
-          "type": "function_call",
-          "name": "min",
-          "arguments": [
-            {
-              "type": "integer",
-              "value": 0
-            },
-            {
-              "type": "sum_expression",
-              "operands": [
-                {
-                  "type": "product_expression",
-                  "operands": [
-                    {
-                      "type": "symbol",
-                      "value": "MIB_NETCT"
-                    },
-                    {
-                      "type": "sum_expression",
-                      "operands": [
-                        {
-                          "type": "integer",
-                          "value": 1
-                        },
-                        {
-                          "type": "function_call",
-                          "name": "positif",
-                          "arguments": [
-                            {
-                              "type": "symbol",
-                              "value": "MIBNETPTOT"
-                            }
-                          ]
-                        }
-                      ],
-                      "operators": [
-                        "-"
-                      ]
-                    }
-                  ],
-                  "operators": [
-                    "*"
-                  ]
-                },
-                {
-                  "type": "product_expression",
-                  "operands": [
-                    {
-                      "type": "symbol",
-                      "value": "SPENETCT"
-                    },
-                    {
-                      "type": "sum_expression",
-                      "operands": [
-                        {
-                          "type": "integer",
-                          "value": 1
-                        },
-                        {
-                          "type": "function_call",
-                          "name": "positif",
-                          "arguments": [
-                            {
-                              "type": "symbol",
-                              "value": "SPENETPF"
-                            }
-                          ]
-                        }
-                      ],
-                      "operators": [
-                        "-"
-                      ]
-                    }
-                  ],
-                  "operators": [
-                    "*"
-                  ]
-                }
-              ],
-              "operators": [
-                "+"
-              ]
-            }
-          ],
-          "unary": "-"
+          "type": "unary",
+          "expression": {
+            "type": "function_call",
+            "name": "min",
+            "arguments": [
+              {
+                "type": "integer",
+                "value": 0
+              },
+              {
+                "type": "sum_expression",
+                "operands": [
+                  {
+                    "type": "product_expression",
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "MIB_NETCT"
+                      },
+                      {
+                        "type": "sum_expression",
+                        "operands": [
+                          {
+                            "type": "integer",
+                            "value": 1
+                          },
+                          {
+                            "type": "function_call",
+                            "name": "positif",
+                            "arguments": [
+                              {
+                                "type": "symbol",
+                                "value": "MIBNETPTOT"
+                              }
+                            ]
+                          }
+                        ],
+                        "operators": [
+                          "-"
+                        ]
+                      }
+                    ],
+                    "operators": [
+                      "*"
+                    ]
+                  },
+                  {
+                    "type": "product_expression",
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "SPENETCT"
+                      },
+                      {
+                        "type": "sum_expression",
+                        "operands": [
+                          {
+                            "type": "integer",
+                            "value": 1
+                          },
+                          {
+                            "type": "function_call",
+                            "name": "positif",
+                            "arguments": [
+                              {
+                                "type": "symbol",
+                                "value": "SPENETPF"
+                              }
+                            ]
+                          }
+                        ],
+                        "operators": [
+                          "-"
+                        ]
+                      }
+                    ],
+                    "operators": [
+                      "*"
+                    ]
+                  }
+                ],
+                "operators": [
+                  "+"
+                ]
+              }
+            ]
+          },
+          "operator": "-"
         },
         "linecol": [
           [
@@ -11516,29 +11519,32 @@
                               "type": "sum_expression",
                               "operands": [
                                 {
-                                  "type": "function_call",
-                                  "name": "max",
-                                  "arguments": [
-                                    {
-                                      "type": "symbol",
-                                      "value": "DFANTPROV1731"
-                                    },
-                                    {
-                                      "type": "function_call",
-                                      "name": "max",
-                                      "arguments": [
-                                        {
-                                          "type": "symbol",
-                                          "value": "DFANTPROV_P"
-                                        },
-                                        {
-                                          "type": "symbol",
-                                          "value": "DFANTPROVP2"
-                                        }
-                                      ]
-                                    }
-                                  ],
-                                  "unary": "-"
+                                  "type": "unary",
+                                  "expression": {
+                                    "type": "function_call",
+                                    "name": "max",
+                                    "arguments": [
+                                      {
+                                        "type": "symbol",
+                                        "value": "DFANTPROV1731"
+                                      },
+                                      {
+                                        "type": "function_call",
+                                        "name": "max",
+                                        "arguments": [
+                                          {
+                                            "type": "symbol",
+                                            "value": "DFANTPROV_P"
+                                          },
+                                          {
+                                            "type": "symbol",
+                                            "value": "DFANTPROVP2"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  "operator": "-"
                                 },
                                 {
                                   "type": "symbol",

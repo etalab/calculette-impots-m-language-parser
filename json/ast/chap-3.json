@@ -1762,9 +1762,12 @@
                       "type": "sum_expression",
                       "operands": [
                         {
-                          "type": "symbol",
-                          "value": "CIRCMAVFT",
-                          "unary": "-"
+                          "type": "unary",
+                          "expression": {
+                            "type": "symbol",
+                            "value": "CIRCMAVFT"
+                          },
+                          "operator": "-"
                         },
                         {
                           "type": "symbol",
@@ -3924,9 +3927,12 @@
           "type": "sum_expression",
           "operands": [
             {
-              "type": "symbol",
-              "value": "CRDIE",
-              "unary": "-"
+              "type": "unary",
+              "expression": {
+                "type": "symbol",
+                "value": "CRDIE"
+              },
+              "operator": "-"
             },
             {
               "type": "integer",

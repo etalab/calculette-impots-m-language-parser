@@ -2324,29 +2324,32 @@
                       "type": "sum_expression",
                       "operands": [
                         {
-                          "type": "function_call",
-                          "name": "max",
-                          "arguments": [
-                            {
-                              "type": "symbol",
-                              "value": "DEF4BC1731"
-                            },
-                            {
-                              "type": "function_call",
-                              "name": "max",
-                              "arguments": [
-                                {
-                                  "type": "symbol",
-                                  "value": "DEF4BC_P"
-                                },
-                                {
-                                  "type": "symbol",
-                                  "value": "DEF4BCP2"
-                                }
-                              ]
-                            }
-                          ],
-                          "unary": "-"
+                          "type": "unary",
+                          "expression": {
+                            "type": "function_call",
+                            "name": "max",
+                            "arguments": [
+                              {
+                                "type": "symbol",
+                                "value": "DEF4BC1731"
+                              },
+                              {
+                                "type": "function_call",
+                                "name": "max",
+                                "arguments": [
+                                  {
+                                    "type": "symbol",
+                                    "value": "DEF4BC_P"
+                                  },
+                                  {
+                                    "type": "symbol",
+                                    "value": "DEF4BCP2"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          "operator": "-"
                         },
                         {
                           "type": "symbol",
