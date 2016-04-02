@@ -118,3 +118,7 @@ def visit_ternary_operator(node):
         filter(None),
         concat,
         )
+
+
+def visit_unary(node):
+    return visit_node(node['expression'])

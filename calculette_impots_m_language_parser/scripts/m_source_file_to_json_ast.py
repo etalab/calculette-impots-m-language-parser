@@ -279,7 +279,12 @@ class MLanguageVisitor(PTNodeVisitor):
                     if children[0]['value'] == '-':
                         result['value'] = -result['value']
                 else:
-                    result['unary'] = children[0]['value']
+                    result = make_json_ast_node(
+                        expression=result,
+                        node=node,
+                        operator=children[0]['value'],
+                        type='unary',
+                        )
             else:
                 result = children[0]
             return result
