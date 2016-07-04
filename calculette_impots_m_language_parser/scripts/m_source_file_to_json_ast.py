@@ -178,7 +178,7 @@ class MLanguageVisitor(PTNodeVisitor):
         else:
             operators = extract_operators(node)
             assert len(operators) == 1, operators
-            assert len(children) == 2, operators
+            assert len(children) == 2, children
             return make_json_ast_node(
                 left_operand=children[0],
                 node=node,
@@ -191,7 +191,7 @@ class MLanguageVisitor(PTNodeVisitor):
             return children[0]
         else:
             assert len(children) == 2, children
-            assert len(children[1]) == 1, children
+            assert len(children[1]) == 1, children[1]
             return make_json_ast_node(
                 enumeration=children[1][0],
                 expression=children[0],
