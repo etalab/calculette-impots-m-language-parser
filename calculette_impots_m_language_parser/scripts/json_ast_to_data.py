@@ -104,11 +104,11 @@ def main():
     # Write constants
 
     constant_by_name = pipe(
-         tgvh_infos,
-         filter(lambda val: val['type'] == 'variable_const'),
-         map(lambda d: (d['name'], d['value'])),
-         dict,
-         )
+        tgvh_infos,
+        filter(lambda val: val['type'] == 'variable_const'),
+        map(lambda d: (d['name'], d['value'])),
+        dict,
+        )
     write_json_file(data=constant_by_name, file_name='constants.json')
 
     # Write variables dependencies
