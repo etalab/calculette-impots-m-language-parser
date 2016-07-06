@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-# Exécute le script m_source_file_to_json_ast.py sur les fichiers pris en charge et écrase les fichiers JSON.
+# Exécute le script m_to_ast.py sur les fichiers pris en charge et écrase les fichiers JSON.
 
 
 SCRIPT_DIR=$(dirname $(readlink -f "$BASH_SOURCE"))
-SCRIPT="$SCRIPT_DIR/m_source_file_to_json_ast.py"
+SCRIPT="$SCRIPT_DIR/m_to_ast.py"
 OPTIONS=""
 # OPTIONS="--no-visit"
 SOURCES_DIR="${1%/}"

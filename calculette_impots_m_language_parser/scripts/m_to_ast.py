@@ -82,7 +82,7 @@ def get_linecol(node):
     return (m_parser.pos_to_linecol(node.position), m_parser.pos_to_linecol(node[-1].position))
 
 
-def make_json_ast_node(node=None, linecol=None, type=None, **kwargs):
+def make_node(node=None, linecol=None, type=None, **kwargs):
     clean_node = without_empty_values(
         linecol=(
             get_linecol(node)
@@ -97,6 +97,19 @@ def make_json_ast_node(node=None, linecol=None, type=None, **kwargs):
         **kwargs
         )
     return clean_node if args.debug or args.no_order else pretty_ordered_keys(clean_node)
+
+
+def make_nested_operators_ast_nodes(node, operators, operands, type):
+    assert len(operands) > 1, operands
+    return make_node(
+        left_operand=operands[0],
+        node=node,
+        operator=operators[0],
+        right_operand=operands[1]
+        if len(operators) == 1
+        else make_nested_operators_ast_nodes(node=node, operators=operators[1:], operands=operands[1:], type=type),
+        type=type,
+        )
 
 
 def only_child(children):
@@ -148,7 +161,7 @@ class MLanguageVisitor(PTNodeVisitor):
 
     def visit_application(self, node, children):
         assert len(children) == 1, children
-        return make_json_ast_node(
+        return make_node(
             linecol=True,
             name=children[0]['value'],
             node=node,
@@ -157,14 +170,14 @@ class MLanguageVisitor(PTNodeVisitor):
     def visit_applications_reference(self, node, children):
         assert len(children) == 1, children
         names = [symbol['value'] for symbol in children[0]]
-        return make_json_ast_node(
+        return make_node(
             names=names,
             node=node,
             )
 
     def visit_brackets(self, node, children):
         assert len(children) == 1, children
-        return make_json_ast_node(
+        return make_node(
             index=children[0]['value'],
             node=node,
             )
@@ -179,7 +192,7 @@ class MLanguageVisitor(PTNodeVisitor):
             operators = extract_operators(node)
             assert len(operators) == 1, operators
             assert len(children) == 2, children
-            return make_json_ast_node(
+            return make_node(
                 left_operand=children[0],
                 node=node,
                 operator=operators[0],
@@ -192,7 +205,7 @@ class MLanguageVisitor(PTNodeVisitor):
         else:
             assert len(children) == 2, children
             assert len(children[1]) == 1, children[1]
-            return make_json_ast_node(
+            return make_node(
                 enumeration=children[1][0],
                 expression=children[0],
                 negative_form='non' in node or None,
@@ -201,7 +214,7 @@ class MLanguageVisitor(PTNodeVisitor):
 
     def visit_enchaineur(self, node, children):
         assert len(children) == 2, children
-        return make_json_ast_node(
+        return make_node(
             applications=children[1]['names'],
             linecol=True,
             name=children[0]['value'],
@@ -210,7 +223,7 @@ class MLanguageVisitor(PTNodeVisitor):
 
     def visit_enchaineur_reference(self, node, children):
         assert len(children) == 1, children
-        return make_json_ast_node(
+        return make_node(
             node=node,
             value=children[0]['value'],
             )
@@ -223,7 +236,7 @@ class MLanguageVisitor(PTNodeVisitor):
                 )
             values = list(pluck('value', integers_or_symbols))
             if values:
-                yield make_json_ast_node(
+                yield make_node(
                     type='enumeration_values',
                     values=values,
                     )
@@ -242,7 +255,7 @@ class MLanguageVisitor(PTNodeVisitor):
         strings = [string['value'] for string in find_many(children, type='string')]
         description = strings[3]
         codes = strings[:3] + [strings[4]]
-        return make_json_ast_node(
+        return make_node(
             codes=codes,
             description=description,
             erreur_type=erreur_type,
@@ -252,7 +265,7 @@ class MLanguageVisitor(PTNodeVisitor):
             )
 
     def visit_erreur_type(self, node, children):
-        return make_json_ast_node(
+        return make_node(
             node=node,
             value=node.value,
             )
@@ -279,7 +292,7 @@ class MLanguageVisitor(PTNodeVisitor):
                     if children[0]['value'] == '-':
                         result['value'] = -result['value']
                 else:
-                    result = make_json_ast_node(
+                    result = make_node(
                         expression=result,
                         node=node,
                         operator=children[0]['value'],
@@ -292,19 +305,19 @@ class MLanguageVisitor(PTNodeVisitor):
     def visit_factor_literal(self, node, children):
         assert len(children) == 1, children
         child = children[0]
-        return make_json_ast_node(type='integer', value=int(child['value'])) \
+        return make_node(type='integer', value=int(child['value'])) \
             if child['type'] == 'symbol' and child['value'].isdigit() \
             else child
 
     def visit_float(self, node, children):
-        return make_json_ast_node(
+        return make_node(
             node=node,
             value=float(node.value),
             )
 
     def visit_formula(self, node, children):
         brackets = find_one_or_none(children, type='brackets')
-        return make_json_ast_node(
+        return make_node(
             expression=children[-1],
             index=brackets['index'] if brackets is not None else None,
             linecol=True,
@@ -316,7 +329,7 @@ class MLanguageVisitor(PTNodeVisitor):
         return children
 
     def visit_function_call(self, node, children):
-        return make_json_ast_node(
+        return make_node(
             arguments=to_list(children[1]),
             name=children[0]['value'],
             node=node,
@@ -326,14 +339,14 @@ class MLanguageVisitor(PTNodeVisitor):
         return only_child(children)
 
     def visit_integer(self, node, children):
-        return make_json_ast_node(
+        return make_node(
             node=node,
             value=int(node.value),
             )
 
     def visit_interval(self, node, children):
         assert len(children) == 2, children
-        return make_json_ast_node(
+        return make_node(
             first=children[0]['value'],
             last=children[1]['value'],
             node=node,
@@ -342,7 +355,7 @@ class MLanguageVisitor(PTNodeVisitor):
     def visit_loop_expression(self, node, children):
         assert len(children) == 2, children
         assert isinstance(children[0], list), children[0]
-        return make_json_ast_node(
+        return make_node(
             expression=children[1],
             loop_variables=children[0],
             node=node,
@@ -350,7 +363,7 @@ class MLanguageVisitor(PTNodeVisitor):
 
     def visit_loop_variable1(self, node, children):
         assert len(children) == 2, children
-        return make_json_ast_node(
+        return make_node(
             enumerations=children[1],
             name=children[0]['value'],
             node=node,
@@ -359,7 +372,7 @@ class MLanguageVisitor(PTNodeVisitor):
 
     def visit_loop_variable2(self, node, children):
         assert len(children) == 2, children
-        return make_json_ast_node(
+        return make_node(
             enumerations=children[1],
             name=children[0]['value'],
             node=node,
@@ -376,7 +389,7 @@ class MLanguageVisitor(PTNodeVisitor):
     def visit_pour_formula(self, node, children):
         assert len(children) == 2, children
         assert isinstance(children[0], list), children[0]
-        return make_json_ast_node(
+        return make_node(
             formula=children[1],
             loop_variables=children[0],
             node=node,
@@ -401,7 +414,7 @@ class MLanguageVisitor(PTNodeVisitor):
         formulas = find_many_or_none(children, type='formula')
         pour_formulas = find_many_or_none(children, type='pour_formula')
         all_formulas = ([] + (formulas or []) + (pour_formulas or [])) or None
-        return make_json_ast_node(
+        return make_node(
             applications=applications,
             enchaineur=enchaineur_reference['value'] if enchaineur_reference is not None else None,
             formulas=all_formulas,
@@ -412,7 +425,7 @@ class MLanguageVisitor(PTNodeVisitor):
             )
 
     def visit_string(self, node, children):
-        return make_json_ast_node(
+        return make_node(
             node=node,
             value=node[1].value,
             )
@@ -429,7 +442,7 @@ class MLanguageVisitor(PTNodeVisitor):
                 )
 
     def visit_symbol(self, node, children):
-        return make_json_ast_node(
+        return make_node(
             node=node,
             value=node.value,
             )
@@ -442,7 +455,7 @@ class MLanguageVisitor(PTNodeVisitor):
         if len(children) == 1:
             return children[0]
         else:
-            return make_json_ast_node(
+            return make_node(
                 condition=children[0],
                 node=node,
                 value_if_false=children[2] if len(children) == 3 else None,
@@ -450,13 +463,13 @@ class MLanguageVisitor(PTNodeVisitor):
                 )
 
     def visit_unary(self, node, children):
-        return make_json_ast_node(
+        return make_node(
             node=node,
             value=node.value,
             )
 
     def visit_value_type(self, node, children):
-        return make_json_ast_node(
+        return make_node(
             name='type',
             node=node,
             value=node[1].value,
@@ -471,7 +484,7 @@ class MLanguageVisitor(PTNodeVisitor):
         subtypes = sorted(pluck('value', subtypes))
         value_type = find_one_or_none(children, type='value_type')
         tableau = find_one_or_none(children, type='variable_calculee_tableau')
-        return make_json_ast_node(
+        return make_node(
             base=('base' in subtypes) or None,
             description=description,
             linecol=True,
@@ -483,21 +496,21 @@ class MLanguageVisitor(PTNodeVisitor):
             )
 
     def visit_variable_calculee_subtype(self, node, children):
-        return make_json_ast_node(
+        return make_node(
             node=node,
             value=node[0].value,
             )
 
     def visit_variable_calculee_tableau(self, node, children):
         assert len(children) == 1, children
-        return make_json_ast_node(
+        return make_node(
             dimension=children[0]['value'],
             node=node,
             )
 
     def visit_variable_const(self, node, children):
         assert len(children) == 2, children
-        return make_json_ast_node(
+        return make_node(
             linecol=True,
             name=children[0]['value'],
             node=node,
@@ -516,7 +529,7 @@ class MLanguageVisitor(PTNodeVisitor):
         restituee = find_one_or_none(children, type='variable_saisie_restituee')
         subtype = find_one(children, type='variable_saisie_subtype')['value']
         value_type = find_one_or_none(children, type='value_type')
-        return make_json_ast_node(
+        return make_node(
             alias=None if alias is None else alias['value'],
             attributes=attributes,
             description=description,
@@ -530,27 +543,27 @@ class MLanguageVisitor(PTNodeVisitor):
 
     def visit_variable_saisie_alias(self, node, children):
         assert len(children) == 1, children
-        return make_json_ast_node(
+        return make_node(
             node=node,
             value=children[0]['value'],
             )
 
     def visit_variable_saisie_attribute(self, node, children):
         assert len(children) == 2, children
-        return make_json_ast_node(
+        return make_node(
             name=children[0]['value'],
             node=node,
             value=children[1]['value'],
             )
 
     def visit_variable_saisie_restituee(self, node, children):
-        return make_json_ast_node(
+        return make_node(
             node=node,
             value=node.value,
             )
 
     def visit_variable_saisie_subtype(self, node, children):
-        return make_json_ast_node(
+        return make_node(
             node=node,
             value=node[0].value,
             )
@@ -560,7 +573,7 @@ class MLanguageVisitor(PTNodeVisitor):
         name, tags = symbols[-1]['value'], symbols[:-1] or None
         applications = find_one(children, type='applications_reference')['names']
         conditions = find_one_or_many(children, type='verif_condition')
-        return make_json_ast_node(
+        return make_node(
             applications=applications,
             conditions=conditions,
             linecol=True,
@@ -572,7 +585,7 @@ class MLanguageVisitor(PTNodeVisitor):
     def visit_verif_condition(self, node, children):
         erreurs = [symbol['value'] for symbol in children[1:]]
         variable_name = erreurs[1] if len(erreurs) > 1 else None
-        return make_json_ast_node(
+        return make_node(
             error_name=erreurs[0],
             expression=children[0],
             node=node,

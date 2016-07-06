@@ -5,12 +5,12 @@ le code source de la [calculette des impôts sur les revenus](https://git.framas
 
 - [`m_language.cleanpeg`](m_language.cleanpeg) contient la description de la grammaire du langage M
 au format [cleanpeg](http://igordejanovic.net/Arpeggio/grammars/#grammars-written-in-peg-notations)
-- [`scripts/m_source_file_to_json_ast.py`](scripts/m_source_file_to_json_ast.py) est le script de transformation du code source
+- [`scripts/m_to_ast.py`](scripts/m_to_ast.py) est le script de transformation du code source
 vers un AST en JSON
 
 Les fichiers JSON du répertoire `json/ast` sont la traduction sous forme d'AST (abstract syntax tree) des fichiers du langage M.
 Il y a un fichier JSON par fichier M :
-- [`json/ast/chap-1.json`](json/ast/chap-1.json) est un exemple de la transformation 
+- [`json/ast/chap-1.json`](json/ast/chap-1.json) est un exemple de la transformation
 [`chap-1.m`](https://git.framasoft.org/openfisca/calculette-impots-m-source-code/tree/master/src/chap-1.m)
 - [`json/ast/tgvH.json`](json/ast/tgvH.json) est la transformation en JSON du fichier
 [`tgvH.m`](https://git.framasoft.org/openfisca/calculette-impots-m-source-code/tree/master/src/tgvH.m)
@@ -63,11 +63,11 @@ ou bien le code du parser ait changé. Les fichiers JSON sont de toute façon co
 $ ./calculette_impots_m_language_parser/scripts/convert_dir.sh /path/to/calculette-impots-m-source-code/src
 
 # Extraire les données JSON sémantiques
-$ python3 calculette_impots_m_language_parser/scripts/json_ast_to_data.py -v
+$ python3 calculette_impots_m_language_parser/scripts/ast_to_data.py -v
 ```
 
 Pour convertir un fichier M particulier :
 
 ```
-$ python3 calculette_impots_m_language_parser/scripts/m_source_file_to_json_ast.py file.m
+$ python3 calculette_impots_m_language_parser/scripts/m_to_ast.py file.m
 ```
