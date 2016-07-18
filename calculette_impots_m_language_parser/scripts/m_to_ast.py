@@ -275,7 +275,7 @@ class MLanguageVisitor(PTNodeVisitor):
             return children[0]
         else:
             operators = extract_operators(node)
-            return make_json_ast_node(
+            return make_node(
                 node=node,
                 operands=children,
                 operators=operators,
@@ -400,7 +400,7 @@ class MLanguageVisitor(PTNodeVisitor):
             return children[0]
         else:
             operators = extract_operators(node)
-            return make_json_ast_node(
+            return make_node(
                 node=node,
                 operands=children,
                 operators=operators,
@@ -435,7 +435,7 @@ class MLanguageVisitor(PTNodeVisitor):
             return children[0]
         else:
             operators = extract_operators(node)
-            return make_json_ast_node(
+            return make_node(
                 node=node,
                 operands=children,
                 operators=operators,
