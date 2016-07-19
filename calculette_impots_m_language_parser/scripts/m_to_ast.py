@@ -31,6 +31,14 @@ script_dir_path = os.path.dirname(os.path.abspath(__file__))
 m_grammar_file_path = os.path.join(script_dir_path, '..', '..', 'm_language.cleanpeg')
 
 
+# M CONSTANTS
+
+M_ADDITION = '+'
+M_SUBSTRACTION = '-'
+M_MULTIPLICATION = '*'
+M_DIVISION = '/'
+
+
 # Helpers
 
 
@@ -286,7 +294,7 @@ class MLanguageVisitor(PTNodeVisitor):
         if len(children) == 1:
             return children[0]
         else:
-            if children[0]['type'] == 'unary':
+            if children[0]['type'] == 'sum_operator':
                 result = children[1].copy()
                 if result['type'] in ('float', 'integer'):
                     if children[0]['value'] == '-':
@@ -396,15 +404,39 @@ class MLanguageVisitor(PTNodeVisitor):
             )
 
     def visit_product_expression(self, node, children):
+        def iter_product(node, children):
+            for index, _ in enumerate(node):
+                # In the M language, the first operand is always multiplied, never divided
+                if index == 0:
+                    yield children[0]
+                else:
+                    if node[index].value == M_MULTIPLICATION:
+                        yield children[index + 1]
+
+        def iter_division(node, children):
+            for index, _ in enumerate(node):
+                if node[index].value == M_DIVISION:
+                    yield children[index + 1]
+
         if len(children) == 1:
             return children[0]
         else:
-            operators = extract_operators(node)
+            # With the M implementation, there is only one / which is always last, and there might be several *
+            products = list(iter_product(node=node, children=children))
+            divs = list(iter_division(node=node, children=children))
+
+            operands = products + list(map(lambda x: make_node(operand=x, type='invert'), divs))
+
             return make_node(
-                node=node,
-                operands=children,
-                operators=operators,
+                operands=operands,
+                type='product',
                 )
+
+    def visit_product_operator(self, node, children):
+        return make_node(
+            node=node,
+            value=node.value,
+            )
 
     def visit_regle(self, node, children):
         applications = find_one(children, type='applications_reference')['names']
@@ -431,15 +463,38 @@ class MLanguageVisitor(PTNodeVisitor):
             )
 
     def visit_sum_expression(self, node, children):
+        def iter_positives(node):
+            for index, _ in enumerate(node):
+                # In M Language, the first operand is always positive
+                if index == 0:
+                    yield children[0]
+                    # yield make_node(node=child)
+                else:
+                    if node[index].value == M_ADDITION:
+                        yield children[index + 1]
+
+        def iter_negatives(node):
+            for index, _ in enumerate(node):
+                # In M Language, negative values are never first operand
+                if node[index].value == M_SUBSTRACTION:
+                    yield children[index + 1]
+
         if len(children) == 1:
             return children[0]
         else:
-            operators = extract_operators(node)
+            positives = list(iter_positives(node=node))
+            negatives = list(iter_negatives(node=node))
+            operands = positives + list(map(lambda x: make_node(operand=x, type='negate'), negatives))
             return make_node(
-                node=node,
-                operands=children,
-                operators=operators,
+                operands=operands,
+                type='sum',
                 )
+
+    def visit_sum_operator(self, node, children):
+        return make_node(
+            node=node,
+            value=node.value,
+            )
 
     def visit_symbol(self, node, children):
         return make_node(
@@ -461,12 +516,6 @@ class MLanguageVisitor(PTNodeVisitor):
                 value_if_false=children[2] if len(children) == 3 else None,
                 value_if_true=children[1],
                 )
-
-    def visit_unary(self, node, children):
-        return make_node(
-            node=node,
-            value=node.value,
-            )
 
     def visit_value_type(self, node, children):
         return make_node(

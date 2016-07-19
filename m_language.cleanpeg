@@ -34,12 +34,13 @@ loop_expression = loop_variables ":" expression
 function_arguments = expression ("," expression)*
 function_call = symbol "(" (loop_expression / function_arguments) ")"
 ternary_operator = "si" expression "alors" expression ("sinon" expression)? "finsi"
-unary = ("+" / "-")
 group = "(" expression ")"
 factor_literal = (float / symbol) # Some symbols start with a digit and make it hard to parse with (float / integer / symbol)
-factor = unary? (("pour" loop_expression) / ternary_operator / function_call / (symbol brackets) / factor_literal / group)
-product_expression = factor (("*" / "/") factor)*
-sum_expression = product_expression (("+" / "-") product_expression)*
+factor = sum_operator? (("pour" loop_expression) / ternary_operator / function_call / (symbol brackets) / factor_literal / group)
+product_operator = ("*" / "/")
+product_expression = factor (product_operator factor)*
+sum_operator = ("+" / "-")
+sum_expression = product_expression (sum_operator product_expression)*
 comparaison = sum_expression ((">=" / "<=" / "!=" / ">" / "<" / "=") sum_expression)?
 dans = comparaison (("non"? "dans") "(" enumeration ")")?
 expression = dans (("et" / "ou") dans)*
