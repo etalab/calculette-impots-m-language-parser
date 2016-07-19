@@ -27,5 +27,7 @@ setup(
         'Arpeggio >= 1.2.1',
         'toolz >= 0.7.4',
         ],
-    packages=find_packages(),
+    packages=find_packages(exclude=['calculette_impots_m_language_parser.tests*']),
+    tests_require=['nose'],
+    test_suite='nose.collector',
     )
