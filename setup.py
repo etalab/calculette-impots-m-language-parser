@@ -7,7 +7,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='calculette_impots_m_language_parser',
-    version='0.0.0.dev0',
+    version='0.1.0',
 
     author='Christophe Benz',
     author_email='christophe.benz@data.gouv.fr',
