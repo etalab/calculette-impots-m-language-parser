@@ -10,6 +10,7 @@ from nose.tools import assert_equal
 from calculette_impots_m_language_parser.scripts import m_to_ast
 
 
+script_dir_path = os.path.dirname(os.path.abspath(__file__))
 distribution_dir_path = pkg_resources.get_distribution('calculette_impots_m_language_parser').location
 m_grammar_file_path = os.path.join(distribution_dir_path, 'm_language.cleanpeg')
 
@@ -23,6 +24,17 @@ class args(object):
     no_order = False
 
 m_to_ast.args = args
+
+
+def test_smoke():
+    smoke_m_file_path = os.path.join(script_dir_path, 'valid_formulas.m')
+
+    with open(smoke_m_file_path) as smoke_m_file:
+        source_code = smoke_m_file.read()
+
+    parse_tree = m_parser.parse(source_code)
+    nodes = visit_parse_tree(parse_tree, m_to_ast.MLanguageVisitor())
+    assert_equal(isinstance(nodes, list), True)
 
 
 def test_name():
