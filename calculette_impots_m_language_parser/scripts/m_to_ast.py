@@ -669,7 +669,7 @@ def main():
 
     if not args.no_visit:
         result = visit_parse_tree(parse_tree, MLanguageVisitor(debug=args.debug))
-        print(json.dumps(result))
+        print(json.dumps(result, indent=2))
 
     return 0
 

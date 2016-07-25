@@ -34,7 +34,7 @@ do
     echo
     echo "    File $output_file exists, skip"
   else
-    python3 $SCRIPT $filepath $OPTIONS | jq . > $output_file
+    python3 $SCRIPT $filepath $OPTIONS > $output_file
   fi
   if [ ${PIPESTATUS[0]} != 0 ]; then
     rm $output_file
