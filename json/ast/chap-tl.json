@@ -10,19 +10,19 @@
         "type": "formula",
         "name": "RAP_RNI",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
               "value": "RNI_TL"
             },
             {
-              "type": "symbol",
-              "value": "RNI_INIT"
+              "type": "negate",
+              "operand": {
+                "type": "symbol",
+                "value": "RNI_INIT"
+              }
             }
-          ],
-          "operators": [
-            "-"
           ]
         },
         "linecol": [
@@ -40,19 +40,19 @@
         "type": "formula",
         "name": "RAP_EFF",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
               "value": "EFF_TL"
             },
             {
-              "type": "symbol",
-              "value": "EFF_INIT"
+              "type": "negate",
+              "operand": {
+                "type": "symbol",
+                "value": "EFF_INIT"
+              }
             }
-          ],
-          "operators": [
-            "-"
           ]
         },
         "linecol": [
@@ -70,19 +70,19 @@
         "type": "formula",
         "name": "RAP_PVQ",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
               "value": "PVQ_TL"
             },
             {
-              "type": "symbol",
-              "value": "PVQ_INIT"
+              "type": "negate",
+              "operand": {
+                "type": "symbol",
+                "value": "PVQ_INIT"
+              }
             }
-          ],
-          "operators": [
-            "-"
           ]
         },
         "linecol": [
@@ -100,19 +100,19 @@
         "type": "formula",
         "name": "RAP_PV",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
               "value": "PV_TL"
             },
             {
-              "type": "symbol",
-              "value": "PV_INIT"
+              "type": "negate",
+              "operand": {
+                "type": "symbol",
+                "value": "PV_INIT"
+              }
             }
-          ],
-          "operators": [
-            "-"
           ]
         },
         "linecol": [
@@ -130,7 +130,7 @@
         "type": "formula",
         "name": "RAP_RI",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "unary",
@@ -144,9 +144,6 @@
               "type": "symbol",
               "value": "RI_INIT"
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -182,19 +179,19 @@
         "type": "formula",
         "name": "RAP_CRDS",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
               "value": "RDS_TL"
             },
             {
-              "type": "symbol",
-              "value": "CRDS_INIT"
+              "type": "negate",
+              "operand": {
+                "type": "symbol",
+                "value": "CRDS_INIT"
+              }
             }
-          ],
-          "operators": [
-            "-"
           ]
         },
         "linecol": [
@@ -212,19 +209,19 @@
         "type": "formula",
         "name": "RAP_RDS",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
               "value": "BRDS_TL"
             },
             {
-              "type": "symbol",
-              "value": "BRDS_INIT"
+              "type": "negate",
+              "operand": {
+                "type": "symbol",
+                "value": "BRDS_INIT"
+              }
             }
-          ],
-          "operators": [
-            "-"
           ]
         },
         "linecol": [
@@ -242,19 +239,19 @@
         "type": "formula",
         "name": "RAP_PRS",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
               "value": "BPRS_TL"
             },
             {
-              "type": "symbol",
-              "value": "BPRS_INIT"
+              "type": "negate",
+              "operand": {
+                "type": "symbol",
+                "value": "BPRS_INIT"
+              }
             }
-          ],
-          "operators": [
-            "-"
           ]
         },
         "linecol": [
@@ -272,19 +269,19 @@
         "type": "formula",
         "name": "RAP_TAXAGA",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
               "value": "TAXAGA_TL"
             },
             {
-              "type": "symbol",
-              "value": "TAXAGA_INIT"
+              "type": "negate",
+              "operand": {
+                "type": "symbol",
+                "value": "TAXAGA_INIT"
+              }
             }
-          ],
-          "operators": [
-            "-"
           ]
         },
         "linecol": [
@@ -302,19 +299,19 @@
         "type": "formula",
         "name": "RAP_CAP",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
               "value": "PCAP_TL"
             },
             {
-              "type": "symbol",
-              "value": "PCAP_INIT"
+              "type": "negate",
+              "operand": {
+                "type": "symbol",
+                "value": "PCAP_INIT"
+              }
             }
-          ],
-          "operators": [
-            "-"
           ]
         },
         "linecol": [
@@ -332,19 +329,19 @@
         "type": "formula",
         "name": "RAP_LOY",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
               "value": "LOYA_TL"
             },
             {
-              "type": "symbol",
-              "value": "LOY_INIT"
+              "type": "negate",
+              "operand": {
+                "type": "symbol",
+                "value": "LOY_INIT"
+              }
             }
-          ],
-          "operators": [
-            "-"
           ]
         },
         "linecol": [
@@ -362,19 +359,19 @@
         "type": "formula",
         "name": "RAP_CHR",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
               "value": "CHR_TL"
             },
             {
-              "type": "symbol",
-              "value": "CHR_INIT"
+              "type": "negate",
+              "operand": {
+                "type": "symbol",
+                "value": "CHR_INIT"
+              }
             }
-          ],
-          "operators": [
-            "-"
           ]
         },
         "linecol": [
@@ -392,19 +389,19 @@
         "type": "formula",
         "name": "RAP_CVN",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
               "value": "CVNA_TL"
             },
             {
-              "type": "symbol",
-              "value": "CVN_INIT"
+              "type": "negate",
+              "operand": {
+                "type": "symbol",
+                "value": "CVN_INIT"
+              }
             }
-          ],
-          "operators": [
-            "-"
           ]
         },
         "linecol": [
@@ -422,19 +419,19 @@
         "type": "formula",
         "name": "RAP_CDIS",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
               "value": "CDISA_TL"
             },
             {
-              "type": "symbol",
-              "value": "CDIS_INIT"
+              "type": "negate",
+              "operand": {
+                "type": "symbol",
+                "value": "CDIS_INIT"
+              }
             }
-          ],
-          "operators": [
-            "-"
           ]
         },
         "linecol": [
@@ -452,19 +449,19 @@
         "type": "formula",
         "name": "RAP_GLO",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
               "value": "GLOA_TL"
             },
             {
-              "type": "symbol",
-              "value": "GLO_INIT"
+              "type": "negate",
+              "operand": {
+                "type": "symbol",
+                "value": "GLO_INIT"
+              }
             }
-          ],
-          "operators": [
-            "-"
           ]
         },
         "linecol": [
@@ -482,19 +479,19 @@
         "type": "formula",
         "name": "RAP_RSE1",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
               "value": "RSE1A_TL"
             },
             {
-              "type": "symbol",
-              "value": "RSE1_INIT"
+              "type": "negate",
+              "operand": {
+                "type": "symbol",
+                "value": "RSE1_INIT"
+              }
             }
-          ],
-          "operators": [
-            "-"
           ]
         },
         "linecol": [
@@ -512,19 +509,19 @@
         "type": "formula",
         "name": "RAP_RSE2",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
               "value": "RSE2A_TL"
             },
             {
-              "type": "symbol",
-              "value": "RSE2_INIT"
+              "type": "negate",
+              "operand": {
+                "type": "symbol",
+                "value": "RSE2_INIT"
+              }
             }
-          ],
-          "operators": [
-            "-"
           ]
         },
         "linecol": [
@@ -542,19 +539,19 @@
         "type": "formula",
         "name": "RAP_RSE3",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
               "value": "RSE3A_TL"
             },
             {
-              "type": "symbol",
-              "value": "RSE3_INIT"
+              "type": "negate",
+              "operand": {
+                "type": "symbol",
+                "value": "RSE3_INIT"
+              }
             }
-          ],
-          "operators": [
-            "-"
           ]
         },
         "linecol": [
@@ -572,19 +569,19 @@
         "type": "formula",
         "name": "RAP_RSE4",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
               "value": "RSE4A_TL"
             },
             {
-              "type": "symbol",
-              "value": "RSE4_INIT"
+              "type": "negate",
+              "operand": {
+                "type": "symbol",
+                "value": "RSE4_INIT"
+              }
             }
-          ],
-          "operators": [
-            "-"
           ]
         },
         "linecol": [
@@ -602,19 +599,19 @@
         "type": "formula",
         "name": "RAP_RSE5",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
               "value": "RSE5A_TL"
             },
             {
-              "type": "symbol",
-              "value": "RSE5_INIT"
+              "type": "negate",
+              "operand": {
+                "type": "symbol",
+                "value": "RSE5_INIT"
+              }
             }
-          ],
-          "operators": [
-            "-"
           ]
         },
         "linecol": [
@@ -640,7 +637,7 @@
               "value": 0
             },
             {
-              "type": "sum_expression",
+              "type": "sum",
               "operands": [
                 {
                   "type": "symbol",
@@ -666,13 +663,6 @@
                   "type": "symbol",
                   "value": "RAP_CI"
                 }
-              ],
-              "operators": [
-                "+",
-                "+",
-                "+",
-                "+",
-                "+"
               ]
             }
           ]
@@ -1139,7 +1129,7 @@
               "value": 0
             },
             {
-              "type": "sum_expression",
+              "type": "sum",
               "operands": [
                 {
                   "type": "symbol",
@@ -1165,13 +1155,6 @@
                   "type": "symbol",
                   "value": "CI_RECT"
                 }
-              ],
-              "operators": [
-                "+",
-                "+",
-                "+",
-                "+",
-                "+"
               ]
             }
           ]
@@ -1631,26 +1614,26 @@
         "type": "formula",
         "name": "RETARPRIM",
         "expression": {
-          "type": "product_expression",
+          "type": "product",
           "operands": [
             {
               "type": "function_call",
               "name": "null",
               "arguments": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
                       "type": "symbol",
                       "value": "V_IND_TRAIT"
                     },
                     {
-                      "type": "integer",
-                      "value": 4
+                      "type": "negate",
+                      "operand": {
+                        "type": "integer",
+                        "value": 4
+                      }
                     }
-                  ],
-                  "operators": [
-                    "-"
                   ]
                 }
               ]
@@ -1660,26 +1643,23 @@
               "name": "null",
               "arguments": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
                       "type": "symbol",
                       "value": "CMAJ"
                     },
                     {
-                      "type": "integer",
-                      "value": 7
+                      "type": "negate",
+                      "operand": {
+                        "type": "integer",
+                        "value": 7
+                      }
                     }
-                  ],
-                  "operators": [
-                    "-"
                   ]
                 }
               ]
             }
-          ],
-          "operators": [
-            "*"
           ]
         },
         "linecol": [
@@ -1697,88 +1677,76 @@
         "type": "formula",
         "name": "TL_IR",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
-              "type": "product_expression",
+              "type": "product",
               "operands": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
                       "type": "integer",
                       "value": 1
                     },
                     {
-                      "type": "function_call",
-                      "name": "positif",
-                      "arguments": [
-                        {
-                          "type": "sum_expression",
-                          "operands": [
-                            {
-                              "type": "product_expression",
-                              "operands": [
-                                {
-                                  "type": "symbol",
-                                  "value": "TL_MF"
-                                },
-                                {
-                                  "type": "function_call",
-                                  "name": "positif",
-                                  "arguments": [
-                                    {
-                                      "type": "sum_expression",
-                                      "operands": [
-                                        {
-                                          "type": "symbol",
-                                          "value": "MFIR"
-                                        },
-                                        {
-                                          "type": "integer",
-                                          "value": 0
-                                        }
-                                      ],
-                                      "operators": [
-                                        "+"
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ],
-                              "operators": [
-                                "*"
-                              ]
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "RETARPRIM"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "FLAG_RETARD"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "FLAG_DEFAUT"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "PASS_TLIR"
-                            }
-                          ],
-                          "operators": [
-                            "+",
-                            "+",
-                            "+",
-                            "+"
-                          ]
-                        }
-                      ]
+                      "type": "negate",
+                      "operand": {
+                        "type": "function_call",
+                        "name": "positif",
+                        "arguments": [
+                          {
+                            "type": "sum",
+                            "operands": [
+                              {
+                                "type": "product",
+                                "operands": [
+                                  {
+                                    "type": "symbol",
+                                    "value": "TL_MF"
+                                  },
+                                  {
+                                    "type": "function_call",
+                                    "name": "positif",
+                                    "arguments": [
+                                      {
+                                        "type": "sum",
+                                        "operands": [
+                                          {
+                                            "type": "symbol",
+                                            "value": "MFIR"
+                                          },
+                                          {
+                                            "type": "integer",
+                                            "value": 0
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "RETARPRIM"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_RETARD"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_DEFAUT"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "PASS_TLIR"
+                              }
+                            ]
+                          }
+                        ]
+                      }
                     }
-                  ],
-                  "operators": [
-                    "-"
                   ]
                 },
                 {
@@ -1786,14 +1754,14 @@
                   "name": "positif",
                   "arguments": [
                     {
-                      "type": "product_expression",
+                      "type": "product",
                       "operands": [
                         {
                           "type": "function_call",
                           "name": "positif",
                           "arguments": [
                             {
-                              "type": "sum_expression",
+                              "type": "sum",
                               "operands": [
                                 {
                                   "type": "symbol",
@@ -1803,9 +1771,6 @@
                                   "type": "integer",
                                   "value": 0
                                 }
-                              ],
-                              "operators": [
-                                "+"
                               ]
                             }
                           ]
@@ -1815,7 +1780,7 @@
                           "name": "positif",
                           "arguments": [
                             {
-                              "type": "sum_expression",
+                              "type": "sum",
                               "operands": [
                                 {
                                   "type": "symbol",
@@ -1825,9 +1790,6 @@
                                   "type": "integer",
                                   "value": 0
                                 }
-                              ],
-                              "operators": [
-                                "+"
                               ]
                             }
                           ]
@@ -1837,46 +1799,39 @@
                           "name": "positif",
                           "arguments": [
                             {
-                              "type": "sum_expression",
+                              "type": "sum",
                               "operands": [
                                 {
-                                  "type": "product_expression",
+                                  "type": "product",
                                   "operands": [
                                     {
                                       "type": "symbol",
                                       "value": "NUM_IR_TL"
                                     },
                                     {
-                                      "type": "symbol",
-                                      "value": "DEN_IR_TL"
+                                      "type": "invert",
+                                      "operand": {
+                                        "type": "symbol",
+                                        "value": "DEN_IR_TL"
+                                      }
                                     }
-                                  ],
-                                  "operators": [
-                                    "/"
                                   ]
                                 },
                                 {
-                                  "type": "float",
-                                  "value": 0.05
+                                  "type": "negate",
+                                  "operand": {
+                                    "type": "float",
+                                    "value": 0.05
+                                  }
                                 }
-                              ],
-                              "operators": [
-                                "-"
                               ]
                             }
                           ]
                         }
-                      ],
-                      "operators": [
-                        "*",
-                        "*"
                       ]
                     }
                   ]
                 }
-              ],
-              "operators": [
-                "*"
               ]
             },
             {
@@ -1884,10 +1839,10 @@
               "name": "positif",
               "arguments": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
-                      "type": "product_expression",
+                      "type": "product",
                       "operands": [
                         {
                           "type": "symbol",
@@ -1898,7 +1853,7 @@
                           "name": "positif",
                           "arguments": [
                             {
-                              "type": "sum_expression",
+                              "type": "sum",
                               "operands": [
                                 {
                                   "type": "symbol",
@@ -1908,16 +1863,10 @@
                                   "type": "integer",
                                   "value": 0
                                 }
-                              ],
-                              "operators": [
-                                "+"
                               ]
                             }
                           ]
                         }
-                      ],
-                      "operators": [
-                        "*"
                       ]
                     },
                     {
@@ -1936,19 +1885,10 @@
                       "type": "symbol",
                       "value": "PASS_TLIR"
                     }
-                  ],
-                  "operators": [
-                    "+",
-                    "+",
-                    "+",
-                    "+"
                   ]
                 }
               ]
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -1966,71 +1906,63 @@
         "type": "formula",
         "name": "TL_CS",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
-              "type": "product_expression",
+              "type": "product",
               "operands": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
                       "type": "integer",
                       "value": 1
                     },
                     {
-                      "type": "function_call",
-                      "name": "positif",
-                      "arguments": [
-                        {
-                          "type": "sum_expression",
-                          "operands": [
-                            {
-                              "type": "product_expression",
-                              "operands": [
-                                {
-                                  "type": "symbol",
-                                  "value": "TL_MF"
-                                },
-                                {
-                                  "type": "function_call",
-                                  "name": "positif",
-                                  "arguments": [
-                                    {
-                                      "type": "symbol",
-                                      "value": "MFCS"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "operators": [
-                                "*"
-                              ]
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "RETARPRIM"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "FLAG_RETARD"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "FLAG_DEFAUT"
-                            }
-                          ],
-                          "operators": [
-                            "+",
-                            "+",
-                            "+"
-                          ]
-                        }
-                      ]
+                      "type": "negate",
+                      "operand": {
+                        "type": "function_call",
+                        "name": "positif",
+                        "arguments": [
+                          {
+                            "type": "sum",
+                            "operands": [
+                              {
+                                "type": "product",
+                                "operands": [
+                                  {
+                                    "type": "symbol",
+                                    "value": "TL_MF"
+                                  },
+                                  {
+                                    "type": "function_call",
+                                    "name": "positif",
+                                    "arguments": [
+                                      {
+                                        "type": "symbol",
+                                        "value": "MFCS"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "RETARPRIM"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_RETARD"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_DEFAUT"
+                              }
+                            ]
+                          }
+                        ]
+                      }
                     }
-                  ],
-                  "operators": [
-                    "-"
                   ]
                 },
                 {
@@ -2038,38 +1970,35 @@
                   "name": "positif",
                   "arguments": [
                     {
-                      "type": "sum_expression",
+                      "type": "sum",
                       "operands": [
                         {
-                          "type": "product_expression",
+                          "type": "product",
                           "operands": [
                             {
                               "type": "symbol",
                               "value": "NUM_CS_TL"
                             },
                             {
-                              "type": "symbol",
-                              "value": "DEN_CS_TL"
+                              "type": "invert",
+                              "operand": {
+                                "type": "symbol",
+                                "value": "DEN_CS_TL"
+                              }
                             }
-                          ],
-                          "operators": [
-                            "/"
                           ]
                         },
                         {
-                          "type": "float",
-                          "value": 0.05
+                          "type": "negate",
+                          "operand": {
+                            "type": "float",
+                            "value": 0.05
+                          }
                         }
-                      ],
-                      "operators": [
-                        "-"
                       ]
                     }
                   ]
                 }
-              ],
-              "operators": [
-                "*"
               ]
             },
             {
@@ -2077,10 +2006,10 @@
               "name": "positif",
               "arguments": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
-                      "type": "product_expression",
+                      "type": "product",
                       "operands": [
                         {
                           "type": "symbol",
@@ -2096,9 +2025,6 @@
                             }
                           ]
                         }
-                      ],
-                      "operators": [
-                        "*"
                       ]
                     },
                     {
@@ -2113,18 +2039,10 @@
                       "type": "symbol",
                       "value": "FLAG_DEFAUT"
                     }
-                  ],
-                  "operators": [
-                    "+",
-                    "+",
-                    "+"
                   ]
                 }
               ]
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -2142,71 +2060,63 @@
         "type": "formula",
         "name": "TL_RD",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
-              "type": "product_expression",
+              "type": "product",
               "operands": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
                       "type": "integer",
                       "value": 1
                     },
                     {
-                      "type": "function_call",
-                      "name": "positif",
-                      "arguments": [
-                        {
-                          "type": "sum_expression",
-                          "operands": [
-                            {
-                              "type": "product_expression",
-                              "operands": [
-                                {
-                                  "type": "symbol",
-                                  "value": "TL_MF"
-                                },
-                                {
-                                  "type": "function_call",
-                                  "name": "positif",
-                                  "arguments": [
-                                    {
-                                      "type": "symbol",
-                                      "value": "MFRD"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "operators": [
-                                "*"
-                              ]
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "RETARPRIM"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "FLAG_RETARD"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "FLAG_DEFAUT"
-                            }
-                          ],
-                          "operators": [
-                            "+",
-                            "+",
-                            "+"
-                          ]
-                        }
-                      ]
+                      "type": "negate",
+                      "operand": {
+                        "type": "function_call",
+                        "name": "positif",
+                        "arguments": [
+                          {
+                            "type": "sum",
+                            "operands": [
+                              {
+                                "type": "product",
+                                "operands": [
+                                  {
+                                    "type": "symbol",
+                                    "value": "TL_MF"
+                                  },
+                                  {
+                                    "type": "function_call",
+                                    "name": "positif",
+                                    "arguments": [
+                                      {
+                                        "type": "symbol",
+                                        "value": "MFRD"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "RETARPRIM"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_RETARD"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_DEFAUT"
+                              }
+                            ]
+                          }
+                        ]
+                      }
                     }
-                  ],
-                  "operators": [
-                    "-"
                   ]
                 },
                 {
@@ -2214,38 +2124,35 @@
                   "name": "positif",
                   "arguments": [
                     {
-                      "type": "sum_expression",
+                      "type": "sum",
                       "operands": [
                         {
-                          "type": "product_expression",
+                          "type": "product",
                           "operands": [
                             {
                               "type": "symbol",
                               "value": "NUM_RD_TL"
                             },
                             {
-                              "type": "symbol",
-                              "value": "DEN_RD_TL"
+                              "type": "invert",
+                              "operand": {
+                                "type": "symbol",
+                                "value": "DEN_RD_TL"
+                              }
                             }
-                          ],
-                          "operators": [
-                            "/"
                           ]
                         },
                         {
-                          "type": "float",
-                          "value": 0.05
+                          "type": "negate",
+                          "operand": {
+                            "type": "float",
+                            "value": 0.05
+                          }
                         }
-                      ],
-                      "operators": [
-                        "-"
                       ]
                     }
                   ]
                 }
-              ],
-              "operators": [
-                "*"
               ]
             },
             {
@@ -2253,10 +2160,10 @@
               "name": "positif",
               "arguments": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
-                      "type": "product_expression",
+                      "type": "product",
                       "operands": [
                         {
                           "type": "symbol",
@@ -2272,9 +2179,6 @@
                             }
                           ]
                         }
-                      ],
-                      "operators": [
-                        "*"
                       ]
                     },
                     {
@@ -2289,18 +2193,10 @@
                       "type": "symbol",
                       "value": "FLAG_DEFAUT"
                     }
-                  ],
-                  "operators": [
-                    "+",
-                    "+",
-                    "+"
                   ]
                 }
               ]
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -2318,71 +2214,63 @@
         "type": "formula",
         "name": "TL_PS",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
-              "type": "product_expression",
+              "type": "product",
               "operands": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
                       "type": "integer",
                       "value": 1
                     },
                     {
-                      "type": "function_call",
-                      "name": "positif",
-                      "arguments": [
-                        {
-                          "type": "sum_expression",
-                          "operands": [
-                            {
-                              "type": "product_expression",
-                              "operands": [
-                                {
-                                  "type": "symbol",
-                                  "value": "TL_MF"
-                                },
-                                {
-                                  "type": "function_call",
-                                  "name": "positif",
-                                  "arguments": [
-                                    {
-                                      "type": "symbol",
-                                      "value": "MFPS"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "operators": [
-                                "*"
-                              ]
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "RETARPRIM"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "FLAG_RETARD"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "FLAG_DEFAUT"
-                            }
-                          ],
-                          "operators": [
-                            "+",
-                            "+",
-                            "+"
-                          ]
-                        }
-                      ]
+                      "type": "negate",
+                      "operand": {
+                        "type": "function_call",
+                        "name": "positif",
+                        "arguments": [
+                          {
+                            "type": "sum",
+                            "operands": [
+                              {
+                                "type": "product",
+                                "operands": [
+                                  {
+                                    "type": "symbol",
+                                    "value": "TL_MF"
+                                  },
+                                  {
+                                    "type": "function_call",
+                                    "name": "positif",
+                                    "arguments": [
+                                      {
+                                        "type": "symbol",
+                                        "value": "MFPS"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "RETARPRIM"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_RETARD"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_DEFAUT"
+                              }
+                            ]
+                          }
+                        ]
+                      }
                     }
-                  ],
-                  "operators": [
-                    "-"
                   ]
                 },
                 {
@@ -2390,38 +2278,35 @@
                   "name": "positif",
                   "arguments": [
                     {
-                      "type": "sum_expression",
+                      "type": "sum",
                       "operands": [
                         {
-                          "type": "product_expression",
+                          "type": "product",
                           "operands": [
                             {
                               "type": "symbol",
                               "value": "NUM_PS_TL"
                             },
                             {
-                              "type": "symbol",
-                              "value": "DEN_PS_TL"
+                              "type": "invert",
+                              "operand": {
+                                "type": "symbol",
+                                "value": "DEN_PS_TL"
+                              }
                             }
-                          ],
-                          "operators": [
-                            "/"
                           ]
                         },
                         {
-                          "type": "float",
-                          "value": 0.05
+                          "type": "negate",
+                          "operand": {
+                            "type": "float",
+                            "value": 0.05
+                          }
                         }
-                      ],
-                      "operators": [
-                        "-"
                       ]
                     }
                   ]
                 }
-              ],
-              "operators": [
-                "*"
               ]
             },
             {
@@ -2429,10 +2314,10 @@
               "name": "positif",
               "arguments": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
-                      "type": "product_expression",
+                      "type": "product",
                       "operands": [
                         {
                           "type": "symbol",
@@ -2448,9 +2333,6 @@
                             }
                           ]
                         }
-                      ],
-                      "operators": [
-                        "*"
                       ]
                     },
                     {
@@ -2465,18 +2347,10 @@
                       "type": "symbol",
                       "value": "FLAG_DEFAUT"
                     }
-                  ],
-                  "operators": [
-                    "+",
-                    "+",
-                    "+"
                   ]
                 }
               ]
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -2494,71 +2368,63 @@
         "type": "formula",
         "name": "TL_TAXAGA",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
-              "type": "product_expression",
+              "type": "product",
               "operands": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
                       "type": "integer",
                       "value": 1
                     },
                     {
-                      "type": "function_call",
-                      "name": "positif",
-                      "arguments": [
-                        {
-                          "type": "sum_expression",
-                          "operands": [
-                            {
-                              "type": "product_expression",
-                              "operands": [
-                                {
-                                  "type": "symbol",
-                                  "value": "TL_MF"
-                                },
-                                {
-                                  "type": "function_call",
-                                  "name": "positif",
-                                  "arguments": [
-                                    {
-                                      "type": "symbol",
-                                      "value": "MFTAXAGA"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "operators": [
-                                "*"
-                              ]
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "RETARPRIM"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "FLAG_RETARD"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "FLAG_DEFAUT"
-                            }
-                          ],
-                          "operators": [
-                            "+",
-                            "+",
-                            "+"
-                          ]
-                        }
-                      ]
+                      "type": "negate",
+                      "operand": {
+                        "type": "function_call",
+                        "name": "positif",
+                        "arguments": [
+                          {
+                            "type": "sum",
+                            "operands": [
+                              {
+                                "type": "product",
+                                "operands": [
+                                  {
+                                    "type": "symbol",
+                                    "value": "TL_MF"
+                                  },
+                                  {
+                                    "type": "function_call",
+                                    "name": "positif",
+                                    "arguments": [
+                                      {
+                                        "type": "symbol",
+                                        "value": "MFTAXAGA"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "RETARPRIM"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_RETARD"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_DEFAUT"
+                              }
+                            ]
+                          }
+                        ]
+                      }
                     }
-                  ],
-                  "operators": [
-                    "-"
                   ]
                 },
                 {
@@ -2566,10 +2432,10 @@
                   "name": "positif",
                   "arguments": [
                     {
-                      "type": "sum_expression",
+                      "type": "sum",
                       "operands": [
                         {
-                          "type": "product_expression",
+                          "type": "product",
                           "operands": [
                             {
                               "type": "symbol",
@@ -2585,9 +2451,6 @@
                                 }
                               ]
                             }
-                          ],
-                          "operators": [
-                            "*"
                           ]
                         },
                         {
@@ -2595,45 +2458,39 @@
                           "name": "positif",
                           "arguments": [
                             {
-                              "type": "sum_expression",
+                              "type": "sum",
                               "operands": [
                                 {
-                                  "type": "product_expression",
+                                  "type": "product",
                                   "operands": [
                                     {
                                       "type": "symbol",
                                       "value": "NUM_TAXAGA_TL"
                                     },
                                     {
-                                      "type": "symbol",
-                                      "value": "DEN_TAXAGA_TL"
+                                      "type": "invert",
+                                      "operand": {
+                                        "type": "symbol",
+                                        "value": "DEN_TAXAGA_TL"
+                                      }
                                     }
-                                  ],
-                                  "operators": [
-                                    "/"
                                   ]
                                 },
                                 {
-                                  "type": "float",
-                                  "value": 0.05
+                                  "type": "negate",
+                                  "operand": {
+                                    "type": "float",
+                                    "value": 0.05
+                                  }
                                 }
-                              ],
-                              "operators": [
-                                "-"
                               ]
                             }
                           ]
                         }
-                      ],
-                      "operators": [
-                        "+"
                       ]
                     }
                   ]
                 }
-              ],
-              "operators": [
-                "*"
               ]
             },
             {
@@ -2641,10 +2498,10 @@
               "name": "positif",
               "arguments": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
-                      "type": "product_expression",
+                      "type": "product",
                       "operands": [
                         {
                           "type": "symbol",
@@ -2660,9 +2517,6 @@
                             }
                           ]
                         }
-                      ],
-                      "operators": [
-                        "*"
                       ]
                     },
                     {
@@ -2677,18 +2531,10 @@
                       "type": "symbol",
                       "value": "FLAG_DEFAUT"
                     }
-                  ],
-                  "operators": [
-                    "+",
-                    "+",
-                    "+"
                   ]
                 }
               ]
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -2706,71 +2552,63 @@
         "type": "formula",
         "name": "TL_CAP",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
-              "type": "product_expression",
+              "type": "product",
               "operands": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
                       "type": "integer",
                       "value": 1
                     },
                     {
-                      "type": "function_call",
-                      "name": "positif",
-                      "arguments": [
-                        {
-                          "type": "sum_expression",
-                          "operands": [
-                            {
-                              "type": "product_expression",
-                              "operands": [
-                                {
-                                  "type": "symbol",
-                                  "value": "TL_MF"
-                                },
-                                {
-                                  "type": "function_call",
-                                  "name": "positif",
-                                  "arguments": [
-                                    {
-                                      "type": "symbol",
-                                      "value": "MFPCAP"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "operators": [
-                                "*"
-                              ]
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "RETARPRIM"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "FLAG_RETARD"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "FLAG_DEFAUT"
-                            }
-                          ],
-                          "operators": [
-                            "+",
-                            "+",
-                            "+"
-                          ]
-                        }
-                      ]
+                      "type": "negate",
+                      "operand": {
+                        "type": "function_call",
+                        "name": "positif",
+                        "arguments": [
+                          {
+                            "type": "sum",
+                            "operands": [
+                              {
+                                "type": "product",
+                                "operands": [
+                                  {
+                                    "type": "symbol",
+                                    "value": "TL_MF"
+                                  },
+                                  {
+                                    "type": "function_call",
+                                    "name": "positif",
+                                    "arguments": [
+                                      {
+                                        "type": "symbol",
+                                        "value": "MFPCAP"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "RETARPRIM"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_RETARD"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_DEFAUT"
+                              }
+                            ]
+                          }
+                        ]
+                      }
                     }
-                  ],
-                  "operators": [
-                    "-"
                   ]
                 },
                 {
@@ -2778,10 +2616,10 @@
                   "name": "positif",
                   "arguments": [
                     {
-                      "type": "sum_expression",
+                      "type": "sum",
                       "operands": [
                         {
-                          "type": "product_expression",
+                          "type": "product",
                           "operands": [
                             {
                               "type": "symbol",
@@ -2797,9 +2635,6 @@
                                 }
                               ]
                             }
-                          ],
-                          "operators": [
-                            "*"
                           ]
                         },
                         {
@@ -2807,45 +2642,39 @@
                           "name": "positif",
                           "arguments": [
                             {
-                              "type": "sum_expression",
+                              "type": "sum",
                               "operands": [
                                 {
-                                  "type": "product_expression",
+                                  "type": "product",
                                   "operands": [
                                     {
                                       "type": "symbol",
                                       "value": "NUM_CAP_TL"
                                     },
                                     {
-                                      "type": "symbol",
-                                      "value": "DEN_CAP_TL"
+                                      "type": "invert",
+                                      "operand": {
+                                        "type": "symbol",
+                                        "value": "DEN_CAP_TL"
+                                      }
                                     }
-                                  ],
-                                  "operators": [
-                                    "/"
                                   ]
                                 },
                                 {
-                                  "type": "float",
-                                  "value": 0.05
+                                  "type": "negate",
+                                  "operand": {
+                                    "type": "float",
+                                    "value": 0.05
+                                  }
                                 }
-                              ],
-                              "operators": [
-                                "-"
                               ]
                             }
                           ]
                         }
-                      ],
-                      "operators": [
-                        "+"
                       ]
                     }
                   ]
                 }
-              ],
-              "operators": [
-                "*"
               ]
             },
             {
@@ -2853,10 +2682,10 @@
               "name": "positif",
               "arguments": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
-                      "type": "product_expression",
+                      "type": "product",
                       "operands": [
                         {
                           "type": "symbol",
@@ -2872,9 +2701,6 @@
                             }
                           ]
                         }
-                      ],
-                      "operators": [
-                        "*"
                       ]
                     },
                     {
@@ -2889,18 +2715,10 @@
                       "type": "symbol",
                       "value": "FLAG_DEFAUT"
                     }
-                  ],
-                  "operators": [
-                    "+",
-                    "+",
-                    "+"
                   ]
                 }
               ]
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -2918,71 +2736,63 @@
         "type": "formula",
         "name": "TL_LOY",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
-              "type": "product_expression",
+              "type": "product",
               "operands": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
                       "type": "integer",
                       "value": 1
                     },
                     {
-                      "type": "function_call",
-                      "name": "positif",
-                      "arguments": [
-                        {
-                          "type": "sum_expression",
-                          "operands": [
-                            {
-                              "type": "product_expression",
-                              "operands": [
-                                {
-                                  "type": "symbol",
-                                  "value": "TL_MF"
-                                },
-                                {
-                                  "type": "function_call",
-                                  "name": "positif",
-                                  "arguments": [
-                                    {
-                                      "type": "symbol",
-                                      "value": "MFLOY"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "operators": [
-                                "*"
-                              ]
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "RETARPRIM"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "FLAG_RETARD"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "FLAG_DEFAUT"
-                            }
-                          ],
-                          "operators": [
-                            "+",
-                            "+",
-                            "+"
-                          ]
-                        }
-                      ]
+                      "type": "negate",
+                      "operand": {
+                        "type": "function_call",
+                        "name": "positif",
+                        "arguments": [
+                          {
+                            "type": "sum",
+                            "operands": [
+                              {
+                                "type": "product",
+                                "operands": [
+                                  {
+                                    "type": "symbol",
+                                    "value": "TL_MF"
+                                  },
+                                  {
+                                    "type": "function_call",
+                                    "name": "positif",
+                                    "arguments": [
+                                      {
+                                        "type": "symbol",
+                                        "value": "MFLOY"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "RETARPRIM"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_RETARD"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_DEFAUT"
+                              }
+                            ]
+                          }
+                        ]
+                      }
                     }
-                  ],
-                  "operators": [
-                    "-"
                   ]
                 },
                 {
@@ -2990,10 +2800,10 @@
                   "name": "positif",
                   "arguments": [
                     {
-                      "type": "sum_expression",
+                      "type": "sum",
                       "operands": [
                         {
-                          "type": "product_expression",
+                          "type": "product",
                           "operands": [
                             {
                               "type": "symbol",
@@ -3009,9 +2819,6 @@
                                 }
                               ]
                             }
-                          ],
-                          "operators": [
-                            "*"
                           ]
                         },
                         {
@@ -3019,45 +2826,39 @@
                           "name": "positif",
                           "arguments": [
                             {
-                              "type": "sum_expression",
+                              "type": "sum",
                               "operands": [
                                 {
-                                  "type": "product_expression",
+                                  "type": "product",
                                   "operands": [
                                     {
                                       "type": "symbol",
                                       "value": "NUM_LOY_TL"
                                     },
                                     {
-                                      "type": "symbol",
-                                      "value": "DEN_LOY_TL"
+                                      "type": "invert",
+                                      "operand": {
+                                        "type": "symbol",
+                                        "value": "DEN_LOY_TL"
+                                      }
                                     }
-                                  ],
-                                  "operators": [
-                                    "/"
                                   ]
                                 },
                                 {
-                                  "type": "float",
-                                  "value": 0.05
+                                  "type": "negate",
+                                  "operand": {
+                                    "type": "float",
+                                    "value": 0.05
+                                  }
                                 }
-                              ],
-                              "operators": [
-                                "-"
                               ]
                             }
                           ]
                         }
-                      ],
-                      "operators": [
-                        "+"
                       ]
                     }
                   ]
                 }
-              ],
-              "operators": [
-                "*"
               ]
             },
             {
@@ -3065,10 +2866,10 @@
               "name": "positif",
               "arguments": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
-                      "type": "product_expression",
+                      "type": "product",
                       "operands": [
                         {
                           "type": "symbol",
@@ -3084,9 +2885,6 @@
                             }
                           ]
                         }
-                      ],
-                      "operators": [
-                        "*"
                       ]
                     },
                     {
@@ -3101,18 +2899,10 @@
                       "type": "symbol",
                       "value": "FLAG_DEFAUT"
                     }
-                  ],
-                  "operators": [
-                    "+",
-                    "+",
-                    "+"
                   ]
                 }
               ]
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -3130,83 +2920,72 @@
         "type": "formula",
         "name": "TL_CHR",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
-              "type": "product_expression",
+              "type": "product",
               "operands": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
                       "type": "integer",
                       "value": 1
                     },
                     {
-                      "type": "function_call",
-                      "name": "positif",
-                      "arguments": [
-                        {
-                          "type": "sum_expression",
-                          "operands": [
-                            {
-                              "type": "product_expression",
-                              "operands": [
-                                {
-                                  "type": "symbol",
-                                  "value": "TL_MF"
-                                },
-                                {
-                                  "type": "function_call",
-                                  "name": "positif",
-                                  "arguments": [
-                                    {
-                                      "type": "sum_expression",
-                                      "operands": [
-                                        {
-                                          "type": "symbol",
-                                          "value": "MFIR"
-                                        },
-                                        {
-                                          "type": "symbol",
-                                          "value": "MFPCAP"
-                                        }
-                                      ],
-                                      "operators": [
-                                        "+"
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ],
-                              "operators": [
-                                "*"
-                              ]
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "RETARPRIM"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "FLAG_RETARD"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "FLAG_DEFAUT"
-                            }
-                          ],
-                          "operators": [
-                            "+",
-                            "+",
-                            "+"
-                          ]
-                        }
-                      ]
+                      "type": "negate",
+                      "operand": {
+                        "type": "function_call",
+                        "name": "positif",
+                        "arguments": [
+                          {
+                            "type": "sum",
+                            "operands": [
+                              {
+                                "type": "product",
+                                "operands": [
+                                  {
+                                    "type": "symbol",
+                                    "value": "TL_MF"
+                                  },
+                                  {
+                                    "type": "function_call",
+                                    "name": "positif",
+                                    "arguments": [
+                                      {
+                                        "type": "sum",
+                                        "operands": [
+                                          {
+                                            "type": "symbol",
+                                            "value": "MFIR"
+                                          },
+                                          {
+                                            "type": "symbol",
+                                            "value": "MFPCAP"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "RETARPRIM"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_RETARD"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_DEFAUT"
+                              }
+                            ]
+                          }
+                        ]
+                      }
                     }
-                  ],
-                  "operators": [
-                    "-"
                   ]
                 },
                 {
@@ -3214,10 +2993,10 @@
                   "name": "positif",
                   "arguments": [
                     {
-                      "type": "sum_expression",
+                      "type": "sum",
                       "operands": [
                         {
-                          "type": "product_expression",
+                          "type": "product",
                           "operands": [
                             {
                               "type": "symbol",
@@ -3228,7 +3007,7 @@
                               "name": "positif",
                               "arguments": [
                                 {
-                                  "type": "sum_expression",
+                                  "type": "sum",
                                   "operands": [
                                     {
                                       "type": "symbol",
@@ -3238,16 +3017,10 @@
                                       "type": "symbol",
                                       "value": "MFPCAP"
                                     }
-                                  ],
-                                  "operators": [
-                                    "+"
                                   ]
                                 }
                               ]
                             }
-                          ],
-                          "operators": [
-                            "*"
                           ]
                         },
                         {
@@ -3255,45 +3028,39 @@
                           "name": "positif",
                           "arguments": [
                             {
-                              "type": "sum_expression",
+                              "type": "sum",
                               "operands": [
                                 {
-                                  "type": "product_expression",
+                                  "type": "product",
                                   "operands": [
                                     {
                                       "type": "symbol",
                                       "value": "NUM_CHR_TL"
                                     },
                                     {
-                                      "type": "symbol",
-                                      "value": "DEN_CHR_TL"
+                                      "type": "invert",
+                                      "operand": {
+                                        "type": "symbol",
+                                        "value": "DEN_CHR_TL"
+                                      }
                                     }
-                                  ],
-                                  "operators": [
-                                    "/"
                                   ]
                                 },
                                 {
-                                  "type": "float",
-                                  "value": 0.05
+                                  "type": "negate",
+                                  "operand": {
+                                    "type": "float",
+                                    "value": 0.05
+                                  }
                                 }
-                              ],
-                              "operators": [
-                                "-"
                               ]
                             }
                           ]
                         }
-                      ],
-                      "operators": [
-                        "+"
                       ]
                     }
                   ]
                 }
-              ],
-              "operators": [
-                "*"
               ]
             },
             {
@@ -3301,10 +3068,10 @@
               "name": "positif",
               "arguments": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
-                      "type": "product_expression",
+                      "type": "product",
                       "operands": [
                         {
                           "type": "symbol",
@@ -3315,7 +3082,7 @@
                           "name": "positif",
                           "arguments": [
                             {
-                              "type": "sum_expression",
+                              "type": "sum",
                               "operands": [
                                 {
                                   "type": "symbol",
@@ -3325,39 +3092,32 @@
                                   "type": "symbol",
                                   "value": "MFPCAP"
                                 }
-                              ],
-                              "operators": [
-                                "+"
                               ]
                             }
                           ]
                         },
                         {
-                          "type": "sum_expression",
+                          "type": "sum",
                           "operands": [
                             {
                               "type": "integer",
                               "value": 1
                             },
                             {
-                              "type": "function_call",
-                              "name": "null",
-                              "arguments": [
-                                {
-                                  "type": "symbol",
-                                  "value": "MFCHR7"
-                                }
-                              ]
+                              "type": "negate",
+                              "operand": {
+                                "type": "function_call",
+                                "name": "null",
+                                "arguments": [
+                                  {
+                                    "type": "symbol",
+                                    "value": "MFCHR7"
+                                  }
+                                ]
+                              }
                             }
-                          ],
-                          "operators": [
-                            "-"
                           ]
                         }
-                      ],
-                      "operators": [
-                        "*",
-                        "*"
                       ]
                     },
                     {
@@ -3372,18 +3132,10 @@
                       "type": "symbol",
                       "value": "FLAG_DEFAUT"
                     }
-                  ],
-                  "operators": [
-                    "+",
-                    "+",
-                    "+"
                   ]
                 }
               ]
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -3401,71 +3153,63 @@
         "type": "formula",
         "name": "TL_CVN",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
-              "type": "product_expression",
+              "type": "product",
               "operands": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
                       "type": "integer",
                       "value": 1
                     },
                     {
-                      "type": "function_call",
-                      "name": "positif",
-                      "arguments": [
-                        {
-                          "type": "sum_expression",
-                          "operands": [
-                            {
-                              "type": "product_expression",
-                              "operands": [
-                                {
-                                  "type": "symbol",
-                                  "value": "TL_MF"
-                                },
-                                {
-                                  "type": "function_call",
-                                  "name": "positif",
-                                  "arguments": [
-                                    {
-                                      "type": "symbol",
-                                      "value": "MFCVN"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "operators": [
-                                "*"
-                              ]
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "RETARPRIM"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "FLAG_RETARD"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "FLAG_DEFAUT"
-                            }
-                          ],
-                          "operators": [
-                            "+",
-                            "+",
-                            "+"
-                          ]
-                        }
-                      ]
+                      "type": "negate",
+                      "operand": {
+                        "type": "function_call",
+                        "name": "positif",
+                        "arguments": [
+                          {
+                            "type": "sum",
+                            "operands": [
+                              {
+                                "type": "product",
+                                "operands": [
+                                  {
+                                    "type": "symbol",
+                                    "value": "TL_MF"
+                                  },
+                                  {
+                                    "type": "function_call",
+                                    "name": "positif",
+                                    "arguments": [
+                                      {
+                                        "type": "symbol",
+                                        "value": "MFCVN"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "RETARPRIM"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_RETARD"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_DEFAUT"
+                              }
+                            ]
+                          }
+                        ]
+                      }
                     }
-                  ],
-                  "operators": [
-                    "-"
                   ]
                 },
                 {
@@ -3473,10 +3217,10 @@
                   "name": "positif",
                   "arguments": [
                     {
-                      "type": "sum_expression",
+                      "type": "sum",
                       "operands": [
                         {
-                          "type": "product_expression",
+                          "type": "product",
                           "operands": [
                             {
                               "type": "symbol",
@@ -3492,9 +3236,6 @@
                                 }
                               ]
                             }
-                          ],
-                          "operators": [
-                            "*"
                           ]
                         },
                         {
@@ -3502,45 +3243,39 @@
                           "name": "positif",
                           "arguments": [
                             {
-                              "type": "sum_expression",
+                              "type": "sum",
                               "operands": [
                                 {
-                                  "type": "product_expression",
+                                  "type": "product",
                                   "operands": [
                                     {
                                       "type": "symbol",
                                       "value": "NUM_CVN_TL"
                                     },
                                     {
-                                      "type": "symbol",
-                                      "value": "DEN_CVN_TL"
+                                      "type": "invert",
+                                      "operand": {
+                                        "type": "symbol",
+                                        "value": "DEN_CVN_TL"
+                                      }
                                     }
-                                  ],
-                                  "operators": [
-                                    "/"
                                   ]
                                 },
                                 {
-                                  "type": "float",
-                                  "value": 0.05
+                                  "type": "negate",
+                                  "operand": {
+                                    "type": "float",
+                                    "value": 0.05
+                                  }
                                 }
-                              ],
-                              "operators": [
-                                "-"
                               ]
                             }
                           ]
                         }
-                      ],
-                      "operators": [
-                        "+"
                       ]
                     }
                   ]
                 }
-              ],
-              "operators": [
-                "*"
               ]
             },
             {
@@ -3548,10 +3283,10 @@
               "name": "positif",
               "arguments": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
-                      "type": "product_expression",
+                      "type": "product",
                       "operands": [
                         {
                           "type": "symbol",
@@ -3567,9 +3302,6 @@
                             }
                           ]
                         }
-                      ],
-                      "operators": [
-                        "*"
                       ]
                     },
                     {
@@ -3584,18 +3316,10 @@
                       "type": "symbol",
                       "value": "FLAG_DEFAUT"
                     }
-                  ],
-                  "operators": [
-                    "+",
-                    "+",
-                    "+"
                   ]
                 }
               ]
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -3613,71 +3337,63 @@
         "type": "formula",
         "name": "TL_CDIS",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
-              "type": "product_expression",
+              "type": "product",
               "operands": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
                       "type": "integer",
                       "value": 1
                     },
                     {
-                      "type": "function_call",
-                      "name": "positif",
-                      "arguments": [
-                        {
-                          "type": "sum_expression",
-                          "operands": [
-                            {
-                              "type": "product_expression",
-                              "operands": [
-                                {
-                                  "type": "symbol",
-                                  "value": "TL_MF"
-                                },
-                                {
-                                  "type": "function_call",
-                                  "name": "positif",
-                                  "arguments": [
-                                    {
-                                      "type": "symbol",
-                                      "value": "MFCDIS"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "operators": [
-                                "*"
-                              ]
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "RETARPRIM"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "FLAG_RETARD"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "FLAG_DEFAUT"
-                            }
-                          ],
-                          "operators": [
-                            "+",
-                            "+",
-                            "+"
-                          ]
-                        }
-                      ]
+                      "type": "negate",
+                      "operand": {
+                        "type": "function_call",
+                        "name": "positif",
+                        "arguments": [
+                          {
+                            "type": "sum",
+                            "operands": [
+                              {
+                                "type": "product",
+                                "operands": [
+                                  {
+                                    "type": "symbol",
+                                    "value": "TL_MF"
+                                  },
+                                  {
+                                    "type": "function_call",
+                                    "name": "positif",
+                                    "arguments": [
+                                      {
+                                        "type": "symbol",
+                                        "value": "MFCDIS"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "RETARPRIM"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_RETARD"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_DEFAUT"
+                              }
+                            ]
+                          }
+                        ]
+                      }
                     }
-                  ],
-                  "operators": [
-                    "-"
                   ]
                 },
                 {
@@ -3685,10 +3401,10 @@
                   "name": "positif",
                   "arguments": [
                     {
-                      "type": "sum_expression",
+                      "type": "sum",
                       "operands": [
                         {
-                          "type": "product_expression",
+                          "type": "product",
                           "operands": [
                             {
                               "type": "symbol",
@@ -3704,9 +3420,6 @@
                                 }
                               ]
                             }
-                          ],
-                          "operators": [
-                            "*"
                           ]
                         },
                         {
@@ -3714,45 +3427,39 @@
                           "name": "positif",
                           "arguments": [
                             {
-                              "type": "sum_expression",
+                              "type": "sum",
                               "operands": [
                                 {
-                                  "type": "product_expression",
+                                  "type": "product",
                                   "operands": [
                                     {
                                       "type": "symbol",
                                       "value": "NUM_CDIS_TL"
                                     },
                                     {
-                                      "type": "symbol",
-                                      "value": "DEN_CDIS_TL"
+                                      "type": "invert",
+                                      "operand": {
+                                        "type": "symbol",
+                                        "value": "DEN_CDIS_TL"
+                                      }
                                     }
-                                  ],
-                                  "operators": [
-                                    "/"
                                   ]
                                 },
                                 {
-                                  "type": "float",
-                                  "value": 0.05
+                                  "type": "negate",
+                                  "operand": {
+                                    "type": "float",
+                                    "value": 0.05
+                                  }
                                 }
-                              ],
-                              "operators": [
-                                "-"
                               ]
                             }
                           ]
                         }
-                      ],
-                      "operators": [
-                        "+"
                       ]
                     }
                   ]
                 }
-              ],
-              "operators": [
-                "*"
               ]
             },
             {
@@ -3760,10 +3467,10 @@
               "name": "positif",
               "arguments": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
-                      "type": "product_expression",
+                      "type": "product",
                       "operands": [
                         {
                           "type": "symbol",
@@ -3779,9 +3486,6 @@
                             }
                           ]
                         }
-                      ],
-                      "operators": [
-                        "*"
                       ]
                     },
                     {
@@ -3796,18 +3500,10 @@
                       "type": "symbol",
                       "value": "FLAG_DEFAUT"
                     }
-                  ],
-                  "operators": [
-                    "+",
-                    "+",
-                    "+"
                   ]
                 }
               ]
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -3825,71 +3521,63 @@
         "type": "formula",
         "name": "TL_GLO",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
-              "type": "product_expression",
+              "type": "product",
               "operands": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
                       "type": "integer",
                       "value": 1
                     },
                     {
-                      "type": "function_call",
-                      "name": "positif",
-                      "arguments": [
-                        {
-                          "type": "sum_expression",
-                          "operands": [
-                            {
-                              "type": "product_expression",
-                              "operands": [
-                                {
-                                  "type": "symbol",
-                                  "value": "TL_MF"
-                                },
-                                {
-                                  "type": "function_call",
-                                  "name": "positif",
-                                  "arguments": [
-                                    {
-                                      "type": "symbol",
-                                      "value": "MFGLO"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "operators": [
-                                "*"
-                              ]
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "RETARPRIM"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "FLAG_RETARD"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "FLAG_DEFAUT"
-                            }
-                          ],
-                          "operators": [
-                            "+",
-                            "+",
-                            "+"
-                          ]
-                        }
-                      ]
+                      "type": "negate",
+                      "operand": {
+                        "type": "function_call",
+                        "name": "positif",
+                        "arguments": [
+                          {
+                            "type": "sum",
+                            "operands": [
+                              {
+                                "type": "product",
+                                "operands": [
+                                  {
+                                    "type": "symbol",
+                                    "value": "TL_MF"
+                                  },
+                                  {
+                                    "type": "function_call",
+                                    "name": "positif",
+                                    "arguments": [
+                                      {
+                                        "type": "symbol",
+                                        "value": "MFGLO"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "RETARPRIM"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_RETARD"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_DEFAUT"
+                              }
+                            ]
+                          }
+                        ]
+                      }
                     }
-                  ],
-                  "operators": [
-                    "-"
                   ]
                 },
                 {
@@ -3897,10 +3585,10 @@
                   "name": "positif",
                   "arguments": [
                     {
-                      "type": "sum_expression",
+                      "type": "sum",
                       "operands": [
                         {
-                          "type": "product_expression",
+                          "type": "product",
                           "operands": [
                             {
                               "type": "symbol",
@@ -3916,9 +3604,6 @@
                                 }
                               ]
                             }
-                          ],
-                          "operators": [
-                            "*"
                           ]
                         },
                         {
@@ -3926,45 +3611,39 @@
                           "name": "positif",
                           "arguments": [
                             {
-                              "type": "sum_expression",
+                              "type": "sum",
                               "operands": [
                                 {
-                                  "type": "product_expression",
+                                  "type": "product",
                                   "operands": [
                                     {
                                       "type": "symbol",
                                       "value": "NUM_GLO_TL"
                                     },
                                     {
-                                      "type": "symbol",
-                                      "value": "DEN_GLO_TL"
+                                      "type": "invert",
+                                      "operand": {
+                                        "type": "symbol",
+                                        "value": "DEN_GLO_TL"
+                                      }
                                     }
-                                  ],
-                                  "operators": [
-                                    "/"
                                   ]
                                 },
                                 {
-                                  "type": "float",
-                                  "value": 0.05
+                                  "type": "negate",
+                                  "operand": {
+                                    "type": "float",
+                                    "value": 0.05
+                                  }
                                 }
-                              ],
-                              "operators": [
-                                "-"
                               ]
                             }
                           ]
                         }
-                      ],
-                      "operators": [
-                        "+"
                       ]
                     }
                   ]
                 }
-              ],
-              "operators": [
-                "*"
               ]
             },
             {
@@ -3972,10 +3651,10 @@
               "name": "positif",
               "arguments": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
-                      "type": "product_expression",
+                      "type": "product",
                       "operands": [
                         {
                           "type": "symbol",
@@ -3991,9 +3670,6 @@
                             }
                           ]
                         }
-                      ],
-                      "operators": [
-                        "*"
                       ]
                     },
                     {
@@ -4008,18 +3684,10 @@
                       "type": "symbol",
                       "value": "FLAG_DEFAUT"
                     }
-                  ],
-                  "operators": [
-                    "+",
-                    "+",
-                    "+"
                   ]
                 }
               ]
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -4037,71 +3705,63 @@
         "type": "formula",
         "name": "TL_RSE1",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
-              "type": "product_expression",
+              "type": "product",
               "operands": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
                       "type": "integer",
                       "value": 1
                     },
                     {
-                      "type": "function_call",
-                      "name": "positif",
-                      "arguments": [
-                        {
-                          "type": "sum_expression",
-                          "operands": [
-                            {
-                              "type": "product_expression",
-                              "operands": [
-                                {
-                                  "type": "symbol",
-                                  "value": "TL_MF"
-                                },
-                                {
-                                  "type": "function_call",
-                                  "name": "positif",
-                                  "arguments": [
-                                    {
-                                      "type": "symbol",
-                                      "value": "MFRSE1"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "operators": [
-                                "*"
-                              ]
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "RETARPRIM"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "FLAG_RETARD"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "FLAG_DEFAUT"
-                            }
-                          ],
-                          "operators": [
-                            "+",
-                            "+",
-                            "+"
-                          ]
-                        }
-                      ]
+                      "type": "negate",
+                      "operand": {
+                        "type": "function_call",
+                        "name": "positif",
+                        "arguments": [
+                          {
+                            "type": "sum",
+                            "operands": [
+                              {
+                                "type": "product",
+                                "operands": [
+                                  {
+                                    "type": "symbol",
+                                    "value": "TL_MF"
+                                  },
+                                  {
+                                    "type": "function_call",
+                                    "name": "positif",
+                                    "arguments": [
+                                      {
+                                        "type": "symbol",
+                                        "value": "MFRSE1"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "RETARPRIM"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_RETARD"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_DEFAUT"
+                              }
+                            ]
+                          }
+                        ]
+                      }
                     }
-                  ],
-                  "operators": [
-                    "-"
                   ]
                 },
                 {
@@ -4109,10 +3769,10 @@
                   "name": "positif",
                   "arguments": [
                     {
-                      "type": "sum_expression",
+                      "type": "sum",
                       "operands": [
                         {
-                          "type": "product_expression",
+                          "type": "product",
                           "operands": [
                             {
                               "type": "symbol",
@@ -4128,9 +3788,6 @@
                                 }
                               ]
                             }
-                          ],
-                          "operators": [
-                            "*"
                           ]
                         },
                         {
@@ -4138,45 +3795,39 @@
                           "name": "positif",
                           "arguments": [
                             {
-                              "type": "sum_expression",
+                              "type": "sum",
                               "operands": [
                                 {
-                                  "type": "product_expression",
+                                  "type": "product",
                                   "operands": [
                                     {
                                       "type": "symbol",
                                       "value": "NUM_RSE1_TL"
                                     },
                                     {
-                                      "type": "symbol",
-                                      "value": "DEN_RSE1_TL"
+                                      "type": "invert",
+                                      "operand": {
+                                        "type": "symbol",
+                                        "value": "DEN_RSE1_TL"
+                                      }
                                     }
-                                  ],
-                                  "operators": [
-                                    "/"
                                   ]
                                 },
                                 {
-                                  "type": "float",
-                                  "value": 0.05
+                                  "type": "negate",
+                                  "operand": {
+                                    "type": "float",
+                                    "value": 0.05
+                                  }
                                 }
-                              ],
-                              "operators": [
-                                "-"
                               ]
                             }
                           ]
                         }
-                      ],
-                      "operators": [
-                        "+"
                       ]
                     }
                   ]
                 }
-              ],
-              "operators": [
-                "*"
               ]
             },
             {
@@ -4184,10 +3835,10 @@
               "name": "positif",
               "arguments": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
-                      "type": "product_expression",
+                      "type": "product",
                       "operands": [
                         {
                           "type": "symbol",
@@ -4203,9 +3854,6 @@
                             }
                           ]
                         }
-                      ],
-                      "operators": [
-                        "*"
                       ]
                     },
                     {
@@ -4220,18 +3868,10 @@
                       "type": "symbol",
                       "value": "FLAG_DEFAUT"
                     }
-                  ],
-                  "operators": [
-                    "+",
-                    "+",
-                    "+"
                   ]
                 }
               ]
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -4249,71 +3889,63 @@
         "type": "formula",
         "name": "TL_RSE2",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
-              "type": "product_expression",
+              "type": "product",
               "operands": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
                       "type": "integer",
                       "value": 1
                     },
                     {
-                      "type": "function_call",
-                      "name": "positif",
-                      "arguments": [
-                        {
-                          "type": "sum_expression",
-                          "operands": [
-                            {
-                              "type": "product_expression",
-                              "operands": [
-                                {
-                                  "type": "symbol",
-                                  "value": "TL_MF"
-                                },
-                                {
-                                  "type": "function_call",
-                                  "name": "positif",
-                                  "arguments": [
-                                    {
-                                      "type": "symbol",
-                                      "value": "MFRSE2"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "operators": [
-                                "*"
-                              ]
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "RETARPRIM"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "FLAG_RETARD"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "FLAG_DEFAUT"
-                            }
-                          ],
-                          "operators": [
-                            "+",
-                            "+",
-                            "+"
-                          ]
-                        }
-                      ]
+                      "type": "negate",
+                      "operand": {
+                        "type": "function_call",
+                        "name": "positif",
+                        "arguments": [
+                          {
+                            "type": "sum",
+                            "operands": [
+                              {
+                                "type": "product",
+                                "operands": [
+                                  {
+                                    "type": "symbol",
+                                    "value": "TL_MF"
+                                  },
+                                  {
+                                    "type": "function_call",
+                                    "name": "positif",
+                                    "arguments": [
+                                      {
+                                        "type": "symbol",
+                                        "value": "MFRSE2"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "RETARPRIM"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_RETARD"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_DEFAUT"
+                              }
+                            ]
+                          }
+                        ]
+                      }
                     }
-                  ],
-                  "operators": [
-                    "-"
                   ]
                 },
                 {
@@ -4321,10 +3953,10 @@
                   "name": "positif",
                   "arguments": [
                     {
-                      "type": "sum_expression",
+                      "type": "sum",
                       "operands": [
                         {
-                          "type": "product_expression",
+                          "type": "product",
                           "operands": [
                             {
                               "type": "symbol",
@@ -4340,9 +3972,6 @@
                                 }
                               ]
                             }
-                          ],
-                          "operators": [
-                            "*"
                           ]
                         },
                         {
@@ -4350,45 +3979,39 @@
                           "name": "positif",
                           "arguments": [
                             {
-                              "type": "sum_expression",
+                              "type": "sum",
                               "operands": [
                                 {
-                                  "type": "product_expression",
+                                  "type": "product",
                                   "operands": [
                                     {
                                       "type": "symbol",
                                       "value": "NUM_RSE2_TL"
                                     },
                                     {
-                                      "type": "symbol",
-                                      "value": "DEN_RSE2_TL"
+                                      "type": "invert",
+                                      "operand": {
+                                        "type": "symbol",
+                                        "value": "DEN_RSE2_TL"
+                                      }
                                     }
-                                  ],
-                                  "operators": [
-                                    "/"
                                   ]
                                 },
                                 {
-                                  "type": "float",
-                                  "value": 0.05
+                                  "type": "negate",
+                                  "operand": {
+                                    "type": "float",
+                                    "value": 0.05
+                                  }
                                 }
-                              ],
-                              "operators": [
-                                "-"
                               ]
                             }
                           ]
                         }
-                      ],
-                      "operators": [
-                        "+"
                       ]
                     }
                   ]
                 }
-              ],
-              "operators": [
-                "*"
               ]
             },
             {
@@ -4396,10 +4019,10 @@
               "name": "positif",
               "arguments": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
-                      "type": "product_expression",
+                      "type": "product",
                       "operands": [
                         {
                           "type": "symbol",
@@ -4415,9 +4038,6 @@
                             }
                           ]
                         }
-                      ],
-                      "operators": [
-                        "*"
                       ]
                     },
                     {
@@ -4432,18 +4052,10 @@
                       "type": "symbol",
                       "value": "FLAG_DEFAUT"
                     }
-                  ],
-                  "operators": [
-                    "+",
-                    "+",
-                    "+"
                   ]
                 }
               ]
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -4461,71 +4073,63 @@
         "type": "formula",
         "name": "TL_RSE3",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
-              "type": "product_expression",
+              "type": "product",
               "operands": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
                       "type": "integer",
                       "value": 1
                     },
                     {
-                      "type": "function_call",
-                      "name": "positif",
-                      "arguments": [
-                        {
-                          "type": "sum_expression",
-                          "operands": [
-                            {
-                              "type": "product_expression",
-                              "operands": [
-                                {
-                                  "type": "symbol",
-                                  "value": "TL_MF"
-                                },
-                                {
-                                  "type": "function_call",
-                                  "name": "positif",
-                                  "arguments": [
-                                    {
-                                      "type": "symbol",
-                                      "value": "MFRSE3"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "operators": [
-                                "*"
-                              ]
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "RETARPRIM"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "FLAG_RETARD"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "FLAG_DEFAUT"
-                            }
-                          ],
-                          "operators": [
-                            "+",
-                            "+",
-                            "+"
-                          ]
-                        }
-                      ]
+                      "type": "negate",
+                      "operand": {
+                        "type": "function_call",
+                        "name": "positif",
+                        "arguments": [
+                          {
+                            "type": "sum",
+                            "operands": [
+                              {
+                                "type": "product",
+                                "operands": [
+                                  {
+                                    "type": "symbol",
+                                    "value": "TL_MF"
+                                  },
+                                  {
+                                    "type": "function_call",
+                                    "name": "positif",
+                                    "arguments": [
+                                      {
+                                        "type": "symbol",
+                                        "value": "MFRSE3"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "RETARPRIM"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_RETARD"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_DEFAUT"
+                              }
+                            ]
+                          }
+                        ]
+                      }
                     }
-                  ],
-                  "operators": [
-                    "-"
                   ]
                 },
                 {
@@ -4533,10 +4137,10 @@
                   "name": "positif",
                   "arguments": [
                     {
-                      "type": "sum_expression",
+                      "type": "sum",
                       "operands": [
                         {
-                          "type": "product_expression",
+                          "type": "product",
                           "operands": [
                             {
                               "type": "symbol",
@@ -4552,9 +4156,6 @@
                                 }
                               ]
                             }
-                          ],
-                          "operators": [
-                            "*"
                           ]
                         },
                         {
@@ -4562,45 +4163,39 @@
                           "name": "positif",
                           "arguments": [
                             {
-                              "type": "sum_expression",
+                              "type": "sum",
                               "operands": [
                                 {
-                                  "type": "product_expression",
+                                  "type": "product",
                                   "operands": [
                                     {
                                       "type": "symbol",
                                       "value": "NUM_RSE3_TL"
                                     },
                                     {
-                                      "type": "symbol",
-                                      "value": "DEN_RSE3_TL"
+                                      "type": "invert",
+                                      "operand": {
+                                        "type": "symbol",
+                                        "value": "DEN_RSE3_TL"
+                                      }
                                     }
-                                  ],
-                                  "operators": [
-                                    "/"
                                   ]
                                 },
                                 {
-                                  "type": "float",
-                                  "value": 0.05
+                                  "type": "negate",
+                                  "operand": {
+                                    "type": "float",
+                                    "value": 0.05
+                                  }
                                 }
-                              ],
-                              "operators": [
-                                "-"
                               ]
                             }
                           ]
                         }
-                      ],
-                      "operators": [
-                        "+"
                       ]
                     }
                   ]
                 }
-              ],
-              "operators": [
-                "*"
               ]
             },
             {
@@ -4608,10 +4203,10 @@
               "name": "positif",
               "arguments": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
-                      "type": "product_expression",
+                      "type": "product",
                       "operands": [
                         {
                           "type": "symbol",
@@ -4627,9 +4222,6 @@
                             }
                           ]
                         }
-                      ],
-                      "operators": [
-                        "*"
                       ]
                     },
                     {
@@ -4644,18 +4236,10 @@
                       "type": "symbol",
                       "value": "FLAG_DEFAUT"
                     }
-                  ],
-                  "operators": [
-                    "+",
-                    "+",
-                    "+"
                   ]
                 }
               ]
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -4673,71 +4257,63 @@
         "type": "formula",
         "name": "TL_RSE4",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
-              "type": "product_expression",
+              "type": "product",
               "operands": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
                       "type": "integer",
                       "value": 1
                     },
                     {
-                      "type": "function_call",
-                      "name": "positif",
-                      "arguments": [
-                        {
-                          "type": "sum_expression",
-                          "operands": [
-                            {
-                              "type": "product_expression",
-                              "operands": [
-                                {
-                                  "type": "symbol",
-                                  "value": "TL_MF"
-                                },
-                                {
-                                  "type": "function_call",
-                                  "name": "positif",
-                                  "arguments": [
-                                    {
-                                      "type": "symbol",
-                                      "value": "MFRSE4"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "operators": [
-                                "*"
-                              ]
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "RETARPRIM"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "FLAG_RETARD"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "FLAG_DEFAUT"
-                            }
-                          ],
-                          "operators": [
-                            "+",
-                            "+",
-                            "+"
-                          ]
-                        }
-                      ]
+                      "type": "negate",
+                      "operand": {
+                        "type": "function_call",
+                        "name": "positif",
+                        "arguments": [
+                          {
+                            "type": "sum",
+                            "operands": [
+                              {
+                                "type": "product",
+                                "operands": [
+                                  {
+                                    "type": "symbol",
+                                    "value": "TL_MF"
+                                  },
+                                  {
+                                    "type": "function_call",
+                                    "name": "positif",
+                                    "arguments": [
+                                      {
+                                        "type": "symbol",
+                                        "value": "MFRSE4"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "RETARPRIM"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_RETARD"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_DEFAUT"
+                              }
+                            ]
+                          }
+                        ]
+                      }
                     }
-                  ],
-                  "operators": [
-                    "-"
                   ]
                 },
                 {
@@ -4745,10 +4321,10 @@
                   "name": "positif",
                   "arguments": [
                     {
-                      "type": "sum_expression",
+                      "type": "sum",
                       "operands": [
                         {
-                          "type": "product_expression",
+                          "type": "product",
                           "operands": [
                             {
                               "type": "symbol",
@@ -4764,9 +4340,6 @@
                                 }
                               ]
                             }
-                          ],
-                          "operators": [
-                            "*"
                           ]
                         },
                         {
@@ -4774,45 +4347,39 @@
                           "name": "positif",
                           "arguments": [
                             {
-                              "type": "sum_expression",
+                              "type": "sum",
                               "operands": [
                                 {
-                                  "type": "product_expression",
+                                  "type": "product",
                                   "operands": [
                                     {
                                       "type": "symbol",
                                       "value": "NUM_RSE4_TL"
                                     },
                                     {
-                                      "type": "symbol",
-                                      "value": "DEN_RSE4_TL"
+                                      "type": "invert",
+                                      "operand": {
+                                        "type": "symbol",
+                                        "value": "DEN_RSE4_TL"
+                                      }
                                     }
-                                  ],
-                                  "operators": [
-                                    "/"
                                   ]
                                 },
                                 {
-                                  "type": "float",
-                                  "value": 0.05
+                                  "type": "negate",
+                                  "operand": {
+                                    "type": "float",
+                                    "value": 0.05
+                                  }
                                 }
-                              ],
-                              "operators": [
-                                "-"
                               ]
                             }
                           ]
                         }
-                      ],
-                      "operators": [
-                        "+"
                       ]
                     }
                   ]
                 }
-              ],
-              "operators": [
-                "*"
               ]
             },
             {
@@ -4820,10 +4387,10 @@
               "name": "positif",
               "arguments": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
-                      "type": "product_expression",
+                      "type": "product",
                       "operands": [
                         {
                           "type": "symbol",
@@ -4839,9 +4406,6 @@
                             }
                           ]
                         }
-                      ],
-                      "operators": [
-                        "*"
                       ]
                     },
                     {
@@ -4856,18 +4420,10 @@
                       "type": "symbol",
                       "value": "FLAG_DEFAUT"
                     }
-                  ],
-                  "operators": [
-                    "+",
-                    "+",
-                    "+"
                   ]
                 }
               ]
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -4885,71 +4441,63 @@
         "type": "formula",
         "name": "TL_RSE5",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
-              "type": "product_expression",
+              "type": "product",
               "operands": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
                       "type": "integer",
                       "value": 1
                     },
                     {
-                      "type": "function_call",
-                      "name": "positif",
-                      "arguments": [
-                        {
-                          "type": "sum_expression",
-                          "operands": [
-                            {
-                              "type": "product_expression",
-                              "operands": [
-                                {
-                                  "type": "symbol",
-                                  "value": "TL_MF"
-                                },
-                                {
-                                  "type": "function_call",
-                                  "name": "positif",
-                                  "arguments": [
-                                    {
-                                      "type": "symbol",
-                                      "value": "MFRSE5"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "operators": [
-                                "*"
-                              ]
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "RETARPRIM"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "FLAG_RETARD"
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "FLAG_DEFAUT"
-                            }
-                          ],
-                          "operators": [
-                            "+",
-                            "+",
-                            "+"
-                          ]
-                        }
-                      ]
+                      "type": "negate",
+                      "operand": {
+                        "type": "function_call",
+                        "name": "positif",
+                        "arguments": [
+                          {
+                            "type": "sum",
+                            "operands": [
+                              {
+                                "type": "product",
+                                "operands": [
+                                  {
+                                    "type": "symbol",
+                                    "value": "TL_MF"
+                                  },
+                                  {
+                                    "type": "function_call",
+                                    "name": "positif",
+                                    "arguments": [
+                                      {
+                                        "type": "symbol",
+                                        "value": "MFRSE5"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "RETARPRIM"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_RETARD"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_DEFAUT"
+                              }
+                            ]
+                          }
+                        ]
+                      }
                     }
-                  ],
-                  "operators": [
-                    "-"
                   ]
                 },
                 {
@@ -4957,10 +4505,10 @@
                   "name": "positif",
                   "arguments": [
                     {
-                      "type": "sum_expression",
+                      "type": "sum",
                       "operands": [
                         {
-                          "type": "product_expression",
+                          "type": "product",
                           "operands": [
                             {
                               "type": "symbol",
@@ -4976,9 +4524,6 @@
                                 }
                               ]
                             }
-                          ],
-                          "operators": [
-                            "*"
                           ]
                         },
                         {
@@ -4986,45 +4531,39 @@
                           "name": "positif",
                           "arguments": [
                             {
-                              "type": "sum_expression",
+                              "type": "sum",
                               "operands": [
                                 {
-                                  "type": "product_expression",
+                                  "type": "product",
                                   "operands": [
                                     {
                                       "type": "symbol",
                                       "value": "NUM_RSE5_TL"
                                     },
                                     {
-                                      "type": "symbol",
-                                      "value": "DEN_RSE5_TL"
+                                      "type": "invert",
+                                      "operand": {
+                                        "type": "symbol",
+                                        "value": "DEN_RSE5_TL"
+                                      }
                                     }
-                                  ],
-                                  "operators": [
-                                    "/"
                                   ]
                                 },
                                 {
-                                  "type": "float",
-                                  "value": 0.05
+                                  "type": "negate",
+                                  "operand": {
+                                    "type": "float",
+                                    "value": 0.05
+                                  }
                                 }
-                              ],
-                              "operators": [
-                                "-"
                               ]
                             }
                           ]
                         }
-                      ],
-                      "operators": [
-                        "+"
                       ]
                     }
                   ]
                 }
-              ],
-              "operators": [
-                "*"
               ]
             },
             {
@@ -5032,10 +4571,10 @@
               "name": "positif",
               "arguments": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
-                      "type": "product_expression",
+                      "type": "product",
                       "operands": [
                         {
                           "type": "symbol",
@@ -5051,9 +4590,6 @@
                             }
                           ]
                         }
-                      ],
-                      "operators": [
-                        "*"
                       ]
                     },
                     {
@@ -5068,18 +4604,10 @@
                       "type": "symbol",
                       "value": "FLAG_DEFAUT"
                     }
-                  ],
-                  "operators": [
-                    "+",
-                    "+",
-                    "+"
                   ]
                 }
               ]
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [

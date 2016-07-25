@@ -117,7 +117,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -131,10 +131,6 @@
                     "type": "symbol",
                     "value": "APPLI_ILIAD"
                   }
-                ],
-                "operators": [
-                  "+",
-                  "+"
                 ]
               },
               "operator": "=",
@@ -158,7 +154,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -168,9 +164,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": ">",
@@ -215,7 +208,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -229,10 +222,6 @@
                     "type": "symbol",
                     "value": "APPLI_OCEANS"
                   }
-                ],
-                "operators": [
-                  "+",
-                  "+"
                 ]
               },
               "operator": "=",
@@ -423,7 +412,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -433,9 +422,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "!=",
@@ -450,7 +436,7 @@
                       "name": "positif",
                       "arguments": [
                         {
-                          "type": "sum_expression",
+                          "type": "sum",
                           "operands": [
                             {
                               "type": "symbol",
@@ -460,9 +446,6 @@
                               "type": "integer",
                               "value": 0
                             }
-                          ],
-                          "operators": [
-                            "+"
                           ]
                         }
                       ]
@@ -564,7 +547,7 @@
                       "name": "positif",
                       "arguments": [
                         {
-                          "type": "sum_expression",
+                          "type": "sum",
                           "operands": [
                             {
                               "type": "symbol",
@@ -574,9 +557,6 @@
                               "type": "integer",
                               "value": 0
                             }
-                          ],
-                          "operators": [
-                            "+"
                           ]
                         }
                       ]
@@ -682,7 +662,7 @@
                       "name": "positif",
                       "arguments": [
                         {
-                          "type": "sum_expression",
+                          "type": "sum",
                           "operands": [
                             {
                               "type": "symbol",
@@ -692,9 +672,6 @@
                               "type": "integer",
                               "value": 0
                             }
-                          ],
-                          "operators": [
-                            "+"
                           ]
                         }
                       ]
@@ -802,7 +779,7 @@
                       "name": "positif",
                       "arguments": [
                         {
-                          "type": "sum_expression",
+                          "type": "sum",
                           "operands": [
                             {
                               "type": "symbol",
@@ -812,9 +789,6 @@
                               "type": "integer",
                               "value": 0
                             }
-                          ],
-                          "operators": [
-                            "+"
                           ]
                         }
                       ]
@@ -920,7 +894,7 @@
                       "name": "positif",
                       "arguments": [
                         {
-                          "type": "sum_expression",
+                          "type": "sum",
                           "operands": [
                             {
                               "type": "symbol",
@@ -930,9 +904,6 @@
                               "type": "integer",
                               "value": 0
                             }
-                          ],
-                          "operators": [
-                            "+"
                           ]
                         }
                       ]
@@ -1038,7 +1009,7 @@
                       "name": "positif",
                       "arguments": [
                         {
-                          "type": "sum_expression",
+                          "type": "sum",
                           "operands": [
                             {
                               "type": "symbol",
@@ -1048,9 +1019,6 @@
                               "type": "integer",
                               "value": 0
                             }
-                          ],
-                          "operators": [
-                            "+"
                           ]
                         }
                       ]
@@ -1156,7 +1124,7 @@
                       "name": "positif",
                       "arguments": [
                         {
-                          "type": "sum_expression",
+                          "type": "sum",
                           "operands": [
                             {
                               "type": "symbol",
@@ -1166,9 +1134,6 @@
                               "type": "integer",
                               "value": 0
                             }
-                          ],
-                          "operators": [
-                            "+"
                           ]
                         }
                       ]
@@ -1268,7 +1233,7 @@
                 "name": "positif",
                 "arguments": [
                   {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -1278,9 +1243,6 @@
                         "type": "integer",
                         "value": 0
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   }
                 ]
@@ -1337,26 +1299,26 @@
                 "name": "positif",
                 "arguments": [
                   {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "function_call",
                         "name": "null",
                         "arguments": [
                           {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
                                 "type": "symbol",
                                 "value": "V_NOTRAIT"
                               },
                               {
-                                "type": "integer",
-                                "value": 23
+                                "type": "negate",
+                                "operand": {
+                                  "type": "integer",
+                                  "value": 23
+                                }
                               }
-                            ],
-                            "operators": [
-                              "-"
                             ]
                           }
                         ]
@@ -1366,19 +1328,19 @@
                         "name": "null",
                         "arguments": [
                           {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
                                 "type": "symbol",
                                 "value": "V_NOTRAIT"
                               },
                               {
-                                "type": "integer",
-                                "value": 33
+                                "type": "negate",
+                                "operand": {
+                                  "type": "integer",
+                                  "value": 33
+                                }
                               }
-                            ],
-                            "operators": [
-                              "-"
                             ]
                           }
                         ]
@@ -1388,19 +1350,19 @@
                         "name": "null",
                         "arguments": [
                           {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
                                 "type": "symbol",
                                 "value": "V_NOTRAIT"
                               },
                               {
-                                "type": "integer",
-                                "value": 43
+                                "type": "negate",
+                                "operand": {
+                                  "type": "integer",
+                                  "value": 43
+                                }
                               }
-                            ],
-                            "operators": [
-                              "-"
                             ]
                           }
                         ]
@@ -1410,19 +1372,19 @@
                         "name": "null",
                         "arguments": [
                           {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
                                 "type": "symbol",
                                 "value": "V_NOTRAIT"
                               },
                               {
-                                "type": "integer",
-                                "value": 53
+                                "type": "negate",
+                                "operand": {
+                                  "type": "integer",
+                                  "value": 53
+                                }
                               }
-                            ],
-                            "operators": [
-                              "-"
                             ]
                           }
                         ]
@@ -1432,29 +1394,23 @@
                         "name": "null",
                         "arguments": [
                           {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
                                 "type": "symbol",
                                 "value": "V_NOTRAIT"
                               },
                               {
-                                "type": "integer",
-                                "value": 63
+                                "type": "negate",
+                                "operand": {
+                                  "type": "integer",
+                                  "value": 63
+                                }
                               }
-                            ],
-                            "operators": [
-                              "-"
                             ]
                           }
                         ]
                       }
-                    ],
-                    "operators": [
-                      "+",
-                      "+",
-                      "+",
-                      "+"
                     ]
                   }
                 ]
@@ -1524,7 +1480,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -1534,9 +1490,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -1548,7 +1501,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -1558,9 +1511,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "<",
@@ -1590,7 +1540,7 @@
                     {
                       "type": "comparaison",
                       "left_operand": {
-                        "type": "sum_expression",
+                        "type": "sum",
                         "operands": [
                           {
                             "type": "symbol",
@@ -1628,16 +1578,6 @@
                             "type": "symbol",
                             "value": "COD2FA"
                           }
-                        ],
-                        "operators": [
-                          "+",
-                          "+",
-                          "+",
-                          "+",
-                          "+",
-                          "+",
-                          "+",
-                          "+"
                         ]
                       },
                       "operator": ">",
@@ -1658,14 +1598,14 @@
                         "name": "arr",
                         "arguments": [
                           {
-                            "type": "product_expression",
+                            "type": "product",
                             "operands": [
                               {
                                 "type": "integer",
                                 "value": 40
                               },
                               {
-                                "type": "sum_expression",
+                                "type": "sum",
                                 "operands": [
                                   {
                                     "type": "symbol",
@@ -1703,26 +1643,15 @@
                                     "type": "symbol",
                                     "value": "COD2FA"
                                   }
-                                ],
-                                "operators": [
-                                  "+",
-                                  "+",
-                                  "+",
-                                  "+",
-                                  "+",
-                                  "+",
-                                  "+",
-                                  "+"
                                 ]
                               },
                               {
-                                "type": "integer",
-                                "value": 100
+                                "type": "invert",
+                                "operand": {
+                                  "type": "integer",
+                                  "value": 100
+                                }
                               }
-                            ],
-                            "operators": [
-                              "*",
-                              "/"
                             ]
                           }
                         ]
@@ -1752,7 +1681,7 @@
                     {
                       "type": "comparaison",
                       "left_operand": {
-                        "type": "sum_expression",
+                        "type": "sum",
                         "operands": [
                           {
                             "type": "symbol",
@@ -1786,15 +1715,6 @@
                             "type": "symbol",
                             "value": "BPVRCM"
                           }
-                        ],
-                        "operators": [
-                          "+",
-                          "+",
-                          "+",
-                          "+",
-                          "+",
-                          "+",
-                          "+"
                         ]
                       },
                       "operator": ">",
@@ -1815,14 +1735,14 @@
                         "name": "arr",
                         "arguments": [
                           {
-                            "type": "product_expression",
+                            "type": "product",
                             "operands": [
                               {
                                 "type": "integer",
                                 "value": 60
                               },
                               {
-                                "type": "sum_expression",
+                                "type": "sum",
                                 "operands": [
                                   {
                                     "type": "symbol",
@@ -1856,25 +1776,15 @@
                                     "type": "symbol",
                                     "value": "BPVRCM"
                                   }
-                                ],
-                                "operators": [
-                                  "+",
-                                  "+",
-                                  "+",
-                                  "+",
-                                  "+",
-                                  "+",
-                                  "+"
                                 ]
                               },
                               {
-                                "type": "integer",
-                                "value": 100
+                                "type": "invert",
+                                "operand": {
+                                  "type": "integer",
+                                  "value": 100
+                                }
                               }
-                            ],
-                            "operators": [
-                              "*",
-                              "/"
                             ]
                           }
                         ]
@@ -1939,7 +1849,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -1949,9 +1859,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": ">=",
@@ -1993,7 +1900,7 @@
                     {
                       "type": "comparaison",
                       "left_operand": {
-                        "type": "sum_expression",
+                        "type": "sum",
                         "operands": [
                           {
                             "type": "symbol",
@@ -2031,16 +1938,6 @@
                             "type": "symbol",
                             "value": "COD2FA"
                           }
-                        ],
-                        "operators": [
-                          "+",
-                          "+",
-                          "+",
-                          "+",
-                          "+",
-                          "+",
-                          "+",
-                          "+"
                         ]
                       },
                       "operator": ">",
@@ -2061,14 +1958,14 @@
                         "name": "arr",
                         "arguments": [
                           {
-                            "type": "product_expression",
+                            "type": "product",
                             "operands": [
                               {
                                 "type": "integer",
                                 "value": 40
                               },
                               {
-                                "type": "sum_expression",
+                                "type": "sum",
                                 "operands": [
                                   {
                                     "type": "symbol",
@@ -2106,26 +2003,15 @@
                                     "type": "symbol",
                                     "value": "COD2FA"
                                   }
-                                ],
-                                "operators": [
-                                  "+",
-                                  "+",
-                                  "+",
-                                  "+",
-                                  "+",
-                                  "+",
-                                  "+",
-                                  "+"
                                 ]
                               },
                               {
-                                "type": "integer",
-                                "value": 100
+                                "type": "invert",
+                                "operand": {
+                                  "type": "integer",
+                                  "value": 100
+                                }
                               }
-                            ],
-                            "operators": [
-                              "*",
-                              "/"
                             ]
                           }
                         ]
@@ -2168,7 +2054,7 @@
                     {
                       "type": "comparaison",
                       "left_operand": {
-                        "type": "sum_expression",
+                        "type": "sum",
                         "operands": [
                           {
                             "type": "symbol",
@@ -2202,15 +2088,6 @@
                             "type": "symbol",
                             "value": "BPVRCM"
                           }
-                        ],
-                        "operators": [
-                          "+",
-                          "+",
-                          "+",
-                          "+",
-                          "+",
-                          "+",
-                          "+"
                         ]
                       },
                       "operator": ">",
@@ -2231,14 +2108,14 @@
                         "name": "arr",
                         "arguments": [
                           {
-                            "type": "product_expression",
+                            "type": "product",
                             "operands": [
                               {
                                 "type": "integer",
                                 "value": 60
                               },
                               {
-                                "type": "sum_expression",
+                                "type": "sum",
                                 "operands": [
                                   {
                                     "type": "symbol",
@@ -2272,25 +2149,15 @@
                                     "type": "symbol",
                                     "value": "BPVRCM"
                                   }
-                                ],
-                                "operators": [
-                                  "+",
-                                  "+",
-                                  "+",
-                                  "+",
-                                  "+",
-                                  "+",
-                                  "+"
                                 ]
                               },
                               {
-                                "type": "integer",
-                                "value": 100
+                                "type": "invert",
+                                "operand": {
+                                  "type": "integer",
+                                  "value": 100
+                                }
                               }
-                            ],
-                            "operators": [
-                              "*",
-                              "/"
                             ]
                           }
                         ]
@@ -2355,7 +2222,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -2365,9 +2232,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -2379,7 +2243,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -2389,9 +2253,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -2403,7 +2264,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -2413,9 +2274,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -2427,7 +2285,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -2437,9 +2295,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -2451,7 +2306,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -2461,9 +2316,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -2475,7 +2327,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -2485,9 +2337,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -2516,7 +2365,7 @@
               },
               "operator": ">",
               "right_operand": {
-                "type": "product_expression",
+                "type": "product",
                 "operands": [
                   {
                     "type": "symbol",
@@ -2526,9 +2375,6 @@
                     "type": "integer",
                     "value": 9
                   }
-                ],
-                "operators": [
-                  "*"
                 ]
               }
             },
@@ -2611,7 +2457,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -2621,9 +2467,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -2635,7 +2478,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -2645,9 +2488,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -2659,7 +2499,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -2669,9 +2509,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -2683,7 +2520,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -2693,9 +2530,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -2707,7 +2541,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -2717,9 +2551,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -2731,7 +2562,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -2741,9 +2572,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -2772,7 +2600,7 @@
               },
               "operator": ">",
               "right_operand": {
-                "type": "product_expression",
+                "type": "product",
                 "operands": [
                   {
                     "type": "symbol",
@@ -2782,9 +2610,6 @@
                     "type": "integer",
                     "value": 5
                   }
-                ],
-                "operators": [
-                  "*"
                 ]
               }
             },
@@ -2884,7 +2709,7 @@
               },
               "operator": ">=",
               "right_operand": {
-                "type": "product_expression",
+                "type": "product",
                 "operands": [
                   {
                     "type": "symbol",
@@ -2894,16 +2719,13 @@
                     "type": "integer",
                     "value": 2
                   }
-                ],
-                "operators": [
-                  "*"
                 ]
               }
             },
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -2913,9 +2735,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -3002,26 +2821,26 @@
               },
               "operator": "<=",
               "right_operand": {
-                "type": "product_expression",
+                "type": "product",
                 "operands": [
                   {
                     "type": "symbol",
                     "value": "V_BTIMP"
                   },
                   {
-                    "type": "integer",
-                    "value": 2
+                    "type": "invert",
+                    "operand": {
+                      "type": "integer",
+                      "value": 2
+                    }
                   }
-                ],
-                "operators": [
-                  "/"
                 ]
               }
             },
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -3031,9 +2850,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -3118,7 +2934,7 @@
                 {
                   "type": "comparaison",
                   "left_operand": {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -3128,9 +2944,6 @@
                         "type": "integer",
                         "value": 0
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   },
                   "operator": "=",
@@ -3145,7 +2958,7 @@
                           "name": "positif",
                           "arguments": [
                             {
-                              "type": "sum_expression",
+                              "type": "sum",
                               "operands": [
                                 {
                                   "type": "symbol",
@@ -3155,9 +2968,6 @@
                                   "type": "integer",
                                   "value": 0
                                 }
-                              ],
-                              "operators": [
-                                "+"
                               ]
                             }
                           ]
@@ -3182,7 +2992,7 @@
                 {
                   "type": "comparaison",
                   "left_operand": {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -3192,9 +3002,6 @@
                         "type": "integer",
                         "value": 0
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   },
                   "operator": "=",
@@ -3209,7 +3016,7 @@
                           "name": "positif",
                           "arguments": [
                             {
-                              "type": "sum_expression",
+                              "type": "sum",
                               "operands": [
                                 {
                                   "type": "symbol",
@@ -3219,9 +3026,6 @@
                                   "type": "integer",
                                   "value": 0
                                 }
-                              ],
-                              "operators": [
-                                "+"
                               ]
                             }
                           ]
@@ -3246,7 +3050,7 @@
                 {
                   "type": "comparaison",
                   "left_operand": {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -3256,9 +3060,6 @@
                         "type": "integer",
                         "value": 0
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   },
                   "operator": "=",
@@ -3273,7 +3074,7 @@
                           "name": "positif",
                           "arguments": [
                             {
-                              "type": "sum_expression",
+                              "type": "sum",
                               "operands": [
                                 {
                                   "type": "symbol",
@@ -3283,9 +3084,6 @@
                                   "type": "integer",
                                   "value": 0
                                 }
-                              ],
-                              "operators": [
-                                "+"
                               ]
                             }
                           ]
@@ -3310,7 +3108,7 @@
                 {
                   "type": "comparaison",
                   "left_operand": {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -3320,9 +3118,6 @@
                         "type": "integer",
                         "value": 0
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   },
                   "operator": "=",
@@ -3337,7 +3132,7 @@
                           "name": "positif",
                           "arguments": [
                             {
-                              "type": "sum_expression",
+                              "type": "sum",
                               "operands": [
                                 {
                                   "type": "symbol",
@@ -3347,9 +3142,6 @@
                                   "type": "integer",
                                   "value": 0
                                 }
-                              ],
-                              "operators": [
-                                "+"
                               ]
                             }
                           ]
@@ -3377,7 +3169,7 @@
                     {
                       "type": "comparaison",
                       "left_operand": {
-                        "type": "sum_expression",
+                        "type": "sum",
                         "operands": [
                           {
                             "type": "symbol",
@@ -3391,15 +3183,11 @@
                             "type": "integer",
                             "value": 0
                           }
-                        ],
-                        "operators": [
-                          "+",
-                          "+"
                         ]
                       },
                       "operator": ">",
                       "right_operand": {
-                        "type": "sum_expression",
+                        "type": "sum",
                         "operands": [
                           {
                             "type": "symbol",
@@ -3409,9 +3197,6 @@
                             "type": "symbol",
                             "value": "V_0CF"
                           }
-                        ],
-                        "operators": [
-                          "+"
                         ]
                       }
                     },
@@ -3445,7 +3230,7 @@
                         {
                           "type": "comparaison",
                           "left_operand": {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
                                 "type": "symbol",
@@ -3455,9 +3240,6 @@
                                 "type": "integer",
                                 "value": 0
                               }
-                            ],
-                            "operators": [
-                              "+"
                             ]
                           },
                           "operator": "=",
@@ -3533,7 +3315,7 @@
                         {
                           "type": "comparaison",
                           "left_operand": {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
                                 "type": "symbol",
@@ -3543,9 +3325,6 @@
                                 "type": "integer",
                                 "value": 0
                               }
-                            ],
-                            "operators": [
-                              "+"
                             ]
                           },
                           "operator": "=",
@@ -3621,7 +3400,7 @@
                         {
                           "type": "comparaison",
                           "left_operand": {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
                                 "type": "symbol",
@@ -3631,9 +3410,6 @@
                                 "type": "integer",
                                 "value": 0
                               }
-                            ],
-                            "operators": [
-                              "+"
                             ]
                           },
                           "operator": "=",
@@ -3709,7 +3485,7 @@
                         {
                           "type": "comparaison",
                           "left_operand": {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
                                 "type": "symbol",
@@ -3719,9 +3495,6 @@
                                 "type": "integer",
                                 "value": 0
                               }
-                            ],
-                            "operators": [
-                              "+"
                             ]
                           },
                           "operator": "=",
@@ -3830,7 +3603,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -3840,9 +3613,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "!=",
@@ -3854,7 +3624,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -3864,9 +3634,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -3885,7 +3652,7 @@
                 ]
               },
               "expression": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -3895,9 +3662,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "negative_form": true
@@ -3905,7 +3669,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -3915,9 +3679,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "<=",
@@ -3934,7 +3695,7 @@
               },
               "operator": ">",
               "right_operand": {
-                "type": "product_expression",
+                "type": "product",
                 "operands": [
                   {
                     "type": "symbol",
@@ -3944,16 +3705,13 @@
                     "type": "integer",
                     "value": 2
                   }
-                ],
-                "operators": [
-                  "*"
                 ]
               }
             },
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -3963,9 +3721,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -4100,7 +3855,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -4110,9 +3865,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -4157,7 +3909,7 @@
                         {
                           "type": "comparaison",
                           "left_operand": {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
                                 "type": "symbol",
@@ -4167,9 +3919,6 @@
                                 "type": "integer",
                                 "value": 0
                               }
-                            ],
-                            "operators": [
-                              "+"
                             ]
                           },
                           "operator": "=",
@@ -4181,7 +3930,7 @@
                         {
                           "type": "comparaison",
                           "left_operand": {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
                                 "type": "symbol",
@@ -4191,9 +3940,6 @@
                                 "type": "integer",
                                 "value": 0
                               }
-                            ],
-                            "operators": [
-                              "+"
                             ]
                           },
                           "operator": "=",
@@ -4284,7 +4030,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -4294,9 +4040,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -4335,7 +4078,7 @@
                 {
                   "type": "comparaison",
                   "left_operand": {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -4345,9 +4088,6 @@
                         "type": "integer",
                         "value": 0
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   },
                   "operator": "=",

@@ -28,72 +28,65 @@
         "type": "formula",
         "name": "RNI_INIT",
         "expression": {
-          "type": "product_expression",
+          "type": "product",
           "operands": [
             {
               "type": "symbol",
               "value": "RNI"
             },
             {
-              "type": "sum_expression",
+              "type": "sum",
               "operands": [
                 {
                   "type": "integer",
                   "value": 1
                 },
                 {
-                  "type": "function_call",
-                  "name": "positif",
-                  "arguments": [
-                    {
-                      "type": "symbol",
-                      "value": "TEFFP"
-                    }
-                  ]
+                  "type": "negate",
+                  "operand": {
+                    "type": "function_call",
+                    "name": "positif",
+                    "arguments": [
+                      {
+                        "type": "symbol",
+                        "value": "TEFFP"
+                      }
+                    ]
+                  }
                 }
-              ],
-              "operators": [
-                "-"
               ]
             },
             {
-              "type": "sum_expression",
+              "type": "sum",
               "operands": [
                 {
                   "type": "integer",
                   "value": 1
                 },
                 {
-                  "type": "function_call",
-                  "name": "positif",
-                  "arguments": [
-                    {
-                      "type": "sum_expression",
-                      "operands": [
-                        {
-                          "type": "symbol",
-                          "value": "IPTEFN"
-                        },
-                        {
-                          "type": "symbol",
-                          "value": "RMOND"
-                        }
-                      ],
-                      "operators": [
-                        "+"
-                      ]
-                    }
-                  ]
+                  "type": "negate",
+                  "operand": {
+                    "type": "function_call",
+                    "name": "positif",
+                    "arguments": [
+                      {
+                        "type": "sum",
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "IPTEFN"
+                          },
+                          {
+                            "type": "symbol",
+                            "value": "RMOND"
+                          }
+                        ]
+                      }
+                    ]
+                  }
                 }
-              ],
-              "operators": [
-                "-"
               ]
             }
-          ],
-          "operators": [
-            "*",
-            "*"
           ]
         },
         "linecol": [
@@ -147,7 +140,7 @@
         "type": "formula",
         "name": "PV_INIT",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
@@ -185,16 +178,6 @@
               "type": "symbol",
               "value": "BPTP24"
             }
-          ],
-          "operators": [
-            "+",
-            "+",
-            "+",
-            "+",
-            "+",
-            "+",
-            "+",
-            "+"
           ]
         },
         "linecol": [
@@ -212,10 +195,10 @@
         "type": "formula",
         "name": "RI_INIT",
         "expression": {
-          "type": "product_expression",
+          "type": "product",
           "operands": [
             {
-              "type": "sum_expression",
+              "type": "sum",
               "operands": [
                 {
                   "type": "symbol",
@@ -225,30 +208,24 @@
                   "type": "symbol",
                   "value": "CIMPTL"
                 }
-              ],
-              "operators": [
-                "+"
               ]
             },
             {
-              "type": "sum_expression",
+              "type": "sum",
               "operands": [
                 {
                   "type": "integer",
                   "value": 1
                 },
                 {
-                  "type": "symbol",
-                  "value": "V_CNR"
+                  "type": "negate",
+                  "operand": {
+                    "type": "symbol",
+                    "value": "V_CNR"
+                  }
                 }
-              ],
-              "operators": [
-                "-"
               ]
             }
-          ],
-          "operators": [
-            "*"
           ]
         },
         "linecol": [
@@ -320,7 +297,7 @@
         "type": "formula",
         "name": "TAXAGA_INIT",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
@@ -330,9 +307,6 @@
               "type": "symbol",
               "value": "BASSURC"
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -350,7 +324,7 @@
         "type": "formula",
         "name": "PCAP_INIT",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
@@ -360,9 +334,6 @@
               "type": "symbol",
               "value": "BPCAPTAXC"
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -398,17 +369,17 @@
         "type": "formula",
         "name": "CHR_INIT",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
               "value": "REVKIREHR"
             },
             {
-              "type": "product_expression",
+              "type": "product",
               "operands": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
                       "type": "symbol",
@@ -418,9 +389,6 @@
                       "type": "symbol",
                       "value": "RFRH1"
                     }
-                  ],
-                  "operators": [
-                    "+"
                   ]
                 },
                 {
@@ -433,14 +401,8 @@
                     }
                   ]
                 }
-              ],
-              "operators": [
-                "*"
               ]
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -458,7 +420,7 @@
         "type": "formula",
         "name": "CVN_INIT",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
@@ -476,11 +438,6 @@
               "type": "symbol",
               "value": "GLDGRATC"
             }
-          ],
-          "operators": [
-            "+",
-            "+",
-            "+"
           ]
         },
         "linecol": [
@@ -498,7 +455,7 @@
         "type": "formula",
         "name": "CDIS_INIT",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
@@ -508,9 +465,6 @@
               "type": "symbol",
               "value": "GSALC"
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -528,7 +482,7 @@
         "type": "formula",
         "name": "GLO_INIT",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
@@ -538,9 +492,6 @@
               "type": "symbol",
               "value": "GLDGRATC"
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -677,72 +628,65 @@
         "type": "formula",
         "name": "RNI_TL",
         "expression": {
-          "type": "product_expression",
+          "type": "product",
           "operands": [
             {
               "type": "symbol",
               "value": "RNI"
             },
             {
-              "type": "sum_expression",
+              "type": "sum",
               "operands": [
                 {
                   "type": "integer",
                   "value": 1
                 },
                 {
-                  "type": "function_call",
-                  "name": "positif",
-                  "arguments": [
-                    {
-                      "type": "symbol",
-                      "value": "TEFFP"
-                    }
-                  ]
+                  "type": "negate",
+                  "operand": {
+                    "type": "function_call",
+                    "name": "positif",
+                    "arguments": [
+                      {
+                        "type": "symbol",
+                        "value": "TEFFP"
+                      }
+                    ]
+                  }
                 }
-              ],
-              "operators": [
-                "-"
               ]
             },
             {
-              "type": "sum_expression",
+              "type": "sum",
               "operands": [
                 {
                   "type": "integer",
                   "value": 1
                 },
                 {
-                  "type": "function_call",
-                  "name": "positif",
-                  "arguments": [
-                    {
-                      "type": "sum_expression",
-                      "operands": [
-                        {
-                          "type": "symbol",
-                          "value": "IPTEFN"
-                        },
-                        {
-                          "type": "symbol",
-                          "value": "RMOND"
-                        }
-                      ],
-                      "operators": [
-                        "+"
-                      ]
-                    }
-                  ]
+                  "type": "negate",
+                  "operand": {
+                    "type": "function_call",
+                    "name": "positif",
+                    "arguments": [
+                      {
+                        "type": "sum",
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "IPTEFN"
+                          },
+                          {
+                            "type": "symbol",
+                            "value": "RMOND"
+                          }
+                        ]
+                      }
+                    ]
+                  }
                 }
-              ],
-              "operators": [
-                "-"
               ]
             }
-          ],
-          "operators": [
-            "*",
-            "*"
           ]
         },
         "linecol": [
@@ -796,7 +740,7 @@
         "type": "formula",
         "name": "PV_TL",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
@@ -834,16 +778,6 @@
               "type": "symbol",
               "value": "BPTP24"
             }
-          ],
-          "operators": [
-            "+",
-            "+",
-            "+",
-            "+",
-            "+",
-            "+",
-            "+",
-            "+"
           ]
         },
         "linecol": [
@@ -861,10 +795,10 @@
         "type": "formula",
         "name": "RI_TL",
         "expression": {
-          "type": "product_expression",
+          "type": "product",
           "operands": [
             {
-              "type": "sum_expression",
+              "type": "sum",
               "operands": [
                 {
                   "type": "symbol",
@@ -874,30 +808,24 @@
                   "type": "symbol",
                   "value": "CIMPTL"
                 }
-              ],
-              "operators": [
-                "+"
               ]
             },
             {
-              "type": "sum_expression",
+              "type": "sum",
               "operands": [
                 {
                   "type": "integer",
                   "value": 1
                 },
                 {
-                  "type": "symbol",
-                  "value": "V_CNR"
+                  "type": "negate",
+                  "operand": {
+                    "type": "symbol",
+                    "value": "V_CNR"
+                  }
                 }
-              ],
-              "operators": [
-                "-"
               ]
             }
-          ],
-          "operators": [
-            "*"
           ]
         },
         "linecol": [
@@ -969,7 +897,7 @@
         "type": "formula",
         "name": "TAXAGA_TL",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
@@ -979,9 +907,6 @@
               "type": "symbol",
               "value": "BASSURC"
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -999,7 +924,7 @@
         "type": "formula",
         "name": "PCAP_TL",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
@@ -1009,9 +934,6 @@
               "type": "symbol",
               "value": "BPCAPTAXC"
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -1047,17 +969,17 @@
         "type": "formula",
         "name": "CHR_TL",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
               "value": "REVKIREHR"
             },
             {
-              "type": "product_expression",
+              "type": "product",
               "operands": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
                       "type": "symbol",
@@ -1067,9 +989,6 @@
                       "type": "symbol",
                       "value": "RFRH1"
                     }
-                  ],
-                  "operators": [
-                    "+"
                   ]
                 },
                 {
@@ -1082,14 +1001,8 @@
                     }
                   ]
                 }
-              ],
-              "operators": [
-                "*"
               ]
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -1107,7 +1020,7 @@
         "type": "formula",
         "name": "CVNA_TL",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
@@ -1125,11 +1038,6 @@
               "type": "symbol",
               "value": "GLDGRATC"
             }
-          ],
-          "operators": [
-            "+",
-            "+",
-            "+"
           ]
         },
         "linecol": [
@@ -1147,7 +1055,7 @@
         "type": "formula",
         "name": "CDISA_TL",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
@@ -1157,9 +1065,6 @@
               "type": "symbol",
               "value": "GSALC"
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -1177,7 +1082,7 @@
         "type": "formula",
         "name": "GLOA_TL",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
@@ -1187,9 +1092,6 @@
               "type": "symbol",
               "value": "GLDGRATC"
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -1326,72 +1228,65 @@
         "type": "formula",
         "name": "RNI_RECT",
         "expression": {
-          "type": "product_expression",
+          "type": "product",
           "operands": [
             {
               "type": "symbol",
               "value": "RNI"
             },
             {
-              "type": "sum_expression",
+              "type": "sum",
               "operands": [
                 {
                   "type": "integer",
                   "value": 1
                 },
                 {
-                  "type": "function_call",
-                  "name": "positif",
-                  "arguments": [
-                    {
-                      "type": "symbol",
-                      "value": "TEFFP"
-                    }
-                  ]
+                  "type": "negate",
+                  "operand": {
+                    "type": "function_call",
+                    "name": "positif",
+                    "arguments": [
+                      {
+                        "type": "symbol",
+                        "value": "TEFFP"
+                      }
+                    ]
+                  }
                 }
-              ],
-              "operators": [
-                "-"
               ]
             },
             {
-              "type": "sum_expression",
+              "type": "sum",
               "operands": [
                 {
                   "type": "integer",
                   "value": 1
                 },
                 {
-                  "type": "function_call",
-                  "name": "positif",
-                  "arguments": [
-                    {
-                      "type": "sum_expression",
-                      "operands": [
-                        {
-                          "type": "symbol",
-                          "value": "IPTEFN"
-                        },
-                        {
-                          "type": "symbol",
-                          "value": "RMOND"
-                        }
-                      ],
-                      "operators": [
-                        "+"
-                      ]
-                    }
-                  ]
+                  "type": "negate",
+                  "operand": {
+                    "type": "function_call",
+                    "name": "positif",
+                    "arguments": [
+                      {
+                        "type": "sum",
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "IPTEFN"
+                          },
+                          {
+                            "type": "symbol",
+                            "value": "RMOND"
+                          }
+                        ]
+                      }
+                    ]
+                  }
                 }
-              ],
-              "operators": [
-                "-"
               ]
             }
-          ],
-          "operators": [
-            "*",
-            "*"
           ]
         },
         "linecol": [
@@ -1445,7 +1340,7 @@
         "type": "formula",
         "name": "PV_RECT",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
@@ -1483,16 +1378,6 @@
               "type": "symbol",
               "value": "BPTP24"
             }
-          ],
-          "operators": [
-            "+",
-            "+",
-            "+",
-            "+",
-            "+",
-            "+",
-            "+",
-            "+"
           ]
         },
         "linecol": [
@@ -1510,55 +1395,49 @@
         "type": "formula",
         "name": "RI_RECT",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
               "value": "RI_INIT"
             },
             {
-              "type": "product_expression",
-              "operands": [
-                {
-                  "type": "sum_expression",
-                  "operands": [
-                    {
-                      "type": "symbol",
-                      "value": "REDTL"
-                    },
-                    {
-                      "type": "symbol",
-                      "value": "CIMPTL"
-                    }
-                  ],
-                  "operators": [
-                    "+"
-                  ]
-                },
-                {
-                  "type": "sum_expression",
-                  "operands": [
-                    {
-                      "type": "integer",
-                      "value": 1
-                    },
-                    {
-                      "type": "symbol",
-                      "value": "V_CNR"
-                    }
-                  ],
-                  "operators": [
-                    "-"
-                  ]
-                }
-              ],
-              "operators": [
-                "*"
-              ]
+              "type": "negate",
+              "operand": {
+                "type": "product",
+                "operands": [
+                  {
+                    "type": "sum",
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "REDTL"
+                      },
+                      {
+                        "type": "symbol",
+                        "value": "CIMPTL"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "sum",
+                    "operands": [
+                      {
+                        "type": "integer",
+                        "value": 1
+                      },
+                      {
+                        "type": "negate",
+                        "operand": {
+                          "type": "symbol",
+                          "value": "V_CNR"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
             }
-          ],
-          "operators": [
-            "-"
           ]
         },
         "linecol": [
@@ -1630,7 +1509,7 @@
         "type": "formula",
         "name": "TAXAGA_RECT",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
@@ -1640,9 +1519,6 @@
               "type": "symbol",
               "value": "BASSURC"
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -1660,7 +1536,7 @@
         "type": "formula",
         "name": "PCAP_RECT",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
@@ -1670,9 +1546,6 @@
               "type": "symbol",
               "value": "BPCAPTAXC"
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -1708,17 +1581,17 @@
         "type": "formula",
         "name": "CHR_RECT",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
               "value": "REVKIREHR"
             },
             {
-              "type": "product_expression",
+              "type": "product",
               "operands": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
                       "type": "symbol",
@@ -1728,9 +1601,6 @@
                       "type": "symbol",
                       "value": "RFRH1"
                     }
-                  ],
-                  "operators": [
-                    "+"
                   ]
                 },
                 {
@@ -1743,14 +1613,8 @@
                     }
                   ]
                 }
-              ],
-              "operators": [
-                "*"
               ]
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -1768,7 +1632,7 @@
         "type": "formula",
         "name": "CVN_RECT",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
@@ -1786,11 +1650,6 @@
               "type": "symbol",
               "value": "GLDGRATC"
             }
-          ],
-          "operators": [
-            "+",
-            "+",
-            "+"
           ]
         },
         "linecol": [
@@ -1808,7 +1667,7 @@
         "type": "formula",
         "name": "CDIS_RECT",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
@@ -1818,9 +1677,6 @@
               "type": "symbol",
               "value": "GSALC"
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -1838,7 +1694,7 @@
         "type": "formula",
         "name": "GLO_RECT",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
@@ -1848,9 +1704,6 @@
               "type": "symbol",
               "value": "GLDGRATC"
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [

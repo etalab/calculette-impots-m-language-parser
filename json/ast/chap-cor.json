@@ -5144,7 +5144,7 @@
           "name": "min",
           "arguments": [
             {
-              "type": "sum_expression",
+              "type": "sum",
               "operands": [
                 {
                   "type": "symbol",
@@ -5170,13 +5170,6 @@
                   "type": "symbol",
                   "value": "RCMPRIVM"
                 }
-              ],
-              "operators": [
-                "+",
-                "+",
-                "+",
-                "+",
-                "+"
               ]
             },
             {
@@ -5208,44 +5201,54 @@
               "value": 0
             },
             {
-              "type": "sum_expression",
+              "type": "sum",
               "operands": [
                 {
                   "type": "symbol",
                   "value": "RCMFR"
                 },
                 {
-                  "type": "symbol",
-                  "value": "RCMAB"
+                  "type": "negate",
+                  "operand": {
+                    "type": "symbol",
+                    "value": "RCMAB"
+                  }
                 },
                 {
-                  "type": "symbol",
-                  "value": "RTNC"
+                  "type": "negate",
+                  "operand": {
+                    "type": "symbol",
+                    "value": "RTNC"
+                  }
                 },
                 {
-                  "type": "symbol",
-                  "value": "RAVC"
+                  "type": "negate",
+                  "operand": {
+                    "type": "symbol",
+                    "value": "RAVC"
+                  }
                 },
                 {
-                  "type": "symbol",
-                  "value": "RCMNAB"
+                  "type": "negate",
+                  "operand": {
+                    "type": "symbol",
+                    "value": "RCMNAB"
+                  }
                 },
                 {
-                  "type": "symbol",
-                  "value": "RTCAR"
+                  "type": "negate",
+                  "operand": {
+                    "type": "symbol",
+                    "value": "RTCAR"
+                  }
                 },
                 {
-                  "type": "symbol",
-                  "value": "RCMPRIVM"
+                  "type": "negate",
+                  "operand": {
+                    "type": "symbol",
+                    "value": "RCMPRIVM"
+                  }
                 }
-              ],
-              "operators": [
-                "-",
-                "-",
-                "-",
-                "-",
-                "-",
-                "-"
               ]
             }
           ]
@@ -5265,7 +5268,7 @@
         "type": "formula",
         "name": "TSNNV_P",
         "expression": {
-          "type": "product_expression",
+          "type": "product",
           "operands": [
             {
               "type": "function_call",
@@ -5291,9 +5294,6 @@
                 }
               ]
             }
-          ],
-          "operators": [
-            "*"
           ]
         },
         "linecol": [
@@ -5311,7 +5311,7 @@
         "type": "formula",
         "name": "TSNNC_P",
         "expression": {
-          "type": "product_expression",
+          "type": "product",
           "operands": [
             {
               "type": "function_call",
@@ -5337,9 +5337,6 @@
                 }
               ]
             }
-          ],
-          "operators": [
-            "*"
           ]
         },
         "linecol": [
@@ -5357,7 +5354,7 @@
         "type": "formula",
         "name": "TSNN1_P",
         "expression": {
-          "type": "product_expression",
+          "type": "product",
           "operands": [
             {
               "type": "function_call",
@@ -5383,9 +5380,6 @@
                 }
               ]
             }
-          ],
-          "operators": [
-            "*"
           ]
         },
         "linecol": [
@@ -5403,7 +5397,7 @@
         "type": "formula",
         "name": "TSNN2_P",
         "expression": {
-          "type": "product_expression",
+          "type": "product",
           "operands": [
             {
               "type": "function_call",
@@ -5429,9 +5423,6 @@
                 }
               ]
             }
-          ],
-          "operators": [
-            "*"
           ]
         },
         "linecol": [
@@ -5449,7 +5440,7 @@
         "type": "formula",
         "name": "TSNN3_P",
         "expression": {
-          "type": "product_expression",
+          "type": "product",
           "operands": [
             {
               "type": "function_call",
@@ -5475,9 +5466,6 @@
                 }
               ]
             }
-          ],
-          "operators": [
-            "*"
           ]
         },
         "linecol": [
@@ -5495,7 +5483,7 @@
         "type": "formula",
         "name": "TSNN4_P",
         "expression": {
-          "type": "product_expression",
+          "type": "product",
           "operands": [
             {
               "type": "function_call",
@@ -5521,9 +5509,6 @@
                 }
               ]
             }
-          ],
-          "operators": [
-            "*"
           ]
         },
         "linecol": [
@@ -5541,7 +5526,7 @@
         "type": "formula",
         "name": "TSNNT_P",
         "expression": {
-          "type": "product_expression",
+          "type": "product",
           "operands": [
             {
               "type": "function_call",
@@ -5567,9 +5552,6 @@
                 }
               ]
             }
-          ],
-          "operators": [
-            "*"
           ]
         },
         "linecol": [
@@ -6019,7 +6001,7 @@
         "type": "formula",
         "name": "TSBP_P",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
@@ -6037,11 +6019,6 @@
               "type": "symbol",
               "value": "TSB4"
             }
-          ],
-          "operators": [
-            "+",
-            "+",
-            "+"
           ]
         },
         "linecol": [

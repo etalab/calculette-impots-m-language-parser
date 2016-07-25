@@ -11,49 +11,43 @@
         "type": "formula",
         "name": "HRBTRFR1",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
-              "type": "product_expression",
+              "type": "product",
               "operands": [
                 {
                   "type": "symbol",
                   "value": "V_BTRFRHR1"
                 },
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
                       "type": "integer",
                       "value": 1
                     },
                     {
-                      "type": "function_call",
-                      "name": "positif_ou_nul",
-                      "arguments": [
-                        {
-                          "type": "symbol",
-                          "value": "RFRH1"
-                        }
-                      ]
+                      "type": "negate",
+                      "operand": {
+                        "type": "function_call",
+                        "name": "positif_ou_nul",
+                        "arguments": [
+                          {
+                            "type": "symbol",
+                            "value": "RFRH1"
+                          }
+                        ]
+                      }
                     }
-                  ],
-                  "operators": [
-                    "-"
                   ]
                 }
-              ],
-              "operators": [
-                "*"
               ]
             },
             {
               "type": "symbol",
               "value": "RFRH1"
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -71,49 +65,43 @@
         "type": "formula",
         "name": "HRBTRFR2",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
-              "type": "product_expression",
+              "type": "product",
               "operands": [
                 {
                   "type": "symbol",
                   "value": "V_BTRFRHR2"
                 },
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
                       "type": "integer",
                       "value": 1
                     },
                     {
-                      "type": "function_call",
-                      "name": "positif_ou_nul",
-                      "arguments": [
-                        {
-                          "type": "symbol",
-                          "value": "RFRH2"
-                        }
-                      ]
+                      "type": "negate",
+                      "operand": {
+                        "type": "function_call",
+                        "name": "positif_ou_nul",
+                        "arguments": [
+                          {
+                            "type": "symbol",
+                            "value": "RFRH2"
+                          }
+                        ]
+                      }
                     }
-                  ],
-                  "operators": [
-                    "-"
                   ]
                 }
-              ],
-              "operators": [
-                "*"
               ]
             },
             {
               "type": "symbol",
               "value": "RFRH2"
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -131,56 +119,50 @@
         "type": "formula",
         "name": "HRNBTRFR",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "function_call",
               "name": "positif_ou_nul",
               "arguments": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
-                      "type": "product_expression",
+                      "type": "product",
                       "operands": [
                         {
                           "type": "symbol",
                           "value": "V_BTRFRHR1"
                         },
                         {
-                          "type": "sum_expression",
+                          "type": "sum",
                           "operands": [
                             {
                               "type": "integer",
                               "value": 1
                             },
                             {
-                              "type": "function_call",
-                              "name": "positif",
-                              "arguments": [
-                                {
-                                  "type": "symbol",
-                                  "value": "RFRH1"
-                                }
-                              ]
+                              "type": "negate",
+                              "operand": {
+                                "type": "function_call",
+                                "name": "positif",
+                                "arguments": [
+                                  {
+                                    "type": "symbol",
+                                    "value": "RFRH1"
+                                  }
+                                ]
+                              }
                             }
-                          ],
-                          "operators": [
-                            "-"
                           ]
                         }
-                      ],
-                      "operators": [
-                        "*"
                       ]
                     },
                     {
                       "type": "symbol",
                       "value": "RFRH1"
                     }
-                  ],
-                  "operators": [
-                    "+"
                   ]
                 }
               ]
@@ -190,56 +172,47 @@
               "name": "positif_ou_nul",
               "arguments": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
-                      "type": "product_expression",
+                      "type": "product",
                       "operands": [
                         {
                           "type": "symbol",
                           "value": "V_BTRFRHR2"
                         },
                         {
-                          "type": "sum_expression",
+                          "type": "sum",
                           "operands": [
                             {
                               "type": "integer",
                               "value": 1
                             },
                             {
-                              "type": "function_call",
-                              "name": "positif",
-                              "arguments": [
-                                {
-                                  "type": "symbol",
-                                  "value": "RFRH2"
-                                }
-                              ]
+                              "type": "negate",
+                              "operand": {
+                                "type": "function_call",
+                                "name": "positif",
+                                "arguments": [
+                                  {
+                                    "type": "symbol",
+                                    "value": "RFRH2"
+                                  }
+                                ]
+                              }
                             }
-                          ],
-                          "operators": [
-                            "-"
                           ]
                         }
-                      ],
-                      "operators": [
-                        "*"
                       ]
                     },
                     {
                       "type": "symbol",
                       "value": "RFRH2"
                     }
-                  ],
-                  "operators": [
-                    "+"
                   ]
                 }
               ]
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -261,10 +234,10 @@
           "name": "arr",
           "arguments": [
             {
-              "type": "product_expression",
+              "type": "product",
               "operands": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
                       "type": "symbol",
@@ -274,18 +247,15 @@
                       "type": "symbol",
                       "value": "HRBTRFR2"
                     }
-                  ],
-                  "operators": [
-                    "+"
                   ]
                 },
                 {
-                  "type": "integer",
-                  "value": 2
+                  "type": "invert",
+                  "operand": {
+                    "type": "integer",
+                    "value": 2
+                  }
                 }
-              ],
-              "operators": [
-                "/"
               ]
             }
           ]
@@ -309,31 +279,28 @@
           "name": "positif_ou_nul",
           "arguments": [
             {
-              "type": "sum_expression",
+              "type": "sum",
               "operands": [
                 {
                   "type": "symbol",
                   "value": "REVKIREHR"
                 },
                 {
-                  "type": "product_expression",
-                  "operands": [
-                    {
-                      "type": "float",
-                      "value": 1.5
-                    },
-                    {
-                      "type": "symbol",
-                      "value": "HRMOYBTRFR"
-                    }
-                  ],
-                  "operators": [
-                    "*"
-                  ]
+                  "type": "negate",
+                  "operand": {
+                    "type": "product",
+                    "operands": [
+                      {
+                        "type": "float",
+                        "value": 1.5
+                      },
+                      {
+                        "type": "symbol",
+                        "value": "HRMOYBTRFR"
+                      }
+                    ]
+                  }
                 }
-              ],
-              "operators": [
-                "-"
               ]
             }
           ]
@@ -357,17 +324,17 @@
           "name": "positif_ou_nul",
           "arguments": [
             {
-              "type": "sum_expression",
+              "type": "sum",
               "operands": [
                 {
-                  "type": "product_expression",
+                  "type": "product",
                   "operands": [
                     {
                       "type": "symbol",
                       "value": "LIMHR1"
                     },
                     {
-                      "type": "sum_expression",
+                      "type": "sum",
                       "operands": [
                         {
                           "type": "integer",
@@ -377,23 +344,17 @@
                           "type": "symbol",
                           "value": "BOOL_0AM"
                         }
-                      ],
-                      "operators": [
-                        "+"
                       ]
                     }
-                  ],
-                  "operators": [
-                    "*"
                   ]
                 },
                 {
-                  "type": "symbol",
-                  "value": "HRBTRFR2"
+                  "type": "negate",
+                  "operand": {
+                    "type": "symbol",
+                    "value": "HRBTRFR2"
+                  }
                 }
-              ],
-              "operators": [
-                "-"
               ]
             }
           ]
@@ -417,17 +378,17 @@
           "name": "positif_ou_nul",
           "arguments": [
             {
-              "type": "sum_expression",
+              "type": "sum",
               "operands": [
                 {
-                  "type": "product_expression",
+                  "type": "product",
                   "operands": [
                     {
                       "type": "symbol",
                       "value": "LIMHR1"
                     },
                     {
-                      "type": "sum_expression",
+                      "type": "sum",
                       "operands": [
                         {
                           "type": "integer",
@@ -437,23 +398,17 @@
                           "type": "symbol",
                           "value": "BOOL_0AM"
                         }
-                      ],
-                      "operators": [
-                        "+"
                       ]
                     }
-                  ],
-                  "operators": [
-                    "*"
                   ]
                 },
                 {
-                  "type": "symbol",
-                  "value": "HRBTRFR1"
+                  "type": "negate",
+                  "operand": {
+                    "type": "symbol",
+                    "value": "HRBTRFR1"
+                  }
                 }
-              ],
-              "operators": [
-                "-"
               ]
             }
           ]
@@ -477,26 +432,26 @@
           "name": "positif",
           "arguments": [
             {
-              "type": "product_expression",
+              "type": "product",
               "operands": [
                 {
                   "type": "function_call",
                   "name": "null",
                   "arguments": [
                     {
-                      "type": "sum_expression",
+                      "type": "sum",
                       "operands": [
                         {
                           "type": "integer",
                           "value": 2
                         },
                         {
-                          "type": "symbol",
-                          "value": "HRNBTRFR"
+                          "type": "negate",
+                          "operand": {
+                            "type": "symbol",
+                            "value": "HRNBTRFR"
+                          }
                         }
-                      ],
-                      "operators": [
-                        "-"
                       ]
                     }
                   ]
@@ -516,7 +471,7 @@
                   "name": "positif",
                   "arguments": [
                     {
-                      "type": "product_expression",
+                      "type": "product",
                       "operands": [
                         {
                           "type": "symbol",
@@ -526,52 +481,41 @@
                           "type": "symbol",
                           "value": "HRLIMBTRFR2"
                         }
-                      ],
-                      "operators": [
-                        "*"
                       ]
                     }
                   ]
                 },
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
                       "type": "integer",
                       "value": 1
                     },
                     {
-                      "type": "function_call",
-                      "name": "positif",
-                      "arguments": [
-                        {
-                          "type": "sum_expression",
-                          "operands": [
-                            {
-                              "type": "symbol",
-                              "value": "CASECHR"
-                            },
-                            {
-                              "type": "integer",
-                              "value": 0
-                            }
-                          ],
-                          "operators": [
-                            "+"
-                          ]
-                        }
-                      ]
+                      "type": "negate",
+                      "operand": {
+                        "type": "function_call",
+                        "name": "positif",
+                        "arguments": [
+                          {
+                            "type": "sum",
+                            "operands": [
+                              {
+                                "type": "symbol",
+                                "value": "CASECHR"
+                              },
+                              {
+                                "type": "integer",
+                                "value": 0
+                              }
+                            ]
+                          }
+                        ]
+                      }
                     }
-                  ],
-                  "operators": [
-                    "-"
                   ]
                 }
-              ],
-              "operators": [
-                "*",
-                "*",
-                "*"
               ]
             }
           ]
@@ -595,31 +539,31 @@
           "name": "arr",
           "arguments": [
             {
-              "type": "product_expression",
+              "type": "product",
               "operands": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
                       "type": "symbol",
                       "value": "REVKIREHR"
                     },
                     {
-                      "type": "symbol",
-                      "value": "HRMOYBTRFR"
+                      "type": "negate",
+                      "operand": {
+                        "type": "symbol",
+                        "value": "HRMOYBTRFR"
+                      }
                     }
-                  ],
-                  "operators": [
-                    "-"
                   ]
                 },
                 {
-                  "type": "integer",
-                  "value": 2
+                  "type": "invert",
+                  "operand": {
+                    "type": "integer",
+                    "value": 2
+                  }
                 }
-              ],
-              "operators": [
-                "/"
               ]
             }
           ]
@@ -639,7 +583,7 @@
         "type": "formula",
         "name": "HRBASELISSE",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
               "type": "symbol",
@@ -649,9 +593,6 @@
               "type": "symbol",
               "value": "HRMOYBTRFR"
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -669,27 +610,27 @@
         "type": "formula",
         "name": "CHRREEL1",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
-              "type": "product_expression",
+              "type": "product",
               "operands": [
                 {
                   "type": "function_call",
                   "name": "positif_ou_nul",
                   "arguments": [
                     {
-                      "type": "sum_expression",
+                      "type": "sum",
                       "operands": [
                         {
-                          "type": "product_expression",
+                          "type": "product",
                           "operands": [
                             {
                               "type": "symbol",
                               "value": "LIMHRTX1"
                             },
                             {
-                              "type": "sum_expression",
+                              "type": "sum",
                               "operands": [
                                 {
                                   "type": "integer",
@@ -699,68 +640,56 @@
                                   "type": "symbol",
                                   "value": "BOOL_0AM"
                                 }
-                              ],
-                              "operators": [
-                                "+"
                               ]
                             }
-                          ],
-                          "operators": [
-                            "*"
                           ]
                         },
                         {
-                          "type": "symbol",
-                          "value": "REVKIREHR"
+                          "type": "negate",
+                          "operand": {
+                            "type": "symbol",
+                            "value": "REVKIREHR"
+                          }
                         }
-                      ],
-                      "operators": [
-                        "-"
                       ]
                     }
                   ]
                 },
                 {
-                  "type": "product_expression",
+                  "type": "product",
                   "operands": [
                     {
-                      "type": "sum_expression",
+                      "type": "sum",
                       "operands": [
                         {
                           "type": "symbol",
                           "value": "REVKIREHR"
                         },
                         {
-                          "type": "product_expression",
-                          "operands": [
-                            {
-                              "type": "symbol",
-                              "value": "LIMHR1"
-                            },
-                            {
-                              "type": "sum_expression",
-                              "operands": [
-                                {
-                                  "type": "integer",
-                                  "value": 1
-                                },
-                                {
-                                  "type": "symbol",
-                                  "value": "BOOL_0AM"
-                                }
-                              ],
-                              "operators": [
-                                "+"
-                              ]
-                            }
-                          ],
-                          "operators": [
-                            "*"
-                          ]
+                          "type": "negate",
+                          "operand": {
+                            "type": "product",
+                            "operands": [
+                              {
+                                "type": "symbol",
+                                "value": "LIMHR1"
+                              },
+                              {
+                                "type": "sum",
+                                "operands": [
+                                  {
+                                    "type": "integer",
+                                    "value": 1
+                                  },
+                                  {
+                                    "type": "symbol",
+                                    "value": "BOOL_0AM"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
                         }
-                      ],
-                      "operators": [
-                        "-"
                       ]
                     },
                     {
@@ -768,32 +697,28 @@
                       "value": "TXHR1"
                     },
                     {
-                      "type": "integer",
-                      "value": 100
+                      "type": "invert",
+                      "operand": {
+                        "type": "integer",
+                        "value": 100
+                      }
                     }
-                  ],
-                  "operators": [
-                    "*",
-                    "/"
                   ]
                 }
-              ],
-              "operators": [
-                "*"
               ]
             },
             {
-              "type": "product_expression",
+              "type": "product",
               "operands": [
                 {
-                  "type": "product_expression",
+                  "type": "product",
                   "operands": [
                     {
                       "type": "symbol",
                       "value": "LIMHR1"
                     },
                     {
-                      "type": "sum_expression",
+                      "type": "sum",
                       "operands": [
                         {
                           "type": "integer",
@@ -803,9 +728,6 @@
                           "type": "symbol",
                           "value": "BOOL_0AM"
                         }
-                      ],
-                      "operators": [
-                        "+"
                       ]
                     },
                     {
@@ -813,14 +735,12 @@
                       "value": "TXHR1"
                     },
                     {
-                      "type": "integer",
-                      "value": 100
+                      "type": "invert",
+                      "operand": {
+                        "type": "integer",
+                        "value": 100
+                      }
                     }
-                  ],
-                  "operators": [
-                    "*",
-                    "*",
-                    "/"
                   ]
                 },
                 {
@@ -828,55 +748,43 @@
                   "name": "positif",
                   "arguments": [
                     {
-                      "type": "sum_expression",
+                      "type": "sum",
                       "operands": [
                         {
                           "type": "symbol",
                           "value": "REVKIREHR"
                         },
                         {
-                          "type": "product_expression",
-                          "operands": [
-                            {
-                              "type": "symbol",
-                              "value": "LIMHRTX1"
-                            },
-                            {
-                              "type": "sum_expression",
-                              "operands": [
-                                {
-                                  "type": "integer",
-                                  "value": 1
-                                },
-                                {
-                                  "type": "symbol",
-                                  "value": "BOOL_0AM"
-                                }
-                              ],
-                              "operators": [
-                                "+"
-                              ]
-                            }
-                          ],
-                          "operators": [
-                            "*"
-                          ]
+                          "type": "negate",
+                          "operand": {
+                            "type": "product",
+                            "operands": [
+                              {
+                                "type": "symbol",
+                                "value": "LIMHRTX1"
+                              },
+                              {
+                                "type": "sum",
+                                "operands": [
+                                  {
+                                    "type": "integer",
+                                    "value": 1
+                                  },
+                                  {
+                                    "type": "symbol",
+                                    "value": "BOOL_0AM"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
                         }
-                      ],
-                      "operators": [
-                        "-"
                       ]
                     }
                   ]
                 }
-              ],
-              "operators": [
-                "*"
               ]
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -902,46 +810,40 @@
               "value": 0
             },
             {
-              "type": "product_expression",
+              "type": "product",
               "operands": [
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
                       "type": "symbol",
                       "value": "REVKIREHR"
                     },
                     {
-                      "type": "product_expression",
-                      "operands": [
-                        {
-                          "type": "symbol",
-                          "value": "LIMHR2"
-                        },
-                        {
-                          "type": "sum_expression",
-                          "operands": [
-                            {
-                              "type": "integer",
-                              "value": 1
-                            },
-                            {
-                              "type": "symbol",
-                              "value": "BOOL_0AM"
-                            }
-                          ],
-                          "operators": [
-                            "+"
-                          ]
-                        }
-                      ],
-                      "operators": [
-                        "*"
-                      ]
+                      "type": "negate",
+                      "operand": {
+                        "type": "product",
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "LIMHR2"
+                          },
+                          {
+                            "type": "sum",
+                            "operands": [
+                              {
+                                "type": "integer",
+                                "value": 1
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "BOOL_0AM"
+                              }
+                            ]
+                          }
+                        ]
+                      }
                     }
-                  ],
-                  "operators": [
-                    "-"
                   ]
                 },
                 {
@@ -949,13 +851,12 @@
                   "value": "TXHR2"
                 },
                 {
-                  "type": "integer",
-                  "value": 100
+                  "type": "invert",
+                  "operand": {
+                    "type": "integer",
+                    "value": 100
+                  }
                 }
-              ],
-              "operators": [
-                "*",
-                "/"
               ]
             }
           ]
@@ -987,7 +888,7 @@
                   "value": 0
                 },
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
                       "type": "symbol",
@@ -997,9 +898,6 @@
                       "type": "symbol",
                       "value": "CHRREEL2"
                     }
-                  ],
-                  "operators": [
-                    "+"
                   ]
                 }
               ]
@@ -1025,27 +923,27 @@
           "name": "arr",
           "arguments": [
             {
-              "type": "sum_expression",
+              "type": "sum",
               "operands": [
                 {
-                  "type": "product_expression",
+                  "type": "product",
                   "operands": [
                     {
                       "type": "function_call",
                       "name": "positif_ou_nul",
                       "arguments": [
                         {
-                          "type": "sum_expression",
+                          "type": "sum",
                           "operands": [
                             {
-                              "type": "product_expression",
+                              "type": "product",
                               "operands": [
                                 {
                                   "type": "symbol",
                                   "value": "LIMHRTX1"
                                 },
                                 {
-                                  "type": "sum_expression",
+                                  "type": "sum",
                                   "operands": [
                                     {
                                       "type": "integer",
@@ -1055,68 +953,56 @@
                                       "type": "symbol",
                                       "value": "BOOL_0AM"
                                     }
-                                  ],
-                                  "operators": [
-                                    "+"
                                   ]
                                 }
-                              ],
-                              "operators": [
-                                "*"
                               ]
                             },
                             {
-                              "type": "symbol",
-                              "value": "HRBASELISSE"
+                              "type": "negate",
+                              "operand": {
+                                "type": "symbol",
+                                "value": "HRBASELISSE"
+                              }
                             }
-                          ],
-                          "operators": [
-                            "-"
                           ]
                         }
                       ]
                     },
                     {
-                      "type": "product_expression",
+                      "type": "product",
                       "operands": [
                         {
-                          "type": "sum_expression",
+                          "type": "sum",
                           "operands": [
                             {
                               "type": "symbol",
                               "value": "HRBASELISSE"
                             },
                             {
-                              "type": "product_expression",
-                              "operands": [
-                                {
-                                  "type": "symbol",
-                                  "value": "LIMHR1"
-                                },
-                                {
-                                  "type": "sum_expression",
-                                  "operands": [
-                                    {
-                                      "type": "integer",
-                                      "value": 1
-                                    },
-                                    {
-                                      "type": "symbol",
-                                      "value": "BOOL_0AM"
-                                    }
-                                  ],
-                                  "operators": [
-                                    "+"
-                                  ]
-                                }
-                              ],
-                              "operators": [
-                                "*"
-                              ]
+                              "type": "negate",
+                              "operand": {
+                                "type": "product",
+                                "operands": [
+                                  {
+                                    "type": "symbol",
+                                    "value": "LIMHR1"
+                                  },
+                                  {
+                                    "type": "sum",
+                                    "operands": [
+                                      {
+                                        "type": "integer",
+                                        "value": 1
+                                      },
+                                      {
+                                        "type": "symbol",
+                                        "value": "BOOL_0AM"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
                             }
-                          ],
-                          "operators": [
-                            "-"
                           ]
                         },
                         {
@@ -1124,32 +1010,28 @@
                           "value": "TXHR1"
                         },
                         {
-                          "type": "integer",
-                          "value": 100
+                          "type": "invert",
+                          "operand": {
+                            "type": "integer",
+                            "value": 100
+                          }
                         }
-                      ],
-                      "operators": [
-                        "*",
-                        "/"
                       ]
                     }
-                  ],
-                  "operators": [
-                    "*"
                   ]
                 },
                 {
-                  "type": "product_expression",
+                  "type": "product",
                   "operands": [
                     {
-                      "type": "product_expression",
+                      "type": "product",
                       "operands": [
                         {
                           "type": "symbol",
                           "value": "LIMHR1"
                         },
                         {
-                          "type": "sum_expression",
+                          "type": "sum",
                           "operands": [
                             {
                               "type": "integer",
@@ -1159,9 +1041,6 @@
                               "type": "symbol",
                               "value": "BOOL_0AM"
                             }
-                          ],
-                          "operators": [
-                            "+"
                           ]
                         },
                         {
@@ -1169,14 +1048,12 @@
                           "value": "TXHR1"
                         },
                         {
-                          "type": "integer",
-                          "value": 100
+                          "type": "invert",
+                          "operand": {
+                            "type": "integer",
+                            "value": 100
+                          }
                         }
-                      ],
-                      "operators": [
-                        "*",
-                        "*",
-                        "/"
                       ]
                     },
                     {
@@ -1184,55 +1061,43 @@
                       "name": "positif",
                       "arguments": [
                         {
-                          "type": "sum_expression",
+                          "type": "sum",
                           "operands": [
                             {
                               "type": "symbol",
                               "value": "HRBASELISSE"
                             },
                             {
-                              "type": "product_expression",
-                              "operands": [
-                                {
-                                  "type": "symbol",
-                                  "value": "LIMHRTX1"
-                                },
-                                {
-                                  "type": "sum_expression",
-                                  "operands": [
-                                    {
-                                      "type": "integer",
-                                      "value": 1
-                                    },
-                                    {
-                                      "type": "symbol",
-                                      "value": "BOOL_0AM"
-                                    }
-                                  ],
-                                  "operators": [
-                                    "+"
-                                  ]
-                                }
-                              ],
-                              "operators": [
-                                "*"
-                              ]
+                              "type": "negate",
+                              "operand": {
+                                "type": "product",
+                                "operands": [
+                                  {
+                                    "type": "symbol",
+                                    "value": "LIMHRTX1"
+                                  },
+                                  {
+                                    "type": "sum",
+                                    "operands": [
+                                      {
+                                        "type": "integer",
+                                        "value": 1
+                                      },
+                                      {
+                                        "type": "symbol",
+                                        "value": "BOOL_0AM"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
                             }
-                          ],
-                          "operators": [
-                            "-"
                           ]
                         }
                       ]
                     }
-                  ],
-                  "operators": [
-                    "*"
                   ]
                 }
-              ],
-              "operators": [
-                "+"
               ]
             }
           ]
@@ -1264,46 +1129,40 @@
                   "value": 0
                 },
                 {
-                  "type": "product_expression",
+                  "type": "product",
                   "operands": [
                     {
-                      "type": "sum_expression",
+                      "type": "sum",
                       "operands": [
                         {
                           "type": "symbol",
                           "value": "HRBASELISSE"
                         },
                         {
-                          "type": "product_expression",
-                          "operands": [
-                            {
-                              "type": "symbol",
-                              "value": "LIMHR2"
-                            },
-                            {
-                              "type": "sum_expression",
-                              "operands": [
-                                {
-                                  "type": "integer",
-                                  "value": 1
-                                },
-                                {
-                                  "type": "symbol",
-                                  "value": "BOOL_0AM"
-                                }
-                              ],
-                              "operators": [
-                                "+"
-                              ]
-                            }
-                          ],
-                          "operators": [
-                            "*"
-                          ]
+                          "type": "negate",
+                          "operand": {
+                            "type": "product",
+                            "operands": [
+                              {
+                                "type": "symbol",
+                                "value": "LIMHR2"
+                              },
+                              {
+                                "type": "sum",
+                                "operands": [
+                                  {
+                                    "type": "integer",
+                                    "value": 1
+                                  },
+                                  {
+                                    "type": "symbol",
+                                    "value": "BOOL_0AM"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
                         }
-                      ],
-                      "operators": [
-                        "-"
                       ]
                     },
                     {
@@ -1311,13 +1170,12 @@
                       "value": "TXHR2"
                     },
                     {
-                      "type": "integer",
-                      "value": 100
+                      "type": "invert",
+                      "operand": {
+                        "type": "integer",
+                        "value": 100
+                      }
                     }
-                  ],
-                  "operators": [
-                    "*",
-                    "/"
                   ]
                 }
               ]
@@ -1343,7 +1201,7 @@
           "name": "arr",
           "arguments": [
             {
-              "type": "product_expression",
+              "type": "product",
               "operands": [
                 {
                   "type": "function_call",
@@ -1354,7 +1212,7 @@
                       "value": 0
                     },
                     {
-                      "type": "sum_expression",
+                      "type": "sum",
                       "operands": [
                         {
                           "type": "symbol",
@@ -1364,9 +1222,6 @@
                           "type": "symbol",
                           "value": "CHRTHEO21"
                         }
-                      ],
-                      "operators": [
-                        "+"
                       ]
                     }
                   ]
@@ -1375,9 +1230,6 @@
                   "type": "integer",
                   "value": 2
                 }
-              ],
-              "operators": [
-                "*"
               ]
             }
           ]
@@ -1405,43 +1257,37 @@
               "value": 0
             },
             {
-              "type": "sum_expression",
+              "type": "sum",
               "operands": [
                 {
                   "type": "symbol",
                   "value": "REVKIREHR"
                 },
                 {
-                  "type": "product_expression",
-                  "operands": [
-                    {
-                      "type": "symbol",
-                      "value": "LIMHR1"
-                    },
-                    {
-                      "type": "sum_expression",
-                      "operands": [
-                        {
-                          "type": "integer",
-                          "value": 1
-                        },
-                        {
-                          "type": "symbol",
-                          "value": "BOOL_0AM"
-                        }
-                      ],
-                      "operators": [
-                        "+"
-                      ]
-                    }
-                  ],
-                  "operators": [
-                    "*"
-                  ]
+                  "type": "negate",
+                  "operand": {
+                    "type": "product",
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "LIMHR1"
+                      },
+                      {
+                        "type": "sum",
+                        "operands": [
+                          {
+                            "type": "integer",
+                            "value": 1
+                          },
+                          {
+                            "type": "symbol",
+                            "value": "BOOL_0AM"
+                          }
+                        ]
+                      }
+                    ]
+                  }
                 }
-              ],
-              "operators": [
-                "-"
               ]
             }
           ]
@@ -1461,10 +1307,10 @@
         "type": "formula",
         "name": "CHRAVANT",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
-              "type": "product_expression",
+              "type": "product",
               "operands": [
                 {
                   "type": "function_call",
@@ -1494,42 +1340,33 @@
                   "type": "symbol",
                   "value": "HRCONDTHEO"
                 }
-              ],
-              "operators": [
-                "*"
               ]
             },
             {
-              "type": "product_expression",
+              "type": "product",
               "operands": [
                 {
                   "type": "symbol",
                   "value": "CHRREELTOT"
                 },
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
                       "type": "integer",
                       "value": 1
                     },
                     {
-                      "type": "symbol",
-                      "value": "HRCONDTHEO"
+                      "type": "negate",
+                      "operand": {
+                        "type": "symbol",
+                        "value": "HRCONDTHEO"
+                      }
                     }
-                  ],
-                  "operators": [
-                    "-"
                   ]
                 }
-              ],
-              "operators": [
-                "*"
               ]
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -1551,14 +1388,14 @@
           "name": "arr",
           "arguments": [
             {
-              "type": "product_expression",
+              "type": "product",
               "operands": [
                 {
                   "type": "symbol",
                   "value": "CHRAVANT"
                 },
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
                       "type": "symbol",
@@ -1566,26 +1403,24 @@
                     },
                     {
                       "type": "symbol",
-                      "value": "TEFFHRC"
+                      "value": "COD8YJ"
                     },
                     {
-                      "type": "symbol",
-                      "value": "COD8YJ"
+                      "type": "negate",
+                      "operand": {
+                        "type": "symbol",
+                        "value": "TEFFHRC"
+                      }
                     }
-                  ],
-                  "operators": [
-                    "-",
-                    "+"
                   ]
                 },
                 {
-                  "type": "symbol",
-                  "value": "REVKIREHR"
+                  "type": "invert",
+                  "operand": {
+                    "type": "symbol",
+                    "value": "REVKIREHR"
+                  }
                 }
-              ],
-              "operators": [
-                "*",
-                "/"
               ]
             }
           ]
@@ -1605,68 +1440,62 @@
         "type": "formula",
         "name": "CHRAPRES",
         "expression": {
-          "type": "sum_expression",
+          "type": "sum",
           "operands": [
             {
-              "type": "product_expression",
+              "type": "product",
               "operands": [
                 {
                   "type": "symbol",
                   "value": "CHRAVANT"
                 },
                 {
-                  "type": "sum_expression",
+                  "type": "sum",
                   "operands": [
                     {
                       "type": "integer",
                       "value": 1
                     },
                     {
-                      "type": "function_call",
-                      "name": "positif",
-                      "arguments": [
-                        {
-                          "type": "sum_expression",
-                          "operands": [
-                            {
-                              "type": "function_call",
-                              "name": "positif",
-                              "arguments": [
-                                {
-                                  "type": "symbol",
-                                  "value": "IPMOND"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "function_call",
-                              "name": "positif",
-                              "arguments": [
-                                {
-                                  "type": "symbol",
-                                  "value": "INDTEFF"
-                                }
-                              ]
-                            }
-                          ],
-                          "operators": [
-                            "+"
-                          ]
-                        }
-                      ]
+                      "type": "negate",
+                      "operand": {
+                        "type": "function_call",
+                        "name": "positif",
+                        "arguments": [
+                          {
+                            "type": "sum",
+                            "operands": [
+                              {
+                                "type": "function_call",
+                                "name": "positif",
+                                "arguments": [
+                                  {
+                                    "type": "symbol",
+                                    "value": "IPMOND"
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "function_call",
+                                "name": "positif",
+                                "arguments": [
+                                  {
+                                    "type": "symbol",
+                                    "value": "INDTEFF"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
                     }
-                  ],
-                  "operators": [
-                    "-"
                   ]
                 }
-              ],
-              "operators": [
-                "*"
               ]
             },
             {
-              "type": "product_expression",
+              "type": "product",
               "operands": [
                 {
                   "type": "symbol",
@@ -1677,7 +1506,7 @@
                   "name": "positif",
                   "arguments": [
                     {
-                      "type": "sum_expression",
+                      "type": "sum",
                       "operands": [
                         {
                           "type": "function_call",
@@ -1699,21 +1528,12 @@
                             }
                           ]
                         }
-                      ],
-                      "operators": [
-                        "+"
                       ]
                     }
                   ]
                 }
-              ],
-              "operators": [
-                "*"
               ]
             }
-          ],
-          "operators": [
-            "+"
           ]
         },
         "linecol": [
@@ -1759,19 +1579,19 @@
               "value": 0
             },
             {
-              "type": "sum_expression",
+              "type": "sum",
               "operands": [
                 {
                   "type": "symbol",
                   "value": "CHRAPRES"
                 },
                 {
-                  "type": "symbol",
-                  "value": "CICHR"
+                  "type": "negate",
+                  "operand": {
+                    "type": "symbol",
+                    "value": "CICHR"
+                  }
                 }
-              ],
-              "operators": [
-                "-"
               ]
             }
           ]

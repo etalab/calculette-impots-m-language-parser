@@ -100,7 +100,7 @@
                                 {
                                   "type": "comparaison",
                                   "left_operand": {
-                                    "type": "sum_expression",
+                                    "type": "sum",
                                     "operands": [
                                       {
                                         "type": "symbol",
@@ -110,9 +110,6 @@
                                         "type": "integer",
                                         "value": 0
                                       }
-                                    ],
-                                    "operators": [
-                                      "+"
                                     ]
                                   },
                                   "operator": "=",
@@ -138,7 +135,7 @@
                                     ]
                                   },
                                   "expression": {
-                                    "type": "sum_expression",
+                                    "type": "sum",
                                     "operands": [
                                       {
                                         "type": "symbol",
@@ -148,9 +145,6 @@
                                         "type": "integer",
                                         "value": 0
                                       }
-                                    ],
-                                    "operators": [
-                                      "+"
                                     ]
                                   }
                                 }
@@ -276,7 +270,7 @@
                                 {
                                   "type": "comparaison",
                                   "left_operand": {
-                                    "type": "sum_expression",
+                                    "type": "sum",
                                     "operands": [
                                       {
                                         "type": "symbol",
@@ -286,9 +280,6 @@
                                         "type": "integer",
                                         "value": 0
                                       }
-                                    ],
-                                    "operators": [
-                                      "+"
                                     ]
                                   },
                                   "operator": "=",
@@ -314,7 +305,7 @@
                                     ]
                                   },
                                   "expression": {
-                                    "type": "sum_expression",
+                                    "type": "sum",
                                     "operands": [
                                       {
                                         "type": "symbol",
@@ -324,9 +315,6 @@
                                         "type": "integer",
                                         "value": 0
                                       }
-                                    ],
-                                    "operators": [
-                                      "+"
                                     ]
                                   }
                                 }
@@ -452,7 +440,7 @@
                             {
                               "type": "comparaison",
                               "left_operand": {
-                                "type": "sum_expression",
+                                "type": "sum",
                                 "operands": [
                                   {
                                     "type": "symbol",
@@ -462,9 +450,6 @@
                                     "type": "integer",
                                     "value": 0
                                   }
-                                ],
-                                "operators": [
-                                  "+"
                                 ]
                               },
                               "operator": "=",
@@ -490,7 +475,7 @@
                                 ]
                               },
                               "expression": {
-                                "type": "sum_expression",
+                                "type": "sum",
                                 "operands": [
                                   {
                                     "type": "symbol",
@@ -500,9 +485,6 @@
                                     "type": "integer",
                                     "value": 0
                                   }
-                                ],
-                                "operators": [
-                                  "+"
                                 ]
                               }
                             }
@@ -618,7 +600,7 @@
                             {
                               "type": "comparaison",
                               "left_operand": {
-                                "type": "sum_expression",
+                                "type": "sum",
                                 "operands": [
                                   {
                                     "type": "symbol",
@@ -628,9 +610,6 @@
                                     "type": "integer",
                                     "value": 0
                                   }
-                                ],
-                                "operators": [
-                                  "+"
                                 ]
                               },
                               "operator": "=",
@@ -656,7 +635,7 @@
                                 ]
                               },
                               "expression": {
-                                "type": "sum_expression",
+                                "type": "sum",
                                 "operands": [
                                   {
                                     "type": "symbol",
@@ -666,9 +645,6 @@
                                     "type": "integer",
                                     "value": 0
                                   }
-                                ],
-                                "operators": [
-                                  "+"
                                 ]
                               }
                             }
@@ -763,7 +739,7 @@
                 {
                   "type": "comparaison",
                   "left_operand": {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -773,9 +749,6 @@
                         "type": "integer",
                         "value": 0
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   },
                   "operator": "=",
@@ -814,7 +787,7 @@
                 {
                   "type": "comparaison",
                   "left_operand": {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -824,9 +797,6 @@
                         "type": "integer",
                         "value": 0
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   },
                   "operator": "=",
@@ -1293,19 +1263,19 @@
                     "name": "inf",
                     "arguments": [
                       {
-                        "type": "product_expression",
+                        "type": "product",
                         "operands": [
                           {
                             "type": "symbol",
                             "value": "MOISAN"
                           },
                           {
-                            "type": "integer",
-                            "value": 10000
+                            "type": "invert",
+                            "operand": {
+                              "type": "integer",
+                              "value": 10000
+                            }
                           }
-                        ],
-                        "operators": [
-                          "/"
                         ]
                       }
                     ]
@@ -1324,19 +1294,19 @@
                     "name": "inf",
                     "arguments": [
                       {
-                        "type": "product_expression",
+                        "type": "product",
                         "operands": [
                           {
                             "type": "symbol",
                             "value": "MOISAN2"
                           },
                           {
-                            "type": "integer",
-                            "value": 10000
+                            "type": "invert",
+                            "operand": {
+                              "type": "integer",
+                              "value": 10000
+                            }
                           }
-                        ],
-                        "operators": [
-                          "/"
                         ]
                       }
                     ]
@@ -1404,68 +1374,65 @@
                         "name": "arr",
                         "arguments": [
                           {
-                            "type": "product_expression",
+                            "type": "product",
                             "operands": [
                               {
-                                "type": "sum_expression",
+                                "type": "sum",
                                 "operands": [
                                   {
-                                    "type": "product_expression",
+                                    "type": "product",
                                     "operands": [
                                       {
                                         "type": "symbol",
                                         "value": "MOISAN"
                                       },
                                       {
-                                        "type": "integer",
-                                        "value": 10000
+                                        "type": "invert",
+                                        "operand": {
+                                          "type": "integer",
+                                          "value": 10000
+                                        }
                                       }
-                                    ],
-                                    "operators": [
-                                      "/"
                                     ]
                                   },
                                   {
-                                    "type": "function_call",
-                                    "name": "inf",
-                                    "arguments": [
-                                      {
-                                        "type": "product_expression",
-                                        "operands": [
-                                          {
-                                            "type": "symbol",
-                                            "value": "MOISAN"
-                                          },
-                                          {
-                                            "type": "integer",
-                                            "value": 10000
-                                          }
-                                        ],
-                                        "operators": [
-                                          "/"
-                                        ]
-                                      }
-                                    ]
+                                    "type": "negate",
+                                    "operand": {
+                                      "type": "function_call",
+                                      "name": "inf",
+                                      "arguments": [
+                                        {
+                                          "type": "product",
+                                          "operands": [
+                                            {
+                                              "type": "symbol",
+                                              "value": "MOISAN"
+                                            },
+                                            {
+                                              "type": "invert",
+                                              "operand": {
+                                                "type": "integer",
+                                                "value": 10000
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
                                   }
-                                ],
-                                "operators": [
-                                  "-"
                                 ]
                               },
                               {
                                 "type": "integer",
                                 "value": 10000
                               }
-                            ],
-                            "operators": [
-                              "*"
                             ]
                           }
                         ]
                       },
                       "operator": "!=",
                       "right_operand": {
-                        "type": "sum_expression",
+                        "type": "sum",
                         "operands": [
                           {
                             "type": "symbol",
@@ -1475,9 +1442,6 @@
                             "type": "integer",
                             "value": 1
                           }
-                        ],
-                        "operators": [
-                          "+"
                         ]
                       }
                     },
@@ -1488,68 +1452,65 @@
                         "name": "arr",
                         "arguments": [
                           {
-                            "type": "product_expression",
+                            "type": "product",
                             "operands": [
                               {
-                                "type": "sum_expression",
+                                "type": "sum",
                                 "operands": [
                                   {
-                                    "type": "product_expression",
+                                    "type": "product",
                                     "operands": [
                                       {
                                         "type": "symbol",
                                         "value": "MOISAN"
                                       },
                                       {
-                                        "type": "integer",
-                                        "value": 10000
+                                        "type": "invert",
+                                        "operand": {
+                                          "type": "integer",
+                                          "value": 10000
+                                        }
                                       }
-                                    ],
-                                    "operators": [
-                                      "/"
                                     ]
                                   },
                                   {
-                                    "type": "function_call",
-                                    "name": "inf",
-                                    "arguments": [
-                                      {
-                                        "type": "product_expression",
-                                        "operands": [
-                                          {
-                                            "type": "symbol",
-                                            "value": "MOISAN"
-                                          },
-                                          {
-                                            "type": "integer",
-                                            "value": 10000
-                                          }
-                                        ],
-                                        "operators": [
-                                          "/"
-                                        ]
-                                      }
-                                    ]
+                                    "type": "negate",
+                                    "operand": {
+                                      "type": "function_call",
+                                      "name": "inf",
+                                      "arguments": [
+                                        {
+                                          "type": "product",
+                                          "operands": [
+                                            {
+                                              "type": "symbol",
+                                              "value": "MOISAN"
+                                            },
+                                            {
+                                              "type": "invert",
+                                              "operand": {
+                                                "type": "integer",
+                                                "value": 10000
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
                                   }
-                                ],
-                                "operators": [
-                                  "-"
                                 ]
                               },
                               {
                                 "type": "integer",
                                 "value": 10000
                               }
-                            ],
-                            "operators": [
-                              "*"
                             ]
                           }
                         ]
                       },
                       "operator": "!=",
                       "right_operand": {
-                        "type": "sum_expression",
+                        "type": "sum",
                         "operands": [
                           {
                             "type": "symbol",
@@ -1559,9 +1520,6 @@
                             "type": "integer",
                             "value": 2
                           }
-                        ],
-                        "operators": [
-                          "+"
                         ]
                       }
                     },
@@ -1572,68 +1530,65 @@
                         "name": "arr",
                         "arguments": [
                           {
-                            "type": "product_expression",
+                            "type": "product",
                             "operands": [
                               {
-                                "type": "sum_expression",
+                                "type": "sum",
                                 "operands": [
                                   {
-                                    "type": "product_expression",
+                                    "type": "product",
                                     "operands": [
                                       {
                                         "type": "symbol",
                                         "value": "MOISAN"
                                       },
                                       {
-                                        "type": "integer",
-                                        "value": 10000
+                                        "type": "invert",
+                                        "operand": {
+                                          "type": "integer",
+                                          "value": 10000
+                                        }
                                       }
-                                    ],
-                                    "operators": [
-                                      "/"
                                     ]
                                   },
                                   {
-                                    "type": "function_call",
-                                    "name": "inf",
-                                    "arguments": [
-                                      {
-                                        "type": "product_expression",
-                                        "operands": [
-                                          {
-                                            "type": "symbol",
-                                            "value": "MOISAN"
-                                          },
-                                          {
-                                            "type": "integer",
-                                            "value": 10000
-                                          }
-                                        ],
-                                        "operators": [
-                                          "/"
-                                        ]
-                                      }
-                                    ]
+                                    "type": "negate",
+                                    "operand": {
+                                      "type": "function_call",
+                                      "name": "inf",
+                                      "arguments": [
+                                        {
+                                          "type": "product",
+                                          "operands": [
+                                            {
+                                              "type": "symbol",
+                                              "value": "MOISAN"
+                                            },
+                                            {
+                                              "type": "invert",
+                                              "operand": {
+                                                "type": "integer",
+                                                "value": 10000
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
                                   }
-                                ],
-                                "operators": [
-                                  "-"
                                 ]
                               },
                               {
                                 "type": "integer",
                                 "value": 10000
                               }
-                            ],
-                            "operators": [
-                              "*"
                             ]
                           }
                         ]
                       },
                       "operator": "!=",
                       "right_operand": {
-                        "type": "sum_expression",
+                        "type": "sum",
                         "operands": [
                           {
                             "type": "symbol",
@@ -1643,9 +1598,6 @@
                             "type": "integer",
                             "value": 3
                           }
-                        ],
-                        "operators": [
-                          "+"
                         ]
                       }
                     },
@@ -1656,68 +1608,65 @@
                         "name": "arr",
                         "arguments": [
                           {
-                            "type": "product_expression",
+                            "type": "product",
                             "operands": [
                               {
-                                "type": "sum_expression",
+                                "type": "sum",
                                 "operands": [
                                   {
-                                    "type": "product_expression",
+                                    "type": "product",
                                     "operands": [
                                       {
                                         "type": "symbol",
                                         "value": "MOISAN"
                                       },
                                       {
-                                        "type": "integer",
-                                        "value": 10000
+                                        "type": "invert",
+                                        "operand": {
+                                          "type": "integer",
+                                          "value": 10000
+                                        }
                                       }
-                                    ],
-                                    "operators": [
-                                      "/"
                                     ]
                                   },
                                   {
-                                    "type": "function_call",
-                                    "name": "inf",
-                                    "arguments": [
-                                      {
-                                        "type": "product_expression",
-                                        "operands": [
-                                          {
-                                            "type": "symbol",
-                                            "value": "MOISAN"
-                                          },
-                                          {
-                                            "type": "integer",
-                                            "value": 10000
-                                          }
-                                        ],
-                                        "operators": [
-                                          "/"
-                                        ]
-                                      }
-                                    ]
+                                    "type": "negate",
+                                    "operand": {
+                                      "type": "function_call",
+                                      "name": "inf",
+                                      "arguments": [
+                                        {
+                                          "type": "product",
+                                          "operands": [
+                                            {
+                                              "type": "symbol",
+                                              "value": "MOISAN"
+                                            },
+                                            {
+                                              "type": "invert",
+                                              "operand": {
+                                                "type": "integer",
+                                                "value": 10000
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
                                   }
-                                ],
-                                "operators": [
-                                  "-"
                                 ]
                               },
                               {
                                 "type": "integer",
                                 "value": 10000
                               }
-                            ],
-                            "operators": [
-                              "*"
                             ]
                           }
                         ]
                       },
                       "operator": "!=",
                       "right_operand": {
-                        "type": "sum_expression",
+                        "type": "sum",
                         "operands": [
                           {
                             "type": "symbol",
@@ -1727,9 +1676,6 @@
                             "type": "integer",
                             "value": 4
                           }
-                        ],
-                        "operators": [
-                          "+"
                         ]
                       }
                     }
@@ -1750,68 +1696,65 @@
                         "name": "arr",
                         "arguments": [
                           {
-                            "type": "product_expression",
+                            "type": "product",
                             "operands": [
                               {
-                                "type": "sum_expression",
+                                "type": "sum",
                                 "operands": [
                                   {
-                                    "type": "product_expression",
+                                    "type": "product",
                                     "operands": [
                                       {
                                         "type": "symbol",
                                         "value": "MOISAN2"
                                       },
                                       {
-                                        "type": "integer",
-                                        "value": 10000
+                                        "type": "invert",
+                                        "operand": {
+                                          "type": "integer",
+                                          "value": 10000
+                                        }
                                       }
-                                    ],
-                                    "operators": [
-                                      "/"
                                     ]
                                   },
                                   {
-                                    "type": "function_call",
-                                    "name": "inf",
-                                    "arguments": [
-                                      {
-                                        "type": "product_expression",
-                                        "operands": [
-                                          {
-                                            "type": "symbol",
-                                            "value": "MOISAN2"
-                                          },
-                                          {
-                                            "type": "integer",
-                                            "value": 10000
-                                          }
-                                        ],
-                                        "operators": [
-                                          "/"
-                                        ]
-                                      }
-                                    ]
+                                    "type": "negate",
+                                    "operand": {
+                                      "type": "function_call",
+                                      "name": "inf",
+                                      "arguments": [
+                                        {
+                                          "type": "product",
+                                          "operands": [
+                                            {
+                                              "type": "symbol",
+                                              "value": "MOISAN2"
+                                            },
+                                            {
+                                              "type": "invert",
+                                              "operand": {
+                                                "type": "integer",
+                                                "value": 10000
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
                                   }
-                                ],
-                                "operators": [
-                                  "-"
                                 ]
                               },
                               {
                                 "type": "integer",
                                 "value": 10000
                               }
-                            ],
-                            "operators": [
-                              "*"
                             ]
                           }
                         ]
                       },
                       "operator": "!=",
                       "right_operand": {
-                        "type": "sum_expression",
+                        "type": "sum",
                         "operands": [
                           {
                             "type": "symbol",
@@ -1821,9 +1764,6 @@
                             "type": "integer",
                             "value": 1
                           }
-                        ],
-                        "operators": [
-                          "+"
                         ]
                       }
                     },
@@ -1834,68 +1774,65 @@
                         "name": "arr",
                         "arguments": [
                           {
-                            "type": "product_expression",
+                            "type": "product",
                             "operands": [
                               {
-                                "type": "sum_expression",
+                                "type": "sum",
                                 "operands": [
                                   {
-                                    "type": "product_expression",
+                                    "type": "product",
                                     "operands": [
                                       {
                                         "type": "symbol",
                                         "value": "MOISAN2"
                                       },
                                       {
-                                        "type": "integer",
-                                        "value": 10000
+                                        "type": "invert",
+                                        "operand": {
+                                          "type": "integer",
+                                          "value": 10000
+                                        }
                                       }
-                                    ],
-                                    "operators": [
-                                      "/"
                                     ]
                                   },
                                   {
-                                    "type": "function_call",
-                                    "name": "inf",
-                                    "arguments": [
-                                      {
-                                        "type": "product_expression",
-                                        "operands": [
-                                          {
-                                            "type": "symbol",
-                                            "value": "MOISAN2"
-                                          },
-                                          {
-                                            "type": "integer",
-                                            "value": 10000
-                                          }
-                                        ],
-                                        "operators": [
-                                          "/"
-                                        ]
-                                      }
-                                    ]
+                                    "type": "negate",
+                                    "operand": {
+                                      "type": "function_call",
+                                      "name": "inf",
+                                      "arguments": [
+                                        {
+                                          "type": "product",
+                                          "operands": [
+                                            {
+                                              "type": "symbol",
+                                              "value": "MOISAN2"
+                                            },
+                                            {
+                                              "type": "invert",
+                                              "operand": {
+                                                "type": "integer",
+                                                "value": 10000
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
                                   }
-                                ],
-                                "operators": [
-                                  "-"
                                 ]
                               },
                               {
                                 "type": "integer",
                                 "value": 10000
                               }
-                            ],
-                            "operators": [
-                              "*"
                             ]
                           }
                         ]
                       },
                       "operator": "!=",
                       "right_operand": {
-                        "type": "sum_expression",
+                        "type": "sum",
                         "operands": [
                           {
                             "type": "symbol",
@@ -1905,9 +1842,6 @@
                             "type": "integer",
                             "value": 2
                           }
-                        ],
-                        "operators": [
-                          "+"
                         ]
                       }
                     },
@@ -1918,68 +1852,65 @@
                         "name": "arr",
                         "arguments": [
                           {
-                            "type": "product_expression",
+                            "type": "product",
                             "operands": [
                               {
-                                "type": "sum_expression",
+                                "type": "sum",
                                 "operands": [
                                   {
-                                    "type": "product_expression",
+                                    "type": "product",
                                     "operands": [
                                       {
                                         "type": "symbol",
                                         "value": "MOISAN2"
                                       },
                                       {
-                                        "type": "integer",
-                                        "value": 10000
+                                        "type": "invert",
+                                        "operand": {
+                                          "type": "integer",
+                                          "value": 10000
+                                        }
                                       }
-                                    ],
-                                    "operators": [
-                                      "/"
                                     ]
                                   },
                                   {
-                                    "type": "function_call",
-                                    "name": "inf",
-                                    "arguments": [
-                                      {
-                                        "type": "product_expression",
-                                        "operands": [
-                                          {
-                                            "type": "symbol",
-                                            "value": "MOISAN2"
-                                          },
-                                          {
-                                            "type": "integer",
-                                            "value": 10000
-                                          }
-                                        ],
-                                        "operators": [
-                                          "/"
-                                        ]
-                                      }
-                                    ]
+                                    "type": "negate",
+                                    "operand": {
+                                      "type": "function_call",
+                                      "name": "inf",
+                                      "arguments": [
+                                        {
+                                          "type": "product",
+                                          "operands": [
+                                            {
+                                              "type": "symbol",
+                                              "value": "MOISAN2"
+                                            },
+                                            {
+                                              "type": "invert",
+                                              "operand": {
+                                                "type": "integer",
+                                                "value": 10000
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
                                   }
-                                ],
-                                "operators": [
-                                  "-"
                                 ]
                               },
                               {
                                 "type": "integer",
                                 "value": 10000
                               }
-                            ],
-                            "operators": [
-                              "*"
                             ]
                           }
                         ]
                       },
                       "operator": "!=",
                       "right_operand": {
-                        "type": "sum_expression",
+                        "type": "sum",
                         "operands": [
                           {
                             "type": "symbol",
@@ -1989,9 +1920,6 @@
                             "type": "integer",
                             "value": 3
                           }
-                        ],
-                        "operators": [
-                          "+"
                         ]
                       }
                     },
@@ -2002,68 +1930,65 @@
                         "name": "arr",
                         "arguments": [
                           {
-                            "type": "product_expression",
+                            "type": "product",
                             "operands": [
                               {
-                                "type": "sum_expression",
+                                "type": "sum",
                                 "operands": [
                                   {
-                                    "type": "product_expression",
+                                    "type": "product",
                                     "operands": [
                                       {
                                         "type": "symbol",
                                         "value": "MOISAN2"
                                       },
                                       {
-                                        "type": "integer",
-                                        "value": 10000
+                                        "type": "invert",
+                                        "operand": {
+                                          "type": "integer",
+                                          "value": 10000
+                                        }
                                       }
-                                    ],
-                                    "operators": [
-                                      "/"
                                     ]
                                   },
                                   {
-                                    "type": "function_call",
-                                    "name": "inf",
-                                    "arguments": [
-                                      {
-                                        "type": "product_expression",
-                                        "operands": [
-                                          {
-                                            "type": "symbol",
-                                            "value": "MOISAN2"
-                                          },
-                                          {
-                                            "type": "integer",
-                                            "value": 10000
-                                          }
-                                        ],
-                                        "operators": [
-                                          "/"
-                                        ]
-                                      }
-                                    ]
+                                    "type": "negate",
+                                    "operand": {
+                                      "type": "function_call",
+                                      "name": "inf",
+                                      "arguments": [
+                                        {
+                                          "type": "product",
+                                          "operands": [
+                                            {
+                                              "type": "symbol",
+                                              "value": "MOISAN2"
+                                            },
+                                            {
+                                              "type": "invert",
+                                              "operand": {
+                                                "type": "integer",
+                                                "value": 10000
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
                                   }
-                                ],
-                                "operators": [
-                                  "-"
                                 ]
                               },
                               {
                                 "type": "integer",
                                 "value": 10000
                               }
-                            ],
-                            "operators": [
-                              "*"
                             ]
                           }
                         ]
                       },
                       "operator": "!=",
                       "right_operand": {
-                        "type": "sum_expression",
+                        "type": "sum",
                         "operands": [
                           {
                             "type": "symbol",
@@ -2073,9 +1998,6 @@
                             "type": "integer",
                             "value": 4
                           }
-                        ],
-                        "operators": [
-                          "+"
                         ]
                       }
                     },
@@ -2086,61 +2008,58 @@
                         "name": "arr",
                         "arguments": [
                           {
-                            "type": "product_expression",
+                            "type": "product",
                             "operands": [
                               {
-                                "type": "sum_expression",
+                                "type": "sum",
                                 "operands": [
                                   {
-                                    "type": "product_expression",
+                                    "type": "product",
                                     "operands": [
                                       {
                                         "type": "symbol",
                                         "value": "MOISAN2"
                                       },
                                       {
-                                        "type": "integer",
-                                        "value": 10000
+                                        "type": "invert",
+                                        "operand": {
+                                          "type": "integer",
+                                          "value": 10000
+                                        }
                                       }
-                                    ],
-                                    "operators": [
-                                      "/"
                                     ]
                                   },
                                   {
-                                    "type": "function_call",
-                                    "name": "inf",
-                                    "arguments": [
-                                      {
-                                        "type": "product_expression",
-                                        "operands": [
-                                          {
-                                            "type": "symbol",
-                                            "value": "MOISAN2"
-                                          },
-                                          {
-                                            "type": "integer",
-                                            "value": 10000
-                                          }
-                                        ],
-                                        "operators": [
-                                          "/"
-                                        ]
-                                      }
-                                    ]
+                                    "type": "negate",
+                                    "operand": {
+                                      "type": "function_call",
+                                      "name": "inf",
+                                      "arguments": [
+                                        {
+                                          "type": "product",
+                                          "operands": [
+                                            {
+                                              "type": "symbol",
+                                              "value": "MOISAN2"
+                                            },
+                                            {
+                                              "type": "invert",
+                                              "operand": {
+                                                "type": "integer",
+                                                "value": 10000
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
                                   }
-                                ],
-                                "operators": [
-                                  "-"
                                 ]
                               },
                               {
                                 "type": "integer",
                                 "value": 10000
                               }
-                            ],
-                            "operators": [
-                              "*"
                             ]
                           }
                         ]
@@ -2217,68 +2136,65 @@
                     "name": "arr",
                     "arguments": [
                       {
-                        "type": "product_expression",
+                        "type": "product",
                         "operands": [
                           {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
-                                "type": "product_expression",
+                                "type": "product",
                                 "operands": [
                                   {
                                     "type": "symbol",
                                     "value": "MOISAN"
                                   },
                                   {
-                                    "type": "integer",
-                                    "value": 10000
+                                    "type": "invert",
+                                    "operand": {
+                                      "type": "integer",
+                                      "value": 10000
+                                    }
                                   }
-                                ],
-                                "operators": [
-                                  "/"
                                 ]
                               },
                               {
-                                "type": "function_call",
-                                "name": "inf",
-                                "arguments": [
-                                  {
-                                    "type": "product_expression",
-                                    "operands": [
-                                      {
-                                        "type": "symbol",
-                                        "value": "MOISAN"
-                                      },
-                                      {
-                                        "type": "integer",
-                                        "value": 10000
-                                      }
-                                    ],
-                                    "operators": [
-                                      "/"
-                                    ]
-                                  }
-                                ]
+                                "type": "negate",
+                                "operand": {
+                                  "type": "function_call",
+                                  "name": "inf",
+                                  "arguments": [
+                                    {
+                                      "type": "product",
+                                      "operands": [
+                                        {
+                                          "type": "symbol",
+                                          "value": "MOISAN"
+                                        },
+                                        {
+                                          "type": "invert",
+                                          "operand": {
+                                            "type": "integer",
+                                            "value": 10000
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
                               }
-                            ],
-                            "operators": [
-                              "-"
                             ]
                           },
                           {
                             "type": "integer",
                             "value": 10000
                           }
-                        ],
-                        "operators": [
-                          "*"
                         ]
                       }
                     ]
                   },
                   "operator": "!=",
                   "right_operand": {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -2288,9 +2204,6 @@
                         "type": "integer",
                         "value": 1
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   }
                 },
@@ -2301,68 +2214,65 @@
                     "name": "arr",
                     "arguments": [
                       {
-                        "type": "product_expression",
+                        "type": "product",
                         "operands": [
                           {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
-                                "type": "product_expression",
+                                "type": "product",
                                 "operands": [
                                   {
                                     "type": "symbol",
                                     "value": "MOISAN"
                                   },
                                   {
-                                    "type": "integer",
-                                    "value": 10000
+                                    "type": "invert",
+                                    "operand": {
+                                      "type": "integer",
+                                      "value": 10000
+                                    }
                                   }
-                                ],
-                                "operators": [
-                                  "/"
                                 ]
                               },
                               {
-                                "type": "function_call",
-                                "name": "inf",
-                                "arguments": [
-                                  {
-                                    "type": "product_expression",
-                                    "operands": [
-                                      {
-                                        "type": "symbol",
-                                        "value": "MOISAN"
-                                      },
-                                      {
-                                        "type": "integer",
-                                        "value": 10000
-                                      }
-                                    ],
-                                    "operators": [
-                                      "/"
-                                    ]
-                                  }
-                                ]
+                                "type": "negate",
+                                "operand": {
+                                  "type": "function_call",
+                                  "name": "inf",
+                                  "arguments": [
+                                    {
+                                      "type": "product",
+                                      "operands": [
+                                        {
+                                          "type": "symbol",
+                                          "value": "MOISAN"
+                                        },
+                                        {
+                                          "type": "invert",
+                                          "operand": {
+                                            "type": "integer",
+                                            "value": 10000
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
                               }
-                            ],
-                            "operators": [
-                              "-"
                             ]
                           },
                           {
                             "type": "integer",
                             "value": 10000
                           }
-                        ],
-                        "operators": [
-                          "*"
                         ]
                       }
                     ]
                   },
                   "operator": "!=",
                   "right_operand": {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -2372,9 +2282,6 @@
                         "type": "integer",
                         "value": 2
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   }
                 },
@@ -2385,68 +2292,65 @@
                     "name": "arr",
                     "arguments": [
                       {
-                        "type": "product_expression",
+                        "type": "product",
                         "operands": [
                           {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
-                                "type": "product_expression",
+                                "type": "product",
                                 "operands": [
                                   {
                                     "type": "symbol",
                                     "value": "MOISAN"
                                   },
                                   {
-                                    "type": "integer",
-                                    "value": 10000
+                                    "type": "invert",
+                                    "operand": {
+                                      "type": "integer",
+                                      "value": 10000
+                                    }
                                   }
-                                ],
-                                "operators": [
-                                  "/"
                                 ]
                               },
                               {
-                                "type": "function_call",
-                                "name": "inf",
-                                "arguments": [
-                                  {
-                                    "type": "product_expression",
-                                    "operands": [
-                                      {
-                                        "type": "symbol",
-                                        "value": "MOISAN"
-                                      },
-                                      {
-                                        "type": "integer",
-                                        "value": 10000
-                                      }
-                                    ],
-                                    "operators": [
-                                      "/"
-                                    ]
-                                  }
-                                ]
+                                "type": "negate",
+                                "operand": {
+                                  "type": "function_call",
+                                  "name": "inf",
+                                  "arguments": [
+                                    {
+                                      "type": "product",
+                                      "operands": [
+                                        {
+                                          "type": "symbol",
+                                          "value": "MOISAN"
+                                        },
+                                        {
+                                          "type": "invert",
+                                          "operand": {
+                                            "type": "integer",
+                                            "value": 10000
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
                               }
-                            ],
-                            "operators": [
-                              "-"
                             ]
                           },
                           {
                             "type": "integer",
                             "value": 10000
                           }
-                        ],
-                        "operators": [
-                          "*"
                         ]
                       }
                     ]
                   },
                   "operator": "!=",
                   "right_operand": {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -2456,9 +2360,6 @@
                         "type": "integer",
                         "value": 3
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   }
                 }
@@ -2506,7 +2407,7 @@
                 {
                   "type": "comparaison",
                   "left_operand": {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -2516,9 +2417,6 @@
                         "type": "integer",
                         "value": 0
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   },
                   "operator": "=",
@@ -2539,19 +2437,19 @@
                     "name": "inf",
                     "arguments": [
                       {
-                        "type": "product_expression",
+                        "type": "product",
                         "operands": [
                           {
                             "type": "symbol",
                             "value": "MOISAN_ISF"
                           },
                           {
-                            "type": "integer",
-                            "value": 10000
+                            "type": "invert",
+                            "operand": {
+                              "type": "integer",
+                              "value": 10000
+                            }
                           }
-                        ],
-                        "operators": [
-                          "/"
                         ]
                       }
                     ]
@@ -2569,7 +2467,7 @@
                 {
                   "type": "comparaison",
                   "left_operand": {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -2579,9 +2477,6 @@
                         "type": "integer",
                         "value": 0
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   },
                   "operator": "=",
@@ -2602,19 +2497,19 @@
                     "name": "inf",
                     "arguments": [
                       {
-                        "type": "product_expression",
+                        "type": "product",
                         "operands": [
                           {
                             "type": "symbol",
                             "value": "MOISAN_ISF"
                           },
                           {
-                            "type": "integer",
-                            "value": 10000
+                            "type": "invert",
+                            "operand": {
+                              "type": "integer",
+                              "value": 10000
+                            }
                           }
-                        ],
-                        "operators": [
-                          "/"
                         ]
                       }
                     ]
@@ -2699,68 +2594,65 @@
                     "name": "arr",
                     "arguments": [
                       {
-                        "type": "product_expression",
+                        "type": "product",
                         "operands": [
                           {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
-                                "type": "product_expression",
+                                "type": "product",
                                 "operands": [
                                   {
                                     "type": "symbol",
                                     "value": "MOISAN_ISF"
                                   },
                                   {
-                                    "type": "integer",
-                                    "value": 10000
+                                    "type": "invert",
+                                    "operand": {
+                                      "type": "integer",
+                                      "value": 10000
+                                    }
                                   }
-                                ],
-                                "operators": [
-                                  "/"
                                 ]
                               },
                               {
-                                "type": "function_call",
-                                "name": "inf",
-                                "arguments": [
-                                  {
-                                    "type": "product_expression",
-                                    "operands": [
-                                      {
-                                        "type": "symbol",
-                                        "value": "MOISAN_ISF"
-                                      },
-                                      {
-                                        "type": "integer",
-                                        "value": 10000
-                                      }
-                                    ],
-                                    "operators": [
-                                      "/"
-                                    ]
-                                  }
-                                ]
+                                "type": "negate",
+                                "operand": {
+                                  "type": "function_call",
+                                  "name": "inf",
+                                  "arguments": [
+                                    {
+                                      "type": "product",
+                                      "operands": [
+                                        {
+                                          "type": "symbol",
+                                          "value": "MOISAN_ISF"
+                                        },
+                                        {
+                                          "type": "invert",
+                                          "operand": {
+                                            "type": "integer",
+                                            "value": 10000
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
                               }
-                            ],
-                            "operators": [
-                              "-"
                             ]
                           },
                           {
                             "type": "integer",
                             "value": 10000
                           }
-                        ],
-                        "operators": [
-                          "*"
                         ]
                       }
                     ]
                   },
                   "operator": "!=",
                   "right_operand": {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -2770,9 +2662,6 @@
                         "type": "integer",
                         "value": 1
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   }
                 },
@@ -2783,68 +2672,65 @@
                     "name": "arr",
                     "arguments": [
                       {
-                        "type": "product_expression",
+                        "type": "product",
                         "operands": [
                           {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
-                                "type": "product_expression",
+                                "type": "product",
                                 "operands": [
                                   {
                                     "type": "symbol",
                                     "value": "MOISAN_ISF"
                                   },
                                   {
-                                    "type": "integer",
-                                    "value": 10000
+                                    "type": "invert",
+                                    "operand": {
+                                      "type": "integer",
+                                      "value": 10000
+                                    }
                                   }
-                                ],
-                                "operators": [
-                                  "/"
                                 ]
                               },
                               {
-                                "type": "function_call",
-                                "name": "inf",
-                                "arguments": [
-                                  {
-                                    "type": "product_expression",
-                                    "operands": [
-                                      {
-                                        "type": "symbol",
-                                        "value": "MOISAN_ISF"
-                                      },
-                                      {
-                                        "type": "integer",
-                                        "value": 10000
-                                      }
-                                    ],
-                                    "operators": [
-                                      "/"
-                                    ]
-                                  }
-                                ]
+                                "type": "negate",
+                                "operand": {
+                                  "type": "function_call",
+                                  "name": "inf",
+                                  "arguments": [
+                                    {
+                                      "type": "product",
+                                      "operands": [
+                                        {
+                                          "type": "symbol",
+                                          "value": "MOISAN_ISF"
+                                        },
+                                        {
+                                          "type": "invert",
+                                          "operand": {
+                                            "type": "integer",
+                                            "value": 10000
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
                               }
-                            ],
-                            "operators": [
-                              "-"
                             ]
                           },
                           {
                             "type": "integer",
                             "value": 10000
                           }
-                        ],
-                        "operators": [
-                          "*"
                         ]
                       }
                     ]
                   },
                   "operator": "!=",
                   "right_operand": {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -2854,9 +2740,6 @@
                         "type": "integer",
                         "value": 2
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   }
                 },
@@ -2867,68 +2750,65 @@
                     "name": "arr",
                     "arguments": [
                       {
-                        "type": "product_expression",
+                        "type": "product",
                         "operands": [
                           {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
-                                "type": "product_expression",
+                                "type": "product",
                                 "operands": [
                                   {
                                     "type": "symbol",
                                     "value": "MOISAN_ISF"
                                   },
                                   {
-                                    "type": "integer",
-                                    "value": 10000
+                                    "type": "invert",
+                                    "operand": {
+                                      "type": "integer",
+                                      "value": 10000
+                                    }
                                   }
-                                ],
-                                "operators": [
-                                  "/"
                                 ]
                               },
                               {
-                                "type": "function_call",
-                                "name": "inf",
-                                "arguments": [
-                                  {
-                                    "type": "product_expression",
-                                    "operands": [
-                                      {
-                                        "type": "symbol",
-                                        "value": "MOISAN_ISF"
-                                      },
-                                      {
-                                        "type": "integer",
-                                        "value": 10000
-                                      }
-                                    ],
-                                    "operators": [
-                                      "/"
-                                    ]
-                                  }
-                                ]
+                                "type": "negate",
+                                "operand": {
+                                  "type": "function_call",
+                                  "name": "inf",
+                                  "arguments": [
+                                    {
+                                      "type": "product",
+                                      "operands": [
+                                        {
+                                          "type": "symbol",
+                                          "value": "MOISAN_ISF"
+                                        },
+                                        {
+                                          "type": "invert",
+                                          "operand": {
+                                            "type": "integer",
+                                            "value": 10000
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
                               }
-                            ],
-                            "operators": [
-                              "-"
                             ]
                           },
                           {
                             "type": "integer",
                             "value": 10000
                           }
-                        ],
-                        "operators": [
-                          "*"
                         ]
                       }
                     ]
                   },
                   "operator": "!=",
                   "right_operand": {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -2938,9 +2818,6 @@
                         "type": "integer",
                         "value": 3
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   }
                 },
@@ -2951,68 +2828,65 @@
                     "name": "arr",
                     "arguments": [
                       {
-                        "type": "product_expression",
+                        "type": "product",
                         "operands": [
                           {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
-                                "type": "product_expression",
+                                "type": "product",
                                 "operands": [
                                   {
                                     "type": "symbol",
                                     "value": "MOISAN_ISF"
                                   },
                                   {
-                                    "type": "integer",
-                                    "value": 10000
+                                    "type": "invert",
+                                    "operand": {
+                                      "type": "integer",
+                                      "value": 10000
+                                    }
                                   }
-                                ],
-                                "operators": [
-                                  "/"
                                 ]
                               },
                               {
-                                "type": "function_call",
-                                "name": "inf",
-                                "arguments": [
-                                  {
-                                    "type": "product_expression",
-                                    "operands": [
-                                      {
-                                        "type": "symbol",
-                                        "value": "MOISAN_ISF"
-                                      },
-                                      {
-                                        "type": "integer",
-                                        "value": 10000
-                                      }
-                                    ],
-                                    "operators": [
-                                      "/"
-                                    ]
-                                  }
-                                ]
+                                "type": "negate",
+                                "operand": {
+                                  "type": "function_call",
+                                  "name": "inf",
+                                  "arguments": [
+                                    {
+                                      "type": "product",
+                                      "operands": [
+                                        {
+                                          "type": "symbol",
+                                          "value": "MOISAN_ISF"
+                                        },
+                                        {
+                                          "type": "invert",
+                                          "operand": {
+                                            "type": "integer",
+                                            "value": 10000
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
                               }
-                            ],
-                            "operators": [
-                              "-"
                             ]
                           },
                           {
                             "type": "integer",
                             "value": 10000
                           }
-                        ],
-                        "operators": [
-                          "*"
                         ]
                       }
                     ]
                   },
                   "operator": "!=",
                   "right_operand": {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -3022,9 +2896,6 @@
                         "type": "integer",
                         "value": 4
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   }
                 }
@@ -3094,68 +2965,65 @@
                     "name": "arr",
                     "arguments": [
                       {
-                        "type": "product_expression",
+                        "type": "product",
                         "operands": [
                           {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
-                                "type": "product_expression",
+                                "type": "product",
                                 "operands": [
                                   {
                                     "type": "symbol",
                                     "value": "MOISAN_ISF"
                                   },
                                   {
-                                    "type": "integer",
-                                    "value": 10000
+                                    "type": "invert",
+                                    "operand": {
+                                      "type": "integer",
+                                      "value": 10000
+                                    }
                                   }
-                                ],
-                                "operators": [
-                                  "/"
                                 ]
                               },
                               {
-                                "type": "function_call",
-                                "name": "inf",
-                                "arguments": [
-                                  {
-                                    "type": "product_expression",
-                                    "operands": [
-                                      {
-                                        "type": "symbol",
-                                        "value": "MOISAN_ISF"
-                                      },
-                                      {
-                                        "type": "integer",
-                                        "value": 10000
-                                      }
-                                    ],
-                                    "operators": [
-                                      "/"
-                                    ]
-                                  }
-                                ]
+                                "type": "negate",
+                                "operand": {
+                                  "type": "function_call",
+                                  "name": "inf",
+                                  "arguments": [
+                                    {
+                                      "type": "product",
+                                      "operands": [
+                                        {
+                                          "type": "symbol",
+                                          "value": "MOISAN_ISF"
+                                        },
+                                        {
+                                          "type": "invert",
+                                          "operand": {
+                                            "type": "integer",
+                                            "value": 10000
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
                               }
-                            ],
-                            "operators": [
-                              "-"
                             ]
                           },
                           {
                             "type": "integer",
                             "value": 10000
                           }
-                        ],
-                        "operators": [
-                          "*"
                         ]
                       }
                     ]
                   },
                   "operator": "!=",
                   "right_operand": {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -3165,9 +3033,6 @@
                         "type": "integer",
                         "value": 1
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   }
                 },
@@ -3178,68 +3043,65 @@
                     "name": "arr",
                     "arguments": [
                       {
-                        "type": "product_expression",
+                        "type": "product",
                         "operands": [
                           {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
-                                "type": "product_expression",
+                                "type": "product",
                                 "operands": [
                                   {
                                     "type": "symbol",
                                     "value": "MOISAN_ISF"
                                   },
                                   {
-                                    "type": "integer",
-                                    "value": 10000
+                                    "type": "invert",
+                                    "operand": {
+                                      "type": "integer",
+                                      "value": 10000
+                                    }
                                   }
-                                ],
-                                "operators": [
-                                  "/"
                                 ]
                               },
                               {
-                                "type": "function_call",
-                                "name": "inf",
-                                "arguments": [
-                                  {
-                                    "type": "product_expression",
-                                    "operands": [
-                                      {
-                                        "type": "symbol",
-                                        "value": "MOISAN_ISF"
-                                      },
-                                      {
-                                        "type": "integer",
-                                        "value": 10000
-                                      }
-                                    ],
-                                    "operators": [
-                                      "/"
-                                    ]
-                                  }
-                                ]
+                                "type": "negate",
+                                "operand": {
+                                  "type": "function_call",
+                                  "name": "inf",
+                                  "arguments": [
+                                    {
+                                      "type": "product",
+                                      "operands": [
+                                        {
+                                          "type": "symbol",
+                                          "value": "MOISAN_ISF"
+                                        },
+                                        {
+                                          "type": "invert",
+                                          "operand": {
+                                            "type": "integer",
+                                            "value": 10000
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
                               }
-                            ],
-                            "operators": [
-                              "-"
                             ]
                           },
                           {
                             "type": "integer",
                             "value": 10000
                           }
-                        ],
-                        "operators": [
-                          "*"
                         ]
                       }
                     ]
                   },
                   "operator": "!=",
                   "right_operand": {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -3249,9 +3111,6 @@
                         "type": "integer",
                         "value": 2
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   }
                 },
@@ -3262,68 +3121,65 @@
                     "name": "arr",
                     "arguments": [
                       {
-                        "type": "product_expression",
+                        "type": "product",
                         "operands": [
                           {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
-                                "type": "product_expression",
+                                "type": "product",
                                 "operands": [
                                   {
                                     "type": "symbol",
                                     "value": "MOISAN_ISF"
                                   },
                                   {
-                                    "type": "integer",
-                                    "value": 10000
+                                    "type": "invert",
+                                    "operand": {
+                                      "type": "integer",
+                                      "value": 10000
+                                    }
                                   }
-                                ],
-                                "operators": [
-                                  "/"
                                 ]
                               },
                               {
-                                "type": "function_call",
-                                "name": "inf",
-                                "arguments": [
-                                  {
-                                    "type": "product_expression",
-                                    "operands": [
-                                      {
-                                        "type": "symbol",
-                                        "value": "MOISAN_ISF"
-                                      },
-                                      {
-                                        "type": "integer",
-                                        "value": 10000
-                                      }
-                                    ],
-                                    "operators": [
-                                      "/"
-                                    ]
-                                  }
-                                ]
+                                "type": "negate",
+                                "operand": {
+                                  "type": "function_call",
+                                  "name": "inf",
+                                  "arguments": [
+                                    {
+                                      "type": "product",
+                                      "operands": [
+                                        {
+                                          "type": "symbol",
+                                          "value": "MOISAN_ISF"
+                                        },
+                                        {
+                                          "type": "invert",
+                                          "operand": {
+                                            "type": "integer",
+                                            "value": 10000
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
                               }
-                            ],
-                            "operators": [
-                              "-"
                             ]
                           },
                           {
                             "type": "integer",
                             "value": 10000
                           }
-                        ],
-                        "operators": [
-                          "*"
                         ]
                       }
                     ]
                   },
                   "operator": "!=",
                   "right_operand": {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -3333,9 +3189,6 @@
                         "type": "integer",
                         "value": 3
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   }
                 }
@@ -3398,19 +3251,19 @@
                     "name": "inf",
                     "arguments": [
                       {
-                        "type": "product_expression",
+                        "type": "product",
                         "operands": [
                           {
                             "type": "symbol",
                             "value": "DATDEPETR"
                           },
                           {
-                            "type": "integer",
-                            "value": 1000000
+                            "type": "invert",
+                            "operand": {
+                              "type": "integer",
+                              "value": 1000000
+                            }
                           }
-                        ],
-                        "operators": [
-                          "/"
                         ]
                       }
                     ]
@@ -3420,7 +3273,7 @@
                 {
                   "type": "comparaison",
                   "left_operand": {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -3430,9 +3283,6 @@
                         "type": "integer",
                         "value": 0
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   },
                   "operator": "=",
@@ -3461,19 +3311,19 @@
                     "name": "inf",
                     "arguments": [
                       {
-                        "type": "product_expression",
+                        "type": "product",
                         "operands": [
                           {
                             "type": "symbol",
                             "value": "DATDEPETR"
                           },
                           {
-                            "type": "integer",
-                            "value": 1000000
+                            "type": "invert",
+                            "operand": {
+                              "type": "integer",
+                              "value": 1000000
+                            }
                           }
-                        ],
-                        "operators": [
-                          "/"
                         ]
                       }
                     ]
@@ -3557,61 +3407,58 @@
                     "name": "inf",
                     "arguments": [
                       {
-                        "type": "product_expression",
+                        "type": "product",
                         "operands": [
                           {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
-                                "type": "product_expression",
+                                "type": "product",
                                 "operands": [
                                   {
                                     "type": "symbol",
                                     "value": "DATDEPETR"
                                   },
                                   {
-                                    "type": "integer",
-                                    "value": 1000000
+                                    "type": "invert",
+                                    "operand": {
+                                      "type": "integer",
+                                      "value": 1000000
+                                    }
                                   }
-                                ],
-                                "operators": [
-                                  "/"
                                 ]
                               },
                               {
-                                "type": "function_call",
-                                "name": "inf",
-                                "arguments": [
-                                  {
-                                    "type": "product_expression",
-                                    "operands": [
-                                      {
-                                        "type": "symbol",
-                                        "value": "DATDEPETR"
-                                      },
-                                      {
-                                        "type": "integer",
-                                        "value": 1000000
-                                      }
-                                    ],
-                                    "operators": [
-                                      "/"
-                                    ]
-                                  }
-                                ]
+                                "type": "negate",
+                                "operand": {
+                                  "type": "function_call",
+                                  "name": "inf",
+                                  "arguments": [
+                                    {
+                                      "type": "product",
+                                      "operands": [
+                                        {
+                                          "type": "symbol",
+                                          "value": "DATDEPETR"
+                                        },
+                                        {
+                                          "type": "invert",
+                                          "operand": {
+                                            "type": "integer",
+                                            "value": 1000000
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
                               }
-                            ],
-                            "operators": [
-                              "-"
                             ]
                           },
                           {
                             "type": "integer",
                             "value": 100
                           }
-                        ],
-                        "operators": [
-                          "*"
                         ]
                       }
                     ]
@@ -3621,7 +3468,7 @@
                 {
                   "type": "comparaison",
                   "left_operand": {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -3631,9 +3478,6 @@
                         "type": "integer",
                         "value": 0
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   },
                   "operator": "=",
@@ -3662,61 +3506,58 @@
                     "name": "inf",
                     "arguments": [
                       {
-                        "type": "product_expression",
+                        "type": "product",
                         "operands": [
                           {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
-                                "type": "product_expression",
+                                "type": "product",
                                 "operands": [
                                   {
                                     "type": "symbol",
                                     "value": "DATDEPETR"
                                   },
                                   {
-                                    "type": "integer",
-                                    "value": 1000000
+                                    "type": "invert",
+                                    "operand": {
+                                      "type": "integer",
+                                      "value": 1000000
+                                    }
                                   }
-                                ],
-                                "operators": [
-                                  "/"
                                 ]
                               },
                               {
-                                "type": "function_call",
-                                "name": "inf",
-                                "arguments": [
-                                  {
-                                    "type": "product_expression",
-                                    "operands": [
-                                      {
-                                        "type": "symbol",
-                                        "value": "DATDEPETR"
-                                      },
-                                      {
-                                        "type": "integer",
-                                        "value": 1000000
-                                      }
-                                    ],
-                                    "operators": [
-                                      "/"
-                                    ]
-                                  }
-                                ]
+                                "type": "negate",
+                                "operand": {
+                                  "type": "function_call",
+                                  "name": "inf",
+                                  "arguments": [
+                                    {
+                                      "type": "product",
+                                      "operands": [
+                                        {
+                                          "type": "symbol",
+                                          "value": "DATDEPETR"
+                                        },
+                                        {
+                                          "type": "invert",
+                                          "operand": {
+                                            "type": "integer",
+                                            "value": 1000000
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
                               }
-                            ],
-                            "operators": [
-                              "-"
                             ]
                           },
                           {
                             "type": "integer",
                             "value": 100
                           }
-                        ],
-                        "operators": [
-                          "*"
                         ]
                       }
                     ]
@@ -3795,61 +3636,58 @@
                     "name": "arr",
                     "arguments": [
                       {
-                        "type": "product_expression",
+                        "type": "product",
                         "operands": [
                           {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
-                                "type": "product_expression",
+                                "type": "product",
                                 "operands": [
                                   {
                                     "type": "symbol",
                                     "value": "DATDEPETR"
                                   },
                                   {
-                                    "type": "integer",
-                                    "value": 10000
+                                    "type": "invert",
+                                    "operand": {
+                                      "type": "integer",
+                                      "value": 10000
+                                    }
                                   }
-                                ],
-                                "operators": [
-                                  "/"
                                 ]
                               },
                               {
-                                "type": "function_call",
-                                "name": "inf",
-                                "arguments": [
-                                  {
-                                    "type": "product_expression",
-                                    "operands": [
-                                      {
-                                        "type": "symbol",
-                                        "value": "DATDEPETR"
-                                      },
-                                      {
-                                        "type": "integer",
-                                        "value": 10000
-                                      }
-                                    ],
-                                    "operators": [
-                                      "/"
-                                    ]
-                                  }
-                                ]
+                                "type": "negate",
+                                "operand": {
+                                  "type": "function_call",
+                                  "name": "inf",
+                                  "arguments": [
+                                    {
+                                      "type": "product",
+                                      "operands": [
+                                        {
+                                          "type": "symbol",
+                                          "value": "DATDEPETR"
+                                        },
+                                        {
+                                          "type": "invert",
+                                          "operand": {
+                                            "type": "integer",
+                                            "value": 10000
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
                               }
-                            ],
-                            "operators": [
-                              "-"
                             ]
                           },
                           {
                             "type": "integer",
                             "value": 10000
                           }
-                        ],
-                        "operators": [
-                          "*"
                         ]
                       }
                     ]
@@ -3863,7 +3701,7 @@
                 {
                   "type": "comparaison",
                   "left_operand": {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -3873,9 +3711,6 @@
                         "type": "integer",
                         "value": 0
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   },
                   "operator": "=",
@@ -3899,61 +3734,58 @@
                     "name": "arr",
                     "arguments": [
                       {
-                        "type": "product_expression",
+                        "type": "product",
                         "operands": [
                           {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
-                                "type": "product_expression",
+                                "type": "product",
                                 "operands": [
                                   {
                                     "type": "symbol",
                                     "value": "DATDEPETR"
                                   },
                                   {
-                                    "type": "integer",
-                                    "value": 10000
+                                    "type": "invert",
+                                    "operand": {
+                                      "type": "integer",
+                                      "value": 10000
+                                    }
                                   }
-                                ],
-                                "operators": [
-                                  "/"
                                 ]
                               },
                               {
-                                "type": "function_call",
-                                "name": "inf",
-                                "arguments": [
-                                  {
-                                    "type": "product_expression",
-                                    "operands": [
-                                      {
-                                        "type": "symbol",
-                                        "value": "DATDEPETR"
-                                      },
-                                      {
-                                        "type": "integer",
-                                        "value": 10000
-                                      }
-                                    ],
-                                    "operators": [
-                                      "/"
-                                    ]
-                                  }
-                                ]
+                                "type": "negate",
+                                "operand": {
+                                  "type": "function_call",
+                                  "name": "inf",
+                                  "arguments": [
+                                    {
+                                      "type": "product",
+                                      "operands": [
+                                        {
+                                          "type": "symbol",
+                                          "value": "DATDEPETR"
+                                        },
+                                        {
+                                          "type": "invert",
+                                          "operand": {
+                                            "type": "integer",
+                                            "value": 10000
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
                               }
-                            ],
-                            "operators": [
-                              "-"
                             ]
                           },
                           {
                             "type": "integer",
                             "value": 10000
                           }
-                        ],
-                        "operators": [
-                          "*"
                         ]
                       }
                     ]
@@ -4041,19 +3873,19 @@
                     "name": "inf",
                     "arguments": [
                       {
-                        "type": "product_expression",
+                        "type": "product",
                         "operands": [
                           {
                             "type": "symbol",
                             "value": "DATRETETR"
                           },
                           {
-                            "type": "integer",
-                            "value": 1000000
+                            "type": "invert",
+                            "operand": {
+                              "type": "integer",
+                              "value": 1000000
+                            }
                           }
-                        ],
-                        "operators": [
-                          "/"
                         ]
                       }
                     ]
@@ -4063,7 +3895,7 @@
                 {
                   "type": "comparaison",
                   "left_operand": {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -4073,9 +3905,6 @@
                         "type": "integer",
                         "value": 0
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   },
                   "operator": "=",
@@ -4104,19 +3933,19 @@
                     "name": "inf",
                     "arguments": [
                       {
-                        "type": "product_expression",
+                        "type": "product",
                         "operands": [
                           {
                             "type": "symbol",
                             "value": "DATRETETR"
                           },
                           {
-                            "type": "integer",
-                            "value": 1000000
+                            "type": "invert",
+                            "operand": {
+                              "type": "integer",
+                              "value": 1000000
+                            }
                           }
-                        ],
-                        "operators": [
-                          "/"
                         ]
                       }
                     ]
@@ -4200,61 +4029,58 @@
                     "name": "inf",
                     "arguments": [
                       {
-                        "type": "product_expression",
+                        "type": "product",
                         "operands": [
                           {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
-                                "type": "product_expression",
+                                "type": "product",
                                 "operands": [
                                   {
                                     "type": "symbol",
                                     "value": "DATRETETR"
                                   },
                                   {
-                                    "type": "integer",
-                                    "value": 1000000
+                                    "type": "invert",
+                                    "operand": {
+                                      "type": "integer",
+                                      "value": 1000000
+                                    }
                                   }
-                                ],
-                                "operators": [
-                                  "/"
                                 ]
                               },
                               {
-                                "type": "function_call",
-                                "name": "inf",
-                                "arguments": [
-                                  {
-                                    "type": "product_expression",
-                                    "operands": [
-                                      {
-                                        "type": "symbol",
-                                        "value": "DATRETETR"
-                                      },
-                                      {
-                                        "type": "integer",
-                                        "value": 1000000
-                                      }
-                                    ],
-                                    "operators": [
-                                      "/"
-                                    ]
-                                  }
-                                ]
+                                "type": "negate",
+                                "operand": {
+                                  "type": "function_call",
+                                  "name": "inf",
+                                  "arguments": [
+                                    {
+                                      "type": "product",
+                                      "operands": [
+                                        {
+                                          "type": "symbol",
+                                          "value": "DATRETETR"
+                                        },
+                                        {
+                                          "type": "invert",
+                                          "operand": {
+                                            "type": "integer",
+                                            "value": 1000000
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
                               }
-                            ],
-                            "operators": [
-                              "-"
                             ]
                           },
                           {
                             "type": "integer",
                             "value": 100
                           }
-                        ],
-                        "operators": [
-                          "*"
                         ]
                       }
                     ]
@@ -4264,7 +4090,7 @@
                 {
                   "type": "comparaison",
                   "left_operand": {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -4274,9 +4100,6 @@
                         "type": "integer",
                         "value": 0
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   },
                   "operator": "=",
@@ -4305,61 +4128,58 @@
                     "name": "inf",
                     "arguments": [
                       {
-                        "type": "product_expression",
+                        "type": "product",
                         "operands": [
                           {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
-                                "type": "product_expression",
+                                "type": "product",
                                 "operands": [
                                   {
                                     "type": "symbol",
                                     "value": "DATRETETR"
                                   },
                                   {
-                                    "type": "integer",
-                                    "value": 1000000
+                                    "type": "invert",
+                                    "operand": {
+                                      "type": "integer",
+                                      "value": 1000000
+                                    }
                                   }
-                                ],
-                                "operators": [
-                                  "/"
                                 ]
                               },
                               {
-                                "type": "function_call",
-                                "name": "inf",
-                                "arguments": [
-                                  {
-                                    "type": "product_expression",
-                                    "operands": [
-                                      {
-                                        "type": "symbol",
-                                        "value": "DATRETETR"
-                                      },
-                                      {
-                                        "type": "integer",
-                                        "value": 1000000
-                                      }
-                                    ],
-                                    "operators": [
-                                      "/"
-                                    ]
-                                  }
-                                ]
+                                "type": "negate",
+                                "operand": {
+                                  "type": "function_call",
+                                  "name": "inf",
+                                  "arguments": [
+                                    {
+                                      "type": "product",
+                                      "operands": [
+                                        {
+                                          "type": "symbol",
+                                          "value": "DATRETETR"
+                                        },
+                                        {
+                                          "type": "invert",
+                                          "operand": {
+                                            "type": "integer",
+                                            "value": 1000000
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
                               }
-                            ],
-                            "operators": [
-                              "-"
                             ]
                           },
                           {
                             "type": "integer",
                             "value": 100
                           }
-                        ],
-                        "operators": [
-                          "*"
                         ]
                       }
                     ]
@@ -4438,61 +4258,58 @@
                     "name": "arr",
                     "arguments": [
                       {
-                        "type": "product_expression",
+                        "type": "product",
                         "operands": [
                           {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
-                                "type": "product_expression",
+                                "type": "product",
                                 "operands": [
                                   {
                                     "type": "symbol",
                                     "value": "DATRETETR"
                                   },
                                   {
-                                    "type": "integer",
-                                    "value": 10000
+                                    "type": "invert",
+                                    "operand": {
+                                      "type": "integer",
+                                      "value": 10000
+                                    }
                                   }
-                                ],
-                                "operators": [
-                                  "/"
                                 ]
                               },
                               {
-                                "type": "function_call",
-                                "name": "inf",
-                                "arguments": [
-                                  {
-                                    "type": "product_expression",
-                                    "operands": [
-                                      {
-                                        "type": "symbol",
-                                        "value": "DATRETETR"
-                                      },
-                                      {
-                                        "type": "integer",
-                                        "value": 10000
-                                      }
-                                    ],
-                                    "operators": [
-                                      "/"
-                                    ]
-                                  }
-                                ]
+                                "type": "negate",
+                                "operand": {
+                                  "type": "function_call",
+                                  "name": "inf",
+                                  "arguments": [
+                                    {
+                                      "type": "product",
+                                      "operands": [
+                                        {
+                                          "type": "symbol",
+                                          "value": "DATRETETR"
+                                        },
+                                        {
+                                          "type": "invert",
+                                          "operand": {
+                                            "type": "integer",
+                                            "value": 10000
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
                               }
-                            ],
-                            "operators": [
-                              "-"
                             ]
                           },
                           {
                             "type": "integer",
                             "value": 10000
                           }
-                        ],
-                        "operators": [
-                          "*"
                         ]
                       }
                     ]
@@ -4506,7 +4323,7 @@
                 {
                   "type": "comparaison",
                   "left_operand": {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -4516,9 +4333,6 @@
                         "type": "integer",
                         "value": 0
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   },
                   "operator": "=",
@@ -4542,61 +4356,58 @@
                     "name": "arr",
                     "arguments": [
                       {
-                        "type": "product_expression",
+                        "type": "product",
                         "operands": [
                           {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
-                                "type": "product_expression",
+                                "type": "product",
                                 "operands": [
                                   {
                                     "type": "symbol",
                                     "value": "DATRETETR"
                                   },
                                   {
-                                    "type": "integer",
-                                    "value": 10000
+                                    "type": "invert",
+                                    "operand": {
+                                      "type": "integer",
+                                      "value": 10000
+                                    }
                                   }
-                                ],
-                                "operators": [
-                                  "/"
                                 ]
                               },
                               {
-                                "type": "function_call",
-                                "name": "inf",
-                                "arguments": [
-                                  {
-                                    "type": "product_expression",
-                                    "operands": [
-                                      {
-                                        "type": "symbol",
-                                        "value": "DATRETETR"
-                                      },
-                                      {
-                                        "type": "integer",
-                                        "value": 10000
-                                      }
-                                    ],
-                                    "operators": [
-                                      "/"
-                                    ]
-                                  }
-                                ]
+                                "type": "negate",
+                                "operand": {
+                                  "type": "function_call",
+                                  "name": "inf",
+                                  "arguments": [
+                                    {
+                                      "type": "product",
+                                      "operands": [
+                                        {
+                                          "type": "symbol",
+                                          "value": "DATRETETR"
+                                        },
+                                        {
+                                          "type": "invert",
+                                          "operand": {
+                                            "type": "integer",
+                                            "value": 10000
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
                               }
-                            ],
-                            "operators": [
-                              "-"
                             ]
                           },
                           {
                             "type": "integer",
                             "value": 10000
                           }
-                        ],
-                        "operators": [
-                          "*"
                         ]
                       }
                     ]
@@ -4744,7 +4555,7 @@
                 "name": "positif",
                 "arguments": [
                   {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -4754,9 +4565,6 @@
                         "type": "integer",
                         "value": 0
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   }
                 ]
@@ -4774,7 +4582,7 @@
                 "name": "positif",
                 "arguments": [
                   {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -4784,9 +4592,6 @@
                         "type": "integer",
                         "value": 0
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   }
                 ]
@@ -4839,7 +4644,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -4849,9 +4654,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "<",
@@ -4863,7 +4665,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -4873,9 +4675,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -4938,7 +4737,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -4948,9 +4747,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "<",
@@ -4962,7 +4758,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -4972,9 +4768,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -5039,7 +4832,7 @@
                 {
                   "type": "comparaison",
                   "left_operand": {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -5049,9 +4842,6 @@
                         "type": "integer",
                         "value": 0
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   },
                   "operator": "=",
@@ -5063,7 +4853,7 @@
                 {
                   "type": "comparaison",
                   "left_operand": {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -5073,9 +4863,6 @@
                         "type": "integer",
                         "value": 0
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   },
                   "operator": "=",
@@ -5110,7 +4897,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -5120,9 +4907,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "<=",
@@ -5172,7 +4956,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -5182,9 +4966,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "!=",
@@ -5196,7 +4977,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -5206,9 +4987,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": ">",
@@ -5220,7 +4998,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -5230,9 +5008,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "<=",
@@ -5282,7 +5057,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -5292,9 +5067,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": ">",
@@ -5306,7 +5078,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -5316,9 +5088,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": ">=",
@@ -5386,7 +5155,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -5436,19 +5205,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+",
-                  "+",
-                  "+",
-                  "+",
-                  "+",
-                  "+",
-                  "+",
-                  "+",
-                  "+",
-                  "+",
-                  "+"
                 ]
               },
               "operator": ">",
@@ -5498,7 +5254,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -5508,9 +5264,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": ">",
@@ -5522,14 +5275,14 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "function_call",
                     "name": "positif",
                     "arguments": [
                       {
-                        "type": "sum_expression",
+                        "type": "sum",
                         "operands": [
                           {
                             "type": "symbol",
@@ -5539,9 +5292,6 @@
                             "type": "integer",
                             "value": 0
                           }
-                        ],
-                        "operators": [
-                          "+"
                         ]
                       }
                     ]
@@ -5551,7 +5301,7 @@
                     "name": "positif",
                     "arguments": [
                       {
-                        "type": "sum_expression",
+                        "type": "sum",
                         "operands": [
                           {
                             "type": "symbol",
@@ -5561,16 +5311,10 @@
                             "type": "integer",
                             "value": 0
                           }
-                        ],
-                        "operators": [
-                          "+"
                         ]
                       }
                     ]
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -5635,7 +5379,7 @@
                 {
                   "type": "comparaison",
                   "left_operand": {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -5645,9 +5389,6 @@
                         "type": "integer",
                         "value": 0
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   },
                   "operator": "=",
@@ -5666,7 +5407,7 @@
                         "name": "positif",
                         "arguments": [
                           {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
                                 "type": "symbol",
@@ -5676,9 +5417,6 @@
                                 "type": "integer",
                                 "value": 0
                               }
-                            ],
-                            "operators": [
-                              "+"
                             ]
                           }
                         ]
@@ -5699,7 +5437,7 @@
                             "name": "positif",
                             "arguments": [
                               {
-                                "type": "sum_expression",
+                                "type": "sum",
                                 "operands": [
                                   {
                                     "type": "symbol",
@@ -5713,10 +5451,6 @@
                                     "type": "integer",
                                     "value": 0
                                   }
-                                ],
-                                "operators": [
-                                  "+",
-                                  "+"
                                 ]
                               }
                             ]
@@ -5737,7 +5471,7 @@
                                 "name": "positif",
                                 "arguments": [
                                   {
-                                    "type": "sum_expression",
+                                    "type": "sum",
                                     "operands": [
                                       {
                                         "type": "symbol",
@@ -5755,11 +5489,6 @@
                                         "type": "integer",
                                         "value": 0
                                       }
-                                    ],
-                                    "operators": [
-                                      "+",
-                                      "+",
-                                      "+"
                                     ]
                                   }
                                 ]
@@ -5777,7 +5506,7 @@
                                 "name": "positif",
                                 "arguments": [
                                   {
-                                    "type": "sum_expression",
+                                    "type": "sum",
                                     "operands": [
                                       {
                                         "type": "symbol",
@@ -5787,9 +5516,6 @@
                                         "type": "integer",
                                         "value": 0
                                       }
-                                    ],
-                                    "operators": [
-                                      "+"
                                     ]
                                   }
                                 ]
@@ -5861,7 +5587,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -5871,9 +5597,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -5892,7 +5615,7 @@
                     "name": "positif",
                     "arguments": [
                       {
-                        "type": "sum_expression",
+                        "type": "sum",
                         "operands": [
                           {
                             "type": "symbol",
@@ -5902,9 +5625,6 @@
                             "type": "integer",
                             "value": 0
                           }
-                        ],
-                        "operators": [
-                          "+"
                         ]
                       }
                     ]
@@ -5925,7 +5645,7 @@
                         "name": "positif",
                         "arguments": [
                           {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
                                 "type": "symbol",
@@ -5939,10 +5659,6 @@
                                 "type": "integer",
                                 "value": 0
                               }
-                            ],
-                            "operators": [
-                              "+",
-                              "+"
                             ]
                           }
                         ]
@@ -5963,7 +5679,7 @@
                             "name": "positif",
                             "arguments": [
                               {
-                                "type": "sum_expression",
+                                "type": "sum",
                                 "operands": [
                                   {
                                     "type": "symbol",
@@ -5981,11 +5697,6 @@
                                     "type": "integer",
                                     "value": 0
                                   }
-                                ],
-                                "operators": [
-                                  "+",
-                                  "+",
-                                  "+"
                                 ]
                               }
                             ]
@@ -6003,7 +5714,7 @@
                             "name": "positif",
                             "arguments": [
                               {
-                                "type": "sum_expression",
+                                "type": "sum",
                                 "operands": [
                                   {
                                     "type": "symbol",
@@ -6013,9 +5724,6 @@
                                     "type": "integer",
                                     "value": 0
                                   }
-                                ],
-                                "operators": [
-                                  "+"
                                 ]
                               }
                             ]
@@ -6086,7 +5794,7 @@
                 "name": "positif",
                 "arguments": [
                   {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -6100,10 +5808,6 @@
                         "type": "integer",
                         "value": 0
                       }
-                    ],
-                    "operators": [
-                      "+",
-                      "+"
                     ]
                   }
                 ]
@@ -6204,7 +5908,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -6214,9 +5918,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": ">",
@@ -6228,7 +5929,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -6238,9 +5939,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": ">",
@@ -6304,7 +6002,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -6314,9 +6012,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -6328,7 +6023,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -6338,9 +6033,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -6352,7 +6044,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -6366,10 +6058,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+",
-                  "+"
                 ]
               },
               "operator": "=",
@@ -6433,7 +6121,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -6443,9 +6131,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -6475,7 +6160,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -6485,9 +6170,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -6499,7 +6181,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -6513,10 +6195,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+",
-                  "+"
                 ]
               },
               "operator": ">",
@@ -6572,7 +6250,7 @@
                 "name": "positif",
                 "arguments": [
                   {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "function_call",
@@ -6594,9 +6272,6 @@
                           }
                         ]
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   }
                 ]
@@ -6663,7 +6338,7 @@
                 "name": "positif",
                 "arguments": [
                   {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -6673,9 +6348,6 @@
                         "type": "integer",
                         "value": 0
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   }
                 ]
@@ -6693,26 +6365,26 @@
                 "name": "positif",
                 "arguments": [
                   {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "function_call",
                         "name": "null",
                         "arguments": [
                           {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
                                 "type": "symbol",
                                 "value": "V_NOTRAIT"
                               },
                               {
-                                "type": "integer",
-                                "value": 23
+                                "type": "negate",
+                                "operand": {
+                                  "type": "integer",
+                                  "value": 23
+                                }
                               }
-                            ],
-                            "operators": [
-                              "-"
                             ]
                           }
                         ]
@@ -6722,19 +6394,19 @@
                         "name": "null",
                         "arguments": [
                           {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
                                 "type": "symbol",
                                 "value": "V_NOTRAIT"
                               },
                               {
-                                "type": "integer",
-                                "value": 33
+                                "type": "negate",
+                                "operand": {
+                                  "type": "integer",
+                                  "value": 33
+                                }
                               }
-                            ],
-                            "operators": [
-                              "-"
                             ]
                           }
                         ]
@@ -6744,19 +6416,19 @@
                         "name": "null",
                         "arguments": [
                           {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
                                 "type": "symbol",
                                 "value": "V_NOTRAIT"
                               },
                               {
-                                "type": "integer",
-                                "value": 43
+                                "type": "negate",
+                                "operand": {
+                                  "type": "integer",
+                                  "value": 43
+                                }
                               }
-                            ],
-                            "operators": [
-                              "-"
                             ]
                           }
                         ]
@@ -6766,19 +6438,19 @@
                         "name": "null",
                         "arguments": [
                           {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
                                 "type": "symbol",
                                 "value": "V_NOTRAIT"
                               },
                               {
-                                "type": "integer",
-                                "value": 53
+                                "type": "negate",
+                                "operand": {
+                                  "type": "integer",
+                                  "value": 53
+                                }
                               }
-                            ],
-                            "operators": [
-                              "-"
                             ]
                           }
                         ]
@@ -6788,29 +6460,23 @@
                         "name": "null",
                         "arguments": [
                           {
-                            "type": "sum_expression",
+                            "type": "sum",
                             "operands": [
                               {
                                 "type": "symbol",
                                 "value": "V_NOTRAIT"
                               },
                               {
-                                "type": "integer",
-                                "value": 63
+                                "type": "negate",
+                                "operand": {
+                                  "type": "integer",
+                                  "value": 63
+                                }
                               }
-                            ],
-                            "operators": [
-                              "-"
                             ]
                           }
                         ]
                       }
-                    ],
-                    "operators": [
-                      "+",
-                      "+",
-                      "+",
-                      "+"
                     ]
                   }
                 ]
@@ -7049,7 +6715,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -7151,32 +6817,6 @@
                     "type": "symbol",
                     "value": "XHONOP"
                   }
-                ],
-                "operators": [
-                  "+",
-                  "+",
-                  "+",
-                  "+",
-                  "+",
-                  "+",
-                  "+",
-                  "+",
-                  "+",
-                  "+",
-                  "+",
-                  "+",
-                  "+",
-                  "+",
-                  "+",
-                  "+",
-                  "+",
-                  "+",
-                  "+",
-                  "+",
-                  "+",
-                  "+",
-                  "+",
-                  "+"
                 ]
               },
               "operator": ">",
@@ -84739,7 +84379,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -84749,9 +84389,6 @@
                     "type": "symbol",
                     "value": "APPLI_ILIAD"
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -84763,7 +84400,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -84773,9 +84410,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -84799,7 +84433,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -84809,9 +84443,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": ">",
@@ -84857,7 +84488,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -84867,9 +84498,6 @@
                     "type": "symbol",
                     "value": "APPLI_ILIAD"
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -84881,7 +84509,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -84891,9 +84519,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -84917,7 +84542,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -84927,9 +84552,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": ">",
@@ -84941,7 +84563,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -84951,9 +84573,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": ">",
@@ -85000,7 +84619,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -85010,9 +84629,6 @@
                     "type": "symbol",
                     "value": "APPLI_ILIAD"
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -85024,7 +84640,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -85034,9 +84650,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -85048,7 +84661,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -85066,11 +84679,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+",
-                  "+",
-                  "+"
                 ]
               },
               "operator": "=",
@@ -85082,7 +84690,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -85092,9 +84700,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": ">",
@@ -85110,7 +84715,7 @@
                 "name": "positif",
                 "arguments": [
                   {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -85120,9 +84725,6 @@
                         "type": "integer",
                         "value": 0
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   }
                 ]
@@ -85171,7 +84773,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -85181,9 +84783,6 @@
                     "type": "symbol",
                     "value": "APPLI_ILIAD"
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -85195,7 +84794,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -85205,9 +84804,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -85231,7 +84827,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -85241,9 +84837,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": ">",
@@ -85289,7 +84882,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -85299,9 +84892,6 @@
                     "type": "symbol",
                     "value": "APPLI_ILIAD"
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -85313,7 +84903,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -85323,9 +84913,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -85349,7 +84936,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -85359,9 +84946,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": ">",
@@ -85373,7 +84957,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -85383,9 +84967,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": ">",
@@ -85432,7 +85013,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -85442,9 +85023,6 @@
                     "type": "symbol",
                     "value": "APPLI_ILIAD"
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -85456,7 +85034,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -85466,9 +85044,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -85492,7 +85067,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -85502,9 +85077,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": ">",
@@ -85550,7 +85122,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -85560,9 +85132,6 @@
                     "type": "symbol",
                     "value": "APPLI_COLBERT"
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -85579,7 +85148,7 @@
                   "expression": {
                     "type": "comparaison",
                     "left_operand": {
-                      "type": "sum_expression",
+                      "type": "sum",
                       "operands": [
                         {
                           "type": "symbol",
@@ -85589,9 +85158,6 @@
                           "type": "integer",
                           "value": 0
                         }
-                      ],
-                      "operators": [
-                        "+"
                       ]
                     },
                     "operator": ">",
@@ -85627,7 +85193,7 @@
                   "expression": {
                     "type": "comparaison",
                     "left_operand": {
-                      "type": "sum_expression",
+                      "type": "sum",
                       "operands": [
                         {
                           "type": "symbol",
@@ -85637,9 +85203,6 @@
                           "type": "integer",
                           "value": 0
                         }
-                      ],
-                      "operators": [
-                        "+"
                       ]
                     },
                     "operator": ">",
@@ -85691,7 +85254,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -85701,9 +85264,6 @@
                     "type": "symbol",
                     "value": "APPLI_OCEANS"
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "=",
@@ -85720,7 +85280,7 @@
                   "expression": {
                     "type": "comparaison",
                     "left_operand": {
-                      "type": "sum_expression",
+                      "type": "sum",
                       "operands": [
                         {
                           "type": "symbol",
@@ -85730,9 +85290,6 @@
                           "type": "integer",
                           "value": 0
                         }
-                      ],
-                      "operators": [
-                        "+"
                       ]
                     },
                     "operator": ">",
@@ -85768,7 +85325,7 @@
                   "expression": {
                     "type": "comparaison",
                     "left_operand": {
-                      "type": "sum_expression",
+                      "type": "sum",
                       "operands": [
                         {
                           "type": "symbol",
@@ -85778,9 +85335,6 @@
                           "type": "integer",
                           "value": 0
                         }
-                      ],
-                      "operators": [
-                        "+"
                       ]
                     },
                     "operator": ">",
@@ -85864,7 +85418,7 @@
                 "name": "positif",
                 "arguments": [
                   {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -85874,9 +85428,6 @@
                         "type": "integer",
                         "value": 0
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   }
                 ]
@@ -85890,7 +85441,7 @@
             {
               "type": "comparaison",
               "left_operand": {
-                "type": "sum_expression",
+                "type": "sum",
                 "operands": [
                   {
                     "type": "symbol",
@@ -85900,9 +85451,6 @@
                     "type": "integer",
                     "value": 0
                   }
-                ],
-                "operators": [
-                  "+"
                 ]
               },
               "operator": "<",
@@ -85936,7 +85484,7 @@
                 "name": "positif",
                 "arguments": [
                   {
-                    "type": "sum_expression",
+                    "type": "sum",
                     "operands": [
                       {
                         "type": "symbol",
@@ -85946,9 +85494,6 @@
                         "type": "integer",
                         "value": 0
                       }
-                    ],
-                    "operators": [
-                      "+"
                     ]
                   }
                 ]
