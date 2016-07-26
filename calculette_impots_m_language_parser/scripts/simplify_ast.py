@@ -1,5 +1,5 @@
 """
-Simplify hte AST from calculette-impots-m-language-parser to allow only the
+Simplify the AST from calculette-impots-m-language-parser to allow only the
 following node types :
 * symbols
 * floats
@@ -10,13 +10,11 @@ Only the formulas used for application "batch" are processed.
 
 
 import json
-import math
 import os
-import configparser
 
-config = configparser.ConfigParser()
-config.read('config.ini')
-ast_m_dir = config['main']['ast_m_dir']
+script_dir = os.path.dirname(os.path.realpath(__file__))
+ast_m_dir = script_dir + '/../../json/ast/'
+output_dir = script_dir + '/../../json/simplified_ast/'
 file_list = os.listdir(ast_m_dir)
 
 formulas = []
@@ -60,7 +58,8 @@ for filename in file_list:
                 formulas += direct_child['formulas']
 
         else:
-            raise ValueError('Unknown child type %s in %s : %s'%(direct_child['type'], filename, str(direct_child)))
+            raise ValueError('Unknown child type %s in %s : %s' % (
+                direct_child['type'], filename, str(direct_child)))
 
 
 def loop_replace(node, old, new):
@@ -83,7 +82,7 @@ def loop_replace(node, old, new):
         args = [loop_replace(child, old, new) for child in node['args']]
         return {'nodetype': nodetype, 'name': name, 'args': args}
 
-    raise ValueError('Unknown type : %s'%nodetype)
+    raise ValueError('Unknown type : %s' % nodetype)
 
 
 def parse_enumeration(enumeration):
@@ -131,8 +130,10 @@ def traversal(node):
                 enumerations = loop_variable['enumerations']
                 loop_values = []
                 for enumeration in enumerations:
-                    loop_values += [str(i) for i in parse_enumeration(enumeration)]
-                templates = [loop_replace(template, variable_name, v) for v in loop_values for template in templates]
+                    loop_values += [str(i)
+                                    for i in parse_enumeration(enumeration)]
+                templates = [loop_replace(t, variable_name, v)
+                             for v in loop_values for t in templates]
             args = templates
             return {'nodetype': 'call', 'name': '+', 'args': args}
 
@@ -151,7 +152,7 @@ def traversal(node):
                     'args': [args[i+1]]
                 }
             else:
-                raise ValueError('Unknown sign : %s'%sign)
+                raise ValueError('Unknown sign : %s' % sign)
         return {'nodetype': 'call', 'name': '+', 'args': args}
 
     if nodetype == 'product_expression':
@@ -166,7 +167,7 @@ def traversal(node):
                     'args': [args[i+1]]
                 }
             else:
-                raise ValueError('Unknown sign : %s'%sign)
+                raise ValueError('Unknown sign : %s' % sign)
         return {'nodetype': 'call', 'name': '*', 'args': args}
 
     if nodetype == 'ternary_operator':
@@ -174,7 +175,8 @@ def traversal(node):
         arg2 = traversal(node['value_if_true'])
         if 'value_if_false' in node:
             arg3 = traversal(node['value_if_false'])
-            return {'nodetype': 'call', 'name': 'ternary', 'args': [arg1, arg2, arg3]}
+            return {'nodetype': 'call', 'name': 'ternary', 'args':
+                    [arg1, arg2, arg3]}
         else:
             return {'nodetype': 'call', 'name': 'si', 'args': [arg1, arg2]}
 
@@ -200,14 +202,15 @@ def traversal(node):
             if operator == 'ou':
                 if args_et:
                     args_et.append(arg_left)
-                    args_ou.append({'nodetype': 'call', 'name': 'boolean:et', 'args': args_et})
+                    args_ou.append({'nodetype': 'call', 'name': 'boolean:et',
+                                    'args': args_et})
                     args_et = []
                 else:
                     args_ou.append(arg_left)
             elif operator == 'et':
                 args_et.append(arg_left)
             else:
-                raise ValueError('Unknown operator %s'%operator)
+                raise ValueError('Unknown operator %s' % operator)
         return {'nodetype': 'call', 'name': 'boolean:ou', 'args': args_ou}
 
     if nodetype == 'dans':
@@ -220,9 +223,9 @@ def traversal(node):
     if nodetype == 'unary':
         arg = traversal(node['expression'])
         name = 'unary:' + node['operator']
-        return {'nodetype': 'call', 'name': name, 'args':[arg]}
+        return {'nodetype': 'call', 'name': name, 'args': [arg]}
 
-    raise ValueError('Unknown type %s : %s'%(nodetype, node))
+    raise ValueError('Unknown type %s : %s' % (nodetype, node))
 
 
 formulas_clean = []
@@ -248,14 +251,18 @@ for formula in formulas:
             loop_values = []
             for enumeration in enumerations:
                 loop_values += [str(i) for i in parse_enumeration(enumeration)]
-            templates_exp = [loop_replace(template, variable_name, v) for v in loop_values for template in templates_exp]
-            templates_name = [template.replace(variable_name, v) for v in loop_values for template in templates_name]
+            templates_exp = [loop_replace(template, variable_name, v)
+                             for v in loop_values
+                             for template in templates_exp]
+            templates_name = [template.replace(variable_name, v)
+                              for v in loop_values
+                              for template in templates_name]
 
         for exp, name in zip(templates_exp, templates_name):
             formulas_clean.append({'name': name, 'expression': exp})
 
     else:
-        raise ValueError('Unknown formula type %s'%formula_type)
+        raise ValueError('Unknown formula type %s' % formula_type)
 
 
 formulas_dict = {
@@ -268,12 +275,12 @@ constants_dict = {
     for constant in constants
 }
 
-with open('../json/formulas.json', 'w') as f:
+with open(output_dir + '/formulas.json', 'w') as f:
     f.write(json.dumps(formulas_dict))
-    print('Wrote %d formulas.'%len(formulas_dict))
-with open('../json/constants.json', 'w') as f:
+    print('Wrote %d formulas.' % len(formulas_dict))
+with open(output_dir + '/constants.json', 'w') as f:
     f.write(json.dumps(constants_dict))
-    print('Wrote %d constants.'%len(constants_dict))
-with open('../json/input_variables.json', 'w') as f:
+    print('Wrote %d constants.' % len(constants_dict))
+with open(output_dir + '/input_variables.json', 'w') as f:
     f.write(json.dumps(input_variables))
-    print('Wrote %d input variables.'%len(input_variables))
+    print('Wrote %d input variables.' % len(input_variables))
