@@ -140,35 +140,21 @@ def traversal(node):
         args = [traversal(child) for child in node['arguments']]
         return {'nodetype': 'call', 'name': name, 'args': args}
 
-    if nodetype == 'sum_expression':
+    if nodetype == 'sum':
         args = [traversal(child) for child in node['operands']]
-        for i, sign in enumerate(node['operators']):
-            if sign == '+':
-                pass
-            elif sign == '-':
-                args[i+1] = {
-                    'nodetype': 'call',
-                    'name': '-',
-                    'args': [args[i+1]]
-                }
-            else:
-                raise ValueError('Unknown sign : %s' % sign)
-        return {'nodetype': 'call', 'name': '+', 'args': args}
+        return {'nodetype': 'call', 'name': 'sum', 'args': args}
 
-    if nodetype == 'product_expression':
+    if nodetype == 'negate':
+        args = [traversal(node['operand'])]
+        return {'nodetype': 'call', 'name': 'negate', 'args': args}
+
+    if nodetype == 'invert':
+        args = [traversal(node['operand'])]
+        return {'nodetype': 'call', 'name': 'invert', 'args': args}
+
+    if nodetype == 'product':
         args = [traversal(child) for child in node['operands']]
-        for i, sign in enumerate(node['operators']):
-            if sign == '*':
-                pass
-            elif sign == '/':
-                args[i+1] = {
-                    'nodetype': 'call',
-                    'name': 'inverse',
-                    'args': [args[i+1]]
-                }
-            else:
-                raise ValueError('Unknown sign : %s' % sign)
-        return {'nodetype': 'call', 'name': '*', 'args': args}
+        return {'nodetype': 'call', 'name': 'product', 'args': args}
 
     if nodetype == 'ternary_operator':
         arg1 = traversal(node['condition'])
@@ -275,12 +261,12 @@ constants_dict = {
     for constant in constants
 }
 
-with open(output_dir + '/formulas.json', 'w') as f:
+with open(output_dir + 'formulas.json', 'w') as f:
     f.write(json.dumps(formulas_dict))
     print('Wrote %d formulas.' % len(formulas_dict))
-with open(output_dir + '/constants.json', 'w') as f:
+with open(output_dir + 'constants.json', 'w') as f:
     f.write(json.dumps(constants_dict))
     print('Wrote %d constants.' % len(constants_dict))
-with open(output_dir + '/input_variables.json', 'w') as f:
+with open(output_dir + 'input_variables.json', 'w') as f:
     f.write(json.dumps(input_variables))
     print('Wrote %d input variables.' % len(input_variables))
