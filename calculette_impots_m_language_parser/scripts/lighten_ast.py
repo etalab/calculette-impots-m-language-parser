@@ -14,7 +14,8 @@ with open(input_dir + 'constants.json', 'r') as f:
 with open(input_dir + 'input_variables.json', 'r') as f:
     input_variables = json.load(f)
 
-# important variables
+# List of variables used to compute taxes (this list was written with M code
+# experts during the hackathon  CodeImpot)
 roots = ['NBPT', 'REVKIRE', 'BCSG', 'BRDS', 'IBM23', 'TXMOYIMP', 'NAPTIR',
          'IINET', 'RRRBG', 'RNI', 'IDRS3', 'IAVIM']
 print('The important variables are : {}'.format(roots))
