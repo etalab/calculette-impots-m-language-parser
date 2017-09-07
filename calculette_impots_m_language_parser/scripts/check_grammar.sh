@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # Verify that all the rules declared in the grammar file are handled by conversion script.
+# This script should be run after a modification of the script `m_to_ast.py`
 
 SCRIPT_DIR=$(dirname $(readlink -f "$BASH_SOURCE"))
 SCRIPT="$SCRIPT_DIR/m_to_ast.py"
