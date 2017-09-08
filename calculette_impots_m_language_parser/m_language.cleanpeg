@@ -54,6 +54,6 @@ verif_condition = "si" expression "alors" "erreur" symbol+ ";"
 verif = "verif" symbol+ ":" applications_reference ";" verif_condition+
 
 erreur_type = ("anomalie" / "discordance" / "informative")
-erreur = symbol ":" erreur_type ":" string ":" string ":" string ":" string ":" string ";"
+erreur = symbol ":" erreur_type ":" string ":" string ":" string ":" string (":" string)? ";"
 
 m_source_file = (comment / application / enchaineur / variable / regle / verif / erreur)+ EOF

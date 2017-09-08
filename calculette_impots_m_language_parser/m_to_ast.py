@@ -270,8 +270,9 @@ class MLanguageVisitor(PTNodeVisitor):
     def visit_erreur(self, node, children):
         erreur_type = find_one(children, type='erreur_type')['value']
         strings = [string['value'] for string in find_many(children, type='string')]
+        nb_strings = len(strings)
         description = strings[3]
-        codes = strings[:3] + [strings[4]]
+        codes = strings[:3] + ([strings[4]] if nb_strings == 5 else [])
         return make_node(
             codes=codes,
             description=description,
