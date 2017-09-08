@@ -113,7 +113,13 @@ def get_parents(children_dict):
 def get_useful_nodes(roots, formulas, constants, inputs_list, children_dict, unknown_names):
     # List nodes used somewhere, with a graph traversal
 
-    to_inspect = roots[:]
+    to_inspect = []
+    for root in roots:
+        if root in children_dict:
+            to_inspect.append(root)
+        else:
+            print('Warning: root formula {} is not defined.'.format(root))
+
     useful_formulas = []
     useful_constants = []
     useful_inputs = []
@@ -167,7 +173,8 @@ def compute_non_recursive_computing_order(children_light):
 
     computing_order = []
     for root in roots:
-        find_order(root)
+        if root in children_light:
+            find_order(root)
 
     return computing_order
 
