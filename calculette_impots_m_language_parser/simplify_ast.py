@@ -55,16 +55,7 @@ def read_ast(source_dir):
 
         for direct_child in content:
             child_type = direct_child['type']
-            if child_type == 'verif':
-                pass
-
-            elif child_type == 'erreur':
-                pass
-
-            elif child_type == 'application':
-                pass
-
-            elif child_type == 'enchaineur':
+            if child_type in {'verif', 'erreur', 'application', 'enchaineur', 'sortie'}:
                 pass
 
             elif child_type == 'variable_calculee':

@@ -650,3 +650,9 @@ class MLanguageVisitor(PTNodeVisitor):
             node=node,
             variable_name=variable_name,
             )
+
+    def visit_sortie(self, node, children):
+        return make_node(
+            node=node,
+            variable_name=children[0]['value'],
+            )
