@@ -12,54 +12,123 @@ Only the formulas used for application "batch" are processed.
 import json
 import os
 
-script_dir = os.path.dirname(os.path.realpath(__file__))
-ast_m_dir = script_dir + '/../../json/ast/'
-output_dir = script_dir + '/../../json/simplified_ast/'
-file_list = os.listdir(ast_m_dir)
+# Public functions
 
-formulas = []
-constants = []
-computed_variables = []
-input_variables = []
-for filename in file_list:
-    with open(ast_m_dir + filename, 'r') as f:
-        content = json.load(f)
+def simplify_ast(source_dir, target_dir):
+    formulas, constants, computed_variables, input_variables = read_ast(source_dir)
 
-    for direct_child in content:
-        child_type = direct_child['type']
-        if child_type == 'verif':
-            pass
+    formulas_clean = clean_formulas(formulas)
 
-        elif child_type == 'erreur':
-            pass
+    formulas_dict = {
+        formula['name']: formula['expression']
+        for formula in formulas_clean
+    }
 
-        elif child_type == 'application':
-            pass
+    constants_dict = {
+        constant['name']: constant['value']
+        for constant in constants
+    }
 
-        elif child_type == 'enchaineur':
-            pass
+    with open(os.path.join(target_dir, 'formulas.json'), 'w') as f:
+        f.write(json.dumps(formulas_dict))
+        print('Wrote %d formulas.' % len(formulas_dict))
+    with open(os.path.join(target_dir, 'constants.json'), 'w') as f:
+        f.write(json.dumps(constants_dict))
+        print('Wrote %d constants.' % len(constants_dict))
+    with open(os.path.join(target_dir, 'input_variables.json'), 'w') as f:
+        f.write(json.dumps(input_variables))
+        print('Wrote %d input variables.' % len(input_variables))
 
-        elif child_type == 'variable_calculee':
-            name = direct_child['name']
-            computed_variables.append({'name': name})
 
-        elif child_type == 'variable_saisie':
-            name = direct_child['name']
-            alias = direct_child['alias']
-            input_variables.append({'name': name, 'alias': alias})
+# Helper functions
 
-        elif child_type == 'variable_const':
-            value = float(direct_child['value'])
-            name = direct_child['name']
-            constants.append({'name': name, 'value': value})
+def read_ast(source_dir):
+    formulas = []
+    constants = []
+    computed_variables = []
+    input_variables = []
 
-        elif child_type == 'regle':
-            if 'batch' in direct_child['applications']:
-                formulas += direct_child['formulas']
+    file_list = os.listdir(source_dir)
+    for filename in file_list:
+        with open(os.path.join(source_dir, filename), 'r') as f:
+            content = json.load(f)
+
+        for direct_child in content:
+            child_type = direct_child['type']
+            if child_type == 'verif':
+                pass
+
+            elif child_type == 'erreur':
+                pass
+
+            elif child_type == 'application':
+                pass
+
+            elif child_type == 'enchaineur':
+                pass
+
+            elif child_type == 'variable_calculee':
+                name = direct_child['name']
+                computed_variables.append({'name': name})
+
+            elif child_type == 'variable_saisie':
+                name = direct_child['name']
+                alias = direct_child['alias']
+                input_variables.append({'name': name, 'alias': alias})
+
+            elif child_type == 'variable_const':
+                value = float(direct_child['value'])
+                name = direct_child['name']
+                constants.append({'name': name, 'value': value})
+
+            elif child_type == 'regle':
+                if 'batch' in direct_child['applications']:
+                    formulas += direct_child['formulas']
+
+            else:
+                raise ValueError('Unknown child type %s in %s : %s' % (
+                    direct_child['type'], filename, str(direct_child)))
+
+    return formulas, constants, computed_variables, input_variables
+
+
+def clean_formulas(formulas):
+    formulas_clean = []
+    for formula in formulas:
+        formula_type = formula['type']
+        if formula_type == 'formula':
+            name = formula['name']
+            expression = formula['expression']
+            expression_clean = traversal(expression)
+            formulas_clean.append({'name': name, 'expression': expression_clean})
+
+        elif formula_type == 'pour_formula':
+            template_exp = traversal(formula['formula']['expression'])
+            template_name = formula['formula']['name']
+
+            templates_exp = [template_exp]
+            templates_name = [template_name]
+            loop_variables = formula['loop_variables']
+            for loop_variable in loop_variables:
+                assert(loop_variable['type'] == 'loop_variable')
+                variable_name = loop_variable['name']
+                enumerations = loop_variable['enumerations']
+                loop_values = []
+                for enumeration in enumerations:
+                    loop_values += [str(i) for i in parse_enumeration(enumeration)]
+                templates_exp = [loop_replace(template, variable_name, v)
+                                for v in loop_values
+                                for template in templates_exp]
+                templates_name = [template.replace(variable_name, v)
+                                for v in loop_values
+                                for template in templates_name]
+
+            for exp, name in zip(templates_exp, templates_name):
+                formulas_clean.append({'name': name, 'expression': exp})
 
         else:
-            raise ValueError('Unknown child type %s in %s : %s' % (
-                direct_child['type'], filename, str(direct_child)))
+            raise ValueError('Unknown formula type %s' % formula_type)
+    return formulas_clean
 
 
 def loop_replace(node, old, new):
@@ -135,7 +204,7 @@ def traversal(node):
                 templates = [loop_replace(t, variable_name, v)
                              for v in loop_values for t in templates]
             args = templates
-            return {'nodetype': 'call', 'name': '+', 'args': args}
+            return {'nodetype': 'call', 'name': 'sum', 'args': args}
 
         args = [traversal(child) for child in node['arguments']]
         return {'nodetype': 'call', 'name': name, 'args': args}
@@ -212,61 +281,3 @@ def traversal(node):
         return {'nodetype': 'call', 'name': name, 'args': [arg]}
 
     raise ValueError('Unknown type %s : %s' % (nodetype, node))
-
-
-formulas_clean = []
-for formula in formulas:
-    formula_type = formula['type']
-    if formula_type == 'formula':
-        name = formula['name']
-        expression = formula['expression']
-        expression_clean = traversal(expression)
-        formulas_clean.append({'name': name, 'expression': expression_clean})
-
-    elif formula_type == 'pour_formula':
-        template_exp = traversal(formula['formula']['expression'])
-        template_name = formula['formula']['name']
-
-        templates_exp = [template_exp]
-        templates_name = [template_name]
-        loop_variables = formula['loop_variables']
-        for loop_variable in loop_variables:
-            assert(loop_variable['type'] == 'loop_variable')
-            variable_name = loop_variable['name']
-            enumerations = loop_variable['enumerations']
-            loop_values = []
-            for enumeration in enumerations:
-                loop_values += [str(i) for i in parse_enumeration(enumeration)]
-            templates_exp = [loop_replace(template, variable_name, v)
-                             for v in loop_values
-                             for template in templates_exp]
-            templates_name = [template.replace(variable_name, v)
-                              for v in loop_values
-                              for template in templates_name]
-
-        for exp, name in zip(templates_exp, templates_name):
-            formulas_clean.append({'name': name, 'expression': exp})
-
-    else:
-        raise ValueError('Unknown formula type %s' % formula_type)
-
-
-formulas_dict = {
-    formula['name']: formula['expression']
-    for formula in formulas_clean
-}
-
-constants_dict = {
-    constant['name']: constant['value']
-    for constant in constants
-}
-
-with open(output_dir + 'formulas.json', 'w') as f:
-    f.write(json.dumps(formulas_dict))
-    print('Wrote %d formulas.' % len(formulas_dict))
-with open(output_dir + 'constants.json', 'w') as f:
-    f.write(json.dumps(constants_dict))
-    print('Wrote %d constants.' % len(constants_dict))
-with open(output_dir + 'input_variables.json', 'w') as f:
-    f.write(json.dumps(input_variables))
-    print('Wrote %d input variables.' % len(input_variables))

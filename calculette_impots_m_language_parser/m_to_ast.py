@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 
 """
 Convert M language source code to a JSON AST.
@@ -8,7 +5,6 @@ Convert M language source code to a JSON AST.
 
 
 from collections import OrderedDict
-import argparse
 import json
 import logging
 import os
@@ -21,14 +17,27 @@ from toolz import concatv, pluck
 
 # Globals
 
+debug = False
 
-args = None
-m_parser = None
-script_name = os.path.splitext(os.path.basename(__file__))[0]
-log = logging.getLogger(script_name)
+log = logging.getLogger()
+logging.basicConfig(level=logging.DEBUG if debug else logging.WARNING, stream=sys.stdout)
 
 script_dir_path = os.path.dirname(os.path.abspath(__file__))
-m_grammar_file_path = os.path.join(script_dir_path, '..', '..', 'm_language.cleanpeg')
+m_grammar_file_path = os.path.join(script_dir_path, 'm_language.cleanpeg')
+with open(m_grammar_file_path) as m_grammar_file:
+    m_grammar = m_grammar_file.read()
+root_rule = 'm_source_file'
+m_parser = ParserPEG(m_grammar, root_rule, debug=debug, reduce_tree=False)
+log.debug('M language clean-PEG grammar was parsed with success.')
+
+
+# Public functions
+
+def parse_m_file(source_code):
+    '''Parse a source code in language M and returns its Abstract Syntax Tree (AST)'''
+    parse_tree = m_parser.parse(source_code)
+    result = visit_parse_tree(parse_tree, MLanguageVisitor(debug=debug))
+    return json.dumps(result, indent=2)
 
 
 # M CONSTANTS
@@ -104,7 +113,7 @@ def make_node(node=None, linecol=None, type=None, **kwargs):
             ),
         **kwargs
         )
-    return clean_node if args.debug or args.no_order else pretty_ordered_keys(clean_node)
+    return pretty_ordered_keys(clean_node)
 
 
 def make_nested_operators_ast_nodes(node, operators, operands, type):
@@ -640,39 +649,3 @@ class MLanguageVisitor(PTNodeVisitor):
             node=node,
             variable_name=variable_name,
             )
-
-
-def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('-d', '--debug', action='store_true', default=False, help='Debug Arpeggio parser')
-    parser.add_argument('-v', '--verbose', action='store_true', default=False, help='Increase output verbosity')
-    parser.add_argument('--no-order', action='store_true', default=False, help='Do not use OrderedDict')
-    parser.add_argument('--no-visit', action='store_true', default=False, help='Do not visit the parsed tree')
-    parser.add_argument('--rule', default='m_source_file', help='Root rule name')
-    parser.add_argument('source_file', help='Source file to parse')
-    global args
-    args = parser.parse_args()
-    logging.basicConfig(level=logging.DEBUG if args.verbose or args.debug else logging.WARNING, stream=sys.stdout)
-
-    with open(args.source_file) as source_file:
-        source_code = source_file.read()
-    log.debug('Source file "{}" was read with success.'.format(args.source_file))
-
-    with open(m_grammar_file_path) as m_grammar_file:
-        m_grammar = m_grammar_file.read()
-    global m_parser
-    m_parser = ParserPEG(m_grammar, args.rule, debug=args.debug, reduce_tree=False)
-    log.debug('M language clean-PEG grammar was parsed with success.')
-
-    parse_tree = m_parser.parse(source_code)
-    log.debug('Source file "{}" was parsed with success.'.format(args.source_file))
-
-    if not args.no_visit:
-        result = visit_parse_tree(parse_tree, MLanguageVisitor(debug=args.debug))
-        print(json.dumps(result, indent=2))
-
-    return 0
-
-
-if __name__ == '__main__':
-    sys.exit(main())

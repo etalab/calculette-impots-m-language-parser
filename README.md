@@ -1,12 +1,9 @@
 # Parser du langage M
 
-Ce dépôt contient un "[parser](https://fr.wiktionary.org/wiki/parser)" du langage dédié nommé "M" utilisé par
-le code source de la [calculette des impôts sur les revenus](https://git.framasoft.org/openfisca/calculette-impots-m-source-code).
+Ce dépôt contient un "[parser](https://fr.wiktionary.org/wiki/parser)" du langage dédié nommé "M" utilisé par le code source de la [calculette des impôts sur les revenus](https://git.framasoft.org/openfisca/calculette-impots-m-source-code), ainsi que le code parsé, au format json.
 
-- [`m_language.cleanpeg`](m_language.cleanpeg) contient la description de la grammaire du langage M
-au format [cleanpeg](http://igordejanovic.net/Arpeggio/grammars/#grammars-written-in-peg-notations)
-- [`scripts/m_to_ast.py`](scripts/m_to_ast.py) est le script de transformation du code source
-vers un AST en JSON
+- [`m_language.cleanpeg`](m_language.cleanpeg) contient la description de la grammaire du langage M au format [cleanpeg](http://igordejanovic.net/Arpeggio/grammars/#grammars-written-in-peg-notations)
+- [`scripts/m_to_ast.py`](scripts/m_to_ast.py) est le script de transformation du code source vers un AST en JSON
 
 Les fichiers JSON du répertoire `json/ast` sont la traduction sous forme d'AST (abstract syntax tree) des fichiers du langage M.
 Il y a un fichier JSON par fichier M :
