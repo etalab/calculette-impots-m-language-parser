@@ -9,6 +9,7 @@ import json
 import logging
 import os
 import sys
+import re
 
 from arpeggio import PTNodeVisitor, visit_parse_tree
 from arpeggio.cleanpeg import ParserPEG
@@ -35,6 +36,7 @@ log.debug('M language clean-PEG grammar was parsed with success.')
 
 def parse_m_file(source_code):
     '''Parse a source code in language M and returns its Abstract Syntax Tree (AST)'''
+    source_code = preprocess(source_code)
     parse_tree = m_parser.parse(source_code)
     result = visit_parse_tree(parse_tree, MLanguageVisitor(debug=debug))
     return json.dumps(result, indent=2)
@@ -50,6 +52,21 @@ M_DIVISION = '/'
 
 # Helpers
 
+def preprocess(source_code):
+    lines = source_code.split('\n')
+
+    inline_comment_regex = r'^([^#]+)#.*$'
+
+    preprocessed_lines = []
+    for line in lines:
+        m = re.match(inline_comment_regex, line)
+        if m:
+            preprocessed_line = m.groups()[0]
+        else:
+            preprocessed_line = line
+        preprocessed_lines.append(preprocessed_line)
+
+    return '\n'.join(preprocessed_lines)
 
 def extract_operators(node):
     return [
