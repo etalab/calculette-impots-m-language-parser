@@ -1,0 +1,4623 @@
+[
+  {
+    "applications": [
+      "pro",
+      "oceans",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "TSHALLO1"
+            },
+            {
+              "type": "symbol",
+              "value": "TSHALLO2"
+            },
+            {
+              "type": "symbol",
+              "value": "TSHALLO3"
+            },
+            {
+              "type": "symbol",
+              "value": "TSHALLO4"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            29,
+            1
+          ],
+          [
+            29,
+            45
+          ]
+        ],
+        "name": "TSHALLOP",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "ALLO1"
+            },
+            {
+              "type": "symbol",
+              "value": "ALLO2"
+            },
+            {
+              "type": "symbol",
+              "value": "ALLO3"
+            },
+            {
+              "type": "symbol",
+              "value": "ALLO4"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            30,
+            1
+          ],
+          [
+            30,
+            30
+          ]
+        ],
+        "name": "ALLOP",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "TSHALLOP"
+            },
+            {
+              "type": "symbol",
+              "value": "ALLOP"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            31,
+            1
+          ],
+          [
+            31,
+            21
+          ]
+        ],
+        "name": "TSBNP",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "arguments": [
+            {
+              "expression": {
+                "type": "symbol",
+                "value": "TSBi"
+              },
+              "loop_variables": [
+                {
+                  "enumerations": [
+                    {
+                      "first": "1",
+                      "last": "4",
+                      "type": "interval"
+                    }
+                  ],
+                  "name": "i",
+                  "type": "loop_variable"
+                }
+              ],
+              "type": "loop_expression"
+            }
+          ],
+          "name": "somme",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            45,
+            1
+          ],
+          [
+            45,
+            26
+          ]
+        ],
+        "name": "TSBP",
+        "type": "formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "type": "symbol",
+                "value": "TSHALLOi"
+              },
+              {
+                "type": "symbol",
+                "value": "ALLOi"
+              }
+            ],
+            "type": "sum"
+          },
+          "linecol": [
+            [
+              28,
+              1
+            ],
+            [
+              28,
+              25
+            ]
+          ],
+          "name": "TSBNi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  "V",
+                  "C"
+                ]
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "type": "symbol",
+                "value": "CARTSi"
+              },
+              {
+                "type": "symbol",
+                "value": "REMPLAi"
+              }
+            ],
+            "type": "sum"
+          },
+          "linecol": [
+            [
+              34,
+              1
+            ],
+            [
+              34,
+              25
+            ]
+          ],
+          "name": "2TSNi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C"
+                ]
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "type": "symbol",
+                "value": "CARTSPi"
+              },
+              {
+                "type": "symbol",
+                "value": "REMPLAPi"
+              }
+            ],
+            "type": "sum"
+          },
+          "linecol": [
+            [
+              36,
+              1
+            ],
+            [
+              36,
+              27
+            ]
+          ],
+          "name": "2TSNi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  1,
+                  2,
+                  3,
+                  4
+                ]
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "type": "symbol",
+                "value": "TSBNi"
+              },
+              {
+                "type": "symbol",
+                "value": "BPCOSAi"
+              },
+              {
+                "type": "symbol",
+                "value": "2TSNi"
+              }
+            ],
+            "type": "sum"
+          },
+          "linecol": [
+            [
+              38,
+              1
+            ],
+            [
+              38,
+              32
+            ]
+          ],
+          "name": "EXTSi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C"
+                ]
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "type": "symbol",
+                "value": "TSBNi"
+              },
+              {
+                "type": "symbol",
+                "value": "2TSNi"
+              }
+            ],
+            "type": "sum"
+          },
+          "linecol": [
+            [
+              40,
+              1
+            ],
+            [
+              40,
+              22
+            ]
+          ],
+          "name": "EXTSi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "first": "1",
+                "last": "4",
+                "type": "interval"
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "type": "symbol",
+                "value": "EXTSi"
+              },
+              {
+                "arguments": [
+                  {
+                    "expression": {
+                      "type": "symbol",
+                      "value": "GLDxi"
+                    },
+                    "loop_variables": [
+                      {
+                        "enumerations": [
+                          {
+                            "first": "1",
+                            "last": "3",
+                            "type": "interval"
+                          }
+                        ],
+                        "name": "x",
+                        "type": "loop_variable"
+                      }
+                    ],
+                    "type": "loop_expression"
+                  }
+                ],
+                "name": "somme",
+                "type": "function_call"
+              }
+            ],
+            "type": "sum"
+          },
+          "linecol": [
+            [
+              42,
+              1
+            ],
+            [
+              42,
+              35
+            ]
+          ],
+          "name": "TSBi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C"
+                ]
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "type": "symbol",
+            "value": "EXTSi"
+          },
+          "linecol": [
+            [
+              44,
+              1
+            ],
+            [
+              44,
+              13
+            ]
+          ],
+          "name": "TSBi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  1,
+                  2,
+                  3,
+                  4
+                ]
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "type": "symbol",
+                "value": "PRBRi"
+              },
+              {
+                "type": "symbol",
+                "value": "PALIi"
+              }
+            ],
+            "type": "sum"
+          },
+          "linecol": [
+            [
+              47,
+              1
+            ],
+            [
+              47,
+              21
+            ]
+          ],
+          "name": "PRBi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C"
+                ]
+              },
+              {
+                "first": "1",
+                "last": "4",
+                "type": "interval"
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "type": "symbol",
+                "value": "CARPEi"
+              },
+              {
+                "type": "symbol",
+                "value": "PENSALi"
+              }
+            ],
+            "type": "sum"
+          },
+          "linecol": [
+            [
+              50,
+              1
+            ],
+            [
+              50,
+              26
+            ]
+          ],
+          "name": "2PRBi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C"
+                ]
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "type": "symbol",
+                "value": "CARPEPi"
+              },
+              {
+                "type": "symbol",
+                "value": "PENSALPi"
+              }
+            ],
+            "type": "sum"
+          },
+          "linecol": [
+            [
+              52,
+              1
+            ],
+            [
+              52,
+              28
+            ]
+          ],
+          "name": "2PRBi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "first": "1",
+                "last": "4",
+                "type": "interval"
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "type": "symbol",
+                "value": "PRBi"
+              },
+              {
+                "type": "symbol",
+                "value": "2PRBi"
+              },
+              {
+                "type": "symbol",
+                "value": "PEBFi"
+              }
+            ],
+            "type": "sum"
+          },
+          "linecol": [
+            [
+              54,
+              1
+            ],
+            [
+              54,
+              29
+            ]
+          ],
+          "name": "EXPRi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C"
+                ]
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "type": "symbol",
+                "value": "PRBi"
+              },
+              {
+                "type": "symbol",
+                "value": "2PRBi"
+              },
+              {
+                "type": "symbol",
+                "value": "PEBFi"
+              }
+            ],
+            "type": "sum"
+          },
+          "linecol": [
+            [
+              56,
+              1
+            ],
+            [
+              56,
+              29
+            ]
+          ],
+          "name": "EXPRi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "first": "1",
+                "last": "4",
+                "type": "interval"
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "type": "symbol",
+                "value": "EXTSi"
+              },
+              {
+                "type": "symbol",
+                "value": "EXPRi"
+              }
+            ],
+            "type": "sum"
+          },
+          "linecol": [
+            [
+              58,
+              1
+            ],
+            [
+              58,
+              24
+            ]
+          ],
+          "name": "EXSPBi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C"
+                ]
+              },
+              {
+                "first": "1",
+                "last": "4",
+                "type": "interval"
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      }
+    ],
+    "linecol": [
+      [
+        25,
+        1
+      ],
+      [
+        57,
+        1
+      ]
+    ],
+    "name": "811",
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "pro",
+      "oceans",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "formula": {
+          "expression": {
+            "arguments": [
+              {
+                "operands": [
+                  {
+                    "type": "symbol",
+                    "value": "TSBi"
+                  },
+                  {
+                    "type": "symbol",
+                    "value": "TX_DEDFORFTS"
+                  },
+                  {
+                    "operand": {
+                      "type": "integer",
+                      "value": 100
+                    },
+                    "type": "invert"
+                  }
+                ],
+                "type": "product"
+              }
+            ],
+            "name": "arr",
+            "type": "function_call"
+          },
+          "linecol": [
+            [
+              62,
+              1
+            ],
+            [
+              62,
+              40
+            ]
+          ],
+          "name": "TPS10i",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C"
+                ]
+              },
+              {
+                "first": "1",
+                "last": "4",
+                "type": "interval"
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "arguments": [
+              {
+                "operands": [
+                  {
+                    "type": "symbol",
+                    "value": "PERPSALi"
+                  },
+                  {
+                    "type": "symbol",
+                    "value": "TX_DEDFORFTS"
+                  },
+                  {
+                    "operand": {
+                      "type": "integer",
+                      "value": 100
+                    },
+                    "type": "invert"
+                  }
+                ],
+                "type": "product"
+              }
+            ],
+            "name": "arr",
+            "type": "function_call"
+          },
+          "linecol": [
+            [
+              64,
+              1
+            ],
+            [
+              64,
+              45
+            ]
+          ],
+          "name": "PTPS10i",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C",
+                  "P"
+                ]
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "arguments": [
+              {
+                "type": "symbol",
+                "value": "PLAF_DEDFORFTS"
+              },
+              {
+                "type": "symbol",
+                "value": "TPS10i"
+              }
+            ],
+            "name": "min",
+            "type": "function_call"
+          },
+          "linecol": [
+            [
+              66,
+              1
+            ],
+            [
+              66,
+              39
+            ]
+          ],
+          "name": "DFNi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C"
+                ]
+              },
+              {
+                "first": "1",
+                "last": "4",
+                "type": "interval"
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "arguments": [
+              {
+                "type": "symbol",
+                "value": "PLAF_DEDFORFTS"
+              },
+              {
+                "type": "symbol",
+                "value": "PTPS10i"
+              }
+            ],
+            "name": "min",
+            "type": "function_call"
+          },
+          "linecol": [
+            [
+              68,
+              1
+            ],
+            [
+              68,
+              41
+            ]
+          ],
+          "name": "PDFNi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C",
+                  "P"
+                ]
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      }
+    ],
+    "linecol": [
+      [
+        59,
+        1
+      ],
+      [
+        67,
+        1
+      ]
+    ],
+    "name": "812",
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "pro",
+      "oceans",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "arguments": [
+                    {
+                      "type": "symbol",
+                      "value": "DETS1"
+                    }
+                  ],
+                  "name": "positif",
+                  "type": "function_call"
+                },
+                {
+                  "type": "symbol",
+                  "value": "MIN_DEMEMPLOI"
+                }
+              ],
+              "type": "product"
+            },
+            {
+              "operands": [
+                {
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "operand": {
+                        "arguments": [
+                          {
+                            "type": "symbol",
+                            "value": "DETS1"
+                          }
+                        ],
+                        "name": "positif",
+                        "type": "function_call"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                },
+                {
+                  "type": "symbol",
+                  "value": "MIN_DEDSFORFTS"
+                }
+              ],
+              "type": "product"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            75,
+            1
+          ],
+          [
+            76,
+            42
+          ]
+        ],
+        "name": "PDEDMINP",
+        "type": "formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "type": "symbol",
+                        "value": "DETSi"
+                      }
+                    ],
+                    "name": "positif",
+                    "type": "function_call"
+                  },
+                  {
+                    "type": "symbol",
+                    "value": "MIN_DEMEMPLOI"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "operands": [
+                      {
+                        "type": "integer",
+                        "value": 1
+                      },
+                      {
+                        "operand": {
+                          "arguments": [
+                            {
+                              "type": "symbol",
+                              "value": "DETSi"
+                            }
+                          ],
+                          "name": "positif",
+                          "type": "function_call"
+                        },
+                        "type": "negate"
+                      }
+                    ],
+                    "type": "sum"
+                  },
+                  {
+                    "type": "symbol",
+                    "value": "MIN_DEDSFORFTS"
+                  }
+                ],
+                "type": "product"
+              }
+            ],
+            "type": "sum"
+          },
+          "linecol": [
+            [
+              72,
+              1
+            ],
+            [
+              72,
+              78
+            ]
+          ],
+          "name": "DEDMINi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C"
+                ]
+              },
+              {
+                "first": "1",
+                "last": "4",
+                "type": "interval"
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "type": "symbol",
+            "value": "DEDMINi"
+          },
+          "linecol": [
+            [
+              74,
+              1
+            ],
+            [
+              74,
+              19
+            ]
+          ],
+          "name": "PDEDMINi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C"
+                ]
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "arguments": [
+              {
+                "arguments": [
+                  {
+                    "type": "symbol",
+                    "value": "TSBi"
+                  },
+                  {
+                    "type": "symbol",
+                    "value": "DEDMINi"
+                  }
+                ],
+                "name": "min",
+                "type": "function_call"
+              },
+              {
+                "type": "symbol",
+                "value": "DFNi"
+              }
+            ],
+            "name": "max",
+            "type": "function_call"
+          },
+          "linecol": [
+            [
+              79,
+              1
+            ],
+            [
+              79,
+              41
+            ]
+          ],
+          "name": "10MINSi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C"
+                ]
+              },
+              {
+                "first": "1",
+                "last": "4",
+                "type": "interval"
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "arguments": [
+              {
+                "arguments": [
+                  {
+                    "type": "symbol",
+                    "value": "PERPSALi"
+                  },
+                  {
+                    "type": "symbol",
+                    "value": "PDEDMINi"
+                  }
+                ],
+                "name": "min",
+                "type": "function_call"
+              },
+              {
+                "type": "symbol",
+                "value": "PDFNi"
+              }
+            ],
+            "name": "max",
+            "type": "function_call"
+          },
+          "linecol": [
+            [
+              81,
+              1
+            ],
+            [
+              81,
+              48
+            ]
+          ],
+          "name": "P10MINSi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C",
+                  "P"
+                ]
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "arguments": [
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "DEDMINi"
+                      },
+                      {
+                        "operand": {
+                          "type": "symbol",
+                          "value": "DFNi"
+                        },
+                        "type": "negate"
+                      }
+                    ],
+                    "type": "sum"
+                  }
+                ],
+                "name": "positif",
+                "type": "function_call"
+              },
+              {
+                "arguments": [
+                  {
+                    "type": "symbol",
+                    "value": "TSBi"
+                  }
+                ],
+                "name": "positif",
+                "type": "function_call"
+              }
+            ],
+            "type": "product"
+          },
+          "linecol": [
+            [
+              83,
+              1
+            ],
+            [
+              83,
+              58
+            ]
+          ],
+          "name": "IND_10MIN_0i",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C"
+                ]
+              },
+              {
+                "first": "1",
+                "last": "4",
+                "type": "interval"
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "arguments": [
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "PDEDMINi"
+                      },
+                      {
+                        "operand": {
+                          "type": "symbol",
+                          "value": "PDFNi"
+                        },
+                        "type": "negate"
+                      }
+                    ],
+                    "type": "sum"
+                  }
+                ],
+                "name": "positif",
+                "type": "function_call"
+              },
+              {
+                "arguments": [
+                  {
+                    "type": "symbol",
+                    "value": "PERPSALi"
+                  }
+                ],
+                "name": "positif",
+                "type": "function_call"
+              }
+            ],
+            "type": "product"
+          },
+          "linecol": [
+            [
+              85,
+              1
+            ],
+            [
+              85,
+              65
+            ]
+          ],
+          "name": "PIND_10MIN_0i",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C",
+                  "P"
+                ]
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "type": "integer",
+                "value": 1
+              },
+              {
+                "operand": {
+                  "arguments": [
+                    {
+                      "type": "symbol",
+                      "value": "IND_10MIN_0i"
+                    }
+                  ],
+                  "name": "positif",
+                  "type": "function_call"
+                },
+                "type": "negate"
+              }
+            ],
+            "type": "sum"
+          },
+          "linecol": [
+            [
+              87,
+              1
+            ],
+            [
+              87,
+              39
+            ]
+          ],
+          "name": "IND_MINi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C"
+                ]
+              },
+              {
+                "first": "1",
+                "last": "4",
+                "type": "interval"
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "type": "integer",
+                "value": 1
+              },
+              {
+                "operand": {
+                  "arguments": [
+                    {
+                      "type": "symbol",
+                      "value": "PIND_10MIN_0i"
+                    }
+                  ],
+                  "name": "positif",
+                  "type": "function_call"
+                },
+                "type": "negate"
+              }
+            ],
+            "type": "sum"
+          },
+          "linecol": [
+            [
+              89,
+              1
+            ],
+            [
+              89,
+              41
+            ]
+          ],
+          "name": "PIND_MINi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C",
+                  "P"
+                ]
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      }
+    ],
+    "linecol": [
+      [
+        69,
+        1
+      ],
+      [
+        88,
+        1
+      ]
+    ],
+    "name": "813",
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "pro",
+      "oceans",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "FRN1"
+            },
+            {
+              "arguments": [
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "FRN1"
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "P10MINSP"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                }
+              ],
+              "name": "positif",
+              "type": "function_call"
+            }
+          ],
+          "type": "product"
+        },
+        "linecol": [
+          [
+            96,
+            1
+          ],
+          [
+            96,
+            41
+          ]
+        ],
+        "name": "PFRDP",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "arguments": [
+            {
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "P10MINSP"
+                },
+                {
+                  "operand": {
+                    "type": "symbol",
+                    "value": "FRN1"
+                  },
+                  "type": "negate"
+                }
+              ],
+              "type": "sum"
+            }
+          ],
+          "name": "positif_ou_nul",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            101,
+            1
+          ],
+          [
+            101,
+            45
+          ]
+        ],
+        "name": "PIND_10P",
+        "type": "formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "type": "symbol",
+                "value": "FRNi"
+              },
+              {
+                "arguments": [
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "FRNi"
+                      },
+                      {
+                        "operand": {
+                          "type": "symbol",
+                          "value": "10MINSi"
+                        },
+                        "type": "negate"
+                      }
+                    ],
+                    "type": "sum"
+                  }
+                ],
+                "name": "positif",
+                "type": "function_call"
+              }
+            ],
+            "type": "product"
+          },
+          "linecol": [
+            [
+              93,
+              1
+            ],
+            [
+              93,
+              39
+            ]
+          ],
+          "name": "FRDi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C"
+                ]
+              },
+              {
+                "first": "1",
+                "last": "4",
+                "type": "interval"
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "type": "symbol",
+                "value": "FRNi"
+              },
+              {
+                "arguments": [
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "FRNi"
+                      },
+                      {
+                        "operand": {
+                          "type": "symbol",
+                          "value": "P10MINSi"
+                        },
+                        "type": "negate"
+                      }
+                    ],
+                    "type": "sum"
+                  }
+                ],
+                "name": "positif",
+                "type": "function_call"
+              }
+            ],
+            "type": "product"
+          },
+          "linecol": [
+            [
+              95,
+              1
+            ],
+            [
+              95,
+              41
+            ]
+          ],
+          "name": "PFRDi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C"
+                ]
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "arguments": [
+              {
+                "operands": [
+                  {
+                    "type": "symbol",
+                    "value": "10MINSi"
+                  },
+                  {
+                    "operand": {
+                      "type": "symbol",
+                      "value": "FRNi"
+                    },
+                    "type": "negate"
+                  }
+                ],
+                "type": "sum"
+              }
+            ],
+            "name": "positif_ou_nul",
+            "type": "function_call"
+          },
+          "linecol": [
+            [
+              98,
+              1
+            ],
+            [
+              98,
+              44
+            ]
+          ],
+          "name": "IND_10i",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C"
+                ]
+              },
+              {
+                "first": "1",
+                "last": "4",
+                "type": "interval"
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "arguments": [
+              {
+                "operands": [
+                  {
+                    "type": "symbol",
+                    "value": "P10MINSi"
+                  },
+                  {
+                    "operand": {
+                      "type": "symbol",
+                      "value": "FRNi"
+                    },
+                    "type": "negate"
+                  }
+                ],
+                "type": "sum"
+              }
+            ],
+            "name": "positif_ou_nul",
+            "type": "function_call"
+          },
+          "linecol": [
+            [
+              100,
+              1
+            ],
+            [
+              100,
+              45
+            ]
+          ],
+          "name": "PIND_10i",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C"
+                ]
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "arguments": [
+              {
+                "type": "symbol",
+                "value": "FRDi"
+              },
+              {
+                "type": "symbol",
+                "value": "10MINSi"
+              }
+            ],
+            "name": "max",
+            "type": "function_call"
+          },
+          "linecol": [
+            [
+              103,
+              1
+            ],
+            [
+              103,
+              26
+            ]
+          ],
+          "name": "FPTi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C"
+                ]
+              },
+              {
+                "first": "1",
+                "last": "4",
+                "type": "interval"
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "arguments": [
+              {
+                "type": "symbol",
+                "value": "PFRDi"
+              },
+              {
+                "type": "symbol",
+                "value": "P10MINSi"
+              }
+            ],
+            "name": "max",
+            "type": "function_call"
+          },
+          "linecol": [
+            [
+              105,
+              1
+            ],
+            [
+              105,
+              29
+            ]
+          ],
+          "name": "PFPTi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C",
+                  "P"
+                ]
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "operands": [
+                  {
+                    "type": "symbol",
+                    "value": "IND_MINi"
+                  },
+                  {
+                    "type": "symbol",
+                    "value": "DFNi"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "operands": [
+                      {
+                        "type": "integer",
+                        "value": 1
+                      },
+                      {
+                        "operand": {
+                          "type": "symbol",
+                          "value": "IND_MINi"
+                        },
+                        "type": "negate"
+                      }
+                    ],
+                    "type": "sum"
+                  },
+                  {
+                    "type": "symbol",
+                    "value": "10MINSi"
+                  }
+                ],
+                "type": "product"
+              }
+            ],
+            "type": "sum"
+          },
+          "linecol": [
+            [
+              107,
+              1
+            ],
+            [
+              108,
+              35
+            ]
+          ],
+          "name": "D10Mi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C"
+                ]
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "operands": [
+                  {
+                    "type": "symbol",
+                    "value": "PIND_MINi"
+                  },
+                  {
+                    "type": "symbol",
+                    "value": "PDFNi"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "operands": [
+                      {
+                        "type": "integer",
+                        "value": 1
+                      },
+                      {
+                        "operand": {
+                          "type": "symbol",
+                          "value": "PIND_MINi"
+                        },
+                        "type": "negate"
+                      }
+                    ],
+                    "type": "sum"
+                  },
+                  {
+                    "type": "symbol",
+                    "value": "P10MINSi"
+                  }
+                ],
+                "type": "product"
+              }
+            ],
+            "type": "sum"
+          },
+          "linecol": [
+            [
+              110,
+              1
+            ],
+            [
+              111,
+              37
+            ]
+          ],
+          "name": "PD10Mi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C",
+                  "P"
+                ]
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "operands": [
+                  {
+                    "type": "symbol",
+                    "value": "IND_10i"
+                  },
+                  {
+                    "type": "symbol",
+                    "value": "D10Mi"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "operands": [
+                      {
+                        "type": "integer",
+                        "value": 1
+                      },
+                      {
+                        "operand": {
+                          "type": "symbol",
+                          "value": "IND_10i"
+                        },
+                        "type": "negate"
+                      }
+                    ],
+                    "type": "sum"
+                  },
+                  {
+                    "type": "symbol",
+                    "value": "FPTi"
+                  }
+                ],
+                "type": "product"
+              }
+            ],
+            "type": "sum"
+          },
+          "linecol": [
+            [
+              113,
+              1
+            ],
+            [
+              113,
+              48
+            ]
+          ],
+          "name": "REP10i",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C"
+                ]
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "operands": [
+                  {
+                    "type": "symbol",
+                    "value": "PIND_10i"
+                  },
+                  {
+                    "type": "symbol",
+                    "value": "PD10Mi"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "operands": [
+                      {
+                        "type": "integer",
+                        "value": 1
+                      },
+                      {
+                        "operand": {
+                          "type": "symbol",
+                          "value": "PIND_10i"
+                        },
+                        "type": "negate"
+                      }
+                    ],
+                    "type": "sum"
+                  },
+                  {
+                    "type": "symbol",
+                    "value": "PFPTi"
+                  }
+                ],
+                "type": "product"
+              }
+            ],
+            "type": "sum"
+          },
+          "linecol": [
+            [
+              115,
+              1
+            ],
+            [
+              115,
+              53
+            ]
+          ],
+          "name": "PREP10i",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C",
+                  "P"
+                ]
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "arguments": [
+              {
+                "operands": [
+                  {
+                    "type": "symbol",
+                    "value": "REP10i"
+                  },
+                  {
+                    "type": "symbol",
+                    "value": "EXTSi"
+                  },
+                  {
+                    "operand": {
+                      "type": "symbol",
+                      "value": "TSBi"
+                    },
+                    "type": "invert"
+                  }
+                ],
+                "type": "product"
+              }
+            ],
+            "name": "arr",
+            "type": "function_call"
+          },
+          "linecol": [
+            [
+              117,
+              1
+            ],
+            [
+              117,
+              31
+            ]
+          ],
+          "name": "ABTSi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C"
+                ]
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      }
+    ],
+    "linecol": [
+      [
+        90,
+        1
+      ],
+      [
+        116,
+        1
+      ]
+    ],
+    "name": "814",
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "pro",
+      "oceans",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "arguments": [
+                  {
+                    "type": "symbol",
+                    "value": "GLD1i"
+                  }
+                ],
+                "name": "positif",
+                "type": "function_call"
+              },
+              {
+                "operands": [
+                  {
+                    "operands": [
+                      {
+                        "arguments": [
+                          {
+                            "operands": [
+                              {
+                                "type": "symbol",
+                                "value": "GLD2i"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "GLD3i"
+                              }
+                            ],
+                            "type": "sum"
+                          }
+                        ],
+                        "name": "positif",
+                        "type": "function_call"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "operands": [
+                              {
+                                "type": "symbol",
+                                "value": "REP10i"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "GLD1i"
+                              },
+                              {
+                                "operand": {
+                                  "type": "symbol",
+                                  "value": "TSBi"
+                                },
+                                "type": "invert"
+                              }
+                            ],
+                            "type": "product"
+                          }
+                        ],
+                        "name": "arr",
+                        "type": "function_call"
+                      }
+                    ],
+                    "type": "product"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "operands": [
+                          {
+                            "type": "integer",
+                            "value": 1
+                          },
+                          {
+                            "operand": {
+                              "arguments": [
+                                {
+                                  "operands": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "GLD2i"
+                                    },
+                                    {
+                                      "type": "symbol",
+                                      "value": "GLD3i"
+                                    }
+                                  ],
+                                  "type": "sum"
+                                }
+                              ],
+                              "name": "positif",
+                              "type": "function_call"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "REP10i"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "ABTSi"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "sum"
+              }
+            ],
+            "type": "product"
+          },
+          "linecol": [
+            [
+              121,
+              1
+            ],
+            [
+              123,
+              49
+            ]
+          ],
+          "name": "ABGL1i",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C"
+                ]
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "arguments": [
+                  {
+                    "type": "symbol",
+                    "value": "GLD2i"
+                  }
+                ],
+                "name": "positif",
+                "type": "function_call"
+              },
+              {
+                "operands": [
+                  {
+                    "operands": [
+                      {
+                        "arguments": [
+                          {
+                            "type": "symbol",
+                            "value": "GLD3i"
+                          }
+                        ],
+                        "name": "positif",
+                        "type": "function_call"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "operands": [
+                              {
+                                "type": "symbol",
+                                "value": "REP10i"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "GLD2i"
+                              },
+                              {
+                                "operand": {
+                                  "type": "symbol",
+                                  "value": "TSBi"
+                                },
+                                "type": "invert"
+                              }
+                            ],
+                            "type": "product"
+                          }
+                        ],
+                        "name": "arr",
+                        "type": "function_call"
+                      }
+                    ],
+                    "type": "product"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "operands": [
+                          {
+                            "type": "integer",
+                            "value": 1
+                          },
+                          {
+                            "operand": {
+                              "arguments": [
+                                {
+                                  "type": "symbol",
+                                  "value": "GLD3i"
+                                }
+                              ],
+                              "name": "positif",
+                              "type": "function_call"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "REP10i"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "ABTSi"
+                            },
+                            "type": "negate"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "ABGL1i"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "sum"
+              }
+            ],
+            "type": "product"
+          },
+          "linecol": [
+            [
+              125,
+              1
+            ],
+            [
+              127,
+              50
+            ]
+          ],
+          "name": "ABGL2i",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C"
+                ]
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "arguments": [
+                  {
+                    "type": "symbol",
+                    "value": "GLD3i"
+                  }
+                ],
+                "name": "positif",
+                "type": "function_call"
+              },
+              {
+                "operands": [
+                  {
+                    "type": "symbol",
+                    "value": "REP10i"
+                  },
+                  {
+                    "operand": {
+                      "type": "symbol",
+                      "value": "ABTSi"
+                    },
+                    "type": "negate"
+                  },
+                  {
+                    "operand": {
+                      "type": "symbol",
+                      "value": "ABGL1i"
+                    },
+                    "type": "negate"
+                  },
+                  {
+                    "operand": {
+                      "type": "symbol",
+                      "value": "ABGL2i"
+                    },
+                    "type": "negate"
+                  }
+                ],
+                "type": "sum"
+              }
+            ],
+            "type": "product"
+          },
+          "linecol": [
+            [
+              129,
+              1
+            ],
+            [
+              129,
+              55
+            ]
+          ],
+          "name": "ABGL3i",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C"
+                ]
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      }
+    ],
+    "linecol": [
+      [
+        118,
+        1
+      ],
+      [
+        128,
+        1
+      ]
+    ],
+    "name": "816",
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "pro",
+      "oceans",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "formula": {
+          "expression": {
+            "arguments": [
+              {
+                "expression": {
+                  "type": "symbol",
+                  "value": "ABGLxi"
+                },
+                "loop_variables": [
+                  {
+                    "enumerations": [
+                      {
+                        "first": "1",
+                        "last": "3",
+                        "type": "interval"
+                      }
+                    ],
+                    "name": "x",
+                    "type": "loop_variable"
+                  }
+                ],
+                "type": "loop_expression"
+              }
+            ],
+            "name": "somme",
+            "type": "function_call"
+          },
+          "linecol": [
+            [
+              133,
+              1
+            ],
+            [
+              133,
+              32
+            ]
+          ],
+          "name": "ABGLTi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C"
+                ]
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      }
+    ],
+    "linecol": [
+      [
+        130,
+        1
+      ],
+      [
+        132,
+        1
+      ]
+    ],
+    "name": "817",
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "pro",
+      "oceans",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "arguments": [
+            {
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "PLAF_DEDPRFOYER"
+                },
+                {
+                  "operand": {
+                    "arguments": [
+                      {
+                        "expression": {
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "APBi"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "IND_APBi"
+                            }
+                          ],
+                          "type": "product"
+                        },
+                        "loop_variables": [
+                          {
+                            "enumerations": [
+                              {
+                                "type": "enumeration_values",
+                                "values": [
+                                  "V",
+                                  "C"
+                                ]
+                              },
+                              {
+                                "first": "1",
+                                "last": "4",
+                                "type": "interval"
+                              }
+                            ],
+                            "name": "i",
+                            "type": "loop_variable"
+                          }
+                        ],
+                        "type": "loop_expression"
+                      }
+                    ],
+                    "name": "somme",
+                    "type": "function_call"
+                  },
+                  "type": "negate"
+                }
+              ],
+              "type": "sum"
+            }
+          ],
+          "name": "arr",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            142,
+            1
+          ],
+          [
+            142,
+            66
+          ]
+        ],
+        "name": "PL_PB",
+        "type": "formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "arguments": [
+              {
+                "type": "symbol",
+                "value": "MIN_DEDPR"
+              },
+              {
+                "type": "symbol",
+                "value": "EXPRi"
+              }
+            ],
+            "name": "min",
+            "type": "function_call"
+          },
+          "linecol": [
+            [
+              137,
+              1
+            ],
+            [
+              137,
+              33
+            ]
+          ],
+          "name": "PLRi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  "V",
+                  "C"
+                ]
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "arguments": [
+              {
+                "type": "symbol",
+                "value": "PLRi"
+              },
+              {
+                "operands": [
+                  {
+                    "type": "symbol",
+                    "value": "EXPRi"
+                  },
+                  {
+                    "type": "symbol",
+                    "value": "TX_DEDPER"
+                  },
+                  {
+                    "operand": {
+                      "type": "integer",
+                      "value": 100
+                    },
+                    "type": "invert"
+                  }
+                ],
+                "type": "product"
+              }
+            ],
+            "name": "max",
+            "type": "function_call"
+          },
+          "linecol": [
+            [
+              139,
+              1
+            ],
+            [
+              139,
+              42
+            ]
+          ],
+          "name": "APBi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  "V",
+                  "C"
+                ]
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "arguments": [
+              {
+                "operands": [
+                  {
+                    "type": "symbol",
+                    "value": "PLRi"
+                  },
+                  {
+                    "operand": {
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "EXPRi"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "TX_DEDPER"
+                        },
+                        {
+                          "operand": {
+                            "type": "integer",
+                            "value": 100
+                          },
+                          "type": "invert"
+                        }
+                      ],
+                      "type": "product"
+                    },
+                    "type": "negate"
+                  }
+                ],
+                "type": "sum"
+              }
+            ],
+            "name": "positif_ou_nul",
+            "type": "function_call"
+          },
+          "linecol": [
+            [
+              141,
+              1
+            ],
+            [
+              141,
+              57
+            ]
+          ],
+          "name": "IND_APBi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  "V",
+                  "C"
+                ]
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      }
+    ],
+    "linecol": [
+      [
+        134,
+        1
+      ],
+      [
+        142,
+        1
+      ]
+    ],
+    "name": "818",
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "pro",
+      "oceans",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "formula": {
+          "expression": {
+            "arguments": [
+              {
+                "operands": [
+                  {
+                    "operands": [
+                      {
+                        "operands": [
+                          {
+                            "type": "integer",
+                            "value": 1
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "IND_APBi"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "type": "symbol",
+                            "value": "APBi"
+                          },
+                          {
+                            "operands": [
+                              {
+                                "type": "symbol",
+                                "value": "PL_PB"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "APBi"
+                              },
+                              {
+                                "operand": {
+                                  "arguments": [
+                                    {
+                                      "expression": {
+                                        "operands": [
+                                          {
+                                            "type": "symbol",
+                                            "value": "APBx"
+                                          },
+                                          {
+                                            "operands": [
+                                              {
+                                                "type": "integer",
+                                                "value": 1
+                                              },
+                                              {
+                                                "operand": {
+                                                  "type": "symbol",
+                                                  "value": "IND_APBx"
+                                                },
+                                                "type": "negate"
+                                              }
+                                            ],
+                                            "type": "sum"
+                                          }
+                                        ],
+                                        "type": "product"
+                                      },
+                                      "loop_variables": [
+                                        {
+                                          "enumerations": [
+                                            {
+                                              "type": "enumeration_values",
+                                              "values": [
+                                                "V",
+                                                "C"
+                                              ]
+                                            },
+                                            {
+                                              "first": "1",
+                                              "last": "4",
+                                              "type": "interval"
+                                            }
+                                          ],
+                                          "name": "x",
+                                          "type": "loop_variable"
+                                        }
+                                      ],
+                                      "type": "loop_expression"
+                                    }
+                                  ],
+                                  "name": "somme",
+                                  "type": "function_call"
+                                },
+                                "type": "invert"
+                              }
+                            ],
+                            "type": "product"
+                          }
+                        ],
+                        "name": "min",
+                        "type": "function_call"
+                      }
+                    ],
+                    "type": "product"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "IND_APBi"
+                      },
+                      {
+                        "type": "symbol",
+                        "value": "APBi"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "sum"
+              }
+            ],
+            "name": "arr",
+            "type": "function_call"
+          },
+          "linecol": [
+            [
+              146,
+              1
+            ],
+            [
+              148,
+              21
+            ]
+          ],
+          "name": "ABPRi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  "V",
+                  "C"
+                ]
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      }
+    ],
+    "linecol": [
+      [
+        143,
+        1
+      ],
+      [
+        145,
+        1
+      ]
+    ],
+    "name": "819",
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "pro",
+      "oceans",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "IND_APBV"
+                },
+                {
+                  "type": "symbol",
+                  "value": "ABPRV"
+                }
+              ],
+              "type": "product"
+            },
+            {
+              "operands": [
+                {
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "IND_APBV"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                },
+                {
+                  "arguments": [
+                    {
+                      "type": "symbol",
+                      "value": "ABPRV"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "PL_PB"
+                    }
+                  ],
+                  "name": "min",
+                  "type": "function_call"
+                }
+              ],
+              "type": "product"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            151,
+            1
+          ],
+          [
+            152,
+            44
+          ]
+        ],
+        "name": "APRV",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "IND_APBC"
+                },
+                {
+                  "type": "symbol",
+                  "value": "ABPRC"
+                }
+              ],
+              "type": "product"
+            },
+            {
+              "operands": [
+                {
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "IND_APBC"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                },
+                {
+                  "arguments": [
+                    {
+                      "type": "symbol",
+                      "value": "ABPRC"
+                    },
+                    {
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "PL_PB"
+                        },
+                        {
+                          "operand": {
+                            "operands": [
+                              {
+                                "operands": [
+                                  {
+                                    "type": "integer",
+                                    "value": 1
+                                  },
+                                  {
+                                    "operand": {
+                                      "type": "symbol",
+                                      "value": "IND_APBV"
+                                    },
+                                    "type": "negate"
+                                  }
+                                ],
+                                "type": "sum"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "APRV"
+                              }
+                            ],
+                            "type": "product"
+                          },
+                          "type": "negate"
+                        }
+                      ],
+                      "type": "sum"
+                    }
+                  ],
+                  "name": "min",
+                  "type": "function_call"
+                }
+              ],
+              "type": "product"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            153,
+            1
+          ],
+          [
+            154,
+            65
+          ]
+        ],
+        "name": "APRC",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "IND_APB1"
+                },
+                {
+                  "type": "symbol",
+                  "value": "ABPR1"
+                }
+              ],
+              "type": "product"
+            },
+            {
+              "operands": [
+                {
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "IND_APB1"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                },
+                {
+                  "arguments": [
+                    {
+                      "type": "symbol",
+                      "value": "ABPR1"
+                    },
+                    {
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "PL_PB"
+                        },
+                        {
+                          "operand": {
+                            "operands": [
+                              {
+                                "operands": [
+                                  {
+                                    "type": "integer",
+                                    "value": 1
+                                  },
+                                  {
+                                    "operand": {
+                                      "type": "symbol",
+                                      "value": "IND_APBV"
+                                    },
+                                    "type": "negate"
+                                  }
+                                ],
+                                "type": "sum"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "APRV"
+                              }
+                            ],
+                            "type": "product"
+                          },
+                          "type": "negate"
+                        },
+                        {
+                          "operand": {
+                            "operands": [
+                              {
+                                "operands": [
+                                  {
+                                    "type": "integer",
+                                    "value": 1
+                                  },
+                                  {
+                                    "operand": {
+                                      "type": "symbol",
+                                      "value": "IND_APBC"
+                                    },
+                                    "type": "negate"
+                                  }
+                                ],
+                                "type": "sum"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "APRC"
+                              }
+                            ],
+                            "type": "product"
+                          },
+                          "type": "negate"
+                        }
+                      ],
+                      "type": "sum"
+                    }
+                  ],
+                  "name": "min",
+                  "type": "function_call"
+                }
+              ],
+              "type": "product"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            155,
+            1
+          ],
+          [
+            157,
+            24
+          ]
+        ],
+        "name": "APR1",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "IND_APB2"
+                },
+                {
+                  "type": "symbol",
+                  "value": "ABPR2"
+                }
+              ],
+              "type": "product"
+            },
+            {
+              "operands": [
+                {
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "IND_APB2"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                },
+                {
+                  "arguments": [
+                    {
+                      "type": "symbol",
+                      "value": "ABPR2"
+                    },
+                    {
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "PL_PB"
+                        },
+                        {
+                          "operand": {
+                            "operands": [
+                              {
+                                "operands": [
+                                  {
+                                    "type": "integer",
+                                    "value": 1
+                                  },
+                                  {
+                                    "operand": {
+                                      "type": "symbol",
+                                      "value": "IND_APBV"
+                                    },
+                                    "type": "negate"
+                                  }
+                                ],
+                                "type": "sum"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "APRV"
+                              }
+                            ],
+                            "type": "product"
+                          },
+                          "type": "negate"
+                        },
+                        {
+                          "operand": {
+                            "operands": [
+                              {
+                                "operands": [
+                                  {
+                                    "type": "integer",
+                                    "value": 1
+                                  },
+                                  {
+                                    "operand": {
+                                      "type": "symbol",
+                                      "value": "IND_APBC"
+                                    },
+                                    "type": "negate"
+                                  }
+                                ],
+                                "type": "sum"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "APRC"
+                              }
+                            ],
+                            "type": "product"
+                          },
+                          "type": "negate"
+                        },
+                        {
+                          "operand": {
+                            "operands": [
+                              {
+                                "operands": [
+                                  {
+                                    "type": "integer",
+                                    "value": 1
+                                  },
+                                  {
+                                    "operand": {
+                                      "type": "symbol",
+                                      "value": "IND_APB1"
+                                    },
+                                    "type": "negate"
+                                  }
+                                ],
+                                "type": "sum"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "APR1"
+                              }
+                            ],
+                            "type": "product"
+                          },
+                          "type": "negate"
+                        }
+                      ],
+                      "type": "sum"
+                    }
+                  ],
+                  "name": "min",
+                  "type": "function_call"
+                }
+              ],
+              "type": "product"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            158,
+            1
+          ],
+          [
+            160,
+            65
+          ]
+        ],
+        "name": "APR2",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "IND_APB3"
+                },
+                {
+                  "type": "symbol",
+                  "value": "ABPR3"
+                }
+              ],
+              "type": "product"
+            },
+            {
+              "operands": [
+                {
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "IND_APB3"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                },
+                {
+                  "arguments": [
+                    {
+                      "type": "symbol",
+                      "value": "ABPR3"
+                    },
+                    {
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "PL_PB"
+                        },
+                        {
+                          "operand": {
+                            "operands": [
+                              {
+                                "operands": [
+                                  {
+                                    "type": "integer",
+                                    "value": 1
+                                  },
+                                  {
+                                    "operand": {
+                                      "type": "symbol",
+                                      "value": "IND_APBV"
+                                    },
+                                    "type": "negate"
+                                  }
+                                ],
+                                "type": "sum"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "APRV"
+                              }
+                            ],
+                            "type": "product"
+                          },
+                          "type": "negate"
+                        },
+                        {
+                          "operand": {
+                            "operands": [
+                              {
+                                "operands": [
+                                  {
+                                    "type": "integer",
+                                    "value": 1
+                                  },
+                                  {
+                                    "operand": {
+                                      "type": "symbol",
+                                      "value": "IND_APBC"
+                                    },
+                                    "type": "negate"
+                                  }
+                                ],
+                                "type": "sum"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "APRC"
+                              }
+                            ],
+                            "type": "product"
+                          },
+                          "type": "negate"
+                        },
+                        {
+                          "operand": {
+                            "operands": [
+                              {
+                                "operands": [
+                                  {
+                                    "type": "integer",
+                                    "value": 1
+                                  },
+                                  {
+                                    "operand": {
+                                      "type": "symbol",
+                                      "value": "IND_APB1"
+                                    },
+                                    "type": "negate"
+                                  }
+                                ],
+                                "type": "sum"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "APR1"
+                              }
+                            ],
+                            "type": "product"
+                          },
+                          "type": "negate"
+                        },
+                        {
+                          "operand": {
+                            "operands": [
+                              {
+                                "operands": [
+                                  {
+                                    "type": "integer",
+                                    "value": 1
+                                  },
+                                  {
+                                    "operand": {
+                                      "type": "symbol",
+                                      "value": "IND_APB2"
+                                    },
+                                    "type": "negate"
+                                  }
+                                ],
+                                "type": "sum"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "APR2"
+                              }
+                            ],
+                            "type": "product"
+                          },
+                          "type": "negate"
+                        }
+                      ],
+                      "type": "sum"
+                    }
+                  ],
+                  "name": "min",
+                  "type": "function_call"
+                }
+              ],
+              "type": "product"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            161,
+            1
+          ],
+          [
+            164,
+            45
+          ]
+        ],
+        "name": "APR3",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "IND_APB4"
+                },
+                {
+                  "type": "symbol",
+                  "value": "ABPR4"
+                }
+              ],
+              "type": "product"
+            },
+            {
+              "operands": [
+                {
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "IND_APB4"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                },
+                {
+                  "arguments": [
+                    {
+                      "type": "symbol",
+                      "value": "ABPR4"
+                    },
+                    {
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "PL_PB"
+                        },
+                        {
+                          "operand": {
+                            "operands": [
+                              {
+                                "operands": [
+                                  {
+                                    "type": "integer",
+                                    "value": 1
+                                  },
+                                  {
+                                    "operand": {
+                                      "type": "symbol",
+                                      "value": "IND_APBV"
+                                    },
+                                    "type": "negate"
+                                  }
+                                ],
+                                "type": "sum"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "APRV"
+                              }
+                            ],
+                            "type": "product"
+                          },
+                          "type": "negate"
+                        },
+                        {
+                          "operand": {
+                            "operands": [
+                              {
+                                "operands": [
+                                  {
+                                    "type": "integer",
+                                    "value": 1
+                                  },
+                                  {
+                                    "operand": {
+                                      "type": "symbol",
+                                      "value": "IND_APBC"
+                                    },
+                                    "type": "negate"
+                                  }
+                                ],
+                                "type": "sum"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "APRC"
+                              }
+                            ],
+                            "type": "product"
+                          },
+                          "type": "negate"
+                        },
+                        {
+                          "operand": {
+                            "operands": [
+                              {
+                                "operands": [
+                                  {
+                                    "type": "integer",
+                                    "value": 1
+                                  },
+                                  {
+                                    "operand": {
+                                      "type": "symbol",
+                                      "value": "IND_APB1"
+                                    },
+                                    "type": "negate"
+                                  }
+                                ],
+                                "type": "sum"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "APR1"
+                              }
+                            ],
+                            "type": "product"
+                          },
+                          "type": "negate"
+                        },
+                        {
+                          "operand": {
+                            "operands": [
+                              {
+                                "operands": [
+                                  {
+                                    "type": "integer",
+                                    "value": 1
+                                  },
+                                  {
+                                    "operand": {
+                                      "type": "symbol",
+                                      "value": "IND_APB2"
+                                    },
+                                    "type": "negate"
+                                  }
+                                ],
+                                "type": "sum"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "APR2"
+                              }
+                            ],
+                            "type": "product"
+                          },
+                          "type": "negate"
+                        },
+                        {
+                          "operand": {
+                            "operands": [
+                              {
+                                "operands": [
+                                  {
+                                    "type": "integer",
+                                    "value": 1
+                                  },
+                                  {
+                                    "operand": {
+                                      "type": "symbol",
+                                      "value": "IND_APB3"
+                                    },
+                                    "type": "negate"
+                                  }
+                                ],
+                                "type": "sum"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "APR3"
+                              }
+                            ],
+                            "type": "product"
+                          },
+                          "type": "negate"
+                        }
+                      ],
+                      "type": "sum"
+                    }
+                  ],
+                  "name": "min",
+                  "type": "function_call"
+                }
+              ],
+              "type": "product"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            165,
+            1
+          ],
+          [
+            168,
+            65
+          ]
+        ],
+        "name": "APR4",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        149,
+        1
+      ],
+      [
+        165,
+        1
+      ]
+    ],
+    "name": "8110",
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "pro",
+      "oceans",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "type": "symbol",
+                "value": "EXPRi"
+              },
+              {
+                "operand": {
+                  "type": "symbol",
+                  "value": "APRi"
+                },
+                "type": "negate"
+              }
+            ],
+            "type": "sum"
+          },
+          "linecol": [
+            [
+              172,
+              1
+            ],
+            [
+              172,
+              21
+            ]
+          ],
+          "name": "PRNNi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  "V",
+                  "C"
+                ]
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      }
+    ],
+    "linecol": [
+      [
+        169,
+        1
+      ],
+      [
+        171,
+        1
+      ]
+    ],
+    "name": "8111",
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "pro",
+      "oceans",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "type": "symbol",
+                "value": "TSBi"
+              },
+              {
+                "operand": {
+                  "type": "symbol",
+                  "value": "FPTi"
+                },
+                "type": "negate"
+              }
+            ],
+            "type": "sum"
+          },
+          "linecol": [
+            [
+              176,
+              1
+            ],
+            [
+              176,
+              21
+            ]
+          ],
+          "name": "TSNTi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  "V",
+                  "C"
+                ]
+              },
+              {
+                "first": "1",
+                "last": "4",
+                "type": "interval"
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      }
+    ],
+    "linecol": [
+      [
+        173,
+        1
+      ],
+      [
+        175,
+        1
+      ]
+    ],
+    "name": "8112",
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "pro",
+      "oceans",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "expression": {
+                          "type": "symbol",
+                          "value": "TSNTi"
+                        },
+                        "operator": "-",
+                        "type": "unary"
+                      }
+                    ],
+                    "name": "positif",
+                    "type": "function_call"
+                  },
+                  {
+                    "arguments": [
+                      {
+                        "type": "integer",
+                        "value": 0
+                      },
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "TSNTi"
+                          },
+                          {
+                            "type": "symbol",
+                            "value": "PRNNi"
+                          }
+                        ],
+                        "type": "sum"
+                      }
+                    ],
+                    "name": "min",
+                    "type": "function_call"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "type": "symbol",
+                        "value": "TSNTi"
+                      }
+                    ],
+                    "name": "positif_ou_nul",
+                    "type": "function_call"
+                  },
+                  {
+                    "type": "symbol",
+                    "value": "TSNTi"
+                  }
+                ],
+                "type": "product"
+              }
+            ],
+            "type": "sum"
+          },
+          "linecol": [
+            [
+              180,
+              1
+            ],
+            [
+              181,
+              38
+            ]
+          ],
+          "name": "TSNi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  "V",
+                  "C"
+                ]
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "expression": {
+                          "type": "symbol",
+                          "value": "TSNTi"
+                        },
+                        "operator": "-",
+                        "type": "unary"
+                      }
+                    ],
+                    "name": "positif",
+                    "type": "function_call"
+                  },
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "TSNTi"
+                          },
+                          {
+                            "type": "symbol",
+                            "value": "PRNNi"
+                          }
+                        ],
+                        "type": "sum"
+                      }
+                    ],
+                    "name": "positif",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TSNTi"
+                      },
+                      {
+                        "type": "symbol",
+                        "value": "PRNNi"
+                      }
+                    ],
+                    "type": "sum"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "type": "symbol",
+                        "value": "TSNTi"
+                      }
+                    ],
+                    "name": "positif_ou_nul",
+                    "type": "function_call"
+                  },
+                  {
+                    "type": "symbol",
+                    "value": "PRNNi"
+                  }
+                ],
+                "type": "product"
+              }
+            ],
+            "type": "sum"
+          },
+          "linecol": [
+            [
+              183,
+              1
+            ],
+            [
+              184,
+              40
+            ]
+          ],
+          "name": "PRNi",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  "V",
+                  "C"
+                ]
+              }
+            ],
+            "name": "i",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      }
+    ],
+    "linecol": [
+      [
+        177,
+        1
+      ],
+      [
+        182,
+        1
+      ]
+    ],
+    "name": "8113",
+    "type": "regle"
+  }
+]

@@ -1,0 +1,2170 @@
+[
+  {
+    "applications": [
+      "bareme",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "TX_BAR1"
+            },
+            {
+              "operand": {
+                "type": "symbol",
+                "value": "TX_BAR0"
+              },
+              "type": "negate"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            24,
+            1
+          ],
+          [
+            24,
+            33
+          ]
+        ],
+        "name": "TAUX1",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "TX_BAR2"
+            },
+            {
+              "operand": {
+                "type": "symbol",
+                "value": "TX_BAR1"
+              },
+              "type": "negate"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            25,
+            1
+          ],
+          [
+            25,
+            33
+          ]
+        ],
+        "name": "TAUX2",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "TX_BAR3"
+            },
+            {
+              "operand": {
+                "type": "symbol",
+                "value": "TX_BAR2"
+              },
+              "type": "negate"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            26,
+            1
+          ],
+          [
+            26,
+            33
+          ]
+        ],
+        "name": "TAUX3",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "TX_BAR4"
+            },
+            {
+              "operand": {
+                "type": "symbol",
+                "value": "TX_BAR3"
+              },
+              "type": "negate"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            27,
+            1
+          ],
+          [
+            27,
+            33
+          ]
+        ],
+        "name": "TAUX4",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "TX_BAR5"
+            },
+            {
+              "operand": {
+                "type": "symbol",
+                "value": "TX_BAR4"
+              },
+              "type": "negate"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            28,
+            1
+          ],
+          [
+            28,
+            33
+          ]
+        ],
+        "name": "TAUX5",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        21,
+        1
+      ],
+      [
+        28,
+        1
+      ]
+    ],
+    "name": "507",
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "bareme",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QFxyz"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR1"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX1"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QFxyz"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR2"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX2"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QFxyz"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR3"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX3"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QFxyz"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR4"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX4"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QFxyz"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR5"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX5"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              }
+            ],
+            "type": "sum"
+          },
+          "linecol": [
+            [
+              33,
+              1
+            ],
+            [
+              37,
+              55
+            ]
+          ],
+          "name": "DSxyz",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  0,
+                  5
+                ]
+              }
+            ],
+            "name": "x",
+            "type": "loop_variable"
+          },
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  1,
+                  2
+                ]
+              }
+            ],
+            "name": "y",
+            "type": "loop_variable"
+          },
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  1,
+                  2
+                ]
+              }
+            ],
+            "name": "z",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      }
+    ],
+    "linecol": [
+      [
+        30,
+        1
+      ],
+      [
+        32,
+        1
+      ]
+    ],
+    "name": "50700",
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "RB51"
+            },
+            {
+              "operand": {
+                "operands": [
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "NB1"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "type": "symbol",
+                            "value": "PLAFQF"
+                          }
+                        ],
+                        "name": "null",
+                        "type": "function_call"
+                      }
+                    ],
+                    "type": "product"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "NB2"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "operands": [
+                              {
+                                "type": "integer",
+                                "value": 1
+                              },
+                              {
+                                "operand": {
+                                  "type": "symbol",
+                                  "value": "PLAFQF"
+                                },
+                                "type": "negate"
+                              }
+                            ],
+                            "type": "sum"
+                          }
+                        ],
+                        "name": "null",
+                        "type": "function_call"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "sum"
+              },
+              "type": "invert"
+            }
+          ],
+          "type": "product"
+        },
+        "linecol": [
+          [
+            41,
+            1
+          ],
+          [
+            41,
+            64
+          ]
+        ],
+        "name": "WTXMARJ",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "arguments": [
+                {
+                  "operands": [
+                    {
+                      "arguments": [
+                        {
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "WTXMARJ"
+                            },
+                            {
+                              "operand": {
+                                "type": "symbol",
+                                "value": "LIM_BAR1"
+                              },
+                              "type": "negate"
+                            }
+                          ],
+                          "type": "sum"
+                        }
+                      ],
+                      "name": "positif",
+                      "type": "function_call"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "TX_BAR1"
+                    }
+                  ],
+                  "type": "product"
+                },
+                {
+                  "arguments": [
+                    {
+                      "operands": [
+                        {
+                          "arguments": [
+                            {
+                              "operands": [
+                                {
+                                  "type": "symbol",
+                                  "value": "WTXMARJ"
+                                },
+                                {
+                                  "operand": {
+                                    "type": "symbol",
+                                    "value": "LIM_BAR2"
+                                  },
+                                  "type": "negate"
+                                }
+                              ],
+                              "type": "sum"
+                            }
+                          ],
+                          "name": "positif",
+                          "type": "function_call"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "TX_BAR2"
+                        }
+                      ],
+                      "type": "product"
+                    },
+                    {
+                      "arguments": [
+                        {
+                          "operands": [
+                            {
+                              "arguments": [
+                                {
+                                  "operands": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "WTXMARJ"
+                                    },
+                                    {
+                                      "operand": {
+                                        "type": "symbol",
+                                        "value": "LIM_BAR3"
+                                      },
+                                      "type": "negate"
+                                    }
+                                  ],
+                                  "type": "sum"
+                                }
+                              ],
+                              "name": "positif",
+                              "type": "function_call"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "TX_BAR3"
+                            }
+                          ],
+                          "type": "product"
+                        },
+                        {
+                          "arguments": [
+                            {
+                              "operands": [
+                                {
+                                  "arguments": [
+                                    {
+                                      "operands": [
+                                        {
+                                          "type": "symbol",
+                                          "value": "WTXMARJ"
+                                        },
+                                        {
+                                          "operand": {
+                                            "type": "symbol",
+                                            "value": "LIM_BAR4"
+                                          },
+                                          "type": "negate"
+                                        }
+                                      ],
+                                      "type": "sum"
+                                    }
+                                  ],
+                                  "name": "positif",
+                                  "type": "function_call"
+                                },
+                                {
+                                  "type": "symbol",
+                                  "value": "TX_BAR4"
+                                }
+                              ],
+                              "type": "product"
+                            },
+                            {
+                              "arguments": [
+                                {
+                                  "operands": [
+                                    {
+                                      "arguments": [
+                                        {
+                                          "operands": [
+                                            {
+                                              "type": "symbol",
+                                              "value": "WTXMARJ"
+                                            },
+                                            {
+                                              "operand": {
+                                                "type": "symbol",
+                                                "value": "LIM_BAR5"
+                                              },
+                                              "type": "negate"
+                                            }
+                                          ],
+                                          "type": "sum"
+                                        }
+                                      ],
+                                      "name": "positif",
+                                      "type": "function_call"
+                                    },
+                                    {
+                                      "type": "symbol",
+                                      "value": "TX_BAR5"
+                                    }
+                                  ],
+                                  "type": "product"
+                                },
+                                {
+                                  "type": "integer",
+                                  "value": 0
+                                }
+                              ],
+                              "name": "max",
+                              "type": "function_call"
+                            }
+                          ],
+                          "name": "max",
+                          "type": "function_call"
+                        }
+                      ],
+                      "name": "max",
+                      "type": "function_call"
+                    }
+                  ],
+                  "name": "max",
+                  "type": "function_call"
+                }
+              ],
+              "name": "max",
+              "type": "function_call"
+            },
+            {
+              "operands": [
+                {
+                  "type": "integer",
+                  "value": 1
+                },
+                {
+                  "operand": {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "arguments": [
+                              {
+                                "type": "symbol",
+                                "value": "NRBASE"
+                              }
+                            ],
+                            "name": "present",
+                            "type": "function_call"
+                          },
+                          {
+                            "arguments": [
+                              {
+                                "type": "symbol",
+                                "value": "NRINET"
+                              }
+                            ],
+                            "name": "present",
+                            "type": "function_call"
+                          },
+                          {
+                            "arguments": [
+                              {
+                                "type": "symbol",
+                                "value": "IPTEFP"
+                              }
+                            ],
+                            "name": "present",
+                            "type": "function_call"
+                          },
+                          {
+                            "arguments": [
+                              {
+                                "type": "symbol",
+                                "value": "IPTEFN"
+                              }
+                            ],
+                            "name": "present",
+                            "type": "function_call"
+                          },
+                          {
+                            "arguments": [
+                              {
+                                "type": "symbol",
+                                "value": "PRODOM"
+                              }
+                            ],
+                            "name": "present",
+                            "type": "function_call"
+                          },
+                          {
+                            "arguments": [
+                              {
+                                "type": "symbol",
+                                "value": "PROGUY"
+                              }
+                            ],
+                            "name": "present",
+                            "type": "function_call"
+                          }
+                        ],
+                        "type": "sum"
+                      }
+                    ],
+                    "name": "positif",
+                    "type": "function_call"
+                  },
+                  "type": "negate"
+                }
+              ],
+              "type": "sum"
+            },
+            {
+              "operands": [
+                {
+                  "type": "integer",
+                  "value": 1
+                },
+                {
+                  "operand": {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "integer",
+                            "value": 2
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "V_REGCO"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      }
+                    ],
+                    "name": "null",
+                    "type": "function_call"
+                  },
+                  "type": "negate"
+                }
+              ],
+              "type": "sum"
+            },
+            {
+              "arguments": [
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "IDRS2"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "IPQ1"
+                    }
+                  ],
+                  "type": "sum"
+                }
+              ],
+              "name": "positif",
+              "type": "function_call"
+            }
+          ],
+          "type": "product"
+        },
+        "linecol": [
+          [
+            42,
+            1
+          ],
+          [
+            63,
+            24
+          ]
+        ],
+        "name": "TXMARJ",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        39,
+        1
+      ],
+      [
+        42,
+        1
+      ]
+    ],
+    "name": "50702",
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "bareme",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QF0y4"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR1"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX1"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QF0y4"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR2"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX2"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QF0y4"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR3"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX3"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QF0y4"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR4"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX4"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QF0y4"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR5"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX5"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              }
+            ],
+            "type": "sum"
+          },
+          "linecol": [
+            [
+              70,
+              1
+            ],
+            [
+              74,
+              52
+            ]
+          ],
+          "name": "DS0y4",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  1,
+                  2
+                ]
+              }
+            ],
+            "name": "y",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QFx15"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR1"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX1"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QFx15"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR2"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX2"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QFx15"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR3"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX3"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QFx15"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR4"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX4"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QFx15"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR5"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX5"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              }
+            ],
+            "type": "sum"
+          },
+          "linecol": [
+            [
+              76,
+              1
+            ],
+            [
+              80,
+              52
+            ]
+          ],
+          "name": "DSx15",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  0,
+                  5
+                ]
+              }
+            ],
+            "name": "x",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QF0y6"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR1"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX1"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QF0y6"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR2"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX2"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QF0y6"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR3"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX3"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QF0y6"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR4"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX4"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QF0y6"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR5"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX5"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              }
+            ],
+            "type": "sum"
+          },
+          "linecol": [
+            [
+              82,
+              1
+            ],
+            [
+              86,
+              52
+            ]
+          ],
+          "name": "DS0y6",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  1,
+                  2
+                ]
+              }
+            ],
+            "name": "y",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      }
+    ],
+    "linecol": [
+      [
+        67,
+        1
+      ],
+      [
+        81,
+        1
+      ]
+    ],
+    "name": "5071",
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "bareme",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "NBPT"
+        },
+        "linecol": [
+          [
+            89,
+            1
+          ],
+          [
+            89,
+            12
+          ]
+        ],
+        "name": "NB1",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "integer",
+              "value": 1
+            },
+            {
+              "type": "symbol",
+              "value": "BOOL_0AM"
+            },
+            {
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "BOOL_0AZ"
+                },
+                {
+                  "type": "symbol",
+                  "value": "V_0AV"
+                }
+              ],
+              "type": "product"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            90,
+            1
+          ],
+          [
+            90,
+            39
+          ]
+        ],
+        "name": "NB2",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        87,
+        1
+      ],
+      [
+        90,
+        1
+      ]
+    ],
+    "name": "508",
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "bareme",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "arguments": [
+                  {
+                    "type": "symbol",
+                    "value": "RB0z"
+                  }
+                ],
+                "name": "arr",
+                "type": "function_call"
+              },
+              {
+                "operand": {
+                  "type": "symbol",
+                  "value": "NBy"
+                },
+                "type": "invert"
+              }
+            ],
+            "type": "product"
+          },
+          "linecol": [
+            [
+              94,
+              1
+            ],
+            [
+              94,
+              24
+            ]
+          ],
+          "name": "QF0yz",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  1,
+                  2
+                ]
+              }
+            ],
+            "name": "y",
+            "type": "loop_variable"
+          },
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  1,
+                  2
+                ]
+              }
+            ],
+            "name": "z",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "arguments": [
+                  {
+                    "type": "symbol",
+                    "value": "RB5z"
+                  }
+                ],
+                "name": "arr",
+                "type": "function_call"
+              },
+              {
+                "operand": {
+                  "type": "symbol",
+                  "value": "NBy"
+                },
+                "type": "invert"
+              }
+            ],
+            "type": "product"
+          },
+          "linecol": [
+            [
+              96,
+              1
+            ],
+            [
+              96,
+              24
+            ]
+          ],
+          "name": "QF5yz",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  1,
+                  2
+                ]
+              }
+            ],
+            "name": "y",
+            "type": "loop_variable"
+          },
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  1,
+                  2
+                ]
+              }
+            ],
+            "name": "z",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "arguments": [
+                  {
+                    "type": "symbol",
+                    "value": "RB04"
+                  }
+                ],
+                "name": "arr",
+                "type": "function_call"
+              },
+              {
+                "operand": {
+                  "type": "symbol",
+                  "value": "NBy"
+                },
+                "type": "invert"
+              }
+            ],
+            "type": "product"
+          },
+          "linecol": [
+            [
+              98,
+              1
+            ],
+            [
+              98,
+              24
+            ]
+          ],
+          "name": "QF0y4",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  1,
+                  2
+                ]
+              }
+            ],
+            "name": "y",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "arguments": [
+                  {
+                    "type": "symbol",
+                    "value": "RBx5"
+                  }
+                ],
+                "name": "arr",
+                "type": "function_call"
+              },
+              {
+                "operand": {
+                  "type": "symbol",
+                  "value": "NB1"
+                },
+                "type": "invert"
+              }
+            ],
+            "type": "product"
+          },
+          "linecol": [
+            [
+              100,
+              1
+            ],
+            [
+              100,
+              24
+            ]
+          ],
+          "name": "QFx15",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  0,
+                  5
+                ]
+              }
+            ],
+            "name": "x",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "arguments": [
+                  {
+                    "type": "symbol",
+                    "value": "RB06"
+                  }
+                ],
+                "name": "arr",
+                "type": "function_call"
+              },
+              {
+                "operand": {
+                  "type": "symbol",
+                  "value": "NBy"
+                },
+                "type": "invert"
+              }
+            ],
+            "type": "product"
+          },
+          "linecol": [
+            [
+              102,
+              1
+            ],
+            [
+              102,
+              24
+            ]
+          ],
+          "name": "QF0y6",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  1,
+                  2
+                ]
+              }
+            ],
+            "name": "y",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      }
+    ],
+    "linecol": [
+      [
+        91,
+        1
+      ],
+      [
+        101,
+        1
+      ]
+    ],
+    "name": "5080",
+    "type": "regle"
+  }
+]

@@ -1,0 +1,4794 @@
+[
+  {
+    "applications": [
+      "pro",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "ISFBASE"
+            },
+            {
+              "arguments": [
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "ISFBASE"
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "LIM_ISFINF"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                }
+              ],
+              "name": "positif_ou_nul",
+              "type": "function_call"
+            },
+            {
+              "arguments": [
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "LIM_ISFSUP"
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "ISFBASE"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                }
+              ],
+              "name": "positif",
+              "type": "function_call"
+            }
+          ],
+          "type": "product"
+        },
+        "linecol": [
+          [
+            23,
+            1
+          ],
+          [
+            24,
+            38
+          ]
+        ],
+        "name": "DISFBASE",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        21,
+        1
+      ],
+      [
+        23,
+        1
+      ]
+    ],
+    "name": "770001",
+    "tags": [
+      {
+        "type": "symbol",
+        "value": "isf"
+      }
+    ],
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "pro",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "arguments": [
+            {
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "DISFBASE"
+                },
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "TX_ISF"
+                    },
+                    {
+                      "operand": {
+                        "type": "integer",
+                        "value": 10000
+                      },
+                      "type": "invert"
+                    }
+                  ],
+                  "type": "product"
+                }
+              ],
+              "type": "product"
+            }
+          ],
+          "name": "arr",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            28,
+            1
+          ],
+          [
+            28,
+            38
+          ]
+        ],
+        "name": "ISF1",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "type": "integer",
+                  "value": 24500
+                },
+                {
+                  "operand": {
+                    "operands": [
+                      {
+                        "type": "integer",
+                        "value": 7
+                      },
+                      {
+                        "type": "symbol",
+                        "value": "ISF1"
+                      }
+                    ],
+                    "type": "product"
+                  },
+                  "type": "negate"
+                }
+              ],
+              "type": "sum"
+            },
+            {
+              "arguments": [
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "LIM_ISFDEC"
+                    },
+                    {
+                      "operand": {
+                        "type": "integer",
+                        "value": 1
+                      },
+                      "type": "negate"
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "ISFBASE"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                }
+              ],
+              "name": "positif",
+              "type": "function_call"
+            },
+            {
+              "arguments": [
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "LIM_ISFDEC"
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "LIM_ISFINF"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                }
+              ],
+              "name": "positif",
+              "type": "function_call"
+            },
+            {
+              "arguments": [
+                {
+                  "type": "symbol",
+                  "value": "ISF1"
+                }
+              ],
+              "name": "positif",
+              "type": "function_call"
+            }
+          ],
+          "type": "product"
+        },
+        "linecol": [
+          [
+            29,
+            1
+          ],
+          [
+            31,
+            40
+          ]
+        ],
+        "name": "ISFDEC",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "ISFDEC"
+        },
+        "linecol": [
+          [
+            32,
+            1
+          ],
+          [
+            32,
+            17
+          ]
+        ],
+        "name": "DISFDEC",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "arguments": [
+            {
+              "operands": [
+                {
+                  "operands": [
+                    {
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "ISF1"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "ISFDEC"
+                          },
+                          "type": "negate"
+                        }
+                      ],
+                      "type": "sum"
+                    },
+                    {
+                      "arguments": [
+                        {
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "LIM_ISFDEC"
+                            },
+                            {
+                              "operand": {
+                                "type": "integer",
+                                "value": 1
+                              },
+                              "type": "negate"
+                            },
+                            {
+                              "operand": {
+                                "type": "symbol",
+                                "value": "ISFBASE"
+                              },
+                              "type": "negate"
+                            }
+                          ],
+                          "type": "sum"
+                        }
+                      ],
+                      "name": "positif",
+                      "type": "function_call"
+                    }
+                  ],
+                  "type": "product"
+                },
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "ISF1"
+                    },
+                    {
+                      "operands": [
+                        {
+                          "type": "integer",
+                          "value": 1
+                        },
+                        {
+                          "operand": {
+                            "arguments": [
+                              {
+                                "operands": [
+                                  {
+                                    "type": "symbol",
+                                    "value": "LIM_ISFDEC"
+                                  },
+                                  {
+                                    "operand": {
+                                      "type": "integer",
+                                      "value": 1
+                                    },
+                                    "type": "negate"
+                                  },
+                                  {
+                                    "operand": {
+                                      "type": "symbol",
+                                      "value": "ISFBASE"
+                                    },
+                                    "type": "negate"
+                                  }
+                                ],
+                                "type": "sum"
+                              }
+                            ],
+                            "name": "positif",
+                            "type": "function_call"
+                          },
+                          "type": "negate"
+                        }
+                      ],
+                      "type": "sum"
+                    }
+                  ],
+                  "type": "product"
+                }
+              ],
+              "type": "sum"
+            }
+          ],
+          "name": "arr",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            34,
+            1
+          ],
+          [
+            35,
+            55
+          ]
+        ],
+        "name": "ISFBRUT",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        26,
+        1
+      ],
+      [
+        34,
+        1
+      ]
+    ],
+    "name": "77002",
+    "tags": [
+      {
+        "type": "symbol",
+        "value": "isf"
+      }
+    ],
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "pro",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "ISFPAC"
+        },
+        "linecol": [
+          [
+            39,
+            1
+          ],
+          [
+            39,
+            18
+          ]
+        ],
+        "name": "DISFPAC",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "ISFPAC"
+            },
+            {
+              "type": "symbol",
+              "value": "PLAF_ISFPAC"
+            }
+          ],
+          "type": "product"
+        },
+        "linecol": [
+          [
+            40,
+            1
+          ],
+          [
+            40,
+            34
+          ]
+        ],
+        "name": "RISFPAC_1",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "type": "symbol",
+                  "value": "RISFPAC_1"
+                },
+                {
+                  "type": "symbol",
+                  "value": "ISFBRUT"
+                }
+              ],
+              "name": "min",
+              "type": "function_call"
+            },
+            {
+              "type": "integer",
+              "value": 0
+            }
+          ],
+          "name": "max",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            41,
+            1
+          ],
+          [
+            41,
+            45
+          ]
+        ],
+        "name": "RISFPAC",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "ISFALT"
+        },
+        "linecol": [
+          [
+            43,
+            1
+          ],
+          [
+            43,
+            18
+          ]
+        ],
+        "name": "DISFALT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "ISFALT"
+            },
+            {
+              "type": "symbol",
+              "value": "PLAF_ISFALT"
+            }
+          ],
+          "type": "product"
+        },
+        "linecol": [
+          [
+            44,
+            1
+          ],
+          [
+            44,
+            34
+          ]
+        ],
+        "name": "RISFALT_1",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "arguments": [
+            {
+              "arguments": [
+                {
+                  "type": "symbol",
+                  "value": "RISFALT_1"
+                },
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "ISFBRUT"
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "RISFPAC"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                }
+              ],
+              "name": "min",
+              "type": "function_call"
+            },
+            {
+              "type": "integer",
+              "value": 0
+            }
+          ],
+          "name": "max",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            45,
+            1
+          ],
+          [
+            45,
+            55
+          ]
+        ],
+        "name": "RISFALT",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        37,
+        1
+      ],
+      [
+        45,
+        1
+      ]
+    ],
+    "name": "77010",
+    "tags": [
+      {
+        "type": "symbol",
+        "value": "isf"
+      }
+    ],
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "pro",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "ISFPMEDI"
+        },
+        "linecol": [
+          [
+            49,
+            1
+          ],
+          [
+            49,
+            21
+          ]
+        ],
+        "name": "DISFPMED",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "ISFPMEIN"
+        },
+        "linecol": [
+          [
+            50,
+            1
+          ],
+          [
+            50,
+            21
+          ]
+        ],
+        "name": "DISFPMEI",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "arguments": [
+            {
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "ISFPMEDI"
+                },
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "TX50"
+                    },
+                    {
+                      "operand": {
+                        "type": "integer",
+                        "value": 100
+                      },
+                      "type": "invert"
+                    }
+                  ],
+                  "type": "product"
+                }
+              ],
+              "type": "product"
+            }
+          ],
+          "name": "arr",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            51,
+            1
+          ],
+          [
+            51,
+            39
+          ]
+        ],
+        "name": "AISFPMED",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "arguments": [
+            {
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "ISFPMEIN"
+                },
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "TX50"
+                    },
+                    {
+                      "operand": {
+                        "type": "integer",
+                        "value": 100
+                      },
+                      "type": "invert"
+                    }
+                  ],
+                  "type": "product"
+                }
+              ],
+              "type": "product"
+            }
+          ],
+          "name": "arr",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            52,
+            1
+          ],
+          [
+            52,
+            39
+          ]
+        ],
+        "name": "AISFPMEI",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "arguments": [
+            {
+              "type": "integer",
+              "value": 45000
+            },
+            {
+              "type": "symbol",
+              "value": "AISFPMED"
+            }
+          ],
+          "name": "min",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            53,
+            1
+          ],
+          [
+            53,
+            34
+          ]
+        ],
+        "name": "RISFPMED_1",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "arguments": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "arguments": [
+                {
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 45000
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "RISFPMED_1"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                },
+                {
+                  "type": "symbol",
+                  "value": "AISFPMEI"
+                }
+              ],
+              "name": "min",
+              "type": "function_call"
+            }
+          ],
+          "name": "max",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            54,
+            1
+          ],
+          [
+            54,
+            55
+          ]
+        ],
+        "name": "RISFPMEI_1",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "ISFFIP"
+        },
+        "linecol": [
+          [
+            57,
+            1
+          ],
+          [
+            57,
+            18
+          ]
+        ],
+        "name": "DISFFIP",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "ISFFCPI"
+        },
+        "linecol": [
+          [
+            58,
+            1
+          ],
+          [
+            58,
+            20
+          ]
+        ],
+        "name": "DISFFCPI",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "arguments": [
+            {
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "ISFFIP"
+                },
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "TX50"
+                    },
+                    {
+                      "operand": {
+                        "type": "integer",
+                        "value": 100
+                      },
+                      "type": "invert"
+                    }
+                  ],
+                  "type": "product"
+                }
+              ],
+              "type": "product"
+            }
+          ],
+          "name": "arr",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            59,
+            1
+          ],
+          [
+            59,
+            36
+          ]
+        ],
+        "name": "AISFFIP",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "arguments": [
+            {
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "ISFFCPI"
+                },
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "TX50"
+                    },
+                    {
+                      "operand": {
+                        "type": "integer",
+                        "value": 100
+                      },
+                      "type": "invert"
+                    }
+                  ],
+                  "type": "product"
+                }
+              ],
+              "type": "product"
+            }
+          ],
+          "name": "arr",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            60,
+            1
+          ],
+          [
+            60,
+            38
+          ]
+        ],
+        "name": "AISFFCPI",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "arguments": [
+            {
+              "type": "integer",
+              "value": 18000
+            },
+            {
+              "type": "symbol",
+              "value": "AISFFIP"
+            }
+          ],
+          "name": "min",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            61,
+            1
+          ],
+          [
+            61,
+            32
+          ]
+        ],
+        "name": "RISFFIP_1",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "arguments": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "arguments": [
+                {
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 18000
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "RISFFIP_1"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                },
+                {
+                  "type": "symbol",
+                  "value": "AISFFCPI"
+                }
+              ],
+              "name": "min",
+              "type": "function_call"
+            }
+          ],
+          "name": "max",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            62,
+            1
+          ],
+          [
+            62,
+            55
+          ]
+        ],
+        "name": "RISFFCPI_1",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        47,
+        1
+      ],
+      [
+        62,
+        1
+      ]
+    ],
+    "name": "77020",
+    "tags": [
+      {
+        "type": "symbol",
+        "value": "isf"
+      }
+    ],
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "pro",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "ISFDONS"
+        },
+        "linecol": [
+          [
+            66,
+            1
+          ],
+          [
+            66,
+            20
+          ]
+        ],
+        "name": "DISFDONS",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "ISFDONEURO"
+        },
+        "linecol": [
+          [
+            67,
+            1
+          ],
+          [
+            67,
+            25
+          ]
+        ],
+        "name": "DISFDONCEE",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "arguments": [
+            {
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "ISFDONS"
+                },
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "TX75"
+                    },
+                    {
+                      "operand": {
+                        "type": "integer",
+                        "value": 100
+                      },
+                      "type": "invert"
+                    }
+                  ],
+                  "type": "product"
+                }
+              ],
+              "type": "product"
+            }
+          ],
+          "name": "arr",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            68,
+            1
+          ],
+          [
+            68,
+            37
+          ]
+        ],
+        "name": "AISFDONS",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "arguments": [
+            {
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "ISFDONEURO"
+                },
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "TX75"
+                    },
+                    {
+                      "operand": {
+                        "type": "integer",
+                        "value": 100
+                      },
+                      "type": "invert"
+                    }
+                  ],
+                  "type": "product"
+                }
+              ],
+              "type": "product"
+            }
+          ],
+          "name": "arr",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            69,
+            1
+          ],
+          [
+            69,
+            43
+          ]
+        ],
+        "name": "AISFDONCEE",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "arguments": [
+            {
+              "type": "integer",
+              "value": 50000
+            },
+            {
+              "type": "symbol",
+              "value": "AISFDONS"
+            }
+          ],
+          "name": "min",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            70,
+            1
+          ],
+          [
+            70,
+            34
+          ]
+        ],
+        "name": "RISFDONS_1",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "arguments": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "arguments": [
+                {
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 50000
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "RISFDONS_1"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                },
+                {
+                  "type": "symbol",
+                  "value": "AISFDONCEE"
+                }
+              ],
+              "name": "min",
+              "type": "function_call"
+            }
+          ],
+          "name": "max",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            71,
+            1
+          ],
+          [
+            71,
+            59
+          ]
+        ],
+        "name": "RISFDONCEE_1",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        64,
+        1
+      ],
+      [
+        71,
+        1
+      ]
+    ],
+    "name": "77030",
+    "tags": [
+      {
+        "type": "symbol",
+        "value": "isf"
+      }
+    ],
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "pro",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "arguments": [
+            {
+              "type": "symbol",
+              "value": "PLAF_ISFRED"
+            },
+            {
+              "type": "symbol",
+              "value": "RISFDONS_1"
+            }
+          ],
+          "name": "min",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            75,
+            1
+          ],
+          [
+            75,
+            42
+          ]
+        ],
+        "name": "RISFDONS_2",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "arguments": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "arguments": [
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "PLAF_ISFRED"
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "RISFDONS_1"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                },
+                {
+                  "type": "symbol",
+                  "value": "RISFDONCEE_1"
+                }
+              ],
+              "name": "min",
+              "type": "function_call"
+            }
+          ],
+          "name": "max",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            76,
+            1
+          ],
+          [
+            76,
+            67
+          ]
+        ],
+        "name": "RISFDONCEE_2",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "arguments": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "arguments": [
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "PLAF_ISFRED"
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "RISFDONS_1"
+                      },
+                      "type": "negate"
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "RISFDONCEE_1"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                },
+                {
+                  "type": "symbol",
+                  "value": "RISFPMED_1"
+                }
+              ],
+              "name": "min",
+              "type": "function_call"
+            }
+          ],
+          "name": "max",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            77,
+            1
+          ],
+          [
+            77,
+            78
+          ]
+        ],
+        "name": "RISFPMED_2",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "arguments": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "arguments": [
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "PLAF_ISFRED"
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "RISFDONS_1"
+                      },
+                      "type": "negate"
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "RISFDONCEE_1"
+                      },
+                      "type": "negate"
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "RISFPMED_1"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                },
+                {
+                  "type": "symbol",
+                  "value": "RISFPMEI_1"
+                }
+              ],
+              "name": "min",
+              "type": "function_call"
+            }
+          ],
+          "name": "max",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            78,
+            1
+          ],
+          [
+            78,
+            91
+          ]
+        ],
+        "name": "RISFPMEI_2",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "arguments": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "arguments": [
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "PLAF_ISFRED"
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "RISFDONS_1"
+                      },
+                      "type": "negate"
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "RISFDONCEE_1"
+                      },
+                      "type": "negate"
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "RISFPMED_1"
+                      },
+                      "type": "negate"
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "RISFPMEI_1"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                },
+                {
+                  "type": "symbol",
+                  "value": "RISFFIP_1"
+                }
+              ],
+              "name": "min",
+              "type": "function_call"
+            }
+          ],
+          "name": "max",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            79,
+            1
+          ],
+          [
+            80,
+            19
+          ]
+        ],
+        "name": "RISFFIP_2",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "arguments": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "arguments": [
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "PLAF_ISFRED"
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "RISFDONS_1"
+                      },
+                      "type": "negate"
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "RISFDONCEE_1"
+                      },
+                      "type": "negate"
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "RISFPMED_1"
+                      },
+                      "type": "negate"
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "RISFPMEI_1"
+                      },
+                      "type": "negate"
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "RISFDONS_1"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                },
+                {
+                  "type": "symbol",
+                  "value": "RISFFCPI_1"
+                }
+              ],
+              "name": "min",
+              "type": "function_call"
+            }
+          ],
+          "name": "max",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            81,
+            1
+          ],
+          [
+            82,
+            37
+          ]
+        ],
+        "name": "RISFFCPI_2",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "type": "symbol",
+                      "value": "RISFDONS_2"
+                    },
+                    {
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "ISFBRUT"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "RISFPAC"
+                          },
+                          "type": "negate"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "RISFALT"
+                          },
+                          "type": "negate"
+                        }
+                      ],
+                      "type": "sum"
+                    }
+                  ],
+                  "name": "min",
+                  "type": "function_call"
+                },
+                {
+                  "type": "integer",
+                  "value": 0
+                }
+              ],
+              "name": "max",
+              "type": "function_call"
+            },
+            {
+              "operands": [
+                {
+                  "type": "integer",
+                  "value": 1
+                },
+                {
+                  "operand": {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "CODE_2042"
+                          },
+                          {
+                            "operand": {
+                              "type": "integer",
+                              "value": 8
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      }
+                    ],
+                    "name": "null",
+                    "type": "function_call"
+                  },
+                  "type": "negate"
+                }
+              ],
+              "type": "sum"
+            }
+          ],
+          "type": "product"
+        },
+        "linecol": [
+          [
+            84,
+            1
+          ],
+          [
+            85,
+            38
+          ]
+        ],
+        "name": "RISFDONS",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "type": "symbol",
+                      "value": "RISFDONCEE_2"
+                    },
+                    {
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "ISFBRUT"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "RISFPAC"
+                          },
+                          "type": "negate"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "RISFALT"
+                          },
+                          "type": "negate"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "RISFDONS"
+                          },
+                          "type": "negate"
+                        }
+                      ],
+                      "type": "sum"
+                    }
+                  ],
+                  "name": "min",
+                  "type": "function_call"
+                },
+                {
+                  "type": "integer",
+                  "value": 0
+                }
+              ],
+              "name": "max",
+              "type": "function_call"
+            },
+            {
+              "operands": [
+                {
+                  "type": "integer",
+                  "value": 1
+                },
+                {
+                  "operand": {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "CODE_2042"
+                          },
+                          {
+                            "operand": {
+                              "type": "integer",
+                              "value": 8
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      }
+                    ],
+                    "name": "null",
+                    "type": "function_call"
+                  },
+                  "type": "negate"
+                }
+              ],
+              "type": "sum"
+            }
+          ],
+          "type": "product"
+        },
+        "linecol": [
+          [
+            87,
+            1
+          ],
+          [
+            88,
+            38
+          ]
+        ],
+        "name": "RISFDONCEE",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "type": "symbol",
+                      "value": "RISFPMED_2"
+                    },
+                    {
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "ISFBRUT"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "RISFPAC"
+                          },
+                          "type": "negate"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "RISFALT"
+                          },
+                          "type": "negate"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "RISFDONS"
+                          },
+                          "type": "negate"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "RISFDONCEE"
+                          },
+                          "type": "negate"
+                        }
+                      ],
+                      "type": "sum"
+                    }
+                  ],
+                  "name": "min",
+                  "type": "function_call"
+                },
+                {
+                  "type": "integer",
+                  "value": 0
+                }
+              ],
+              "name": "max",
+              "type": "function_call"
+            },
+            {
+              "operands": [
+                {
+                  "type": "integer",
+                  "value": 1
+                },
+                {
+                  "operand": {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "CODE_2042"
+                          },
+                          {
+                            "operand": {
+                              "type": "integer",
+                              "value": 8
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      }
+                    ],
+                    "name": "null",
+                    "type": "function_call"
+                  },
+                  "type": "negate"
+                }
+              ],
+              "type": "sum"
+            }
+          ],
+          "type": "product"
+        },
+        "linecol": [
+          [
+            91,
+            1
+          ],
+          [
+            92,
+            45
+          ]
+        ],
+        "name": "RISFPMED",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "type": "symbol",
+                      "value": "RISFPMEI_2"
+                    },
+                    {
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "ISFBRUT"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "RISFPAC"
+                          },
+                          "type": "negate"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "RISFALT"
+                          },
+                          "type": "negate"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "RISFDONS"
+                          },
+                          "type": "negate"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "RISFDONCEE"
+                          },
+                          "type": "negate"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "RISFPMED"
+                          },
+                          "type": "negate"
+                        }
+                      ],
+                      "type": "sum"
+                    }
+                  ],
+                  "name": "min",
+                  "type": "function_call"
+                },
+                {
+                  "type": "integer",
+                  "value": 0
+                }
+              ],
+              "name": "max",
+              "type": "function_call"
+            },
+            {
+              "operands": [
+                {
+                  "type": "integer",
+                  "value": 1
+                },
+                {
+                  "operand": {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "CODE_2042"
+                          },
+                          {
+                            "operand": {
+                              "type": "integer",
+                              "value": 8
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      }
+                    ],
+                    "name": "null",
+                    "type": "function_call"
+                  },
+                  "type": "negate"
+                }
+              ],
+              "type": "sum"
+            }
+          ],
+          "type": "product"
+        },
+        "linecol": [
+          [
+            95,
+            1
+          ],
+          [
+            97,
+            45
+          ]
+        ],
+        "name": "RISFPMEI",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "type": "symbol",
+                      "value": "RISFFIP_2"
+                    },
+                    {
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "ISFBRUT"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "RISFPAC"
+                          },
+                          "type": "negate"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "RISFALT"
+                          },
+                          "type": "negate"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "RISFDONS"
+                          },
+                          "type": "negate"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "RISFDONCEE"
+                          },
+                          "type": "negate"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "RISFPMED"
+                          },
+                          "type": "negate"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "RISFPMEI"
+                          },
+                          "type": "negate"
+                        }
+                      ],
+                      "type": "sum"
+                    }
+                  ],
+                  "name": "min",
+                  "type": "function_call"
+                },
+                {
+                  "type": "integer",
+                  "value": 0
+                }
+              ],
+              "name": "max",
+              "type": "function_call"
+            },
+            {
+              "operands": [
+                {
+                  "type": "integer",
+                  "value": 1
+                },
+                {
+                  "operand": {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "CODE_2042"
+                          },
+                          {
+                            "operand": {
+                              "type": "integer",
+                              "value": 8
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      }
+                    ],
+                    "name": "null",
+                    "type": "function_call"
+                  },
+                  "type": "negate"
+                }
+              ],
+              "type": "sum"
+            }
+          ],
+          "type": "product"
+        },
+        "linecol": [
+          [
+            100,
+            1
+          ],
+          [
+            102,
+            45
+          ]
+        ],
+        "name": "RISFFIP",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "type": "symbol",
+                      "value": "RISFFCPI_2"
+                    },
+                    {
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "ISFBRUT"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "RISFPAC"
+                          },
+                          "type": "negate"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "RISFALT"
+                          },
+                          "type": "negate"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "RISFDONS"
+                          },
+                          "type": "negate"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "RISFDONCEE"
+                          },
+                          "type": "negate"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "RISFPMED"
+                          },
+                          "type": "negate"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "RISFPMEI"
+                          },
+                          "type": "negate"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "RISFFIP"
+                          },
+                          "type": "negate"
+                        }
+                      ],
+                      "type": "sum"
+                    }
+                  ],
+                  "name": "min",
+                  "type": "function_call"
+                },
+                {
+                  "type": "integer",
+                  "value": 0
+                }
+              ],
+              "name": "max",
+              "type": "function_call"
+            },
+            {
+              "operands": [
+                {
+                  "type": "integer",
+                  "value": 1
+                },
+                {
+                  "operand": {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "CODE_2042"
+                          },
+                          {
+                            "operand": {
+                              "type": "integer",
+                              "value": 8
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      }
+                    ],
+                    "name": "null",
+                    "type": "function_call"
+                  },
+                  "type": "negate"
+                }
+              ],
+              "type": "sum"
+            }
+          ],
+          "type": "product"
+        },
+        "linecol": [
+          [
+            105,
+            1
+          ],
+          [
+            107,
+            38
+          ]
+        ],
+        "name": "RISFFCPI",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        73,
+        1
+      ],
+      [
+        105,
+        1
+      ]
+    ],
+    "name": "77050",
+    "tags": [
+      {
+        "type": "symbol",
+        "value": "isf"
+      }
+    ],
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "pro",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "RISFPAC"
+            },
+            {
+              "type": "symbol",
+              "value": "RISFALT"
+            },
+            {
+              "type": "symbol",
+              "value": "RISFDONS"
+            },
+            {
+              "type": "symbol",
+              "value": "RISFDONCEE"
+            },
+            {
+              "type": "symbol",
+              "value": "RISFPMED"
+            },
+            {
+              "type": "symbol",
+              "value": "RISFPMEI"
+            },
+            {
+              "type": "symbol",
+              "value": "RISFFIP"
+            },
+            {
+              "type": "symbol",
+              "value": "RISFFCPI"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            111,
+            1
+          ],
+          [
+            112,
+            42
+          ]
+        ],
+        "name": "REDISF",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "RETXISF"
+            },
+            {
+              "type": "symbol",
+              "value": "COPETOISF"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            114,
+            1
+          ],
+          [
+            114,
+            31
+          ]
+        ],
+        "name": "TXTOISF",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        109,
+        1
+      ],
+      [
+        114,
+        1
+      ]
+    ],
+    "name": "77066",
+    "tags": [
+      {
+        "type": "symbol",
+        "value": "isf"
+      }
+    ],
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "pro",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "RISFPAC"
+            },
+            {
+              "type": "symbol",
+              "value": "RISFALT"
+            },
+            {
+              "type": "symbol",
+              "value": "RISFDONS"
+            },
+            {
+              "type": "symbol",
+              "value": "RISFDONCEE"
+            },
+            {
+              "type": "symbol",
+              "value": "RISFPMED"
+            },
+            {
+              "type": "symbol",
+              "value": "RISFPMEI"
+            },
+            {
+              "type": "symbol",
+              "value": "RISFFIP"
+            },
+            {
+              "type": "symbol",
+              "value": "RISFFCPI"
+            },
+            {
+              "type": "symbol",
+              "value": "RISFE"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            118,
+            1
+          ],
+          [
+            119,
+            50
+          ]
+        ],
+        "name": "ISFTRED",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        116,
+        1
+      ],
+      [
+        118,
+        1
+      ]
+    ],
+    "name": "77065",
+    "tags": [
+      {
+        "type": "symbol",
+        "value": "isf"
+      }
+    ],
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "pro",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "arguments": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "ISFBRUT"
+                },
+                {
+                  "operand": {
+                    "type": "symbol",
+                    "value": "RISFPAC"
+                  },
+                  "type": "negate"
+                },
+                {
+                  "operand": {
+                    "type": "symbol",
+                    "value": "RISFALT"
+                  },
+                  "type": "negate"
+                },
+                {
+                  "operand": {
+                    "type": "symbol",
+                    "value": "RISFDONS"
+                  },
+                  "type": "negate"
+                },
+                {
+                  "operand": {
+                    "type": "symbol",
+                    "value": "RISFDONCEE"
+                  },
+                  "type": "negate"
+                },
+                {
+                  "operand": {
+                    "type": "symbol",
+                    "value": "RISFPMED"
+                  },
+                  "type": "negate"
+                },
+                {
+                  "operand": {
+                    "type": "symbol",
+                    "value": "RISFPMEI"
+                  },
+                  "type": "negate"
+                },
+                {
+                  "operand": {
+                    "type": "symbol",
+                    "value": "RISFFIP"
+                  },
+                  "type": "negate"
+                },
+                {
+                  "operand": {
+                    "type": "symbol",
+                    "value": "RISFFCPI"
+                  },
+                  "type": "negate"
+                }
+              ],
+              "type": "sum"
+            }
+          ],
+          "name": "max",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            123,
+            1
+          ],
+          [
+            124,
+            82
+          ]
+        ],
+        "name": "ISFNETRED",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        121,
+        1
+      ],
+      [
+        123,
+        1
+      ]
+    ],
+    "name": "77070",
+    "tags": [
+      {
+        "type": "symbol",
+        "value": "isf"
+      }
+    ],
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "pro",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "ISFETRANG"
+        },
+        "linecol": [
+          [
+            128,
+            1
+          ],
+          [
+            128,
+            19
+          ]
+        ],
+        "name": "DISFE",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "arguments": [
+                {
+                  "type": "symbol",
+                  "value": "DISFBASE"
+                }
+              ],
+              "name": "positif",
+              "type": "function_call"
+            },
+            {
+              "arguments": [
+                {
+                  "type": "symbol",
+                  "value": "ISFETRANG"
+                }
+              ],
+              "name": "positif",
+              "type": "function_call"
+            },
+            {
+              "arguments": [
+                {
+                  "type": "symbol",
+                  "value": "ISFNETRED"
+                },
+                {
+                  "type": "symbol",
+                  "value": "ISFETRANG"
+                }
+              ],
+              "name": "min",
+              "type": "function_call"
+            }
+          ],
+          "type": "product"
+        },
+        "linecol": [
+          [
+            130,
+            1
+          ],
+          [
+            130,
+            74
+          ]
+        ],
+        "name": "RISFE",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        126,
+        1
+      ],
+      [
+        130,
+        1
+      ]
+    ],
+    "name": "77080",
+    "tags": [
+      {
+        "type": "symbol",
+        "value": "isf"
+      }
+    ],
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "pro",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "arguments": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "ISFNETRED"
+                },
+                {
+                  "operand": {
+                    "type": "symbol",
+                    "value": "RISFE"
+                  },
+                  "type": "negate"
+                }
+              ],
+              "type": "sum"
+            }
+          ],
+          "name": "max",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            134,
+            1
+          ],
+          [
+            134,
+            34
+          ]
+        ],
+        "name": "ISF4",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        132,
+        1
+      ],
+      [
+        134,
+        1
+      ]
+    ],
+    "name": "77090",
+    "tags": [
+      {
+        "type": "symbol",
+        "value": "isf"
+      }
+    ],
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "pro",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "condition": {
+            "operands": [
+              {
+                "left_operand": {
+                  "type": "symbol",
+                  "value": "CMAJ_ISF"
+                },
+                "operator": "=",
+                "right_operand": {
+                  "type": "integer",
+                  "value": 7
+                },
+                "type": "comparaison"
+              },
+              {
+                "left_operand": {
+                  "type": "symbol",
+                  "value": "CMAJ_ISF"
+                },
+                "operator": "=",
+                "right_operand": {
+                  "type": "integer",
+                  "value": 17
+                },
+                "type": "comparaison"
+              },
+              {
+                "left_operand": {
+                  "type": "symbol",
+                  "value": "CMAJ_ISF"
+                },
+                "operator": "=",
+                "right_operand": {
+                  "type": "integer",
+                  "value": 18
+                },
+                "type": "comparaison"
+              }
+            ],
+            "operators": [
+              "ou",
+              "ou"
+            ],
+            "type": "boolean_expression"
+          },
+          "type": "ternary_operator",
+          "value_if_false": {
+            "condition": {
+              "left_operand": {
+                "type": "symbol",
+                "value": "CMAJ_ISF"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 8
+              },
+              "type": "comparaison"
+            },
+            "type": "ternary_operator",
+            "value_if_true": {
+              "type": "integer",
+              "value": 40
+            }
+          },
+          "value_if_true": {
+            "type": "integer",
+            "value": 10
+          }
+        },
+        "linecol": [
+          [
+            139,
+            1
+          ],
+          [
+            145,
+            18
+          ]
+        ],
+        "name": "COPETOISF",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "arguments": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "MAJO1728ISF"
+                },
+                {
+                  "operands": [
+                    {
+                      "arguments": [
+                        {
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "ISF4"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "COPETOISF"
+                            },
+                            {
+                              "operand": {
+                                "type": "integer",
+                                "value": 100
+                              },
+                              "type": "invert"
+                            }
+                          ],
+                          "type": "product"
+                        }
+                      ],
+                      "name": "arr",
+                      "type": "function_call"
+                    },
+                    {
+                      "arguments": [
+                        {
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "ISF4"
+                            },
+                            {
+                              "operand": {
+                                "type": "symbol",
+                                "value": "SEUIL_REC_CP"
+                              },
+                              "type": "negate"
+                            }
+                          ],
+                          "type": "sum"
+                        }
+                      ],
+                      "name": "positif_ou_nul",
+                      "type": "function_call"
+                    }
+                  ],
+                  "type": "product"
+                },
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_TRTARDIF"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "MAJOISFTARDIF_D"
+                    }
+                  ],
+                  "type": "product"
+                },
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "FLAG_TRTARDIF_F"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "MAJOISFTARDIF_D"
+                    }
+                  ],
+                  "type": "product"
+                },
+                {
+                  "operand": {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "FLAG_TRTARDIF_F"
+                      },
+                      {
+                        "operands": [
+                          {
+                            "operands": [
+                              {
+                                "arguments": [
+                                  {
+                                    "type": "symbol",
+                                    "value": "FLAG_RECTIF"
+                                  }
+                                ],
+                                "name": "positif",
+                                "type": "function_call"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "MAJOISFTARDIF_R"
+                              }
+                            ],
+                            "type": "product"
+                          },
+                          {
+                            "operands": [
+                              {
+                                "operands": [
+                                  {
+                                    "type": "integer",
+                                    "value": 1
+                                  },
+                                  {
+                                    "operand": {
+                                      "arguments": [
+                                        {
+                                          "type": "symbol",
+                                          "value": "FLAG_RECTIF"
+                                        }
+                                      ],
+                                      "name": "positif",
+                                      "type": "function_call"
+                                    },
+                                    "type": "negate"
+                                  }
+                                ],
+                                "type": "sum"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "MAJOISFTARDIF_A"
+                              }
+                            ],
+                            "type": "product"
+                          }
+                        ],
+                        "type": "sum"
+                      }
+                    ],
+                    "type": "product"
+                  },
+                  "type": "negate"
+                }
+              ],
+              "type": "sum"
+            }
+          ],
+          "name": "max",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            147,
+            1
+          ],
+          [
+            152,
+            10
+          ]
+        ],
+        "name": "NMAJISF1",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "condition": {
+            "operands": [
+              {
+                "left_operand": {
+                  "type": "symbol",
+                  "value": "V_CODPF1728ISF"
+                },
+                "operator": "=",
+                "right_operand": {
+                  "type": "integer",
+                  "value": 7
+                },
+                "type": "comparaison"
+              },
+              {
+                "left_operand": {
+                  "type": "symbol",
+                  "value": "V_CODPF1728ISF"
+                },
+                "operator": "=",
+                "right_operand": {
+                  "type": "integer",
+                  "value": 17
+                },
+                "type": "comparaison"
+              },
+              {
+                "left_operand": {
+                  "type": "symbol",
+                  "value": "V_CODPF1728ISF"
+                },
+                "operator": "=",
+                "right_operand": {
+                  "type": "integer",
+                  "value": 18
+                },
+                "type": "comparaison"
+              }
+            ],
+            "operators": [
+              "ou",
+              "ou"
+            ],
+            "type": "boolean_expression"
+          },
+          "type": "ternary_operator",
+          "value_if_false": {
+            "condition": {
+              "left_operand": {
+                "type": "symbol",
+                "value": "V_CODPF1728ISF"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 8
+              },
+              "type": "comparaison"
+            },
+            "type": "ternary_operator",
+            "value_if_true": {
+              "type": "integer",
+              "value": 40
+            }
+          },
+          "value_if_true": {
+            "type": "integer",
+            "value": 10
+          }
+        },
+        "linecol": [
+          [
+            156,
+            1
+          ],
+          [
+            162,
+            13
+          ]
+        ],
+        "name": "TXPF1728ISF",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "operand": {
+                        "arguments": [
+                          {
+                            "type": "symbol",
+                            "value": "V_NBCOD1728ISF"
+                          }
+                        ],
+                        "name": "positif",
+                        "type": "function_call"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                },
+                {
+                  "operands": [
+                    {
+                      "operands": [
+                        {
+                          "operands": [
+                            {
+                              "type": "integer",
+                              "value": 1
+                            },
+                            {
+                              "operand": {
+                                "arguments": [
+                                  {
+                                    "type": "symbol",
+                                    "value": "CMAJ"
+                                  }
+                                ],
+                                "name": "positif",
+                                "type": "function_call"
+                              },
+                              "type": "negate"
+                            }
+                          ],
+                          "type": "sum"
+                        },
+                        {
+                          "arguments": [
+                            {
+                              "type": "symbol",
+                              "value": "NMAJISF1"
+                            }
+                          ],
+                          "name": "positif",
+                          "type": "function_call"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "TXPF1728ISF"
+                        }
+                      ],
+                      "type": "product"
+                    },
+                    {
+                      "operands": [
+                        {
+                          "arguments": [
+                            {
+                              "type": "symbol",
+                              "value": "CMAJ_ISF"
+                            }
+                          ],
+                          "name": "positif",
+                          "type": "function_call"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "COPETOISF"
+                        }
+                      ],
+                      "type": "product"
+                    }
+                  ],
+                  "type": "sum"
+                }
+              ],
+              "type": "product"
+            },
+            {
+              "operands": [
+                {
+                  "arguments": [
+                    {
+                      "type": "symbol",
+                      "value": "V_NBCOD1728ISF"
+                    }
+                  ],
+                  "name": "positif",
+                  "type": "function_call"
+                },
+                {
+                  "type": "integer",
+                  "value": -1
+                }
+              ],
+              "type": "product"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            165,
+            1
+          ],
+          [
+            167,
+            47
+          ]
+        ],
+        "name": "MAJTXISF1",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        136,
+        1
+      ],
+      [
+        165,
+        1
+      ]
+    ],
+    "name": "77200",
+    "tags": [
+      {
+        "type": "symbol",
+        "value": "isf"
+      }
+    ],
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "pro",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "arguments": [
+            {
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "MOISAN_ISF"
+                },
+                {
+                  "operand": {
+                    "type": "integer",
+                    "value": 10000
+                  },
+                  "type": "invert"
+                }
+              ],
+              "type": "product"
+            }
+          ],
+          "name": "inf",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            170,
+            1
+          ],
+          [
+            170,
+            37
+          ]
+        ],
+        "name": "INTMSISF",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "operands": [
+                    {
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "MOISAN_ISF"
+                        },
+                        {
+                          "operand": {
+                            "type": "integer",
+                            "value": 10000
+                          },
+                          "type": "invert"
+                        }
+                      ],
+                      "type": "product"
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "INTMSISF"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                },
+                {
+                  "type": "integer",
+                  "value": 10000
+                }
+              ],
+              "type": "product"
+            },
+            {
+              "arguments": [
+                {
+                  "type": "symbol",
+                  "value": "MOISAN_ISF"
+                }
+              ],
+              "name": "present",
+              "type": "function_call"
+            }
+          ],
+          "type": "product"
+        },
+        "linecol": [
+          [
+            171,
+            1
+          ],
+          [
+            171,
+            75
+          ]
+        ],
+        "name": "INTANISF",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "arguments": [
+                    {
+                      "type": "integer",
+                      "value": 0
+                    },
+                    {
+                      "operands": [
+                        {
+                          "operands": [
+                            {
+                              "operands": [
+                                {
+                                  "type": "symbol",
+                                  "value": "INTANISF"
+                                },
+                                {
+                                  "operand": {
+                                    "operands": [
+                                      {
+                                        "type": "symbol",
+                                        "value": "V_ANREV"
+                                      },
+                                      {
+                                        "type": "integer",
+                                        "value": 1
+                                      }
+                                    ],
+                                    "type": "sum"
+                                  },
+                                  "type": "negate"
+                                }
+                              ],
+                              "type": "sum"
+                            },
+                            {
+                              "type": "integer",
+                              "value": 12
+                            }
+                          ],
+                          "type": "product"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "INTMSISF"
+                        },
+                        {
+                          "operand": {
+                            "type": "integer",
+                            "value": 6
+                          },
+                          "type": "negate"
+                        }
+                      ],
+                      "type": "sum"
+                    }
+                  ],
+                  "name": "max",
+                  "type": "function_call"
+                },
+                {
+                  "type": "symbol",
+                  "value": "TXMOISRETARD2"
+                }
+              ],
+              "type": "product"
+            },
+            {
+              "arguments": [
+                {
+                  "type": "symbol",
+                  "value": "MOISAN_ISF"
+                }
+              ],
+              "name": "present",
+              "type": "function_call"
+            }
+          ],
+          "type": "product"
+        },
+        "linecol": [
+          [
+            172,
+            1
+          ],
+          [
+            173,
+            27
+          ]
+        ],
+        "name": "TXINTISF",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "arguments": [
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "ISF4"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "COPETOISF"
+                    },
+                    {
+                      "operand": {
+                        "type": "integer",
+                        "value": 100
+                      },
+                      "type": "invert"
+                    }
+                  ],
+                  "type": "product"
+                }
+              ],
+              "name": "arr",
+              "type": "function_call"
+            },
+            {
+              "arguments": [
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "ISF4"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "TXINTISF"
+                    },
+                    {
+                      "operand": {
+                        "type": "integer",
+                        "value": 100
+                      },
+                      "type": "invert"
+                    }
+                  ],
+                  "type": "product"
+                }
+              ],
+              "name": "arr",
+              "type": "function_call"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            174,
+            1
+          ],
+          [
+            174,
+            67
+          ]
+        ],
+        "name": "PTOISF",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "RETISF2"
+                },
+                {
+                  "arguments": [
+                    {
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "ISF4"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "TXINTISF"
+                        },
+                        {
+                          "operand": {
+                            "type": "integer",
+                            "value": 100
+                          },
+                          "type": "invert"
+                        }
+                      ],
+                      "type": "product"
+                    }
+                  ],
+                  "name": "arr",
+                  "type": "function_call"
+                }
+              ],
+              "type": "sum"
+            },
+            {
+              "arguments": [
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "ISF4"
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "SEUIL_REC_CP"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                }
+              ],
+              "name": "positif_ou_nul",
+              "type": "function_call"
+            }
+          ],
+          "type": "product"
+        },
+        "linecol": [
+          [
+            175,
+            1
+          ],
+          [
+            175,
+            84
+          ]
+        ],
+        "name": "RETISF",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "arguments": [
+                    {
+                      "type": "symbol",
+                      "value": "CMAJ_ISF"
+                    }
+                  ],
+                  "name": "positif",
+                  "type": "function_call"
+                },
+                {
+                  "type": "symbol",
+                  "value": "TXINTISF"
+                }
+              ],
+              "type": "product"
+            },
+            {
+              "operands": [
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "TXINRISF"
+                    },
+                    {
+                      "operands": [
+                        {
+                          "type": "integer",
+                          "value": 1
+                        },
+                        {
+                          "operand": {
+                            "arguments": [
+                              {
+                                "type": "symbol",
+                                "value": "TXINRISF_A"
+                              }
+                            ],
+                            "name": "positif",
+                            "type": "function_call"
+                          },
+                          "type": "negate"
+                        }
+                      ],
+                      "type": "sum"
+                    }
+                  ],
+                  "type": "product"
+                },
+                {
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": -1
+                    },
+                    {
+                      "arguments": [
+                        {
+                          "type": "symbol",
+                          "value": "TXINRISF_A"
+                        }
+                      ],
+                      "name": "positif",
+                      "type": "function_call"
+                    },
+                    {
+                      "arguments": [
+                        {
+                          "type": "symbol",
+                          "value": "TXINRISF"
+                        }
+                      ],
+                      "name": "positif",
+                      "type": "function_call"
+                    },
+                    {
+                      "arguments": [
+                        {
+                          "operands": [
+                            {
+                              "arguments": [
+                                {
+                                  "operands": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "TXINRISF"
+                                    },
+                                    {
+                                      "operand": {
+                                        "type": "symbol",
+                                        "value": "TXINRISF_A"
+                                      },
+                                      "type": "negate"
+                                    }
+                                  ],
+                                  "type": "sum"
+                                }
+                              ],
+                              "name": "positif",
+                              "type": "function_call"
+                            },
+                            {
+                              "arguments": [
+                                {
+                                  "operands": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "TXINRISF_A"
+                                    },
+                                    {
+                                      "operand": {
+                                        "type": "symbol",
+                                        "value": "TXINRISF"
+                                      },
+                                      "type": "negate"
+                                    }
+                                  ],
+                                  "type": "sum"
+                                }
+                              ],
+                              "name": "positif",
+                              "type": "function_call"
+                            }
+                          ],
+                          "type": "sum"
+                        }
+                      ],
+                      "name": "positif",
+                      "type": "function_call"
+                    }
+                  ],
+                  "type": "product"
+                }
+              ],
+              "type": "sum"
+            },
+            {
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "TXINRISF"
+                },
+                {
+                  "arguments": [
+                    {
+                      "type": "symbol",
+                      "value": "TXINRISF_A"
+                    }
+                  ],
+                  "name": "positif",
+                  "type": "function_call"
+                },
+                {
+                  "arguments": [
+                    {
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "TXINRISF"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "TXINRISF_A"
+                          },
+                          "type": "negate"
+                        }
+                      ],
+                      "type": "sum"
+                    }
+                  ],
+                  "name": "null",
+                  "type": "function_call"
+                }
+              ],
+              "type": "product"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            176,
+            1
+          ],
+          [
+            180,
+            16
+          ]
+        ],
+        "name": "RETXISF",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "arguments": [
+                    {
+                      "type": "symbol",
+                      "value": "RETISF"
+                    }
+                  ],
+                  "name": "positif",
+                  "type": "function_call"
+                },
+                {
+                  "arguments": [
+                    {
+                      "type": "symbol",
+                      "value": "NMAJISF1"
+                    }
+                  ],
+                  "name": "positif",
+                  "type": "function_call"
+                }
+              ],
+              "type": "product"
+            },
+            {
+              "operands": [
+                {
+                  "type": "integer",
+                  "value": 2
+                },
+                {
+                  "arguments": [
+                    {
+                      "type": "symbol",
+                      "value": "RETISF"
+                    }
+                  ],
+                  "name": "positif",
+                  "type": "function_call"
+                },
+                {
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "operand": {
+                        "arguments": [
+                          {
+                            "type": "symbol",
+                            "value": "NMAJISF1"
+                          }
+                        ],
+                        "name": "positif",
+                        "type": "function_call"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                }
+              ],
+              "type": "product"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            183,
+            1
+          ],
+          [
+            184,
+            51
+          ]
+        ],
+        "name": "NATMAJISF",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        168,
+        1
+      ],
+      [
+        183,
+        1
+      ]
+    ],
+    "name": "77210",
+    "tags": [
+      {
+        "type": "symbol",
+        "value": "isf"
+      }
+    ],
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "pro",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "INCISF_NET"
+            },
+            {
+              "type": "symbol",
+              "value": "NMAJISF1"
+            },
+            {
+              "operands": [
+                {
+                  "arguments": [
+                    {
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "ISF4"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "TXINTISF"
+                        },
+                        {
+                          "operand": {
+                            "type": "integer",
+                            "value": 100
+                          },
+                          "type": "invert"
+                        }
+                      ],
+                      "type": "product"
+                    }
+                  ],
+                  "name": "arr",
+                  "type": "function_call"
+                },
+                {
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "operand": {
+                        "arguments": [
+                          {
+                            "operands": [
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_PRIM"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_RETARD"
+                              },
+                              {
+                                "type": "symbol",
+                                "value": "FLAG_DEFAUT"
+                              }
+                            ],
+                            "type": "sum"
+                          }
+                        ],
+                        "name": "positif",
+                        "type": "function_call"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                }
+              ],
+              "type": "product"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            191,
+            1
+          ],
+          [
+            193,
+            89
+          ]
+        ],
+        "name": "PISF",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        186,
+        1
+      ],
+      [
+        191,
+        1
+      ]
+    ],
+    "name": "77215",
+    "tags": [
+      {
+        "type": "symbol",
+        "value": "isf"
+      }
+    ],
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "pro",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "ISF4"
+            },
+            {
+              "type": "symbol",
+              "value": "CEF2"
+            },
+            {
+              "type": "symbol",
+              "value": "PISF"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            198,
+            1
+          ],
+          [
+            198,
+            32
+          ]
+        ],
+        "name": "NAPISFTOT",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        195,
+        1
+      ],
+      [
+        198,
+        1
+      ]
+    ],
+    "name": "77219",
+    "tags": [
+      {
+        "type": "symbol",
+        "value": "isf"
+      }
+    ],
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "pro",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "NAPISFTOT"
+        },
+        "linecol": [
+          [
+            203,
+            1
+          ],
+          [
+            203,
+            20
+          ]
+        ],
+        "name": "ISFNET",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        200,
+        1
+      ],
+      [
+        203,
+        1
+      ]
+    ],
+    "name": "77220",
+    "tags": [
+      {
+        "type": "symbol",
+        "value": "isf"
+      }
+    ],
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "pro",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "ISFCUM"
+            },
+            {
+              "operand": {
+                "type": "symbol",
+                "value": "V_ANTISF"
+              },
+              "type": "negate"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            211,
+            1
+          ],
+          [
+            211,
+            28
+          ]
+        ],
+        "name": "ISFNAP",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        209,
+        1
+      ],
+      [
+        211,
+        1
+      ]
+    ],
+    "name": "77221",
+    "tags": [
+      {
+        "type": "symbol",
+        "value": "isf"
+      }
+    ],
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "arguments": [
+                    {
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "ISF4BIS"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "SEUIL_REC_CP"
+                          },
+                          "type": "negate"
+                        }
+                      ],
+                      "type": "sum"
+                    }
+                  ],
+                  "name": "positif_ou_nul",
+                  "type": "function_call"
+                },
+                {
+                  "type": "symbol",
+                  "value": "ISF4BIS"
+                }
+              ],
+              "type": "product"
+            },
+            {
+              "operands": [
+                {
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "operand": {
+                        "arguments": [
+                          {
+                            "operands": [
+                              {
+                                "type": "symbol",
+                                "value": "ISF4BIS"
+                              },
+                              {
+                                "operand": {
+                                  "type": "symbol",
+                                  "value": "SEUIL_REC_CP"
+                                },
+                                "type": "negate"
+                              }
+                            ],
+                            "type": "sum"
+                          }
+                        ],
+                        "name": "positif_ou_nul",
+                        "type": "function_call"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                },
+                {
+                  "type": "integer",
+                  "value": 0
+                }
+              ],
+              "type": "product"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            216,
+            1
+          ],
+          [
+            217,
+            58
+          ]
+        ],
+        "name": "ILI_SYNT_ISF",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        213,
+        1
+      ],
+      [
+        216,
+        1
+      ]
+    ],
+    "name": "77230",
+    "tags": [
+      {
+        "type": "symbol",
+        "value": "isf"
+      }
+    ],
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "pro",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "arguments": [
+            {
+              "operands": [
+                {
+                  "arguments": [
+                    {
+                      "type": "integer",
+                      "value": 0
+                    },
+                    {
+                      "operands": [
+                        {
+                          "arguments": [
+                            {
+                              "type": "symbol",
+                              "value": "DISFBASE"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "LIM_TR2_ISF"
+                            }
+                          ],
+                          "name": "min",
+                          "type": "function_call"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "LIM_TR1_ISF"
+                          },
+                          "type": "negate"
+                        }
+                      ],
+                      "type": "sum"
+                    }
+                  ],
+                  "name": "max",
+                  "type": "function_call"
+                },
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "TX_TR2_ISF"
+                    },
+                    {
+                      "operand": {
+                        "type": "integer",
+                        "value": 10000
+                      },
+                      "type": "invert"
+                    }
+                  ],
+                  "type": "product"
+                }
+              ],
+              "type": "product"
+            }
+          ],
+          "name": "arr",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            222,
+            1
+          ],
+          [
+            222,
+            92
+          ]
+        ],
+        "name": "TR2_ISF",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "arguments": [
+            {
+              "operands": [
+                {
+                  "arguments": [
+                    {
+                      "type": "integer",
+                      "value": 0
+                    },
+                    {
+                      "operands": [
+                        {
+                          "arguments": [
+                            {
+                              "type": "symbol",
+                              "value": "DISFBASE"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "LIM_TR3_ISF"
+                            }
+                          ],
+                          "name": "min",
+                          "type": "function_call"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "LIM_TR2_ISF"
+                          },
+                          "type": "negate"
+                        }
+                      ],
+                      "type": "sum"
+                    }
+                  ],
+                  "name": "max",
+                  "type": "function_call"
+                },
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "TX_TR3_ISF"
+                    },
+                    {
+                      "operand": {
+                        "type": "integer",
+                        "value": 10000
+                      },
+                      "type": "invert"
+                    }
+                  ],
+                  "type": "product"
+                }
+              ],
+              "type": "product"
+            }
+          ],
+          "name": "arr",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            223,
+            1
+          ],
+          [
+            223,
+            92
+          ]
+        ],
+        "name": "TR3_ISF",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "arguments": [
+            {
+              "operands": [
+                {
+                  "arguments": [
+                    {
+                      "type": "integer",
+                      "value": 0
+                    },
+                    {
+                      "operands": [
+                        {
+                          "arguments": [
+                            {
+                              "type": "symbol",
+                              "value": "DISFBASE"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "LIM_ISFSUP"
+                            }
+                          ],
+                          "name": "min",
+                          "type": "function_call"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "LIM_TR3_ISF"
+                          },
+                          "type": "negate"
+                        }
+                      ],
+                      "type": "sum"
+                    }
+                  ],
+                  "name": "max",
+                  "type": "function_call"
+                },
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "TX_TR4_ISF"
+                    },
+                    {
+                      "operand": {
+                        "type": "integer",
+                        "value": 100
+                      },
+                      "type": "invert"
+                    }
+                  ],
+                  "type": "product"
+                }
+              ],
+              "type": "product"
+            }
+          ],
+          "name": "arr",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            224,
+            1
+          ],
+          [
+            224,
+            90
+          ]
+        ],
+        "name": "TR4_ISF",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "TR2_ISF"
+            },
+            {
+              "type": "symbol",
+              "value": "TR3_ISF"
+            },
+            {
+              "type": "symbol",
+              "value": "TR4_ISF"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            226,
+            1
+          ],
+          [
+            226,
+            36
+          ]
+        ],
+        "name": "CEF1",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        220,
+        1
+      ],
+      [
+        226,
+        1
+      ]
+    ],
+    "name": "77250",
+    "tags": [
+      {
+        "type": "symbol",
+        "value": "isf"
+      }
+    ],
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "pro",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "arguments": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "CEF1"
+                },
+                {
+                  "operand": {
+                    "type": "symbol",
+                    "value": "ISFBRUT"
+                  },
+                  "type": "negate"
+                }
+              ],
+              "type": "sum"
+            }
+          ],
+          "name": "max",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            230,
+            1
+          ],
+          [
+            230,
+            33
+          ]
+        ],
+        "name": "CEF2",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        228,
+        1
+      ],
+      [
+        230,
+        1
+      ]
+    ],
+    "name": "77260",
+    "tags": [
+      {
+        "type": "symbol",
+        "value": "isf"
+      }
+    ],
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "pro",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "arguments": [
+            {
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "CEF2"
+                },
+                {
+                  "type": "symbol",
+                  "value": "ISF4"
+                }
+              ],
+              "type": "sum"
+            }
+          ],
+          "name": "max",
+          "type": "function_call"
+        },
+        "linecol": [
+          [
+            234,
+            1
+          ],
+          [
+            234,
+            32
+          ]
+        ],
+        "name": "ISF4BIS",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        232,
+        1
+      ],
+      [
+        234,
+        1
+      ]
+    ],
+    "name": "77270",
+    "tags": [
+      {
+        "type": "symbol",
+        "value": "isf"
+      }
+    ],
+    "type": "regle"
+  }
+]

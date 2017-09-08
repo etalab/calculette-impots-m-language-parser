@@ -1,0 +1,1958 @@
+[
+  {
+    "applications": [
+      "iliad"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "IND_TL_MF"
+        },
+        "linecol": [
+          [
+            25,
+            1
+          ],
+          [
+            25,
+            18
+          ]
+        ],
+        "name": "TL_MF",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "RNI"
+        },
+        "linecol": [
+          [
+            26,
+            1
+          ],
+          [
+            26,
+            16
+          ]
+        ],
+        "name": "RNI_INIT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "TEFFP"
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "RNI"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                },
+                {
+                  "arguments": [
+                    {
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "TEFFP"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "RNI"
+                          },
+                          "type": "negate"
+                        }
+                      ],
+                      "type": "sum"
+                    }
+                  ],
+                  "name": "positif",
+                  "type": "function_call"
+                }
+              ],
+              "type": "product"
+            },
+            {
+              "arguments": [
+                {
+                  "type": "integer",
+                  "value": 0
+                },
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "RMOND"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "DEFZU"
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "DMOND"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                }
+              ],
+              "name": "max",
+              "type": "function_call"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            27,
+            1
+          ],
+          [
+            27,
+            82
+          ]
+        ],
+        "name": "EFF_INIT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "TTPVQ"
+        },
+        "linecol": [
+          [
+            28,
+            1
+          ],
+          [
+            28,
+            18
+          ]
+        ],
+        "name": "PVQ_INIT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "BPTP3"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP2"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP4"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP40"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP18"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTPD"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTPG"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP19"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP24"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            29,
+            1
+          ],
+          [
+            29,
+            86
+          ]
+        ],
+        "name": "PV_INIT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "REDTL"
+                },
+                {
+                  "type": "symbol",
+                  "value": "CIMPTL"
+                }
+              ],
+              "type": "sum"
+            },
+            {
+              "operands": [
+                {
+                  "type": "integer",
+                  "value": 1
+                },
+                {
+                  "operand": {
+                    "type": "symbol",
+                    "value": "V_CNR"
+                  },
+                  "type": "negate"
+                }
+              ],
+              "type": "sum"
+            }
+          ],
+          "type": "product"
+        },
+        "linecol": [
+          [
+            30,
+            1
+          ],
+          [
+            30,
+            41
+          ]
+        ],
+        "name": "RI_INIT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "BCSG"
+        },
+        "linecol": [
+          [
+            31,
+            1
+          ],
+          [
+            31,
+            18
+          ]
+        ],
+        "name": "CRDS_INIT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "BRDS"
+        },
+        "linecol": [
+          [
+            32,
+            1
+          ],
+          [
+            32,
+            18
+          ]
+        ],
+        "name": "BRDS_INIT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "BPRS"
+        },
+        "linecol": [
+          [
+            33,
+            1
+          ],
+          [
+            33,
+            18
+          ]
+        ],
+        "name": "BPRS_INIT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "BASSURV"
+            },
+            {
+              "type": "symbol",
+              "value": "BASSURC"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            34,
+            1
+          ],
+          [
+            34,
+            33
+          ]
+        ],
+        "name": "TAXAGA_INIT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "BPCAPTAXV"
+            },
+            {
+              "type": "symbol",
+              "value": "BPCAPTAXC"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            35,
+            1
+          ],
+          [
+            35,
+            35
+          ]
+        ],
+        "name": "PCAP_INIT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "LOYELEV"
+        },
+        "linecol": [
+          [
+            36,
+            1
+          ],
+          [
+            36,
+            20
+          ]
+        ],
+        "name": "LOY_INIT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "REVKIREHR"
+            },
+            {
+              "operands": [
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "RFRH2"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "RFRH1"
+                    }
+                  ],
+                  "type": "sum"
+                },
+                {
+                  "arguments": [
+                    {
+                      "type": "symbol",
+                      "value": "HRCONDTHEO"
+                    }
+                  ],
+                  "name": "positif",
+                  "type": "function_call"
+                }
+              ],
+              "type": "product"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            37,
+            1
+          ],
+          [
+            37,
+            63
+          ]
+        ],
+        "name": "CHR_INIT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "CVNSALAV"
+            },
+            {
+              "type": "symbol",
+              "value": "GLDGRATV"
+            },
+            {
+              "type": "symbol",
+              "value": "GLDGRATC"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            38,
+            1
+          ],
+          [
+            38,
+            43
+          ]
+        ],
+        "name": "CVN_INIT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "GSALV"
+            },
+            {
+              "type": "symbol",
+              "value": "GSALC"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            39,
+            1
+          ],
+          [
+            39,
+            27
+          ]
+        ],
+        "name": "CDIS_INIT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "GLDGRATV"
+            },
+            {
+              "type": "symbol",
+              "value": "GLDGRATC"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            40,
+            1
+          ],
+          [
+            40,
+            32
+          ]
+        ],
+        "name": "GLO_INIT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "BRSE1"
+        },
+        "linecol": [
+          [
+            41,
+            1
+          ],
+          [
+            41,
+            19
+          ]
+        ],
+        "name": "RSE1_INIT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "BRSE2"
+        },
+        "linecol": [
+          [
+            42,
+            1
+          ],
+          [
+            42,
+            19
+          ]
+        ],
+        "name": "RSE2_INIT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "BRSE3"
+        },
+        "linecol": [
+          [
+            43,
+            1
+          ],
+          [
+            43,
+            19
+          ]
+        ],
+        "name": "RSE3_INIT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "BRSE4"
+        },
+        "linecol": [
+          [
+            44,
+            1
+          ],
+          [
+            44,
+            19
+          ]
+        ],
+        "name": "RSE4_INIT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "BRSE5"
+        },
+        "linecol": [
+          [
+            45,
+            1
+          ],
+          [
+            45,
+            19
+          ]
+        ],
+        "name": "RSE5_INIT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "BRSE6"
+        },
+        "linecol": [
+          [
+            46,
+            1
+          ],
+          [
+            46,
+            19
+          ]
+        ],
+        "name": "RSE6_INIT",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        21,
+        1
+      ],
+      [
+        46,
+        1
+      ]
+    ],
+    "name": "1202",
+    "tags": [
+      {
+        "type": "symbol",
+        "value": "corrective"
+      },
+      {
+        "type": "symbol",
+        "value": "base_tl_init"
+      }
+    ],
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "iliad"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "RNI"
+        },
+        "linecol": [
+          [
+            52,
+            1
+          ],
+          [
+            52,
+            14
+          ]
+        ],
+        "name": "RNI_TL",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "TEFFP"
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "RNI"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                },
+                {
+                  "arguments": [
+                    {
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "TEFFP"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "RNI"
+                          },
+                          "type": "negate"
+                        }
+                      ],
+                      "type": "sum"
+                    }
+                  ],
+                  "name": "positif",
+                  "type": "function_call"
+                }
+              ],
+              "type": "product"
+            },
+            {
+              "arguments": [
+                {
+                  "type": "integer",
+                  "value": 0
+                },
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "RMOND"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "DEFZU"
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "DMOND"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                }
+              ],
+              "name": "max",
+              "type": "function_call"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            53,
+            1
+          ],
+          [
+            53,
+            80
+          ]
+        ],
+        "name": "EFF_TL",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "TTPVQ"
+        },
+        "linecol": [
+          [
+            54,
+            1
+          ],
+          [
+            54,
+            16
+          ]
+        ],
+        "name": "PVQ_TL",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "BPTP3"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP2"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP4"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP40"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP18"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTPD"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTPG"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP19"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP24"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            55,
+            1
+          ],
+          [
+            55,
+            84
+          ]
+        ],
+        "name": "PV_TL",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "REDTL"
+                },
+                {
+                  "type": "symbol",
+                  "value": "CIMPTL"
+                }
+              ],
+              "type": "sum"
+            },
+            {
+              "operands": [
+                {
+                  "type": "integer",
+                  "value": 1
+                },
+                {
+                  "operand": {
+                    "type": "symbol",
+                    "value": "V_CNR"
+                  },
+                  "type": "negate"
+                }
+              ],
+              "type": "sum"
+            }
+          ],
+          "type": "product"
+        },
+        "linecol": [
+          [
+            56,
+            1
+          ],
+          [
+            56,
+            41
+          ]
+        ],
+        "name": "RI_TL",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "BCSG"
+        },
+        "linecol": [
+          [
+            57,
+            1
+          ],
+          [
+            57,
+            16
+          ]
+        ],
+        "name": "RDS_TL",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "BRDS"
+        },
+        "linecol": [
+          [
+            58,
+            1
+          ],
+          [
+            58,
+            16
+          ]
+        ],
+        "name": "BRDS_TL",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "BPRS"
+        },
+        "linecol": [
+          [
+            59,
+            1
+          ],
+          [
+            59,
+            16
+          ]
+        ],
+        "name": "BPRS_TL",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "BASSURV"
+            },
+            {
+              "type": "symbol",
+              "value": "BASSURC"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            60,
+            1
+          ],
+          [
+            60,
+            31
+          ]
+        ],
+        "name": "TAXAGA_TL",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "BPCAPTAXV"
+            },
+            {
+              "type": "symbol",
+              "value": "BPCAPTAXC"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            61,
+            1
+          ],
+          [
+            61,
+            33
+          ]
+        ],
+        "name": "PCAP_TL",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "LOYELEV"
+        },
+        "linecol": [
+          [
+            62,
+            1
+          ],
+          [
+            62,
+            19
+          ]
+        ],
+        "name": "LOYA_TL",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "REVKIREHR"
+            },
+            {
+              "operands": [
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "RFRH2"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "RFRH1"
+                    }
+                  ],
+                  "type": "sum"
+                },
+                {
+                  "arguments": [
+                    {
+                      "type": "symbol",
+                      "value": "HRCONDTHEO"
+                    }
+                  ],
+                  "name": "positif",
+                  "type": "function_call"
+                }
+              ],
+              "type": "product"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            63,
+            1
+          ],
+          [
+            63,
+            61
+          ]
+        ],
+        "name": "CHR_TL",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "CVNSALAV"
+            },
+            {
+              "type": "symbol",
+              "value": "GLDGRATV"
+            },
+            {
+              "type": "symbol",
+              "value": "GLDGRATC"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            64,
+            1
+          ],
+          [
+            64,
+            42
+          ]
+        ],
+        "name": "CVNA_TL",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "GSALV"
+            },
+            {
+              "type": "symbol",
+              "value": "GSALC"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            65,
+            1
+          ],
+          [
+            65,
+            25
+          ]
+        ],
+        "name": "CDISA_TL",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "GLDGRATV"
+            },
+            {
+              "type": "symbol",
+              "value": "GLDGRATC"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            66,
+            1
+          ],
+          [
+            66,
+            31
+          ]
+        ],
+        "name": "GLOA_TL",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "BRSE1"
+        },
+        "linecol": [
+          [
+            67,
+            1
+          ],
+          [
+            67,
+            18
+          ]
+        ],
+        "name": "RSE1A_TL",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "BRSE2"
+        },
+        "linecol": [
+          [
+            68,
+            1
+          ],
+          [
+            68,
+            18
+          ]
+        ],
+        "name": "RSE2A_TL",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "BRSE3"
+        },
+        "linecol": [
+          [
+            69,
+            1
+          ],
+          [
+            69,
+            18
+          ]
+        ],
+        "name": "RSE3A_TL",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "BRSE4"
+        },
+        "linecol": [
+          [
+            70,
+            1
+          ],
+          [
+            70,
+            18
+          ]
+        ],
+        "name": "RSE4A_TL",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "BRSE5"
+        },
+        "linecol": [
+          [
+            71,
+            1
+          ],
+          [
+            71,
+            18
+          ]
+        ],
+        "name": "RSE5A_TL",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "BRSE6"
+        },
+        "linecol": [
+          [
+            72,
+            1
+          ],
+          [
+            72,
+            18
+          ]
+        ],
+        "name": "RSE6A_TL",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        48,
+        1
+      ],
+      [
+        72,
+        1
+      ]
+    ],
+    "name": "1204",
+    "tags": [
+      {
+        "type": "symbol",
+        "value": "corrective"
+      },
+      {
+        "type": "symbol",
+        "value": "base_tl"
+      }
+    ],
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "iliad"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "RNI"
+        },
+        "linecol": [
+          [
+            78,
+            1
+          ],
+          [
+            78,
+            16
+          ]
+        ],
+        "name": "RNI_RECT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "TEFFP"
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "RNI"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                },
+                {
+                  "arguments": [
+                    {
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "TEFFP"
+                        },
+                        {
+                          "operand": {
+                            "type": "symbol",
+                            "value": "RNI"
+                          },
+                          "type": "negate"
+                        }
+                      ],
+                      "type": "sum"
+                    }
+                  ],
+                  "name": "positif",
+                  "type": "function_call"
+                }
+              ],
+              "type": "product"
+            },
+            {
+              "arguments": [
+                {
+                  "type": "integer",
+                  "value": 0
+                },
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "RMOND"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "DEFZU"
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "DMOND"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                }
+              ],
+              "name": "max",
+              "type": "function_call"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            79,
+            1
+          ],
+          [
+            79,
+            82
+          ]
+        ],
+        "name": "EFF_RECT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "TTPVQ"
+        },
+        "linecol": [
+          [
+            80,
+            1
+          ],
+          [
+            80,
+            18
+          ]
+        ],
+        "name": "PVQ_RECT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "BPTP3"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP2"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP4"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP40"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP18"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTPD"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTPG"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP19"
+            },
+            {
+              "type": "symbol",
+              "value": "BPTP24"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            81,
+            1
+          ],
+          [
+            81,
+            86
+          ]
+        ],
+        "name": "PV_RECT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "RI_INIT"
+            },
+            {
+              "operand": {
+                "operands": [
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "REDTL"
+                      },
+                      {
+                        "type": "symbol",
+                        "value": "CIMPTL"
+                      }
+                    ],
+                    "type": "sum"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "integer",
+                        "value": 1
+                      },
+                      {
+                        "operand": {
+                          "type": "symbol",
+                          "value": "V_CNR"
+                        },
+                        "type": "negate"
+                      }
+                    ],
+                    "type": "sum"
+                  }
+                ],
+                "type": "product"
+              },
+              "type": "negate"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            82,
+            1
+          ],
+          [
+            82,
+            51
+          ]
+        ],
+        "name": "RI_RECT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "BCSG"
+        },
+        "linecol": [
+          [
+            83,
+            1
+          ],
+          [
+            83,
+            18
+          ]
+        ],
+        "name": "CRDS_RECT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "BRDS"
+        },
+        "linecol": [
+          [
+            84,
+            1
+          ],
+          [
+            84,
+            18
+          ]
+        ],
+        "name": "BRDS_RECT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "BPRS"
+        },
+        "linecol": [
+          [
+            85,
+            1
+          ],
+          [
+            85,
+            18
+          ]
+        ],
+        "name": "BPRS_RECT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "BASSURV"
+            },
+            {
+              "type": "symbol",
+              "value": "BASSURC"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            86,
+            1
+          ],
+          [
+            86,
+            33
+          ]
+        ],
+        "name": "TAXAGA_RECT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "BPCAPTAXV"
+            },
+            {
+              "type": "symbol",
+              "value": "BPCAPTAXC"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            87,
+            1
+          ],
+          [
+            87,
+            35
+          ]
+        ],
+        "name": "PCAP_RECT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "LOYELEV"
+        },
+        "linecol": [
+          [
+            88,
+            1
+          ],
+          [
+            88,
+            20
+          ]
+        ],
+        "name": "LOY_RECT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "REVKIREHR"
+            },
+            {
+              "operands": [
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "RFRH2"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "RFRH1"
+                    }
+                  ],
+                  "type": "sum"
+                },
+                {
+                  "arguments": [
+                    {
+                      "type": "symbol",
+                      "value": "HRCONDTHEO"
+                    }
+                  ],
+                  "name": "positif",
+                  "type": "function_call"
+                }
+              ],
+              "type": "product"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            89,
+            1
+          ],
+          [
+            89,
+            63
+          ]
+        ],
+        "name": "CHR_RECT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "CVNSALAV"
+            },
+            {
+              "type": "symbol",
+              "value": "GLDGRATV"
+            },
+            {
+              "type": "symbol",
+              "value": "GLDGRATC"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            90,
+            1
+          ],
+          [
+            90,
+            43
+          ]
+        ],
+        "name": "CVN_RECT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "GSALV"
+            },
+            {
+              "type": "symbol",
+              "value": "GSALC"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            91,
+            1
+          ],
+          [
+            91,
+            27
+          ]
+        ],
+        "name": "CDIS_RECT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "GLDGRATV"
+            },
+            {
+              "type": "symbol",
+              "value": "GLDGRATC"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            92,
+            1
+          ],
+          [
+            92,
+            32
+          ]
+        ],
+        "name": "GLO_RECT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "BRSE1"
+        },
+        "linecol": [
+          [
+            93,
+            1
+          ],
+          [
+            93,
+            19
+          ]
+        ],
+        "name": "RSE1_RECT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "BRSE2"
+        },
+        "linecol": [
+          [
+            94,
+            1
+          ],
+          [
+            94,
+            19
+          ]
+        ],
+        "name": "RSE2_RECT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "BRSE3"
+        },
+        "linecol": [
+          [
+            95,
+            1
+          ],
+          [
+            95,
+            19
+          ]
+        ],
+        "name": "RSE3_RECT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "BRSE4"
+        },
+        "linecol": [
+          [
+            96,
+            1
+          ],
+          [
+            96,
+            19
+          ]
+        ],
+        "name": "RSE4_RECT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "BRSE5"
+        },
+        "linecol": [
+          [
+            97,
+            1
+          ],
+          [
+            97,
+            19
+          ]
+        ],
+        "name": "RSE5_RECT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "BRSE6"
+        },
+        "linecol": [
+          [
+            98,
+            1
+          ],
+          [
+            98,
+            19
+          ]
+        ],
+        "name": "RSE6_RECT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "CSG"
+        },
+        "linecol": [
+          [
+            100,
+            1
+          ],
+          [
+            100,
+            16
+          ]
+        ],
+        "name": "CSG_RECT",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "PRS"
+        },
+        "linecol": [
+          [
+            101,
+            1
+          ],
+          [
+            101,
+            16
+          ]
+        ],
+        "name": "PS_RECT",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        74,
+        1
+      ],
+      [
+        101,
+        1
+      ]
+    ],
+    "name": "1206",
+    "tags": [
+      {
+        "type": "symbol",
+        "value": "corrective"
+      },
+      {
+        "type": "symbol",
+        "value": "base_tl_rect"
+      }
+    ],
+    "type": "regle"
+  }
+]

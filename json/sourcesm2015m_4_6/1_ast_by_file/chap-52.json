@@ -1,0 +1,5259 @@
+[
+  {
+    "applications": [
+      "bareme",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "TX_BAR1"
+            },
+            {
+              "operand": {
+                "type": "symbol",
+                "value": "TX_BAR0"
+              },
+              "type": "negate"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            25,
+            1
+          ],
+          [
+            25,
+            30
+          ]
+        ],
+        "name": "TAUX1",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "TX_BAR2"
+            },
+            {
+              "operand": {
+                "type": "symbol",
+                "value": "TX_BAR1"
+              },
+              "type": "negate"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            26,
+            1
+          ],
+          [
+            26,
+            30
+          ]
+        ],
+        "name": "TAUX2",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "TX_BAR3"
+            },
+            {
+              "operand": {
+                "type": "symbol",
+                "value": "TX_BAR2"
+              },
+              "type": "negate"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            27,
+            1
+          ],
+          [
+            27,
+            30
+          ]
+        ],
+        "name": "TAUX3",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "TX_BAR4"
+            },
+            {
+              "operand": {
+                "type": "symbol",
+                "value": "TX_BAR3"
+              },
+              "type": "negate"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            28,
+            1
+          ],
+          [
+            28,
+            30
+          ]
+        ],
+        "name": "TAUX4",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "TX_BAR5"
+            },
+            {
+              "operand": {
+                "type": "symbol",
+                "value": "TX_BAR4"
+              },
+              "type": "negate"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            29,
+            1
+          ],
+          [
+            29,
+            30
+          ]
+        ],
+        "name": "TAUX5",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        21,
+        1
+      ],
+      [
+        29,
+        1
+      ]
+    ],
+    "name": "521000",
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "bareme",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QFxyz"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR1"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX1"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QFxyz"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR2"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX2"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QFxyz"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR3"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX3"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QFxyz"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR4"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX4"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QFxyz"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR5"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX5"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              }
+            ],
+            "type": "sum"
+          },
+          "linecol": [
+            [
+              35,
+              1
+            ],
+            [
+              39,
+              54
+            ]
+          ],
+          "name": "DSxyz",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  0,
+                  5
+                ]
+              }
+            ],
+            "name": "x",
+            "type": "loop_variable"
+          },
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  1,
+                  2
+                ]
+              }
+            ],
+            "name": "y",
+            "type": "loop_variable"
+          },
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  1,
+                  2
+                ]
+              }
+            ],
+            "name": "z",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      }
+    ],
+    "linecol": [
+      [
+        31,
+        1
+      ],
+      [
+        34,
+        1
+      ]
+    ],
+    "name": "521010",
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "RB51"
+            },
+            {
+              "operand": {
+                "operands": [
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "NB1"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "type": "symbol",
+                            "value": "PLAFQF"
+                          }
+                        ],
+                        "name": "null",
+                        "type": "function_call"
+                      }
+                    ],
+                    "type": "product"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "NB2"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "operands": [
+                              {
+                                "type": "integer",
+                                "value": 1
+                              },
+                              {
+                                "operand": {
+                                  "type": "symbol",
+                                  "value": "PLAFQF"
+                                },
+                                "type": "negate"
+                              }
+                            ],
+                            "type": "sum"
+                          }
+                        ],
+                        "name": "null",
+                        "type": "function_call"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "sum"
+              },
+              "type": "invert"
+            }
+          ],
+          "type": "product"
+        },
+        "linecol": [
+          [
+            44,
+            1
+          ],
+          [
+            44,
+            64
+          ]
+        ],
+        "name": "WTXMARJ",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "arguments": [
+                {
+                  "operands": [
+                    {
+                      "arguments": [
+                        {
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "WTXMARJ"
+                            },
+                            {
+                              "operand": {
+                                "type": "symbol",
+                                "value": "LIM_BAR1"
+                              },
+                              "type": "negate"
+                            }
+                          ],
+                          "type": "sum"
+                        }
+                      ],
+                      "name": "positif",
+                      "type": "function_call"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "TX_BAR1"
+                    }
+                  ],
+                  "type": "product"
+                },
+                {
+                  "arguments": [
+                    {
+                      "operands": [
+                        {
+                          "arguments": [
+                            {
+                              "operands": [
+                                {
+                                  "type": "symbol",
+                                  "value": "WTXMARJ"
+                                },
+                                {
+                                  "operand": {
+                                    "type": "symbol",
+                                    "value": "LIM_BAR2"
+                                  },
+                                  "type": "negate"
+                                }
+                              ],
+                              "type": "sum"
+                            }
+                          ],
+                          "name": "positif",
+                          "type": "function_call"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "TX_BAR2"
+                        }
+                      ],
+                      "type": "product"
+                    },
+                    {
+                      "arguments": [
+                        {
+                          "operands": [
+                            {
+                              "arguments": [
+                                {
+                                  "operands": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "WTXMARJ"
+                                    },
+                                    {
+                                      "operand": {
+                                        "type": "symbol",
+                                        "value": "LIM_BAR3"
+                                      },
+                                      "type": "negate"
+                                    }
+                                  ],
+                                  "type": "sum"
+                                }
+                              ],
+                              "name": "positif",
+                              "type": "function_call"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "TX_BAR3"
+                            }
+                          ],
+                          "type": "product"
+                        },
+                        {
+                          "arguments": [
+                            {
+                              "operands": [
+                                {
+                                  "arguments": [
+                                    {
+                                      "operands": [
+                                        {
+                                          "type": "symbol",
+                                          "value": "WTXMARJ"
+                                        },
+                                        {
+                                          "operand": {
+                                            "type": "symbol",
+                                            "value": "LIM_BAR4"
+                                          },
+                                          "type": "negate"
+                                        }
+                                      ],
+                                      "type": "sum"
+                                    }
+                                  ],
+                                  "name": "positif",
+                                  "type": "function_call"
+                                },
+                                {
+                                  "type": "symbol",
+                                  "value": "TX_BAR4"
+                                }
+                              ],
+                              "type": "product"
+                            },
+                            {
+                              "arguments": [
+                                {
+                                  "operands": [
+                                    {
+                                      "arguments": [
+                                        {
+                                          "operands": [
+                                            {
+                                              "type": "symbol",
+                                              "value": "WTXMARJ"
+                                            },
+                                            {
+                                              "operand": {
+                                                "type": "symbol",
+                                                "value": "LIM_BAR5"
+                                              },
+                                              "type": "negate"
+                                            }
+                                          ],
+                                          "type": "sum"
+                                        }
+                                      ],
+                                      "name": "positif",
+                                      "type": "function_call"
+                                    },
+                                    {
+                                      "type": "symbol",
+                                      "value": "TX_BAR5"
+                                    }
+                                  ],
+                                  "type": "product"
+                                },
+                                {
+                                  "type": "integer",
+                                  "value": 0
+                                }
+                              ],
+                              "name": "max",
+                              "type": "function_call"
+                            }
+                          ],
+                          "name": "max",
+                          "type": "function_call"
+                        }
+                      ],
+                      "name": "max",
+                      "type": "function_call"
+                    }
+                  ],
+                  "name": "max",
+                  "type": "function_call"
+                }
+              ],
+              "name": "max",
+              "type": "function_call"
+            },
+            {
+              "operands": [
+                {
+                  "type": "integer",
+                  "value": 1
+                },
+                {
+                  "operand": {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "arguments": [
+                              {
+                                "type": "symbol",
+                                "value": "NRBASE"
+                              }
+                            ],
+                            "name": "present",
+                            "type": "function_call"
+                          },
+                          {
+                            "arguments": [
+                              {
+                                "type": "symbol",
+                                "value": "NRINET"
+                              }
+                            ],
+                            "name": "present",
+                            "type": "function_call"
+                          },
+                          {
+                            "arguments": [
+                              {
+                                "type": "symbol",
+                                "value": "IPTEFP"
+                              }
+                            ],
+                            "name": "present",
+                            "type": "function_call"
+                          },
+                          {
+                            "arguments": [
+                              {
+                                "type": "symbol",
+                                "value": "IPTEFN"
+                              }
+                            ],
+                            "name": "present",
+                            "type": "function_call"
+                          },
+                          {
+                            "arguments": [
+                              {
+                                "type": "symbol",
+                                "value": "PRODOM"
+                              }
+                            ],
+                            "name": "present",
+                            "type": "function_call"
+                          },
+                          {
+                            "arguments": [
+                              {
+                                "type": "symbol",
+                                "value": "PROGUY"
+                              }
+                            ],
+                            "name": "present",
+                            "type": "function_call"
+                          }
+                        ],
+                        "type": "sum"
+                      }
+                    ],
+                    "name": "positif",
+                    "type": "function_call"
+                  },
+                  "type": "negate"
+                }
+              ],
+              "type": "sum"
+            },
+            {
+              "operands": [
+                {
+                  "type": "integer",
+                  "value": 1
+                },
+                {
+                  "operand": {
+                    "type": "symbol",
+                    "value": "V_CNR"
+                  },
+                  "type": "negate"
+                }
+              ],
+              "type": "sum"
+            },
+            {
+              "arguments": [
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "IN01"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "IPQ1001"
+                    }
+                  ],
+                  "type": "sum"
+                }
+              ],
+              "name": "positif",
+              "type": "function_call"
+            }
+          ],
+          "type": "product"
+        },
+        "linecol": [
+          [
+            45,
+            1
+          ],
+          [
+            66,
+            26
+          ]
+        ],
+        "name": "TXMARJ",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "arguments": [
+                {
+                  "operands": [
+                    {
+                      "arguments": [
+                        {
+                          "operands": [
+                            {
+                              "type": "symbol",
+                              "value": "WTXMARJ"
+                            },
+                            {
+                              "operand": {
+                                "type": "symbol",
+                                "value": "LIM_BAR1"
+                              },
+                              "type": "negate"
+                            }
+                          ],
+                          "type": "sum"
+                        }
+                      ],
+                      "name": "positif",
+                      "type": "function_call"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "TX_BAR1"
+                    }
+                  ],
+                  "type": "product"
+                },
+                {
+                  "arguments": [
+                    {
+                      "operands": [
+                        {
+                          "arguments": [
+                            {
+                              "operands": [
+                                {
+                                  "type": "symbol",
+                                  "value": "WTXMARJ"
+                                },
+                                {
+                                  "operand": {
+                                    "type": "symbol",
+                                    "value": "LIM_BAR2"
+                                  },
+                                  "type": "negate"
+                                }
+                              ],
+                              "type": "sum"
+                            }
+                          ],
+                          "name": "positif",
+                          "type": "function_call"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "TX_BAR2"
+                        }
+                      ],
+                      "type": "product"
+                    },
+                    {
+                      "arguments": [
+                        {
+                          "operands": [
+                            {
+                              "arguments": [
+                                {
+                                  "operands": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "WTXMARJ"
+                                    },
+                                    {
+                                      "operand": {
+                                        "type": "symbol",
+                                        "value": "LIM_BAR3"
+                                      },
+                                      "type": "negate"
+                                    }
+                                  ],
+                                  "type": "sum"
+                                }
+                              ],
+                              "name": "positif",
+                              "type": "function_call"
+                            },
+                            {
+                              "type": "symbol",
+                              "value": "TX_BAR3"
+                            }
+                          ],
+                          "type": "product"
+                        },
+                        {
+                          "arguments": [
+                            {
+                              "operands": [
+                                {
+                                  "arguments": [
+                                    {
+                                      "operands": [
+                                        {
+                                          "type": "symbol",
+                                          "value": "WTXMARJ"
+                                        },
+                                        {
+                                          "operand": {
+                                            "type": "symbol",
+                                            "value": "LIM_BAR4"
+                                          },
+                                          "type": "negate"
+                                        }
+                                      ],
+                                      "type": "sum"
+                                    }
+                                  ],
+                                  "name": "positif",
+                                  "type": "function_call"
+                                },
+                                {
+                                  "type": "symbol",
+                                  "value": "TX_BAR4"
+                                }
+                              ],
+                              "type": "product"
+                            },
+                            {
+                              "arguments": [
+                                {
+                                  "operands": [
+                                    {
+                                      "arguments": [
+                                        {
+                                          "operands": [
+                                            {
+                                              "type": "symbol",
+                                              "value": "WTXMARJ"
+                                            },
+                                            {
+                                              "operand": {
+                                                "type": "symbol",
+                                                "value": "LIM_BAR5"
+                                              },
+                                              "type": "negate"
+                                            }
+                                          ],
+                                          "type": "sum"
+                                        }
+                                      ],
+                                      "name": "positif",
+                                      "type": "function_call"
+                                    },
+                                    {
+                                      "type": "symbol",
+                                      "value": "TX_BAR5"
+                                    }
+                                  ],
+                                  "type": "product"
+                                },
+                                {
+                                  "type": "integer",
+                                  "value": 0
+                                }
+                              ],
+                              "name": "max",
+                              "type": "function_call"
+                            }
+                          ],
+                          "name": "max",
+                          "type": "function_call"
+                        }
+                      ],
+                      "name": "max",
+                      "type": "function_call"
+                    }
+                  ],
+                  "name": "max",
+                  "type": "function_call"
+                }
+              ],
+              "name": "max",
+              "type": "function_call"
+            },
+            {
+              "arguments": [
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "IN01"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "IPQ1001"
+                    }
+                  ],
+                  "type": "sum"
+                }
+              ],
+              "name": "positif",
+              "type": "function_call"
+            }
+          ],
+          "type": "product"
+        },
+        "linecol": [
+          [
+            67,
+            1
+          ],
+          [
+            77,
+            26
+          ]
+        ],
+        "name": "TXMARJBA",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        41,
+        1
+      ],
+      [
+        67,
+        1
+      ]
+    ],
+    "name": "521020",
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "bareme",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QF0y4"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR1"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX1"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QF0y4"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR2"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX2"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QF0y4"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR3"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX3"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QF0y4"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR4"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX4"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QF0y4"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR5"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX5"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              }
+            ],
+            "type": "sum"
+          },
+          "linecol": [
+            [
+              84,
+              1
+            ],
+            [
+              88,
+              51
+            ]
+          ],
+          "name": "DS0y4",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  1,
+                  2
+                ]
+              }
+            ],
+            "name": "y",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QFxy5"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR1"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX1"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QFxy5"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR2"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX2"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QFxy5"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR3"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX3"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QFxy5"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR4"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX4"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QFxy5"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR5"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX5"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              }
+            ],
+            "type": "sum"
+          },
+          "linecol": [
+            [
+              90,
+              1
+            ],
+            [
+              94,
+              51
+            ]
+          ],
+          "name": "DSxy5",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  0,
+                  5
+                ]
+              }
+            ],
+            "name": "x",
+            "type": "loop_variable"
+          },
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  1,
+                  2
+                ]
+              }
+            ],
+            "name": "y",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QF0y6"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR1"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX1"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QF0y6"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR2"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX2"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QF0y6"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR3"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX3"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QF0y6"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR4"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX4"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              },
+              {
+                "operands": [
+                  {
+                    "arguments": [
+                      {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "QF0y6"
+                          },
+                          {
+                            "operand": {
+                              "type": "symbol",
+                              "value": "LIM_BAR5"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "name": "max",
+                    "type": "function_call"
+                  },
+                  {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "TAUX5"
+                      },
+                      {
+                        "operand": {
+                          "type": "integer",
+                          "value": 100
+                        },
+                        "type": "invert"
+                      }
+                    ],
+                    "type": "product"
+                  }
+                ],
+                "type": "product"
+              }
+            ],
+            "type": "sum"
+          },
+          "linecol": [
+            [
+              96,
+              1
+            ],
+            [
+              100,
+              51
+            ]
+          ],
+          "name": "DS0y6",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  1,
+                  2
+                ]
+              }
+            ],
+            "name": "y",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      }
+    ],
+    "linecol": [
+      [
+        79,
+        1
+      ],
+      [
+        95,
+        1
+      ]
+    ],
+    "name": "521030",
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "bareme",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "NBPT"
+        },
+        "linecol": [
+          [
+            105,
+            1
+          ],
+          [
+            105,
+            12
+          ]
+        ],
+        "name": "NB1",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "integer",
+              "value": 1
+            },
+            {
+              "type": "symbol",
+              "value": "BOOL_0AM"
+            },
+            {
+              "operands": [
+                {
+                  "type": "symbol",
+                  "value": "BOOL_0AZ"
+                },
+                {
+                  "type": "symbol",
+                  "value": "V_0AV"
+                }
+              ],
+              "type": "product"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            106,
+            1
+          ],
+          [
+            106,
+            39
+          ]
+        ],
+        "name": "NB2",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        102,
+        1
+      ],
+      [
+        106,
+        1
+      ]
+    ],
+    "name": "521040",
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "bareme",
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "arguments": [
+                  {
+                    "type": "symbol",
+                    "value": "RB0z"
+                  }
+                ],
+                "name": "arr",
+                "type": "function_call"
+              },
+              {
+                "operand": {
+                  "type": "symbol",
+                  "value": "NBy"
+                },
+                "type": "invert"
+              }
+            ],
+            "type": "product"
+          },
+          "linecol": [
+            [
+              111,
+              1
+            ],
+            [
+              111,
+              24
+            ]
+          ],
+          "name": "QF0yz",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  1,
+                  2
+                ]
+              }
+            ],
+            "name": "y",
+            "type": "loop_variable"
+          },
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  1,
+                  2
+                ]
+              }
+            ],
+            "name": "z",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "arguments": [
+                  {
+                    "type": "symbol",
+                    "value": "RB5z"
+                  }
+                ],
+                "name": "arr",
+                "type": "function_call"
+              },
+              {
+                "operand": {
+                  "type": "symbol",
+                  "value": "NBy"
+                },
+                "type": "invert"
+              }
+            ],
+            "type": "product"
+          },
+          "linecol": [
+            [
+              113,
+              1
+            ],
+            [
+              113,
+              24
+            ]
+          ],
+          "name": "QF5yz",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  1,
+                  2
+                ]
+              }
+            ],
+            "name": "y",
+            "type": "loop_variable"
+          },
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  1,
+                  2
+                ]
+              }
+            ],
+            "name": "z",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "arguments": [
+                  {
+                    "type": "symbol",
+                    "value": "RB04"
+                  }
+                ],
+                "name": "arr",
+                "type": "function_call"
+              },
+              {
+                "operand": {
+                  "type": "symbol",
+                  "value": "NBy"
+                },
+                "type": "invert"
+              }
+            ],
+            "type": "product"
+          },
+          "linecol": [
+            [
+              115,
+              1
+            ],
+            [
+              115,
+              24
+            ]
+          ],
+          "name": "QF0y4",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  1,
+                  2
+                ]
+              }
+            ],
+            "name": "y",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "arguments": [
+                  {
+                    "type": "symbol",
+                    "value": "RBx5"
+                  }
+                ],
+                "name": "arr",
+                "type": "function_call"
+              },
+              {
+                "operand": {
+                  "type": "symbol",
+                  "value": "NBy"
+                },
+                "type": "invert"
+              }
+            ],
+            "type": "product"
+          },
+          "linecol": [
+            [
+              117,
+              1
+            ],
+            [
+              117,
+              24
+            ]
+          ],
+          "name": "QFxy5",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  0,
+                  5
+                ]
+              }
+            ],
+            "name": "x",
+            "type": "loop_variable"
+          },
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  1,
+                  2
+                ]
+              }
+            ],
+            "name": "y",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      },
+      {
+        "formula": {
+          "expression": {
+            "operands": [
+              {
+                "arguments": [
+                  {
+                    "type": "symbol",
+                    "value": "RB06"
+                  }
+                ],
+                "name": "arr",
+                "type": "function_call"
+              },
+              {
+                "operand": {
+                  "type": "symbol",
+                  "value": "NBy"
+                },
+                "type": "invert"
+              }
+            ],
+            "type": "product"
+          },
+          "linecol": [
+            [
+              119,
+              1
+            ],
+            [
+              119,
+              24
+            ]
+          ],
+          "name": "QF0y6",
+          "type": "formula"
+        },
+        "loop_variables": [
+          {
+            "enumerations": [
+              {
+                "type": "enumeration_values",
+                "values": [
+                  1,
+                  2
+                ]
+              }
+            ],
+            "name": "y",
+            "type": "loop_variable"
+          }
+        ],
+        "type": "pour_formula"
+      }
+    ],
+    "linecol": [
+      [
+        108,
+        1
+      ],
+      [
+        118,
+        1
+      ]
+    ],
+    "name": "521050",
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "ARESTIMO"
+            },
+            {
+              "type": "symbol",
+              "value": "ALOGDOM"
+            },
+            {
+              "type": "symbol",
+              "value": "ADUFREPFI"
+            },
+            {
+              "type": "symbol",
+              "value": "ADUFREPFK"
+            },
+            {
+              "type": "symbol",
+              "value": "ADUFLOEKL"
+            },
+            {
+              "type": "symbol",
+              "value": "ADUFLOGIH"
+            },
+            {
+              "type": "symbol",
+              "value": "APIREPAI"
+            },
+            {
+              "type": "symbol",
+              "value": "APIREPBI"
+            },
+            {
+              "type": "symbol",
+              "value": "APIREPCI"
+            },
+            {
+              "type": "symbol",
+              "value": "APIREPDI"
+            },
+            {
+              "type": "symbol",
+              "value": "APIQGH"
+            },
+            {
+              "type": "symbol",
+              "value": "APIQEF"
+            },
+            {
+              "type": "symbol",
+              "value": "APIQCD"
+            },
+            {
+              "type": "symbol",
+              "value": "APIQAB"
+            },
+            {
+              "type": "symbol",
+              "value": "ATOURREP"
+            },
+            {
+              "type": "symbol",
+              "value": "ATOUHOTR"
+            },
+            {
+              "type": "symbol",
+              "value": "ATOUREPA"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELRREDLA"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELRREDLB"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELRREDLE"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELRREDLM"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELRREDLN"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELRREDLG"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELRREDLC"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELRREDLD"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELRREDLS"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELRREDLT"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELRREDLH"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELRREDLF"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELRREDLZ"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELRREDLX"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELRREDLI"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELRREDMG"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELRREDMH"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELRREDLJ"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPHS"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPHR"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPHU"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPHT"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPHZ"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPHX"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPHW"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPHV"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPHF"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPHD"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPHH"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPHG"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPHA"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPGU"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPGX"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPGS"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPGW"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPGL"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPGV"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPGJ"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPYH"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPYL"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPYF"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPYK"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPYD"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPYJ"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPYB"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPYP"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPYS"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPYO"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPYR"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPYN"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPYQ"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELREPYM"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELHM"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELHL"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELHNO"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELHJK"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELNQ"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELNBGL"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELCOM"
+            },
+            {
+              "type": "symbol",
+              "value": "ACEL"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELJP"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELJBGL"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELJOQR"
+            },
+            {
+              "type": "symbol",
+              "value": "ACEL2012"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELFD"
+            },
+            {
+              "type": "symbol",
+              "value": "ACELFABC"
+            },
+            {
+              "type": "symbol",
+              "value": "AREDMEUB"
+            },
+            {
+              "type": "symbol",
+              "value": "AREDREP"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMIX"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMIY"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMPA"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMPF"
+            },
+            {
+              "type": "symbol",
+              "value": "AINVRED"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMIH"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMJC"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMPB"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMPG"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMIZ"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMJI"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMPC"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMPH"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMJS"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMPD"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMPI"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMPE"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMPJ"
+            },
+            {
+              "type": "symbol",
+              "value": "AMEUBLE"
+            },
+            {
+              "type": "symbol",
+              "value": "APROREP"
+            },
+            {
+              "type": "symbol",
+              "value": "AREPNPRO"
+            },
+            {
+              "type": "symbol",
+              "value": "AREPMEU"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMIC"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMIB"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMIA"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMJY"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMJX"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMJW"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMJV"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMOE"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMOD"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMOC"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMOB"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMOA"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMOJ"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMOI"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMOH"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMOG"
+            },
+            {
+              "type": "symbol",
+              "value": "AILMOF"
+            },
+            {
+              "type": "symbol",
+              "value": "ARESIMEUB"
+            },
+            {
+              "type": "symbol",
+              "value": "ARESIVIEU"
+            },
+            {
+              "type": "symbol",
+              "value": "ARESINEUV"
+            },
+            {
+              "type": "symbol",
+              "value": "ALOCIDEFG"
+            },
+            {
+              "type": "symbol",
+              "value": "ACODJTJU"
+            },
+            {
+              "type": "symbol",
+              "value": "ACODOU"
+            },
+            {
+              "type": "symbol",
+              "value": "ACODOV"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            122,
+            1
+          ],
+          [
+            136,
+            104
+          ]
+        ],
+        "name": "CFRIAHP",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "RRESTIMO"
+            },
+            {
+              "type": "symbol",
+              "value": "RLOGDOM"
+            },
+            {
+              "type": "symbol",
+              "value": "RDUFREPFI"
+            },
+            {
+              "type": "symbol",
+              "value": "RDUFREPFK"
+            },
+            {
+              "type": "symbol",
+              "value": "RDUFLOEKL"
+            },
+            {
+              "type": "symbol",
+              "value": "RDUFLOGIH"
+            },
+            {
+              "type": "symbol",
+              "value": "RPIREPAI"
+            },
+            {
+              "type": "symbol",
+              "value": "RPIREPBI"
+            },
+            {
+              "type": "symbol",
+              "value": "RPIREPCI"
+            },
+            {
+              "type": "symbol",
+              "value": "RPIREPDI"
+            },
+            {
+              "type": "symbol",
+              "value": "RPIQGH"
+            },
+            {
+              "type": "symbol",
+              "value": "RPIQEF"
+            },
+            {
+              "type": "symbol",
+              "value": "RPIQCD"
+            },
+            {
+              "type": "symbol",
+              "value": "RPIQAB"
+            },
+            {
+              "type": "symbol",
+              "value": "RTOURREP"
+            },
+            {
+              "type": "symbol",
+              "value": "RTOUHOTR"
+            },
+            {
+              "type": "symbol",
+              "value": "RTOUREPA"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELRREDLA"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELRREDLB"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELRREDLE"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELRREDLM"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELRREDLN"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELRREDLG"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELRREDLC"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELRREDLD"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELRREDLS"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELRREDLT"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELRREDLH"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELRREDLF"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELRREDLZ"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELRREDLX"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELRREDLI"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELRREDMG"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELRREDMH"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELRREDLJ"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPHS"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPHR"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPHU"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPHT"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPHZ"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPHX"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPHW"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPHV"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPHF"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPHD"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPHH"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPHG"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPHA"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPGU"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPGX"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPGS"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPGW"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPGL"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPGV"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPGJ"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPYH"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPYL"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPYF"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPYK"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPYD"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPYJ"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPYB"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPYP"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPYS"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPYO"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPYR"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPYN"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPYQ"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELREPYM"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELHM"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELHL"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELHNO"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELHJK"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELNQ"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELNBGL"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELCOM"
+            },
+            {
+              "type": "symbol",
+              "value": "RCEL"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELJP"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELJBGL"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELJOQR"
+            },
+            {
+              "type": "symbol",
+              "value": "RCEL2012"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELFD"
+            },
+            {
+              "type": "symbol",
+              "value": "RCELFABC"
+            },
+            {
+              "type": "symbol",
+              "value": "RREDMEUB"
+            },
+            {
+              "type": "symbol",
+              "value": "RREDREP"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMIX"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMIY"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMPA"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMPF"
+            },
+            {
+              "type": "symbol",
+              "value": "RINVRED"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMIH"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMJC"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMPB"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMPG"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMIZ"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMJI"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMPC"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMPH"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMJS"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMPD"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMPI"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMPE"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMPJ"
+            },
+            {
+              "type": "symbol",
+              "value": "RMEUBLE"
+            },
+            {
+              "type": "symbol",
+              "value": "RPROREP"
+            },
+            {
+              "type": "symbol",
+              "value": "RREPNPRO"
+            },
+            {
+              "type": "symbol",
+              "value": "RREPMEU"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMIC"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMIB"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMIA"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMJY"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMJX"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMJW"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMJV"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMOE"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMOD"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMOC"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMOB"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMOA"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMOJ"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMOI"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMOH"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMOG"
+            },
+            {
+              "type": "symbol",
+              "value": "RILMOF"
+            },
+            {
+              "type": "symbol",
+              "value": "RRESIMEUB"
+            },
+            {
+              "type": "symbol",
+              "value": "RRESIVIEU"
+            },
+            {
+              "type": "symbol",
+              "value": "RRESINEUV"
+            },
+            {
+              "type": "symbol",
+              "value": "RLOCIDEFG"
+            },
+            {
+              "type": "symbol",
+              "value": "RCODJTJU"
+            },
+            {
+              "type": "symbol",
+              "value": "RCODOU"
+            },
+            {
+              "type": "symbol",
+              "value": "RCODOV"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            137,
+            1
+          ],
+          [
+            151,
+            97
+          ]
+        ],
+        "name": "CFRIRHP",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "AREPA"
+            },
+            {
+              "type": "symbol",
+              "value": "ADONS"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            152,
+            1
+          ],
+          [
+            152,
+            25
+          ]
+        ],
+        "name": "CFRIADON",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "RREPA"
+            },
+            {
+              "type": "symbol",
+              "value": "RDONS"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            153,
+            1
+          ],
+          [
+            153,
+            25
+          ]
+        ],
+        "name": "CFRIRDON",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "APRESCOMP"
+        },
+        "linecol": [
+          [
+            154,
+            1
+          ],
+          [
+            154,
+            21
+          ]
+        ],
+        "name": "CFRIAENF",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "RPRESCOMP"
+            },
+            {
+              "type": "symbol",
+              "value": "RRETU"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            155,
+            1
+          ],
+          [
+            155,
+            29
+          ]
+        ],
+        "name": "CFRIRENF",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "AHEBE"
+            },
+            {
+              "type": "symbol",
+              "value": "AAIDE"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            156,
+            1
+          ],
+          [
+            156,
+            25
+          ]
+        ],
+        "name": "CFRIADEP",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "RHEBE"
+            },
+            {
+              "type": "symbol",
+              "value": "RAIDE"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            157,
+            1
+          ],
+          [
+            157,
+            25
+          ]
+        ],
+        "name": "CFRIRDEP",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "BFCPI"
+            },
+            {
+              "type": "symbol",
+              "value": "ACOMP"
+            },
+            {
+              "type": "symbol",
+              "value": "AFOREST"
+            },
+            {
+              "type": "symbol",
+              "value": "AFORET"
+            },
+            {
+              "type": "symbol",
+              "value": "ANOUV"
+            },
+            {
+              "type": "symbol",
+              "value": "ALOCENT"
+            },
+            {
+              "type": "symbol",
+              "value": "ALOGSOC"
+            },
+            {
+              "type": "symbol",
+              "value": "ACOLENT"
+            },
+            {
+              "type": "symbol",
+              "value": "ACOTFOR"
+            },
+            {
+              "type": "symbol",
+              "value": "ADOMSOC1"
+            },
+            {
+              "type": "symbol",
+              "value": "AFIPDOM"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            158,
+            1
+          ],
+          [
+            158,
+            113
+          ]
+        ],
+        "name": "CFRIAFOR",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "RINNO"
+            },
+            {
+              "type": "symbol",
+              "value": "RCOMP"
+            },
+            {
+              "type": "symbol",
+              "value": "RFOREST"
+            },
+            {
+              "type": "symbol",
+              "value": "RFORET"
+            },
+            {
+              "type": "symbol",
+              "value": "RNOUV"
+            },
+            {
+              "type": "symbol",
+              "value": "RLOCENT"
+            },
+            {
+              "type": "symbol",
+              "value": "RLOGSOC"
+            },
+            {
+              "type": "symbol",
+              "value": "RCOLENT"
+            },
+            {
+              "type": "symbol",
+              "value": "RCOTFOR"
+            },
+            {
+              "type": "symbol",
+              "value": "RDOMSOC1"
+            },
+            {
+              "type": "symbol",
+              "value": "RFIPDOM"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            159,
+            1
+          ],
+          [
+            159,
+            113
+          ]
+        ],
+        "name": "CFRIRFOR",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "ASURV"
+        },
+        "linecol": [
+          [
+            160,
+            1
+          ],
+          [
+            160,
+            17
+          ]
+        ],
+        "name": "CFRIAVIE",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "RSURV"
+        },
+        "linecol": [
+          [
+            161,
+            1
+          ],
+          [
+            161,
+            17
+          ]
+        ],
+        "name": "CFRIRVIE",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "AFIPC"
+            },
+            {
+              "type": "symbol",
+              "value": "ADIFAGRI"
+            },
+            {
+              "type": "symbol",
+              "value": "ASOCREPR"
+            },
+            {
+              "type": "symbol",
+              "value": "ASOUFIP"
+            },
+            {
+              "type": "symbol",
+              "value": "ARIRENOV"
+            },
+            {
+              "type": "symbol",
+              "value": "APATNAT"
+            },
+            {
+              "type": "symbol",
+              "value": "APATNAT1"
+            },
+            {
+              "type": "symbol",
+              "value": "APATNAT2"
+            },
+            {
+              "type": "symbol",
+              "value": "APATNAT3"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            162,
+            1
+          ],
+          [
+            162,
+            93
+          ]
+        ],
+        "name": "CFRIAAUTRE",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "RFIPC"
+            },
+            {
+              "type": "symbol",
+              "value": "RDIFAGRI"
+            },
+            {
+              "type": "symbol",
+              "value": "RSOCREPR"
+            },
+            {
+              "type": "symbol",
+              "value": "RSOUFIP"
+            },
+            {
+              "type": "symbol",
+              "value": "RRIRENOV"
+            },
+            {
+              "type": "symbol",
+              "value": "RPATNAT"
+            },
+            {
+              "type": "symbol",
+              "value": "RPATNAT1"
+            },
+            {
+              "type": "symbol",
+              "value": "RPATNAT2"
+            },
+            {
+              "type": "symbol",
+              "value": "RPATNAT3"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            163,
+            1
+          ],
+          [
+            163,
+            93
+          ]
+        ],
+        "name": "CFRIRAUTRE",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "CIGARD"
+            },
+            {
+              "type": "symbol",
+              "value": "CISYND"
+            },
+            {
+              "type": "symbol",
+              "value": "CIADCRE"
+            },
+            {
+              "type": "symbol",
+              "value": "CIFORET"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            164,
+            1
+          ],
+          [
+            164,
+            46
+          ]
+        ],
+        "name": "CFCIDIV",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "DFRCM1"
+            },
+            {
+              "type": "symbol",
+              "value": "DFRCM2"
+            },
+            {
+              "type": "symbol",
+              "value": "DFRCM3"
+            },
+            {
+              "type": "symbol",
+              "value": "DFRCM4"
+            },
+            {
+              "type": "symbol",
+              "value": "DFRCM5"
+            },
+            {
+              "type": "symbol",
+              "value": "DFRCMN"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            165,
+            1
+          ],
+          [
+            165,
+            59
+          ]
+        ],
+        "name": "TOTDEFRCM",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "DEFLOC1"
+            },
+            {
+              "type": "symbol",
+              "value": "DEFLOC2"
+            },
+            {
+              "type": "symbol",
+              "value": "DEFLOC3"
+            },
+            {
+              "type": "symbol",
+              "value": "DEFLOC4"
+            },
+            {
+              "type": "symbol",
+              "value": "DEFLOC5"
+            },
+            {
+              "type": "symbol",
+              "value": "DEFLOC6"
+            },
+            {
+              "type": "symbol",
+              "value": "DEFLOC7"
+            },
+            {
+              "type": "symbol",
+              "value": "DEFLOC8"
+            },
+            {
+              "type": "symbol",
+              "value": "DEFLOC9"
+            },
+            {
+              "type": "symbol",
+              "value": "DEFLOC10"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            166,
+            1
+          ],
+          [
+            166,
+            103
+          ]
+        ],
+        "name": "TOTDEFLOC",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "MIBRNETV"
+            },
+            {
+              "type": "symbol",
+              "value": "MIBNPRNETV"
+            },
+            {
+              "type": "symbol",
+              "value": "MIBNPPVV"
+            },
+            {
+              "type": "symbol",
+              "value": "MIBPVV"
+            },
+            {
+              "operand": {
+                "type": "symbol",
+                "value": "BICPMVCTV"
+              },
+              "type": "negate"
+            },
+            {
+              "operand": {
+                "type": "symbol",
+                "value": "MIBNPDCT"
+              },
+              "type": "negate"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            167,
+            1
+          ],
+          [
+            167,
+            75
+          ]
+        ],
+        "name": "TOTMIBV",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "MIBRNETC"
+            },
+            {
+              "type": "symbol",
+              "value": "MIBNPRNETC"
+            },
+            {
+              "type": "symbol",
+              "value": "MIBNPPVC"
+            },
+            {
+              "type": "symbol",
+              "value": "MIBPVC"
+            },
+            {
+              "operand": {
+                "type": "symbol",
+                "value": "BICPMVCTC"
+              },
+              "type": "negate"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            168,
+            1
+          ],
+          [
+            168,
+            64
+          ]
+        ],
+        "name": "TOTMIBC",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "MIBRNETP"
+            },
+            {
+              "type": "symbol",
+              "value": "MIBNPRNETP"
+            },
+            {
+              "type": "symbol",
+              "value": "MIBNPPVP"
+            },
+            {
+              "type": "symbol",
+              "value": "MIBPVP"
+            },
+            {
+              "operand": {
+                "type": "symbol",
+                "value": "BICPMVCTP"
+              },
+              "type": "negate"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            169,
+            1
+          ],
+          [
+            169,
+            64
+          ]
+        ],
+        "name": "TOTMIBP",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "SPENETPV"
+            },
+            {
+              "type": "symbol",
+              "value": "SPENETNPV"
+            },
+            {
+              "type": "symbol",
+              "value": "BNCPROPVV"
+            },
+            {
+              "type": "symbol",
+              "value": "BNCNPPVV"
+            },
+            {
+              "operand": {
+                "type": "symbol",
+                "value": "BNCPMVCTV"
+              },
+              "type": "negate"
+            },
+            {
+              "operand": {
+                "type": "symbol",
+                "value": "BNCNPDCT"
+              },
+              "type": "negate"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            170,
+            1
+          ],
+          [
+            170,
+            77
+          ]
+        ],
+        "name": "TOTBNCV",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "SPENETPC"
+            },
+            {
+              "type": "symbol",
+              "value": "SPENETNPC"
+            },
+            {
+              "type": "symbol",
+              "value": "BNCPROPVC"
+            },
+            {
+              "type": "symbol",
+              "value": "BNCNPPVC"
+            },
+            {
+              "operand": {
+                "type": "symbol",
+                "value": "BNCPMVCTC"
+              },
+              "type": "negate"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            171,
+            1
+          ],
+          [
+            171,
+            66
+          ]
+        ],
+        "name": "TOTBNCC",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "SPENETPP"
+            },
+            {
+              "type": "symbol",
+              "value": "SPENETNPP"
+            },
+            {
+              "type": "symbol",
+              "value": "BNCPROPVP"
+            },
+            {
+              "type": "symbol",
+              "value": "BNCNPPVP"
+            },
+            {
+              "operand": {
+                "type": "symbol",
+                "value": "BNCPMVCTP"
+              },
+              "type": "negate"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            172,
+            1
+          ],
+          [
+            172,
+            66
+          ]
+        ],
+        "name": "TOTBNCP",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "SPEDREPV"
+            },
+            {
+              "type": "symbol",
+              "value": "SPEDREPC"
+            },
+            {
+              "type": "symbol",
+              "value": "SPEDREPP"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            173,
+            1
+          ],
+          [
+            173,
+            42
+          ]
+        ],
+        "name": "TOTSPEREP",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "SPEDREPNPV"
+            },
+            {
+              "type": "symbol",
+              "value": "SPEDREPNPC"
+            },
+            {
+              "type": "symbol",
+              "value": "SPEDREPNPP"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            174,
+            1
+          ],
+          [
+            174,
+            50
+          ]
+        ],
+        "name": "TOTSPEREPNP",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "IAN"
+            },
+            {
+              "type": "symbol",
+              "value": "AVFISCOPTER"
+            },
+            {
+              "operand": {
+                "type": "symbol",
+                "value": "IRE"
+              },
+              "type": "negate"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            175,
+            1
+          ],
+          [
+            175,
+            32
+          ]
+        ],
+        "name": "IRNINCFIR",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        120,
+        1
+      ],
+      [
+        175,
+        1
+      ]
+    ],
+    "name": "521070",
+    "tags": [
+      {
+        "type": "symbol",
+        "value": "corrective"
+      }
+    ],
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "operands": [
+            {
+              "arguments": [
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "NBPT"
+                    },
+                    {
+                      "operand": {
+                        "type": "integer",
+                        "value": 10
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                }
+              ],
+              "name": "positif",
+              "type": "function_call"
+            },
+            {
+              "arguments": [
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "LIGTTPVQ"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "LIG74"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "LIGHAUTNET"
+                    }
+                  ],
+                  "type": "sum"
+                }
+              ],
+              "name": "positif",
+              "type": "function_call"
+            },
+            {
+              "arguments": [
+                {
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 2
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "V_REGCO"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                }
+              ],
+              "name": "null",
+              "type": "function_call"
+            },
+            {
+              "arguments": [
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "CESSASSV"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "CESSASSC"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "PCAPTAXV"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "PCAPTAXC"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "LOYELEV"
+                    },
+                    {
+                      "type": "integer",
+                      "value": 0
+                    }
+                  ],
+                  "type": "sum"
+                }
+              ],
+              "name": "positif",
+              "type": "function_call"
+            },
+            {
+              "arguments": [
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "IPROP"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "AVFISCOPTER"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "IPREP"
+                    },
+                    {
+                      "type": "symbol",
+                      "value": "IPPRICORSE"
+                    }
+                  ],
+                  "type": "sum"
+                }
+              ],
+              "name": "positif",
+              "type": "function_call"
+            },
+            {
+              "operands": [
+                {
+                  "arguments": [
+                    {
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "V_ZDC"
+                        },
+                        {
+                          "operand": {
+                            "type": "integer",
+                            "value": 1
+                          },
+                          "type": "negate"
+                        }
+                      ],
+                      "type": "sum"
+                    }
+                  ],
+                  "name": "null",
+                  "type": "function_call"
+                },
+                {
+                  "arguments": [
+                    {
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "V_0AC"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "V_0AD"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "V_0AV"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "V_0AM"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "V_0AO"
+                        },
+                        {
+                          "type": "integer",
+                          "value": 0
+                        }
+                      ],
+                      "type": "sum"
+                    }
+                  ],
+                  "name": "positif",
+                  "type": "function_call"
+                }
+              ],
+              "type": "product"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            180,
+            1
+          ],
+          [
+            181,
+            139
+          ]
+        ],
+        "name": "CODMESGOUV",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "type": "integer",
+                  "value": 1
+                },
+                {
+                  "arguments": [
+                    {
+                      "operands": [
+                        {
+                          "operands": [
+                            {
+                              "operands": [
+                                {
+                                  "type": "symbol",
+                                  "value": "IDRS3"
+                                },
+                                {
+                                  "operand": {
+                                    "type": "symbol",
+                                    "value": "IDECA"
+                                  },
+                                  "type": "negate"
+                                }
+                              ],
+                              "type": "sum"
+                            },
+                            {
+                              "arguments": [
+                                {
+                                  "operands": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "IDECA"
+                                    },
+                                    {
+                                      "type": "integer",
+                                      "value": 0
+                                    }
+                                  ],
+                                  "type": "sum"
+                                }
+                              ],
+                              "name": "positif",
+                              "type": "function_call"
+                            }
+                          ],
+                          "type": "product"
+                        },
+                        {
+                          "operands": [
+                            {
+                              "operands": [
+                                {
+                                  "type": "symbol",
+                                  "value": "IDRS3"
+                                },
+                                {
+                                  "operand": {
+                                    "type": "symbol",
+                                    "value": "IDEC"
+                                  },
+                                  "type": "negate"
+                                }
+                              ],
+                              "type": "sum"
+                            },
+                            {
+                              "arguments": [
+                                {
+                                  "operands": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "IDEC"
+                                    },
+                                    {
+                                      "type": "integer",
+                                      "value": 0
+                                    }
+                                  ],
+                                  "type": "sum"
+                                }
+                              ],
+                              "name": "positif",
+                              "type": "function_call"
+                            }
+                          ],
+                          "type": "product"
+                        }
+                      ],
+                      "type": "sum"
+                    }
+                  ],
+                  "name": "positif",
+                  "type": "function_call"
+                },
+                {
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "operand": {
+                        "arguments": [
+                          {
+                            "type": "symbol",
+                            "value": "CODMESGOUV"
+                          }
+                        ],
+                        "name": "positif",
+                        "type": "function_call"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                },
+                {
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "operand": {
+                        "arguments": [
+                          {
+                            "operands": [
+                              {
+                                "type": "symbol",
+                                "value": "V_BTPPE"
+                              },
+                              {
+                                "type": "integer",
+                                "value": 0
+                              }
+                            ],
+                            "type": "sum"
+                          }
+                        ],
+                        "name": "positif",
+                        "type": "function_call"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                }
+              ],
+              "type": "product"
+            },
+            {
+              "operands": [
+                {
+                  "type": "integer",
+                  "value": 2
+                },
+                {
+                  "arguments": [
+                    {
+                      "operands": [
+                        {
+                          "operands": [
+                            {
+                              "operands": [
+                                {
+                                  "type": "symbol",
+                                  "value": "IDRS3"
+                                },
+                                {
+                                  "operand": {
+                                    "type": "symbol",
+                                    "value": "IDECA"
+                                  },
+                                  "type": "negate"
+                                }
+                              ],
+                              "type": "sum"
+                            },
+                            {
+                              "arguments": [
+                                {
+                                  "operands": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "IDECA"
+                                    },
+                                    {
+                                      "type": "integer",
+                                      "value": 0
+                                    }
+                                  ],
+                                  "type": "sum"
+                                }
+                              ],
+                              "name": "positif",
+                              "type": "function_call"
+                            }
+                          ],
+                          "type": "product"
+                        },
+                        {
+                          "operands": [
+                            {
+                              "operands": [
+                                {
+                                  "type": "symbol",
+                                  "value": "IDRS3"
+                                },
+                                {
+                                  "operand": {
+                                    "type": "symbol",
+                                    "value": "IDEC"
+                                  },
+                                  "type": "negate"
+                                }
+                              ],
+                              "type": "sum"
+                            },
+                            {
+                              "arguments": [
+                                {
+                                  "operands": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "IDEC"
+                                    },
+                                    {
+                                      "type": "integer",
+                                      "value": 0
+                                    }
+                                  ],
+                                  "type": "sum"
+                                }
+                              ],
+                              "name": "positif",
+                              "type": "function_call"
+                            }
+                          ],
+                          "type": "product"
+                        }
+                      ],
+                      "type": "sum"
+                    }
+                  ],
+                  "name": "positif",
+                  "type": "function_call"
+                },
+                {
+                  "operands": [
+                    {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    {
+                      "operand": {
+                        "arguments": [
+                          {
+                            "type": "symbol",
+                            "value": "CODMESGOUV"
+                          }
+                        ],
+                        "name": "positif",
+                        "type": "function_call"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                },
+                {
+                  "arguments": [
+                    {
+                      "operands": [
+                        {
+                          "type": "symbol",
+                          "value": "V_BTPPE"
+                        },
+                        {
+                          "type": "integer",
+                          "value": 0
+                        }
+                      ],
+                      "type": "sum"
+                    }
+                  ],
+                  "name": "positif",
+                  "type": "function_call"
+                }
+              ],
+              "type": "product"
+            },
+            {
+              "operands": [
+                {
+                  "type": "integer",
+                  "value": 3
+                },
+                {
+                  "arguments": [
+                    {
+                      "operands": [
+                        {
+                          "operands": [
+                            {
+                              "arguments": [
+                                {
+                                  "operands": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "IDRS3"
+                                    },
+                                    {
+                                      "operand": {
+                                        "type": "symbol",
+                                        "value": "IDECA"
+                                      },
+                                      "type": "negate"
+                                    }
+                                  ],
+                                  "type": "sum"
+                                }
+                              ],
+                              "name": "null",
+                              "type": "function_call"
+                            },
+                            {
+                              "arguments": [
+                                {
+                                  "operands": [
+                                    {
+                                      "type": "symbol",
+                                      "value": "IDECA"
+                                    },
+                                    {
+                                      "type": "integer",
+                                      "value": 0
+                                    }
+                                  ],
+                                  "type": "sum"
+                                }
+                              ],
+                              "name": "positif",
+                              "type": "function_call"
+                            }
+                          ],
+                          "type": "product"
+                        },
+                        {
+                          "arguments": [
+                            {
+                              "type": "symbol",
+                              "value": "IDEC"
+                            }
+                          ],
+                          "name": "null",
+                          "type": "function_call"
+                        },
+                        {
+                          "type": "symbol",
+                          "value": "CODMESGOUV"
+                        }
+                      ],
+                      "type": "sum"
+                    }
+                  ],
+                  "name": "positif",
+                  "type": "function_call"
+                }
+              ],
+              "type": "product"
+            }
+          ],
+          "type": "sum"
+        },
+        "linecol": [
+          [
+            183,
+            1
+          ],
+          [
+            185,
+            95
+          ]
+        ],
+        "name": "MESGOUV2",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        177,
+        1
+      ],
+      [
+        183,
+        1
+      ]
+    ],
+    "name": "522000",
+    "type": "regle"
+  },
+  {
+    "type": "sortie",
+    "variable_name": "V_CALCUL_MESGOUV"
+  },
+  {
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "operands": [
+            {
+              "type": "symbol",
+              "value": "V_ANC_NAPE"
+            },
+            {
+              "operands": [
+                {
+                  "type": "integer",
+                  "value": 1
+                },
+                {
+                  "operand": {
+                    "operands": [
+                      {
+                        "type": "integer",
+                        "value": 2
+                      },
+                      {
+                        "type": "symbol",
+                        "value": "V_ANC_NEG"
+                      }
+                    ],
+                    "type": "product"
+                  },
+                  "type": "negate"
+                }
+              ],
+              "type": "sum"
+            }
+          ],
+          "type": "product"
+        },
+        "linecol": [
+          [
+            192,
+            1
+          ],
+          [
+            192,
+            48
+          ]
+        ],
+        "name": "V_ANC_NAP",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "operands": [
+            {
+              "arguments": [
+                {
+                  "type": "integer",
+                  "value": 0
+                },
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "V_ANC_NAP"
+                    },
+                    {
+                      "operand": {
+                        "type": "symbol",
+                        "value": "NAPT"
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                }
+              ],
+              "name": "max",
+              "type": "function_call"
+            },
+            {
+              "arguments": [
+                {
+                  "operands": [
+                    {
+                      "type": "symbol",
+                      "value": "MESGOUV2"
+                    },
+                    {
+                      "operand": {
+                        "type": "integer",
+                        "value": 1
+                      },
+                      "type": "negate"
+                    }
+                  ],
+                  "type": "sum"
+                }
+              ],
+              "name": "null",
+              "type": "function_call"
+            }
+          ],
+          "type": "product"
+        },
+        "linecol": [
+          [
+            194,
+            1
+          ],
+          [
+            194,
+            62
+          ]
+        ],
+        "name": "GAINDBLELIQ",
+        "type": "formula"
+      },
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "V_ANC_NAP"
+        },
+        "linecol": [
+          [
+            196,
+            1
+          ],
+          [
+            196,
+            21
+          ]
+        ],
+        "name": "VANCNAP",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        189,
+        1
+      ],
+      [
+        196,
+        1
+      ]
+    ],
+    "name": "522010",
+    "type": "regle"
+  },
+  {
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "formulas": [
+      {
+        "expression": {
+          "type": "symbol",
+          "value": "MESGOUV2"
+        },
+        "linecol": [
+          [
+            201,
+            1
+          ],
+          [
+            201,
+            20
+          ]
+        ],
+        "name": "MESGOUV",
+        "type": "formula"
+      }
+    ],
+    "linecol": [
+      [
+        198,
+        1
+      ],
+      [
+        201,
+        1
+      ]
+    ],
+    "name": "522020",
+    "type": "regle"
+  }
+]

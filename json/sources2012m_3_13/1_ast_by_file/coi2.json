@@ -1,0 +1,2609 @@
+[
+  {
+    "applications": [
+      "iliad"
+    ],
+    "conditions": [
+      {
+        "error_name": "IM40",
+        "expression": {
+          "operands": [
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "APPLI_OCEANS"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            },
+            {
+              "operands": [
+                {
+                  "left_operand": {
+                    "type": "symbol",
+                    "value": "V_IND_TRAIT"
+                  },
+                  "operator": ">",
+                  "right_operand": {
+                    "type": "integer",
+                    "value": 0
+                  },
+                  "type": "comparaison"
+                },
+                {
+                  "left_operand": {
+                    "arguments": [
+                      {
+                        "type": "symbol",
+                        "value": "ANNUL2042"
+                      }
+                    ],
+                    "name": "positif",
+                    "type": "function_call"
+                  },
+                  "operator": "=",
+                  "right_operand": {
+                    "type": "integer",
+                    "value": 1
+                  },
+                  "type": "comparaison"
+                }
+              ],
+              "operators": [
+                "et"
+              ],
+              "type": "boolean_expression"
+            }
+          ],
+          "operators": [
+            "et"
+          ],
+          "type": "boolean_expression"
+        },
+        "type": "verif_condition"
+      }
+    ],
+    "linecol": [
+      [
+        21,
+        1
+      ],
+      [
+        23,
+        1
+      ]
+    ],
+    "name": "20091",
+    "type": "verif"
+  },
+  {
+    "applications": [
+      "iliad"
+    ],
+    "conditions": [
+      {
+        "error_name": "IM09",
+        "expression": {
+          "operands": [
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "APPLI_OCEANS"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            },
+            {
+              "operands": [
+                {
+                  "left_operand": {
+                    "arguments": [
+                      {
+                        "type": "symbol",
+                        "value": "V_BTCO2044P"
+                      }
+                    ],
+                    "name": "present",
+                    "type": "function_call"
+                  },
+                  "operator": "=",
+                  "right_operand": {
+                    "type": "integer",
+                    "value": 1
+                  },
+                  "type": "comparaison"
+                },
+                {
+                  "left_operand": {
+                    "arguments": [
+                      {
+                        "type": "symbol",
+                        "value": "CO2044P"
+                      }
+                    ],
+                    "name": "present",
+                    "type": "function_call"
+                  },
+                  "operator": "=",
+                  "right_operand": {
+                    "type": "integer",
+                    "value": 0
+                  },
+                  "type": "comparaison"
+                }
+              ],
+              "operators": [
+                "et"
+              ],
+              "type": "boolean_expression"
+            }
+          ],
+          "operators": [
+            "et"
+          ],
+          "type": "boolean_expression"
+        },
+        "type": "verif_condition"
+      }
+    ],
+    "linecol": [
+      [
+        30,
+        1
+      ],
+      [
+        32,
+        1
+      ]
+    ],
+    "name": "2009",
+    "type": "verif"
+  },
+  {
+    "applications": [
+      "batch",
+      "iliad"
+    ],
+    "conditions": [
+      {
+        "error_name": "DD22",
+        "expression": {
+          "operands": [
+            {
+              "left_operand": {
+                "operands": [
+                  {
+                    "type": "symbol",
+                    "value": "APPLI_COLBERT"
+                  },
+                  {
+                    "type": "symbol",
+                    "value": "APPLI_OCEANS"
+                  }
+                ],
+                "type": "sum"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            },
+            {
+              "operands": [
+                {
+                  "left_operand": {
+                    "operands": [
+                      {
+                        "operands": [
+                          {
+                            "operands": [
+                              {
+                                "type": "symbol",
+                                "value": "V_BTCSGDED"
+                              },
+                              {
+                                "operands": [
+                                  {
+                                    "type": "integer",
+                                    "value": 1
+                                  },
+                                  {
+                                    "operand": {
+                                      "arguments": [
+                                        {
+                                          "type": "symbol",
+                                          "value": "DCSG"
+                                        }
+                                      ],
+                                      "name": "present",
+                                      "type": "function_call"
+                                    },
+                                    "type": "negate"
+                                  }
+                                ],
+                                "type": "sum"
+                              }
+                            ],
+                            "type": "product"
+                          },
+                          {
+                            "type": "symbol",
+                            "value": "DCSG"
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      {
+                        "operands": [
+                          {
+                            "type": "integer",
+                            "value": 1
+                          },
+                          {
+                            "operand": {
+                              "arguments": [
+                                {
+                                  "operands": [
+                                    {
+                                      "type": "integer",
+                                      "value": 4
+                                    },
+                                    {
+                                      "operand": {
+                                        "type": "symbol",
+                                        "value": "V_REGCO"
+                                      },
+                                      "type": "negate"
+                                    }
+                                  ],
+                                  "type": "sum"
+                                }
+                              ],
+                              "name": "null",
+                              "type": "function_call"
+                            },
+                            "type": "negate"
+                          }
+                        ],
+                        "type": "sum"
+                      }
+                    ],
+                    "type": "product"
+                  },
+                  "operator": ">",
+                  "right_operand": {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "V_BTCSGDED"
+                      },
+                      {
+                        "type": "symbol",
+                        "value": "LIM_CONTROLE"
+                      }
+                    ],
+                    "type": "sum"
+                  },
+                  "type": "comparaison"
+                },
+                {
+                  "left_operand": {
+                    "operands": [
+                      {
+                        "type": "integer",
+                        "value": 1
+                      },
+                      {
+                        "operand": {
+                          "type": "symbol",
+                          "value": "V_CNR"
+                        },
+                        "type": "negate"
+                      }
+                    ],
+                    "type": "sum"
+                  },
+                  "operator": ">",
+                  "right_operand": {
+                    "type": "integer",
+                    "value": 0
+                  },
+                  "type": "comparaison"
+                },
+                {
+                  "left_operand": {
+                    "type": "symbol",
+                    "value": "RDCSG"
+                  },
+                  "operator": ">",
+                  "right_operand": {
+                    "type": "integer",
+                    "value": 0
+                  },
+                  "type": "comparaison"
+                },
+                {
+                  "operands": [
+                    {
+                      "operands": [
+                        {
+                          "left_operand": {
+                            "type": "symbol",
+                            "value": "APPLI_ILIAD"
+                          },
+                          "operator": "=",
+                          "right_operand": {
+                            "type": "integer",
+                            "value": 1
+                          },
+                          "type": "comparaison"
+                        },
+                        {
+                          "left_operand": {
+                            "operands": [
+                              {
+                                "type": "symbol",
+                                "value": "V_NOTRAIT"
+                              },
+                              {
+                                "type": "integer",
+                                "value": 0
+                              }
+                            ],
+                            "type": "sum"
+                          },
+                          "operator": "<",
+                          "right_operand": {
+                            "type": "integer",
+                            "value": 16
+                          },
+                          "type": "comparaison"
+                        }
+                      ],
+                      "operators": [
+                        "et"
+                      ],
+                      "type": "boolean_expression"
+                    },
+                    {
+                      "operands": [
+                        {
+                          "enumeration": {
+                            "type": "enumeration_values",
+                            "values": [
+                              50,
+                              92
+                            ]
+                          },
+                          "expression": {
+                            "operands": [
+                              {
+                                "type": "symbol",
+                                "value": "V_BTNI1"
+                              },
+                              {
+                                "type": "integer",
+                                "value": 0
+                              }
+                            ],
+                            "type": "sum"
+                          },
+                          "negative_form": true,
+                          "type": "dans"
+                        },
+                        {
+                          "left_operand": {
+                            "type": "symbol",
+                            "value": "APPLI_BATCH"
+                          },
+                          "operator": "=",
+                          "right_operand": {
+                            "type": "integer",
+                            "value": 1
+                          },
+                          "type": "comparaison"
+                        }
+                      ],
+                      "operators": [
+                        "et"
+                      ],
+                      "type": "boolean_expression"
+                    }
+                  ],
+                  "operators": [
+                    "ou"
+                  ],
+                  "type": "boolean_expression"
+                }
+              ],
+              "operators": [
+                "et",
+                "et",
+                "et"
+              ],
+              "type": "boolean_expression"
+            }
+          ],
+          "operators": [
+            "et"
+          ],
+          "type": "boolean_expression"
+        },
+        "type": "verif_condition"
+      }
+    ],
+    "linecol": [
+      [
+        39,
+        1
+      ],
+      [
+        41,
+        1
+      ]
+    ],
+    "name": "2010",
+    "type": "verif"
+  },
+  {
+    "applications": [
+      "batch",
+      "iliad"
+    ],
+    "conditions": [
+      {
+        "error_name": "A00101",
+        "expression": {
+          "operands": [
+            {
+              "left_operand": {
+                "operands": [
+                  {
+                    "type": "symbol",
+                    "value": "APPLI_COLBERT"
+                  },
+                  {
+                    "type": "symbol",
+                    "value": "APPLI_ILIAD"
+                  }
+                ],
+                "type": "sum"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 1
+              },
+              "type": "comparaison"
+            },
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "V_IND_TRAIT"
+              },
+              "operator": ">",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            },
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "CHNFAC"
+              },
+              "operator": ">",
+              "right_operand": {
+                "type": "integer",
+                "value": 9
+              },
+              "type": "comparaison"
+            }
+          ],
+          "operators": [
+            "et",
+            "et"
+          ],
+          "type": "boolean_expression"
+        },
+        "type": "verif_condition"
+      }
+    ],
+    "linecol": [
+      [
+        59,
+        1
+      ],
+      [
+        61,
+        1
+      ]
+    ],
+    "name": "2020",
+    "type": "verif"
+  },
+  {
+    "applications": [
+      "batch",
+      "iliad"
+    ],
+    "conditions": [
+      {
+        "error_name": "A00102",
+        "expression": {
+          "operands": [
+            {
+              "left_operand": {
+                "operands": [
+                  {
+                    "type": "symbol",
+                    "value": "APPLI_COLBERT"
+                  },
+                  {
+                    "type": "symbol",
+                    "value": "APPLI_ILIAD"
+                  }
+                ],
+                "type": "sum"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 1
+              },
+              "type": "comparaison"
+            },
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "V_IND_TRAIT"
+              },
+              "operator": ">",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            },
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "NBACT"
+              },
+              "operator": ">",
+              "right_operand": {
+                "type": "integer",
+                "value": 9
+              },
+              "type": "comparaison"
+            }
+          ],
+          "operators": [
+            "et",
+            "et"
+          ],
+          "type": "boolean_expression"
+        },
+        "type": "verif_condition"
+      }
+    ],
+    "linecol": [
+      [
+        67,
+        1
+      ],
+      [
+        70,
+        1
+      ]
+    ],
+    "name": "20201",
+    "type": "verif"
+  },
+  {
+    "applications": [
+      "batch",
+      "iliad"
+    ],
+    "conditions": [
+      {
+        "error_name": "A00103",
+        "expression": {
+          "operands": [
+            {
+              "left_operand": {
+                "operands": [
+                  {
+                    "type": "symbol",
+                    "value": "APPLI_COLBERT"
+                  },
+                  {
+                    "type": "symbol",
+                    "value": "APPLI_ILIAD"
+                  }
+                ],
+                "type": "sum"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 1
+              },
+              "type": "comparaison"
+            },
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "V_IND_TRAIT"
+              },
+              "operator": ">",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            },
+            {
+              "operands": [
+                {
+                  "left_operand": {
+                    "type": "symbol",
+                    "value": "RDENS"
+                  },
+                  "operator": ">",
+                  "right_operand": {
+                    "type": "integer",
+                    "value": 9
+                  },
+                  "type": "comparaison"
+                },
+                {
+                  "left_operand": {
+                    "type": "symbol",
+                    "value": "RDENL"
+                  },
+                  "operator": ">",
+                  "right_operand": {
+                    "type": "integer",
+                    "value": 9
+                  },
+                  "type": "comparaison"
+                },
+                {
+                  "left_operand": {
+                    "type": "symbol",
+                    "value": "RDENU"
+                  },
+                  "operator": ">",
+                  "right_operand": {
+                    "type": "integer",
+                    "value": 9
+                  },
+                  "type": "comparaison"
+                },
+                {
+                  "left_operand": {
+                    "type": "symbol",
+                    "value": "RDENSQAR"
+                  },
+                  "operator": ">",
+                  "right_operand": {
+                    "type": "integer",
+                    "value": 9
+                  },
+                  "type": "comparaison"
+                },
+                {
+                  "left_operand": {
+                    "type": "symbol",
+                    "value": "RDENLQAR"
+                  },
+                  "operator": ">",
+                  "right_operand": {
+                    "type": "integer",
+                    "value": 9
+                  },
+                  "type": "comparaison"
+                },
+                {
+                  "left_operand": {
+                    "type": "symbol",
+                    "value": "RDENUQAR"
+                  },
+                  "operator": ">",
+                  "right_operand": {
+                    "type": "integer",
+                    "value": 9
+                  },
+                  "type": "comparaison"
+                }
+              ],
+              "operators": [
+                "ou",
+                "ou",
+                "ou",
+                "ou",
+                "ou"
+              ],
+              "type": "boolean_expression"
+            }
+          ],
+          "operators": [
+            "et",
+            "et"
+          ],
+          "type": "boolean_expression"
+        },
+        "type": "verif_condition"
+      }
+    ],
+    "linecol": [
+      [
+        76,
+        1
+      ],
+      [
+        79,
+        1
+      ]
+    ],
+    "name": "20202",
+    "type": "verif"
+  },
+  {
+    "applications": [
+      "batch",
+      "iliad"
+    ],
+    "conditions": [
+      {
+        "error_name": "A00104",
+        "expression": {
+          "operands": [
+            {
+              "left_operand": {
+                "operands": [
+                  {
+                    "type": "symbol",
+                    "value": "APPLI_COLBERT"
+                  },
+                  {
+                    "type": "symbol",
+                    "value": "APPLI_ILIAD"
+                  }
+                ],
+                "type": "sum"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 1
+              },
+              "type": "comparaison"
+            },
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "V_IND_TRAIT"
+              },
+              "operator": ">",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            },
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "ASCAPA"
+              },
+              "operator": ">",
+              "right_operand": {
+                "type": "integer",
+                "value": 9
+              },
+              "type": "comparaison"
+            }
+          ],
+          "operators": [
+            "et",
+            "et"
+          ],
+          "type": "boolean_expression"
+        },
+        "type": "verif_condition"
+      }
+    ],
+    "linecol": [
+      [
+        96,
+        1
+      ],
+      [
+        99,
+        1
+      ]
+    ],
+    "name": "20203",
+    "type": "verif"
+  },
+  {
+    "applications": [
+      "batch",
+      "iliad"
+    ],
+    "conditions": [
+      {
+        "error_name": "DD16",
+        "expression": {
+          "operands": [
+            {
+              "left_operand": {
+                "operands": [
+                  {
+                    "type": "symbol",
+                    "value": "APPLI_BATCH"
+                  },
+                  {
+                    "type": "symbol",
+                    "value": "APPLI_ILIAD"
+                  },
+                  {
+                    "type": "symbol",
+                    "value": "APPLI_OCEANS"
+                  }
+                ],
+                "type": "sum"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 1
+              },
+              "type": "comparaison"
+            },
+            {
+              "left_operand": {
+                "operands": [
+                  {
+                    "type": "integer",
+                    "value": 1
+                  },
+                  {
+                    "operand": {
+                      "type": "symbol",
+                      "value": "V_CNR"
+                    },
+                    "type": "negate"
+                  }
+                ],
+                "type": "sum"
+              },
+              "operator": ">",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            },
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "CHRFAC"
+              },
+              "operator": ">",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            },
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "V_0CR"
+              },
+              "operator": ">",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            },
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "RFACC"
+              },
+              "operator": "!=",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            }
+          ],
+          "operators": [
+            "et",
+            "et",
+            "et",
+            "et"
+          ],
+          "type": "boolean_expression"
+        },
+        "type": "verif_condition"
+      }
+    ],
+    "linecol": [
+      [
+        105,
+        1
+      ],
+      [
+        108,
+        1
+      ]
+    ],
+    "name": "2022",
+    "type": "verif"
+  },
+  {
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "conditions": [
+      {
+        "error_name": "A888",
+        "expression": {
+          "operands": [
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "IPELUS"
+              },
+              "operator": ">",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            },
+            {
+              "left_operand": {
+                "arguments": [
+                  {
+                    "operands": [
+                      {
+                        "arguments": [
+                          {
+                            "type": "symbol",
+                            "value": "TSHALLOV"
+                          }
+                        ],
+                        "name": "present",
+                        "type": "function_call"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "type": "symbol",
+                            "value": "TSHALLOC"
+                          }
+                        ],
+                        "name": "present",
+                        "type": "function_call"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "type": "symbol",
+                            "value": "CARTSV"
+                          }
+                        ],
+                        "name": "present",
+                        "type": "function_call"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "type": "symbol",
+                            "value": "CARTSC"
+                          }
+                        ],
+                        "name": "present",
+                        "type": "function_call"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "type": "symbol",
+                            "value": "CARTSNBAV"
+                          }
+                        ],
+                        "name": "present",
+                        "type": "function_call"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "type": "symbol",
+                            "value": "CARTSNBAC"
+                          }
+                        ],
+                        "name": "present",
+                        "type": "function_call"
+                      }
+                    ],
+                    "type": "sum"
+                  }
+                ],
+                "name": "positif",
+                "type": "function_call"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            },
+            {
+              "left_operand": {
+                "arguments": [
+                  {
+                    "operands": [
+                      {
+                        "arguments": [
+                          {
+                            "type": "symbol",
+                            "value": "ALLOV"
+                          }
+                        ],
+                        "name": "present",
+                        "type": "function_call"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "type": "symbol",
+                            "value": "ALLOC"
+                          }
+                        ],
+                        "name": "present",
+                        "type": "function_call"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "type": "symbol",
+                            "value": "REMPLAV"
+                          }
+                        ],
+                        "name": "present",
+                        "type": "function_call"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "type": "symbol",
+                            "value": "REMPLAC"
+                          }
+                        ],
+                        "name": "present",
+                        "type": "function_call"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "type": "symbol",
+                            "value": "REMPLANBV"
+                          }
+                        ],
+                        "name": "present",
+                        "type": "function_call"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "type": "symbol",
+                            "value": "REMPLANBC"
+                          }
+                        ],
+                        "name": "present",
+                        "type": "function_call"
+                      }
+                    ],
+                    "type": "sum"
+                  }
+                ],
+                "name": "positif",
+                "type": "function_call"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            }
+          ],
+          "operators": [
+            "et",
+            "et"
+          ],
+          "type": "boolean_expression"
+        },
+        "type": "verif_condition"
+      }
+    ],
+    "linecol": [
+      [
+        118,
+        1
+      ],
+      [
+        120,
+        1
+      ]
+    ],
+    "name": "2100",
+    "type": "verif"
+  },
+  {
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "conditions": [
+      {
+        "error_name": "A887",
+        "expression": {
+          "operands": [
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "APPLI_OCEANS"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            },
+            {
+              "left_operand": {
+                "operands": [
+                  {
+                    "type": "symbol",
+                    "value": "REGCI"
+                  },
+                  {
+                    "type": "integer",
+                    "value": 0
+                  }
+                ],
+                "type": "sum"
+              },
+              "operator": ">",
+              "right_operand": {
+                "operands": [
+                  {
+                    "type": "symbol",
+                    "value": "IPBOCH"
+                  },
+                  {
+                    "type": "integer",
+                    "value": 0
+                  }
+                ],
+                "type": "sum"
+              },
+              "type": "comparaison"
+            }
+          ],
+          "operators": [
+            "et"
+          ],
+          "type": "boolean_expression"
+        },
+        "type": "verif_condition"
+      }
+    ],
+    "linecol": [
+      [
+        129,
+        1
+      ],
+      [
+        131,
+        1
+      ]
+    ],
+    "name": "2110",
+    "type": "verif"
+  },
+  {
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "conditions": [
+      {
+        "error_name": "A889",
+        "expression": {
+          "operands": [
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "APPLI_OCEANS"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            },
+            {
+              "operands": [
+                {
+                  "left_operand": {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "REVFONC"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "type": "sum"
+                  },
+                  "operator": ">",
+                  "right_operand": {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "IND_TDR"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "type": "sum"
+                  },
+                  "type": "comparaison"
+                },
+                {
+                  "left_operand": {
+                    "arguments": [
+                      {
+                        "type": "symbol",
+                        "value": "IND_TDR"
+                      }
+                    ],
+                    "name": "present",
+                    "type": "function_call"
+                  },
+                  "operator": "=",
+                  "right_operand": {
+                    "type": "integer",
+                    "value": 0
+                  },
+                  "type": "comparaison"
+                }
+              ],
+              "operators": [
+                "et"
+              ],
+              "type": "boolean_expression"
+            }
+          ],
+          "operators": [
+            "et"
+          ],
+          "type": "boolean_expression"
+        },
+        "type": "verif_condition"
+      }
+    ],
+    "linecol": [
+      [
+        136,
+        1
+      ],
+      [
+        138,
+        1
+      ]
+    ],
+    "name": "2111",
+    "type": "verif"
+  },
+  {
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "conditions": [
+      {
+        "error_name": "A874",
+        "expression": {
+          "operands": [
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "IPSOUR"
+              },
+              "operator": ">",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            },
+            {
+              "left_operand": {
+                "operands": [
+                  {
+                    "type": "symbol",
+                    "value": "V_CNR"
+                  },
+                  {
+                    "type": "integer",
+                    "value": 0
+                  }
+                ],
+                "type": "sum"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            },
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "SOMMEA874"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            }
+          ],
+          "operators": [
+            "et",
+            "et"
+          ],
+          "type": "boolean_expression"
+        },
+        "type": "verif_condition"
+      }
+    ],
+    "linecol": [
+      [
+        143,
+        1
+      ],
+      [
+        145,
+        1
+      ]
+    ],
+    "name": "2101",
+    "type": "verif"
+  },
+  {
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "conditions": [
+      {
+        "error_name": "A877",
+        "expression": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "left_operand": {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "IPRECH"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "type": "sum"
+                  },
+                  "operator": ">",
+                  "right_operand": {
+                    "type": "integer",
+                    "value": 0
+                  },
+                  "type": "comparaison"
+                },
+                {
+                  "left_operand": {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "IPCHER"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "type": "sum"
+                  },
+                  "operator": ">",
+                  "right_operand": {
+                    "type": "integer",
+                    "value": 0
+                  },
+                  "type": "comparaison"
+                }
+              ],
+              "operators": [
+                "ou"
+              ],
+              "type": "boolean_expression"
+            },
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "SOMMEA877"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            }
+          ],
+          "operators": [
+            "et"
+          ],
+          "type": "boolean_expression"
+        },
+        "type": "verif_condition"
+      }
+    ],
+    "linecol": [
+      [
+        150,
+        1
+      ],
+      [
+        153,
+        1
+      ]
+    ],
+    "name": "2200",
+    "type": "verif"
+  },
+  {
+    "applications": [
+      "batch",
+      "iliad"
+    ],
+    "conditions": [
+      {
+        "error_name": "IM03",
+        "expression": {
+          "operands": [
+            {
+              "left_operand": {
+                "operands": [
+                  {
+                    "type": "symbol",
+                    "value": "APPLI_COLBERT"
+                  },
+                  {
+                    "type": "symbol",
+                    "value": "APPLI_OCEANS"
+                  },
+                  {
+                    "type": "symbol",
+                    "value": "APPLI_ILIAD"
+                  }
+                ],
+                "type": "sum"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 1
+              },
+              "type": "comparaison"
+            },
+            {
+              "operands": [
+                {
+                  "left_operand": {
+                    "type": "symbol",
+                    "value": "V_IND_TRAIT"
+                  },
+                  "operator": ">",
+                  "right_operand": {
+                    "type": "integer",
+                    "value": 0
+                  },
+                  "type": "comparaison"
+                },
+                {
+                  "left_operand": {
+                    "operands": [
+                      {
+                        "type": "symbol",
+                        "value": "CREFAM"
+                      },
+                      {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    ],
+                    "type": "sum"
+                  },
+                  "operator": ">",
+                  "right_operand": {
+                    "type": "integer",
+                    "value": 500000
+                  },
+                  "type": "comparaison"
+                }
+              ],
+              "operators": [
+                "et"
+              ],
+              "type": "boolean_expression"
+            }
+          ],
+          "operators": [
+            "et"
+          ],
+          "type": "boolean_expression"
+        },
+        "type": "verif_condition"
+      }
+    ],
+    "linecol": [
+      [
+        159,
+        1
+      ],
+      [
+        161,
+        1
+      ]
+    ],
+    "name": "2205",
+    "type": "verif"
+  },
+  {
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "conditions": [
+      {
+        "error_name": "A862",
+        "expression": {
+          "operands": [
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "AUTOVERSLIB"
+              },
+              "operator": ">",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            },
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "SOMMEA862"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            }
+          ],
+          "operators": [
+            "et"
+          ],
+          "type": "boolean_expression"
+        },
+        "type": "verif_condition"
+      }
+    ],
+    "linecol": [
+      [
+        168,
+        1
+      ],
+      [
+        171,
+        1
+      ]
+    ],
+    "name": "2220",
+    "type": "verif"
+  },
+  {
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "conditions": [
+      {
+        "error_name": "A879",
+        "expression": {
+          "operands": [
+            {
+              "left_operand": {
+                "operands": [
+                  {
+                    "type": "symbol",
+                    "value": "CIINVCORSE"
+                  },
+                  {
+                    "type": "symbol",
+                    "value": "CICORSENOW"
+                  },
+                  {
+                    "type": "integer",
+                    "value": 0
+                  }
+                ],
+                "type": "sum"
+              },
+              "operator": ">",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            },
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "SOMMEA879"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            }
+          ],
+          "operators": [
+            "et"
+          ],
+          "type": "boolean_expression"
+        },
+        "type": "verif_condition"
+      }
+    ],
+    "linecol": [
+      [
+        177,
+        1
+      ],
+      [
+        180,
+        1
+      ]
+    ],
+    "name": "2221",
+    "type": "verif"
+  },
+  {
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "conditions": [
+      {
+        "error_name": "A881",
+        "expression": {
+          "operands": [
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "CREFAM"
+              },
+              "operator": ">",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            },
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "SOMMEA881"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            }
+          ],
+          "operators": [
+            "et"
+          ],
+          "type": "boolean_expression"
+        },
+        "type": "verif_condition"
+      }
+    ],
+    "linecol": [
+      [
+        186,
+        1
+      ],
+      [
+        189,
+        1
+      ]
+    ],
+    "name": "2223",
+    "type": "verif"
+  },
+  {
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "conditions": [
+      {
+        "error_name": "A890",
+        "expression": {
+          "operands": [
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "CREAPP"
+              },
+              "operator": ">",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            },
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "SOMMEA890"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            }
+          ],
+          "operators": [
+            "et"
+          ],
+          "type": "boolean_expression"
+        },
+        "type": "verif_condition"
+      }
+    ],
+    "linecol": [
+      [
+        195,
+        1
+      ],
+      [
+        198,
+        1
+      ]
+    ],
+    "name": "2229",
+    "type": "verif"
+  },
+  {
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "conditions": [
+      {
+        "error_name": "A891",
+        "expression": {
+          "operands": [
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "CREPROSP"
+              },
+              "operator": ">",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            },
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "SOMMEA891"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            }
+          ],
+          "operators": [
+            "et"
+          ],
+          "type": "boolean_expression"
+        },
+        "type": "verif_condition"
+      }
+    ],
+    "linecol": [
+      [
+        204,
+        1
+      ],
+      [
+        207,
+        1
+      ]
+    ],
+    "name": "891",
+    "type": "verif"
+  },
+  {
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "conditions": [
+      {
+        "error_name": "A893",
+        "expression": {
+          "operands": [
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "CREFORMCHENT"
+              },
+              "operator": ">",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            },
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "SOMMEA893"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            }
+          ],
+          "operators": [
+            "et"
+          ],
+          "type": "boolean_expression"
+        },
+        "type": "verif_condition"
+      }
+    ],
+    "linecol": [
+      [
+        213,
+        1
+      ],
+      [
+        216,
+        1
+      ]
+    ],
+    "name": "893",
+    "type": "verif"
+  },
+  {
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "conditions": [
+      {
+        "error_name": "A894",
+        "expression": {
+          "operands": [
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "CREINTERESSE"
+              },
+              "operator": ">",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            },
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "SOMMEA894"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            }
+          ],
+          "operators": [
+            "et"
+          ],
+          "type": "boolean_expression"
+        },
+        "type": "verif_condition"
+      }
+    ],
+    "linecol": [
+      [
+        222,
+        1
+      ],
+      [
+        225,
+        1
+      ]
+    ],
+    "name": "894",
+    "type": "verif"
+  },
+  {
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "conditions": [
+      {
+        "error_name": "A895",
+        "expression": {
+          "operands": [
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "CREAGRIBIO"
+              },
+              "operator": ">",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            },
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "SOMMEA895"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            }
+          ],
+          "operators": [
+            "et"
+          ],
+          "type": "boolean_expression"
+        },
+        "type": "verif_condition"
+      }
+    ],
+    "linecol": [
+      [
+        231,
+        1
+      ],
+      [
+        234,
+        1
+      ]
+    ],
+    "name": "895",
+    "type": "verif"
+  },
+  {
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "conditions": [
+      {
+        "error_name": "A896",
+        "expression": {
+          "operands": [
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "CREARTS"
+              },
+              "operator": ">",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            },
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "SOMMEA896"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            }
+          ],
+          "operators": [
+            "et"
+          ],
+          "type": "boolean_expression"
+        },
+        "type": "verif_condition"
+      }
+    ],
+    "linecol": [
+      [
+        240,
+        1
+      ],
+      [
+        242,
+        1
+      ]
+    ],
+    "name": "896",
+    "type": "verif"
+  },
+  {
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "conditions": [
+      {
+        "error_name": "A898",
+        "expression": {
+          "operands": [
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "CRECONGAGRI"
+              },
+              "operator": ">",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            },
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "SOMMEA898"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            }
+          ],
+          "operators": [
+            "et"
+          ],
+          "type": "boolean_expression"
+        },
+        "type": "verif_condition"
+      }
+    ],
+    "linecol": [
+      [
+        248,
+        1
+      ],
+      [
+        250,
+        1
+      ]
+    ],
+    "name": "898",
+    "type": "verif"
+  },
+  {
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "conditions": [
+      {
+        "error_name": "A899",
+        "expression": {
+          "operands": [
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "CRERESTAU"
+              },
+              "operator": ">",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            },
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "SOMMEA899"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            }
+          ],
+          "operators": [
+            "et"
+          ],
+          "type": "boolean_expression"
+        },
+        "type": "verif_condition"
+      }
+    ],
+    "linecol": [
+      [
+        256,
+        1
+      ],
+      [
+        259,
+        1
+      ]
+    ],
+    "name": "899",
+    "type": "verif"
+  },
+  {
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "conditions": [
+      {
+        "error_name": "A859",
+        "expression": {
+          "operands": [
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "PRESINTER"
+              },
+              "operator": ">",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            },
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "SOMMEA859"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            }
+          ],
+          "operators": [
+            "et"
+          ],
+          "type": "boolean_expression"
+        },
+        "type": "verif_condition"
+      }
+    ],
+    "linecol": [
+      [
+        265,
+        1
+      ],
+      [
+        268,
+        1
+      ]
+    ],
+    "name": "859",
+    "type": "verif"
+  },
+  {
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "conditions": [
+      {
+        "error_name": "A860",
+        "expression": {
+          "operands": [
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "CIDEBITTABAC"
+              },
+              "operator": ">",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            },
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "SOMMEA860"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            }
+          ],
+          "operators": [
+            "et"
+          ],
+          "type": "boolean_expression"
+        },
+        "type": "verif_condition"
+      }
+    ],
+    "linecol": [
+      [
+        274,
+        1
+      ],
+      [
+        277,
+        1
+      ]
+    ],
+    "name": "900",
+    "type": "verif"
+  },
+  {
+    "applications": [
+      "iliad",
+      "batch"
+    ],
+    "conditions": [
+      {
+        "error_name": "A880",
+        "expression": {
+          "operands": [
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "CRIGA"
+              },
+              "operator": ">",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            },
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "SOMMEA880"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            }
+          ],
+          "operators": [
+            "et"
+          ],
+          "type": "boolean_expression"
+        },
+        "type": "verif_condition"
+      }
+    ],
+    "linecol": [
+      [
+        283,
+        1
+      ],
+      [
+        285,
+        1
+      ]
+    ],
+    "name": "2222",
+    "type": "verif"
+  },
+  {
+    "applications": [
+      "batch",
+      "iliad"
+    ],
+    "conditions": [
+      {
+        "error_name": "A542",
+        "expression": {
+          "operands": [
+            {
+              "left_operand": {
+                "type": "symbol",
+                "value": "APPLI_OCEANS"
+              },
+              "operator": "=",
+              "right_operand": {
+                "type": "integer",
+                "value": 0
+              },
+              "type": "comparaison"
+            },
+            {
+              "operands": [
+                {
+                  "operands": [
+                    {
+                      "left_operand": {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "PPEACV"
+                          },
+                          {
+                            "type": "integer",
+                            "value": 0
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      "operator": ">",
+                      "right_operand": {
+                        "type": "integer",
+                        "value": 0
+                      },
+                      "type": "comparaison"
+                    },
+                    {
+                      "left_operand": {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "PPENJV"
+                          },
+                          {
+                            "type": "integer",
+                            "value": 0
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      "operator": ">",
+                      "right_operand": {
+                        "type": "integer",
+                        "value": 0
+                      },
+                      "type": "comparaison"
+                    }
+                  ],
+                  "operators": [
+                    "et"
+                  ],
+                  "type": "boolean_expression"
+                },
+                {
+                  "operands": [
+                    {
+                      "left_operand": {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "PPEACC"
+                          },
+                          {
+                            "type": "integer",
+                            "value": 0
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      "operator": ">",
+                      "right_operand": {
+                        "type": "integer",
+                        "value": 0
+                      },
+                      "type": "comparaison"
+                    },
+                    {
+                      "left_operand": {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "PPENJC"
+                          },
+                          {
+                            "type": "integer",
+                            "value": 0
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      "operator": ">",
+                      "right_operand": {
+                        "type": "integer",
+                        "value": 0
+                      },
+                      "type": "comparaison"
+                    }
+                  ],
+                  "operators": [
+                    "et"
+                  ],
+                  "type": "boolean_expression"
+                },
+                {
+                  "operands": [
+                    {
+                      "left_operand": {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "PPEACP"
+                          },
+                          {
+                            "type": "integer",
+                            "value": 0
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      "operator": ">",
+                      "right_operand": {
+                        "type": "integer",
+                        "value": 0
+                      },
+                      "type": "comparaison"
+                    },
+                    {
+                      "left_operand": {
+                        "operands": [
+                          {
+                            "type": "symbol",
+                            "value": "PPENJP"
+                          },
+                          {
+                            "type": "integer",
+                            "value": 0
+                          }
+                        ],
+                        "type": "sum"
+                      },
+                      "operator": ">",
+                      "right_operand": {
+                        "type": "integer",
+                        "value": 0
+                      },
+                      "type": "comparaison"
+                    }
+                  ],
+                  "operators": [
+                    "et"
+                  ],
+                  "type": "boolean_expression"
+                }
+              ],
+              "operators": [
+                "ou",
+                "ou"
+              ],
+              "type": "boolean_expression"
+            }
+          ],
+          "operators": [
+            "et"
+          ],
+          "type": "boolean_expression"
+        },
+        "type": "verif_condition"
+      }
+    ],
+    "linecol": [
+      [
+        291,
+        1
+      ],
+      [
+        293,
+        1
+      ]
+    ],
+    "name": "2290",
+    "type": "verif"
+  }
+]
