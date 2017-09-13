@@ -1,7 +1,10 @@
-import json
 import collections
 import os
+import json
+
 import numpy as np
+
+from calculette_impots_m_language_parser import json_dump
 
 
 # List of variables used to compute taxes (this list was written with M code
@@ -180,19 +183,19 @@ def compute_non_recursive_computing_order(children_light):
 
 def save_data(target_dir, computing_order, children_light, formulas_light, constants_light, inputs_light, unknowns_light):
     with open(os.path.join(target_dir, 'computing_order.json'), 'w') as f:
-        f.write(json.dumps(computing_order))
+        f.write(json_dump.dumps(computing_order))
 
     with open(os.path.join(target_dir, 'children_light.json'), 'w') as f:
-        f.write(json.dumps(children_light))
+        f.write(json_dump.dumps(children_light))
 
     with open(os.path.join(target_dir, 'formulas_light.json'), 'w') as f:
-        f.write(json.dumps(formulas_light))
+        f.write(json_dump.dumps(formulas_light))
 
     with open(os.path.join(target_dir, 'constants_light.json'), 'w') as f:
-        f.write(json.dumps(constants_light))
+        f.write(json_dump.dumps(constants_light))
 
     with open(os.path.join(target_dir, 'inputs_light.json'), 'w') as f:
-        f.write(json.dumps(inputs_light))
+        f.write(json_dump.dumps(inputs_light))
 
     with open(os.path.join(target_dir, 'unknowns_light.json'), 'w') as f:
-        f.write(json.dumps(unknowns_light))
+        f.write(json_dump.dumps(unknowns_light))

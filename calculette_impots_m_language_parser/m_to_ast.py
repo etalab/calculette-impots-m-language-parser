@@ -5,7 +5,6 @@ Convert M language source code to a JSON AST.
 
 
 from collections import OrderedDict
-import json
 import logging
 import os
 import sys
@@ -14,6 +13,8 @@ import re
 from arpeggio import PTNodeVisitor, visit_parse_tree
 from arpeggio.cleanpeg import ParserPEG
 from toolz import concatv, pluck
+
+from calculette_impots_m_language_parser import json_dump
 
 
 # Globals
@@ -39,7 +40,7 @@ def parse_m_file(source_code):
     source_code = preprocess(source_code)
     parse_tree = m_parser.parse(source_code)
     result = visit_parse_tree(parse_tree, MLanguageVisitor(debug=debug))
-    return json.dumps(result, indent=2)
+    return json_dump.dumps(result)
 
 
 # M CONSTANTS

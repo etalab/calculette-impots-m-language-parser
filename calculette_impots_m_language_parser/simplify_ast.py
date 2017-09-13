@@ -8,9 +8,11 @@ following node types :
 Only the formulas used for application "batch" are processed.
 """
 
-
-import json
 import os
+import json
+
+from calculette_impots_m_language_parser import json_dump
+
 
 # Public functions
 
@@ -30,13 +32,13 @@ def simplify_ast(source_dir, target_dir):
     }
 
     with open(os.path.join(target_dir, 'formulas.json'), 'w') as f:
-        f.write(json.dumps(formulas_dict))
+        f.write(json_dump.dumps(formulas_dict))
         print('Wrote %d formulas.' % len(formulas_dict))
     with open(os.path.join(target_dir, 'constants.json'), 'w') as f:
-        f.write(json.dumps(constants_dict))
+        f.write(json_dump.dumps(constants_dict))
         print('Wrote %d constants.' % len(constants_dict))
     with open(os.path.join(target_dir, 'input_variables.json'), 'w') as f:
-        f.write(json.dumps(input_variables))
+        f.write(json_dump.dumps(input_variables))
         print('Wrote %d input variables.' % len(input_variables))
 
 
