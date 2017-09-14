@@ -1,6 +1,6 @@
 # Parser du langage M
 
-Ce dépôt contient un "[parser](https://fr.wiktionary.org/wiki/parser)" du langage dédié nommé "M" utilisé par le code source de la [calculette des impôts sur les revenus](https://git.framasoft.org/openfisca/calculette-impots-m-source-code), ainsi que le code parsé, au format json.
+Ce dépôt contient un "[parser](https://fr.wiktionary.org/wiki/parser)" du langage dédié nommé "M" utilisé par le code source de la [calculette des impôts sur les revenus](https://github.com/etalab/calculette-impots-m-source-code), ainsi que le code parsé, au format json.
 
 - [`scripts/parse_code.py`](scripts/parse_code.py) est le script de transformation du code source vers un AST en JSON
 - [`m_language.cleanpeg`](m_language.cleanpeg) contient la description de la grammaire du langage M au format [cleanpeg](http://igordejanovic.net/Arpeggio/grammars/#grammars-written-in-peg-notations)
@@ -24,7 +24,7 @@ Le langage Python 3 est utilisé.
 Ce paquet n'est pas publié sur le dépôt [PyPI](https://pypi.python.org/pypi) donc pour l'installer il faut passer par `git clone`.
 
 ```
-git clone https://git.framasoft.org/openfisca/calculette-impots-m-language-parser.git
+git clone https://github.com/etalab/calculette-impots-m-language-parser.git
 cd calculette-impots-m-language-parser
 pip3 install --editable . --user
 ```
@@ -36,7 +36,7 @@ pip3 install --editable . --user
 
 ## Utilisation
 
-Ce projet est à considérer comme un dépôt de données JSON qui peuvent être utilisées par tout projet faisant des calcul d'imposition, par exemple [calculette-impots-exemples](https://git.framasoft.org/openfisca/calculette-impots-exemple).
+Ce projet est à considérer comme un dépôt de données JSON qui peuvent être utilisées par tout projet faisant des calcul d'imposition, par exemple [calculette-impots-exemples](https://github.com/etalab/calculette-impots-exemples).
 
 
 ## Grammaire
