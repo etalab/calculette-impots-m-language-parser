@@ -3,7 +3,7 @@
 Ce dépôt contient un "[parser](https://fr.wiktionary.org/wiki/parser)" du langage dédié nommé "M" utilisé par le code source de la [calculette des impôts sur les revenus](https://github.com/etalab/calculette-impots-m-source-code), ainsi que le code parsé, au format json.
 
 - [`scripts/parse_code.py`](scripts/parse_code.py) est le script de transformation du code source vers un AST en JSON
-- [`m_language.cleanpeg`](m_language.cleanpeg) contient la description de la grammaire du langage M au format [cleanpeg](http://igordejanovic.net/Arpeggio/grammars/#grammars-written-in-peg-notations)
+- [`m_language.cleanpeg`](calculette_impots_m_language_parser/m_language.cleanpeg) contient la description de la grammaire du langage M au format [cleanpeg](http://igordejanovic.net/Arpeggio/grammars/#grammars-written-in-peg-notations)
 
 
 ## Données produites
@@ -41,7 +41,7 @@ Ce projet est à considérer comme un dépôt de données JSON qui peuvent être
 
 ## Grammaire
 
-Le fichier de grammaire [`m_language.cleanpeg`](m_language.cleanpeg) est au format [Clean PEG](http://igordejanovic.net/Arpeggio/grammars/).
+Le fichier de grammaire [`m_language.cleanpeg`](calculette_impots_m_language_parser/m_language.cleanpeg) est au format [Clean PEG](http://igordejanovic.net/Arpeggio/grammars/).
 
 La bibliothèque utilisée pour le "parsing" est [Arpeggio](http://igordejanovic.net/Arpeggio/).
 
