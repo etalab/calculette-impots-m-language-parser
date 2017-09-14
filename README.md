@@ -62,6 +62,13 @@ Les étapes suivantes sont a exécuter lorsque les fichiers source M, la grammai
 `python3 setup.py test`
 
 
+## Licence
+
+Les fichiers json sont soumises à la licence CeCILL v2.1.
+
+Le code source du parser est soumise à la licence MIT.
+
+
 ## Autre
 
 Le fichiers suivants ont été produits lors du hackathon CodeImpôt début avril 2016 et ne sont actuellement pas maintenus :
