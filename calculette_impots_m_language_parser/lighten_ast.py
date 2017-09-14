@@ -1,3 +1,8 @@
+"""
+Keep only the variables that are useful to compute a set of "root" variables. These variables were selected by a team of experts of the DGFiP.
+"""
+
+
 import collections
 import os
 import json

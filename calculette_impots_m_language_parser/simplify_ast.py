@@ -1,9 +1,10 @@
 """
-Simplify the AST from calculette-impots-m-language-parser to allow only the
-following node types :
+Simplify the AST from calculette-impots-m-language-parser to allow only the following node types :
 * symbols
 * floats
 * function calls
+
+Loops are unfolded.
 
 Only the formulas used for application "batch" are processed.
 """

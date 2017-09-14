@@ -2,21 +2,19 @@
 
 Ce dépôt contient un "[parser](https://fr.wiktionary.org/wiki/parser)" du langage dédié nommé "M" utilisé par le code source de la [calculette des impôts sur les revenus](https://git.framasoft.org/openfisca/calculette-impots-m-source-code), ainsi que le code parsé, au format json.
 
+- [`scripts/parse_code.py`](scripts/parse_code.py) est le script de transformation du code source vers un AST en JSON
 - [`m_language.cleanpeg`](m_language.cleanpeg) contient la description de la grammaire du langage M au format [cleanpeg](http://igordejanovic.net/Arpeggio/grammars/#grammars-written-in-peg-notations)
-- [`scripts/m_to_ast.py`](scripts/m_to_ast.py) est le script de transformation du code source vers un AST en JSON
-
-Les fichiers JSON du répertoire `json/ast` sont la traduction sous forme d'AST (abstract syntax tree) des fichiers du langage M.
-Il y a un fichier JSON par fichier M :
-- [`json/ast/chap-1.json`](json/ast/chap-1.json) est un exemple de la transformation
-[`chap-1.m`](https://git.framasoft.org/openfisca/calculette-impots-m-source-code/tree/master/src/chap-1.m)
-- [`json/ast/tgvH.json`](json/ast/tgvH.json) est la transformation en JSON du fichier
-[`tgvH.m`](https://git.framasoft.org/openfisca/calculette-impots-m-source-code/tree/master/src/tgvH.m)
 
 
-En revanche les fichiers JSON du répertoire `json` sont des versions retravaillées pour une réutilisation plus aisée, des fichiers JSON de l'AST :
-- `formulas_dependencies.json` est un graphe de dépendance entre les formules
-- `constants.json` contient simplement les valeurs des constantes utilisées dans le code M
-- `variables_dependencies.json` est une version retravaillée de `json/ast/tgvH.json` enrichi des variables présentes dans les formules mais absentes du fichier `tgvH.m`.
+## Données produites
+
+Les fichiers JSON du répertoire `json` sont la traduction sous forme d'AST (abstract syntax tree) des fichiers du langage M. Chaque sous-répertoire de ce dossier contient la traduction d'un code source pour une année. Par exemple, le dossier `json/sourcesm2015m_4_6` contient la traduction du code pour le calcul de l'impôt sur les revenus de 2015.
+
+Pour chaque année, un sous-répertoire `1_ast_by_file` contient une traduction directe, fichier par fichier, qui conserve toutes les informations des fichiers sources (sauf les commentaires en milieu de ligne). Ces fichiers sont créés par le module `m_to_ast.py`.
+
+Le sous-répertoire `2_simplified_ast` contient les formules définies par l'application `batch`. L'AST a une forme simplifiée, avec des symboles, des constantes et des appels de fonctions mais sans boucles. Ces fichiers sont créés par le module `simplify_ast.py`.
+
+Le sous-répertoire `3_light_ast` contient un AST avec la même structure que dans le répertoire `2_simplified_ast`, mais seules sont conservées les variables utiles pour calculer un ensemble de variables "racines" déterminé par une équipe d'experts de la DGFiP. Ces fichiers sont créés par le module `lighten_ast.py`.
 
 
 ## Installation
@@ -33,13 +31,13 @@ pip3 install --editable . --user
 
 > L'option `--user` sert sur les systèmes GNU/Linux.
 
-Un utilisateur plus expérimenté en Python peut utiliser
-un [`virtualenv`](https://virtualenv.readthedocs.org/en/latest/) s'il le souhaite.
+> Pour les utilisateurs expérimentés, il est préférable d'utiliser un environnement virtuel. Voir par exemples [pew](https://github.com/berdario/pew).
+
 
 ## Utilisation
 
-Ce projet est à considérer comme un dépôt de données JSON nécessaires au projet
-[calculette-impots-python](https://git.framasoft.org/openfisca/calculette-impots-python).
+Ce projet est à considérer comme un dépôt de données JSON qui peuvent être utilisées par tout projet faisant des calcul d'imposition, par exemple [calculette-impots-exemples](https://git.framasoft.org/openfisca/calculette-impots-exemple).
+
 
 ## Grammaire
 
@@ -47,24 +45,29 @@ Le fichier de grammaire [`m_language.cleanpeg`](m_language.cleanpeg) est au form
 
 La bibliothèque utilisée pour le "parsing" est [Arpeggio](http://igordejanovic.net/Arpeggio/).
 
-La partie de la grammaire touchant aux expressions est basée
-sur [ce tutoriel](http://igordejanovic.net/Arpeggio/tutorials/calc/).
+La partie de la grammaire touchant aux expressions est basée sur [ce tutoriel](http://igordejanovic.net/Arpeggio/tutorials/calc/).
+
 
 ## Regénérer les fichiers JSON
 
-Les commandes suivantes sont a priori inutiles, à moins que les fichiers source M, la grammaire
-ou bien le code du parser ait changé. Les fichiers JSON sont de toute façon commités dans le répertoire [json](json).
+Les étapes suivantes sont a exécuter lorsque les fichiers source M, la grammaire ou bien le code du parser a changé.
 
-```
-# Convertir un répertoire de sources M entier en AST
-$ ./calculette_impots_m_language_parser/scripts/convert_dir.sh /path/to/calculette-impots-m-source-code/src
+* Renseigner le dossier source dans le script `scripts/parse_code_m.py`. (TODO: en faire une option CLI)
 
-# Extraire les données JSON sémantiques
-$ python3 calculette_impots_m_language_parser/scripts/ast_to_data.py -v
-```
+* Exécuter le script `python calculette_impots_m_language_parser/scripts/parse_code_m.py > logs.txt`
 
-Pour convertir un fichier M particulier :
 
-```
-$ python3 calculette_impots_m_language_parser/scripts/m_to_ast.py file.m
-```
+## Tests
+
+`python3 setup.py test`
+
+
+## Autre
+
+Le fichiers suivants ont été produits lors du hackathon CodeImpôt début avril 2016 et ne sont actuellement pas maintenus :
+* `scripts/check_grammar.sh`
+* `scripts/compute_signatures.py`
+* `notebooks/common_ast.ipynb`
+* `notebooks/graph-stats.ipynb`
+* `dependencies_visitor.py`
+* `unloop_herlpers.py`

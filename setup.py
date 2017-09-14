@@ -12,7 +12,7 @@ setup(
         'Development Status :: 2 - Pre-Alpha',
         'License :: OSI Approved :: GNU Affero General Public License v3',
         'Operating System :: POSIX',
-        'Programming Language :: Python',
+        'Programming Language :: Python :: 3',
         'Topic :: Scientific/Engineering :: Information Analysis',
         ],
     description='Parseur du langage M de la calculette des impôts',

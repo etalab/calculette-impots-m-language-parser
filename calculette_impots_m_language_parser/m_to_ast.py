@@ -1,6 +1,6 @@
 
 """
-Convert M language source code to a JSON AST.
+Convert M language source code to a JSON AST. All the information is kept. Loops are not unfolded.
 """
 
 
