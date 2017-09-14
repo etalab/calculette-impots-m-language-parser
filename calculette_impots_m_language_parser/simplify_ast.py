@@ -7,6 +7,12 @@ Simplify the AST from calculette-impots-m-language-parser to allow only the foll
 Loops are unfolded.
 
 Only the formulas used for application "batch" are processed.
+
+Les résultats sont enregistrés dans les fichiers suivants :
+* formulas.json : Formule des variables
+* constants.json : Constantes
+* input_variables.json : Variables en entrée, avec leur `name` (référencé dans les formules) et leur `alias` (référencé dans le formulaire 2042).
+
 """
 
 import os
