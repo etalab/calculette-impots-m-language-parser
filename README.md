@@ -5,6 +5,7 @@ Ce dépôt contient un "[parser](https://fr.wiktionary.org/wiki/parser)" du lang
 - [`scripts/parse_code.py`](scripts/parse_code.py) est le script de transformation du code source vers un AST en JSON
 - [`m_language.cleanpeg`](calculette_impots_m_language_parser/m_language.cleanpeg) contient la description de la grammaire du langage M au format [cleanpeg](http://igordejanovic.net/Arpeggio/grammars/#grammars-written-in-peg-notations)
 
+**Mise à jour**: un nouveau compilateur pour M est en cours de développement à l'Institut National de Recherche en Informatique et en Automatique (Inria). Plus complet er récent, il repose sur une sémantique formalisée du langage : https://gitlab.inria.fr/verifisc/mlang.
 
 ## Données produites
 
